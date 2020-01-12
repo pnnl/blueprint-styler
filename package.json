@@ -6,8 +6,9 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "compile:css": "node-sass-chokidar ./src --output lib/css/ --source-map true",
-    "compile:css-old": "sass-compile ./src",
+    "start": "npm run compile:oldcss",
+    "compile:css": "node-sass-chokidar ./src --output lib/css/ --source-map true --include-path ./node_modules/@blueprintjs/core/src/ --importer ./node_modules/node-sass-package-importer/dist/cli.js --functions ./node_modules/@blueprintjs/core/scripts/sass-custom-functions.js",
+    "compile:oldcss": "./sass-compile.sh ./src",
     "dev": "run-p \"compile:esm -- --watch\" \"compile:css -- --watch\"",
     "dist:css": "css-dist lib/css/*.css",
     "dist:variables": "generate-css-variables common/_colors.scss common/_color-aliases.scss common/_variables.scss",
@@ -17,6 +18,7 @@
     "@blueprintjs/core": "^3.22.3",
     "@blueprintjs/icons": "^3.12.0",
     "node-sass-chokidar": "^1.4.0",
+    "node-sass-package-importer": "^5.3.2",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
