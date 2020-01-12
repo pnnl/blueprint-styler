@@ -7,6 +7,7 @@
   "license": "ISC",
   "scripts": {
     "start": "npm run compile:css",
+    "postinstall": "node ./scripts/generate-svg-icon-files.js",
     "compile:css": "node-sass-chokidar ./src --output lib/css/ --source-map true --include-path ./node_modules/@blueprintjs/core/src/ --importer ./node_modules/node-sass-package-importer/dist/cli.js --functions ./scripts/sass-custom-functions.js",
     "dev": "run-p \"compile:esm -- --watch\" \"compile:css -- --watch\"",
     "dist:css": "css-dist lib/css/*.css",
