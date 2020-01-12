@@ -15,5 +15,5 @@ $ROOT_NM/.bin/node-sass-chokidar \
   --importer $ROOT_NM/node-sass-package-importer/dist/cli.js \
   --output $OUTPUT \
   --source-map true \
+  --functions ./scripts/sass-custom-functions.js \ # this still fails
   $@
-# --functions $ROOT_NM/@blueprintjs/core/scripts/sass-custom-functions.js \ # this still fails
