@@ -10,7 +10,7 @@
     "postinstall": "npm run generate-svg-icon-files",
     "generate-svg-icon-files": "node ./scripts/generate-svg-icon-files.js",
     "compile:css": "node-sass-chokidar ./styles --output src/themes --source-map true --include-path ./node_modules/@blueprintjs/core/styles/ --importer ./node_modules/node-sass-package-importer/dist/cli.js --functions ./scripts/sass-custom-functions.js",
-    "dev": "run-p \"compile:esm -- --watch\" \"compile:css -- --watch\"",
+    "dev": "run-p \"start\" \"compile:css -- --watch\" ",
     "dist:css": "css-dist lib/css/*.css",
     "dist:variables": "generate-css-variables common/_colors.scss common/_color-aliases.scss common/_variables.scss",
     "lint:scss": "sass-lint"

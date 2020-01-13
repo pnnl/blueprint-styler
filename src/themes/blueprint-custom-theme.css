@@ -234,11 +234,11 @@ Styleguide typography.links
 */
 a {
   text-decoration: none;
-  color: #106ba3; }
+  color: hotpink; }
   a:hover {
     cursor: pointer;
     text-decoration: underline;
-    color: #106ba3; }
+    color: hotpink; }
   a .bp3-icon, a .bp3-icon-standard, a .bp3-icon-large {
     color: inherit; }
   a code,
@@ -288,7 +288,7 @@ Styleguide preformatted
     background: rgba(16, 22, 26, 0.3);
     color: #a7b6c2; }
   .bp3-running-text a > code, a > .bp3-code {
-    color: hotpink; }
+    color: red; }
     .bp3-dark .bp3-running-text a > code, .bp3-running-text .bp3-dark a > code, .bp3-dark a > .bp3-code {
       color: inherit; }
 
@@ -661,7 +661,7 @@ Styleguide button
         background: rgba(206, 217, 224, 0.7); }
   .bp3-button.bp3-intent-primary {
     box-shadow: inset 0 0 0 1px rgba(16, 22, 26, 0.4), inset 0 -1px 0 rgba(16, 22, 26, 0.2);
-    background-color: hotpink;
+    background-color: red;
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     color: #ffffff; }
     .bp3-button.bp3-intent-primary:hover, .bp3-button.bp3-intent-primary:active, .bp3-button.bp3-intent-primary.bp3-active {
@@ -676,7 +676,7 @@ Styleguide button
     .bp3-button.bp3-intent-primary:disabled, .bp3-button.bp3-intent-primary.bp3-disabled {
       border-color: transparent;
       box-shadow: none;
-      background-color: rgba(255, 105, 180, 0.5);
+      background-color: rgba(255, 0, 0, 0.5);
       background-image: none;
       color: rgba(255, 255, 255, 0.6); }
   .bp3-button.bp3-intent-success {
@@ -2034,9 +2034,9 @@ Switches and slider handles both use these variables.
     content: "";
     transition: background-color 100ms cubic-bezier(0.4, 1, 0.75, 0.9), box-shadow 100ms cubic-bezier(0.4, 1, 0.75, 0.9); }
   .bp3-editable-text:hover::before {
-    box-shadow: 0 0 0 0 rgba(255, 105, 180, 0), 0 0 0 0 rgba(255, 105, 180, 0), inset 0 0 0 1px rgba(16, 22, 26, 0.15); }
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0), 0 0 0 0 rgba(255, 0, 0, 0), inset 0 0 0 1px rgba(16, 22, 26, 0.15); }
   .bp3-editable-text.bp3-editable-text-editing::before {
-    box-shadow: 0 0 0 1px hotpink, 0 0 0 3px rgba(255, 105, 180, 0.3), inset 0 1px 1px rgba(16, 22, 26, 0.2);
+    box-shadow: 0 0 0 1px red, 0 0 0 3px rgba(255, 0, 0, 0.3), inset 0 1px 1px rgba(16, 22, 26, 0.2);
     background-color: #ffffff; }
   .bp3-editable-text.bp3-disabled::before {
     box-shadow: none; }
@@ -2069,9 +2069,9 @@ Switches and slider handles both use these variables.
   .bp3-editable-text.bp3-intent-danger.bp3-editable-text-editing::before {
     box-shadow: 0 0 0 1px #db3737, 0 0 0 3px rgba(219, 55, 55, 0.3), inset 0 1px 1px rgba(16, 22, 26, 0.2); }
   .bp3-dark .bp3-editable-text:hover::before {
-    box-shadow: 0 0 0 0 rgba(255, 105, 180, 0), 0 0 0 0 rgba(255, 105, 180, 0), inset 0 0 0 1px rgba(255, 255, 255, 0.15); }
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0), 0 0 0 0 rgba(255, 0, 0, 0), inset 0 0 0 1px rgba(255, 255, 255, 0.15); }
   .bp3-dark .bp3-editable-text.bp3-editable-text-editing::before {
-    box-shadow: 0 0 0 1px hotpink, 0 0 0 3px rgba(255, 105, 180, 0.3), inset 0 0 0 1px rgba(16, 22, 26, 0.3), inset 0 1px 1px rgba(16, 22, 26, 0.4);
+    box-shadow: 0 0 0 1px red, 0 0 0 3px rgba(255, 0, 0, 0.3), inset 0 0 0 1px rgba(16, 22, 26, 0.3), inset 0 1px 1px rgba(16, 22, 26, 0.4);
     background-color: rgba(16, 22, 26, 0.3); }
   .bp3-dark .bp3-editable-text.bp3-disabled::before {
     box-shadow: none; }
@@ -2511,7 +2511,7 @@ Switches and slider handles both use these variables.
   */ }
   .bp3-control input:checked ~ .bp3-control-indicator {
     box-shadow: inset 0 0 0 1px rgba(16, 22, 26, 0.4), inset 0 -1px 0 rgba(16, 22, 26, 0.2);
-    background-color: hotpink;
+    background-color: red;
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     color: #ffffff; }
   .bp3-control:hover input:checked ~ .bp3-control-indicator {
@@ -2522,7 +2522,7 @@ Switches and slider handles both use these variables.
     background: #0e5a8a; }
   .bp3-control input:disabled:checked ~ .bp3-control-indicator {
     box-shadow: none;
-    background: rgba(255, 105, 180, 0.5); }
+    background: rgba(255, 0, 0, 0.5); }
   .bp3-dark .bp3-control input:checked ~ .bp3-control-indicator {
     box-shadow: 0 0 0 1px rgba(16, 22, 26, 0.4); }
   .bp3-dark .bp3-control:hover input:checked ~ .bp3-control-indicator {
@@ -2608,7 +2608,7 @@ Switches and slider handles both use these variables.
       margin-top: 0; }
   .bp3-control.bp3-checkbox input:indeterminate ~ .bp3-control-indicator {
     box-shadow: inset 0 0 0 1px rgba(16, 22, 26, 0.4), inset 0 -1px 0 rgba(16, 22, 26, 0.2);
-    background-color: hotpink;
+    background-color: red;
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     color: #ffffff; }
   .bp3-control.bp3-checkbox:hover input:indeterminate ~ .bp3-control-indicator {
@@ -2619,7 +2619,7 @@ Switches and slider handles both use these variables.
     background: #0e5a8a; }
   .bp3-control.bp3-checkbox input:disabled:indeterminate ~ .bp3-control-indicator {
     box-shadow: none;
-    background: rgba(255, 105, 180, 0.5); }
+    background: rgba(255, 0, 0, 0.5); }
   .bp3-dark .bp3-control.bp3-checkbox input:indeterminate ~ .bp3-control-indicator {
     box-shadow: 0 0 0 1px rgba(16, 22, 26, 0.4); }
   .bp3-dark .bp3-control.bp3-checkbox:hover input:indeterminate ~ .bp3-control-indicator {
@@ -2656,7 +2656,7 @@ Switches and slider handles both use these variables.
     .bp3-control.bp3-switch input:disabled ~ .bp3-control-indicator::before {
       background: rgba(255, 255, 255, 0.8); }
   .bp3-control.bp3-switch input:checked ~ .bp3-control-indicator {
-    background: hotpink; }
+    background: red; }
   .bp3-control.bp3-switch:hover input:checked ~ .bp3-control-indicator {
     background: #106ba3; }
   .bp3-control.bp3-switch input:checked:not(:disabled):active ~ .bp3-control-indicator {
@@ -2711,7 +2711,7 @@ Switches and slider handles both use these variables.
     .bp3-dark .bp3-control.bp3-switch input:disabled ~ .bp3-control-indicator::before {
       background: rgba(16, 22, 26, 0.4); }
   .bp3-dark .bp3-control.bp3-switch input:checked ~ .bp3-control-indicator {
-    background: hotpink; }
+    background: red; }
   .bp3-dark .bp3-control.bp3-switch:hover input:checked ~ .bp3-control-indicator {
     background: #106ba3; }
   .bp3-dark .bp3-control.bp3-switch input:checked:not(:disabled):active ~ .bp3-control-indicator {
@@ -2853,7 +2853,7 @@ Styleguide file-input
   outline: none;
   border: none;
   border-radius: 3px;
-  box-shadow: 0 0 0 0 rgba(255, 105, 180, 0), 0 0 0 0 rgba(255, 105, 180, 0), inset 0 0 0 1px rgba(16, 22, 26, 0.15), inset 0 1px 1px rgba(16, 22, 26, 0.2);
+  box-shadow: 0 0 0 0 rgba(255, 0, 0, 0), 0 0 0 0 rgba(255, 0, 0, 0), inset 0 0 0 1px rgba(16, 22, 26, 0.15), inset 0 1px 1px rgba(16, 22, 26, 0.2);
   background: #ffffff;
   height: 30px;
   padding: 0 10px;
@@ -2879,7 +2879,7 @@ Styleguide file-input
     opacity: 1;
     color: rgba(92, 112, 128, 0.6); }
   .bp3-file-upload-input:focus, .bp3-file-upload-input.bp3-active {
-    box-shadow: 0 0 0 1px hotpink, 0 0 0 3px rgba(255, 105, 180, 0.3), inset 0 1px 1px rgba(16, 22, 26, 0.2); }
+    box-shadow: 0 0 0 1px red, 0 0 0 3px rgba(255, 0, 0, 0.3), inset 0 1px 1px rgba(16, 22, 26, 0.2); }
   .bp3-file-upload-input[type="search"], .bp3-file-upload-input.bp3-round {
     border-radius: 30px;
     box-sizing: border-box;
@@ -2951,14 +2951,14 @@ Styleguide file-input
       width: 85px;
       line-height: 30px; }
   .bp3-dark .bp3-file-upload-input {
-    box-shadow: 0 0 0 0 rgba(255, 105, 180, 0), 0 0 0 0 rgba(255, 105, 180, 0), 0 0 0 0 rgba(255, 105, 180, 0), inset 0 0 0 1px rgba(16, 22, 26, 0.3), inset 0 1px 1px rgba(16, 22, 26, 0.4);
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0), 0 0 0 0 rgba(255, 0, 0, 0), 0 0 0 0 rgba(255, 0, 0, 0), inset 0 0 0 1px rgba(16, 22, 26, 0.3), inset 0 1px 1px rgba(16, 22, 26, 0.4);
     background: rgba(16, 22, 26, 0.3);
     color: #f5f8fa;
     color: rgba(167, 182, 194, 0.6); }
     .bp3-dark .bp3-file-upload-input::placeholder {
       color: rgba(167, 182, 194, 0.6); }
     .bp3-dark .bp3-file-upload-input:focus {
-      box-shadow: 0 0 0 1px hotpink, 0 0 0 1px hotpink, 0 0 0 3px rgba(255, 105, 180, 0.3), inset 0 0 0 1px rgba(16, 22, 26, 0.3), inset 0 1px 1px rgba(16, 22, 26, 0.4); }
+      box-shadow: 0 0 0 1px red, 0 0 0 1px red, 0 0 0 3px rgba(255, 0, 0, 0.3), inset 0 0 0 1px rgba(16, 22, 26, 0.3), inset 0 1px 1px rgba(16, 22, 26, 0.4); }
     .bp3-dark .bp3-file-upload-input[readonly] {
       box-shadow: inset 0 0 0 1px rgba(16, 22, 26, 0.4); }
     .bp3-dark .bp3-file-upload-input:disabled, .bp3-dark .bp3-file-upload-input.bp3-disabled {
@@ -3332,7 +3332,7 @@ Styleguide input
   outline: none;
   border: none;
   border-radius: 3px;
-  box-shadow: 0 0 0 0 rgba(255, 105, 180, 0), 0 0 0 0 rgba(255, 105, 180, 0), inset 0 0 0 1px rgba(16, 22, 26, 0.15), inset 0 1px 1px rgba(16, 22, 26, 0.2);
+  box-shadow: 0 0 0 0 rgba(255, 0, 0, 0), 0 0 0 0 rgba(255, 0, 0, 0), inset 0 0 0 1px rgba(16, 22, 26, 0.15), inset 0 1px 1px rgba(16, 22, 26, 0.2);
   background: #ffffff;
   height: 30px;
   padding: 0 10px;
@@ -3347,7 +3347,7 @@ Styleguide input
     opacity: 1;
     color: rgba(92, 112, 128, 0.6); }
   .bp3-input:focus, .bp3-input.bp3-active {
-    box-shadow: 0 0 0 1px hotpink, 0 0 0 3px rgba(255, 105, 180, 0.3), inset 0 1px 1px rgba(16, 22, 26, 0.2); }
+    box-shadow: 0 0 0 1px red, 0 0 0 3px rgba(255, 0, 0, 0.3), inset 0 1px 1px rgba(16, 22, 26, 0.2); }
   .bp3-input[type="search"], .bp3-input.bp3-round {
     border-radius: 30px;
     box-sizing: border-box;
@@ -3378,13 +3378,13 @@ Styleguide input
     flex: 1 1 auto;
     width: 100%; }
   .bp3-dark .bp3-input {
-    box-shadow: 0 0 0 0 rgba(255, 105, 180, 0), 0 0 0 0 rgba(255, 105, 180, 0), 0 0 0 0 rgba(255, 105, 180, 0), inset 0 0 0 1px rgba(16, 22, 26, 0.3), inset 0 1px 1px rgba(16, 22, 26, 0.4);
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0), 0 0 0 0 rgba(255, 0, 0, 0), 0 0 0 0 rgba(255, 0, 0, 0), inset 0 0 0 1px rgba(16, 22, 26, 0.3), inset 0 1px 1px rgba(16, 22, 26, 0.4);
     background: rgba(16, 22, 26, 0.3);
     color: #f5f8fa; }
     .bp3-dark .bp3-input::placeholder {
       color: rgba(167, 182, 194, 0.6); }
     .bp3-dark .bp3-input:focus {
-      box-shadow: 0 0 0 1px hotpink, 0 0 0 1px hotpink, 0 0 0 3px rgba(255, 105, 180, 0.3), inset 0 0 0 1px rgba(16, 22, 26, 0.3), inset 0 1px 1px rgba(16, 22, 26, 0.4); }
+      box-shadow: 0 0 0 1px red, 0 0 0 1px red, 0 0 0 3px rgba(255, 0, 0, 0.3), inset 0 0 0 1px rgba(16, 22, 26, 0.3), inset 0 1px 1px rgba(16, 22, 26, 0.4); }
     .bp3-dark .bp3-input[readonly] {
       box-shadow: inset 0 0 0 1px rgba(16, 22, 26, 0.4); }
     .bp3-dark .bp3-input:disabled, .bp3-dark .bp3-input.bp3-disabled {
@@ -3498,13 +3498,13 @@ textarea.bp3-input {
   textarea.bp3-input.bp3-small {
     padding: 8px; }
   .bp3-dark textarea.bp3-input {
-    box-shadow: 0 0 0 0 rgba(255, 105, 180, 0), 0 0 0 0 rgba(255, 105, 180, 0), 0 0 0 0 rgba(255, 105, 180, 0), inset 0 0 0 1px rgba(16, 22, 26, 0.3), inset 0 1px 1px rgba(16, 22, 26, 0.4);
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0), 0 0 0 0 rgba(255, 0, 0, 0), 0 0 0 0 rgba(255, 0, 0, 0), inset 0 0 0 1px rgba(16, 22, 26, 0.3), inset 0 1px 1px rgba(16, 22, 26, 0.4);
     background: rgba(16, 22, 26, 0.3);
     color: #f5f8fa; }
     .bp3-dark textarea.bp3-input::placeholder {
       color: rgba(167, 182, 194, 0.6); }
     .bp3-dark textarea.bp3-input:focus {
-      box-shadow: 0 0 0 1px hotpink, 0 0 0 1px hotpink, 0 0 0 3px rgba(255, 105, 180, 0.3), inset 0 0 0 1px rgba(16, 22, 26, 0.3), inset 0 1px 1px rgba(16, 22, 26, 0.4); }
+      box-shadow: 0 0 0 1px red, 0 0 0 1px red, 0 0 0 3px rgba(255, 0, 0, 0.3), inset 0 0 0 1px rgba(16, 22, 26, 0.3), inset 0 1px 1px rgba(16, 22, 26, 0.4); }
     .bp3-dark textarea.bp3-input[readonly] {
       box-shadow: inset 0 0 0 1px rgba(16, 22, 26, 0.4); }
     .bp3-dark textarea.bp3-input:disabled, .bp3-dark textarea.bp3-input.bp3-disabled {
@@ -5968,7 +5968,7 @@ Styleguide menu
     .bp3-menu-item.bp3-intent-primary .bp3-menu-item-label {
       color: #106ba3; }
     .bp3-menu-item.bp3-intent-primary:hover, .bp3-submenu .bp3-popover-target.bp3-popover-open > .bp3-intent-primary.bp3-menu-item, .bp3-menu-item.bp3-intent-primary.bp3-active {
-      background-color: hotpink; }
+      background-color: red; }
     .bp3-menu-item.bp3-intent-primary:active {
       background-color: #106ba3; }
     .bp3-menu-item.bp3-intent-primary:hover, .bp3-submenu .bp3-popover-target.bp3-popover-open > .bp3-intent-primary.bp3-menu-item, .bp3-menu-item.bp3-intent-primary:hover::before, .bp3-submenu .bp3-popover-target.bp3-popover-open > .bp3-intent-primary.bp3-menu-item::before, .bp3-menu-item.bp3-intent-primary:hover::after, .bp3-submenu .bp3-popover-target.bp3-popover-open > .bp3-intent-primary.bp3-menu-item::after,
@@ -6139,7 +6139,7 @@ Styleguide menu-header
   .bp3-dark .bp3-menu-item.bp3-intent-primary .bp3-menu-item-label {
     color: #48aff0; }
   .bp3-dark .bp3-menu-item.bp3-intent-primary:hover, .bp3-dark .bp3-submenu .bp3-popover-target.bp3-popover-open > .bp3-intent-primary.bp3-menu-item, .bp3-submenu .bp3-dark .bp3-popover-target.bp3-popover-open > .bp3-intent-primary.bp3-menu-item, .bp3-dark .bp3-menu-item.bp3-intent-primary.bp3-active {
-    background-color: hotpink; }
+    background-color: red; }
   .bp3-dark .bp3-menu-item.bp3-intent-primary:active {
     background-color: #106ba3; }
   .bp3-dark .bp3-menu-item.bp3-intent-primary:hover, .bp3-dark .bp3-submenu .bp3-popover-target.bp3-popover-open > .bp3-intent-primary.bp3-menu-item, .bp3-submenu .bp3-dark .bp3-popover-target.bp3-popover-open > .bp3-intent-primary.bp3-menu-item, .bp3-dark .bp3-menu-item.bp3-intent-primary:hover::before, .bp3-dark .bp3-submenu .bp3-popover-target.bp3-popover-open > .bp3-intent-primary.bp3-menu-item::before, .bp3-submenu .bp3-dark .bp3-popover-target.bp3-popover-open > .bp3-intent-primary.bp3-menu-item::before, .bp3-dark .bp3-menu-item.bp3-intent-primary:hover::after, .bp3-dark .bp3-submenu .bp3-popover-target.bp3-popover-open > .bp3-intent-primary.bp3-menu-item::after, .bp3-submenu .bp3-dark .bp3-popover-target.bp3-popover-open > .bp3-intent-primary.bp3-menu-item::after,
@@ -7212,14 +7212,14 @@ Styleguide tabs
       padding: 0 10px; }
       .bp3-tabs.bp3-vertical > .bp3-tab-list .bp3-tab[aria-selected="true"] {
         box-shadow: none;
-        background-color: rgba(255, 105, 180, 0.2); }
+        background-color: rgba(255, 0, 0, 0.2); }
     .bp3-tabs.bp3-vertical > .bp3-tab-list .bp3-tab-indicator-wrapper .bp3-tab-indicator {
       top: 0;
       right: 0;
       bottom: 0;
       left: 0;
       border-radius: 3px;
-      background-color: rgba(255, 105, 180, 0.2);
+      background-color: rgba(255, 0, 0, 0.2);
       height: auto; }
   .bp3-tabs.bp3-vertical > .bp3-tab-panel {
     margin-top: 0;
@@ -7262,9 +7262,9 @@ Styleguide tabs
     color: rgba(92, 112, 128, 0.6); }
   .bp3-tab[aria-selected="true"] {
     border-radius: 0;
-    box-shadow: inset 0 -3px 0 #106ba3; }
+    box-shadow: inset 0 -3px 0 hotpink; }
   .bp3-tab[aria-selected="true"], .bp3-tab:not([aria-disabled="true"]):hover {
-    color: #106ba3; }
+    color: hotpink; }
   .bp3-tab:focus {
     -moz-outline-radius: 0; }
   .bp3-large > .bp3-tab {
@@ -7290,7 +7290,7 @@ Styleguide tabs
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: #106ba3;
+    background-color: hotpink;
     height: 3px; }
   .bp3-tab-indicator-wrapper.bp3-no-animation {
     transition: none; }
@@ -7710,7 +7710,7 @@ Switches and slider handles both use these variables.
       margin: 8px;
       margin-left: 0; }
   .bp3-tag-input.bp3-active {
-    box-shadow: 0 0 0 1px hotpink, 0 0 0 3px rgba(255, 105, 180, 0.3), inset 0 1px 1px rgba(16, 22, 26, 0.2);
+    box-shadow: 0 0 0 1px red, 0 0 0 3px rgba(255, 0, 0, 0.3), inset 0 1px 1px rgba(16, 22, 26, 0.2);
     background-color: #ffffff; }
     .bp3-tag-input.bp3-active.bp3-intent-primary {
       box-shadow: 0 0 0 1px #106ba3, 0 0 0 3px rgba(16, 107, 163, 0.3), inset 0 1px 1px rgba(16, 22, 26, 0.2); }
@@ -7727,7 +7727,7 @@ Switches and slider handles both use these variables.
     .bp3-dark .bp3-tag-input .bp3-input-ghost::placeholder, .bp3-tag-input.bp3-dark .bp3-input-ghost::placeholder {
       color: rgba(167, 182, 194, 0.6); }
   .bp3-dark .bp3-tag-input.bp3-active, .bp3-tag-input.bp3-dark.bp3-active {
-    box-shadow: 0 0 0 1px hotpink, 0 0 0 1px hotpink, 0 0 0 3px rgba(255, 105, 180, 0.3), inset 0 0 0 1px rgba(16, 22, 26, 0.3), inset 0 1px 1px rgba(16, 22, 26, 0.4);
+    box-shadow: 0 0 0 1px red, 0 0 0 1px red, 0 0 0 3px rgba(255, 0, 0, 0.3), inset 0 0 0 1px rgba(16, 22, 26, 0.3), inset 0 1px 1px rgba(16, 22, 26, 0.4);
     background-color: rgba(16, 22, 26, 0.3); }
     .bp3-dark .bp3-tag-input.bp3-active.bp3-intent-primary, .bp3-tag-input.bp3-dark.bp3-active.bp3-intent-primary {
       box-shadow: 0 0 0 1px #106ba3, 0 0 0 3px rgba(16, 107, 163, 0.3), inset 0 0 0 1px rgba(16, 22, 26, 0.3), inset 0 1px 1px rgba(16, 22, 26, 0.4); }
@@ -8291,7 +8291,7 @@ Styleguide tree
   color: rgba(92, 112, 128, 0.6); }
 
 .bp3-tree-node.bp3-tree-node-selected > .bp3-tree-node-content {
-  background-color: hotpink; }
+  background-color: red; }
   .bp3-tree-node.bp3-tree-node-selected > .bp3-tree-node-content,
   .bp3-tree-node.bp3-tree-node-selected > .bp3-tree-node-content .bp3-icon, .bp3-tree-node.bp3-tree-node-selected > .bp3-tree-node-content .bp3-icon-standard, .bp3-tree-node.bp3-tree-node-selected > .bp3-tree-node-content .bp3-icon-large {
     color: #ffffff; }
@@ -8315,6 +8315,6 @@ Styleguide tree
     color: #db3737; }
 
 .bp3-dark .bp3-tree-node.bp3-tree-node-selected > .bp3-tree-node-content {
-  background-color: hotpink; }
+  background-color: red; }
 
 /*# sourceMappingURL=blueprint-custom-theme.css.map */

@@ -4,3 +4,6 @@
   justify-content: center;
   height: 100vh;
 }
+.App > * {
+  margin: 12px;
+}

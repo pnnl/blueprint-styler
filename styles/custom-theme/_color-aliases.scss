@@ -1,4 +1,4 @@
-$pt-intent-primary: hotpink;                                            // Primary intent color
+$pt-intent-primary: red;                                            // Primary intent color
 $pt-intent-success: $green3;                                           // Success intent color
 $pt-intent-warning: $orange3;                                          // Warning intent color
 $pt-intent-danger: $red3;                                              // Danger intent color
@@ -12,7 +12,7 @@ $pt-text-color: $dark-gray1;                                           // Defaul
 $pt-text-color-muted: $gray1;                                          // Muted text color
 $pt-text-color-disabled: rgba($pt-text-color-muted, 0.6);              // Disabled text color
 $pt-heading-color: $pt-text-color;                                     // Text color for headers
-$pt-link-color: $blue2;                                                // Text color for links
+$pt-link-color: hotpink;                                                // Text color for links
 $pt-dark-text-color: $light-gray5;                                     // Dark theme default text color
 $pt-dark-text-color-muted: $gray4;                                     // Dark theme muted text color
 $pt-dark-text-color-disabled: rgba($pt-dark-text-color-muted, 0.6);    // Dark theme disabled text color
