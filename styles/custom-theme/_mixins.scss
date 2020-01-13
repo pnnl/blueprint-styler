@@ -1,0 +1,78 @@
+// Copyright 2015 Palantir Technologies, Inc. All rights reserved.
+// Licensed under the Apache License, Version 2.0.
+
+@import "colors";
+// @import "flex";
+
+// $pt-intent-colors: (
+//   "primary": $pt-intent-primary,
+//   "success": $pt-intent-success,
+//   "warning": $pt-intent-warning,
+//   "danger" : $pt-intent-danger,
+// );
+
+// $pt-intent-text-colors: (
+//   "primary": $blue2,
+//   "success": $green2,
+//   "warning": $orange2,
+//   "danger" : $red2,
+// );
+
+// $pt-dark-intent-text-colors: (
+//   "primary": $blue5,
+//   "success": $green5,
+//   "warning": $orange5,
+//   "danger" : $red5,
+// );
+
+// @mixin intent-color($intentName) {
+//   color: map-get($pt-intent-colors, $intentName);
+// }
+
+// @mixin position-all($position, $value) {
+//   position: $position;
+//   top: $value;
+//   right: $value;
+//   bottom: $value;
+//   left: $value;
+// }
+
+// @mixin base-typography() {
+//   text-transform: none;
+//   line-height: $pt-line-height;
+//   letter-spacing: 0;
+//   font-size: $pt-font-size;
+//   font-weight: 400;
+// }
+
+// @mixin running-typography() {
+//   line-height: 1.5;
+//   font-size: $pt-font-size;
+// }
+
+// @mixin heading-typography() {
+//   color: $pt-heading-color;
+//   font-weight: 600;
+
+//   .#{$ns}-dark & {
+//     color: $pt-dark-heading-color;
+//   }
+// }
+
+// @mixin monospace-typography() {
+//   text-transform: none;
+//   font-family: $pt-font-family-monospace;
+// }
+
+// @mixin overflow-ellipsis() {
+//   overflow: hidden;
+//   text-overflow: ellipsis;
+//   white-space: nowrap;
+//   word-wrap: normal;
+// }
+
+// @mixin focus-outline($offset: 2px) {
+//   outline: $pt-outline-color auto 2px;
+//   outline-offset: $offset;
+//   -moz-outline-radius: 6px;
+// }
