@@ -2,7 +2,7 @@
 	"version": 3,
 	"file": "blueprint.css",
 	"sources": [
-		"../../src/blueprint.scss",
+		"../../styles/blueprint.scss",
 		"../../node_modules/@blueprintjs/core/src/common/_variables.scss",
 		"../../node_modules/@blueprintjs/core/src/common/_colors.scss",
 		"../../node_modules/@blueprintjs/core/src/common/_color-aliases.scss",
