@@ -1,11 +1,12 @@
 import React from 'react';
 import { } from '@blueprintjs/core'
+import Section from './Section';
 
 function Template() {
     return (
-        <div className="Template" >
+        <Section className="Template" >
             {/* code here... */}
-        </div>
+        </Section>
     );
 }
 
