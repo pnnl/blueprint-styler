@@ -1,3 +1,9 @@
-.Buttons > * {
+.Section{
+    margin: 32px 0;
+}
+
+.Buttons > *,
+.Callouts > *
+{
     margin: 16px;
 }
