@@ -4,7 +4,7 @@ import Section from './Section';
 
 function Template() {
     return (
-        <Section className="Template" >
+        <Section title="Template" >
             {/* code here... */}
         </Section>
     );

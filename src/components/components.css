@@ -2,8 +2,10 @@
     margin: 32px 0;
 }
 
-.Buttons > *,
-.Callouts > *
-{
-    margin: 16px;
+.Buttons > *{
+    margin: 32px 32px 0 0;
+}
+
+.Callouts > *{
+    margin: 16px 0;
 }

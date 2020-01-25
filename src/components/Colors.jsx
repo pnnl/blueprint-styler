@@ -21,7 +21,7 @@ function ColorList() {
     }
 
     return (
-        <Section className="ColorList" >
+        <Section title="ColorList" >
             {colorList}
         </Section>
     );
