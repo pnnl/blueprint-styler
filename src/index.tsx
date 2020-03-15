@@ -20,11 +20,12 @@ import "dom4";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import App from './App';
+import * as serviceWorker from './serviceWorker';
+
 
 
 // import { docsData } from "@blueprintjs/docs-data";
 import { createDefaultRenderers, ReactDocsTagRenderer, ReactExampleTagRenderer } from "@blueprintjs/docs-theme";
-
 // import { BlueprintDocs } from "./components/blueprintDocs";
 import * as ReactDocs from "./tags/reactDocs";
 import { reactExamples } from "./tags/reactExamples";
@@ -41,65 +42,7 @@ import { reactExamples } from "./tags/reactExamples";
 
 
 ReactDOM.render(
-    <>
-        <App/>
-        {/* Working down from here
-        <AlertExample id="AlertExample" data={data}/>
-        <BreadcrumbsExample id="BreadcrumbsExample"/>
-        <ButtonsExample id="ButtonsExample"/>
-        <ButtonsIconsExample id="ButtonsIconsExample"/>
-        <ButtonGroupExample id="ButtonGroupExample"/>
-        <ButtonGroupPopoverExample id="ButtonGroupPopoverExample"/>
-        <CalloutExample id="CalloutExample" options=""/>
-        <CheckboxExample id="CheckboxExample"/>
-        <CollapseExample id="CollapseExample"/>
-        <CardExample id="CardExample"/>
-        <CollapsibleListExample id="CollapsibleListExample"/>
-        <ContextMenuExample id="ContextMenuExample"/>
-        <ControlGroupExample id="ControlGroupExample"/>
-        <DialogExample id="DialogExample" data={data}/>
-        <DividerExample id="DividerExample"/>
-        <DrawerExample id="DrawerExample" data={data}/>
-        <DropdownMenuExample id="DropdownMenuExample"/>
-        <EditableTextExample id="EditableTextExample"/>
-        <FileInputExample id="FileInputExample"/>
-        <FocusExample id="FocusExample"/>
-        <FormGroupExample id="FormGroupExample"/>
-        <HotkeyPiano id="HotkeyPiano"/>
-        <HotkeyTester id="HotkeyTester"/>
-        <IconExample id="IconExample"/>
-        <MenuExample id="MenuExample"/>
-        <MultiSliderExample id="MultiSliderExample"/>
-        <NavbarExample id="NavbarExample"/>
-        <NumericInputBasicExample id="NumericInputBasicExample"/>
-        <NumericInputExtendedExample id="NumericInputExtendedExample"/>
-        <NonIdealStateExample id="NonIdealStateExample"/>
-        <OverflowListExample id="OverflowListExample"/>
-        <OverlayExample id="OverlayExample"/>
-        <PanelStackExample id="PanelStackExample"/>
-        <PopoverDismissExample id="PopoverDismissExample"/>
-        <PopoverExample id="PopoverExample"/>
-        <PopoverInteractionKindExample id="PopoverInteractionKindExample"/>
-        <PopoverMinimalExample id="PopoverMinimalExample"/>
-        <PopoverPortalExample id="PopoverPortalExample"/>
-        <PopoverPositionExample id="PopoverPositionExample"/>
-        <PopoverSizingExample id="PopoverSizingExample"/>
-        <ProgressExample id="ProgressExample"/>
-        <RangeSliderExample id="RangeSliderExample"/>
-        <RadioExample id="RadioExample"/>
-        <SliderExample id="SliderExample"/>
-        <SpinnerExample id="SpinnerExample"/>
-        <SwitchExample id="SwitchExample"/>
-        <TagInputExample id="TagInputExample"/>
-        <TextExample id="TextExample"/>
-        <TabsExample id="TabsExample"/>
-        <InputGroupExample id="InputGroupExample"/>
-        <TagExample id="TagExample"/>
-        <ToastExample id="ToastExample"/>
-        <TooltipExample id="TooltipExample"/>
-        <TreeExample id="TreeExample"/>
-        */}
-    </>,
+    <App/>,
     // <BlueprintDocs defaultPageId="blueprint" docs={docsData} tagRenderers={tagRenderers} useNextVersion={false} />,
     document.querySelector("#blueprint-documentation"),
 );
@@ -109,4 +52,4 @@ ReactDOM.render(
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
-// serviceWorker.unregister();
+serviceWorker.unregister();
