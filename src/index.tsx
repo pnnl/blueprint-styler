@@ -97,6 +97,9 @@ import {
 const data: IBlueprintExampleData = {
     themeName: ""
 }
+
+// TODO: Make this into its own component..with a[].map() render loop
+
 ReactDOM.render(
     <>
         <AlertExample id="AlertExample" data={data}/>
@@ -112,10 +115,9 @@ ReactDOM.render(
         <CollapsibleListExample id="CollapsibleListExample"/>
         <ContextMenuExample id="ContextMenuExample"/>
         <ControlGroupExample id="ControlGroupExample"/>
-        {/* Working down from here
-        <DialogExample id="DialogExample"/>
+        <DialogExample id="DialogExample" data={data}/>
         <DividerExample id="DividerExample"/>
-        <DrawerExample id="DrawerExample"/>
+        <DrawerExample id="DrawerExample" data={data}/>
         <DropdownMenuExample id="DropdownMenuExample"/>
         <EditableTextExample id="EditableTextExample"/>
         <FileInputExample id="FileInputExample"/>
@@ -131,6 +133,7 @@ ReactDOM.render(
         <NumericInputExtendedExample id="NumericInputExtendedExample"/>
         <NonIdealStateExample id="NonIdealStateExample"/>
         <OverflowListExample id="OverflowListExample"/>
+        {/* Working down from here
         <OverlayExample id="OverlayExample"/>
         <PanelStackExample id="PanelStackExample"/>
         <PopoverDismissExample id="PopoverDismissExample"/>
