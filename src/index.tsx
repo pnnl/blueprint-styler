@@ -28,62 +28,7 @@ import { createDefaultRenderers, ReactDocsTagRenderer, ReactExampleTagRenderer }
 // import { BlueprintDocs } from "./components/blueprintDocs";
 import * as ReactDocs from "./tags/reactDocs";
 import { reactExamples } from "./tags/reactExamples";
-import {
-    AlertExample,
-    BreadcrumbsExample,
-    ButtonsExample,
-    ButtonsIconsExample,
-    ButtonGroupExample,
-    ButtonGroupPopoverExample,
-    CalloutExample,
-    CheckboxExample,
-    CollapseExample,
-    CardExample,
-    CollapsibleListExample,
-    ContextMenuExample,
-    ControlGroupExample,
-    DialogExample,
-    DividerExample,
-    DrawerExample,
-    DropdownMenuExample,
-    EditableTextExample,
-    FileInputExample,
-    FocusExample,
-    FormGroupExample,
-    HotkeyPiano,
-    HotkeyTester,
-    IconExample,
-    MenuExample,
-    MultiSliderExample,
-    NavbarExample,
-    NumericInputBasicExample,
-    NumericInputExtendedExample,
-    NonIdealStateExample,
-    OverflowListExample,
-    OverlayExample,
-    PanelStackExample,
-    PopoverDismissExample,
-    PopoverExample,
-    PopoverInteractionKindExample,
-    PopoverMinimalExample,
-    PopoverPortalExample,
-    PopoverPositionExample,
-    PopoverSizingExample,
-    ProgressExample,
-    RangeSliderExample,
-    RadioExample,
-    SliderExample,
-    SpinnerExample,
-    SwitchExample,
-    TagInputExample,
-    TextExample,
-    TabsExample,
-    InputGroupExample,
-    TagExample,
-    ToastExample,
-    TooltipExample,
-    TreeExample,
-} from './examples/core-examples';
+
 
 // const reactDocs = new ReactDocsTagRenderer(ReactDocs as any);
 // const reactExample = new ReactExampleTagRenderer(reactExamples);
@@ -94,14 +39,11 @@ import {
 //     reactExample: reactExample.render,
 // };
 
-const data: IBlueprintExampleData = {
-    themeName: ""
-}
-
-// TODO: Make this into its own component..with a[].map() render loop
 
 ReactDOM.render(
     <>
+        <App/>
+        {/* Working down from here
         <AlertExample id="AlertExample" data={data}/>
         <BreadcrumbsExample id="BreadcrumbsExample"/>
         <ButtonsExample id="ButtonsExample"/>
@@ -133,7 +75,6 @@ ReactDOM.render(
         <NumericInputExtendedExample id="NumericInputExtendedExample"/>
         <NonIdealStateExample id="NonIdealStateExample"/>
         <OverflowListExample id="OverflowListExample"/>
-        {/* Working down from here
         <OverlayExample id="OverlayExample"/>
         <PanelStackExample id="PanelStackExample"/>
         <PopoverDismissExample id="PopoverDismissExample"/>
