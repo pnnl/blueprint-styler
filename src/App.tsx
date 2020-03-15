@@ -5,18 +5,24 @@ import React from 'react';
 import { FocusStyleManager } from '@blueprintjs/core';
 import { IBlueprintExampleData, reactExamples } from './tags/reactExamples';
 import { allExamples } from './all-examples';
+import { IExample, ReactExampleTagRenderer, IExampleProps } from '@blueprintjs/docs-theme';
+// import { ButtonsExample } from './examples/core-examples';
+import { getTheme } from './components/blueprintDocs';
+import * as CoreExamples from "./examples/core-examples";
+
 
 FocusStyleManager.onlyShowFocusOnTabs();
 
+const reactExample = new ReactExampleTagRenderer(reactExamples);
+
+
 function App() {
     const data: IBlueprintExampleData = {
-        themeName: ""
+        themeName: getTheme()
     }
-
     return (
         <div className="App">
-        {/* {Object.entries(reactExamples).map(([componentName, renderer]: [string, IExample]) => renderer.render )} // this doesn't work... */ }
-          {allExamples.map((ExampleComponent, i)=>(
+          {allExamples.map((ExampleComponent:React.ComponentClass<IExampleProps<IBlueprintExampleData>>, i:number)=>(
               <ExampleComponent key={i} id={ExampleComponent.name} data={data}/>
           ))}
     </div>

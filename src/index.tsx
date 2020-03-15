@@ -25,10 +25,11 @@ import * as serviceWorker from './serviceWorker';
 
 
 // import { docsData } from "@blueprintjs/docs-data";
-import { createDefaultRenderers, ReactDocsTagRenderer, ReactExampleTagRenderer } from "@blueprintjs/docs-theme";
+// import { createDefaultRenderers, ReactDocsTagRenderer, ReactExampleTagRenderer } from "@blueprintjs/docs-theme";
 // import { BlueprintDocs } from "./components/blueprintDocs";
-import * as ReactDocs from "./tags/reactDocs";
-import { reactExamples } from "./tags/reactExamples";
+// import * as ReactDocs from "./tags/reactDocs";
+// import { reactExamples } from "./tags/reactExamples";
+// import { BlueprintDocs } from './components/blueprintDocs';
 
 
 // const reactDocs = new ReactDocsTagRenderer(ReactDocs as any);
@@ -39,7 +40,6 @@ import { reactExamples } from "./tags/reactExamples";
 //     reactDocs: reactDocs.render,
 //     reactExample: reactExample.render,
 // };
-
 
 ReactDOM.render(
     <App/>,
