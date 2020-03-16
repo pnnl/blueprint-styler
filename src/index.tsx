@@ -23,7 +23,6 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 
-
 // import { docsData } from "@blueprintjs/docs-data";
 // import { createDefaultRenderers, ReactDocsTagRenderer, ReactExampleTagRenderer } from "@blueprintjs/docs-theme";
 // import { BlueprintDocs } from "./components/blueprintDocs";
@@ -42,9 +41,9 @@ import * as serviceWorker from './serviceWorker';
 // };
 
 ReactDOM.render(
-    <App/>,
+    <App />,
     // <BlueprintDocs defaultPageId="blueprint" docs={docsData} tagRenderers={tagRenderers} useNextVersion={false} />,
-    document.querySelector("#blueprint-documentation"),
+    document.querySelector("#blueprint-themer"),
 );
 
 // ReactDOM.render(<App />, document.getElementById('root'));

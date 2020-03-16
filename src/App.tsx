@@ -1,8 +1,7 @@
 import React from 'react';
-// import './App.css';
 // import './themes/blueprint-custom-theme.css';
 // import './components/components.css';
-import { FocusStyleManager, Classes, Button } from '@blueprintjs/core';
+import { FocusStyleManager, Classes, Button, AnchorButton } from '@blueprintjs/core';
 import { IBlueprintExampleData } from './tags/reactExamples';
 import { allExamples } from './all-examples';
 import { IExampleProps } from '@blueprintjs/docs-theme';
@@ -38,13 +37,8 @@ function App() {
     return (
         <div className={["App", data.themeName].join(' ')}>
 
-            {/* <NavHeader
-                onToggleDark={this.handleToggleDark}
-                useDarkTheme={this.state.themeName === DARK_THEME}
-                useNextVersion={}
-                packageData={this.getNpmPackage("@blueprintjs/core")}x
-            /> */}
-            <section>
+            <section className="themer-menu">
+
                 <header>
                     BlueprintJS Themer
                      <Button
@@ -55,18 +49,26 @@ function App() {
                 </header>
 
                 <nav>
-
+                    {allExamples.map((ExampleComponent: React.ComponentClass<IExampleProps<IBlueprintExampleData>>, i: number) => (
+                        <AnchorButton minimal key={i} href={'/#' + ExampleComponent.name} text={ExampleComponent.name} />
+                    ))}
                 </nav>
 
                 <footer>
 
                 </footer>
+
             </section>
-            <main className="examples-container">
+
+            <main className="themer-examples">
                 {allExamples.map((ExampleComponent: React.ComponentClass<IExampleProps<IBlueprintExampleData>>, i: number) => (
-                    <ExampleComponent key={i} id={ExampleComponent.name} data={data} />
+                    <div id={ExampleComponent.name}>
+                        <h3>{ExampleComponent.name}</h3>
+                        <ExampleComponent key={i} id={ExampleComponent.name} data={data} />
+                    </div>
                 ))}
             </main>
+
         </div>
     );
 }
