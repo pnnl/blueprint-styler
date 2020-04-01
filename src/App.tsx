@@ -1,7 +1,7 @@
 import React from 'react';
 // import './themes/blueprint-custom-theme.css';
 // import './components/components.css';
-import { FocusStyleManager, Classes, Button, AnchorButton } from '@blueprintjs/core';
+import { FocusStyleManager, Classes, Button, AnchorButton, Collapse } from '@blueprintjs/core';
 import { IBlueprintExampleData } from './tags/reactExamples';
 import { allExamples } from './all-examples';
 import { IExampleProps } from '@blueprintjs/docs-theme';
@@ -39,7 +39,7 @@ function App() {
 
             <section className="themer-menu">
 
-                <header>
+                <header className="themer-menu__header">
                     BlueprintJS Themer
                      <Button
                         icon={useDarkTheme ? "flash" : "moon"}
@@ -48,24 +48,53 @@ function App() {
                     />
                 </header>
 
-                <nav>
-                    {allExamples.map((ExampleComponent: React.ComponentClass<IExampleProps<IBlueprintExampleData>>, i: number) => (
-                        <AnchorButton minimal key={i} href={'/#' + ExampleComponent.name} text={ExampleComponent.name} />
-                    ))}
+                <nav className="themer-menu__nav">
+                    <ul className="bp3-list-unstyled">
+                        {allExamples.map(([componentGroupTitle, componentGroup], j: number) => (
+                            <li>
+                                <Button minimal rightIcon="caret-down">
+                                    <b>{componentGroupTitle}</b>
+                                </Button>
+                                <Collapse isOpen={true}>
+                                    <ul className="bp3-list-unstyled">
+                                        {componentGroup.map(([componentName, componentExamples], i: number) => (
+                                            <li>
+                                                <AnchorButton minimal key={i} href={'/#' + componentName} text={componentName} />
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </Collapse>
+                            </li>
+                        ))}
+                    </ul>
                 </nav>
 
-                <footer>
+                <footer className="themer-menu__footer">
 
                 </footer>
 
             </section>
 
             <main className="themer-examples">
-                {allExamples.map((ExampleComponent: React.ComponentClass<IExampleProps<IBlueprintExampleData>>, i: number) => (
-                    <div id={ExampleComponent.name}>
-                        <h3>{ExampleComponent.name}</h3>
-                        <ExampleComponent key={i} id={ExampleComponent.name} data={data} />
-                    </div>
+                {allExamples.map(([componentGroupTitle, componentGroup], k: number) => (
+                    <section>
+                        <h2>{componentGroupTitle}</h2>
+                        {componentGroup.map(([componentName, componentExamples], j: number) => (
+                            <div id={componentName}>
+                                <h3>{componentName}</h3>
+                                {componentExamples.map((
+                                    ExampleComponent: React.ComponentClass<IExampleProps<IBlueprintExampleData>>,
+                                    i: number
+                                ) => (
+                                        <ExampleComponent
+                                            key={i}
+                                            id={componentName + '-' + i}
+                                            data={data}
+                                        />
+                                    ))}
+                            </div>
+                        ))}
+                    </section>
                 ))}
             </main>
 
