@@ -6,6 +6,7 @@ import { IBlueprintExampleData } from './tags/reactExamples';
 import { allExamples } from './all-examples';
 import { IExampleProps } from '@blueprintjs/docs-theme';
 import { NavHeader } from './components/navHeader';
+import logo from './assets/logo.svg';
 
 FocusStyleManager.onlyShowFocusOnTabs();
 
@@ -38,6 +39,8 @@ function App() {
         <div className={["App", data.themeName].join(' ')}>
 
             <section className="themer-menu">
+
+                <img src={logo} />
 
                 <header className="themer-menu__header">
                     BlueprintJS Themer
