@@ -4,6 +4,7 @@
   "description": "Blueprint Documentation Site",
   "private": true,
   "scripts": {
+    "start": "npm run dev",
     "bundle": "webpack --config ./webpack.config.js",
     "clean": "rm -rf dist/*",
     "dev": "webpack-dev-server --config ./webpack.config.js --host 0.0.0.0",
@@ -37,7 +38,6 @@
     "react-dom": "^16.8.6",
     "react-transition-group": "^4.2.1",
     "tslib": "~1.10.0",
-
     "@types/chai": "4.2.7",
     "@types/classnames": "2.2.9",
     "@types/enzyme": "3.10.4",
