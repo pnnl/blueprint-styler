@@ -5,7 +5,6 @@ import { FocusStyleManager, Classes, Button, AnchorButton, Collapse } from '@blu
 import { IBlueprintExampleData } from './tags/reactExamples';
 import { allExamples } from './all-examples';
 import { IExampleProps } from '@blueprintjs/docs-theme';
-import { NavHeader } from './components/navHeader';
 import logo from './assets/logo.svg'; // setup TS import of svg
 
 FocusStyleManager.onlyShowFocusOnTabs();
