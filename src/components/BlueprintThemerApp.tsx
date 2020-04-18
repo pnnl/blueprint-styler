@@ -3,7 +3,7 @@ import React from 'react';
 // import './components/components.css';
 import { FocusStyleManager, Classes, Button, AnchorButton, Collapse } from '@blueprintjs/core';
 import { IBlueprintExampleData } from '../tags/reactExamples';
-import { allExamples } from './all-examples';
+import { allExamples } from './allExamples';
 import { IExampleProps } from '@blueprintjs/docs-theme';
 import logo from '../assets/logo.svg';
 
