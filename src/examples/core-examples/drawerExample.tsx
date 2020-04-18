@@ -151,7 +151,7 @@ export class DrawerExample extends React.PureComponent<IExampleProps<IBlueprintE
 }
 
 const SIZES: Array<string | IOptionProps> = [
-    { label: "Default", value: undefined },
+    { label: "Default", value: null },
     { label: "Small", value: Drawer.SIZE_SMALL },
     { label: "Standard", value: Drawer.SIZE_STANDARD },
     { label: "Large", value: Drawer.SIZE_LARGE },

@@ -54,15 +54,15 @@ function App() {
                 <nav className="themer-menu__nav">
                     <ul className="bp3-list-unstyled">
                         {allExamples.map(([componentGroupTitle, componentGroup], j: number) => (
-                            <li>
-                                <Button minimal rightIcon="caret-down">
+                            <li key={j}>
+                                <Button minimal rightIcon="caret-down" onClick={e => console.log(e)}>
                                     <b>{componentGroupTitle}</b>
                                 </Button>
-                                <Collapse isOpen={true}>
+                                <Collapse isOpen={true} >
                                     <ul className="bp3-list-unstyled">
                                         {componentGroup.map(([componentName, componentExamples], i: number) => (
-                                            <li>
-                                                <AnchorButton minimal key={i} href={'/#' + componentName} text={componentName} />
+                                            <li key={i}>
+                                                <AnchorButton minimal href={'/#' + componentName} text={componentName} />
                                             </li>
                                         ))}
                                     </ul>
@@ -80,10 +80,10 @@ function App() {
 
             <main className="themer-examples">
                 {allExamples.map(([componentGroupTitle, componentGroup], k: number) => (
-                    <section>
+                    <section key={k}>
                         <h2>{componentGroupTitle}</h2>
                         {componentGroup.map(([componentName, componentExamples], j: number) => (
-                            <div id={componentName}>
+                            <div id={componentName} key={j}>
                                 <h3>{componentName}</h3>
                                 {componentExamples.map((
                                     ExampleComponent: React.ComponentClass<IExampleProps<IBlueprintExampleData>>,
