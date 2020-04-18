@@ -2,10 +2,10 @@ import React from 'react';
 // import './themes/blueprint-custom-theme.css';
 // import './components/components.css';
 import { FocusStyleManager, Classes, Button, AnchorButton, Collapse } from '@blueprintjs/core';
-import { IBlueprintExampleData } from './tags/reactExamples';
+import { IBlueprintExampleData } from '../tags/reactExamples';
 import { allExamples } from './all-examples';
 import { IExampleProps } from '@blueprintjs/docs-theme';
-import logo from './assets/logo.svg'; // setup TS import of svg
+import logo from '../assets/logo.svg';
 
 FocusStyleManager.onlyShowFocusOnTabs();
 
@@ -31,7 +31,7 @@ function handleToggleDark() {
     // this.setState({ themeName: nextThemeName });
 };
 
-function App() {
+function BlueprintThemerApp() {
     const data: IBlueprintExampleData = { themeName: getTheme() }
     const useDarkTheme = data.themeName === DARK_THEME;
     return (
@@ -104,4 +104,4 @@ function App() {
     );
 }
 
-export default App;
+export default BlueprintThemerApp;

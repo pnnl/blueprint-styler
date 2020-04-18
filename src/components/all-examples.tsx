@@ -1,4 +1,4 @@
-import * as CoreExamples from './examples/core-examples';
+import * as CoreExamples from '../examples/core-examples';
 
 type ComponentSet = [string, React.ComponentClass[]]
 type NestedComponentSets = [string, ComponentSet[]][];

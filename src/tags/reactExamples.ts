@@ -22,14 +22,13 @@ import * as DateExamples from "../examples/datetime-examples";
 import * as SelectExamples from "../examples/select-examples";
 import * as TableExamples from "../examples/table-examples";
 import * as TimezoneExamples from "../examples/timezone-examples";
+import { getTheme } from '../components/BlueprintThemerApp';
 
 /** Interface for `IExampleProps` `data` in this here Blueprint docs-app. */
 export interface IBlueprintExampleData {
     /** CSS class of theme, typically `""` or `Classes.DARK`. */
     themeName: string;
 }
-
-import { getTheme } from "../components/blueprintDocs";
 
 const SRC_HREF_BASE = "https://github.com/palantir/blueprint/blob/develop/packages/docs-app/src/examples";
 
