@@ -21,7 +21,7 @@ module.exports = Object.assign({}, baseConfig, {
     entry: {
         "docs-app": [
             "./src/index.tsx",
-            "./src/index.scss"
+            "./src/_default-styles/index.scss"
         ],
     },
 
