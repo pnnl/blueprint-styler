@@ -3,6 +3,7 @@
 
 // Gray scale
 
+@import "~@blueprintjs/core/src/common/colors";
 $black: #10161a;
 
 $dark-gray1: #182026;
@@ -27,11 +28,11 @@ $white: #ffffff;
 
 // Core colors
 
-$blue1: #0e5a8a;
-$blue2: #106ba3;
-$blue3: #137cbd;
-$blue4: #2b95d6;
-$blue5: #48aff0;
+$blue1: pink;//#0e5a8a;
+$blue2: pink;//#106ba3;
+$blue3: pink;//#137cbd;
+$blue4: pink;//#2b95d6;
+$blue5: pink;//#48aff0;
 
 $green1: #0a6640;
 $green2: #0d8050;

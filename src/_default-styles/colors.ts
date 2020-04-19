@@ -1,6 +1,7 @@
 
 import { Colors as CoreColors } from "@blueprintjs/core";
 
+// https://www.viget.com/articles/sharing-data-between-sass-and-javascript-with-json/
 export const Colors = {
     ...CoreColors, // if you just want to override some
     BLACK: "#10161A",
