@@ -1,5 +1,10 @@
+$app-max-width: 8*140px;
+$menu-width: 8*38px;
+$menu-buffer: 8*100px;
+$menu-horz-padding: 36px;
+
 .App{
-  max-width: 1000px;
+  max-width: $app-max-width;
   margin: 0  auto;
   position: relative;
 }
@@ -10,20 +15,24 @@ html,body,.blueprint-themer,.App{
   background-color: $pt-app-background-color;
 }
 
-$menu-width: 240px;
 .themer-menu{
-  padding: 36px 16px 36px 24px;
+  padding: $menu-horz-padding 16px $menu-horz-padding 24px;
   position: fixed;
   top: 0;
-  left: 0;
+  // left: 0;
+  right: auto;
   bottom: 0;
   overflow-y: auto;
-  width: $menu-width;
+  width: $menu-width + $menu-buffer;
+  margin-left: -$menu-buffer;
+  padding-left: $menu-buffer + $menu-horz-padding;
+
   border-right: 1px solid $pt-divider-black;
   background-color: $pt-code-background-color;
 }
 
 .themer-examples{
-  padding: 36px 24px 24px 24px;
+  padding: 72px 24px;
   margin-left: $menu-width;
 }
+

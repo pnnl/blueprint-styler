@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 // import './themes/blueprint-custom-theme.css';
 // import './components/components.css';
-import { FocusStyleManager, Classes, Button, AnchorButton, Collapse } from '@blueprintjs/core';
+import { FocusStyleManager, Classes, Button, AnchorButton, Collapse, HTMLSelect } from '@blueprintjs/core';
 import { IBlueprintExampleData } from '../tags/reactExamples';
 import { allExamples } from './allExamples';
 import { IExampleProps } from '@blueprintjs/docs-theme';
@@ -12,6 +12,7 @@ FocusStyleManager.onlyShowFocusOnTabs();
 const DARK_THEME = Classes.DARK;
 const LIGHT_THEME = "";
 const THEME_LOCAL_STORAGE_KEY = "blueprint-docs-theme";
+const THEME_OPTIONS = ["Default Styles", "New Styles!"];
 
 /** Return the current theme className. */
 export function getTheme(): string {
@@ -31,51 +32,87 @@ function handleToggleDark() {
     // this.setState({ themeName: nextThemeName });
 };
 
+
+
 function BlueprintThemerApp() {
     const data: IBlueprintExampleData = { themeName: getTheme() }
     const useDarkTheme = data.themeName === DARK_THEME;
+
+    const [openIndex, setOpenIndex] = useState(-1)
     return (
         <div className={["App", data.themeName].join(' ')}>
 
-            <section className="themer-menu">
+            <div className="themer-menu__wrapper">
+                <section className="themer-menu">
 
-                <img src={logo} />
+                    <header className="themer-menu__header">
 
-                <header className="themer-menu__header">
-                    BlueprintJS Themer
-                     <Button
-                        icon={useDarkTheme ? "flash" : "moon"}
-                        text={useDarkTheme ? "Light theme" : "Dark theme"}
-                        onClick={handleToggleDark}
-                    />
-                </header>
+                        <h2 style={{ display: 'flex', alignItems: 'center', marginBottom: 32 }}>
+                            <img src={logo} style={{ width: 104 }} />
+                            <span style={{ marginLeft: 8 }}>
+                                Blueprint<br />Themer
+                        </span>
+                        </h2>
 
-                <nav className="themer-menu__nav">
-                    <ul className="bp3-list-unstyled">
-                        {allExamples.map(([componentGroupTitle, componentGroup], j: number) => (
-                            <li key={j}>
-                                <Button minimal rightIcon="caret-down" onClick={e => console.log(e)}>
-                                    <b>{componentGroupTitle}</b>
-                                </Button>
-                                <Collapse isOpen={true} >
-                                    <ul className="bp3-list-unstyled">
-                                        {componentGroup.map(([componentName, componentExamples], i: number) => (
-                                            <li key={i}>
-                                                <AnchorButton minimal href={'/#' + componentName} text={componentName} />
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </Collapse>
-                            </li>
-                        ))}
-                    </ul>
-                </nav>
+                        <HTMLSelect fill options={THEME_OPTIONS} style={{ marginBottom: 8 }} />
 
-                <footer className="themer-menu__footer">
+                        <Button
+                            rightIcon={useDarkTheme ? "flash" : "moon"}
+                            text={useDarkTheme ? "Light theme" : "Dark theme"}
+                            onClick={handleToggleDark}
+                            className="bp3-fill"
+                            // minimal
+                            outlined
+                            style={{ justifyContent: 'space-between', marginBottom: 8 }}
+                        />
 
-                </footer>
+                        <div
+                            className="bp3-input-group"
+                            style={{ marginBottom: 16 }}
+                        >
+                            <input type="text" className="bp3-input" placeholder="Search" />
+                            <span className="bp3-icon bp3-icon-search"></span>
+                        </div>
 
-            </section>
+                    </header>
+
+                    <nav className="themer-menu__nav">
+                        <ul className="bp3-list-unstyled">
+                            {allExamples.map(([componentGroupTitle, componentGroup], j: number) => (
+                                <li key={j}>
+                                    <Button
+                                        minimal
+                                        fill
+                                        icon={j === openIndex ? "caret-down" : "caret-right"}
+                                        onClick={() => setOpenIndex((j === openIndex ? -1 : j))}
+                                        style={{ justifyContent: 'flex-start', marginBottom: 2 }}
+                                    >
+                                        <b>{componentGroupTitle}</b>
+                                    </Button>
+                                    <Collapse isOpen={j === openIndex} >
+                                        <ul className="bp3-list-unstyled" style={{ paddingLeft: 24 }}>
+                                            {componentGroup.map(([componentName, componentExamples], i: number) => (
+                                                <li key={i}>
+                                                    <AnchorButton
+                                                        minimal
+                                                        fill
+                                                        href={'/#' + componentName}
+                                                        text={componentName}
+                                                        style={{ justifyContent: 'flex-start', marginBottom: 2 }}
+                                                    />
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </Collapse>
+                                </li>
+                            ))}
+                        </ul>
+                    </nav>
+
+                    {/* <footer className="themer-menu__footer"></footer> */}
+
+                </section>
+            </div>
 
             <main className="themer-examples">
                 {allExamples.map(([componentGroupTitle, componentGroup], k: number) => (
