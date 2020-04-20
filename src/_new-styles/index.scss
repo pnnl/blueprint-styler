@@ -1,1 +1,35 @@
-//...fork default
+/*!
+
+Copyright 2020-present James Bradford All rights reserved.
+Licensed under the Apache License, Version 2.0.
+
+*/
+
+// normalize
+@import "~normalize.css/normalize.css";
+
+// from here:
+// @import "~@blueprintjs/core/src/blueprint.scss"; //
+
+@import "./colors";
+@import "./variables";
+
+@import "~@blueprintjs/core/src/reset";
+@import "~@blueprintjs/core/src/typography";
+@import "~@blueprintjs/core/src/accessibility/focus-states";
+@import "~@blueprintjs/core/src/components/index";
+
+
+// import these first because they're the base layer
+// @import "~@blueprintjs/core/lib/css/blueprint.css";
+// @import "~@blueprintjs/datetime/lib/css/blueprint-datetime.css";
+// @import "~@blueprintjs/icons/lib/css/blueprint-icons.css";
+// @import "~@blueprintjs/select/lib/css/blueprint-select.css";
+// @import "~@blueprintjs/table/lib/css/table.css";
+// @import "~@blueprintjs/timezone/lib/css/blueprint-timezone.css";
+
+// for the (stolen) docs examples
+@import "../styles/examples-index";
+
+// then our own styles
+@import "../styles/themer";
