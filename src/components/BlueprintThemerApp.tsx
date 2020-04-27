@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 // import './themes/blueprint-custom-theme.css';
 // import './components/components.css';
-import { FocusStyleManager, Classes, Button, AnchorButton, Collapse, HTMLSelect } from '@blueprintjs/core';
+import { FocusStyleManager, Classes, Button, AnchorButton, Collapse, HTMLSelect, IOptionProps } from '@blueprintjs/core';
 import { IBlueprintExampleData } from '../tags/reactExamples';
 import { allExamples } from './allExamples';
 import { IExampleProps } from '@blueprintjs/docs-theme';
@@ -12,7 +12,6 @@ FocusStyleManager.onlyShowFocusOnTabs();
 const DARK_THEME = Classes.DARK;
 const LIGHT_THEME = "";
 const THEME_LOCAL_STORAGE_KEY = "blueprint-docs-theme";
-const THEME_OPTIONS = ["Default Styles", "New Styles!"];
 
 /** Return the current theme className. */
 export function getTheme(): string {
@@ -32,21 +31,35 @@ function handleToggleDark() {
     // this.setState({ themeName: nextThemeName });
 };
 
-function switchCss() {
+
+const styleList: IOptionProps[] = [
+    {
+        value: './default-styles.css',
+        label: 'Default Style'
+    },
+    {
+        value: './new-styles.css',
+        label: 'New Style!'
+    }
+]
+
+function addStylerStyleSheet(optionProps: IOptionProps): HTMLLinkElement {
     // https://stackoverflow.com/a/577002/5648839
     var head = document.getElementsByTagName('head')[0];
     var link = document.createElement('link');
-    // link.id = 'test';
+    link.id = 'stylerStyleSheet';
     link.rel = 'stylesheet';
-    // link.type = 'text/css';
-    link.setAttribute('type', 'text/css')
-    link.href = './new-styles.css';
-    // link.media = 'all';
+    link.type = 'text/css';
+    link.href = optionProps.value as string;
+    link.media = 'all';
     head.appendChild(link);
-    console.dir(link);
-
+    return link;
 }
-switchCss();
+const stylerStyleSheet = addStylerStyleSheet(styleList[0])
+
+function switchCss(styleSheetHref: string) {
+    stylerStyleSheet.href = styleSheetHref
+}
 
 
 function BlueprintThemerApp() {
@@ -68,7 +81,7 @@ function BlueprintThemerApp() {
                         </span>
                     </h2>
 
-                    <HTMLSelect fill options={THEME_OPTIONS} style={{ marginBottom: 8 }} />
+                    <HTMLSelect fill options={styleList} style={{ marginBottom: 8 }} onChange={e => switchCss(e.target.value)} />
 
                     <Button
                         rightIcon={useDarkTheme ? "flash" : "moon"}
