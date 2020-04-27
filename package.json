@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "start": "npm run dev",
+    "postinstall": "npm run generate-svg-icon-files",
     "bundle": "webpack --config ./webpack.config.js",
     "clean": "rm -rf dist/*",
     "dev": "webpack-dev-server --config ./webpack.config.js --host 0.0.0.0",
@@ -14,7 +15,8 @@
     "lint:es": "es-lint",
     "lint-fix": "es-lint --fix",
     "test": "exit 0",
-    "verify": "run-p dist lint"
+    "verify": "run-p dist lint",
+    "generate-svg-icon-files": "node ./scripts/generate-svg-icon-files.js"
   },
   "dependencies": {
     "@blueprintjs/core": "^3.24.0",
