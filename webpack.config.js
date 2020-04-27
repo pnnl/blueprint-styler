@@ -15,19 +15,73 @@
 
 const { baseConfig } = require("@blueprintjs/webpack-build-scripts");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
+const sassCustomFunctions = require('./scripts/sass-custom-functions');
 
 module.exports = Object.assign({}, baseConfig, {
     entry: {
-        "docs-app": [
-            "./src/index.tsx",
-            "./src/_new-styles/index.scss"
-        ],
+        "styler-app": "./src/index.tsx",
+        "default-styles": "./src/_default-styles/index.scss",
+        "new-styles": "./src/_new-styles/index.scss"
     },
 
     output: {
         filename: "[name].js",
         path: path.resolve(__dirname, "./dist"),
+    },
+
+    module: {
+        rules: [
+            {
+                test: /\.tsx?$/,
+                loader: require.resolve("awesome-typescript-loader"),
+                options: {
+                    configFileName: "./src/tsconfig.json",
+                },
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                    // Only extract CSS to separate file in production mode.
+                    // IS_PRODUCTION ? MiniCssExtractPlugin.loader : require.resolve("style-loader"),
+                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: require.resolve("css-loader"),
+                        options: {
+                            // necessary to minify @import-ed files using cssnano
+                            importLoaders: 1,
+                        },
+                    },
+                    {
+                        loader: require.resolve("postcss-loader"),
+                        options: {
+                            plugins: [
+                                require("autoprefixer"),
+                                require("cssnano")({ preset: "default" }),
+                            ],
+                        },
+                    },
+                    {
+                        loader: require.resolve("sass-loader"),
+                        options: {
+                            sassOptions: {
+                                functions: sassCustomFunctions
+                            }
+                        }
+                    }
+
+                ],
+            },
+            {
+                test: /\.(eot|ttf|woff|woff2|svg|png|gif|jpe?g)$/,
+                loader: require.resolve("file-loader"),
+                options: {
+                    name: "[name].[ext]?[hash]",
+                    outputPath: "assets/",
+                },
+            },
+        ],
     },
 
     plugins: baseConfig.plugins.concat([

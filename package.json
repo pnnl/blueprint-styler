@@ -63,7 +63,8 @@
     "stylelint-config-palantir": "^4.0.0",
     "stylelint-scss": "^3.9.2",
     "typescript": "~3.7.5",
-    "yarn-deduplicate": "^1.1.1"
+    "yarn-deduplicate": "^1.1.1",
+    "sass-inline-svg": "^1.2.3"
   },
   "devDependencies": {
     "@blueprintjs/node-build-scripts": "^1.0.0",

@@ -32,6 +32,21 @@ function handleToggleDark() {
     // this.setState({ themeName: nextThemeName });
 };
 
+function switchCss() {
+    // https://stackoverflow.com/a/577002/5648839
+    var head = document.getElementsByTagName('head')[0];
+    var link = document.createElement('link');
+    // link.id = 'test';
+    link.rel = 'stylesheet';
+    // link.type = 'text/css';
+    link.setAttribute('type', 'text/css')
+    link.href = './new-styles.css';
+    // link.media = 'all';
+    head.appendChild(link);
+    console.dir(link);
+
+}
+switchCss();
 
 
 function BlueprintThemerApp() {
