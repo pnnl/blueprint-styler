@@ -23,10 +23,13 @@ export function setTheme(themeName: string) {
     localStorage.setItem(THEME_LOCAL_STORAGE_KEY, themeName);
 }
 
-function handleToggleDark() {
-    const useDark = getTheme() === LIGHT_THEME;
-    const nextThemeName = useDark ? DARK_THEME : LIGHT_THEME;
-    setTheme(nextThemeName);
+function handleThemeChange(themeState: BbTheme, setThemeState: React.Dispatch<React.SetStateAction<BbTheme>>) {
+    setThemeState(themeState === BbTheme.Light ? BbTheme.Dark : BbTheme.Light)
+
+    // document.root
+    // const useDark = getTheme() === LIGHT_THEME;
+    // const nextThemeName = useDark ? DARK_THEME : LIGHT_THEME;
+    // setTheme(nextThemeName);
     // setHotkeysDialogProps({ className: nextThemeName });
     // this.setState({ themeName: nextThemeName });
 };
@@ -61,12 +64,22 @@ function switchCss(styleSheetHref: string) {
     stylerStyleSheet.href = styleSheetHref
 }
 
+enum BbTheme {
+    Light,
+    Dark
+}
 
 function BlueprintThemerApp() {
-    const data: IBlueprintExampleData = { themeName: getTheme() }
-    const useDarkTheme = data.themeName === DARK_THEME;
+    // const data: IBlueprintExampleData = { themeName: getTheme() }
+    // const useDarkTheme = data.themeName === DARK_THEME;
 
     const [openIndex, setOpenIndex] = useState(-1)
+
+    const [theme, setTheme] = useState(BbTheme.Light)
+    const useDarkTheme = theme === BbTheme.Dark;
+    const data: IBlueprintExampleData = { themeName: useDarkTheme ? DARK_THEME : LIGHT_THEME }
+
+
     return (
         <div className={["App", data.themeName].join(' ')}>
 
@@ -86,7 +99,7 @@ function BlueprintThemerApp() {
                     <Button
                         rightIcon={useDarkTheme ? "flash" : "moon"}
                         text={useDarkTheme ? "Light theme" : "Dark theme"}
-                        onClick={handleToggleDark}
+                        onClick={e => handleThemeChange(theme, setTheme)}
                         className="bp3-fill"
                         // minimal
                         outlined
