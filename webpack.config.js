@@ -18,6 +18,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 const sassCustomFunctions = require('./scripts/sass-custom-functions');
+const jsonImporter = require('node-sass-json-importer');
 
 module.exports = Object.assign({}, baseConfig, {
     entry: {
@@ -65,10 +66,10 @@ module.exports = Object.assign({}, baseConfig, {
                     {
                         loader: require.resolve("sass-loader"),
                         options: {
-                            functions: sassCustomFunctions
+                            functions: sassCustomFunctions,
+                            importer: jsonImporter(),
                         }
                     }
-
                 ],
             },
             {
