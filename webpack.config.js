@@ -65,9 +65,7 @@ module.exports = Object.assign({}, baseConfig, {
                     {
                         loader: require.resolve("sass-loader"),
                         options: {
-                            sassOptions: {
-                                functions: sassCustomFunctions
-                            }
+                            functions: sassCustomFunctions
                         }
                     }
 

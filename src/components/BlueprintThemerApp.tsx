@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 // import './themes/blueprint-custom-theme.css';
 // import './components/components.css';
-import { FocusStyleManager, Classes, Button, AnchorButton, Collapse, HTMLSelect, IOptionProps } from '@blueprintjs/core';
+import { FocusStyleManager, Classes, Button, AnchorButton, Collapse, HTMLSelect, IOptionProps, Icon } from '@blueprintjs/core';
 import { IBlueprintExampleData } from '../tags/reactExamples';
 import { allExamples } from './allExamples';
 import { IExampleProps } from '@blueprintjs/docs-theme';
@@ -111,7 +111,8 @@ function BlueprintThemerApp() {
                         style={{ marginBottom: 16 }}
                     >
                         <input type="text" className="bp3-input" placeholder="Search" />
-                        <span className="bp3-icon bp3-icon-search"></span>
+                        <Icon icon="search" />
+                        {/* <span className="bp3-icon bp3-icon-search"></span> */}
                     </div>
 
                 </header>
