@@ -3,47 +3,47 @@
 const { Colors } = require('@blueprintjs/core/lib/cjs/common/colors')
 
 module.exports = Object.assign(Colors, {
-    /*
 
     // Gray scale
 
-    BLACK: '#10161A',
+    BLACK: '#12181C',
 
-    DARK_GRAY1: '#182026',
-    DARK_GRAY2: '#202B33',
-    DARK_GRAY3: '#293742',
-    DARK_GRAY4: '#30404D',
-    DARK_GRAY5: '#394B59',
+    DARK_GRAY1: '#1E262C',
+    DARK_GRAY2: '#273037',
+    DARK_GRAY3: '#35404A',
+    DARK_GRAY4: '#45515A',
+    DARK_GRAY5: '#57626B',
 
-    GRAY1: '#5C7080',
-    GRAY2: '#738694',
-    GRAY3: '#8A9BA8',
-    GRAY4: '#A7B6C2',
-    GRAY5: '#BFCCD6',
+    GRAY1: '#6F7880',
+    GRAY2: '#82898F',
+    GRAY3: '#9CA1A6',
+    GRAY4: '#B7BABD',
+    GRAY5: '#CACDCF',
 
-    LIGHT_GRAY1: '#CED9E0',
-    LIGHT_GRAY2: '#D8E1E8',
-    LIGHT_GRAY3: '#E1E8ED',
-    LIGHT_GRAY4: '#EBF1F5',
-    LIGHT_GRAY5: '#F5F8FA',
+    LIGHT_GRAY1: '#D7D8D9',
+    LIGHT_GRAY2: '#DEDFE0',
+    LIGHT_GRAY3: '#E8E8E8',
+    LIGHT_GRAY4: '#EFEFF0',
+    LIGHT_GRAY5: '#F7F7F8',
 
-    WHITE: '#FFFFFF',
+    WHITE: '#FFFFFF', // '#FDFDFD',
 
 
     // CORE COLORS
 
-    BLUE1: '#0E5A8A',
-    BLUE2: '#106BA3',
-    BLUE3: '#137CBD',
-    BLUE4: '#2B95D6',
-    BLUE5: '#48AFF0',
+    BLUE1: '#1165B2',
+    BLUE2: '#147AD8',
+    BLUE3: '#1890FF',
+    BLUE4: '#12A4FF',
+    BLUE5: '#30BEFF',
 
-    GREEN1: '#0A6640',
-    GREEN2: '#0D8050',
-    GREEN3: '#0F9960',
-    GREEN4: '#15B371',
-    GREEN5: '#3DCC91',
+    GREEN1: '#0E7A00',
+    GREEN2: '#119400',
+    GREEN3: '#14AF00',
+    GREEN4: '#49BF3A',
+    GREEN5: '#63D054',
 
+    /*
     ORANGE1: '#A66321',
     ORANGE2: '#BF7326',
     ORANGE3: '#D9822B',
