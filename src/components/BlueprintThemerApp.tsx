@@ -48,15 +48,18 @@ const styleList: IOptionProps[] = [
 
 function addStylerStyleSheet(optionProps: IOptionProps): HTMLLinkElement {
     // https://stackoverflow.com/a/577002/5648839
-    var head = document.getElementsByTagName('head')[0];
-    var link = document.createElement('link');
-    link.id = 'stylerStyleSheet';
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = optionProps.value as string;
-    link.media = 'all';
-    head.appendChild(link);
+    // var head = document.getElementsByTagName('head')[0];
+    // var link = document.createElement('link');
+    // link.id = 'stylerStyleSheet';
+    // link.rel = 'stylesheet';
+    // link.type = 'text/css';
+    // link.href = optionProps.value as string;
+    // link.media = 'all';
+    // head.appendChild(link);
+
+    var link = document.getElementById('stylerStyleSheet') as HTMLLinkElement;
     return link;
+
 }
 const stylerStyleSheet = addStylerStyleSheet(styleList[0])
 
@@ -110,9 +113,8 @@ function BlueprintThemerApp() {
                         className="bp3-input-group"
                         style={{ marginBottom: 16 }}
                     >
-                        <input type="text" className="bp3-input" placeholder="Search" />
                         <Icon icon="search" />
-                        {/* <span className="bp3-icon bp3-icon-search"></span> */}
+                        <input type="text" className="bp3-input" placeholder="Search" />
                     </div>
 
                 </header>
