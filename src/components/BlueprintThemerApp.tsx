@@ -91,9 +91,9 @@ function BlueprintThemerApp() {
                 <header className="themer-menu__header">
 
                     <h2 style={{ display: 'flex', alignItems: 'center', marginBottom: 32 }}>
-                        <img src={logo} style={{ width: 104 }} />
-                        <span style={{ marginLeft: 8 }}>
-                            Blueprint<br />Themer
+                        <img src={logo} style={{ width: 80 }} />
+                        <span style={{ marginLeft: 16 }}>
+                            Blueprint<br />Styler
                         </span>
                     </h2>
 
