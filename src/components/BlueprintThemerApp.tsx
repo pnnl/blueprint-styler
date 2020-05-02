@@ -84,101 +84,108 @@ function BlueprintThemerApp() {
 
 
     return (
-        <div className={["App", data.themeName].join(' ')}>
+        <div className={["app-wrapper", data.themeName].join(' ')}>
+            <div className="app">
 
-            <section className="themer-menu">
+                <section className="themer-menu">
 
-                <header className="themer-menu__header">
+                    <header className="themer-menu__header">
 
-                    <h2 style={{ display: 'flex', alignItems: 'center', marginBottom: 32 }}>
-                        <img src={logo} style={{ width: 80 }} />
-                        <span style={{ marginLeft: 16 }}>
-                            Blueprint<br />Styler
+                        <h2 style={{ display: 'flex', alignItems: 'center', marginBottom: 32 }}>
+                            <img src={logo} style={{ width: 80 }} />
+                            <span style={{ marginLeft: 16 }}>
+                                Blueprint<br />Styler
                         </span>
-                    </h2>
+                        </h2>
 
-                    <HTMLSelect fill options={styleList} style={{ marginBottom: 8 }} onChange={e => switchCss(e.target.value)} />
+                        <HTMLSelect
+                            fill
+                            options={styleList}
+                            style={{ marginBottom: 8 }}
+                            onChange={e => switchCss(e.target.value)}
+                        />
 
-                    <Button
-                        rightIcon={useDarkTheme ? "flash" : "moon"}
-                        text={useDarkTheme ? "Light theme" : "Dark theme"}
-                        onClick={e => handleThemeChange(theme, setTheme)}
-                        className="bp3-fill"
-                        // minimal
-                        outlined
-                        style={{ justifyContent: 'space-between', marginBottom: 8 }}
-                    />
+                        <Button
+                            rightIcon={useDarkTheme ? "flash" : "moon"}
+                            text={useDarkTheme ? "Light theme" : "Dark theme"}
+                            onClick={e => handleThemeChange(theme, setTheme)}
+                            className="bp3-fill"
+                            // minimal
+                            outlined
+                            style={{ justifyContent: 'space-between', marginBottom: 8 }}
+                        />
 
-                    <div
-                        className="bp3-input-group"
-                        style={{ marginBottom: 16 }}
-                    >
-                        <Icon icon="search" />
-                        <input type="text" className="bp3-input" placeholder="Search" />
-                    </div>
+                        <div
+                            className="bp3-input-group"
+                            style={{ marginBottom: 16 }}
+                        >
+                            <Icon icon="search" />
+                            <input type="text" className="bp3-input" placeholder="Search" />
+                        </div>
 
-                </header>
+                    </header>
 
-                <nav className="themer-menu__nav">
-                    <ul className="bp3-list-unstyled">
-                        {allExamples.map(([componentGroupTitle, componentGroup], j: number) => (
-                            <li key={j}>
-                                <Button
-                                    minimal
-                                    fill
-                                    icon={j === openIndex ? "caret-down" : "caret-right"}
-                                    onClick={() => setOpenIndex((j === openIndex ? -1 : j))}
-                                    style={{ justifyContent: 'flex-start', marginBottom: 2 }}
-                                >
-                                    <b>{componentGroupTitle}</b>
-                                </Button>
-                                <Collapse isOpen={j === openIndex} >
-                                    <ul className="bp3-list-unstyled" style={{ paddingLeft: 24 }}>
-                                        {componentGroup.map(([componentName, componentExamples], i: number) => (
-                                            <li key={i}>
-                                                <AnchorButton
-                                                    minimal
-                                                    fill
-                                                    href={'/#' + componentName}
-                                                    text={componentName}
-                                                    style={{ justifyContent: 'flex-start', marginBottom: 2 }}
-                                                />
-                                            </li>
+                    <nav className="themer-menu__nav">
+                        <ul className="bp3-list-unstyled">
+                            {allExamples.map(([componentGroupTitle, componentGroup], j: number) => (
+                                <li key={j}>
+                                    <Button
+                                        minimal
+                                        fill
+                                        icon={j === openIndex ? "caret-down" : "caret-right"}
+                                        onClick={() => setOpenIndex((j === openIndex ? -1 : j))}
+                                        style={{ justifyContent: 'flex-start', marginBottom: 2 }}
+                                    >
+                                        <b>{componentGroupTitle}</b>
+                                    </Button>
+                                    <Collapse isOpen={j === openIndex} >
+                                        <ul className="bp3-list-unstyled" style={{ paddingLeft: 24 }}>
+                                            {componentGroup.map(([componentName, componentExamples], i: number) => (
+                                                <li key={i}>
+                                                    <AnchorButton
+                                                        minimal
+                                                        fill
+                                                        href={'/#' + componentName}
+                                                        text={componentName}
+                                                        style={{ justifyContent: 'flex-start', marginBottom: 2 }}
+                                                    />
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </Collapse>
+                                </li>
+                            ))}
+                        </ul>
+                    </nav>
+
+                    {/* <footer className="themer-menu__footer"></footer> */}
+
+                </section>
+
+                <main className="themer-examples">
+                    {allExamples.map(([componentGroupTitle, componentGroup], k: number) => (
+                        <section key={k}>
+                            <h2>{componentGroupTitle}</h2>
+                            {componentGroup.map(([componentName, componentExamples], j: number) => (
+                                <div id={componentName} key={j}>
+                                    <h3>{componentName}</h3>
+                                    {componentExamples.map((
+                                        ExampleComponent: React.ComponentClass<IExampleProps<IBlueprintExampleData>>,
+                                        i: number
+                                    ) => (
+                                            <ExampleComponent
+                                                key={i}
+                                                id={componentName + '-' + i}
+                                                data={data}
+                                            />
                                         ))}
-                                    </ul>
-                                </Collapse>
-                            </li>
-                        ))}
-                    </ul>
-                </nav>
+                                </div>
+                            ))}
+                        </section>
+                    ))}
+                </main>
 
-                {/* <footer className="themer-menu__footer"></footer> */}
-
-            </section>
-
-            <main className="themer-examples">
-                {allExamples.map(([componentGroupTitle, componentGroup], k: number) => (
-                    <section key={k}>
-                        <h2>{componentGroupTitle}</h2>
-                        {componentGroup.map(([componentName, componentExamples], j: number) => (
-                            <div id={componentName} key={j}>
-                                <h3>{componentName}</h3>
-                                {componentExamples.map((
-                                    ExampleComponent: React.ComponentClass<IExampleProps<IBlueprintExampleData>>,
-                                    i: number
-                                ) => (
-                                        <ExampleComponent
-                                            key={i}
-                                            id={componentName + '-' + i}
-                                            data={data}
-                                        />
-                                    ))}
-                            </div>
-                        ))}
-                    </section>
-                ))}
-            </main>
-
+            </div>
         </div>
     );
 }
