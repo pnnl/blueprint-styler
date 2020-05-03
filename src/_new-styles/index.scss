@@ -10,18 +10,13 @@ Licensed under the Apache License, Version 2.0.
 @import "~normalize.css/normalize.css";
 
 
-// import defaults to override
-@import "~@blueprintjs/core/src/common/colors";
-@import "~@blueprintjs/core/src/common/mixins";
-@import "~@blueprintjs/core/src/common/variables";
-
-
 /*
   // SCSS BASED COLORS //
   If you DON'T care about the colors.js object,
   ...then you can just import the !default scss color vars and override them.
 */
-// @import './colors';
+// @import "~@blueprintjs/core/src/common/colors";
+// @import './colors2';
 
 /*
   // JS BASED COLORS //
@@ -32,13 +27,16 @@ Licensed under the Apache License, Version 2.0.
   ...or node-sass-json-importer shits💩 its pants👖.
 */
 @import './_colors2.js';
-@import '../__common-styles/js-to-scss-color-map';
+@import '../styles/js-to-scss-color-map';
 
 
 // Import the color alias mappings.
 @import './color-aliases';
 
 
+// import defaults to override
+@import "~@blueprintjs/core/src/common/mixins";
+@import "~@blueprintjs/core/src/common/variables";
 // import customized vars
 @import "./variables";
 
