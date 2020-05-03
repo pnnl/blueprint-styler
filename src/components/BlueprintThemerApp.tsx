@@ -115,13 +115,13 @@ function BlueprintThemerApp() {
                             style={{ justifyContent: 'space-between', marginBottom: 8 }}
                         />
 
-                        <div
+                        {/* <div
                             className="bp3-input-group"
                             style={{ marginBottom: 16 }}
                         >
                             <Icon icon="search" />
                             <input type="text" className="bp3-input" placeholder="Search" />
-                        </div>
+                        </div> */}
 
                     </header>
 

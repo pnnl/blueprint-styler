@@ -14,4 +14,9 @@ From the root of the repo:
 
 
 ## TODOS:
-- go back to the original effort and retrieve the svg import for scss stuff
+- make a final export
+  - remove css specific to this project from final export
+- save state between loads
+- make search work
+- add shortcut keys
+- add components from other projects
