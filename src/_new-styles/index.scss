@@ -5,17 +5,47 @@ Licensed under the Apache License, Version 2.0.
 
 */
 
+
 // normalize
 @import "~normalize.css/normalize.css";
 
-// from here:
-// @import "~@blueprintjs/core/src/blueprint.scss"; //
 
-@import "./color-index";
+// import defaults to override
+@import "~@blueprintjs/core/src/common/colors";
+@import "~@blueprintjs/core/src/common/mixins";
+@import "~@blueprintjs/core/src/common/variables";
+
+
+/*
+  // SCSS BASED COLORS //
+  If you DON'T care about the colors.js object,
+  ...then you can just import the !default scss color vars and override them.
+*/
+// @import './colors';
+
+/*
+  // JS BASED COLORS //
+  If you DO care about the colors.js,
+  ...modify it and map it here so the values are always in sync.
+
+  _colors2.js needs to be named differently than parallel style _colors.js
+  ...or node-sass-json-importer shits💩 its pants👖.
+*/
+@import './_colors2.js';
+@import '../__common-styles/js-to-scss-color-map';
+
+
+// Import the color alias mappings.
+@import './color-aliases';
+
+
+// import customized vars
 @import "./variables";
 
+// import customized component vars
 @import "./button-common";
 
+// build components based on custom scss vars
 @import "~@blueprintjs/core/src/reset";
 @import "~@blueprintjs/core/src/typography";
 @import "~@blueprintjs/core/src/accessibility/focus-states";
@@ -30,8 +60,9 @@ Licensed under the Apache License, Version 2.0.
 // @import "~@blueprintjs/table/lib/css/table.css";
 // @import "~@blueprintjs/timezone/lib/css/blueprint-timezone.css";
 
+
+// project specific...
 // for the (stolen) docs examples
 @import "../styles/examples-index";
-
 // then our own styles
 @import "../styles/themer";

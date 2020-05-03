@@ -23,8 +23,8 @@ const jsonImporter = require('node-sass-json-importer');
 module.exports = Object.assign({}, baseConfig, {
     entry: {
         "styler-app": "./src/index.tsx",
-        "new-styles": "./src/_new-styles/index.scss",
         "default-styles": "./src/_default-styles/index.scss",
+        "new-styles": "./src/_new-styles/index.scss",
     },
 
     output: {

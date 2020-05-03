@@ -1,13 +1,7 @@
 // Copyright 2015 Palantir Technologies, Inc. All rights reserved.
 // Licensed under the Apache License, Version 2.0.
 
-// import defaults
-@import "~@blueprintjs/core/src/common/colors";
-@import "~@blueprintjs/core/src/common/mixins";
-@import "~@blueprintjs/core/src/common/variables";
 
-// import overrides
-@import "colors";
 
 // Namespace appended to the beginning of each CSS class: `.#{$ns}-button`.
 // Do not quote this value, for Less consumers.
@@ -31,6 +25,8 @@ $pt-font-family: -apple-system,
                  sans-serif;
 
 $pt-font-family-monospace: Consolas, Menlo, monospace;
+
+/*
 
 $pt-font-size: $pt-grid-size * 1.4;
 $pt-font-size-large: $pt-grid-size * 1.6;
@@ -132,3 +128,6 @@ $pt-dark-input-box-shadow: inset border-shadow(0.3),
 $pt-dark-dialog-box-shadow: $pt-dark-elevation-shadow-4;
 $pt-dark-popover-box-shadow: $pt-dark-elevation-shadow-3;
 $pt-dark-tooltip-box-shadow: $pt-dark-popover-box-shadow;
+
+*/
+
