@@ -14,6 +14,7 @@ From the root of the repo:
 
 
 ## TODOS:
+- import js with a custom scss function: https://itnext.io/sharing-variables-between-js-and-sass-using-webpack-sass-loader-713f51fa7fa0
 - make a final export
   - remove css specific to this project from final export
 - save state between loads
