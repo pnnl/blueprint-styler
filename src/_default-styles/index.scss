@@ -22,9 +22,6 @@ Licensed under the Apache License, Version 2.0.
   // JS BASED COLORS //
   If you DO care about the colors.js,
   ...modify it and map it here so the values are always in sync.
-
-  _colors.js needs to be named differently than parallel style _colors.js
-  ...or node-sass-json-importer shits💩 its pants👖.
 */
 @import './_colors.js';
 @import '../styles/js-to-scss-color-map';

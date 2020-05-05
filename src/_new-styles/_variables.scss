@@ -26,6 +26,9 @@ $pt-font-family: -apple-system,
 
 $pt-font-family-monospace: Consolas, Menlo, monospace;
 
+$pt-border-radius: 6px;
+
+/*
 
 $pt-font-size: $pt-grid-size * 1.4;
 $pt-font-size-large: $pt-grid-size * 1.6;
@@ -44,9 +47,7 @@ $pt-icon-size-large: 20px;
 
 // Grids & dimensions
 
-$pt-border-radius: floor($pt-grid-size / 3);
-
-/*
+// $pt-border-radius: floor($pt-grid-size / 3);
 
 // Buttons
 $pt-button-height: $pt-grid-size * 3;

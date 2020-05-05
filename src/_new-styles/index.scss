@@ -16,17 +16,14 @@ Licensed under the Apache License, Version 2.0.
   ...then you can just import the !default scss color vars and override them.
 */
 // @import "~@blueprintjs/core/src/common/colors";
-// @import './colors2';
+// @import './colors';
 
 /*
   // JS BASED COLORS //
   If you DO care about the colors.js,
   ...modify it and map it here so the values are always in sync.
-
-  _colors2.js needs to be named differently than parallel style _colors.js
-  ...or node-sass-json-importer shits💩 its pants👖.
 */
-@import './_colors2.js';
+@import './_colors.js';
 @import '../styles/js-to-scss-color-map';
 
 

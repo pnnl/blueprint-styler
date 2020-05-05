@@ -2,7 +2,8 @@
 // import { Colors } from "@blueprintjs/core";
 const { Colors } = require('@blueprintjs/core/lib/cjs/common/colors')
 
-module.exports = Object.assign(Colors, {
+module.exports = {
+    ...Colors,
     /*
 
     // Gray scale
@@ -120,4 +121,4 @@ module.exports = Object.assign(Colors, {
     SEPIA5: '#C99765'
 
     */
-});
+};
