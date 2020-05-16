@@ -55,6 +55,8 @@ Licensed under the Apache License, Version 2.0.
 // @import "~@blueprintjs/table/lib/css/table.css";
 // @import "~@blueprintjs/timezone/lib/css/blueprint-timezone.css";
 
+// import the css vars - they will be parsed by the css-vars-copy-loader.js
+@import "../styles/variables-map";
 
 // project specific...
 // for the (stolen) docs examples

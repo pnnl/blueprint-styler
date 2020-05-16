@@ -42,7 +42,7 @@ module.exports = Object.assign({}, baseConfig, {
     entry: {
         "styler-app": "./src/index.tsx",
         "default-styles": "./src/_default-styles/index.scss",
-        "new-styles": "./src/_new-styles/index.scss",
+        // "new-styles": "./src/_new-styles/index.scss",
 
         // if IS_PRODUCTION
         // "blueprint-default": "./src/_default-styles/index-slim.scss",
@@ -70,8 +70,8 @@ module.exports = Object.assign({}, baseConfig, {
                 use: [
                     // Only extract CSS to separate file in production mode.
                     // IS_PRODUCTION ? MiniCssExtractPlugin.loader : require.resolve("style-loader"),
-                    require.resolve('./scripts/custom-loader.js'),
                     MiniCssExtractPlugin.loader,
+                    require.resolve('./scripts/custom-loader.js'),
                     {
                         loader: require.resolve("css-loader"),
                         options: {
