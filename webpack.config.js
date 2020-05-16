@@ -21,10 +21,34 @@ const sassCustomFunctions = require('./scripts/sass-custom-functions');
 const jsonImporter = require('node-sass-json-importer');
 
 module.exports = Object.assign({}, baseConfig, {
+
+    // EXPORTS:
+    // compiled css - for all blueprint modules
+    // scss vars - less vars too?
+    // js vars - in different syntax - es6, cjs, etc...
+
+    // if IS_PRODUCTION, use additional files
+    // - slim index and just the color.js file
+    // put those in a libs folder?
+
+    // OR ||
+
+    // always output a different set of css - base blueprint & project specific?
+    // would require changing two css files on style switch
+    // compile time and thus dev time would be slower
+    // no difference in prod v dev...
+
+
     entry: {
         "styler-app": "./src/index.tsx",
         "default-styles": "./src/_default-styles/index.scss",
         "new-styles": "./src/_new-styles/index.scss",
+
+        // if IS_PRODUCTION
+        // "blueprint-default": "./src/_default-styles/index-slim.scss",
+        // "blueprint-new":  "./src/_new-styles/index-slim.scss",
+        // colors
+
     },
 
     output: {
@@ -46,6 +70,7 @@ module.exports = Object.assign({}, baseConfig, {
                 use: [
                     // Only extract CSS to separate file in production mode.
                     // IS_PRODUCTION ? MiniCssExtractPlugin.loader : require.resolve("style-loader"),
+                    require.resolve('./scripts/custom-loader.js'),
                     MiniCssExtractPlugin.loader,
                     {
                         loader: require.resolve("css-loader"),

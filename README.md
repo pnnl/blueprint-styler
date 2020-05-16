@@ -1,6 +1,6 @@
 # Blueprint Styler
 
-This project is meant to help create custom styles for [Blueprint js Components](https://blueprintjs.com/docs/)
+This project is meant to help create custom global styles for [Blueprint js Components](https://blueprintjs.com/docs/)
 
 ## Quick start
 
@@ -14,10 +14,13 @@ From the root of the repo:
 
 
 ## TODOS:
-- import js with a custom scss function: https://itnext.io/sharing-variables-between-js-and-sass-using-webpack-sass-loader-713f51fa7fa0
 - make a final export
-  - remove css specific to this project from final export
+  - publish command?
+    - runs just scss
+    - outputs js object
+  - remove css specific to this project from final exports
 - save state between loads
 - make search work
 - add shortcut keys
-- add components from other projects
+- add components from other projects??
+- rename everything to "styler"
