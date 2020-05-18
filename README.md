@@ -14,7 +14,7 @@ From the root of the repo:
 
 
 ## TODOS:
-- make a final export
+- make a final export - USE GULP FOR THIS BECAUSE FUCK WEBPACK!
   - publish command?
     - runs just scss
     - outputs js object
