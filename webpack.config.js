@@ -19,6 +19,8 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 const sassCustomFunctions = require('./scripts/sass-custom-functions');
 const jsonImporter = require('node-sass-json-importer');
+const { sassConfig } = require('./shared.config')
+
 
 module.exports = Object.assign({}, baseConfig, {
 
@@ -42,13 +44,7 @@ module.exports = Object.assign({}, baseConfig, {
     entry: {
         "styler-app": "./src/index.tsx",
         "default-styles": "./src/_default-styles/index.scss",
-        // "new-styles": "./src/_new-styles/index.scss",
-
-        // if IS_PRODUCTION
-        // "blueprint-default": "./src/_default-styles/index-slim.scss",
-        // "blueprint-new":  "./src/_new-styles/index-slim.scss",
-        // colors
-
+        "new-styles": "./src/_new-styles/index.scss",
     },
 
     output: {
@@ -71,7 +67,7 @@ module.exports = Object.assign({}, baseConfig, {
                     // Only extract CSS to separate file in production mode.
                     // IS_PRODUCTION ? MiniCssExtractPlugin.loader : require.resolve("style-loader"),
                     MiniCssExtractPlugin.loader,
-                    require.resolve('./scripts/custom-loader.js'),
+                    // require.resolve('./scripts/custom-loader.js'),
                     {
                         loader: require.resolve("css-loader"),
                         options: {
@@ -90,10 +86,7 @@ module.exports = Object.assign({}, baseConfig, {
                     },
                     {
                         loader: require.resolve("sass-loader"),
-                        options: {
-                            functions: sassCustomFunctions,
-                            importer: jsonImporter(),
-                        }
+                        options: sassConfig
                     }
                 ],
             },
