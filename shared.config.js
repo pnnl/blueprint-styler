@@ -7,3 +7,10 @@ exports.sassConfig = {
     ]
     // outputStyle: 'compressed'
 }
+
+exports.postCssConfig = {
+    plugins: [
+        require("autoprefixer"),
+        require("cssnano")({ preset: "default" }),
+    ],
+}

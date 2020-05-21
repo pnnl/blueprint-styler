@@ -19,7 +19,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 const sassCustomFunctions = require('./scripts/sass-custom-functions');
 const jsonImporter = require('node-sass-json-importer');
-const { sassConfig } = require('./shared.config')
+const { sassConfig, postCssConfig } = require('./shared.config')
 
 
 module.exports = Object.assign({}, baseConfig, {
@@ -43,8 +43,8 @@ module.exports = Object.assign({}, baseConfig, {
 
     entry: {
         "styler-app": "./src/index.tsx",
-        "default-styles": "./src/_default-styles/index.scss",
-        "new-styles": "./src/_new-styles/index.scss",
+        "default-styles": "./src/_default-styles/default-styles.index.scss",
+        "new-styles": "./src/_new-styles/new-styles.index.scss",
     },
 
     output: {
@@ -77,12 +77,7 @@ module.exports = Object.assign({}, baseConfig, {
                     },
                     {
                         loader: require.resolve("postcss-loader"),
-                        options: {
-                            plugins: [
-                                require("autoprefixer"),
-                                require("cssnano")({ preset: "default" }),
-                            ],
-                        },
+                        options: postCssConfig
                     },
                     {
                         loader: require.resolve("sass-loader"),

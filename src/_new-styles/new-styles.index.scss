@@ -7,7 +7,7 @@ Licensed under the Apache License, Version 2.0.
 
 
 // normalize
-@import "~normalize.css/normalize.css";
+@import "~normalize.css/normalize";
 
 
 /*
@@ -37,6 +37,8 @@ Licensed under the Apache License, Version 2.0.
 // import customized vars
 @import "./variables";
 
+// import customized component vars
+@import "./button-common";
 
 // build components based on custom scss vars
 @import "~@blueprintjs/core/src/reset";
