@@ -24,27 +24,11 @@ const { sassConfig, postCssConfig } = require('./shared.config')
 
 module.exports = Object.assign({}, baseConfig, {
 
-    // EXPORTS:
-    // compiled css - for all blueprint modules
-    // scss vars - less vars too?
-    // js vars - in different syntax - es6, cjs, etc...
-
-    // if IS_PRODUCTION, use additional files
-    // - slim index and just the color.js file
-    // put those in a libs folder?
-
-    // OR ||
-
-    // always output a different set of css - base blueprint & project specific?
-    // would require changing two css files on style switch
-    // compile time and thus dev time would be slower
-    // no difference in prod v dev...
-
 
     entry: {
         "styler-app": "./src/index.tsx",
-        "default-styles": "./src/_default-styles/default-styles.index.scss",
-        "new-styles": "./src/_new-styles/new-styles.index.scss",
+        "default-styles": "./src/_default-styles/styler-styles.scss",
+        // "new-styles": "./src/_new-styles/new-styles.index.scss",
     },
 
     output: {

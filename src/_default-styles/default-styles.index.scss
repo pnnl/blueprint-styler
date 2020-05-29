@@ -1,14 +1,5 @@
-/*!
-
-Copyright 2020-present James Bradford All rights reserved.
-Licensed under the Apache License, Version 2.0.
-
-*/
-
-
 // normalize
 @import "~normalize.css/normalize";
-
 
 /*
   // SCSS BASED COLORS //
@@ -56,8 +47,3 @@ Licensed under the Apache License, Version 2.0.
 // import the css vars - they will be parsed by the css-vars-copy-loader.js
 @import "../styles/variables-map";
 
-// project specific...
-// for the (stolen) docs examples
-@import "../styles/examples-index";
-// then our own styles
-@import "../styles/themer";
