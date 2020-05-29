@@ -23,19 +23,15 @@ const { sassConfig, postCssConfig } = require('./shared.config')
 
 
 module.exports = Object.assign({}, baseConfig, {
-
-
     entry: {
         "styler-app": "./src/index.tsx",
         "default-styles": "./src/_default-styles/styler-styles.scss",
-        // "new-styles": "./src/_new-styles/new-styles.index.scss",
+        "new-styles": "./src/_new-styles/styler-styles.scss",
     },
-
     output: {
         filename: "[name].js",
         path: path.resolve(__dirname, "./dist"),
     },
-
     module: {
         rules: [
             {
@@ -48,10 +44,7 @@ module.exports = Object.assign({}, baseConfig, {
             {
                 test: /\.scss$/,
                 use: [
-                    // Only extract CSS to separate file in production mode.
-                    // IS_PRODUCTION ? MiniCssExtractPlugin.loader : require.resolve("style-loader"),
                     MiniCssExtractPlugin.loader,
-                    // require.resolve('./scripts/custom-loader.js'),
                     {
                         loader: require.resolve("css-loader"),
                         options: {
@@ -79,7 +72,6 @@ module.exports = Object.assign({}, baseConfig, {
             },
         ],
     },
-
     plugins: baseConfig.plugins.concat([
         new CopyWebpackPlugin([
             // to: is relative to dist/
