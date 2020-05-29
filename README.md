@@ -15,13 +15,13 @@ From the root of the repo:
 
 
 ## TODOS:
-- make a final export - USE GULP FOR THIS BECAUSE FUCK WEBPACK!
-  - publish command?
-    - runs just scss
-    - outputs js object
-  - remove css specific to this project from final exports
+- better js outputs - split colors and stuff
 - save state between loads
 - make search work
 - add shortcut keys
 - add components from other projects??
 - rename everything to "styler"
+- add a readme to each project
+- `$ npm run new-style <style-name>` generates a new style
+- `$ npm run publish <style-name>` publish a lib to npm under `@blueprint-style/<style-name>`
+- directions

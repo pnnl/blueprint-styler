@@ -2,6 +2,8 @@
 
 // THE INDEX //
 @import "./default-styles.index.scss";
+// TODO: use sass glob importer to make this agnostic:
+// @import "./*.index.scss";
 
 // BLUEPRINT STYLER SPECIFIC //
 // for the (stolen) docs examples

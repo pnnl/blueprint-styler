@@ -18,9 +18,9 @@ yarn-error.log
 .sass-cache/
 
 # Blueprint
-build
-dist
-lib
+# build
+# dist
+# lib
 generated
 coverage
 /docs
