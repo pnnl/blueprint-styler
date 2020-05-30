@@ -27,6 +27,7 @@ module.exports = Object.assign({}, baseConfig, {
         "styler-app": "./src/index.tsx",
         "default-styles": "./src/_default-styles/styler-styles.scss",
         "new-styles": "./src/_new-styles/styler-styles.scss",
+        "antd-like-styles": "./src/_antd-like-styles/styler-styles.scss",
     },
     output: {
         filename: "[name].js",

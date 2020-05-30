@@ -1,0 +1,130 @@
+// Copyright 2015 Palantir Technologies, Inc. All rights reserved.
+// Licensed under the Apache License, Version 2.0.
+
+@import './antd-colors.scss';
+
+// Gray scale
+
+$black: $gray-13;
+
+$dark-gray1: $gray-12;
+$dark-gray2: $gray-11;
+$dark-gray3: $gray-10;
+$dark-gray4: $gray-9;
+$dark-gray5: mix($gray-9, $gray-8);
+
+$gray1: $gray-8;
+$gray2: mix($gray-8, $gray-7);
+$gray3: $gray-7;
+$gray4: mix($gray-7, $gray-6);
+$gray5: $gray-6;
+
+$light-gray1: mix($gray-6, $gray-5);
+$light-gray2: $gray-5;
+$light-gray3: $gray-4;
+$light-gray4: $gray-3;
+$light-gray5: $gray-2;
+
+$white: $gray-1;
+
+// Core colors
+
+// blue
+$blue1: $blue-8;
+$blue2: $blue-7;
+$blue3: $blue-6;
+$blue4: $blue-5;
+$blue5: $blue-4;
+
+// green
+$green1: $green-8;
+$green2: $green-7;
+$green3: $green-6;
+$green4: $green-5;
+$green5: $green-4;
+
+// orange
+$orange1: $orange-8;
+$orange2: $orange-7;
+$orange3: $orange-6;
+$orange4: $orange-5;
+$orange5: $orange-4;
+
+// red
+$red1: $red-8;
+$red2: $red-7;
+$red3: $red-6;
+$red4: $red-5;
+$red5: $red-4;
+
+// Extended colors
+
+// volcano
+$vermilion1: $volcano-8;
+$vermilion2: $volcano-7;
+$vermilion3: $volcano-6;
+$vermilion4: $volcano-5;
+$vermilion5: $volcano-4;
+
+// pink / magenta
+$rose1: $magenta-8;
+$rose2: $magenta-7;
+$rose3: $magenta-6;
+$rose4: $magenta-5;
+$rose5: $magenta-4;
+
+// mix purple of magenta
+$violet1: mix($purple-8,$magenta-8);
+$violet2: mix($purple-7,$magenta-7);
+$violet3: mix($purple-6,$magenta-6);
+$violet4: mix($purple-5,$magenta-5);
+$violet5: mix($purple-4,$magenta-4);
+
+// purple
+$indigo1: $purple-8;
+$indigo2: $purple-7;
+$indigo3: $purple-6;
+$indigo4: $purple-5;
+$indigo5: $purple-4;
+
+// geekblue
+$cobalt1: $geekblue-8;
+$cobalt2: $geekblue-7;
+$cobalt3: $geekblue-6;
+$cobalt4: $geekblue-5;
+$cobalt5: $geekblue-4;
+
+// cyan
+$turquoise1: $cyan-8;
+$turquoise2: $cyan-7;
+$turquoise3: $cyan-6;
+$turquoise4: $cyan-5;
+$turquoise5: $cyan-4;
+
+// mix cyan and lime?
+$forest1: mix($cyan-8,$lime-8);
+$forest2: mix($cyan-7,$lime-7);
+$forest3: mix($cyan-6,$lime-6);
+$forest4: mix($cyan-5,$lime-5);
+$forest5: mix($cyan-4,$lime-4);
+
+// lime
+$lime1: $lime-8;
+$lime2: $lime-7;
+$lime3: $lime-6;
+$lime4: $lime-5;
+$lime5: $lime-4;
+
+// gold
+$gold1: $gold-8;
+$gold2: $gold-7;
+$gold3: $gold-6;
+$gold4: $gold-5;
+$gold5: $gold-4;
+
+// hue of original with lightness of gold
+$sepia1: adjust-color(#63411e, $lightness: lightness($gold-8));
+$sepia2: adjust-color(#7d5125, $lightness: lightness($gold-7));
+$sepia3: adjust-color(#96622d, $lightness: lightness($gold-6));
+$sepia4: adjust-color(#b07b46, $lightness: lightness($gold-5));
+$sepia5: adjust-color(#c99765, $lightness: lightness($gold-4));
