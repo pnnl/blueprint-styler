@@ -10260,6 +10260,7 @@ span.bp3-popover-target {
 }
 
 .bpx-vars {
+  /*! Colors */
     --black: #10161a;
     --dark-gray1: #182026;
     --dark-gray2: #202b33;
@@ -10347,6 +10348,7 @@ span.bp3-popover-target {
     --sepia3: #96622d;
     --sepia4: #b07b46;
     --sepia5: #c99765;
+  /*! ColorAliases */
     --pt-intent-primary: #137cbd;
     --pt-intent-success: #0f9960;
     --pt-intent-warning: #d9822b;
@@ -10380,6 +10382,7 @@ span.bp3-popover-target {
     --pt-dark-code-text-color: #a7b6c2;
     --pt-code-background-color: hsla(0,0%,100%,0.7);
     --pt-dark-code-background-color: rgba(16,22,26,0.3);
+  /*! Variables */
     --ns: bp3;
     --pt-grid-size: 10px;
     --pt-font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,Icons16,sans-serif;

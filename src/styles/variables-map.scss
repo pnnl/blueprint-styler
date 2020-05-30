@@ -1,5 +1,6 @@
 .bpx-vars{
 
+/*! Colors */
 --black: #{$black};
 
 --dark-gray1: #{$dark-gray1};
@@ -106,6 +107,8 @@
 --sepia4: #{$sepia4};
 --sepia5: #{$sepia5};
 
+/*! ColorAliases */
+
 --pt-intent-primary: #{$pt-intent-primary};
 --pt-intent-success: #{$pt-intent-success};
 --pt-intent-warning: #{$pt-intent-warning};
@@ -145,6 +148,9 @@
 --pt-dark-code-text-color: #{$pt-dark-code-text-color};
 --pt-code-background-color: #{$pt-code-background-color};
 --pt-dark-code-background-color: #{$pt-dark-code-background-color};
+
+/*! Variables */
+
 --ns: #{$ns};
 
 --pt-grid-size: #{$pt-grid-size};
