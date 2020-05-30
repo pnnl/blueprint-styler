@@ -43,7 +43,7 @@ import * as serviceWorker from './serviceWorker';
 ReactDOM.render(
     <BlueprintThemerApp />,
     // <BlueprintDocs defaultPageId="blueprint" docs={docsData} tagRenderers={tagRenderers} useNextVersion={false} />,
-    document.querySelector("#blueprint-themer"),
+    document.querySelector("#blueprint-styler"),
 );
 
 // ReactDOM.render(<App />, document.getElementById('root'));

@@ -87,9 +87,9 @@ function BlueprintThemerApp() {
         <div className={["app-wrapper", data.themeName].join(' ')}>
             <div className="app">
 
-                <section className="themer-menu">
+                <section className="styler-menu">
 
-                    <header className="themer-menu__header">
+                    <header className="styler-menu__header">
 
                         <h2 style={{ display: 'flex', alignItems: 'center', marginBottom: 32 }}>
                             <img src={logo} style={{ width: 80 }} />
@@ -125,7 +125,7 @@ function BlueprintThemerApp() {
 
                     </header>
 
-                    <nav className="themer-menu__nav">
+                    <nav className="styler-menu__nav">
                         <ul className="bp3-list-unstyled">
                             {allExamples.map(([componentGroupTitle, componentGroup], j: number) => (
                                 <li key={j}>
@@ -145,7 +145,7 @@ function BlueprintThemerApp() {
                                                     <AnchorButton
                                                         minimal
                                                         fill
-                                                        href={'/#' + componentName}
+                                                        href={'#' + componentName}
                                                         text={componentName}
                                                         style={{ justifyContent: 'flex-start', marginBottom: 2 }}
                                                     />
@@ -158,17 +158,21 @@ function BlueprintThemerApp() {
                         </ul>
                     </nav>
 
-                    {/* <footer className="themer-menu__footer"></footer> */}
+                    {/* <footer className="styler-menu__footer"></footer> */}
 
                 </section>
 
-                <main className="themer-examples">
+                <main className="styler-examples">
                     {allExamples.map(([componentGroupTitle, componentGroup], k: number) => (
                         <section key={k}>
-                            <h2>{componentGroupTitle}</h2>
+                            <h2 className="styler-section-header">
+                                {componentGroupTitle}
+                            </h2>
                             {componentGroup.map(([componentName, componentExamples], j: number) => (
-                                <div id={componentName} key={j}>
-                                    <h3>{componentName}</h3>
+                                <div key={j} className="styler-component">
+                                    <h3 id={componentName} className="styler-component-header" >
+                                        {componentName}
+                                    </h3>
                                     {componentExamples.map((
                                         ExampleComponent: React.ComponentClass<IExampleProps<IBlueprintExampleData>>,
                                         i: number
