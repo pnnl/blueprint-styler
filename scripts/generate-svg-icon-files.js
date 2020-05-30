@@ -14,7 +14,7 @@ function generateAndSaveSvgIcon(filePath, iconName, iconPath, iconSize) {
 
 function generateAndSaveSvgIcons(iconSvgPaths, iconSize) {
 
-    // create Directorys if they dont exist
+    // create Directories if they don't exist
     const resourcesFolderPath = './node_modules/@blueprintjs/resources'
     const iconsFolderPath = `${resourcesFolderPath}/icons`
     const filePath = `${iconsFolderPath}/${iconSize}px`
