@@ -13,17 +13,19 @@
 @import "./variables"; // overrides
 
 // COMPONENT VARIABLES //
-@import "./button-common";
+// @import "./button/common";
 
 // COMPONENTS BUILD //
 // build components based on customized scss vars
 @import "~@blueprintjs/core/src/reset";
 @import "~@blueprintjs/core/src/typography";
 @import "~@blueprintjs/core/src/accessibility/focus-states";
-@import "~@blueprintjs/core/src/components/index";
+// @import "~@blueprintjs/core/src/components/index";
+@import "./components-index.scss";
+
 
 // COMPONENT CSS OVERRIDES //
-@import "./button-styles";
+// @import "./button/button";
 
 
 // import these first because they're the base layer

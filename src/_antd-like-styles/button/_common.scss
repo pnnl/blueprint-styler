@@ -1,0 +1,527 @@
+// Copyright 2015 Palantir Technologies, Inc. All rights reserved.
+// Licensed under the Apache License, Version 2.0.
+
+// @import "../../common/mixins";
+// @import "../../common/variables";
+// @import "../progress-bar/common";
+@import "~@blueprintjs/core/src/components/button/common";
+
+// Ant D Button
+// https://github.com/ant-design/ant-design/blob/master/components/button/style/index.less
+
+// $button-border-width: 1px;
+$button-padding: ($pt-grid-size / 2) ($pt-grid-size * 1.6);
+$button-padding-small: 0 ($pt-grid-size * 0.8);
+$button-padding-large: $button-padding;
+// $button-icon-spacing: ($pt-button-height - $pt-icon-size-standard) / 2;
+// $button-icon-spacing-large: ($pt-button-height-large - $pt-icon-size-large) / 2;
+
+$antd-button-border-color: rgba($black, 0.15); // rgb(217, 217, 217)
+$antd-button-box-shadow: 0 2px 0 rgba(0,0,0,.045);
+$antd-intent-primary-hover: $blue4;
+$antd-intent-primary-active: $blue2;
+
+/*
+CSS `border` property issues:
+- An element can only have one border.
+- Borders can't stack with shadows.
+- Borders modify the size of the element they're applied to.
+- Border positioning requires the extra `box-sizing` property.
+
+`box-shadow` doesn't have these issues, we're using it instead of `border`.
+*/
+$button-box-shadow:
+  inset 0 0 0 $button-border-width $antd-button-border-color,
+  $antd-button-box-shadow;
+$antd-button-box-shadow-hover:
+  inset 0 0 0 $button-border-width $antd-intent-primary-hover,
+  $antd-button-box-shadow;
+$button-box-shadow-active:
+  inset 0 0 0 $button-border-width $antd-intent-primary-active,
+  $antd-button-box-shadow;
+$antd-button-box-shadow-selected:
+  inset 0 0 0 $button-border-width $pt-intent-primary,
+  $antd-button-box-shadow;
+$button-intent-box-shadow:
+  $antd-button-box-shadow;
+$button-intent-box-shadow-active:
+  $antd-button-box-shadow;
+
+/*
+Overlay shadows are used for default buttons
+floating on top of other elements. This way, the
+shadows blend with the colors beneath it.
+Switches and slider handles both use these variables.
+*/
+// $button-box-shadow-overlay:
+//   0 0 0 $button-border-width rgba($black, 0.2),
+//   0 1px 1px rgba($black, 0.2);
+// $button-box-shadow-overlay-active:
+//   0 0 0 $button-border-width rgba($black, 0.2),
+//   inset 0 1px 1px rgba($black, 0.1);
+
+// $dark-button-box-shadow:
+//   0 0 0 $button-border-width rgba($black, 0.4);
+// $dark-button-box-shadow-active:
+//   0 0 0 $button-border-width rgba($black, 0.6),
+//   inset 0 1px 2px rgba($black, 0.2);
+// $dark-button-intent-box-shadow:
+//   0 0 0 $button-border-width rgba($black, 0.4);
+// $dark-button-intent-box-shadow-active:
+//   0 0 0 $button-border-width rgba($black, 0.4),
+//   inset 0 1px 2px rgba($black, 0.2);
+
+// Gradient Background (from the 2000s)
+$button-gradient: ''; // linear-gradient(to bottom, rgba($white, 0.8), rgba($white, 0)) ;
+$button-intent-gradient: ''; // linear-gradient(to bottom, rgba($white, 0.1), rgba($white, 0)) ;
+$dark-button-gradient: ''; // linear-gradient(to bottom, rgba($white, 0.05), rgba($white, 0)) ;
+
+// $button-color-disabled: $pt-text-color-disabled;
+$button-background-color: $white;
+$button-background-color-hover: $button-background-color;
+$button-background-color-active: $button-background-color;
+$button-background-color-disabled: rgba($light-gray1, 0.2);
+// $button-background-color-active-disabled: rgba($light-gray1, 0.7);
+// $button-intent-color-disabled: rgba($white, 0.6);
+// $dark-button-color-disabled: $pt-dark-text-color-disabled;
+// $dark-button-background-color: $dark-gray5;
+// $dark-button-background-color-hover: $dark-gray4;
+// $dark-button-background-color-active: $dark-gray2;
+// $dark-button-background-color-disabled: rgba($dark-gray5, 0.5);
+// $dark-button-background-color-active-disabled: rgba($dark-gray5, 0.7);
+// $dark-button-intent-color-disabled: rgba($white, 0.3);
+
+// $minimal-button-divider-width: 1px;
+// $minimal-button-background-color: none;
+$minimal-button-background-color-hover: rgba($blue5, 0.2);
+$minimal-button-background-color-active: rgba($blue3, 0.3);
+// $dark-minimal-button-background-color: none;
+// $dark-minimal-button-background-color-hover: rgba($gray3, 0.15);
+// $dark-minimal-button-background-color-active: rgba($gray3, 0.3);
+
+// $button-outlined-width: 1px;
+// $button-outlined-border-intent-opacity: 0.6;
+// $button-outlined-border-disabled-intent-opacity: 0.2;
+
+// "intent": (default, hover, active colors)
+$button-intents: (
+  "primary": ($pt-intent-primary, $blue4, $blue2),
+  "success": ($pt-intent-success, $green4, $green2),
+  "warning": ($pt-intent-warning, $orange4, $orange2),
+  "danger": ($red4, $red5, $red2)
+);
+
+@mixin pt-button-base() {
+  @include pt-flex-container(row, $button-icon-spacing, $inline: inline);
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: $pt-border-radius;
+  cursor: pointer;
+  padding: $button-padding;
+  vertical-align: middle;
+  text-align: left;
+  font-size: $pt-font-size;
+
+  transition: 200ms linear ;
+  transition-property: background-color, color, opacity, box-shadow ;
+
+  &:active{
+    transition-duration: 50ms;
+  }
+
+}
+
+// @mixin pt-button-height($height) {
+//   min-width: $height;
+//   min-height: $height;
+// }
+
+// @mixin pt-button-height-large() {
+//   @include pt-button-height($pt-button-height-large);
+//   @include pt-flex-margin(row, $button-icon-spacing-large);
+//   padding: $button-padding-large;
+//   font-size: $pt-font-size-large;
+// }
+
+// @mixin pt-button-height-default() {
+//   @include pt-button-height($pt-button-height);
+//   padding: $button-padding;
+// }
+
+// @mixin pt-button-height-small() {
+//   @include pt-button-height($pt-button-height-small);
+//   padding: $button-padding-small;
+// }
+
+@mixin pt-button() {
+  box-shadow: $button-box-shadow;
+  background-color: $button-background-color;
+  // background-image: $button-gradient;
+  color: $pt-text-color;
+
+  &:hover {
+    @include pt-button-hover();
+  }
+
+  &:active,
+  &.#{$ns}-active {
+    @include pt-button-active();
+  }
+
+  &:disabled,
+  &.#{$ns}-disabled {
+    @include pt-button-disabled();
+  }
+}
+
+@mixin pt-button-hover() {
+  box-shadow: $antd-button-box-shadow-hover;
+  // background-clip: padding-box;
+  background-color: $button-background-color-hover;
+  color: $antd-intent-primary-hover;
+}
+
+@mixin pt-button-active() {
+  box-shadow: $button-box-shadow-active;
+  background-color: $button-background-color-active;
+  // background-image: none;
+  color: $antd-intent-primary-active;
+  transition-duration: 50ms;
+}
+
+// @mixin pt-button-disabled() {
+//   outline: none;
+//   box-shadow: none;
+//   background-color: $button-background-color-disabled;
+//   background-image: none;
+//   cursor: not-allowed;
+//   color: $button-color-disabled;
+
+//   &.#{$ns}-active,
+//   &.#{$ns}-active:hover {
+//     background: $button-background-color-active-disabled;
+//   }
+// }
+
+@mixin pt-button-intent($default-color, $hover-color, $active-color) {
+  box-shadow: $button-intent-box-shadow;
+  background-color: $default-color;
+  background-image: $button-intent-gradient;
+  color: $white;
+
+  &:hover,
+  &:active,
+  &.#{$ns}-active {
+    color: $white;
+  }
+
+  &:hover {
+    box-shadow: $button-intent-box-shadow;
+    background-color: $hover-color;
+  }
+
+  &:active,
+  &.#{$ns}-active {
+    box-shadow: $button-intent-box-shadow-active;
+    background-color: $active-color;
+    background-image: none;
+  }
+
+  &:disabled,
+  &.#{$ns}-disabled {
+    @include pt-button-intent-disabled($default-color);
+  }
+}
+
+// @mixin pt-button-intent-disabled($default-color) {
+//   border-color: transparent;
+//   box-shadow: none;
+//   background-color: rgba($default-color, 0.5);
+//   background-image: none;
+//   color: $button-intent-color-disabled;
+// }
+
+// @mixin pt-dark-button() {
+//   box-shadow: $dark-button-box-shadow;
+//   background-color: $dark-button-background-color;
+//   background-image: $dark-button-gradient;
+//   color: $pt-dark-text-color;
+
+//   &:hover,
+//   &:active,
+//   &.#{$ns}-active {
+//     color: $pt-dark-text-color;
+//   }
+
+//   &:hover {
+//     @include pt-dark-button-hover();
+//   }
+
+//   &:active,
+//   &.#{$ns}-active {
+//     @include pt-dark-button-active();
+//   }
+
+//   &:disabled,
+//   &.#{$ns}-disabled {
+//     @include pt-dark-button-disabled();
+//   }
+
+//   .#{$ns}-button-spinner .#{$ns}-spinner-head {
+//     background: $dark-progress-track-color;
+//     stroke: $dark-progress-head-color;
+//   }
+// }
+
+// @mixin pt-dark-button-hover() {
+//   box-shadow: $dark-button-box-shadow;
+//   background-color: $dark-button-background-color-hover;
+// }
+
+// @mixin pt-dark-button-active() {
+//   box-shadow: $dark-button-box-shadow-active;
+//   background-color: $dark-button-background-color-active;
+//   background-image: none;
+// }
+
+// @mixin pt-dark-button-disabled() {
+//   box-shadow: none;
+//   background-color: $dark-button-background-color-disabled;
+//   background-image: none;
+//   color: $dark-button-color-disabled;
+
+//   &.#{$ns}-active {
+//     background: $dark-button-background-color-active-disabled;
+//   }
+// }
+
+// @mixin pt-dark-button-intent() {
+//   box-shadow: $dark-button-intent-box-shadow;
+
+//   &:hover {
+//     box-shadow: $dark-button-intent-box-shadow;
+//   }
+
+//   &:active,
+//   &.#{$ns}-active {
+//     box-shadow: $dark-button-intent-box-shadow-active;
+//   }
+
+//   &:disabled,
+//   &.#{$ns}-disabled {
+//     @include pt-dark-button-intent-disabled();
+//   }
+// }
+
+// @mixin pt-dark-button-intent-disabled() {
+//   box-shadow: none;
+//   background-image: none;
+//   color: $dark-button-intent-color-disabled;
+// }
+
+@mixin pt-button-minimal() {
+  box-shadow: none;
+  background: $minimal-button-background-color;
+
+  &:hover {
+    box-shadow: none;
+    background: $minimal-button-background-color-hover;
+    text-decoration: none;
+    color: $antd-intent-primary-hover;
+    border-color: $antd-intent-primary-hover;
+  }
+
+  &:active,
+  &.#{$ns}-active {
+    box-shadow: none;
+    background: $minimal-button-background-color-active;
+    color: $antd-intent-primary-active;
+    border-color: $antd-intent-primary-active;
+  }
+
+  &:disabled,
+  &:disabled:hover,
+  &.#{$ns}-disabled,
+  &.#{$ns}-disabled:hover {
+    background: none;
+    cursor: not-allowed;
+    color: $pt-text-color-disabled;
+    border-color: $pt-text-color-disabled;
+
+    &.#{$ns}-active {
+      background: $minimal-button-background-color-active;
+    }
+  }
+
+  .#{$ns}-dark & {
+    @include pt-dark-button-minimal();
+  }
+
+  @each $intent, $colors in $button-intents {
+    &.#{$ns}-intent-#{$intent} {
+      @include pt-button-minimal-intent(
+        map-get($pt-intent-colors, $intent),
+        map-get($pt-intent-text-colors, $intent),
+        map-get($pt-dark-intent-text-colors, $intent)
+      );
+    }
+  }
+}
+
+// @mixin pt-dark-button-minimal() {
+//   box-shadow: none;
+//   background: $dark-minimal-button-background-color;
+//   color: inherit;
+
+//   &:hover,
+//   &:active,
+//   &.#{$ns}-active {
+//     box-shadow: none;
+//     background: none;
+//   }
+
+//   &:hover {
+//     background: $dark-minimal-button-background-color-hover;
+//   }
+
+//   &:active,
+//   &.#{$ns}-active {
+//     background: $dark-minimal-button-background-color-active;
+//     color: $pt-dark-text-color;
+//   }
+
+//   &:disabled,
+//   &:disabled:hover,
+//   &.#{$ns}-disabled,
+//   &.#{$ns}-disabled:hover {
+//     background: none;
+//     cursor: not-allowed;
+//     color: $pt-dark-text-color-disabled;
+
+//     &.#{$ns}-active {
+//       background: $dark-minimal-button-background-color-active;
+//     }
+//   }
+// }
+
+// @mixin pt-button-minimal-intent($intent-color, $text-color, $dark-text-color) {
+//   color: $text-color;
+
+//   &:hover,
+//   &:active,
+//   &.#{$ns}-active {
+//     box-shadow: none;
+//     background: none;
+//     color: $text-color;
+//   }
+
+//   &:hover {
+//     background: rgba($intent-color, 0.15);
+//     color: $text-color;
+//   }
+
+//   &:active,
+//   &.#{$ns}-active {
+//     background: rgba($intent-color, 0.3);
+//     color: $text-color;
+//   }
+
+//   &:disabled,
+//   &.#{$ns}-disabled {
+//     background: none;
+//     color: rgba($text-color, 0.5);
+
+//     &.#{$ns}-active {
+//       background: rgba($intent-color, 0.3);
+//     }
+//   }
+
+//   .#{$ns}-button-spinner .#{$ns}-spinner-head {
+//     stroke: $text-color;
+//   }
+
+//   .#{$ns}-dark & {
+//     color: $dark-text-color;
+
+//     &:hover {
+//       background: rgba($intent-color, 0.2);
+//       color: $dark-text-color;
+//     }
+
+//     &:active,
+//     &.#{$ns}-active {
+//       background: rgba($intent-color, 0.3);
+//       color: $dark-text-color;
+//     }
+
+//     &:disabled,
+//     &.#{$ns}-disabled {
+//       background: none;
+//       color: rgba($dark-text-color, 0.5);
+
+//       &.#{$ns}-active {
+//         background: rgba($intent-color, 0.3);
+//       }
+//     }
+//   }
+// }
+
+// @mixin pt-button-minimal-divider() {
+//   $divider-height: $pt-grid-size * 2;
+
+//   margin: ($pt-button-height - $divider-height) / 2;
+//   background: $pt-divider-black;
+//   width: $minimal-button-divider-width;
+
+//   .#{$ns}-dark & {
+//     background: $pt-dark-divider-white;
+//   }
+// }
+
+@mixin pt-button-outlined() {
+  border: $button-outlined-width solid $antd-button-border-color;
+  box-sizing: border-box;
+
+  .#{$ns}-dark & {
+    @include pt-dark-button-outlined();
+  }
+
+  @each $intent, $colors in $button-intents {
+    &.#{$ns}-intent-#{$intent} {
+      @include pt-button-outlined-intent(
+        map-get($pt-intent-text-colors, $intent),
+        map-get($pt-dark-intent-text-colors, $intent)
+      );
+    }
+  }
+}
+
+// @mixin pt-dark-button-outlined() {
+//   border-color: rgba($white, 0.4);
+
+//   &:disabled,
+//   &:disabled:hover,
+//   &.#{$ns}-disabled,
+//   &.#{$ns}-disabled:hover {
+//     border-color: rgba($white, 0.2);
+//   }
+// }
+
+// @mixin pt-button-outlined-intent($text-color, $dark-text-color) {
+//   border-color: rgba($text-color, $button-outlined-border-intent-opacity);
+
+//   &:disabled,
+//   &.#{$ns}-disabled {
+//     border-color: rgba($text-color, $button-outlined-border-disabled-intent-opacity);
+//   }
+
+//   .#{$ns}-dark & {
+//     border-color: rgba($dark-text-color, $button-outlined-border-intent-opacity);
+
+//     &:disabled,
+//     &.#{$ns}-disabled {
+//       border-color: rgba($dark-text-color, $button-outlined-border-disabled-intent-opacity);
+//     }
+//   }
+// }
