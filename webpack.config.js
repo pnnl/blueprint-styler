@@ -17,8 +17,6 @@ const { baseConfig } = require("@blueprintjs/webpack-build-scripts");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
-const sassCustomFunctions = require('./scripts/sass-custom-functions');
-const jsonImporter = require('node-sass-json-importer');
 const { sassConfig, postCssConfig } = require('./shared.config')
 
 

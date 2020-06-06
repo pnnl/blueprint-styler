@@ -40,3 +40,15 @@
 // import the css vars - they will be parsed by the css-vars-copy-loader.js
 @import "../styles/variables-map";
 
+
+// TEST //
+.bp3-html-select select, .bp3-select select {
+  background-color: unset;
+  background-image: unset;
+
+  &:hover{
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,1), 0 2px 0 rgba(0,0,0,1);
+    // background-clip: padding-box;
+    background-color: #fff;
+    }
+}
