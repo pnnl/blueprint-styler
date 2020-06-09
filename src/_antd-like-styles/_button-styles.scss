@@ -1,59 +1,69 @@
+@mixin button-minimal-overrides() {
+  &:hover {
+    // box-shadow: unset;
+    // background: $minimal-button-background-color-hover;
+    // text-decoration: none;
+    color: $antd-intent-primary-hover;
+    border-color: $antd-intent-primary-hover;
+  }
 
-.bp3-button
-// a,
-// a.bp3-button
-{
+  &:active,
+  &.#{$ns}-active {
+    // box-shadow: unset;
+    // background: $minimal-button-background-color-active;
+    color: $antd-intent-primary-active;
+    border-color: $antd-intent-primary-active;
+  }
 
-  // &, .bp3-icon{
-    transition: 200ms linear !important;
-    transition-property: background-color color opacity box-shadow !important;
-  // }
+  &:disabled,
+  &:disabled:hover,
+  &.#{$ns}-disabled,
+  &.#{$ns}-disabled:hover {
+    border-color: $pt-text-color-disabled;
+  }
 
+}
+
+@mixin button-base-overrides {
+  transition: 200ms linear ;
+  transition-property: background-color, color, opacity, box-shadow ;
   &:active{
     transition-duration: 50ms;
   }
+}
 
-  // normal only
-  &:not([class*=bp3-intent-]){
-    &.bp3-active{ // selected
-      color: $pt-intent-primary;
-      box-shadow: $antd-button-box-shadow-selected;
-    }
-    &:hover{
-      color: $antd-intent-primary-hover;
+.#{$ns}-button{  @include button-base-overrides }
+a.#{$ns}-button{ @include button-base-overrides }
+
+.#{$ns}-button{
+  .#{$ns}-icon{
+    color: inherit;
+  }
+
+  &:not([class*="#{$ns}-intent-"]) {
+
+    &:hover {
       box-shadow: $antd-button-box-shadow-hover;
+      background-color: $button-background-color-hover;
+      color: $antd-intent-primary-hover;
     }
-    &:active{
-      color: $antd-intent-primary-active;
+
+    &:active,
+    &.#{$ns}-active {
       box-shadow: $button-box-shadow-active;
+      background-color: $button-background-color-active;
+      color: $antd-intent-primary-active;
     }
+
   }
 
-  // &:hover, &:active, &.bp3-active{
-    .bp3-icon{ color: currentColor;}
-  // }
-
-  &.bp3-outlined, .bp3-outlined &{
-    border: none;
-    box-shadow: inset 0 0 0 $button-border-width $antd-button-border-color;
+  // minimal must come last to override all default styles
+  &.#{$ns}-minimal {
+    @include button-minimal-overrides();
+  }
+  &.#{$ns}-outlined {
+    @include button-minimal-overrides();
   }
 
-  &.bp3-minimal, .bp3-minimal &{
-    &:hover, &:active, &.bp3-active{
-      box-shadow: none;
-    }
-  }
-
-  // intent only
-  &[class*=bp3-intent-]:not(.bp3-outlined):not(.bp3-minimal){
-      text-shadow: $antd-button-text-shadow;
-  }
 }
 
-.bp3-input, .bp3-file-upload-input{
-  box-shadow:
-    0 0 0 0 transparent,
-    0 0 0 0 transparent,
-    inset 0 0 0 $button-border-width rgba($black, 0.15);
-    // inset 0 1px 1px rgba(16,22,26,.2);
-}

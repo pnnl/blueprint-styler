@@ -13,19 +13,19 @@
 @import "./variables"; // overrides
 
 // COMPONENT VARIABLES //
-// @import "./button/common";
+@import "./button-vars";
 
 // COMPONENTS BUILD //
 // build components based on customized scss vars
 @import "~@blueprintjs/core/src/reset";
 @import "~@blueprintjs/core/src/typography";
 @import "~@blueprintjs/core/src/accessibility/focus-states";
-// @import "~@blueprintjs/core/src/components/index";
-@import "./components-index.scss";
+@import "~@blueprintjs/core/src/components/index";
 
 
 // COMPONENT CSS OVERRIDES //
-// @import "./button/button";
+// post css will combine class declarations and overwrite repeating properties
+@import "./button-styles";
 
 
 // import these first because they're the base layer
@@ -39,16 +39,3 @@
 // CSS VARS //
 // import the css vars - they will be parsed by the css-vars-copy-loader.js
 @import "../styles/variables-map";
-
-
-// TEST //
-.bp3-html-select select, .bp3-select select {
-  background-color: unset;
-  background-image: unset;
-
-  &:hover{
-    box-shadow: inset 0 0 0 1px rgba(0,0,0,1), 0 2px 0 rgba(0,0,0,1);
-    // background-clip: padding-box;
-    background-color: #fff;
-    }
-}
