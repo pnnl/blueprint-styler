@@ -2,7 +2,7 @@ const fs = require('fs')
 const blueprintjsIcons = require('@blueprintjs/icons')
 
 function generateSvgIcon(iconPath, iconSize) {
-    return `<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 ${iconSize} ${iconSize}"><path d="${iconPath}"/></svg>`
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${iconSize} ${iconSize}"><path d="${iconPath}"/></svg>`
 }
 
 function generateAndSaveSvgIcon(filePath, iconName, iconPath, iconSize) {
