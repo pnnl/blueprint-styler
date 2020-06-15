@@ -1,14 +1,14 @@
-'use strict';
+'use strict'
 
-const gulp = require('gulp');
+const gulp = require('gulp')
 
 const { sassConfig, postCssConfig } = require('./shared.config')
-const sass = require('gulp-sass');
-sass.compiler = require('node-sass');
+const sass = require('gulp-sass')
+sass.compiler = require('node-sass')
 
-const rename = require("gulp-rename");
-const postcss = require('gulp-postcss');
-const cssBeautify = require('gulp-cssbeautify');
+const rename = require("gulp-rename")
+const postcss = require('gulp-postcss')
+const cssBeautify = require('gulp-cssbeautify')
 const extractCssVarsToAllFormats = require('./scripts/gulp-extract-css-vars-to-all-formats')
 
 const sassTask = function () {
@@ -27,6 +27,6 @@ const sassTask = function () {
         .pipe(extractCssVarsToAllFormats())
         // .pipe(rename(path => { console.log(path) }))
         .pipe(gulp.dest('.')) // ???
-};
+}
 
-exports.default = sassTask;
+exports.default = sassTask

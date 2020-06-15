@@ -10259,15 +10259,15 @@ span.bp3-popover-target {
     background-color: #1890ff
 }
 
-.bp3-button,a,a.bp3-button.bp3-button {
+.bp3-button,a,a.bp3-button {
     transition: background-color .1s linear
 }
 
-.bp3-button:active,a.bp3-button.bp3-button:active,a:active {
+.bp3-button:active,a.bp3-button:active,a:active {
     transition-duration: 50ms
 }
 
-.bp3-file-upload-input.bp3-file-upload-input,.bp3-input.bp3-input {
+.bp3-file-upload-input,.bp3-input {
     box-shadow: 0 0 0 0 transparent,0 0 0 0 transparent,inset 0 0 0 1px rgba(18,24,28,.15)
 }
 
