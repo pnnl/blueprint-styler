@@ -17,7 +17,8 @@ $button-padding-large: $button-padding;
 // $button-icon-spacing-large: ($pt-button-height-large - $pt-icon-size-large) / 2;
 
 $antd-button-border-color: rgba($black, 0.15); // rgb(217, 217, 217)
-$antd-button-box-shadow: 0 2px 0 rgba(0,0,0,.045);
+$antd-button-box-shadow: 0 2px 0 rgba(0,0,0,.015);
+$antd-button-intent-primary-box-shadow: 0 2px 0 rgba(0,0,0,.045);
 $antd-intent-primary-hover: $blue4;
 $antd-intent-primary-active: $blue2;
 
@@ -27,7 +28,6 @@ CSS `border` property issues:
 - Borders can't stack with shadows.
 - Borders modify the size of the element they're applied to.
 - Border positioning requires the extra `box-sizing` property.
-
 `box-shadow` doesn't have these issues, we're using it instead of `border`.
 */
 $button-box-shadow:
@@ -43,9 +43,9 @@ $antd-button-box-shadow-selected:
   inset 0 0 0 $button-border-width $pt-intent-primary,
   $antd-button-box-shadow;
 $button-intent-box-shadow:
-  $antd-button-box-shadow;
+  $antd-button-intent-primary-box-shadow;
 $button-intent-box-shadow-active:
-  $antd-button-box-shadow;
+  $antd-button-intent-primary-box-shadow;
 
 /*
 Overlay shadows are used for default buttons
@@ -105,7 +105,7 @@ $minimal-button-background-color-active: rgba($blue3, 0.3);
 
 // "intent": (default, hover, active colors)
 $button-intents: (
-  "primary": ($pt-intent-primary, $blue4, $blue2),
+  "primary": ($pt-intent-primary, $antd-intent-primary-hover, $antd-intent-primary-active),
   "success": ($pt-intent-success, $green4, $green2),
   "warning": ($pt-intent-warning, $orange4, $orange2),
   "danger": ($red4, $red5, $red2)

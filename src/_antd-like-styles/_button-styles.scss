@@ -24,13 +24,64 @@
 
 }
 
+@mixin antd-button-active-effect() {
+  $antd-active-effect-easing: cubic-bezier(.08,.82,.17,1);
+
+  position: relative;
+  &:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    pointer-events: none;
+    border-radius: inherit;
+
+    color: $antd-intent-primary-hover; // easier to override other 'intent' colors
+    box-shadow: 0 0 0 6px currentColor;
+    opacity: 0;
+    transition:
+      opacity 2s $antd-active-effect-easing,
+      box-shadow .4s $antd-active-effect-easing;
+  }
+
+  &:active:after{
+    transition: none;
+    box-shadow: 0 0 0 0px currentColor;
+    opacity: .2;
+  }
+
+  &:disabled:after{
+    content: unset;
+  }
+
+}
+
+@mixin antd-active-border-color($antd-active-border-color) {
+  &:after{
+    color: $antd-active-border-color;
+  }
+}
+
 @mixin button-base-overrides {
   transition: 200ms linear ;
   transition-property: background-color, color, opacity, box-shadow ;
   &:active{
     transition-duration: 50ms;
   }
+
+  @include antd-button-active-effect;
+  @each $intent, $colors in $button-intents {
+    &.#{$ns}-intent-#{$intent} {
+      @include antd-active-border-color(nth(($colors),3))
+    }
+  }
+
 }
+
+
 
 .#{$ns}-button{  @include button-base-overrides }
 a.#{$ns}-button{ @include button-base-overrides }
