@@ -37,13 +37,17 @@ function handleThemeChange(themeState: BbTheme, setThemeState: React.Dispatch<Re
 
 const styleList: IOptionProps[] = [
     {
-        value: './default-styles.css',
-        label: 'Default Style'
+        value: './antd-like-styles.css',
+        label: 'Ant Design'
     },
     {
         value: './new-styles.css',
         label: 'New Style!'
-    }
+    },
+    {
+        value: './default-styles.css',
+        label: 'Default Style'
+    },
 ]
 
 function addStylerStyleSheet(optionProps: IOptionProps): HTMLLinkElement {
