@@ -41,7 +41,11 @@ $pt-font-size: $pt-grid-size * 1.4;
 $pt-font-size-large: $pt-grid-size * 1.6;
 $pt-font-size-small: $pt-grid-size * 1.2;
 
-$pt-line-height: ($pt-grid-size * 2.2) / $pt-font-size + 0.0001;
+// $pt-line-height: ($pt-grid-size * 2.2) / $pt-font-size + 0.0001;
+
+// flat input border
+$pt-input-box-shadow: inset border-shadow(0.15);
+
 
 /*
 

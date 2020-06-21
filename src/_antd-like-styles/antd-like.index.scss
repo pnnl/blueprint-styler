@@ -20,12 +20,13 @@
 @import "~@blueprintjs/core/src/reset";
 @import "~@blueprintjs/core/src/typography";
 @import "~@blueprintjs/core/src/accessibility/focus-states";
-@import "~@blueprintjs/core/src/components/index";
+@import "../../node_modules/@blueprintjs/core/src/components/index";
 
 
 // COMPONENT CSS OVERRIDES //
 // post css will combine class declarations and overwrite repeating properties
 @import "./button-styles";
+@import "./input-styles";
 
 
 // import these first because they're the base layer
@@ -39,3 +40,6 @@
 // CSS VARS //
 // import the css vars - they will be parsed by the css-vars-copy-loader.js
 @import "../styles/variables-map";
+
+
+// $prefix: ../../node_modules/

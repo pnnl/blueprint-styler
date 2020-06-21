@@ -1,0 +1,42 @@
+.#{$ns}-input
+// .#{$ns}-tag-input
+{
+
+  transition: 200ms linear ;
+  transition-property: background-color, color, opacity, box-shadow ;
+  // &:active{
+  //   transition-duration: 50ms;
+  // }
+
+  box-shadow: input-transition-shadow($input-shadow-color-focus), $pt-input-box-shadow;
+
+  &:hover:not(:disabled):not(:focus):not(.#{$ns}-active){
+      box-shadow: input-transition-shadow($input-shadow-color-focus), inset 0 0 0 $button-border-width $antd-intent-primary-hover;
+  }
+  &:active{
+    box-shadow: input-transition-shadow($antd-intent-primary-active, true), inset 0 0 0 0 transparent;
+  }
+
+  &:focus,
+  &.#{$ns}-active
+  {
+    box-shadow: input-transition-shadow($input-shadow-color-focus, true), inset 0 0 0 0 transparent;
+  }
+
+}
+
+.#{$ns}-tag-input{
+  &.#{$ns}-active{
+    box-shadow: invalid; // .#{$ns}-input
+  }
+}
+
+
+
+// $antd-button-box-shadow-hover:
+//   inset 0 0 0 $button-border-width $antd-intent-primary-hover,
+//   $antd-button-box-shadow;
+// $button-box-shadow-active:
+//   inset 0 0 0 $button-border-width $antd-intent-primary-active,
+//   $antd-button-box-shadow;
+
