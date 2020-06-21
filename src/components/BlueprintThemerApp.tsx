@@ -95,12 +95,14 @@ function BlueprintThemerApp() {
 
                     <header className="styler-menu__header">
 
-                        <h2 style={{ display: 'flex', alignItems: 'center', marginBottom: 32 }}>
+                        <h3
+                            className={Classes.HEADING}
+                            style={{ display: 'flex', alignItems: 'center', marginBottom: 32 }}>
                             <img src={logo} style={{ width: 80 }} />
                             <span style={{ marginLeft: 16 }}>
                                 Blueprint<br />Styler
-                        </span>
-                        </h2>
+                            </span>
+                        </h3>
 
                         <HTMLSelect
                             fill
@@ -169,14 +171,14 @@ function BlueprintThemerApp() {
                 <main className="styler-examples">
                     {allExamples.map(([componentGroupTitle, componentGroup], k: number) => (
                         <section key={k}>
-                            <h2 className="styler-section-header">
+                            <h3 className={`styler-section-header ${Classes.HEADING}`}>``
                                 {componentGroupTitle}
-                            </h2>
+                            </h3>
                             {componentGroup.map(([componentName, componentExamples], j: number) => (
                                 <div key={j} className="styler-component">
-                                    <h3 id={componentName} className="styler-component-header" >
+                                    <h4 id={componentName} className={`styler-component-header ${Classes.HEADING}`} >
                                         {componentName}
-                                    </h3>
+                                    </h4>
                                     {componentExamples.map((
                                         ExampleComponent: React.ComponentClass<IExampleProps<IBlueprintExampleData>>,
                                         i: number
