@@ -1,0 +1,50 @@
+.#{$ns}-slider-handle{
+  border-radius: 99px;
+  // @include button-customizations();
+  @include antd-button-active-effect();
+  position: absolute;
+
+  transition: 200ms linear ;
+  transition-property: background-color, color, opacity, box-shadow ;
+
+  &:hover {
+    box-shadow: $antd-button-box-shadow-overlay-hover;
+  }
+
+  &.#{$ns}-active {
+    transition-duration: 50ms;
+    // box-shadow: $button-box-shadow-overlay-active;
+  }
+
+  &.#{$ns}-end {
+    border-bottom-left-radius: invalid;
+    border-top-left-radius: invalid;
+    margin-left: 0;
+  }
+  &.#{$ns}-start {
+    border-bottom-right-radius: invalid;
+    border-top-right-radius: invalid;
+    margin-left: 0;
+  }
+  &.#{$ns}-end, &.#{$ns}-start {
+    width: invalid;
+  }
+
+  .#{$ns}-slider.#{$ns}-vertical &{
+    &.#{$ns}-end {
+      border-bottom-left-radius: invalid;
+      border-bottom-right-radius: invalid;
+      border-top-left-radius: invalid;
+    }
+    &.#{$ns}-start {
+      border-bottom-right-radius: invalid;
+      border-top-left-radius: invalid;
+    }
+    &.#{$ns}-end,
+    &.#{$ns}-start {
+      height: invalid;
+    }
+  }
+
+
+}

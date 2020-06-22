@@ -16,13 +16,34 @@ From the root of the repo:
 
 
 ## TODOS:
-- better js outputs - split colors and stuff
+
+### Styles
+- better focus for buttons
+- dividers for intent button groups when outline-less
+- remove radius from search input
+- antd
+  - dark theme
+
+### General
 - save state between loads
 - make search work
 - add shortcut keys
-- add components from other projects??
-- rename everything to "styler"
-- add a readme to each project
-- `$ npm run new-style <style-name>` generates a new style
-- `$ npm run publish <style-name>` publish a lib to npm under `@blueprint-style/<style-name>`
-- directions
+- add components from other projects?? table, etc...
+- rename everything from "themer" to "styler"
+- add a readme to each project - default styles is project explainer
+- add colors section
+- add typography section
+- Generate new style: `$ npm run new-style <style-name>`
+- Publish: `$ npm run publish <style-name>` publish a lib to npm under `@blueprint-style/<style-name>`
+  - update versioning
+- directions for development
+
+## DONE:
+* better js outputs - split colors and stuff
+* antd
+  * inputs
+  * select element
+  * checkbox and radio animations
+  * slider
+  * file input
+  * textarea?

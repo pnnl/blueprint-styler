@@ -81,12 +81,7 @@
 
 }
 
-
-
-.#{$ns}-button{  @include button-base-overrides }
-a.#{$ns}-button{ @include button-base-overrides }
-
-.#{$ns}-button{
+@mixin button-customizations {
   .#{$ns}-icon{
     color: inherit;
   }
@@ -107,6 +102,16 @@ a.#{$ns}-button{ @include button-base-overrides }
     }
 
   }
+}
+
+
+.#{$ns}-button{  @include button-base-overrides }
+a.#{$ns}-button{ @include button-base-overrides }
+
+
+.#{$ns}-button{
+
+  @include button-customizations();
 
   // minimal must come last to override all default styles
   &.#{$ns}-minimal {
@@ -118,3 +123,56 @@ a.#{$ns}-button{ @include button-base-overrides }
 
 }
 
+
+.#{$ns}-html-select,
+.#{$ns}-select {
+  // this one's a bit of a mess // TODO: more testing
+  $select-padding: $pt-grid-size * 1.6;
+
+  transition: 200ms linear ;
+  transition-property: background-color, color, opacity, box-shadow ;
+
+  select{
+    @include button-base-overrides();
+    @include button-customizations();
+
+    padding-left: $select-padding;
+    padding-right: $select-padding + $pt-icon-size-standard;
+
+    &:hover~.#{$ns}-icon {
+      color: $antd-intent-primary-hover;
+    }
+
+  }
+
+  .#{$ns}-icon {
+    right: $select-padding;
+    transition: inherit;
+  }
+
+}
+
+
+.#{$ns}-file-upload-input {
+
+  &:after {
+    transition: 200ms linear ;
+    transition-property: background-color, color, opacity, box-shadow ;
+    box-shadow: $button-box-shadow;
+  }
+
+  &:hover:after {
+    box-shadow: $antd-button-box-shadow-hover;
+    background-color: $button-background-color-hover;
+    color: $antd-intent-primary-hover;
+    transition-duration: 50ms;
+
+  }
+
+  &:active:after,
+  &.#{$ns}-active:after {
+    box-shadow: $button-box-shadow-active;
+    background-color: $button-background-color-active;
+    color: $antd-intent-primary-active;
+  }
+}

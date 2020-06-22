@@ -53,12 +53,15 @@ floating on top of other elements. This way, the
 shadows blend with the colors beneath it.
 Switches and slider handles both use these variables.
 */
-// $button-box-shadow-overlay:
-//   0 0 0 $button-border-width rgba($black, 0.2),
-//   0 1px 1px rgba($black, 0.2);
-// $button-box-shadow-overlay-active:
-//   0 0 0 $button-border-width rgba($black, 0.2),
-//   inset 0 1px 1px rgba($black, 0.1);
+$button-box-shadow-overlay:
+  0 0 0 $button-border-width rgba($black, 0.2),
+  0 1px 1px rgba($black, 0.2);
+$antd-button-box-shadow-overlay-hover:
+  0 0 0 $button-border-width $antd-intent-primary-hover,
+  0 1px 1px rgba($black, 0.1);
+$button-box-shadow-overlay-active:
+  0 0 0 $button-border-width $antd-intent-primary-active,
+  0 1px 1px rgba($black, 0.1);
 
 // $dark-button-box-shadow:
 //   0 0 0 $button-border-width rgba($black, 0.4);

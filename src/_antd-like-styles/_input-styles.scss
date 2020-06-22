@@ -4,9 +4,7 @@
 
   transition: 200ms linear ;
   transition-property: background-color, color, opacity, box-shadow ;
-  // &:active{
-  //   transition-duration: 50ms;
-  // }
+  // &:active{ transition-duration: 50ms; }
 
   box-shadow: input-transition-shadow($input-shadow-color-focus), $pt-input-box-shadow;
 
@@ -31,12 +29,22 @@
   }
 }
 
+.#{$ns}-control-indicator{
 
+  @include antd-button-active-effect;
+  .#{$ns}-disabled &:after{
+    content: unset;
+  }
 
-// $antd-button-box-shadow-hover:
-//   inset 0 0 0 $button-border-width $antd-intent-primary-hover,
-//   $antd-button-box-shadow;
-// $button-box-shadow-active:
-//   inset 0 0 0 $button-border-width $antd-intent-primary-active,
-//   $antd-button-box-shadow;
+  transition: 200ms linear ;
+  transition-property: background-color, color, opacity, box-shadow ;
 
+  .#{$ns}-control input:not(:disabled):hover~&{
+    box-shadow: $antd-button-box-shadow-hover;
+  }
+
+  .#{$ns}-control input:not(:disabled):active~&{
+    transition-duration: 50ms;
+  }
+
+}
