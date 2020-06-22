@@ -171,7 +171,7 @@ function BlueprintThemerApp() {
                 <main className="styler-examples">
                     {allExamples.map(([componentGroupTitle, componentGroup], k: number) => (
                         <section key={k}>
-                            <h3 className={`styler-section-header ${Classes.HEADING}`}>``
+                            <h3 className={`styler-section-header ${Classes.HEADING}`}>
                                 {componentGroupTitle}
                             </h3>
                             {componentGroup.map(([componentName, componentExamples], j: number) => (
