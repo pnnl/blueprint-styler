@@ -1,5 +1,4 @@
 :root{
-  /*! Colors */
     --black: #10161a;
     --dark-gray1: #182026;
     --dark-gray2: #202b33;
@@ -87,7 +86,6 @@
     --sepia3: #96622d;
     --sepia4: #b07b46;
     --sepia5: #c99765;
-  /*! ColorAliases */
     --pt-intent-primary: #137cbd;
     --pt-intent-success: #0f9960;
     --pt-intent-warning: #d9822b;

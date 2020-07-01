@@ -1,5 +1,5 @@
 
-export const Colors = {
+export const Any = {
   DARK_GRAY1: "#182026",
   DARK_GRAY2: "#202b33",
   DARK_GRAY3: "#293742",
@@ -85,10 +85,8 @@ export const Colors = {
   SEPIA2: "#7d5125",
   SEPIA3: "#96622d",
   SEPIA4: "#b07b46",
-  SEPIA5: "#c99765"
-};
-
-export const ColorAliases = {
+  SEPIA5: "#c99765",
+  PT_INTENT_PRIMARY: "#137cbd",
   PT_INTENT_SUCCESS: "#0f9960",
   PT_INTENT_WARNING: "#d9822b",
   PT_INTENT_DANGER: "#db3737",
