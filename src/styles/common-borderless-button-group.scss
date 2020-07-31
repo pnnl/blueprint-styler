@@ -1,0 +1,31 @@
+$button-group-intent-divider: rgba(255,255,255,0.25) !default;
+
+.#{$ns}-button-group{
+
+  &:not(.#{$ns}-vertical){
+    .#{$ns}-button[class*=#{$ns}-intent-]{
+      border: 0 solid $button-group-intent-divider;
+      border-width: 0 1px;
+      &:first-child{
+        border-left: 0;
+      }
+      &:last-child{
+        border-right: 0;
+      }
+    }
+  }
+
+  &.#{$ns}-vertical{
+    .#{$ns}-button[class*=#{$ns}-intent-]{
+      border: 0 solid $button-group-intent-divider;
+      border-width: 1px 0;
+      &:first-child{
+        border-top: 0;
+      }
+      &:last-child{
+        border-bottom: 0;
+      }
+    }
+  }
+
+}

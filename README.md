@@ -18,11 +18,14 @@ From the root of the repo:
 ## TODOS:
 
 ### Styles
+- antd
+  - dark theme
+
+### General Styles
 - better focus for buttons
 - dividers for intent button groups when outline-less
 - remove radius from search input
-- antd
-  - dark theme
+
 
 ### General
 - save state between loads
