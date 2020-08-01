@@ -1,10 +1,10 @@
 // don't edit this file //
 
 // THE INDEX //
-@import "./new-styles.index.scss";
+@import "./antd-like.index";
 
 // BLUEPRINT STYLER SPECIFIC //
 // for the (stolen) docs examples
-@import "../styles/examples-index";
+@import "../global/examples-index";
 // then our own styles
-@import "../styles/styler";
+@import "../global/styler";

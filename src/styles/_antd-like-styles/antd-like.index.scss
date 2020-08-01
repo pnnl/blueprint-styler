@@ -35,10 +35,10 @@
 @import "./button-styles";
 @import "./input-styles";
 @import "./slider-styles";
-@import "../styles/common-standard-search.scss";
-@import "../styles/common-borderless-button-group.scss";
+@import "../global/common-standard-search.scss";
+@import "../global/common-borderless-button-group.scss";
 
 
 // CSS VARS //
 // import the css vars - they will be parsed by the css-vars-copy-loader.js
-@import "../styles/variables-map";
+@import "../global/variables-map";

@@ -13,7 +13,7 @@
 @import "./variables"; // overrides
 
 // COMPONENT VARIABLES //
-@import "./button-common";
+// @import "./component-scss-var-overrides";
 
 
 // COMPONENTS BUILD //
@@ -28,12 +28,13 @@
 @import "~@blueprintjs/select/src/blueprint-select.scss";
 @import "~@blueprintjs/table/src/table.scss";
 @import "~@blueprintjs/timezone/src/blueprint-timezone.scss";
+// @import "~@blueprintjs/icons/src/blueprint-icons.scss"; // only needed for icon fonts?
 
 
 // COMPONENT CSS OVERRIDES //
-@import "./button-styles";
+// @import "./custom-css-overrides";
 
 
 // CSS VARS //
 // import the css vars - they will be parsed by the css-vars-copy-loader.js
-@import "../styles/variables-map";
+@import "../global/variables-map";

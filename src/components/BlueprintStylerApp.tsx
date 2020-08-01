@@ -6,7 +6,7 @@ import { IBlueprintExampleData } from '../tags/reactExamples';
 import { allExamples } from './allExamples';
 import { IExampleProps } from '@blueprintjs/docs-theme';
 import logo from '../assets/logo.svg';
-import { styleSetConfig } from '../../style-set.config';
+import { styleSetConfig } from '../styles/style-set.config';
 
 FocusStyleManager.onlyShowFocusOnTabs();
 
