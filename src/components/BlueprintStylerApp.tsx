@@ -6,8 +6,15 @@ import { IBlueprintExampleData } from '../tags/reactExamples';
 import { allExamples } from './allExamples';
 import { IExampleProps } from '@blueprintjs/docs-theme';
 import logo from '../assets/logo.svg';
+import { styleSetConfig } from '../../style-set.config';
 
 FocusStyleManager.onlyShowFocusOnTabs();
+
+//#region Theme
+enum BbTheme {
+    Light,
+    Dark
+}
 
 const DARK_THEME = Classes.DARK;
 const LIGHT_THEME = "";
@@ -33,37 +40,18 @@ function handleThemeChange(themeState: BbTheme, setThemeState: React.Dispatch<Re
     // setHotkeysDialogProps({ className: nextThemeName });
     // this.setState({ themeName: nextThemeName });
 };
+//#endregion
 
-
-const styleList: IOptionProps[] = [
-    {
-        value: './antd-like-styles.css',
-        label: 'Ant Design'
-    },
-    {
-        value: './new-styles.css',
-        label: 'New Style!'
-    },
-    {
-        value: './default-styles.css',
-        label: 'Default Style'
-    },
-]
+const styleList: IOptionProps[] = styleSetConfig.map(
+    (style: { name: string, slug: string }) => ({
+        value: `./${style.slug}.css`,
+        label: style.name
+    })
+)
 
 function addStylerStyleSheet(optionProps: IOptionProps): HTMLLinkElement {
-    // https://stackoverflow.com/a/577002/5648839
-    // var head = document.getElementsByTagName('head')[0];
-    // var link = document.createElement('link');
-    // link.id = 'stylerStyleSheet';
-    // link.rel = 'stylesheet';
-    // link.type = 'text/css';
-    // link.href = optionProps.value as string;
-    // link.media = 'all';
-    // head.appendChild(link);
-
     var link = document.getElementById('stylerStyleSheet') as HTMLLinkElement;
     return link;
-
 }
 const stylerStyleSheet = addStylerStyleSheet(styleList[0])
 
@@ -71,10 +59,7 @@ function switchCss(styleSheetHref: string) {
     stylerStyleSheet.href = styleSheetHref
 }
 
-enum BbTheme {
-    Light,
-    Dark
-}
+
 
 function BlueprintStylerApp() {
     // const data: IBlueprintExampleData = { themeName: getTheme() }

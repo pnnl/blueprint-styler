@@ -19,7 +19,6 @@ From the root of the repo:
 
 ### General
 - add a readme to each project - default styles is project explainer
-- config to order styles
 - title navigation links
 - add colors section
 - add typography section
@@ -77,3 +76,4 @@ From the root of the repo:
 - rename everything from "themer" to "styler"
 - upgrade npm dependencies
 - add extension packages: table, datetime, etc...
+- config to order styles

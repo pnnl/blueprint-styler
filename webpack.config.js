@@ -18,14 +18,18 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 const { sassConfig, postCssConfig } = require('./shared.config')
+const { styleSetConfig } = require('./style-set.config')
 
+const styleSetAsEntry = function (styleSetConfig = []) {
+    const entry = {}
+    styleSetConfig.forEach(style => entry[style.slug] = `./src/_${style.slug}/styler-styles.scss`);
+    return entry
+}
 
 module.exports = Object.assign({}, baseConfig, {
     entry: {
         "styler-app": "./src/index.tsx",
-        "default-styles": "./src/_default-styles/styler-styles.scss",
-        "new-styles": "./src/_new-styles/styler-styles.scss",
-        "antd-like-styles": "./src/_antd-like-styles/styler-styles.scss",
+        ...styleSetAsEntry(styleSetConfig)
     },
     output: {
         filename: "[name].js",
