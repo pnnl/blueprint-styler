@@ -15,12 +15,19 @@
 // COMPONENT VARIABLES //
 @import "./button-vars";
 
+
 // COMPONENTS BUILD //
 // build components based on customized scss vars
+// CORE //
 @import "~@blueprintjs/core/src/reset";
 @import "~@blueprintjs/core/src/typography";
 @import "~@blueprintjs/core/src/accessibility/focus-states";
-@import "../../node_modules/@blueprintjs/core/src/components/index";
+@import "~@blueprintjs/core/src/components/index";
+// EXTENSIONS //
+@import "~@blueprintjs/datetime/src/blueprint-datetime.scss";
+@import "~@blueprintjs/select/src/blueprint-select.scss";
+@import "~@blueprintjs/table/src/table.scss";
+@import "~@blueprintjs/timezone/src/blueprint-timezone.scss";
 
 
 // COMPONENT CSS OVERRIDES //
@@ -32,17 +39,6 @@
 @import "../styles/common-borderless-button-group.scss";
 
 
-// import these first because they're the base layer
-// @import "~@blueprintjs/core/lib/css/blueprint.css";
-// @import "~@blueprintjs/datetime/lib/css/blueprint-datetime.css";
-// @import "~@blueprintjs/icons/lib/css/blueprint-icons.css";
-// @import "~@blueprintjs/select/lib/css/blueprint-select.css";
-// @import "~@blueprintjs/table/lib/css/table.css";
-// @import "~@blueprintjs/timezone/lib/css/blueprint-timezone.css";
-
 // CSS VARS //
 // import the css vars - they will be parsed by the css-vars-copy-loader.js
 @import "../styles/variables-map";
-
-
-// $prefix: ../../node_modules/

@@ -1,4 +1,9 @@
 import * as CoreExamples from '../examples/core-examples';
+import * as DateTimeExamples from '../examples/datetime-examples';
+import * as SelectExamples from '../examples/select-examples';
+import * as TableExamples from '../examples/table-examples';
+import * as TimezoneExamples from '../examples/timezone-examples';
+
 
 type ComponentSet = [string, React.ComponentClass[]]
 type NestedComponentSets = [string, ComponentSet[]][];
@@ -92,5 +97,37 @@ export const allExamples: NestedComponentSets = [
         ['Focus', [
             CoreExamples.FocusExample,
         ]],
-    ]]
+    ]],
+
+    ['DateTime', [
+        ['Date Input', [DateTimeExamples.DateInputExample]],
+        ['Date Range Input', [DateTimeExamples.DateRangeInputExample]],
+        ['Date Picker', [DateTimeExamples.DatePickerExample]],
+        ['Date Range Picker', [DateTimeExamples.DateRangePickerExample]],
+        ['DateTime Picker', [DateTimeExamples.DateTimePickerExample]],
+        ['Time Picker', [DateTimeExamples.TimePickerExample]],
+        ['Timezone Picker', [TimezoneExamples.TimezonePickerExample]],
+    ]],
+
+    // ['Timezone', [ ['Timezone Picker', [TimezoneExamples.TimezonePickerExample]] ]],
+
+    ['Select', [
+        ['MultiSelect', [SelectExamples.MultiSelectExample]],
+        ['Omnibar', [SelectExamples.OmnibarExample]],
+        ['Select', [SelectExamples.SelectExample]],
+        ['Suggest', [SelectExamples.SuggestExample]],
+    ]],
+
+    // ['Table', [
+    // ['Cell Loading', [TableExamples.CellLoadingExample]],
+    // ['Column Loading', [TableExamples.ColumnLoadingExample]],
+    // ['Table Dollar', [TableExamples.TableDollarExample]],
+    // ['Table Editable', [TableExamples.TableEditableExample]],
+    // ['Table Formats', [TableExamples.TableFormatsExample]],
+    // ['Table Freezing', [TableExamples.TableFreezingExample]],
+    // ['Table Loading', [TableExamples.TableLoadingExample]],
+    // ['Table Reorderable', [TableExamples.TableReorderableExample]],
+    // ['Table Sortable', [TableExamples.TableSortableExample]],
+    // ]],
+
 ];

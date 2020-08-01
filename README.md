@@ -18,7 +18,6 @@ From the root of the repo:
 ## TODOS:
 
 ### General
-- add components from other projects?? table, etc...
 - add colors section
 - add typography section
 - add a readme to each project - default styles is project explainer
@@ -75,3 +74,4 @@ From the root of the repo:
 - remove radius from search input
 - rename everything from "themer" to "styler"
 - upgrade npm dependencies
+- add extension packages: table, datetime, etc...
