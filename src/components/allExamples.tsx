@@ -118,16 +118,21 @@ export const allExamples: NestedComponentSets = [
         ['Suggest', [SelectExamples.SuggestExample]],
     ]],
 
-    // ['Table', [
-    // ['Cell Loading', [TableExamples.CellLoadingExample]],
-    // ['Column Loading', [TableExamples.ColumnLoadingExample]],
-    // ['Table Dollar', [TableExamples.TableDollarExample]],
-    // ['Table Editable', [TableExamples.TableEditableExample]],
-    // ['Table Formats', [TableExamples.TableFormatsExample]],
-    // ['Table Freezing', [TableExamples.TableFreezingExample]],
-    // ['Table Loading', [TableExamples.TableLoadingExample]],
-    // ['Table Reorderable', [TableExamples.TableReorderableExample]],
-    // ['Table Sortable', [TableExamples.TableSortableExample]],
-    // ]],
+    ['Table', [
+        // TODO: add a component that wraps these components to optionally load them.
+        // // ... because they slow the page down
+
+        ['Table Editable', [TableExamples.TableEditableExample]],
+        // ['Table Loading', [TableExamples.TableLoadingExample]],
+        // ['Table Reorderable', [TableExamples.TableReorderableExample]],
+        // ['Table Sortable', [TableExamples.TableSortableExample]],
+
+        // Less useful for styling
+        // ['Cell Loading', [TableExamples.CellLoadingExample]],
+        // ['Column Loading', [TableExamples.ColumnLoadingExample]],
+        // ['Table Dollar', [TableExamples.TableDollarExample]],
+        // ['Table Formats', [TableExamples.TableFormatsExample]],
+        // ['Table Freezing', [TableExamples.TableFreezingExample]],
+    ]],
 
 ];

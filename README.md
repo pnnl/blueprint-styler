@@ -18,15 +18,17 @@ From the root of the repo:
 ## TODOS:
 
 ### General
+- add a readme to each project - default styles is project explainer
+- config to order styles
+- title navigation links
 - add colors section
 - add typography section
-- add a readme to each project - default styles is project explainer
-- title navigation links
 - make search work
 - add shortcut keys
 - save state between loads
   - switch to create-react-app
   - use react router
+  - nav bar stays in sync with scroll position
 - Generate new style: `$ npm run new-style <style-name>`
 - Publish: `$ npm run publish <style-name>` publish a lib to npm under `@blueprint-style/<style-name>`
   - update versioning
