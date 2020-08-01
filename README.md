@@ -18,7 +18,6 @@ From the root of the repo:
 ## TODOS:
 
 ### General
-- rename everything from "themer" to "styler"
 - upgrade npm deps
 - add components from other projects?? table, etc...
 - add colors section
@@ -61,15 +60,18 @@ From the root of the repo:
 - css vars template
 - design your own theme ui
 
+----
+
 ## DONE:
 - better js outputs - split colors and stuff
-- style - ant.design
+-  ant.design
   - inputs
   - select element
   - checkbox and radio animations
   - slider
   - file input
   - textarea?
-- common - all
+- style - common
   - dividers for intent button groups when outline-less
 - remove radius from search input
+- rename everything from "themer" to "styler"

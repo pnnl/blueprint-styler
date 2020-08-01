@@ -76,7 +76,7 @@ enum BbTheme {
     Dark
 }
 
-function BlueprintThemerApp() {
+function BlueprintStylerApp() {
     // const data: IBlueprintExampleData = { themeName: getTheme() }
     // const useDarkTheme = data.themeName === DARK_THEME;
 
@@ -200,4 +200,4 @@ function BlueprintThemerApp() {
     );
 }
 
-export default BlueprintThemerApp;
+export default BlueprintStylerApp;

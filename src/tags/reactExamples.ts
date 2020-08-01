@@ -22,7 +22,7 @@ import * as DateExamples from "../examples/datetime-examples";
 import * as SelectExamples from "../examples/select-examples";
 import * as TableExamples from "../examples/table-examples";
 import * as TimezoneExamples from "../examples/timezone-examples";
-import { getTheme } from '../components/BlueprintThemerApp';
+import { getTheme } from '../components/BlueprintStylerApp';
 
 /** Interface for `IExampleProps` `data` in this here Blueprint docs-app. */
 export interface IBlueprintExampleData {

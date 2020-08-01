@@ -19,7 +19,7 @@ import "dom4";
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import BlueprintThemerApp from './components/BlueprintThemerApp';
+import BlueprintStylerApp from './components/BlueprintStylerApp';
 import * as serviceWorker from './serviceWorker';
 
 
@@ -41,7 +41,7 @@ import * as serviceWorker from './serviceWorker';
 // };
 
 ReactDOM.render(
-    <BlueprintThemerApp />,
+    <BlueprintStylerApp />,
     // <BlueprintDocs defaultPageId="blueprint" docs={docsData} tagRenderers={tagRenderers} useNextVersion={false} />,
     document.querySelector("#blueprint-styler"),
 );
