@@ -17,36 +17,59 @@ From the root of the repo:
 
 ## TODOS:
 
-### Styles
-- antd
-  - dark theme
-
-### General Styles
-- better focus for buttons
-- dividers for intent button groups when outline-less
-- remove radius from search input
-
-
 ### General
-- save state between loads
-- make search work
-- add shortcut keys
-- add components from other projects?? table, etc...
 - rename everything from "themer" to "styler"
-- add a readme to each project - default styles is project explainer
+- upgrade npm deps
+- add components from other projects?? table, etc...
 - add colors section
 - add typography section
+- add a readme to each project - default styles is project explainer
+- title navigation links
+- make search work
+- add shortcut keys
+- save state between loads
+  - switch to create-react-app
+  - use react router
 - Generate new style: `$ npm run new-style <style-name>`
 - Publish: `$ npm run publish <style-name>` publish a lib to npm under `@blueprint-style/<style-name>`
   - update versioning
 - directions for development
+- switch icon libraries
+
+### Styles
+- Flat
+  - dark theme
+  - button component divider
+- Flat Mono - emphasis color is greyscale?
+- Gradient buttons?
+- [ant.design](https://ant.design/components/overview/)
+  - dark theme
+- [IBM Carbon](https://www.carbondesignsystem.com/components/overview)
+- [Shopify Polaris](https://polaris.shopify.com/components/actions/button#navigation)
+- [Google Material](https://material.io/components)
+- [Adobe Spectrum](https://spectrum.adobe.com/)
+- [Microsoft Fluent](https://developer.microsoft.com/en-us/fluentui#/controls/web)
+- [Apple HMI](https://developer.apple.com/design/human-interface-guidelines/)
+- [Wordpress](https://make.wordpress.org/design/)?
+- [Amazon AWS](https://abduzeedo.com/amazon-web-services-design-system)
+- Maybe themes that are just colors and fonts?
+- something fancy? serif fonts and such...
+- **Common** - styles that help everywhere
+  - better focus for buttons?
+
+### Eventually
+- css vars template
+- design your own theme ui
 
 ## DONE:
-* better js outputs - split colors and stuff
-* antd
-  * inputs
-  * select element
-  * checkbox and radio animations
-  * slider
-  * file input
-  * textarea?
+- better js outputs - split colors and stuff
+- style - ant.design
+  - inputs
+  - select element
+  - checkbox and radio animations
+  - slider
+  - file input
+  - textarea?
+- common - all
+  - dividers for intent button groups when outline-less
+- remove radius from search input
