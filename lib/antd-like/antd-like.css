@@ -2935,11 +2935,19 @@ a.bp3-button.bp3-disabled {
     z-index: 17
 }
 
-.bp3-control-group:not(.bp3-vertical)>* {
+.bp3-control-group .bp3-select:focus-within {
+    z-index: 5
+}
+
+.bp3-control-group:not(.bp3-vertical)>:not(.bp3-divider) {
     margin-right: -1px
 }
 
-.bp3-dark .bp3-control-group:not(.bp3-vertical)>* {
+.bp3-control-group:not(.bp3-vertical)>.bp3-divider:not(:first-child) {
+    margin-left: 6px
+}
+
+.bp3-dark .bp3-control-group:not(.bp3-vertical)>:not(.bp3-divider) {
     margin-right: 0
 }
 
@@ -2967,6 +2975,11 @@ a.bp3-button.bp3-disabled {
 
 .bp3-control-group .bp3-input-group .bp3-button {
     border-radius: 2px
+}
+
+.bp3-control-group .bp3-numeric-input:not(:first-child) .bp3-input-group {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0
 }
 
 .bp3-control-group.bp3-fill>:not(.bp3-fixed) {
@@ -10381,6 +10394,36 @@ a.bp3-button.bp3-intent-danger:after {
 
 .bp3-slider-handle:disabled:after {
     content: unset
+}
+
+.bp3-input.bp3-input[type=search] {
+    border-radius: 2px
+}
+
+.bp3-button-group:not(.bp3-vertical) .bp3-button[class*=bp3-intent-] {
+    border: 0 solid hsla(0,0%,100%,.25);
+    border-width: 0 1px
+}
+
+.bp3-button-group:not(.bp3-vertical) .bp3-button[class*=bp3-intent-]:first-child {
+    border-left: 0
+}
+
+.bp3-button-group:not(.bp3-vertical) .bp3-button[class*=bp3-intent-]:last-child {
+    border-right: 0
+}
+
+.bp3-button-group.bp3-vertical .bp3-button[class*=bp3-intent-] {
+    border: 0 solid hsla(0,0%,100%,.25);
+    border-width: 1px 0
+}
+
+.bp3-button-group.bp3-vertical .bp3-button[class*=bp3-intent-]:first-child {
+    border-top: 0
+}
+
+.bp3-button-group.bp3-vertical .bp3-button[class*=bp3-intent-]:last-child {
+    border-bottom: 0
 }
 
 .bpx-vars {

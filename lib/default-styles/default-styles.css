@@ -2923,11 +2923,19 @@ a.bp3-button.bp3-disabled {
     z-index: 17
 }
 
-.bp3-control-group:not(.bp3-vertical)>* {
+.bp3-control-group .bp3-select:focus-within {
+    z-index: 5
+}
+
+.bp3-control-group:not(.bp3-vertical)>:not(.bp3-divider) {
     margin-right: -1px
 }
 
-.bp3-dark .bp3-control-group:not(.bp3-vertical)>* {
+.bp3-control-group:not(.bp3-vertical)>.bp3-divider:not(:first-child) {
+    margin-left: 6px
+}
+
+.bp3-dark .bp3-control-group:not(.bp3-vertical)>:not(.bp3-divider) {
     margin-right: 0
 }
 
@@ -2955,6 +2963,11 @@ a.bp3-button.bp3-disabled {
 
 .bp3-control-group .bp3-input-group .bp3-button {
     border-radius: 3px
+}
+
+.bp3-control-group .bp3-numeric-input:not(:first-child) .bp3-input-group {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0
 }
 
 .bp3-control-group.bp3-fill>:not(.bp3-fixed) {

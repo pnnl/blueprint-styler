@@ -18,7 +18,6 @@ From the root of the repo:
 ## TODOS:
 
 ### General
-- upgrade npm deps
 - add components from other projects?? table, etc...
 - add colors section
 - add typography section
@@ -75,3 +74,4 @@ From the root of the repo:
   - dividers for intent button groups when outline-less
 - remove radius from search input
 - rename everything from "themer" to "styler"
+- upgrade npm dependencies

@@ -57,10 +57,10 @@ module.exports = Object.assign({}, baseConfig, {
                     },
                     {
                         loader: require.resolve("sass-loader"),
-                        options: sassConfig
-                        // options: { // depends on the version of webpack and sass-loader
-                        //     sassOptions: sassConfig
-                        // }
+                        // options: sassConfig
+                        options: { // depends on the version of webpack and sass-loader
+                            sassOptions: sassConfig
+                        }
                     }
                 ],
             },
