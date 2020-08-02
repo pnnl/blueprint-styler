@@ -6,7 +6,7 @@ exports.styleSetConfig = [
     },
     {
         slug: 'default-styles',
-        name: 'Default Style'
+        name: 'Default'
     },
     {
         slug: 'new-styles',
