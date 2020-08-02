@@ -1,6 +1,10 @@
 exports.styleSetConfig = [
     // add new styles here...
     {
+        slug: 'ibm-carbon-styles',
+        name: 'IBM Carbon'
+    },
+    {
         slug: 'default-styles',
         name: 'Default Style'
     },

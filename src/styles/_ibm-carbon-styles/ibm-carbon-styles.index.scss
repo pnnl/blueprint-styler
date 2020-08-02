@@ -1,0 +1,40 @@
+// NORMALIZE //
+@import "~normalize.css/normalize";
+
+
+// COLORS //
+@import "~@blueprintjs/core/src/common/colors"; // !defaults
+@import './colors'; // overrides
+@import './color-aliases'; // overrides
+
+// GLOBAL VARIABLES //
+@import "~@blueprintjs/core/src/common/mixins"; // !defaults
+@import "~@blueprintjs/core/src/common/variables"; // !defaults
+@import "./variables"; // overrides
+
+// COMPONENT VARIABLES //
+// @import "./component-scss-var-overrides";
+
+
+// COMPONENTS BUILD //
+// build components based on customized scss vars
+// CORE //
+@import "~@blueprintjs/core/src/reset";
+@import "~@blueprintjs/core/src/typography";
+@import "~@blueprintjs/core/src/accessibility/focus-states";
+@import "~@blueprintjs/core/src/components/index";
+// EXTENSIONS //
+@import "~@blueprintjs/datetime/src/blueprint-datetime.scss";
+@import "~@blueprintjs/select/src/blueprint-select.scss";
+@import "~@blueprintjs/table/src/table.scss";
+@import "~@blueprintjs/timezone/src/blueprint-timezone.scss";
+// @import "~@blueprintjs/icons/src/blueprint-icons.scss"; // only needed for icon fonts?
+
+
+// COMPONENT CSS OVERRIDES //
+// @import "./custom-css-overrides";
+
+
+// CSS VARS //
+// import the css vars - they will be parsed by the css-vars-copy-loader.js
+@import "../global/variables-map";
