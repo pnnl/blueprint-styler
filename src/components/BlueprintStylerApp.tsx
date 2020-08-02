@@ -48,18 +48,15 @@ const styleList: IOptionProps[] = styleSetConfig.map(
         label: style.name
     })
 )
-
-function addStylerStyleSheet(optionProps: IOptionProps): HTMLLinkElement {
-    var link = document.getElementById('stylerStyleSheet') as HTMLLinkElement;
-    return link;
+function addStylerStyleSheet(href: string): HTMLLinkElement {
+    var styleSheet = document.getElementById('stylerStyleSheet') as HTMLLinkElement;
+    if (href != null) styleSheet.href = href;
+    return styleSheet;
 }
-const stylerStyleSheet = addStylerStyleSheet(styleList[0])
-
+const stylerStyleSheet = addStylerStyleSheet(styleList[0].value as string)
 function switchCss(styleSheetHref: string) {
     stylerStyleSheet.href = styleSheetHref
 }
-
-
 
 function BlueprintStylerApp() {
     // const data: IBlueprintExampleData = { themeName: getTheme() }
