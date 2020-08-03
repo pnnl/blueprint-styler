@@ -9,11 +9,11 @@ exports.styleSetConfig = [
         name: 'Default'
     },
     {
-        slug: 'new-styles',
+        slug: 'flat-styles',
         name: 'Flat'
     },
     {
-        slug: 'antd-like-styles',
+        slug: 'antd-styles',
         name: 'Ant Design'
     },
 ]
