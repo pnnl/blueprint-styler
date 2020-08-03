@@ -30,6 +30,8 @@
     "@blueprintjs/table": "^3.8.12",
     "@blueprintjs/test-commons": "^0.10.4",
     "@blueprintjs/timezone": "^3.6.10",
+    "@carbon/colors": "^10.11.0",
+    "@ibm/plex": "^5.1.0",
     "@types/chai": "4.2.12",
     "@types/classnames": "2.2.10",
     "@types/downloadjs": "^1.4.2",
