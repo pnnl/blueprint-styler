@@ -2,7 +2,7 @@
 // Licensed under the Apache License, Version 2.0.
 
 
-$pt-intent-primary:   $blue3;
+$pt-intent-primary:   $cobalt3;
 $pt-intent-success:   $green3;
 $pt-intent-warning:   $orange3;
 $pt-intent-danger:    $red3;
@@ -10,18 +10,18 @@ $pt-intent-danger:    $red3;
 $pt-app-background-color:      $light-gray5;
 $pt-dark-app-background-color: $dark-gray3;
 
-$pt-outline-color: rgba($blue3, 0.6);
+$pt-outline-color: rgba($cobalt3, 0.6);
 
 $pt-text-color:               $dark-gray1;
 $pt-text-color-muted:         $gray1;
 $pt-text-color-disabled:      rgba($pt-text-color-muted, 0.6);
 $pt-heading-color:            $pt-text-color;
-$pt-link-color:               $blue2;
+$pt-link-color:               $cobalt2;
 $pt-dark-text-color:          $light-gray5;
 $pt-dark-text-color-muted:    $gray4;
 $pt-dark-text-color-disabled: rgba($pt-dark-text-color-muted, 0.6);
 $pt-dark-heading-color:       $pt-dark-text-color;
-$pt-dark-link-color:          $blue5;
+$pt-dark-link-color:          $cobalt5;
 
 // Default text selection color using #7dbcff
 $pt-text-selection-color: rgba(125, 188, 255, 0.6);
