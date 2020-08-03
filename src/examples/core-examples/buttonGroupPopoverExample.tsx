@@ -14,12 +14,13 @@
  * limitations under the License.
  */
 
-import { Alignment, Button, ButtonGroup, H5, IconName, Popover, Position, Switch } from "@blueprintjs/core";
-import { Example, handleBooleanChange, IExampleProps } from "@blueprintjs/docs-theme";
+import { Alignment, Button, ButtonGroup, H5, IconName, Popover, Position, Switch, Intent } from "@blueprintjs/core";
+import { Example, handleBooleanChange, IExampleProps, handleStringChange } from "@blueprintjs/docs-theme";
 import * as React from "react";
 
 import { AlignmentSelect } from "./common/alignmentSelect";
 import { FileMenu } from "./common/fileMenu";
+import { IntentSelect } from './common/intentSelect';
 
 export interface IButtonGroupPopoverExampleState {
     alignText: Alignment;
@@ -27,6 +28,7 @@ export interface IButtonGroupPopoverExampleState {
     large: boolean;
     minimal: boolean;
     vertical: boolean;
+    intent: Intent;
 }
 
 export class ButtonGroupPopoverExample extends React.PureComponent<IExampleProps, IButtonGroupPopoverExampleState> {
@@ -36,12 +38,15 @@ export class ButtonGroupPopoverExample extends React.PureComponent<IExampleProps
         large: false,
         minimal: false,
         vertical: false,
+        intent: Intent.NONE,
     };
 
     private handleFillChange = handleBooleanChange(fill => this.setState({ fill }));
     private handleLargeChange = handleBooleanChange(large => this.setState({ large }));
     private handleMinimalChange = handleBooleanChange(minimal => this.setState({ minimal }));
     private handleVerticalChange = handleBooleanChange(vertical => this.setState({ vertical }));
+    private handleIntentChange = handleStringChange((intent: Intent) => this.setState({ intent }));
+
 
     public render() {
         const options = (
@@ -51,6 +56,7 @@ export class ButtonGroupPopoverExample extends React.PureComponent<IExampleProps
                 <Switch label="Large" checked={this.state.large} onChange={this.handleLargeChange} />
                 <Switch label="Minimal" checked={this.state.minimal} onChange={this.handleMinimalChange} />
                 <Switch label="Vertical" checked={this.state.vertical} onChange={this.handleVerticalChange} />
+                <IntentSelect intent={this.state.intent} onChange={this.handleIntentChange} />
                 <AlignmentSelect align={this.state.alignText} label="Align text" onChange={this.handleAlignChange} />
             </>
         );
@@ -66,12 +72,12 @@ export class ButtonGroupPopoverExample extends React.PureComponent<IExampleProps
     }
 
     private renderButton(text: string, iconName: IconName) {
-        const { vertical } = this.state;
+        const { vertical, intent } = this.state;
         const rightIconName: IconName = vertical ? "caret-right" : "caret-down";
         const position = vertical ? Position.RIGHT_TOP : Position.BOTTOM_LEFT;
         return (
             <Popover content={<FileMenu />} position={position}>
-                <Button rightIcon={rightIconName} icon={iconName} text={text} />
+                <Button rightIcon={rightIconName} icon={iconName} text={text} intent={intent} />
             </Popover>
         );
     }
