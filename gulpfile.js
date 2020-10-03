@@ -12,7 +12,7 @@ const cssBeautify = require('gulp-cssbeautify')
 const extractCssVarsToAllFormats = require('./scripts/gulp-extract-css-vars-to-all-formats')
 
 const sassTask = function () {
-    return gulp.src('./src/_*-styles/*.index.scss')
+    return gulp.src('./src/styles/_*-styles/*.index.scss')
         .pipe(sass(sassConfig).on('error', sass.logError))
         .pipe(postcss(postCssConfig.plugins))
         .pipe(rename(path => {
