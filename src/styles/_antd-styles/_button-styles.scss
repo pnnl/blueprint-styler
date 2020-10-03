@@ -19,7 +19,7 @@
   &:disabled:hover,
   &.#{$ns}-disabled,
   &.#{$ns}-disabled:hover {
-    border-color: $pt-text-color-disabled;
+    // border-color: $pt-text-color-disabled;
   }
 
 }
@@ -53,7 +53,8 @@
     opacity: .2;
   }
 
-  &:disabled:after{
+  &:disabled:after,
+  &.#{$ns}-disabled:after{
     content: unset;
   }
 
@@ -166,7 +167,6 @@ a.#{$ns}-button{ @include button-base-overrides }
     background-color: $button-background-color-hover;
     color: $antd-intent-primary-hover;
     transition-duration: 50ms;
-
   }
 
   &:active:after,

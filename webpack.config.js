@@ -51,12 +51,15 @@ module.exports = Object.assign({}, baseConfig, {
                     },
                     {
                         loader: require.resolve("postcss-loader"),
-                        options: postCssConfig
+                        // options: postCssConfig // depends on the version of webpack and postcss-loader
+                        options: {
+                            postcssOptions: postCssConfig
+                        }
                     },
                     {
                         loader: require.resolve("sass-loader"),
-                        // options: sassConfig
-                        options: { // depends on the version of webpack and sass-loader
+                        // options: sassConfig // depends on the version of webpack and sass-loader
+                        options: {
                             sassOptions: sassConfig
                         }
                     }
@@ -73,10 +76,12 @@ module.exports = Object.assign({}, baseConfig, {
         ],
     },
     plugins: baseConfig.plugins.concat([
-        new CopyWebpackPlugin([
-            // to: is relative to dist/
-            { from: "src/index.html", to: "." },
-            { from: "src/assets/favicon.png", to: "assets" },
-        ])
+        new CopyWebpackPlugin({
+            patterns: [
+                // to: is relative to dist/
+                { from: "src/index.html", to: "." },
+                { from: "src/assets/favicon.png", to: "assets" },
+            ]
+        })
     ]),
 });
