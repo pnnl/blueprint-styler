@@ -6,16 +6,6 @@
 // @import "~@blueprintjs/core/src/progress-bar/common"; //?
 @import "~@blueprintjs/core/src/components/button/common";
 
-// OVERRIDING: node_modules/@blueprintjs/core/src/components/button/_common.scss
-
-// Overlay Shadows
-// $button-box-shadow-overlay: '';
-  // 0 0 0 $button-border-width rgba($black, 0.2),
-  // 0 1px 1px rgba($black, 0.2) ;
-// $button-box-shadow-overlay-active: '';
-  // 0 0 0 $button-border-width rgba($black, 0.2),
-  // inset 0 1px 1px rgba($black, 0.1) ;
-
 // Border Shadows
 $button-box-shadow:  '';
   // inset 0 0 0 $button-border-width rgba($black, 0.15);
@@ -30,6 +20,17 @@ $button-intent-box-shadow-active: '';
   // inset 0 0 0 $button-border-width rgba($black, 0.4);
   // inset 0 1px 2px rgba($black, 0.2) ;
 
+$dark-button-box-shadow: '';
+  // 0 0 0 $button-border-width rgba($black, 0.4) !default;
+$dark-button-box-shadow-active: '';
+  // 0 0 0 $button-border-width rgba($black, 0.6),
+  // inset 0 1px 2px rgba($black, 0.2) !default;
+$dark-button-intent-box-shadow: '';
+  // 0 0 0 $button-border-width rgba($black, 0.4) !default;
+$dark-button-intent-box-shadow-active: '';
+  // 0 0 0 $button-border-width rgba($black, 0.4),
+  // inset 0 1px 2px rgba($black, 0.2) !default;
+
 // Gradient Background (from the 2000s)
 $button-gradient: ''; // linear-gradient(to bottom, rgba($white, 0.8), rgba($white, 0)) ;
 $button-intent-gradient: ''; // linear-gradient(to bottom, rgba($white, 0.1), rgba($white, 0)) ;
@@ -37,7 +38,7 @@ $dark-button-gradient: ''; // linear-gradient(to bottom, rgba($white, 0.05), rgb
 
 // "intent": (default, hover, active colors)
 $button-intents: (
-  "primary": ($pt-intent-primary, $cobalt4,   $cobalt2),
+  "primary": ($pt-intent-primary, $cobalt2,   $cobalt1),
   "success": ($pt-intent-success, $green4,  $green2),
   "warning": ($pt-intent-warning, $orange4, $orange2),
   "danger":  ($pt-intent-danger,  $red4,    $red2)

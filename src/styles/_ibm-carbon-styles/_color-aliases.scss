@@ -26,11 +26,11 @@ $pt-dark-link-color:          $cobalt5;
 // Default text selection color using #7dbcff
 $pt-text-selection-color: rgba(125, 188, 255, 0.6);
 
-$pt-icon-color:               $pt-text-color-muted;
+$pt-icon-color:               $pt-text-color;
 $pt-icon-color-hover:         $pt-text-color;
 $pt-icon-color-disabled:      $pt-text-color-disabled;
 $pt-icon-color-selected:      $pt-intent-primary;
-$pt-dark-icon-color:          $pt-dark-text-color-muted;
+$pt-dark-icon-color:          $pt-dark-text-color;
 $pt-dark-icon-color-hover:    $pt-dark-text-color;
 $pt-dark-icon-color-disabled: $pt-dark-text-color-disabled;
 $pt-dark-icon-color-selected: $pt-intent-primary;

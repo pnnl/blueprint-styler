@@ -9,6 +9,7 @@
 
 // GLOBAL VARIABLES //
 @import "~@blueprintjs/core/src/common/mixins"; // !defaults
+@import "./mixins"; // overrides
 @import "~@blueprintjs/core/src/common/variables"; // !defaults
 @import "./variables"; // overrides
 
@@ -33,7 +34,8 @@
 // COMPONENT CSS OVERRIDES //
 @import "./button-styles";
 @import "../global/common-standard-search.scss";
-@import "../global/common-borderless-button-group.scss";
+// @import "../global/common-borderless-button-group.scss";
+@import "./typography";
 
 
 // CSS VARS //

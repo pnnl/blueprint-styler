@@ -32,14 +32,10 @@ $pt-font-family-monospace:
   Consolas,
   monospace;
 
-$pt-border-radius: 0px;
 
-
-/*
-
-$pt-font-size: $pt-grid-size * 1.4;
-$pt-font-size-large: $pt-grid-size * 1.6;
-$pt-font-size-small: $pt-grid-size * 1.2;
+$pt-font-size: 14px;
+$pt-font-size-large: 14px;
+$pt-font-size-small: 12px;
 
 // a little bit extra to ensure the height comes out to just over 18px (and browser rounds to 18px)
 $pt-line-height: ($pt-grid-size * 1.8) / $pt-font-size + 0.0001;
@@ -54,7 +50,7 @@ $pt-icon-size-large: 20px;
 
 // Grids & dimensions
 
-$pt-border-radius: floor($pt-grid-size / 3);
+$pt-border-radius: 0px; // floor($pt-grid-size / 3);
 
 // Buttons
 $pt-button-height: $pt-grid-size * 3;
@@ -137,6 +133,3 @@ $pt-dark-input-box-shadow: inset border-shadow(0.3),
 $pt-dark-dialog-box-shadow: $pt-dark-elevation-shadow-4;
 $pt-dark-popover-box-shadow: $pt-dark-elevation-shadow-3;
 $pt-dark-tooltip-box-shadow: $pt-dark-popover-box-shadow;
-
-*/
-
