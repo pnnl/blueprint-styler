@@ -9,10 +9,13 @@ exports.sassConfig = {
 
 exports.postCssConfig = {
     plugins: [
-        require('postcss-combine-duplicated-selectors')({
-            // removeDuplicatedProperties: true // this is broken :(
-        }),
         require("autoprefixer"),
         require("cssnano")({ preset: "default" }),
+        require('postcss-combine-duplicated-selectors')({
+            removeDuplicatedProperties: true // this is broken in v10 :(
+        }),
+        require('postcss-remove-null'),
     ],
+    // NOTE:
+    // `removeDuplicatedProperties: true` followed by postcss-remove-null will allow the targeted removal of properties
 }

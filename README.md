@@ -35,6 +35,19 @@ From the root of the repo:
 - switch icon libraries
 
 ### Styles
+- [IBM Carbon](https://www.carbondesignsystem.com/components/overview)
+  - inputs!!
+  - switch
+  - focus
+  - tabs
+  - slider handle round & not split
+  - checkbox & radio
+    - dark fg
+    - unchecked outline
+  - loading bar & spinner
+  - menu, popover, calendar - padding: 0?
+  - button
+    - outline fills in?
 - Flat
   - dark theme
   - button component divider
@@ -42,7 +55,6 @@ From the root of the repo:
 - Gradient buttons?
 - [ant.design](https://ant.design/components/overview/)
   - dark theme
-- [IBM Carbon](https://www.carbondesignsystem.com/components/overview)
 - [Shopify Polaris](https://polaris.shopify.com/components/actions/button#navigation)
 - [Google Material](https://material.io/components)
 - [Adobe Spectrum](https://spectrum.adobe.com/)

@@ -17,34 +17,33 @@
   }
 
   &.#{$ns}-end {
-    border-bottom-left-radius: invalid;
-    border-top-left-radius: invalid;
+    border-bottom-left-radius: null;
+    border-top-left-radius: null;
     margin-left: 0;
   }
   &.#{$ns}-start {
-    border-bottom-right-radius: invalid;
-    border-top-right-radius: invalid;
+    border-bottom-right-radius: null;
+    border-top-right-radius: null;
     margin-left: 0;
   }
   &.#{$ns}-end, &.#{$ns}-start {
-    width: invalid;
+    width: null;
   }
 
   .#{$ns}-slider.#{$ns}-vertical &{
     &.#{$ns}-end {
-      border-bottom-left-radius: invalid;
-      border-bottom-right-radius: invalid;
-      border-top-left-radius: invalid;
+      border-bottom-left-radius: null;
+      border-bottom-right-radius: null;
+      border-top-left-radius: null;
     }
     &.#{$ns}-start {
-      border-bottom-right-radius: invalid;
-      border-top-left-radius: invalid;
+      border-bottom-right-radius: null;
+      border-top-left-radius: null;
     }
     &.#{$ns}-end,
     &.#{$ns}-start {
-      height: invalid;
+      height: null;
     }
   }
-
 
 }
