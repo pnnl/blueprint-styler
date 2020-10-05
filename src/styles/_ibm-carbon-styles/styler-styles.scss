@@ -10,3 +10,22 @@
 @import "../global/examples-index";
 // then our own styles
 @import "../global/styler";
+
+.bp3-dark .docs-example-options {
+  background-color: $dark-gray3;
+  border: unset
+}
+
+.docs-example-options {
+  background-color: $light-gray5;
+  border: 1px solid $light-gray4;
+}
+
+.docs-example-frame-row:before,
+.docs-example-frame-row > * {
+  margin-right: 1px;
+}
+
+.docs-example-frame{
+  margin: 1px 0;
+}

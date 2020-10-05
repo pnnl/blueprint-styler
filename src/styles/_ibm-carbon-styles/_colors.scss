@@ -5,42 +5,26 @@
 
 @import '~@carbon/colors/scss/colors';
 
-$black: $black-100;
+$black: black ;//$black-100;
 
-$dark-gray1:  $gray-100;
-$dark-gray2:  $gray-90;
-$dark-gray3:  $gray-80;
-$dark-gray4:  mix($gray-70,$gray-80);
-$dark-gray5:  $gray-70;
-$gray1:       mix($gray-60,$gray-70);
-$gray2:       $gray-60;
-$gray3:       mix($gray-50,$gray-60);
-$gray4:       $gray-50;
-$gray5:       mix($gray-40,$gray-50);
-$light-gray1: $gray-40;
-$light-gray2: mix($gray-30,$gray-40);
-$light-gray3: $gray-30;
-$light-gray4: $gray-20;
-$light-gray5: $gray-10;
+// ramped from bezier(0.3,0.3,0.7,0.8)    // ALT 2                          // ALT 1
+$dark-gray1:  lighten($black, 06%);       // $gray-100;                     // $gray-100;
+$dark-gray2:  lighten($black, 13%);       // mix($gray-90,$gray-100);       // $gray-90;
+$dark-gray3:  lighten($black, 20%);       // $gray-90;                      // $gray-80;
+$dark-gray4:  lighten($black, 26%);       // mix($gray-80,$gray-90);        // mix($gray-70,$gray-80);
+$dark-gray5:  lighten($black, 33%);       // $gray-80;                      // $gray-70;
+$gray1:       lighten($black, 40%);       // $gray-70;                      // mix($gray-60,$gray-70);
+$gray2:       lighten($black, 47%);       // $gray-60;                      // $gray-60;
+$gray3:       lighten($black, 54%);       // mix($gray-50,$gray-60);        // mix($gray-50,$gray-60);
+$gray4:       lighten($black, 60%);       // $gray-50;                      // $gray-50;
+$gray5:       lighten($black, 67%);       // $gray-40;                      // mix($gray-40,$gray-50);
+$light-gray1: lighten($black, 73%);       // $gray-30;                      // $gray-40;
+$light-gray2: lighten($black, 79%);       // mix($gray-20,$gray-30);        // mix($gray-30,$gray-40);
+$light-gray3: lighten($black, 85%);       // $gray-20;                      // $gray-30;
+$light-gray4: lighten($black, 91%);       // mix($gray-10,$gray-20);        // $gray-20;
+$light-gray5: lighten($black, 96%);       // $gray-10;                      // $gray-10;
 
-// ALT
-$dark-gray1:  $gray-100;
-$dark-gray2:  mix($gray-90,$gray-100);
-$dark-gray3:  $gray-90;
-$dark-gray4:  mix($gray-80,$gray-90);
-$dark-gray5:  $gray-80;
-$gray1:       $gray-70;
-$gray2:       $gray-60;
-$gray3:       mix($gray-50,$gray-60);
-$gray4:       $gray-50;
-$gray5:       $gray-40;
-$light-gray1: $gray-30;
-$light-gray2: mix($gray-20,$gray-30);
-$light-gray3: $gray-20;
-$light-gray4: mix($gray-10,$gray-20);
-$light-gray5: $gray-10;
-
-$white: $white-0;
+$white: white; //$white-0;
 
 // Core colors
 
