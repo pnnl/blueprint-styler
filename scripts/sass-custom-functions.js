@@ -23,7 +23,7 @@ module.exports = {
      * Usage:
      * svg-icon("16px/icon-name.svg", (path: (fill: $color)) )
      */
-    "svg-icon": inliner("./node_modules/@blueprintjs/resources/icons", {
+    "svg-icon": inliner("./scripts/icons", {
         // run through SVGO first
         optimize: true,
         // minimal "uri" encoding is smaller than base64
