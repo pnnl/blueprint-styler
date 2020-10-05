@@ -11,10 +11,6 @@ import { styleSetConfig } from '../styles/style-set.config';
 FocusStyleManager.onlyShowFocusOnTabs();
 
 //#region Theme
-enum BbTheme {
-    Light,
-    Dark
-}
 
 const DARK_THEME = Classes.DARK;
 const LIGHT_THEME = "";
@@ -22,24 +18,20 @@ const THEME_LOCAL_STORAGE_KEY = "blueprint-docs-theme";
 
 /** Return the current theme className. */
 export function getTheme(): string {
-    return localStorage.getItem(THEME_LOCAL_STORAGE_KEY) || LIGHT_THEME;
+    return localStorage.getItem(THEME_LOCAL_STORAGE_KEY) || DARK_THEME;
 }
 
 /** Persist the current theme className in local storage. */
-export function setTheme(themeName: string) {
-    localStorage.setItem(THEME_LOCAL_STORAGE_KEY, themeName);
+export function setTheme(theme: string) {
+    localStorage.setItem(THEME_LOCAL_STORAGE_KEY, theme.toString());
 }
 
-function handleThemeChange(themeState: BbTheme, setThemeState: React.Dispatch<React.SetStateAction<BbTheme>>) {
-    setThemeState(themeState === BbTheme.Light ? BbTheme.Dark : BbTheme.Light)
-
-    // document.root
-    // const useDark = getTheme() === LIGHT_THEME;
-    // const nextThemeName = useDark ? DARK_THEME : LIGHT_THEME;
-    // setTheme(nextThemeName);
-    // setHotkeysDialogProps({ className: nextThemeName });
-    // this.setState({ themeName: nextThemeName });
+function handleThemeChange(themeState: string, setThemeState: React.Dispatch<React.SetStateAction<string>>) {
+    const setToTheme = themeState === LIGHT_THEME ? DARK_THEME : LIGHT_THEME
+    setThemeState(setToTheme)
+    setTheme(setToTheme)
 };
+
 //#endregion
 
 const styleList: IOptionProps[] = styleSetConfig.map(
@@ -59,15 +51,11 @@ function switchCss(styleSheetHref: string) {
 }
 
 function BlueprintStylerApp() {
-    // const data: IBlueprintExampleData = { themeName: getTheme() }
-    // const useDarkTheme = data.themeName === DARK_THEME;
 
     const [openIndex, setOpenIndex] = useState(-1)
-
-    const [theme, setTheme] = useState(BbTheme.Light)
-    const useDarkTheme = theme === BbTheme.Dark;
-    const data: IBlueprintExampleData = { themeName: useDarkTheme ? DARK_THEME : LIGHT_THEME }
-
+    const [theme, setTheme] = useState(getTheme())
+    const useDarkTheme = theme === DARK_THEME;
+    const data: IBlueprintExampleData = { themeName: useDarkTheme ? DARK_THEME : LIGHT_THEME } // { themeName: getTheme() }
 
     return (
         <div className={["app-wrapper", data.themeName].join(' ')}>
