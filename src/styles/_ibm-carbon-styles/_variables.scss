@@ -53,15 +53,15 @@ $pt-icon-size-large: 20px;
 $pt-border-radius: 0px; // floor($pt-grid-size / 3);
 
 // Buttons
-$pt-button-height: $pt-grid-size * 3;
-$pt-button-height-small: $pt-grid-size * 2.4;
 $pt-button-height-smaller: $pt-grid-size * 2;
+$pt-button-height-small: $pt-grid-size * 2.4;
+$pt-button-height: $pt-grid-size * 3.2;
 $pt-button-height-large: $pt-grid-size * 4;
 
 // Inputs
-$pt-input-height: $pt-grid-size * 3;
-$pt-input-height-large: $pt-grid-size * 4;
 $pt-input-height-small: $pt-grid-size * 2.4;
+$pt-input-height: $pt-grid-size * 3.2;
+$pt-input-height-large: $pt-grid-size * 4;
 
 // Others
 $pt-navbar-height: $pt-grid-size * 5;
@@ -118,8 +118,8 @@ $pt-transition-duration: 100ms;
 
 // Light theme styles
 
-$pt-input-box-shadow: inset border-shadow(0.15),
-                      inset 0 1px 1px rgba($black, $pt-drop-shadow-opacity);
+$pt-input-box-shadow: none ;//inset border-shadow(0.15),
+                      //inset 0 1px 1px rgba($black, $pt-drop-shadow-opacity);
 
 $pt-dialog-box-shadow: $pt-elevation-shadow-4;
 $pt-popover-box-shadow: $pt-elevation-shadow-3;
@@ -127,8 +127,8 @@ $pt-tooltip-box-shadow: $pt-popover-box-shadow;
 
 // Dark theme styles
 
-$pt-dark-input-box-shadow: inset border-shadow(0.3),
-                           inset 0 1px 1px rgba($black, $pt-dark-drop-shadow-opacity);
+$pt-dark-input-box-shadow: none;//inset border-shadow(0.3),
+                           //inset 0 1px 1px rgba($black, $pt-dark-drop-shadow-opacity);
 
 $pt-dark-dialog-box-shadow: $pt-dark-elevation-shadow-4;
 $pt-dark-popover-box-shadow: $pt-dark-elevation-shadow-3;

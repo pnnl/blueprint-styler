@@ -1,0 +1,84 @@
+
+$ibm-track-color: $gray1;
+$ibm-dark-track-color: $dark-gray1;
+
+.#{$ns}-slider-label{
+  font-family: $pt-font-family-monospace;
+}
+
+.#{$ns}-slider-handle{
+  border-radius: 99px;
+
+
+  &, &:hover{
+    // box-shadow: 0 0 0 1px ;
+    // box-shadow: 0 0 0 1px red, 0 0 0 1px red;
+
+    background-color: $pt-text-color-muted;
+    box-shadow: 0 0 0 1px $ibm-track-color, 0 0 0 0 transparent ;
+
+    .bp3-dark &{
+      background-color: $pt-dark-text-color-muted;
+      box-shadow: 0 0 0 1px $ibm-dark-track-color, 0 0 0 0 transparent ;
+    }
+  }
+
+  &.#{$ns}-active{
+    background-color: $pt-intent-primary;
+
+    .bp3-dark & {
+      background-color: $pt-intent-primary;
+    }
+  }
+
+
+  // @include button-customizations();
+  // @include antd-button-active-effect();
+  // position: absolute;
+
+  // transition: 200ms linear ;
+  // transition-property: background-color, color, opacity, box-shadow ;
+
+  // &:hover {
+  //   box-shadow: $antd-button-box-shadow-overlay-hover;
+  // }
+
+  // &.#{$ns}-active {
+    // transition-duration: 50ms;
+    // box-shadow: $button-box-shadow-overlay-active;
+  // }
+
+
+
+    // this should be abstracted
+  &.#{$ns}-end {
+    border-bottom-left-radius: null;
+    border-top-left-radius: null;
+    margin-left: 0;
+  }
+  &.#{$ns}-start {
+    border-bottom-right-radius: null;
+    border-top-right-radius: null;
+    margin-left: 0;
+  }
+  &.#{$ns}-end, &.#{$ns}-start {
+    width: null;
+  }
+
+  .#{$ns}-slider.#{$ns}-vertical &{
+    &.#{$ns}-end {
+      border-bottom-left-radius: null;
+      border-bottom-right-radius: null;
+      border-top-left-radius: null;
+    }
+    &.#{$ns}-start {
+      border-bottom-right-radius: null;
+      border-top-left-radius: null;
+    }
+    &.#{$ns}-end,
+    &.#{$ns}-start {
+      height: null;
+    }
+  }
+
+}

@@ -15,6 +15,7 @@
 
 // COMPONENT VARIABLES //
 @import "./button-common";
+@import "./slider-vars.scss";
 
 
 // COMPONENTS BUILD //
@@ -33,6 +34,7 @@
 
 // COMPONENT CSS OVERRIDES //
 @import "./button-styles";
+@import './slider-styles';
 @import "../global/common-standard-search.scss";
 // @import "../global/common-borderless-button-group.scss";
 @import "./typography";
