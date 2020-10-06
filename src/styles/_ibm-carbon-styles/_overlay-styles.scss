@@ -10,7 +10,7 @@
     margin: 0;
   }
 
-  .DayPicker:last-child{
+  &.bp3-daterangepicker .DayPicker:last-child{
     border-left: 1px solid rgba(0,0,0,.3); // dark themes
     .DayPicker-Month{
       // margin-left: 8px;
@@ -18,8 +18,71 @@
   }
 
   .bp3-datepicker-caption{
-    // margin-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .DayPicker-Day.DayPicker-Day--selected{
+    background-color: $pt-intent-primary;
+    .bp3-dark &{
+      background-color: $pt-intent-primary;
+    }
   }
 }
 
+.bp3-datetimepicker{
+  padding: 0;
 
+  .bp3-datepicker{
+    padding: 0;
+  }
+
+  .bp3-timepicker{
+    margin: 3px;
+  }
+}
+
+.bp3-timepicker {
+  .bp3-timepicker-input-row{
+    height: $pt-input-height; // why not already?
+
+    padding: 0;
+
+    box-shadow: inset 0 -1px 0 0 $pt-text-color-muted;
+
+    .#{$ns}-dark & {
+      // @include pt-dark-input();
+      box-shadow: inset 0 -1px 0 0 $pt-dark-text-color-muted;
+    }
+  }
+
+  .bp3-timepicker-ampm-select{
+    margin-left: 1px;
+  }
+
+
+  .bp3-timepicker-input{
+    height: 100%;
+
+
+    &:hover:not(:focus){
+      box-shadow: inset 0 -1px 0 0 $pt-intent-primary;
+    }
+
+    &:focus {
+      box-shadow: inset 0 0 0 2px $pt-intent-primary;
+    }
+  }
+}
+
+.bp3-menu{
+  padding: $pt-grid-size/2 0;
+}
+
+.bp3-menu-divider{
+  margin-left:  0;
+  margin-right: 0;
+}
+
+.bp3-select-popover .bp3-popover-content{
+  padding: 0;
+}

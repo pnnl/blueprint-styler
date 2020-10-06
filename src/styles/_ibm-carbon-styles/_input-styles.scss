@@ -75,10 +75,20 @@ textarea.#{$ns}-input {
 }
 
 
-.bp3-control-group:not(.bp3-vertical) > :not(.bp3-divider) {
-  margin-right: 1px;
-  .bp3-dark &{
+.bp3-control-group{
+  &:not(.bp3-vertical) > :not(.bp3-divider) {
     margin-right: 1px;
+    .bp3-dark &{
+      margin-right: 1px;
+    }
+  }
+
+  &.bp3-vertical > :not(.bp3-divider){
+    // should be margin-bottom: 1px; but they're overlapping 1px for some reason
+    margin-bottom: 2px;
+    .bp3-dark &{
+      margin-bottom: 2px;
+    }
   }
 }
 
@@ -101,3 +111,7 @@ textarea.#{$ns}-input {
     background-color: $pt-dark-text-color;
   }
 }
+
+// .bp3-numeric-input{
+//   font-family: $pt-font-family-monospace; // nah
+// }

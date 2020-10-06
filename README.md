@@ -36,14 +36,13 @@ From the root of the repo:
 
 ### Styles
 - [IBM Carbon](https://www.carbondesignsystem.com/components/overview)
-  - editable text focus
-  - menu, popover, calendar - padding: 0?
-  - button
-    - outline fills in?
   - button and input large text revert
-  - input text bg darker?
-    - make everything else darker
-  - light theme
+  - dark/light theme
+  - bg-fg relationship
+    - input text bg lighter?
+      - make everything else darker
+    - button - outline fills in?
+      - active button lighter like input?
 - Flat
   - dark theme
   - button component divider
@@ -82,6 +81,12 @@ From the root of the repo:
     - unchecked outline
   - tabs
   - loading bar & spinner
+  - menu, popover, calendar - padding: 0?
+  - DateTime Picker
+  - time picker focus
+  - editable text focus
+  - control group vertical
+
 - [ant.design](https://ant.design/components/overview/)
   - inputs
   - select element

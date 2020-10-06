@@ -1,0 +1,48 @@
+.#{$ns}-editable-text {
+
+  &:hover::before {
+    box-shadow: inset 0 -1px 0 0 $pt-intent-primary;
+    background-color: rgba($input-background-color,0.2);
+  }
+
+  &.#{$ns}-editable-text-editing::before { // :focus
+    box-shadow: 0 0 0 2px $pt-intent-primary;
+  }
+
+  @each $intent, $color in $pt-intent-colors {
+    &.#{$ns}-intent-#{$intent} {
+
+      &:hover::before {
+        box-shadow: inset 0 -1px 0 0 $color;
+      }
+
+      &.#{$ns}-editable-text-editing::before {
+        box-shadow: 0 0 0 2px $color;
+      }
+    }
+  }
+
+  .#{$ns}-dark & {
+    &:hover::before {
+      box-shadow: inset 0 -1px 0 0 $pt-intent-primary;
+      background-color: rgba($dark-input-background-color,0.1);
+    }
+
+    &.#{$ns}-editable-text-editing::before { // :focus
+      box-shadow: 0 0 0 2px $pt-intent-primary;
+    }
+
+    @each $intent, $color in $pt-intent-colors {
+      &.#{$ns}-intent-#{$intent} {
+
+        &:hover::before {
+          box-shadow: inset 0 -1px 0 0 $color;
+        }
+
+        &.#{$ns}-editable-text-editing::before {
+          box-shadow: 0 0 0 2px $color;
+        }
+      }
+    }
+  }
+}
