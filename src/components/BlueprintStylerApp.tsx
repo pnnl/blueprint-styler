@@ -18,12 +18,12 @@ const THEME_LOCAL_STORAGE_KEY = "blueprint-docs-theme";
 
 /** Return the current theme className. */
 export function getTheme(): string {
-    return localStorage.getItem(THEME_LOCAL_STORAGE_KEY) || DARK_THEME;
+    return localStorage.getItem(THEME_LOCAL_STORAGE_KEY) || LIGHT_THEME;
 }
 
 /** Persist the current theme className in local storage. */
 export function setTheme(theme: string) {
-    localStorage.setItem(THEME_LOCAL_STORAGE_KEY, theme.toString());
+    localStorage.setItem(THEME_LOCAL_STORAGE_KEY, theme);
 }
 
 function handleThemeChange(themeState: string, setThemeState: React.Dispatch<React.SetStateAction<string>>) {
