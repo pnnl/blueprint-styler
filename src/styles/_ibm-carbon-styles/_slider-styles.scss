@@ -1,51 +1,36 @@
-
-$ibm-track-color: $gray1;
-$ibm-dark-track-color: $dark-gray1;
-
 .#{$ns}-slider-label{
   font-family: $pt-font-family-monospace;
 }
 
 .#{$ns}-slider-handle{
-  border-radius: 99px;
 
   &, &:hover{
     background-color: $pt-text-color-muted;
-    // box-shadow: 0 0 0 1px $ibm-track-color, 0 0 0 0 transparent ;
-
-    .bp3-dark &{
-      background-color: $pt-dark-text-color-muted;
-      // box-shadow: 0 0 0 1px $ibm-dark-track-color, 0 0 0 0 transparent ;
-    }
+    box-shadow: none;
   }
 
   &.#{$ns}-active{
     background-color: $pt-intent-primary;
+    box-shadow: none;
+  }
 
-    .bp3-dark & {
-      background-color: $pt-intent-primary;
+  .bp3-dark & {
+    &, &:hover{
+      background-color: $pt-dark-text-color-muted;
+      box-shadow: none;
     }
+
+    &.#{$ns}-active{
+      background-color: $pt-intent-primary;
+      box-shadow: none;
+    }
+
   }
 
 
-  // @include button-customizations();
-  // @include antd-button-active-effect();
-  // position: absolute;
+  // this should be abstracted to global/common
+  border-radius: 99px;
 
-  // transition: 200ms linear ;
-  // transition-property: background-color, color, opacity, box-shadow ;
-
-  // &:hover {
-  //   box-shadow: $antd-button-box-shadow-overlay-hover;
-  // }
-
-  // &.#{$ns}-active {
-    // transition-duration: 50ms;
-    // box-shadow: $button-box-shadow-overlay-active;
-  // }
-
-
-    // this should be abstracted
   &.#{$ns}-end.#{$ns}-end {
     border-radius: 99px;
     margin-left: 0;

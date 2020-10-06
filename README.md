@@ -36,7 +36,6 @@ From the root of the repo:
 
 ### Styles
 - [IBM Carbon](https://www.carbondesignsystem.com/components/overview)
-  - dark/light theme
   - bg-fg relationship
     - input text bg lighter?
       - make everything else darker
@@ -76,8 +75,7 @@ From the root of the repo:
   - switch
   - focus
   - slider handle round & not split
-  - checkbox & radio
-    - unchecked outline
+  - checkbox & radio - unchecked outline
   - tabs
   - loading bar & spinner
   - menu, popover, calendar - padding: 0?
@@ -86,6 +84,7 @@ From the root of the repo:
   - editable text focus
   - control group vertical
   - button and input large text revert
+  - dark/light theme
 
 - [ant.design](https://ant.design/components/overview/)
   - inputs
