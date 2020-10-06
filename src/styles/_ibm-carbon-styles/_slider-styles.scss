@@ -9,17 +9,13 @@ $ibm-dark-track-color: $dark-gray1;
 .#{$ns}-slider-handle{
   border-radius: 99px;
 
-
   &, &:hover{
-    // box-shadow: 0 0 0 1px ;
-    // box-shadow: 0 0 0 1px red, 0 0 0 1px red;
-
     background-color: $pt-text-color-muted;
-    box-shadow: 0 0 0 1px $ibm-track-color, 0 0 0 0 transparent ;
+    // box-shadow: 0 0 0 1px $ibm-track-color, 0 0 0 0 transparent ;
 
     .bp3-dark &{
       background-color: $pt-dark-text-color-muted;
-      box-shadow: 0 0 0 1px $ibm-dark-track-color, 0 0 0 0 transparent ;
+      // box-shadow: 0 0 0 1px $ibm-dark-track-color, 0 0 0 0 transparent ;
     }
   }
 

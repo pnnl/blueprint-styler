@@ -36,18 +36,13 @@ From the root of the repo:
 
 ### Styles
 - [IBM Carbon](https://www.carbondesignsystem.com/components/overview)
-  - inputs!!
-  - switch
-  - focus
   - tabs
-  - slider handle round & not split
-  - checkbox & radio
-    - dark fg
-    - unchecked outline
   - loading bar & spinner
+  - editable text focus
   - menu, popover, calendar - padding: 0?
   - button
     - outline fills in?
+  - button and input large text revert
 - Flat
   - dark theme
   - button component divider
@@ -76,7 +71,15 @@ From the root of the repo:
 
 ## DONE:
 - better js outputs - split colors and stuff
--  ant.design
+- [IBM Carbon](https://www.carbondesignsystem.com/components/overview)
+  - button
+  - inputs!!
+  - switch
+  - focus
+  - slider handle round & not split
+  - checkbox & radio
+    - unchecked outline
+- [ant.design](https://ant.design/components/overview/)
   - inputs
   - select element
   - checkbox and radio animations

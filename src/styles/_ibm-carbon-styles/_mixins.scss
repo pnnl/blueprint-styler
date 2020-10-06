@@ -19,10 +19,16 @@ $pt-dark-intent-text-colors: (
   "danger" : $red5,
 ) !default;
 
-@mixin base-typography() {
-  font-size: $pt-font-size;
-  font-weight: 400;
-  letter-spacing: .16;
-  line-height: $pt-line-height;
-  text-transform: none;
-}
+// @mixin base-typography() {
+//   font-size: $pt-font-size;
+//   font-weight: 400;
+//   letter-spacing: .16;
+//   line-height: $pt-line-height;
+//   text-transform: none;
+// }
+
+// @mixin focus-outline($offset: 1px) {
+//   outline: $pt-outline-color auto 2px;
+//   outline-offset: $offset;
+//   // -moz-outline-radius: 6px;
+// }

@@ -15,7 +15,8 @@
 
 // COMPONENT VARIABLES //
 @import "./button-common";
-@import "./slider-vars.scss";
+@import "./input-vars";
+@import "./slider-vars";
 
 
 // COMPONENTS BUILD //
@@ -23,7 +24,7 @@
 // CORE //
 @import "~@blueprintjs/core/src/reset";
 @import "~@blueprintjs/core/src/typography";
-@import "~@blueprintjs/core/src/accessibility/focus-states";
+// @import "~@blueprintjs/core/src/accessibility/focus-states";
 @import "~@blueprintjs/core/src/components/index";
 // EXTENSIONS //
 @import "~@blueprintjs/datetime/src/blueprint-datetime.scss";
@@ -35,6 +36,8 @@
 // COMPONENT CSS OVERRIDES //
 @import "./button-styles";
 @import './slider-styles';
+@import './input-styles';
+@import './focus-states';
 @import "../global/common-standard-search.scss";
 // @import "../global/common-borderless-button-group.scss";
 @import "./typography";
