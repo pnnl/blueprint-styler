@@ -36,7 +36,6 @@ From the root of the repo:
 
 ### Styles
 - [IBM Carbon](https://www.carbondesignsystem.com/components/overview)
-  - button and input large text revert
   - dark/light theme
   - bg-fg relationship
     - input text bg lighter?
@@ -86,6 +85,7 @@ From the root of the repo:
   - time picker focus
   - editable text focus
   - control group vertical
+  - button and input large text revert
 
 - [ant.design](https://ant.design/components/overview/)
   - inputs

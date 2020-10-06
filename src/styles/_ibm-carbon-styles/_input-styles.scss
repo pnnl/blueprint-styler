@@ -65,14 +65,14 @@
 }
 
 
-textarea.#{$ns}-input {
+// textarea.#{$ns}-input {
 
-  &.#{$ns}-small {
-  }
+//   &.#{$ns}-small {
+//   }
 
-  .#{$ns}-dark & {
-  }
-}
+//   .#{$ns}-dark & {
+//   }
+// }
 
 
 .bp3-control-group{
@@ -115,3 +115,15 @@ textarea.#{$ns}-input {
 // .bp3-numeric-input{
 //   font-family: $pt-font-family-monospace; // nah
 // }
+
+
+.bp3-input-group.bp3-large .bp3-input{
+  font-size: $pt-font-size;
+}
+.bp3-input.bp3-large{
+  font-size: $pt-font-size;
+}
+
+.bp3-control.bp3-large{
+  font-size: $pt-font-size;
+}

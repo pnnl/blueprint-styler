@@ -1,8 +1,6 @@
 // Copyright 2015 Palantir Technologies, Inc. All rights reserved.
 // Licensed under the Apache License, Version 2.0.
 
-
-
 // Namespace appended to the beginning of each CSS class: `.#{$ns}-button`.
 // Do not quote this value, for Less consumers.
 // $ns: bp3;
@@ -33,9 +31,9 @@ $pt-font-family-monospace:
   monospace;
 
 
-$pt-font-size: 14px;
-$pt-font-size-large: 14px;
-$pt-font-size-small: 12px;
+$pt-font-size-small: $pt-grid-size * 1.2;
+$pt-font-size: $pt-grid-size * 1.4;
+$pt-font-size-large: $pt-grid-size * 1.6;
 
 // a little bit extra to ensure the height comes out to just over 18px (and browser rounds to 18px)
 // $pt-line-height: ($pt-grid-size * 1.8) / $pt-font-size + 0.0001;
