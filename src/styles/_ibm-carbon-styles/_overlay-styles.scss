@@ -1,0 +1,25 @@
+
+.bp3-datepicker {
+  padding: 0;
+
+  .bp3-divider{
+    margin: 0;
+  }
+
+  .DayPicker-Month{
+    margin: 0;
+  }
+
+  .DayPicker:last-child{
+    border-left: 1px solid rgba(0,0,0,.3); // dark themes
+    .DayPicker-Month{
+      // margin-left: 8px;
+    }
+  }
+
+  .bp3-datepicker-caption{
+    // margin-bottom: 0;
+  }
+}
+
+

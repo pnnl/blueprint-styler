@@ -36,13 +36,14 @@ From the root of the repo:
 
 ### Styles
 - [IBM Carbon](https://www.carbondesignsystem.com/components/overview)
-  - tabs
-  - loading bar & spinner
   - editable text focus
   - menu, popover, calendar - padding: 0?
   - button
     - outline fills in?
   - button and input large text revert
+  - input text bg darker?
+    - make everything else darker
+  - light theme
 - Flat
   - dark theme
   - button component divider
@@ -79,6 +80,8 @@ From the root of the repo:
   - slider handle round & not split
   - checkbox & radio
     - unchecked outline
+  - tabs
+  - loading bar & spinner
 - [ant.design](https://ant.design/components/overview/)
   - inputs
   - select element

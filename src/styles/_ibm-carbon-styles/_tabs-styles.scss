@@ -1,0 +1,20 @@
+.bp3-dark .bp3-tab:not([aria-disabled=true]):hover,
+.bp3-dark .bp3-tab[aria-selected=true] {
+  color: $white;
+}
+.bp3-tab{
+  font-weight: 600;
+  color: $pt-text-color-muted;
+
+  .bp3-dark & {
+    color: $pt-dark-text-color-muted;
+  }
+}
+
+.bp3-tab-indicator{
+  // margin-bottom: -1px;
+  background-color: $pt-intent-primary;
+  .bp3-dark & {
+    background-color: $pt-intent-primary;
+  }
+}

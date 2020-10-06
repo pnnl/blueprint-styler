@@ -38,8 +38,8 @@ $dark-button-gradient: none; // linear-gradient(to bottom, rgba($white, 0.05), r
 
 // "intent": (default, hover, active colors)
 $button-intents: (
-  "primary": ($pt-intent-primary, $cobalt2,   $cobalt1),
-  "success": ($pt-intent-success, $green4,  $green2),
-  "warning": ($pt-intent-warning, $orange4, $orange2),
-  "danger":  ($pt-intent-danger,  $red4,    $red2)
+  "primary": ($cobalt3, $cobalt2, $cobalt1),
+  "success": ($green3,  $green2,  $green1),
+  "warning": ($orange3, $orange2, $orange1),
+  "danger":  ($red3,    $red2,    $red1)
 );
