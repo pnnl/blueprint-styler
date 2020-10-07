@@ -8,11 +8,7 @@
 
 
 // IBM Plex - https://github.com/IBM/plex
-
-$font-prefix: '~@ibm/plex';
-@import '~@ibm/plex/scss/mono/index';
-@import '~@ibm/plex/scss/sans/index';
-
+// this is imported at the app level, not in the css, to keep it lean.
 $pt-font-family:
   'IBM Plex Sans',
   'Helvetica Neue',
@@ -20,7 +16,6 @@ $pt-font-family:
   "Segoe UI",
   Arial,
   sans-serif;
-
 $pt-font-family-monospace:
   'IBM Plex Mono',
   Menlo,

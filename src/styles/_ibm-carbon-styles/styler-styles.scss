@@ -11,6 +11,8 @@
 // then our own styles
 @import "../global/styler";
 
+// IBM PLEX FONTS //
+@import './ipm-plex.scss';
 
 // custom presentation for the styler docs
 .#{$ns}-dark .docs-example-options {
