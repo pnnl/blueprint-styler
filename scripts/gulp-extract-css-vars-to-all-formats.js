@@ -54,9 +54,7 @@ module.exports = () => through2.obj(function (file, enc, next) {
         }
     }
 
-    // const base = file.path;
-    // const base = path.join(file.path, '..');
-    const base = path.dirname(file.path);
+    const base = path.basename(file.path).split('.')[0]; // return file name as base
 
     [
         [css, 'css'],
