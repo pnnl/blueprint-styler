@@ -31,13 +31,9 @@ const sassTask = function () {
     const varsOutput = scssOutput
         .pipe(rename(path => {
             path.dirname = '/' + path.basename
-            console.log(path)
         }))
         .pipe(extractCssVarsToAllFormats())
-        .pipe(rename(path => {
-            // path.dirname = '/' + path.basename
-            console.log(path)
-        }))
+        // .pipe(rename(path => { console.log(path) }))
         .pipe(gulp.dest('./lib')) // ???
 
     return mergeStream(cssOutput, varsOutput)
