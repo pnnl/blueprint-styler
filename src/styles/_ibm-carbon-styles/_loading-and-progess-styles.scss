@@ -4,11 +4,11 @@
   }
 }
 
-.bp3-progress-bar {
+.#{$ns}-progress-bar {
   border-radius: unset;
   height: 4px;
 
-  .bp3-progress-meter {
+  .#{$ns}-progress-meter {
     border-radius: unset;
     // background-size: 60px;
     background-image: linear-gradient(-90deg,

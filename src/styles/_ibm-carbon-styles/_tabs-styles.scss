@@ -1,24 +1,24 @@
-.bp3-tab:not([aria-disabled=true]):hover,
-.bp3-tab[aria-selected=true] {
+.#{$ns}-tab:not([aria-disabled=true]):hover,
+.#{$ns}-tab[aria-selected=true] {
   // color: $pt-text-color;
-  .bp3-dark & {
+  .#{$ns}-dark & {
     color: $pt-dark-text-color;
   }
 }
 
-.bp3-tab{
+.#{$ns}-tab{
   font-weight: 600;
 
   color: $pt-text-color-muted;
-  .bp3-dark & {
+  .#{$ns}-dark & {
     color: $pt-dark-text-color-muted;
   }
 }
 
-.bp3-tab-indicator{
+.#{$ns}-tab-indicator{
   // margin-bottom: -1px;
   background-color: $pt-intent-primary;
-  .bp3-dark & {
+  .#{$ns}-dark & {
     background-color: $pt-intent-primary;
   }
 }

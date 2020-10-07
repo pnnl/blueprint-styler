@@ -11,7 +11,7 @@
 // then our own styles
 @import "../global/styler";
 
-.bp3-dark .docs-example-options {
+.#{$ns}-dark .docs-example-options {
   background-color: $dark-gray3;
   border: unset
 }

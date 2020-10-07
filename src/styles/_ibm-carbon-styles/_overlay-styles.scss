@@ -1,8 +1,8 @@
 
-.bp3-datepicker {
+.#{$ns}-datepicker {
   padding: 0;
 
-  .bp3-divider{
+  .#{$ns}-divider{
     margin: 0;
   }
 
@@ -10,41 +10,41 @@
     margin: 0;
   }
 
-  &.bp3-daterangepicker .DayPicker:last-child{
+  &.#{$ns}-daterangepicker .DayPicker:last-child{
     border-left: 1px solid $pt-divider-black; // dark themes
   }
-  .bp3-dark &{
-    &.bp3-daterangepicker .DayPicker:last-child{
+  .#{$ns}-dark &{
+    &.#{$ns}-daterangepicker .DayPicker:last-child{
       border-left: 1px solid $pt-dark-divider-black; // dark themes
     }
   }
 
-  .bp3-datepicker-caption{
+  .#{$ns}-datepicker-caption{
     margin-bottom: 0;
   }
 
   .DayPicker-Day.DayPicker-Day--selected{
     background-color: $pt-intent-primary;
-    .bp3-dark &{
+    .#{$ns}-dark &{
       background-color: $pt-intent-primary;
     }
   }
 }
 
-.bp3-datetimepicker{
+.#{$ns}-datetimepicker{
   padding: 0;
 
-  .bp3-datepicker{
+  .#{$ns}-datepicker{
     padding: 0;
   }
 
-  .bp3-timepicker{
+  .#{$ns}-timepicker{
     margin: 3px;
   }
 }
 
-.bp3-timepicker {
-  .bp3-timepicker-input-row{
+.#{$ns}-timepicker {
+  .#{$ns}-timepicker-input-row{
     height: $pt-input-height; // why not already?
 
     padding: 0;
@@ -55,12 +55,12 @@
     }
   }
 
-  .bp3-timepicker-ampm-select{
+  .#{$ns}-timepicker-ampm-select{
     margin-left: 1px;
   }
 
 
-  .bp3-timepicker-input{
+  .#{$ns}-timepicker-input{
     height: 100%;
 
 
@@ -74,15 +74,15 @@
   }
 }
 
-.bp3-menu{
+.#{$ns}-menu{
   padding: $pt-grid-size/2 0;
 }
 
-.bp3-menu-divider{
+.#{$ns}-menu-divider{
   margin-left:  0;
   margin-right: 0;
 }
 
-.bp3-select-popover .bp3-popover-content{
+.#{$ns}-select-popover .#{$ns}-popover-content{
   padding: 0;
 }

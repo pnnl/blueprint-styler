@@ -57,7 +57,7 @@
   }
 }
 
-.bp3-editable-text-input{
+.#{$ns}-editable-text-input{
   &::placeholder {
     color: $pt-text-color-disabled;
   }

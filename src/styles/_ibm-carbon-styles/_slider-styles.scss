@@ -14,7 +14,7 @@
     box-shadow: none;
   }
 
-  .bp3-dark & {
+  .#{$ns}-dark & {
     &, &:hover{
       background-color: $light-gray2;
       box-shadow: none;
