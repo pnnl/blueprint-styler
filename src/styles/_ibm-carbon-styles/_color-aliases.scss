@@ -1,4 +1,4 @@
-// custom colors
+// CUSTOM COLORS with grayscale with transparency
 
 $white-trans-dark-gray1:   rgba($white, lightness( $dark-gray1  )/100);
 $white-trans-dark-gray2:   rgba($white, lightness( $dark-gray2  )/100);
@@ -33,7 +33,8 @@ $black-trans-light-gray4:  rgba($black, 1 - lightness( $light-gray4 )/100);
 $black-trans-light-gray5:  rgba($black, 1 - lightness( $light-gray5 )/100);
 
 
-// colors
+// BP COLORS
+
 $pt-intent-primary:   $cobalt3;
 $pt-intent-success:   $green3;
 $pt-intent-warning:   $orange3;

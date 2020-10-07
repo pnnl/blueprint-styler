@@ -49,16 +49,6 @@
   }
 }
 
-
-// textarea.#{$ns}-input {
-
-//   &.#{$ns}-small {
-//   }
-
-//   .#{$ns}-dark & {
-//   }
-// }
-
 .#{$ns}-button-group:not(.#{$ns}-minimal) > .#{$ns}-button:not(:last-child),
 .#{$ns}-button-group:not(.#{$ns}-minimal) > .#{$ns}-popover-wrapper:not(:last-child) .#{$ns}-button{
   margin-right: 1px;

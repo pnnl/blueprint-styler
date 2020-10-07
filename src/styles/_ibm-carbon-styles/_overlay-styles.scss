@@ -1,4 +1,19 @@
+// MENU //
+.#{$ns}-menu{
+  padding: $pt-grid-size/2 0;
+}
 
+.#{$ns}-menu-divider{
+  margin-left:  0;
+  margin-right: 0;
+}
+
+// POPOVER //
+.#{$ns}-select-popover .#{$ns}-popover-content{
+  padding: 0;
+}
+
+// DATE PICKER //
 .#{$ns}-datepicker {
   padding: 0;
 
@@ -31,6 +46,7 @@
   }
 }
 
+// DATE TIME PICKER //
 .#{$ns}-datetimepicker{
   padding: 0;
 
@@ -43,6 +59,7 @@
   }
 }
 
+// TIME PICKER //
 .#{$ns}-timepicker {
   .#{$ns}-timepicker-input-row{
     height: $pt-input-height; // why not already?
@@ -74,15 +91,3 @@
   }
 }
 
-.#{$ns}-menu{
-  padding: $pt-grid-size/2 0;
-}
-
-.#{$ns}-menu-divider{
-  margin-left:  0;
-  margin-right: 0;
-}
-
-.#{$ns}-select-popover .#{$ns}-popover-content{
-  padding: 0;
-}

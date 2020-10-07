@@ -1,3 +1,5 @@
+@import '../global/common-slider-handles';
+
 .#{$ns}-slider-label{
   font-family: $pt-font-family-monospace;
 }
@@ -27,33 +29,6 @@
 
   }
 
-
-  // this should be abstracted to global/common
-  border-radius: 99px;
-
-  &.#{$ns}-end.#{$ns}-end {
-    border-radius: 99px;
-    margin-left: 0;
-  }
-  &.#{$ns}-start.#{$ns}-start {
-    border-radius: 99px;
-    margin-left: 0;
-  }
-  &.#{$ns}-end, &.#{$ns}-start {
-    width: null;
-  }
-
-  .#{$ns}-slider.#{$ns}-vertical &{
-    &.#{$ns}-end.#{$ns}-end {
-      border-radius: 99px;
-    }
-    &.#{$ns}-start.#{$ns}-start {
-      border-radius: 99px;
-    }
-    &.#{$ns}-end,
-    &.#{$ns}-start {
-      height: null;
-    }
-  }
+  @include slider-handles(99px);
 
 }

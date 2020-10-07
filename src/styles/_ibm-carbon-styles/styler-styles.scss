@@ -11,6 +11,8 @@
 // then our own styles
 @import "../global/styler";
 
+
+// custom presentation for the styler docs
 .#{$ns}-dark .docs-example-options {
   background-color: $dark-gray3;
   border: unset

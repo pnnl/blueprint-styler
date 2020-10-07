@@ -23,7 +23,7 @@
 // CORE //
 @import "~@blueprintjs/core/src/reset";
 @import "~@blueprintjs/core/src/typography";
-// @import "~@blueprintjs/core/src/accessibility/focus-states";
+// @import "~@blueprintjs/core/src/accessibility/focus-states"; // custom below
 @import "~@blueprintjs/core/src/components/index";
 // EXTENSIONS //
 @import "~@blueprintjs/datetime/src/blueprint-datetime.scss";
@@ -38,7 +38,7 @@
 @import './input-styles';
 @import './editable-text-styles';
 @import './tabs-styles';
-@import './loading-and-progess-styles';
+@import './loading-and-progress-styles';
 @import './overlay-styles';
 @import './focus-states';
 @import "../global/common-standard-search.scss";
