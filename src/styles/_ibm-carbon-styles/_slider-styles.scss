@@ -5,7 +5,7 @@
 .#{$ns}-slider-handle{
 
   &, &:hover{
-    background-color: $pt-text-color-muted;
+    background-color: $dark-gray5;
     box-shadow: none;
   }
 
@@ -16,7 +16,7 @@
 
   .bp3-dark & {
     &, &:hover{
-      background-color: $pt-dark-text-color-muted;
+      background-color: $light-gray2;
       box-shadow: none;
     }
 

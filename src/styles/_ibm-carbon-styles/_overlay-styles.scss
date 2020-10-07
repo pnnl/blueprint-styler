@@ -11,7 +11,12 @@
   }
 
   &.bp3-daterangepicker .DayPicker:last-child{
-    border-left: 1px solid rgba(0,0,0,.3); // dark themes
+    border-left: 1px solid $pt-divider-black; // dark themes
+  }
+  .bp3-dark &{
+    &.bp3-daterangepicker .DayPicker:last-child{
+      border-left: 1px solid $pt-dark-divider-black; // dark themes
+    }
   }
 
   .bp3-datepicker-caption{
@@ -44,9 +49,9 @@
 
     padding: 0;
 
-    box-shadow: inset 0 -1px 0 0 $pt-text-color-muted;
+    box-shadow: inset 0 -1px 0 0 $ibm-input-border;
     .#{$ns}-dark & {
-      box-shadow: inset 0 -1px 0 0 $pt-dark-text-color-muted;
+      box-shadow: inset 0 -1px 0 0 $ibm-dark-input-border;
     }
   }
 

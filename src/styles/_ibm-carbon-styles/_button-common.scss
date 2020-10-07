@@ -50,3 +50,31 @@ $button-intents: (
   "warning": ($orange3, $orange2, $orange1),
   "danger":  ($red3,    $red2,    $red1)
 );
+
+$button-color-disabled: $pt-text-color-disabled;
+$button-intent-color-disabled: $button-color-disabled;
+$button-background-color: $black-trans-light-gray4;
+$button-background-color-hover: $black-trans-light-gray3;
+$button-background-color-active: $black-trans-light-gray2;
+$button-background-color-disabled: $black-trans-light-gray4;
+$button-background-color-active-disabled: $black-trans-light-gray3;
+
+$dark-button-color-disabled: $pt-dark-text-color-disabled;
+$dark-button-intent-color-disabled: $dark-button-color-disabled;
+$dark-button-background-color: $white-trans-dark-gray2;
+$dark-button-background-color-hover: $white-trans-dark-gray3;
+$dark-button-background-color-active: $white-trans-dark-gray4;
+$dark-button-background-color-disabled: $white-trans-dark-gray1;
+$dark-button-background-color-active-disabled: $white-trans-dark-gray3;
+
+$minimal-button-divider-width: 1px;
+$minimal-button-background-color: none;
+$minimal-button-background-color-hover: $black-trans-light-gray5;
+$minimal-button-background-color-active: $black-trans-light-gray4;
+$dark-minimal-button-background-color: none;
+$dark-minimal-button-background-color-hover: $white-trans-dark-gray1;
+$dark-minimal-button-background-color-active: $white-trans-dark-gray2;
+
+$button-outlined-width: 1px;
+$button-outlined-border-intent-opacity: 0.3;
+$button-outlined-border-disabled-intent-opacity: 0.2;

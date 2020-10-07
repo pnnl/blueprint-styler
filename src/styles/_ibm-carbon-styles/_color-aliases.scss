@@ -1,7 +1,39 @@
-// Copyright 2015 Palantir Technologies, Inc. All rights reserved.
-// Licensed under the Apache License, Version 2.0.
+// custom colors
+
+$white-trans-dark-gray1:   rgba($white, lightness( $dark-gray1  )/100);
+$white-trans-dark-gray2:   rgba($white, lightness( $dark-gray2  )/100);
+$white-trans-dark-gray3:   rgba($white, lightness( $dark-gray3  )/100);
+$white-trans-dark-gray4:   rgba($white, lightness( $dark-gray4  )/100);
+$white-trans-dark-gray5:   rgba($white, lightness( $dark-gray5  )/100);
+$white-trans-gray1:        rgba($white, lightness( $gray1       )/100);
+$white-trans-gray2:        rgba($white, lightness( $gray2       )/100);
+$white-trans-gray3:        rgba($white, lightness( $gray3       )/100);
+$white-trans-gray4:        rgba($white, lightness( $gray4       )/100);
+$white-trans-gray5:        rgba($white, lightness( $gray5       )/100);
+$white-trans-light-gray1:  rgba($white, lightness( $light-gray1 )/100);
+$white-trans-light-gray2:  rgba($white, lightness( $light-gray2 )/100);
+$white-trans-light-gray3:  rgba($white, lightness( $light-gray3 )/100);
+$white-trans-light-gray4:  rgba($white, lightness( $light-gray4 )/100);
+$white-trans-light-gray5:  rgba($white, lightness( $light-gray5 )/100);
+
+$black-trans-dark-gray1:   rgba($black, 1 - lightness( $dark-gray1  )/100);
+$black-trans-dark-gray2:   rgba($black, 1 - lightness( $dark-gray2  )/100);
+$black-trans-dark-gray3:   rgba($black, 1 - lightness( $dark-gray3  )/100);
+$black-trans-dark-gray4:   rgba($black, 1 - lightness( $dark-gray4  )/100);
+$black-trans-dark-gray5:   rgba($black, 1 - lightness( $dark-gray5  )/100);
+$black-trans-gray1:        rgba($black, 1 - lightness( $gray1       )/100);
+$black-trans-gray2:        rgba($black, 1 - lightness( $gray2       )/100);
+$black-trans-gray3:        rgba($black, 1 - lightness( $gray3       )/100);
+$black-trans-gray4:        rgba($black, 1 - lightness( $gray4       )/100);
+$black-trans-gray5:        rgba($black, 1 - lightness( $gray5       )/100);
+$black-trans-light-gray1:  rgba($black, 1 - lightness( $light-gray1 )/100);
+$black-trans-light-gray2:  rgba($black, 1 - lightness( $light-gray2 )/100);
+$black-trans-light-gray3:  rgba($black, 1 - lightness( $light-gray3 )/100);
+$black-trans-light-gray4:  rgba($black, 1 - lightness( $light-gray4 )/100);
+$black-trans-light-gray5:  rgba($black, 1 - lightness( $light-gray5 )/100);
 
 
+// colors
 $pt-intent-primary:   $cobalt3;
 $pt-intent-success:   $green3;
 $pt-intent-warning:   $orange3;
@@ -12,15 +44,16 @@ $pt-dark-app-background-color: $dark-gray2;
 
 $pt-outline-color: $pt-intent-primary;
 
-$pt-text-color:               $dark-gray1;
-$pt-text-color-muted:         $gray1;
-$pt-text-color-disabled:      rgba($pt-text-color-muted, 0.6);
-$pt-heading-color:            $pt-text-color;
+$pt-heading-color:            $black-trans-dark-gray2;
+$pt-text-color:               $black-trans-dark-gray4;
+$pt-text-color-muted:         $black-trans-gray1;
+$pt-text-color-disabled:      $black-trans-gray4;
 $pt-link-color:               $cobalt3;
-$pt-dark-text-color:          $light-gray5;
-$pt-dark-text-color-muted:    $gray4;
-$pt-dark-text-color-disabled: rgba($pt-dark-text-color-muted, 0.6);
-$pt-dark-heading-color:       $pt-dark-text-color;
+
+$pt-dark-heading-color:       $white;
+$pt-dark-text-color:          $white-trans-light-gray5;
+$pt-dark-text-color-muted:    $white-trans-gray4;
+$pt-dark-text-color-disabled: $white-trans-dark-gray5;
 $pt-dark-link-color:          $cobalt4;
 
 // Default text selection color using #7dbcff
@@ -30,18 +63,21 @@ $pt-icon-color:               $pt-text-color;
 $pt-icon-color-hover:         $pt-text-color;
 $pt-icon-color-disabled:      $pt-text-color-disabled;
 $pt-icon-color-selected:      $pt-intent-primary;
+
 $pt-dark-icon-color:          $pt-dark-text-color;
 $pt-dark-icon-color-hover:    $pt-dark-text-color;
 $pt-dark-icon-color-disabled: $pt-dark-text-color-disabled;
 $pt-dark-icon-color-selected: $pt-intent-primary;
 
-$pt-divider-black:      rgba($black, 0.15);
-$pt-dark-divider-black: rgba($black, 0.4);
-$pt-dark-divider-white: rgba($white, 0.15);
+$pt-divider-black:      $black-trans-light-gray3;
+$pt-dark-divider-black: $black-trans-gray4;
+$pt-dark-divider-white: $white-trans-dark-gray2;
 
 $pt-code-text-color:            $pt-text-color-muted;
 $pt-dark-code-text-color:       $pt-dark-text-color-muted;
-$pt-code-background-color:      rgba($white, 0.7);
-$pt-dark-code-background-color: rgba($black, 0.3);
+$pt-code-background-color:      $white-trans-light-gray2;
+$pt-dark-code-background-color: $black-trans-light-gray1;
 
+$ibm-input-border:      $black-trans-gray5;
+$ibm-dark-input-border: $white-trans-gray1;
 

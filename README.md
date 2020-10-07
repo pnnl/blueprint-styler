@@ -36,11 +36,6 @@ From the root of the repo:
 
 ### Styles
 - [IBM Carbon](https://www.carbondesignsystem.com/components/overview)
-  - bg-fg relationship
-    - input text bg lighter?
-      - make everything else darker
-    - button - outline fills in?
-      - active button lighter like input?
 - Flat
   - dark theme
   - button component divider
@@ -85,6 +80,16 @@ From the root of the repo:
   - control group vertical
   - button and input large text revert
   - dark/light theme
+  - bg-fg relationship
+    - input text bg lighter?
+      - make everything else darker
+    - button - outline fills in?
+      - active button lighter like input?
+  - bugs
+    - editable text color dark theme
+    - light theme
+      - disabled hover input
+      - 1px spacing: control group, button group, numeric input buttons
 
 - [ant.design](https://ant.design/components/overview/)
   - inputs

@@ -6,15 +6,15 @@
 // $input-color: $pt-text-color;
 // $input-color-disabled: $button-color-disabled;
 // $input-placeholder-color: $pt-text-color-disabled;
-$input-background-color: rgba($black, 0.06);
+$input-background-color: $black-trans-light-gray5;
 $input-background-color-disabled: rgba($black, 0.03);
 // $input-shadow-color-focus: $pt-intent-primary;
 
 // $dark-input-color: $pt-dark-text-color;
 // $dark-input-color-disabled: $dark-button-color-disabled;
 // $dark-input-placeholder-color: $pt-dark-text-color-disabled;
-$dark-input-background-color: rgba($white, 0.1); // ?
-$dark-input-background-color-disabled: rgba($white, 0.05);
+$dark-input-background-color: $white-trans-dark-gray1; // ?
+$dark-input-background-color-disabled: $white-trans-dark-gray1;
 // $dark-input-shadow-color-focus: $pt-intent-primary;
 
 // $control-indicator-size: $pt-icon-size-standard;

@@ -5,12 +5,14 @@
 
   &:hover::before {
     box-shadow: inset 0 -1px 0 0 $pt-intent-primary;
-    background-color: rgba($input-background-color,0.2);
+    background-color: $input-background-color;
   }
 
   &.#{$ns}-editable-text-editing::before { // :focus
     box-shadow: 0 0 0 2px $pt-intent-primary;
   }
+
+
 
   @each $intent, $color in $pt-intent-colors {
     &.#{$ns}-intent-#{$intent} {
@@ -31,12 +33,14 @@
   .#{$ns}-dark & {
     &:hover::before {
       box-shadow: inset 0 -1px 0 0 $pt-intent-primary;
-      background-color: rgba($dark-input-background-color,0.1);
+      background-color: $dark-input-background-color;
     }
 
     &.#{$ns}-editable-text-editing::before { // :focus
       box-shadow: 0 0 0 2px $pt-intent-primary;
     }
+
+
 
     @each $intent, $color in $pt-intent-colors {
       &.#{$ns}-intent-#{$intent} {
@@ -49,6 +53,17 @@
           box-shadow: 0 0 0 2px $color;
         }
       }
+    }
+  }
+}
+
+.bp3-editable-text-input{
+  &::placeholder {
+    color: $pt-text-color-disabled;
+  }
+  .#{$ns}-dark & {
+    &::placeholder {
+      color: $pt-dark-text-color-disabled;
     }
   }
 }
