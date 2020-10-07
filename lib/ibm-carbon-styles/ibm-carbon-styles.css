@@ -11,8 +11,8 @@ body {
     font-weight: 400;
     line-height: 1.28581;
     text-transform: none;
-    color: rgba(0,0,0,.74);
     font-family: IBM Plex Sans,Helvetica Neue,-apple-system,Segoe UI,Arial,sans-serif;
+    color: rgba(0,0,0,.74);
     letter-spacing: .035em
 }
 
@@ -183,6 +183,10 @@ strong {
 
 ::selection {
     background: rgba(125,188,255,.6)
+}
+
+.bp3-dark body,body.bp3-dark {
+    color: hsla(0,0%,100%,.96)
 }
 
 .bp3-heading {

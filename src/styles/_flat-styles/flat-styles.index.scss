@@ -20,6 +20,7 @@
 // build components based on customized scss vars
 // CORE //
 @import "~@blueprintjs/core/src/reset";
+@import '../global/common-reset';
 @import "~@blueprintjs/core/src/typography";
 @import "~@blueprintjs/core/src/accessibility/focus-states";
 @import "~@blueprintjs/core/src/components/index";
