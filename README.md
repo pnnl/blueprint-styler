@@ -36,6 +36,10 @@ From the root of the repo:
 
 ### Styles
 - [IBM Carbon](https://www.carbondesignsystem.com/components/overview)
+  - file input - focus, hover
+  - dark theme button in ControlGroup input
+  - card bg color needs to be darker
+  - light theme text color needs softening
 - Flat
   - dark theme
   - button component divider
