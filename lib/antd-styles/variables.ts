@@ -1,5 +1,6 @@
 
 export const Colors = {
+  BLACK: "#000000",
   DARK_GRAY1: "#141414",
   DARK_GRAY2: "#1f1f1f",
   DARK_GRAY3: "#262626",
@@ -89,6 +90,7 @@ export const Colors = {
 };
 
 export const ColorAliases = {
+  PT_INTENT_PRIMARY: "#1890ff",
   PT_INTENT_SUCCESS: "#52c41a",
   PT_INTENT_WARNING: "#fa8c16",
   PT_INTENT_DANGER: "#f5222d",
@@ -124,6 +126,7 @@ export const ColorAliases = {
 };
 
 export const Variables = {
+  NS: "bp3",
   PT_GRID_SIZE: "10px",
   PT_FONT_FAMILY: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji",
   PT_FONT_FAMILY_MONOSPACE: "sfmono-regular, Consolas, liberation mono, Menlo, Courier, monospace",

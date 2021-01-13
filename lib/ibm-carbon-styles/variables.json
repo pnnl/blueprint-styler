@@ -1,5 +1,6 @@
 {
   "Colors": {
+    "BLACK": "black",
     "DARK_GRAY1": "#0f0f0f",
     "DARK_GRAY2": "#212121",
     "DARK_GRAY3": "#333333",
@@ -88,6 +89,7 @@
     "SEPIA5": "#d3ab82"
   },
   "ColorAliases": {
+    "PT_INTENT_PRIMARY": "#0f62fe",
     "PT_INTENT_SUCCESS": "#198038",
     "PT_INTENT_WARNING": "#f86700",
     "PT_INTENT_DANGER": "#da1e28",
@@ -122,6 +124,7 @@
     "PT_DARK_CODE_BACKGROUND_COLOR": "rgba(0, 0, 0, 0.27)"
   },
   "Variables": {
+    "NS": "bp3",
     "PT_GRID_SIZE": "10px",
     "PT_FONT_FAMILY": "IBM Plex Sans, Helvetica Neue, -apple-system, Segoe UI, Arial, sans-serif",
     "PT_FONT_FAMILY_MONOSPACE": "IBM Plex Mono, Menlo, Consolas, monospace",

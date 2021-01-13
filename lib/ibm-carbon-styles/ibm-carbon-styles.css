@@ -38,7 +38,6 @@ pre {
 
 a {
     background-color: transparent;
-    color: #0f62fe;
     text-decoration: none
 }
 
@@ -360,8 +359,11 @@ strong {
     font-size: 12px
 }
 
+a,a:hover {
+    color: #0f62fe
+}
+
 a:hover {
-    color: #0f62fe;
     cursor: pointer;
     text-decoration: underline
 }
@@ -2187,16 +2189,6 @@ a.bp3-button.bp3-disabled {
     position: fixed
 }
 
-.bp3-divider {
-    border-bottom: 1px solid rgba(0,0,0,.15);
-    border-right: 1px solid rgba(0,0,0,.15);
-    margin: 5px
-}
-
-.bp3-dark .bp3-divider {
-    border-color: rgba(0,0,0,.4)
-}
-
 .bp3-dialog-container {
     opacity: 1;
     transform: scale(1);
@@ -2808,6 +2800,16 @@ a.bp3-button.bp3-disabled {
     word-wrap: break-word
 }
 
+.bp3-divider {
+    border-bottom: 1px solid rgba(0,0,0,.15);
+    border-right: 1px solid rgba(0,0,0,.15);
+    margin: 5px
+}
+
+.bp3-dark .bp3-divider {
+    border-color: rgba(0,0,0,.4)
+}
+
 .bp3-control-group {
     transform: translateZ(0);
     display: flex;
@@ -2822,8 +2824,7 @@ a.bp3-button.bp3-disabled {
 
 .bp3-control-group>.bp3-fill {
     flex-grow: 1;
-    flex-shrink: 1;
-    flex: 1 1 auto
+    flex-shrink: 1
 }
 
 .bp3-control-group .bp3-button,.bp3-control-group .bp3-html-select,.bp3-control-group .bp3-input,.bp3-control-group .bp3-select {
@@ -2961,7 +2962,7 @@ a.bp3-button.bp3-disabled {
     width: 100%
 }
 
-.bp3-control-group.bp3-fill>:not(.bp3-fixed) {
+.bp3-control-group.bp3-fill>:not(.bp3-fixed),.bp3-control-group>.bp3-fill {
     flex: 1 1 auto
 }
 
@@ -3112,12 +3113,13 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-control input:focus~.bp3-control-indicator {
+    -moz-outline-radius: 6px;
     outline: 2px solid #0f62fe;
     outline-offset: 2px
 }
 
 .bp3-control.bp3-large {
-    font-size: 14px
+    font-size: 16px
 }
 
 .bp3-control.bp3-large:not(.bp3-align-right) {
@@ -3278,13 +3280,14 @@ a.bp3-button.bp3-disabled {
 .bp3-control.bp3-switch .bp3-control-indicator:before {
     background: #fff;
     border-radius: 50%;
-    box-shadow: 0 0 0 1px rgba(0,0,0,.2),0 1px 1px rgba(0,0,0,.2);
     height: calc(1em - 4px);
     left: 0;
     margin: 2px;
     position: absolute;
     transition: left .1s cubic-bezier(.4,1,.75,.9);
-    width: calc(1em - 4px)
+    width: calc(1em - 4px);
+    background-color: #fff;
+    box-shadow: none
 }
 
 .bp3-control.bp3-switch input:checked~.bp3-control-indicator:before {
@@ -3349,7 +3352,8 @@ a.bp3-button.bp3-disabled {
 
 .bp3-dark .bp3-control.bp3-switch .bp3-control-indicator:before {
     background: #545454;
-    box-shadow: none
+    box-shadow: none;
+    background-color: hsla(0,0%,100%,.96)
 }
 
 .bp3-dark .bp3-control.bp3-switch input:checked~.bp3-control-indicator:before {
@@ -3887,9 +3891,9 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-input-group.bp3-large .bp3-input {
+    font-size: 16px;
     height: 40px;
-    line-height: 40px;
-    font-size: 14px
+    line-height: 40px
 }
 
 .bp3-input-group.bp3-large .bp3-input.bp3-round,.bp3-input-group.bp3-large .bp3-input[type=search] {
@@ -4104,9 +4108,9 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-input.bp3-large {
+    font-size: 16px;
     height: 40px;
-    line-height: 40px;
-    font-size: 14px
+    line-height: 40px
 }
 
 .bp3-input.bp3-large.bp3-round,.bp3-input.bp3-large[type=search] {
@@ -7114,7 +7118,9 @@ span.bp3-icon:empty:before {
 .bp3-menu-divider {
     border-top: 1px solid rgba(0,0,0,.15);
     display: block;
-    margin: 5px 0
+    margin: 5px;
+    margin-left: 0;
+    margin-right: 0
 }
 
 .bp3-dark .bp3-menu-divider {
@@ -7163,8 +7169,8 @@ span.bp3-icon:empty:before {
 }
 
 .bp3-menu-item.bp3-disabled {
+    color: rgba(0,0,0,.4);
     background-color: inherit!important;
-    color: rgba(0,0,0,.4)!important;
     cursor: not-allowed!important;
     outline: none!important
 }
@@ -7180,7 +7186,7 @@ span.bp3-icon:empty:before {
 
 .bp3-dark .bp3-menu-item.bp3-disabled {
     background-color: inherit;
-    color: hsla(0,0%,100%,.33)!important
+    color: hsla(0,0%,100%,.33)
 }
 
 .bp3-menu-item.bp3-intent-primary {
@@ -7303,7 +7309,7 @@ span.bp3-icon:empty:before {
     background-color: rgba(0,0,0,.09)
 }
 
-.bp3-menu-item.bp3-disabled .bp3-menu-item-label,.bp3-menu-item.bp3-disabled:before,.bp3-menu-item.bp3-disabled>.bp3-icon {
+.bp3-menu-item.bp3-disabled,.bp3-menu-item.bp3-disabled .bp3-menu-item-label,.bp3-menu-item.bp3-disabled:before,.bp3-menu-item.bp3-disabled>.bp3-icon {
     color: rgba(0,0,0,.4)!important
 }
 
@@ -7362,10 +7368,6 @@ button.bp3-menu-item {
     line-height: 17px;
     margin: 0;
     padding: 10px 8px 0 1px
-}
-
-.bp3-dark .bp3-menu-header>h6 {
-    color: #fff
 }
 
 .bp3-menu-header:first-of-type>h6 {
@@ -7495,12 +7497,16 @@ button.bp3-menu-item {
     background-color: hsla(0,0%,100%,.13)
 }
 
-.bp3-dark .bp3-menu-item.bp3-disabled .bp3-menu-item-label,.bp3-dark .bp3-menu-item.bp3-disabled:before,.bp3-dark .bp3-menu-item.bp3-disabled>.bp3-icon {
+.bp3-dark .bp3-menu-item.bp3-disabled,.bp3-dark .bp3-menu-item.bp3-disabled .bp3-menu-item-label,.bp3-dark .bp3-menu-item.bp3-disabled:before,.bp3-dark .bp3-menu-item.bp3-disabled>.bp3-icon {
     color: hsla(0,0%,100%,.33)!important
 }
 
 .bp3-dark .bp3-menu-divider,.bp3-dark .bp3-menu-header {
     border-color: hsla(0,0%,100%,.13)
+}
+
+.bp3-dark .bp3-menu-header>h6 {
+    color: #fff
 }
 
 .bp3-label .bp3-menu {
@@ -8274,7 +8280,6 @@ span.bp3-popover-target {
 }
 
 .bp3-slider:active {
-    cursor: -webkit-grabbing;
     cursor: grabbing
 }
 
@@ -8328,6 +8333,7 @@ span.bp3-popover-target {
     background-color: rgba(0,0,0,.09);
     background-image: none;
     color: rgba(0,0,0,.74);
+    box-shadow: 0 0 0 1px rgba(0,0,0,.2),0 1px 1px rgba(0,0,0,.2);
     cursor: pointer;
     height: 12px;
     left: 0;
@@ -8335,18 +8341,6 @@ span.bp3-popover-target {
     top: 0;
     width: 12px;
     border-radius: 99px
-}
-
-.bp3-slider-handle,.bp3-slider-handle:hover {
-    box-shadow: 0 0 0 1px rgba(0,0,0,.2),0 1px 1px rgba(0,0,0,.2)
-}
-
-.bp3-slider-handle:hover {
-    background-clip: padding-box;
-    background-color: rgba(0,0,0,.15);
-    cursor: -webkit-grab;
-    cursor: grab;
-    z-index: 2
 }
 
 .bp3-slider-handle.bp3-active,.bp3-slider-handle:active {
@@ -8372,9 +8366,16 @@ span.bp3-popover-target {
     z-index: 1
 }
 
+.bp3-slider-handle:hover {
+    background-clip: padding-box;
+    background-color: rgba(0,0,0,.15);
+    box-shadow: 0 0 0 1px rgba(0,0,0,.2),0 1px 1px rgba(0,0,0,.2);
+    cursor: grab;
+    z-index: 2
+}
+
 .bp3-slider-handle.bp3-active {
     background-image: none;
-    cursor: -webkit-grabbing;
     cursor: grabbing;
     background-color: #0f62fe;
     box-shadow: none
@@ -8458,6 +8459,10 @@ span.bp3-popover-target {
     box-shadow: none
 }
 
+.bp3-slider-handle.bp3-end,.bp3-slider-handle.bp3-start {
+    width: 6px
+}
+
 .bp3-slider-handle.bp3-start {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0
@@ -8516,6 +8521,7 @@ span.bp3-popover-target {
 }
 
 .bp3-slider.bp3-vertical .bp3-slider-handle.bp3-end,.bp3-slider.bp3-vertical .bp3-slider-handle.bp3-start {
+    height: 6px;
     margin-left: 0;
     width: 12px
 }
@@ -8766,7 +8772,7 @@ span.bp3-popover-target {
 }
 
 .bp3-dark .bp3-tab-indicator {
-    background-color: #0f62fe
+    background-color: #4589ff
 }
 
 .bp3-flex-expander {
@@ -8822,8 +8828,9 @@ span.bp3-popover-target {
 }
 
 .bp3-tag:focus {
-    outline: 2px solid #0f62fe;
-    outline-offset: 1px
+    outline: 2px auto rgba(0,114,195,.6);
+    outline-offset: 0;
+    -moz-outline-radius: 6px
 }
 
 .bp3-tag.bp3-round {
@@ -9180,7 +9187,7 @@ span.bp3-popover-target {
 
 .bp3-large .bp3-tag-remove {
     margin-right: -10px!important;
-    padding: 5px 5px 5px 0
+    padding: 0 5px 0 0
 }
 
 .bp3-large .bp3-tag-remove:empty:before {
@@ -9259,8 +9266,9 @@ span.bp3-popover-target {
 }
 
 .bp3-tag-input .bp3-tag.bp3-active {
-    outline: 2px solid #0f62fe;
-    outline-offset: 1px
+    outline: 2px auto rgba(0,114,195,.6);
+    outline-offset: 0;
+    -moz-outline-radius: 6px
 }
 
 .bp3-tag-input .bp3-input-ghost {
@@ -9317,11 +9325,12 @@ span.bp3-popover-target {
 }
 
 .bp3-tag-input.bp3-active {
-    background-color: rgba(0,0,0,.04)
+    background-color: rgba(0,0,0,.04);
+    box-shadow: 0 0 0 1px #0f62fe,0 0 0 3px rgba(15,98,254,.3),inset 0 1px 1px rgba(0,0,0,.2)
 }
 
-.bp3-tag-input.bp3-active,.bp3-tag-input.bp3-active.bp3-intent-primary {
-    box-shadow: inset 0 0 0 2px #0f62fe
+.bp3-tag-input.bp3-active.bp3-intent-primary {
+    box-shadow: 0 0 0 1px #0043ce,0 0 0 3px rgba(0,67,206,.3),inset 0 1px 1px rgba(0,0,0,.2)
 }
 
 .bp3-tag-input.bp3-active.bp3-intent-success {
@@ -10054,12 +10063,12 @@ span.bp3-popover-target {
     background: #fff;
     border-radius: 0;
     display: flex;
+    padding: 5px;
     position: relative;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;
-    padding: 0
+    user-select: none
 }
 
 .bp3-datepicker .DayPicker {
@@ -10082,11 +10091,11 @@ span.bp3-popover-target {
     border-collapse: collapse;
     border-spacing: 0;
     display: inline-table;
+    margin: 0 5px 5px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;
-    margin: 0
+    user-select: none
 }
 
 .bp3-datepicker .DayPicker-Month+.bp3-datepicker .DayPicker-Month {
@@ -10165,9 +10174,9 @@ span.bp3-popover-target {
 }
 
 .bp3-datepicker .DayPicker-Day.DayPicker-Day--selected {
+    background-color: #0072c3;
     border-radius: 0;
-    color: #fff;
-    background-color: #0f62fe
+    color: #fff
 }
 
 .bp3-datepicker .DayPicker-Day.DayPicker-Day--selected:hover {
@@ -10270,7 +10279,7 @@ span.bp3-popover-target {
 }
 
 .bp3-dark .bp3-datepicker .DayPicker-Day.DayPicker-Day--selected {
-    background-color: #0f62fe
+    background-color: #0072c3
 }
 
 .bp3-dark .bp3-datepicker .DayPicker-Day.DayPicker-Day--selected:hover {
@@ -10604,8 +10613,8 @@ span.bp3-popover-target {
 .bp3-datetimepicker {
     background-color: #fff;
     border-radius: 0;
-    text-align: center;
-    padding: 0
+    padding: 10px;
+    text-align: center
 }
 
 .bp3-dark .bp3-datetimepicker {
@@ -10618,10 +10627,11 @@ span.bp3-popover-target {
 
 .bp3-datetimepicker .bp3-datepicker {
     border-bottom: 1px solid rgba(0,0,0,.15);
-    padding: 0
+    padding: 0 0 10px
 }
 
 .bp3-datetimepicker .bp3-timepicker {
+    margin-top: 10px;
     margin: 3px
 }
 
@@ -10699,8 +10709,18 @@ span.bp3-popover-target {
     background-color: rgba(0,0,0,.2)
 }
 
+.bp3-multi-select {
+    min-width: 150px
+}
+
+.bp3-multi-select-popover .bp3-menu {
+    max-height: 300px;
+    max-width: 400px;
+    overflow: auto
+}
+
 .bp3-select-popover .bp3-popover-content {
-    padding: 0
+    padding: 5px
 }
 
 .bp3-select-popover .bp3-input-group {
@@ -10716,16 +10736,6 @@ span.bp3-popover-target {
 
 .bp3-select-popover .bp3-menu:not(:first-child) {
     padding-top: 5px
-}
-
-.bp3-multi-select {
-    min-width: 150px
-}
-
-.bp3-multi-select-popover .bp3-menu {
-    max-height: 300px;
-    max-width: 400px;
-    overflow: auto
 }
 
 @-webkit-keyframes skeleton-fade-in {
@@ -10922,7 +10932,6 @@ span.bp3-popover-target {
 
 .bp3-table-container {
     box-shadow: 0 0 0 1px rgba(0,0,0,.15);
-    transform: translateZ(0);
     background-color: #f5f5f5;
     display: flex;
     flex-direction: column;
@@ -10930,7 +10939,8 @@ span.bp3-popover-target {
     max-height: 100%;
     max-width: 100%;
     min-height: 60px;
-    overflow: hidden
+    overflow: hidden;
+    will-change: transform
 }
 
 .bp3-table-menu {
@@ -11122,6 +11132,16 @@ span.bp3-popover-target {
 
 .bp3-dark .bp3-table-quadrant-top .bp3-table-cell.bp3-table-last-in-column {
     box-shadow: inset 0 -3px 0 rgba(0,0,0,.4),inset -1px 0 0 rgba(0,0,0,.4)
+}
+
+@keyframes skeleton-fade-in {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
 }
 
 .bp3-table-header:before {
@@ -11435,22 +11455,18 @@ span.bp3-popover-target {
 }
 
 .bp3-table-selection-enabled.bp3-table-column-headers .bp3-table-header.bp3-table-header-reorderable {
-    cursor: -webkit-grab;
     cursor: grab
 }
 
 .bp3-table-selection-enabled.bp3-table-column-headers .bp3-table-header.bp3-table-header-reorderable:active {
-    cursor: -webkit-grabbing;
     cursor: grabbing
 }
 
 .bp3-table-selection-enabled.bp3-table-column-headers .bp3-table-header.bp3-table-header-reorderable .bp3-table-interaction-bar {
-    cursor: -webkit-grab;
     cursor: grab
 }
 
 .bp3-table-selection-enabled.bp3-table-column-headers .bp3-table-header.bp3-table-header-reorderable .bp3-table-interaction-bar:active {
-    cursor: -webkit-grabbing;
     cursor: grabbing
 }
 
@@ -11459,22 +11475,18 @@ span.bp3-popover-target {
 }
 
 .bp3-table-selection-enabled.bp3-table-row-headers .bp3-table-header.bp3-table-header-reorderable {
-    cursor: -webkit-grab;
     cursor: grab
 }
 
 .bp3-table-selection-enabled.bp3-table-row-headers .bp3-table-header.bp3-table-header-reorderable:active {
-    cursor: -webkit-grabbing;
     cursor: grabbing
 }
 
 .bp3-table-selection-enabled.bp3-table-row-headers .bp3-table-header.bp3-table-header-reorderable .bp3-table-interaction-bar {
-    cursor: -webkit-grab;
     cursor: grab
 }
 
 .bp3-table-selection-enabled.bp3-table-row-headers .bp3-table-header.bp3-table-header-reorderable .bp3-table-interaction-bar:active {
-    cursor: -webkit-grabbing;
     cursor: grabbing
 }
 
@@ -11495,7 +11507,6 @@ span.bp3-popover-target {
 }
 
 .bp3-table-reorder-handle-target {
-    cursor: -webkit-grab;
     cursor: grab;
     align-items: center;
     bottom: 0;
@@ -11509,7 +11520,6 @@ span.bp3-popover-target {
 }
 
 .bp3-table-reorder-handle-target:active {
-    cursor: -webkit-grabbing;
     cursor: grabbing;
     color: #0f62fe
 }
@@ -11660,7 +11670,6 @@ span.bp3-popover-target {
 }
 
 .bp3-table-reordering-cursor-overlay {
-    cursor: -webkit-grabbing;
     cursor: grabbing
 }
 
@@ -11687,7 +11696,6 @@ span.bp3-popover-target {
 }
 
 .bp3-table-quadrant-scroll-container {
-    transform: translateZ(0);
     bottom: 0;
     left: 0;
     overflow: auto;
@@ -11697,7 +11705,8 @@ span.bp3-popover-target {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none
+    user-select: none;
+    will-change: transform
 }
 
 .bp3-table-no-vertical-scroll .bp3-table-quadrant-scroll-container {
@@ -11896,8 +11905,7 @@ span.bp3-popover-target {
 }
 
 .bp3-input:focus {
-    box-shadow: inset 0 0 0 2px #0f62fe;
-    outline: none!important
+    box-shadow: inset 0 0 0 2px #0f62fe
 }
 
 .bp3-tag-input.bp3-intent-primary:not(.bp3-active):hover {
@@ -11916,6 +11924,10 @@ span.bp3-popover-target {
     box-shadow: inset 0 -1px 0 0 #da1e28
 }
 
+.bp3-tag-input.bp3-active,.bp3-tag-input.bp3-active.bp3-intent-primary {
+    box-shadow: inset 0 0 0 2px #0f62fe
+}
+
 .bp3-control-group:not(.bp3-vertical)>:not(.bp3-divider),.bp3-dark .bp3-control-group:not(.bp3-vertical)>:not(.bp3-divider) {
     margin-right: 1px
 }
@@ -11924,17 +11936,16 @@ span.bp3-popover-target {
     margin-bottom: 2px
 }
 
-.bp3-control .bp3-control-indicator:hover,.bp3-dark .bp3-control .bp3-control-indicator:hover {
+.bp3-control .bp3-control-indicator:hover {
     box-shadow: inset 0 0 0 1px #0f62fe
 }
 
-.bp3-control.bp3-switch .bp3-control-indicator:before {
-    background-color: #fff;
-    box-shadow: none
+.bp3-dark .bp3-control .bp3-control-indicator:hover {
+    box-shadow: inset 0 0 0 1px #0f62fe
 }
 
-.bp3-dark .bp3-control.bp3-switch .bp3-control-indicator:before {
-    background-color: hsla(0,0%,100%,.96)
+.bp3-control.bp3-large,.bp3-input-group.bp3-large .bp3-input,.bp3-input.bp3-large {
+    font-size: 14px
 }
 
 .bp3-dark .bp3-editable-text-input::-moz-placeholder {
@@ -11949,11 +11960,15 @@ span.bp3-popover-target {
     color: hsla(0,0%,100%,.33)
 }
 
-.bp3-tab-indicator {
+.bp3-dark .bp3-tab-indicator,.bp3-tab-indicator {
     background-color: #0f62fe
 }
 
-.bp3-datepicker .bp3-divider {
+.bp3-datepicker,.bp3-select-popover .bp3-popover-content {
+    padding: 0
+}
+
+.bp3-datepicker .bp3-divider,.bp3-datepicker .DayPicker-Month {
     margin: 0
 }
 
@@ -11969,6 +11984,14 @@ span.bp3-popover-target {
     margin-bottom: 0
 }
 
+.bp3-dark .bp3-datepicker .DayPicker-Day.DayPicker-Day--selected,.bp3-datepicker .DayPicker-Day.DayPicker-Day--selected {
+    background-color: #0f62fe
+}
+
+.bp3-datetimepicker,.bp3-datetimepicker .bp3-datepicker {
+    padding: 0
+}
+
 .bp3-timepicker .bp3-timepicker-input:hover:not(:focus) {
     box-shadow: inset 0 -1px 0 0 #0f62fe
 }
@@ -11978,8 +12001,13 @@ span.bp3-popover-target {
     outline-offset: 1px
 }
 
-.bp3-focus-disabled :focus,.bp3-focus-disabled :focus~.bp3-control-indicator {
+.bp3-focus-disabled :focus,.bp3-focus-disabled :focus~.bp3-control-indicator,.bp3-input:focus {
     outline: none!important
+}
+
+.bp3-tag-input .bp3-tag.bp3-active,.bp3-tag:focus {
+    outline: 2px solid #0f62fe;
+    outline-offset: 1px
 }
 
 .bp3-input.bp3-input[type=search] {
@@ -11990,6 +12018,15 @@ span.bp3-popover-target {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale
+}
+
+.bp3-control-group .bp3-input.bp3-active,.bp3-control-group .bp3-input:focus {
+    border-radius: 0;
+    z-index: 14
+}
+
+.bp3-control-group .bp3-tag-input .bp3-button {
+    border-radius: 0
 }
 
 .bpx-vars {
