@@ -27,10 +27,10 @@ module.exports = () => through2.obj(function (file, enc, next) {
     jsKeyValMatches.forEach(match => {
         if (match[4] != null) {
             currentCategory = match[4]
-            return
-        } else if (jsObj[currentCategory] == null) {
-            jsObj[currentCategory] = {}
         } else {
+            if (jsObj[currentCategory] == null) {
+                jsObj[currentCategory] = {}
+            }
             let name = match[2];
             const value = match[3]
                 .replace(/[\n\t\r]+/g, '') // replace all newlines, tabs, and line feeds

@@ -35,7 +35,6 @@ From the root of the repo:
 - switch icon libraries
 
 ### Styles
-- **PT_INTENT_PRIMARY** is missing from export, first item of each section is being cut actually
 - [IBM Carbon](https://www.carbondesignsystem.com/components/overview)
   - file input - focus, hover
   - dark theme button in ControlGroup input
@@ -44,7 +43,6 @@ From the root of the repo:
 - Flat
   - dark theme
   - button component divider
-  - **TagInput focus state**
 - Flat Mono - emphasis color is greyscale?
 - Gradient buttons?
 - [ant.design](https://ant.design/components/overview/)
@@ -70,6 +68,8 @@ From the root of the repo:
 
 ## DONE:
 - better js outputs - split colors and stuff
+  - fix-bug: first var from each category is missing from lib js, ts, and json.
+
 - [IBM Carbon](https://www.carbondesignsystem.com/components/overview)
   - button
   - inputs!!
