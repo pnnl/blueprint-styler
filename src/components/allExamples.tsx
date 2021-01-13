@@ -1,4 +1,5 @@
 import * as CoreExamples from '../examples/core-examples';
+import { CustomWorkingExample } from '../examples/custom-examples/customWorkingExample';
 import * as DateTimeExamples from '../examples/datetime-examples';
 import * as SelectExamples from '../examples/select-examples';
 import * as TableExamples from '../examples/table-examples';
@@ -9,6 +10,9 @@ type ComponentSet = [string, React.ComponentClass[]]
 type NestedComponentSets = [string, ComponentSet[]][];
 
 export const allExamples: NestedComponentSets = [
+    // ['Working Example', [ // for working on specific use cases
+    //     ['Custom Working Example', [CustomWorkingExample,]],
+    // ]],
     ['Components', [
         ['Breadcrumbs', [CoreExamples.BreadcrumbsExample,]],
         ['Button', [
