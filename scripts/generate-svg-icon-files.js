@@ -38,5 +38,6 @@ function generateAndSaveSvgIcons(iconSvgPaths, iconSize) {
 
 }
 
+// The only icons we need are: @16px chevron-right, more, small-minus, small-tick
 generateAndSaveSvgIcons(blueprintjsIcons.IconSvgPaths16, 16)
 generateAndSaveSvgIcons(blueprintjsIcons.IconSvgPaths20, 20)
