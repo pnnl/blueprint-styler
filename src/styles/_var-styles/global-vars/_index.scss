@@ -1,0 +1,9 @@
+@import './mixins.scss';
+@import './colors-identity.scss';
+@import './color-aliases-identity.scss';
+@import './variables-identity.scss';
+
+// --vars: defined; in :root{}
+@import './colors.scss';
+@import './color-aliases.scss';
+@import './variables.scss';

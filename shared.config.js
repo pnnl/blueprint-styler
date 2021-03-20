@@ -14,7 +14,11 @@ exports.postCssConfig = {
         }),
         require('postcss-remove-null'),
         require("autoprefixer"),
-        require("cssnano")({ preset: "default" }),
+        require("cssnano")({
+            preset: "default",
+            // colormin: false, // prevent color transformations
+            // calc: false // prevent precalcs
+        }),
     ],
     // NOTE:
     // `removeDuplicatedProperties: true` followed by postcss-remove-null will allow the targeted removal of properties

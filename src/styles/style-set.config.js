@@ -1,6 +1,10 @@
 exports.styleSetConfig = [
     // add new styles here...
     {
+        slug: 'var-styles',
+        name: '--vars'
+    },
+    {
         slug: 'flat-styles',
         name: 'Flat'
     },
