@@ -17,7 +17,7 @@ exports.postCssConfig = {
         require("cssnano")({
             preset: "default",
             // colormin: false, // prevent color transformations
-            // calc: false // prevent precalcs
+            // calc: false // prevent pre-calc
         }),
     ],
     // NOTE:

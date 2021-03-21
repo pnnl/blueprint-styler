@@ -1,6 +1,10 @@
-// Copyright 2015 Palantir Technologies, Inc. All rights reserved.
-// Licensed under the Apache License, Version 2.0.
+// CUSTOM
 
+@mixin emit-identity-hsl($colorName) {
+  --#{$colorName}: hsl(var(--#{$colorName}-hsl));
+}
+
+// FROM BLUEPRINT //
 /*
 $pt-intent-colors: (
   "primary": $pt-intent-primary,
@@ -77,8 +81,8 @@ $pt-dark-intent-text-colors: (
 
 */
 
-@function border-shadow($alpha, $color: black, $size: 1px) {
-  @return 0 0 0 $size rgba($color, $alpha);
+@function border-shadow($alpha: 0, $color-hsl: var(--black-hsl), $size: 1px) {
+  @return 0 0 0 $size hsla($color-hsl, $alpha);
 }
 
 /*
