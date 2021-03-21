@@ -38,3 +38,42 @@ $pt-code-text-color: var(--pt-code-text-color);
 $pt-dark-code-text-color: var(--pt-dark-code-text-color);
 $pt-code-background-color: var(--pt-code-background-color);
 $pt-dark-code-background-color: var(--pt-dark-code-background-color);
+
+// were in mixins.scss
+$pt-intent-colors: (
+  "primary": $pt-intent-primary,
+  "success": $pt-intent-success,
+  "warning": $pt-intent-warning,
+  "danger" : $pt-intent-danger,
+);
+$pt-intent-text-colors: (
+  "primary": $blue2,
+  "success": $green2,
+  "warning": $orange2,
+  "danger" : $red2,
+);
+$pt-dark-intent-text-colors: (
+  "primary": $blue5,
+  "success": $green5,
+  "warning": $orange5,
+  "danger" : $red5,
+);
+// hsl versions
+$pt-intent-colors-hsl: (
+  "primary": var(--blue3-hsl),
+  "success": var(--green3-hsl),
+  "warning": var(--orange3-hsl),
+  "danger" : var(--red3-hsl),
+);
+$pt-intent-text-colors-hsl: (
+  "primary": var(--blue2-hsl),
+  "success": var(--green2-hsl),
+  "warning": var(--orange2-hsl),
+  "danger" : var(--red2-hsl),
+);
+$pt-dark-intent-text-colors-hsl: (
+  "primary": var(--blue5-hsl),
+  "success": var(--green5-hsl),
+  "warning": var(--orange5-hsl),
+  "danger" : var(--red5-hsl),
+);

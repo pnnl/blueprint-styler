@@ -21,6 +21,7 @@ From the root of the repo:
 - var() theme
   - search for !default color $vars, map to --custom-props
   - search for scss color transforms: rgba(), mix(), more... override them
+  - override mixins with rgba() ? duplicate mixins? and find where they apply and re-apply
   - replace all the math by wrapping in calc functions???
 - add a readme to each project - default styles is project explainer
 - title navigation links
