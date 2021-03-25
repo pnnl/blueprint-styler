@@ -9,9 +9,8 @@ This project is meant to help create custom global styles for [Blueprint js Comp
 From the root of the repo:
 
 1. Run `npm i`
-2. Run `npm run postinstall` (if it doesn't run automatically)
-3. Run `npm start`
-4. Open your browser to http://localhost:9000/
+2. Run `npm start`
+3. Open your browser to http://localhost:9000/
 
 *Note: if you want to run the development server on a different port, set the `PORT` environment variable.*
 

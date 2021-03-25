@@ -14,7 +14,7 @@
  */
 
 // tslint:disable-next-line:no-submodule-imports
-import "@blueprintjs/test-commons/polyfill";
+// import "@blueprintjs/test-commons/polyfill";
 import "dom4";
 
 import * as React from "react";
