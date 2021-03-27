@@ -1,8 +1,0 @@
-.#{$ns}-dark {
-  .#{$ns}-breadcrumbs-collapsed {
-    background: hslax(var(--black-hsl), 0.4);
-    &:hover {
-      background: hslax(var(--black-hsl), 0.6);
-    }
-  }
-}
