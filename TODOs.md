@@ -1,6 +1,11 @@
 ## TODOS:
 
 ### General
+- var() theme
+  - search for !default color $vars, map to --custom-props
+  - search for scss color transforms: rgba(), mix(), more... override them
+  - override mixins with rgba() ? duplicate mixins? and find where they apply and re-apply
+  - replace all the math by wrapping in calc functions???
 - add a readme to each project - default styles is project explainer
 - title navigation links
 - add colors section
@@ -16,6 +21,22 @@
   - update versioning
 - directions for development
 - switch icon libraries
+
+These 4 selectors are broken:
+```css
+.bp3-popover-wrapper:first-child .bp3-button-group:not(.bp3-vertical) .bp3-button[class*=bp3-intent-],>.bp3-button-group:not(.bp3-vertical) .bp3-button[class*=bp3-intent-]:first-child {
+    border-left: 0
+}
+.bp3-popover-wrapper:last-child .bp3-button-group:not(.bp3-vertical) .bp3-button[class*=bp3-intent-],>.bp3-button-group:not(.bp3-vertical) .bp3-button[class*=bp3-intent-]:last-child {
+    border-right: 0
+}
+.bp3-popover-wrapper:first-child .bp3-button-group.bp3-vertical .bp3-button[class*=bp3-intent-],>.bp3-button-group.bp3-vertical .bp3-button[class*=bp3-intent-]:first-child {
+    border-top: 0
+}
+.bp3-popover-wrapper:last-child .bp3-button-group.bp3-vertical .bp3-button[class*=bp3-intent-],>.bp3-button-group.bp3-vertical .bp3-button[class*=bp3-intent-]:last-child {
+    border-bottom: 0
+}
+```
 
 ### Styles
 - [IBM Carbon](https://www.carbondesignsystem.com/components/overview)
