@@ -19,7 +19,8 @@
     "lint-fix": "es-lint --fix",
     "test": "exit 0",
     "verify": "run-p dist lint",
-    "generate-svg-icon-files": "node ./scripts/generate-svg-icon-files.js"
+    "generate-svg-icon-files": "node ./scripts/generate-svg-icon-files.js",
+    "copy:scss": "copyfiles --all --verbose --up 1 -e './**/lib/**/*' -e './**/icons/**/*' -e './**/docs-theme/**/*' ./node_modules/@blueprintjs/**/*.scss ./src/styles/_var-styles"
   },
   "dependencies": {
     "@blueprintjs/core": "^3.41.0",
@@ -49,6 +50,7 @@
     "circle-github-bot": "^2.1.0",
     "classnames": "^2.2.6",
     "copy-webpack-plugin": "^6.4.1",
+    "copyfiles": "^2.4.1",
     "cross-env": "^7.0.3",
     "dom4": "^2.1.6",
     "downloadjs": "^1.4.7",
