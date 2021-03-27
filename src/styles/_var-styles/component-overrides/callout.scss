@@ -1,0 +1,17 @@
+.#{$ns}-callout {
+  background-color: hslax(var(--gray3-hsl), 0.15);
+
+  .#{$ns}-dark & {
+    background-color: hslax(var(--gray3-hsl), 0.2);
+  }
+
+  @each $intent, $color in $pt-intent-colors-hsl {
+    &.#{$ns}-intent-#{$intent} {
+      background-color: hslax($color, 0.15);
+      .#{$ns}-dark & {
+        background-color: hslax($color, 0.25);
+      }
+    }
+  }
+
+}
