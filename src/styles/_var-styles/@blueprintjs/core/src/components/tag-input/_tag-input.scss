@@ -112,11 +112,14 @@ $tag-input-icon-padding-large: ($pt-input-height-large - $pt-icon-size-large) / 
 
   &.#{$ns}-active {
     background-color: $input-background-color;
-    box-shadow: input-transition-shadow($input-shadow-color-focus, true), $input-box-shadow-focus;
+    box-shadow: input-transition-shadow($input-shadow-color-focus-hsl, true), $input-box-shadow-focus;
 
     @each $intent, $color in $pt-intent-text-colors {
+
+      $color-hsl: nth(map-get($button-intents, $intent), 4);
+
       &.#{$ns}-intent-#{$intent} {
-        box-shadow: input-transition-shadow($color, true), $input-box-shadow-focus;
+        box-shadow: input-transition-shadow($color-hsl, true), $input-box-shadow-focus;
       }
     }
   }
@@ -135,12 +138,15 @@ $tag-input-icon-padding-large: ($pt-input-height-large - $pt-icon-size-large) / 
 
     &.#{$ns}-active {
       background-color: $dark-input-background-color;
-      box-shadow: dark-input-transition-shadow($dark-input-shadow-color-focus, true),
+      box-shadow: dark-input-transition-shadow($dark-input-shadow-color-focus-hsl, true),
                   $pt-dark-input-box-shadow;
 
       @each $intent, $color in $pt-intent-text-colors {
+
+      $color-hsl: nth(map-get($button-intents, $intent), 4);
+
         &.#{$ns}-intent-#{$intent} {
-          box-shadow: input-transition-shadow($color, true), $pt-dark-input-box-shadow;
+          box-shadow: input-transition-shadow($color-hsl, true), $pt-dark-input-box-shadow;
         }
       }
     }

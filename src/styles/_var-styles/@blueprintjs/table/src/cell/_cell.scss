@@ -38,7 +38,7 @@
   }
 
   .#{$ns}-table-cell-ledger-odd {
-    background-color: mix($table-background-color, $cell-background-color, 50%);
+    background-color: $table-background-color // mix($table-background-color, $cell-background-color, 50%);
   }
 
   .#{$ns}-dark & {
@@ -47,7 +47,7 @@
     }
 
     .#{$ns}-table-cell-ledger-odd {
-      background-color: mix($dark-table-background-color, $dark-cell-background-color, 50%);
+      background-color: $dark-table-background-color; // mix($dark-table-background-color, $dark-cell-background-color, 50%);
     }
   }
 }

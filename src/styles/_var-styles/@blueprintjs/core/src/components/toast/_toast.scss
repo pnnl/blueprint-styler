@@ -89,7 +89,7 @@ $toast-margin: $pt-grid-size * 2 !default;
 
   &[class*="#{$ns}-intent-"] {
     a {
-      color: rgba($white, 0.7);
+      color: hslax(var(--white-hsl), 0.7);
 
       &:hover {
         color: $white;
@@ -108,26 +108,26 @@ $toast-margin: $pt-grid-size * 2 !default;
     &::before,
     .#{$ns}-icon,
     &:active {
-      color: rgba($white, 0.7) !important;
+      color: hslax(var(--white-hsl), 0.7) !important;
     }
 
     &:focus {
       // blue outline color shows poorly on colored bg
-      outline-color: rgba($white, 0.5);
+      outline-color: hslax(var(--white-hsl), 0.5);
     }
 
     &:hover {
-      background-color: rgba($white, 0.15) !important;
+      background-color: hslax(var(--white-hsl), 0.15) !important;
       color: $white !important;
     }
 
     &:active {
-      background-color: rgba($white, 0.3) !important;
+      background-color: hslax(var(--white-hsl), 0.3) !important;
       color: $white !important;
     }
 
     &::after {
-      background: rgba($white, 0.3) !important;
+      background: hslax(var(--white-hsl), 0.3) !important;
     }
   }
   /* stylelint-enable declaration-no-important */

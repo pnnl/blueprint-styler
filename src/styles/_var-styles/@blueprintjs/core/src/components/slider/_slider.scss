@@ -49,10 +49,10 @@ $track-height: $track-size !default;
 }
 
 .#{$ns}-slider-progress {
-  background: rgba($gray1, 0.2);
+  background: hslax(var(--gray1-hsl), 0.2);
 
   .#{$ns}-dark & {
-    background: rgba($black, 0.5);
+    background: hslax(var(--black-hsl), 0.5);
   }
 
   @each $intent, $color in $pt-intent-colors {

@@ -230,9 +230,12 @@ $input-button-height-small: $pt-button-height-smaller !default;
   }
 
   @each $intent, $color in $pt-intent-colors {
+
+    $color-hsl: nth(map-get($button-intents, $intent), 4);
+
     &.#{$ns}-intent-#{$intent} {
       .#{$ns}-input {
-        @include pt-input-intent($color);
+        @include pt-input-intent($color, $color-hsl);
       }
 
       > .#{$ns}-icon {

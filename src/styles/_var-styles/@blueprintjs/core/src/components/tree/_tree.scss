@@ -90,7 +90,7 @@ $tree-icon-spacing: ($tree-row-height - $pt-icon-size-standard) / 2 !default;
   width: 100%;
 
   &:hover {
-    background-color: rgba($gray5, 0.4);
+    background-color: hslax(var(--gray5-hsl), 0.4);
   }
 }
 
@@ -168,7 +168,7 @@ $tree-icon-spacing: ($tree-row-height - $pt-icon-size-standard) / 2 !default;
 
   .#{$ns}-tree-node-caret {
     &::before {
-      color: rgba($white, 0.7);
+      color: hslax(var(--white-hsl), 0.7);
     }
 
     &:hover::before {
@@ -179,7 +179,7 @@ $tree-icon-spacing: ($tree-row-height - $pt-icon-size-standard) / 2 !default;
 
 .#{$ns}-dark {
   .#{$ns}-tree-node-content:hover {
-    background-color: rgba($gray1, 0.3);
+    background-color: hslax(var(--gray1-hsl), 0.3);
   }
 
   .#{$ns}-tree {

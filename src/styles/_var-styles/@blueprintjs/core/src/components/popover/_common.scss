@@ -143,7 +143,7 @@ $dark-popover-background-color: $dark-gray4 !default;
   }
 
   .#{$ns}-popover-arrow::before {
-    box-shadow: 1px 1px 6px rgba($black, $arrow-drop-shadow-opacity);
+    box-shadow: 1px 1px 6px hslax(var(--black-hsl), $arrow-drop-shadow-opacity);
   }
 
   .#{$ns}-popover-arrow-border {

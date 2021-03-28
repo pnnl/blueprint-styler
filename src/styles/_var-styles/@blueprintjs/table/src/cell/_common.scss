@@ -35,14 +35,14 @@ $cell-transition-duration: $pt-transition-duration * 3;
     }
   }
 
-  @each $intent, $color in $pt-intent-colors {
+  @each $intent, $color-hsl in $pt-intent-colors-hsl {
     &.#{$ns}-intent-#{$intent} {
-      background-color: rgba($color, $cell-background-color-opacity);
+      background-color: hslax($color-hsl, $cell-background-color-opacity);
       color: map-get($pt-intent-text-colors, $intent);
     }
 
     .#{$ns}-dark &.#{$ns}-intent-#{$intent} {
-      background: rgba($color, $cell-background-color-opacity);
+      background: hslax($color-hsl, $cell-background-color-opacity);
       color: map-get($pt-dark-intent-text-colors, $intent);
     }
   }

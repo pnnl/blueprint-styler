@@ -20,7 +20,7 @@ $tag-icon-spacing-large: ($tag-height-large - $pt-icon-size-standard) / 2 !defau
 $tag-round-adjustment: 2px !default;
 
 @mixin pt-tag() {
-  @include pt-tag-interactive($tag-default-color, 1);
+  @include pt-tag-interactive($tag-default-color-hsl, 1);
   @include pt-flex-container(row, $tag-icon-spacing, inline);
   align-items: center;
   background-color: $tag-default-color;
@@ -49,7 +49,7 @@ $tag-round-adjustment: 2px !default;
   }
 
   .#{$ns}-dark & {
-    @include pt-tag-interactive($dark-tag-default-color, 1);
+    @include pt-tag-interactive($dark-tag-default-color-hsl, 1);
 
     background-color: $dark-tag-default-color;
     color: $pt-text-color;
@@ -79,10 +79,10 @@ $tag-round-adjustment: 2px !default;
   }
 }
 
-@mixin pt-tag-intent($background-color, $text-color: $white) {
-  @include pt-tag-interactive($background-color, 1);
+@mixin pt-tag-intent($background-color-hsl, $text-color: $white) {
+  @include pt-tag-interactive($background-color-hsl, 1);
 
-  background: $background-color;
+  background: hslax($background-color-hsl, 1);
   color: $text-color;
 }
 
@@ -92,13 +92,13 @@ $tag-round-adjustment: 2px !default;
   }
 
   &:not([class*="#{$ns}-intent-"]) {
-    @include pt-tag-minimal-interactive($tag-default-color, 0.2);
+    @include pt-tag-minimal-interactive($tag-default-color-hsl, 0.2);
 
-    background-color: rgba($gray3, 0.2);
+    background-color: hslax(var(--gray3-hsl), 0.2);
     color: $pt-text-color;
 
     .#{$ns}-dark & {
-      @include pt-tag-minimal-interactive($dark-tag-default-color, 0.2);
+      @include pt-tag-minimal-interactive($dark-tag-default-color-hsl, 0.2);
 
       color: $pt-dark-text-color;
 
@@ -109,50 +109,50 @@ $tag-round-adjustment: 2px !default;
   }
 }
 
-@mixin pt-tag-minimal-intent($background-color, $text-color, $dark-text-color) {
-  @include pt-tag-minimal-interactive($background-color, 0.15);
+@mixin pt-tag-minimal-intent($background-color-hsl, $text-color, $dark-text-color) {
+  @include pt-tag-minimal-interactive($background-color-hsl, 0.15);
 
-  background-color: rgba($background-color, 0.15);
+  background-color: hslax($background-color-hsl, 0.15);
   color: $text-color;
 
   > #{$icon-classes} {
-    fill: $background-color;
+    fill: hslax($background-color-hsl,1);
   }
 
   .#{$ns}-dark & {
-    @include pt-tag-minimal-interactive($background-color, 0.25);
+    @include pt-tag-minimal-interactive($background-color-hsl, 0.25);
 
-    background-color: rgba($background-color, 0.25);
+    background-color: hslax($background-color-hsl, 0.25);
     color: $dark-text-color;
   }
 }
 
-@mixin pt-tag-interactive($background-color, $opacity) {
+@mixin pt-tag-interactive($background-color-hsl, $opacity) {
   &.#{$ns}-interactive {
     cursor: pointer;
 
     &:hover {
-      background-color: rgba($background-color, $opacity - 0.15);
+      background-color: hslax($background-color-hsl, $opacity - 0.15);
     }
 
     &.#{$ns}-active,
     &:active {
-      background-color: rgba($background-color, $opacity - 0.3);
+      background-color: hslax($background-color-hsl, $opacity - 0.3);
     }
   }
 }
 
-@mixin pt-tag-minimal-interactive($background-color, $opacity) {
+@mixin pt-tag-minimal-interactive($background-color-hsl, $opacity) {
   &.#{$ns}-interactive {
     cursor: pointer;
 
     &:hover {
-      background-color: rgba($background-color, $opacity + 0.1);
+      background-color: hslax($background-color-hsl, $opacity + 0.1);
     }
 
     &.#{$ns}-active,
     &:active {
-      background-color: rgba($background-color, $opacity + 0.2);
+      background-color: hslax($background-color-hsl, $opacity + 0.2);
     }
   }
 }

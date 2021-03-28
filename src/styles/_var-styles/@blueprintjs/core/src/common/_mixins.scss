@@ -77,8 +77,8 @@ $pt-dark-intent-text-colors: (
   -moz-outline-radius: 6px;
 }
 
-@function border-shadow($alpha, $color: $black, $size: 1px) {
-  @return 0 0 0 $size rgba($color, $alpha);
+@function border-shadow($alpha, $color: var(--black-hsl), $size: 1px) {
+  @return 0 0 0 $size hslax($color, $alpha);
 }
 
 // returns the padding necessary to center text in a container of the given height.

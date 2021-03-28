@@ -1,6 +1,6 @@
 // Copyright 2016 Palantir Technologies, Inc. All rights reserved.
 
-@import "~@blueprintjs/core/src/common/variables";
+@import "../../../../@blueprintjs/core/src/common/variables";
 
 // TODO: use Blueprint intents instead of duplicating...
 $pt-intent-colors: (
@@ -8,21 +8,21 @@ $pt-intent-colors: (
   "success": $pt-intent-success,
   "warning": $pt-intent-warning,
   "danger" : $pt-intent-danger,
-);
+) !default;
 
 $pt-intent-text-colors: (
   "primary": $pt-intent-primary,
   "success": $pt-intent-success,
   "warning": $pt-intent-warning,
   "danger" : $pt-intent-danger,
-);
+) !default;
 
 $pt-dark-intent-text-colors: (
   "primary": $blue4,
   "success": $green4,
   "warning": $orange4,
   "danger" : $red4,
-);
+) !default;
 
 $cell-border-width : 1px !default;
 

@@ -1,7 +1,7 @@
 // Copyright 2015 Palantir Technologies, Inc. All rights reserved.
 // Licensed under the Apache License, Version 2.0.
 
-@import "~@blueprintjs/core/src/components/forms/common";
+@import "../../../@blueprintjs/core/src/components/forms/common";
 @import "./common";
 
 $timepicker-input-row-height: $pt-grid-size * 3 !default;
@@ -58,7 +58,7 @@ $timepicker-control-width: $pt-grid-size * 3.3 !default;
     background: transparent;
     border: 0;
     border-radius: $pt-border-radius;
-    box-shadow: input-transition-shadow($input-shadow-color-focus);
+    box-shadow: input-transition-shadow($input-shadow-color-focus-hsl);
     color: $pt-text-color;
     height: $timepicker-input-row-inner-height;
     outline: 0;
@@ -68,15 +68,18 @@ $timepicker-control-width: $pt-grid-size * 3.3 !default;
     width: $timepicker-control-width;
 
     &:focus {
-      box-shadow: input-transition-shadow($input-shadow-color-focus, true);
+      box-shadow: input-transition-shadow($input-shadow-color-focus-hsl, true);
     }
 
     @each $intent, $color in $pt-intent-colors {
+
+      $color-hsl: nth(map-get($button-intents, $intent), 4);
+
       &.#{$ns}-intent-#{$intent} {
-        @include pt-input-intent($color);
+        @include pt-input-intent($color, $color-hsl);
 
         .#{$ns}-dark & {
-          @include pt-dark-input-intent($color);
+          @include pt-dark-input-intent($color, $color-hsl);
         }
       }
     }

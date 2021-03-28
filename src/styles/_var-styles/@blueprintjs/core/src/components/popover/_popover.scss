@@ -88,7 +88,7 @@ $popover-width: $pt-grid-size * 35 !default;
 }
 
 .#{$ns}-popover-backdrop {
-  background: rgba($white, 0);
+  background: hslax(var(--white-hsl), 0);
 }
 
 .#{$ns}-transition-container {

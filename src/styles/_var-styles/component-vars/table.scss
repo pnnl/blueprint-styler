@@ -1,0 +1,76 @@
+
+// layers ---------------
+$region-default-color: $gray3;
+$region-selected-color: $pt-intent-primary;
+
+$region-default-color-hsl: var(--gray3-hsl);
+$region-selected-color-hsl: var(--intent-primary-hsl);
+
+
+// common/variables ---------------
+$table-background-color: $light-gray5;
+$dark-table-background-color: $dark-gray4;
+
+$table-background-color-hsl: var(--light-gray5-hsl);
+$dark-table-background-color-hsl: var(--dark-gray4-hsl);
+
+
+// headers/common ---------------
+
+// $column-header-min-height: $pt-grid-size * 3;
+// $row-header-min-width: $column-header-min-height;
+// $row-header-padding: 0 $pt-grid-size / 2;
+// $column-name-text-skeleton-height: $pt-grid-size * 0.8;
+// $interaction-bar-height: $pt-grid-size * 2;
+
+$header-background-color: $table-background-color;
+$header-hover-background-color: $light-gray3;
+$column-header-text-color: $pt-text-color;
+$row-header-text-color: $pt-text-color-muted;
+
+$dark-header-background-color: $dark-table-background-color;
+$dark-header-hover-background-color: $dark-gray5;
+$dark-column-header-text-color: $pt-dark-text-color;
+$dark-row-header-text-color: $pt-dark-text-color-muted;
+
+$header-selected-background-color: $pt-intent-primary;
+
+
+$header-background-color-hsl: $table-background-color-hsl;
+$header-hover-background-color-hsl: var(--light-gray3-hsl);
+$header-selected-background-hsl: var(--pt-intent-primary-hue), 40%, 97%; // mix($pt-intent-primary, $header-background-color, 10%)
+$header-selected-hover-background-hsl: var(--pt-intent-primary-hue), 40%, 91%; // mix($pt-intent-primary, $header-hover-background-color, 10%)
+// $column-header-text-color-hsl: $pt-text-color;
+// $row-header-text-color-hsl: $pt-text-color-muted;
+
+$dark-header-background-color-hsl: $dark-table-background-color-hsl;
+$dark-header-hover-background-color-hsl: var(--dark-gray5-hsl);
+$dark-header-selected-background-hsl:  var(--pt-intent-primary-hue), 40%, 25%; // mix($pt-intent-primary, $dark-header-background-color, 10%)
+$dark-header-selected-hover-background-hsl:  var(--pt-intent-primary-hue), 40%, 29%; // mix($pt-intent-primary, $dark-header-hover-background-color, 10%)
+// $dark-column-header-text-color-hsl: $pt-dark-text-color;
+// $dark-row-header-text-color-hsl: $pt-dark-text-color-muted;
+
+$header-selected-background-color-hsl: $pt-intent-primary;
+
+
+
+// cell/common --------------------
+
+// $cell-border-width: 1px;
+// $frozen-cell-border-width: 3px;
+
+// $cell-padding-horizontal: $pt-grid-size;
+// $cell-padding-vertical: 0;
+// $cell-padding: $cell-padding-vertical $cell-padding-horizontal;
+// $cell-height: $pt-grid-size * 2;
+// $large-cell-height: $pt-grid-size * 3;
+
+$cell-background-color: $white;
+// $cell-background-color-opacity: 0.1;
+// $cell-border-color: $pt-divider-black;
+// $cell-text-color: $pt-text-color;
+// $dark-cell-background-color: $dark-gray3;
+$dark-cell-border-color: $pt-dark-divider-black;
+$dark-cell-text-color: $pt-dark-text-color;
+
+// $cell-transition-duration: $pt-transition-duration * 3;

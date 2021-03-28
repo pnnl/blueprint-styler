@@ -1,16 +1,20 @@
 :root{
 
+
 --pt-intent-primary:   var(--blue3);
 --pt-intent-success:   var(--green3);
 --pt-intent-warning:   var(--orange3);
 --pt-intent-danger:    var(--red3);
+
+--pt-intent-primary-hue:   var(--blue-hue);
+--pt-intent-primary-hsl:   var(--blue3-hsl);
 
 --pt-app-background-color:      var(--light-gray5);
 --pt-dark-app-background-color: var(--dark-gray3);
 
 --pt-outline-color: hsla(var(--blue3-hsl), 0.6);
 
---ptx-disabled-opacity: 0.3
+--ptx-disabled-opacity: 0.3;
 
 --pt-text-color:               var(--dark-gray1);
 --pt-text-color-muted:         var(--gray1);

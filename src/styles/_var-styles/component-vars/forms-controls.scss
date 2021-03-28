@@ -1,0 +1,50 @@
+// $control-background-color: $button-background-color;
+// $control-background-color-hover: $button-background-color-hover;
+// $control-background-color-active: $button-background-color-active;
+// $dark-control-background-color: $dark-button-background-color;
+// $dark-control-background-color-hover: $dark-button-background-color-hover;
+// $dark-control-background-color-active: $dark-button-background-color-active;
+
+// $control-checked-background-color: nth(map-get($button-intents, "primary"), 1);
+// $control-checked-background-color-hover: nth(map-get($button-intents, "primary"), 2);
+// $control-checked-background-color-active: nth(map-get($button-intents, "primary"), 3);
+$control-checked-background-color-hsl: nth(map-get($button-intents, "primary"), 4);
+$control-checked-background-color-hover-hsl: nth(map-get($button-intents, "primary"), 5);
+$control-checked-background-color-active-hsl: nth(map-get($button-intents, "primary"), 6);
+
+// $control-indicator-size: $pt-icon-size-standard;
+// $control-indicator-size-large: $pt-icon-size-large;
+// $control-indicator-spacing: $pt-grid-size;
+
+// $switch-width: 1.75em;
+// $switch-indicator-margin: 2px;
+// $switch-indicator-size: calc(1em - #{$switch-indicator-margin * 2});
+
+// $switch-indicator-child-height: 1em;
+// $switch-indicator-child-outside-margin: 0.5em;
+// $switch-indicator-child-inside-margin: 1.2em;
+
+// $switch-indicator-text-font-size: 0.7em;
+
+$switch-background-color: hslax(var(--gray4-hsl), 0.5);
+$switch-background-color-hover: hslax(var(--gray2-hsl), 0.5);
+$switch-background-color-active: hslax(var(--gray1-hsl), 0.5);
+// $switch-background-color-disabled: $button-background-color-disabled;
+// $switch-checked-background-color: $control-checked-background-color;
+// $switch-checked-background-color-hover: $control-checked-background-color-hover;
+// $switch-checked-background-color-active: $control-checked-background-color-active;
+$switch-checked-background-color-disabled: hslax(var(--blue3-hsl), 0.5);
+
+$dark-switch-background-color: hslax(var(--black-hsl), 0.5);
+$dark-switch-background-color-hover: hslax(var(--black-hsl), 0.7);
+$dark-switch-background-color-active: hslax(var(--black-hsl), 0.9);
+// $dark-switch-background-color-disabled: $dark-button-background-color-disabled;
+// $dark-switch-checked-background-color: $control-checked-background-color;
+// $dark-switch-checked-background-color-hover: $control-checked-background-color-hover;
+// $dark-switch-checked-background-color-active: $control-checked-background-color-active;
+$dark-switch-checked-background-color-disabled: hslax(var(--blue1-hsl), 0.5);
+
+// $switch-indicator-background-color: $white;
+$switch-indicator-background-color-disabled: hslax(var(--white-hsl), 0.8);
+// $dark-switch-indicator-background-color: $dark-gray5;
+$dark-switch-indicator-background-color-disabled: hslax(var(--black-hsl), 0.4);
