@@ -9,7 +9,7 @@
 // $input-background-color: $white;
 $input-background-color-disabled: hslax(var(--light-gray1-hsl), 0.5);
 // $input-shadow-color-focus: $pt-intent-primary;
-$input-shadow-color-focus-hsl: var(--blue3);
+$input-shadow-color-focus-hsl: var(--blue3-hsl);
 
 // $dark-input-color: $pt-dark-text-color;
 // $dark-input-color-disabled: $dark-button-color-disabled;
@@ -17,7 +17,7 @@ $input-shadow-color-focus-hsl: var(--blue3);
 $dark-input-background-color: hslax(var(--black-hsl), 0.3);
 $dark-input-background-color-disabled: hslax(var(--dark-gray5-hsl), 0.5);
 // $dark-input-shadow-color-focus: $pt-intent-primary;
-$dark-input-shadow-color-focus-hsl: var(--blue3);
+$dark-input-shadow-color-focus-hsl: var(--blue3-hsl);
 
 // $control-indicator-size: $pt-icon-size-standard;
 // $control-indicator-size-large: $pt-icon-size-large;
