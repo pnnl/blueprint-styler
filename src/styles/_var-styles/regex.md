@@ -14,6 +14,7 @@ hslax(var(--$1-hsl),
 
 # TODO
 - svg input
+- bugs in tag interactive intent-none hover
 
 
 # Changes
