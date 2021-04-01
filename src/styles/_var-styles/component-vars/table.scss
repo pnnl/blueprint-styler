@@ -4,7 +4,7 @@ $region-default-color: $gray3;
 $region-selected-color: $pt-intent-primary;
 
 $region-default-color-hsl: var(--gray3-hsl);
-$region-selected-color-hsl: var(--intent-primary-hsl);
+$region-selected-color-hsl: var(--pt-intent-primary-hsl);
 
 
 // common/variables ---------------
@@ -50,7 +50,7 @@ $dark-header-selected-hover-background-hsl:  var(--pt-intent-primary-hue), 40%, 
 // $dark-column-header-text-color-hsl: $pt-dark-text-color;
 // $dark-row-header-text-color-hsl: $pt-dark-text-color-muted;
 
-$header-selected-background-color-hsl: $pt-intent-primary;
+$header-selected-background-color-hsl: $pt-intent-primary-hsl;
 
 
 

@@ -1,7 +1,7 @@
 // $tag-default-color: $gray1;
 // $dark-tag-default-color: $gray5;
-$tag-default-color-hsl: $gray1;
-$dark-tag-default-color-hsl: $gray5;
+$tag-default-color-hsl: var(--gray1-hsl);
+$dark-tag-default-color-hsl: var(--gray5-hsl);
 
 // $tag-height: $pt-grid-size * 2;
 // $tag-line-height: $pt-icon-size-standard;

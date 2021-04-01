@@ -69,6 +69,7 @@ $timepicker-control-width: $pt-grid-size * 3.3 !default;
 
     &:focus {
       box-shadow: input-transition-shadow($input-shadow-color-focus-hsl, true);
+      // test: here;
     }
 
     @each $intent, $color in $pt-intent-colors {

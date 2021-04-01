@@ -9,7 +9,9 @@ module.exports = () => through2.obj(function (file, enc, next) {
     const content = file.contents.toString('utf8')
 
     // find the block of css vars in the file
-    let cssVars = content.match(/\.bpx-vars\s?\{([^\}]*)\}/i)[1];
+    let cssVarsMatch = content.match(/\.bpx-vars\s?\{([^\}]*)\}/i)[1];
+    if (!cssVarsMatch[1]) return;
+    let cssVars = cssVarsMatch[1];
     // cssVars = cssVars.replace(/\s{2,}/g, '')
 
     const css = `:root{${cssVars}}`;

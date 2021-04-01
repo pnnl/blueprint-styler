@@ -13,17 +13,16 @@ hslax(var(--$1-hsl),
 
 
 # TODO
-- svg input
-- bugs in tag interactive intent-none hover
-
+- export?
+- math?
 
 # Changes
+- @import `~@blueprintjs` except `~@blueprintjs/icons`
 - `border-shadow(`
 - `input-transition-shadow(`
 - `dark-input-transition-shadow(`
 - `pt-input-intent(`
 - `pt-dark-input-intent(`
-- @import `~@blueprintjs` except `~@blueprintjs/icons`
 - `pt-tag-intent(`
 - `pt-tag-minimal-intent(`
 - `pt-tag-interactive(`
@@ -31,4 +30,5 @@ hslax(var(--$1-hsl),
 - `rgba(`
 - `mix(`
 - `menu-background(`
+- `svg-icon(`)
 - –––
