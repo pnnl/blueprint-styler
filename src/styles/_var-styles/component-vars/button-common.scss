@@ -82,17 +82,26 @@ $button-outlined-width: 1px;
 $button-outlined-border-intent-opacity: 0.6;
 $button-outlined-border-disabled-intent-opacity: 0.2;
 
-// "intent": ($default, $hover, $active, $default-hsl, $hover-hsl, $active-hsl)
+/* usage:
+@each $intent, $color in $pt-intent-text-colors {
+  $color-hsl: nth(map-get($button-intents, $intent), 4);
+}
+*/
+@function button-intent-stack($intent) {
+  // "intent": ($default, $hover, $active, $default-hsl, $hover-hsl, $active-hsl)
+  // same a !default $button-intents, but with hsl tacked on to the end
+  @return (
+    var(--pt-intent-#{$intent}),
+    var(--pt-intent-#{$intent}-hover),
+    var(--pt-intent-#{$intent}-active),
+    var(--pt-intent-#{$intent}-hsl),
+    var(--pt-intent-#{$intent}-hover-hsl),
+    var(--pt-intent-#{$intent}-active-hsl)
+  )
+}
 $button-intents: (
-  "primary": ($pt-intent-primary, $blue2,   $blue1,   var(--blue3-hsl),   var(--blue2-hsl),   var(--blue1-hsl)    ),
-  "success": ($pt-intent-success, $green2,  $green1,  var(--green3-hsl),  var(--green2-hsl),  var(--green1-hsl)  ),
-  "warning": ($pt-intent-warning, $orange2, $orange1, var(--orange3-hsl), var(--orange2-hsl), var(--orange1-hsl) ),
-  "danger":  ($pt-intent-danger,  $red2,    $red1,    var(--red3-hsl),    var(--red2-hsl),    var(--red1-hsl)    )
-);
-
-$button-intents-hsl: (
-  "primary": (var(--blue3-hsl),   var(--blue2-hsl),   var(--blue1-hsl)    ),
-  "success": (var(--green3-hsl),  var(--green2-hsl),  var(--green1-hsl)  ),
-  "warning": (var(--orange3-hsl), var(--orange2-hsl), var(--orange1-hsl) ),
-  "danger":  (var(--red3-hsl),    var(--red2-hsl),    var(--red1-hsl)    )
+  "primary": button-intent-stack("primary"),
+  "success": button-intent-stack("success"),
+  "warning": button-intent-stack("warning"),
+  "danger":  button-intent-stack("danger"),
 );
