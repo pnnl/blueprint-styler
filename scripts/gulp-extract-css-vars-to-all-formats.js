@@ -9,8 +9,12 @@ module.exports = () => through2.obj(function (file, enc, next) {
     const content = file.contents.toString('utf8')
 
     // find the block of css vars in the file
-    let cssVarsMatch = content.match(/\.bpx-vars\s?\{([^\}]*)\}/i)[1];
-    if (!cssVarsMatch[1]) return;
+    let cssVarsMatch = content.match(/\.bpx-vars\s?\{([^\}]*)\}/i);
+    if (cssVarsMatch == null) {
+        console.log(`!!! No --css: vars; in .bpx-vars{} in ${file.basename} - gulp-extract-css-vars-to-all-formats.js`);
+        next();
+        return;
+    }
     let cssVars = cssVarsMatch[1];
     // cssVars = cssVars.replace(/\s{2,}/g, '')
 
