@@ -15,7 +15,9 @@ hslax(var(--$1-hsl),
 # TODO
 - export more vars
 - dark theme color mirror
+- `--shadow-color:--black;` and `--shine-color:--white`
 - math?
+- fix the other styles, now that merge properties and delete duplicates is gone...
 
 # Changes
 - @import `~@blueprintjs` except `~@blueprintjs/icons`
@@ -31,5 +33,5 @@ hslax(var(--$1-hsl),
 - `rgba(`
 - `mix(`
 - `menu-background(`
-- `svg-icon(`)
+- `svg-icon(`
 - –––

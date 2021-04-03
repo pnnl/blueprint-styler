@@ -9,23 +9,23 @@ module.exports = () => through2.obj(function (file, enc, next) {
     const content = file.contents.toString('utf8')
 
     // find the block of css vars in the file
-    let cssVarsMatch = content.match(/\.bpx-vars\s?\{([^\}]*)\}/i);
+    let cssVarsMatch = content.match(/\.bpx-vars[^{]*\{([^\}]*)\}/i);
     if (cssVarsMatch == null) {
-        console.log(`!!! No --css: vars; in .bpx-vars{} in ${file.basename} - gulp-extract-css-vars-to-all-formats.js`);
+        console.log(`>> No --css: vars; in .bpx-vars{} in ${file.basename}!`);
         next();
         return;
     }
     let cssVars = cssVarsMatch[1];
     // cssVars = cssVars.replace(/\s{2,}/g, '')
 
-    const css = `:root{${cssVars}}`;
-    const less = cssVars.replace(/--/g, '@')
-    const scss = cssVars.replace(/--/g, '$')
+    const customPropPrefixRegex = /\s{2,}--/g
+    const css = `:root{${cssVars}\n}`;
+    const less = cssVars.replace(customPropPrefixRegex, `\n@`) // broken
+    const scss = cssVars.replace(customPropPrefixRegex, `\n$`) // broken
 
 
     // extract all the vars and values as regex matches
-    const jsKeyValMatches = [...cssVars.matchAll(/(--([^:]*):\s?([^;]*);?|\/\*\!\s?(\w+)\s?\*\/)/ig)];
-
+    const jsKeyValMatches = [...cssVars.matchAll(/(--([^:]*):\s?([^;]*);?|\/\*![\s]*(\w*))/ig)];
 
     // turn the jsKeyValMatches into an object
     let jsObj = {}
@@ -77,6 +77,7 @@ module.exports = () => through2.obj(function (file, enc, next) {
         }))
     })
 
+    console.log(`>> Extracted ${jsKeyValMatches.length} vars from ${file.basename}`);
     next();
 });
 
