@@ -13,7 +13,8 @@ hslax(var(--$1-hsl),
 
 
 # TODO
-- export?
+- export more vars
+- dark theme color mirror
 - math?
 
 # Changes

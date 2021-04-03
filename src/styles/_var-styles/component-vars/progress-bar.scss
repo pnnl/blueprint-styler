@@ -1,0 +1,22 @@
+// // common.scss
+// $progress-track-color: hslax(var(--gray1-hsl), 0.2);
+// $progress-head-color: hslax(var(--gray1-hsl), 0.8);
+// $dark-progress-track-color: hslax(var(--black-hsl), 0.5);
+// $dark-progress-head-color: $gray3;
+
+// // progress-bar.scss
+// $progress-bar-stripes-color: hslax(var(--white-hsl), 0.2);
+
+// $progress-bar-height: round($pt-grid-size * 0.8);
+// $progress-bar-stripes-size: $pt-grid-size * 3;
+// $progress-bar-border-radius: $pt-grid-size * 4;
+
+// $progress-bar-gradient: linear-gradient(
+//   -45deg,
+//   $progress-bar-stripes-color 25%,
+//   transparent 25%,
+//   transparent 50%,
+//   $progress-bar-stripes-color 50%,
+//   $progress-bar-stripes-color 75%,
+//   transparent 75%
+// );

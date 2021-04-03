@@ -1,0 +1,35 @@
+// // common.scss
+// $datepicker-padding: $pt-grid-size / 2;
+
+// $datepicker-min-width: $pt-grid-size * 21;
+// $datepicker-day-size: $pt-grid-size * 3;
+// $datepicker-header-height: $pt-grid-size * 4;
+// $datepicker-header-margin: ($datepicker-header-height - $pt-input-height) / 2;
+
+// $datepicker-background-color: $white;
+// $datepicker-day-background-color-hover: $light-gray2;
+// $datepicker-day-background-color-active: $light-gray1;
+// $dark-datepicker-background-color: $dark-gray4;
+// $dark-datepicker-day-background-color-hover: $gray1;
+// $dark-datepicker-day-background-color-active: $gray2;
+
+// $daterangepicker-range-background-color: $light-gray4;
+// $daterangepicker-range-background-color-selected: $light-gray4;
+// $daterangepicker-range-background-color-selected-hover: $light-gray1;
+// $dark-daterangepicker-range-background-color: $dark-gray5;
+// $dark-daterangepicker-range-background-color-selected: $dark-gray5;
+// $dark-daterangepicker-range-background-color-selected-hover: $gray1;
+
+// // datepicker.scss
+// $cell-size: $pt-grid-size * 3;
+// $header-height: $pt-grid-size * 4;
+// $header-margin: ($header-height - $pt-input-height) / 2;
+
+// // timepicker.scss
+// $timepicker-input-row-height: $pt-grid-size * 3;
+// // subtract two because of inset shadow
+// $timepicker-input-row-inner-height: $timepicker-input-row-height - 2;
+// // helps focus states of inputs line up correctly
+// $timepicker-row-padding: 0 1px;
+// $timepicker-divider-width: $pt-grid-size * 1.1;
+// $timepicker-control-width: $pt-grid-size * 3.3;

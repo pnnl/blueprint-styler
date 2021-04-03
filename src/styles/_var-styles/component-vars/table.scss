@@ -1,60 +1,12 @@
-
-// layers ---------------
-$region-default-color: $gray3;
-$region-selected-color: $pt-intent-primary;
-
-$region-default-color-hsl: var(--gray3-hsl);
-$region-selected-color-hsl: var(--pt-intent-primary-hsl);
-
-
-// common/variables ---------------
-$table-background-color: $light-gray5;
-$dark-table-background-color: $dark-gray4;
-
-$table-background-color-hsl: var(--light-gray5-hsl);
-$dark-table-background-color-hsl: var(--dark-gray4-hsl);
-
-
-// headers/common ---------------
-
-// $column-header-min-height: $pt-grid-size * 3;
-// $row-header-min-width: $column-header-min-height;
-// $row-header-padding: 0 $pt-grid-size / 2;
-// $column-name-text-skeleton-height: $pt-grid-size * 0.8;
-// $interaction-bar-height: $pt-grid-size * 2;
-
-$header-background-color: $table-background-color;
-$header-hover-background-color: $light-gray3;
-$column-header-text-color: $pt-text-color;
-$row-header-text-color: $pt-text-color-muted;
-
-$dark-header-background-color: $dark-table-background-color;
-$dark-header-hover-background-color: $dark-gray5;
-$dark-column-header-text-color: $pt-dark-text-color;
-$dark-row-header-text-color: $pt-dark-text-color-muted;
-
-$header-selected-background-color: $pt-intent-primary;
-
-
-$header-background-color-hsl: $table-background-color-hsl;
-$header-hover-background-color-hsl: var(--light-gray3-hsl);
-$header-selected-background-hsl: var(--pt-intent-primary-hue), 40%, 97%; // mix($pt-intent-primary, $header-background-color, 10%)
-$header-selected-hover-background-hsl: var(--pt-intent-primary-hue), 40%, 91%; // mix($pt-intent-primary, $header-hover-background-color, 10%)
-// $column-header-text-color-hsl: $pt-text-color;
-// $row-header-text-color-hsl: $pt-text-color-muted;
-
-$dark-header-background-color-hsl: $dark-table-background-color-hsl;
-$dark-header-hover-background-color-hsl: var(--dark-gray5-hsl);
-$dark-header-selected-background-hsl:  var(--pt-intent-primary-hue), 40%, 25%; // mix($pt-intent-primary, $dark-header-background-color, 10%)
-$dark-header-selected-hover-background-hsl:  var(--pt-intent-primary-hue), 40%, 29%; // mix($pt-intent-primary, $dark-header-hover-background-color, 10%)
-// $dark-column-header-text-color-hsl: $pt-dark-text-color;
-// $dark-row-header-text-color-hsl: $pt-dark-text-color-muted;
-
-$header-selected-background-color-hsl: $pt-intent-primary-hsl;
+// table.scss --------------------------------------
+// $body-z-index: $pt-z-index-content;
+// $column-z-index: $body-z-index + 1;
+// $row-z-index: $column-z-index + 1;
+// $menu-z-index: $row-z-index + 1;
 
 
 
-// cell/common --------------------
+// cell/common.scss.scss --------------------------------------
 
 // $cell-border-width: 1px;
 // $frozen-cell-border-width: 3px;
@@ -74,3 +26,101 @@ $dark-cell-border-color: $pt-dark-divider-black;
 $dark-cell-text-color: $pt-dark-text-color;
 
 // $cell-transition-duration: $pt-transition-duration * 3;
+
+
+
+// common/variables.scss --------------------------------------
+// $cell-border-width : 1px;
+
+$table-background-color: $light-gray5;
+$dark-table-background-color: $dark-gray4;
+
+// EXTRA-hsl
+$table-background-color-hsl: var(--light-gray5-hsl);
+$dark-table-background-color-hsl: var(--dark-gray4-hsl);
+
+// // Selecting
+// $select-column-cursor: s-resize;
+// $select-row-cursor: e-resize;
+// $select-table-cursor: se-resize;
+// $select-cell-cursor: cell;
+// $select-text-cursor: text;
+
+// // Resizing
+// $resize-vertical-cursor: ew-resize;
+// $resize-horizontal-cursor: ns-resize;
+
+// // Actions
+// $action-cursor: pointer;
+
+// $region-layer-z-index: $pt-z-index-overlay;
+// $interactive-cell-z-index: $pt-z-index-overlay + 1;
+
+
+
+// headers/common.scss --------------------------------------
+
+// $column-header-min-height: $pt-grid-size * 3;
+// $row-header-min-width: $column-header-min-height;
+// $row-header-padding: 0 $pt-grid-size / 2;
+
+// $column-header-min-height: $pt-grid-size * 3;
+// $row-header-min-width: $column-header-min-height;
+// $row-header-padding: 0 $pt-grid-size / 2;
+// $column-name-text-skeleton-height: $pt-grid-size * 0.8;
+// $interaction-bar-height: $pt-grid-size * 2;
+
+$header-background-color: $table-background-color;
+$header-hover-background-color: $light-gray3;
+$column-header-text-color: $pt-text-color;
+$row-header-text-color: $pt-text-color-muted;
+
+$dark-header-background-color: $dark-table-background-color;
+$dark-header-hover-background-color: $dark-gray5;
+$dark-column-header-text-color: $pt-dark-text-color;
+$dark-row-header-text-color: $pt-dark-text-color-muted;
+
+$header-selected-background-color: $pt-intent-primary;
+
+// $interaction-bar-height: $pt-grid-size * 2;
+
+// EXTRA-hsl
+$header-background-color-hsl: $table-background-color-hsl;
+$header-hover-background-color-hsl: var(--light-gray3-hsl);
+$header-selected-background-hsl: var(--pt-intent-primary-hue), 40%, 97%; // mix($pt-intent-primary, $header-background-color, 10%)
+$header-selected-hover-background-hsl: var(--pt-intent-primary-hue), 40%, 91%; // mix($pt-intent-primary, $header-hover-background-color, 10%)
+// $column-header-text-color-hsl: $pt-text-color;
+// $row-header-text-color-hsl: $pt-text-color-muted;
+
+$dark-header-background-color-hsl: $dark-table-background-color-hsl;
+$dark-header-hover-background-color-hsl: var(--dark-gray5-hsl);
+$dark-header-selected-background-hsl:  var(--pt-intent-primary-hue), 40%, 25%; // mix($pt-intent-primary, $dark-header-background-color, 10%)
+$dark-header-selected-hover-background-hsl:  var(--pt-intent-primary-hue), 40%, 29%; // mix($pt-intent-primary, $dark-header-hover-background-color, 10%)
+// $dark-column-header-text-color-hsl: $pt-dark-text-color;
+// $dark-row-header-text-color-hsl: $pt-dark-text-color-muted;
+
+$header-selected-background-color-hsl: $pt-intent-primary-hsl;
+
+
+
+// interactions/interactions.scss --------------------------------------
+
+// $resize-handle-target-width: 5px;
+// $resize-handle-width: 3px;
+// $resize-handle-position-correction: -3px;
+// $resize-handle-padding: 2px;
+// $resize-handle-color: $pt-intent-primary;
+// $resize-handle-dragging-color: $pt-intent-primary;
+
+// // we want to square off the margin around the handle
+// // so we need a special value based on the handle icon shape
+// $reorder-handle-width: 22px;
+
+
+
+// layers.scss --------------------------------------
+$region-default-color: $gray3;
+$region-selected-color: $pt-intent-primary;
+// EXTRA-hsl
+$region-default-color-hsl: var(--gray3-hsl);
+$region-selected-color-hsl: var(--pt-intent-primary-hsl);
