@@ -1,4 +1,6 @@
-:root {
+:root, .bpx-vars{
+
+/*! Button */
 
 --button-border-width: 1px;
 /* --button-padding: calc(var(--pt-grid-size) / 2) var(var(--pt-grid-size)); */
@@ -72,13 +74,14 @@ Switches and slider handles both use these variables.
 --dark-button-background-color-active-disabled: hsla(var(--dark-gray5-hsl), 0.7);
 --dark-button-intent-color-disabled: hsla(var(--white-hsl), 0.3);
 
+--minimal-button-background-opacity: 0.3;
 --minimal-button-divider-width: 1px;
 --minimal-button-background-color: none;
---minimal-button-background-color-hover: hsla(var(--gray4-hsl), 0.3);
---minimal-button-background-color-active: hsla(var(--gray2-hsl), 0.3);
+--minimal-button-background-color-hover: hsla(var(--gray4-hsl), var(--minimal-button-background-opacity));
+--minimal-button-background-color-active: hsla(var(--gray2-hsl), var(--minimal-button-background-opacity));
 --dark-minimal-button-background-color: none;
---dark-minimal-button-background-color-hover: hsla(var(--gray3-hsl), 0.15);
---dark-minimal-button-background-color-active: hsla(var(--gray3-hsl), 0.3);
+--dark-minimal-button-background-color-hover: hsla(var(--gray5-hsl), var(--minimal-button-background-opacity));
+--dark-minimal-button-background-color-active: hsla(var(--gray3-hsl), var(--minimal-button-background-opacity));
 
 --button-outlined-width: 1px;
 --button-outlined-border-intent-opacity: 0.6;

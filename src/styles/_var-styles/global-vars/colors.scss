@@ -1,4 +1,6 @@
-:root{
+:root, .bpx-vars{
+
+/*! ColorsHsl */
 
 --grayscale-hue: 204;
 
@@ -123,8 +125,9 @@
 --sepia5-hsl: var(--sepia-hue), 48%, 59%;
 
 
-/* hsl() identity */
+/*! Colors */
 
+// hsl() identity //
 $colorsList:
 black,
 dark-gray1,

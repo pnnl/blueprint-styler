@@ -1,4 +1,4 @@
-:root{
+:root, .bpx-vars{
 
 /*! IntentColors */
 
@@ -69,20 +69,20 @@
 
 --pt-outline-color:             hsla(var(--pt-intent-primary-hsl), 0.6);
 
---ptx-disabled-opacity:         0.3;
+--pt-disabled-opacity:         0.3;
 
 
 /*! TextColors */
 
 --pt-text-color:                 var(--dark-gray1);
 --pt-text-color-muted:           var(--gray1);
---pt-text-color-disabled:        hsla(var(--black-hsl), var(--ptx-disabled-opacity));
+--pt-text-color-disabled:        hsla(var(--black-hsl), var(--pt-disabled-opacity));
 --pt-heading-color:              var(--pt-text-color);
 --pt-link-color:                 var(--pt-intent-primary-text-color);
 
 --pt-dark-text-color:            var(--light-gray5);
 --pt-dark-text-color-muted:      var(--gray4);
---pt-dark-text-color-disabled:   hsla(var(--white-hsl), var(--ptx-disabled-opacity));
+--pt-dark-text-color-disabled:   hsla(var(--white-hsl), var(--pt-disabled-opacity));
 --pt-dark-heading-color:         var(--pt-dark-text-color);
 --pt-dark-link-color:            var(--pt-dark-intent-primary-text-color);
 
