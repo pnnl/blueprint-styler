@@ -1,0 +1,87 @@
+:root {
+
+--button-border-width: 1px;
+/* --button-padding: calc(var(--pt-grid-size) / 2) var(var(--pt-grid-size)); */
+/* --button-padding-small: 0 calc(var(--pt-grid-size) * 0.7); */
+/* --button-padding-large: calc(var(--pt-grid-size) / 2) (var(--pt-grid-size) * 1.5); */
+/* --button-icon-spacing: calc(var(--pt-button-height) - var(--pt-icon-size-standard)) / 2; */
+/* --button-icon-spacing-large: calc(var(--pt-button-height-large) - var(--pt-icon-size-large)) / 2; */
+
+/*
+CSS `border` property issues:
+- An element can only have one border.
+- Borders can't stack with shadows.
+- Borders modify the size of the element they're applied to.
+- Border positioning requires the extra `box-sizing` property.
+
+`box-shadow` doesn't have these issues, we're using it instead of `border`.
+*/
+--button-box-shadow:
+  inset 0 0 0 var(--button-border-width) hsla(var(--black-hsl), 0.2),
+  inset 0 var(--button-border-width) 0 hsla(var(--black-hsl), 0.1);
+--button-box-shadow-active:
+  inset 0 0 0 var(--button-border-width) hsla(var(--black-hsl), 0.2),
+  inset 0 1px 2px hsla(var(--black-hsl), 0.2);
+--button-intent-box-shadow:
+  inset 0 0 0 var(--button-border-width) hsla(var(--black-hsl), 0.4),
+  inset 0 var(--button-border-width) 0 hsla(var(--black-hsl), 0.2);
+--button-intent-box-shadow-active:
+  inset 0 0 0 var(--button-border-width) hsla(var(--black-hsl), 0.4),
+  inset 0 1px 2px hsla(var(--black-hsl), 0.2);
+
+/*
+Overlay shadows are used for default buttons
+floating on top of other elements. This way, the
+shadows blend with the colors beneath it.
+Switches and slider handles both use these variables.
+*/
+--button-box-shadow-overlay:
+  0 0 0 var(--button-border-width) hsla(var(--black-hsl), 0.2),
+  0 1px 1px hsla(var(--black-hsl), 0.2);
+--button-box-shadow-overlay-active:
+  0 0 0 var(--button-border-width) hsla(var(--black-hsl), 0.2),
+  inset 0 1px 1px hsla(var(--black-hsl), 0.1);
+
+--dark-button-box-shadow:
+  0 0 0 var(--button-border-width) hsla(var(--black-hsl), 0.4);
+--dark-button-box-shadow-active:
+  0 0 0 var(--button-border-width) hsla(var(--black-hsl), 0.6),
+  inset 0 1px 2px hsla(var(--black-hsl), 0.2);
+--dark-button-intent-box-shadow:
+  0 0 0 var(--button-border-width) hsla(var(--black-hsl), 0.4);
+--dark-button-intent-box-shadow-active:
+  0 0 0 var(--button-border-width) hsla(var(--black-hsl), 0.4),
+  inset 0 1px 2px hsla(var(--black-hsl), 0.2);
+
+--button-gradient: linear-gradient(to bottom, hsla(var(--white-hsl), 0.8), hsla(var(--white-hsl), 0));
+--button-intent-gradient: linear-gradient(to bottom, hsla(var(--white-hsl), 0.1), hsla(var(--white-hsl), 0));
+--dark-button-gradient: linear-gradient(to bottom, hsla(var(--white-hsl), 0.05), hsla(var(--white-hsl), 0));
+
+--button-color-disabled: var(--pt-text-color-disabled);
+--button-background-color: var(--light-gray5);
+--button-background-color-hover: var(--light-gray4);
+--button-background-color-active: var(--light-gray2);
+--button-background-color-disabled: hsla(var(--light-gray1-hsl), 0.5);
+--button-background-color-active-disabled: hsla(var(--light-gray1-hsl), 0.7);
+--button-intent-color-disabled: hsla(var(--white-hsl), 0.6);
+--dark-button-color-disabled: var(--pt-dark-text-color-disabled);
+--dark-button-background-color: var(--dark-gray5);
+--dark-button-background-color-hover: var(--dark-gray4);
+--dark-button-background-color-active: var(--dark-gray2);
+--dark-button-background-color-disabled: hsla(var(--dark-gray5-hsl), 0.5);
+--dark-button-background-color-active-disabled: hsla(var(--dark-gray5-hsl), 0.7);
+--dark-button-intent-color-disabled: hsla(var(--white-hsl), 0.3);
+
+--minimal-button-divider-width: 1px;
+--minimal-button-background-color: none;
+--minimal-button-background-color-hover: hsla(var(--gray4-hsl), 0.3);
+--minimal-button-background-color-active: hsla(var(--gray2-hsl), 0.3);
+--dark-minimal-button-background-color: none;
+--dark-minimal-button-background-color-hover: hsla(var(--gray3-hsl), 0.15);
+--dark-minimal-button-background-color-active: hsla(var(--gray3-hsl), 0.3);
+
+--button-outlined-width: 1px;
+--button-outlined-border-intent-opacity: 0.6;
+--button-outlined-border-disabled-intent-opacity: 0.2;
+
+}
