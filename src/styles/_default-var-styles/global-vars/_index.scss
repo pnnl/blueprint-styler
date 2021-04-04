@@ -3,7 +3,7 @@
 @import './color-aliases.identity';
 @import './variables.identity';
 
-// --vars: defined; in :root, .bpx-vars{}
+// --vars: defined; in #{$root-selector}{}
 @import './colors';
 @import './color-aliases';
 @import './variables';
