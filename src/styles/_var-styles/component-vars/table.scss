@@ -22,7 +22,7 @@
 // --cell-height: var(--pt-grid-size) * 2;
 // --large-cell-height: var(--pt-grid-size) * 3;
 
---cell-background-color: var(--white);
+--cell-background-color: var(--pt-app-top-background-color);
 --cell-background-color-opacity: 0.1;
 --cell-border-color: var(--pt-divider-black);
 --cell-text-color: var(--pt-text-color);
@@ -38,11 +38,11 @@
 // --cell-border-width : 1px;
 
 --table-background-color: var(--light-gray5);
---dark-table-background-color: var(--dark-gray4);
+--dark-table-background-color: var(--pt-dark-app-top-background-color);
 
 // EXTRA-hsl
 --table-background-color-hsl: var(--light-gray5-hsl);
---dark-table-background-color-hsl: var(--dark-gray4-hsl);
+--dark-table-background-color-hsl: var(--pt-dark-app-top-background-color-hsl);
 
 // // Selecting
 // --select-column-cursor: s-resize;

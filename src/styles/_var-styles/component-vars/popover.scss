@@ -3,8 +3,8 @@
 /*! Components */
 
 // common.scss
---popover-background-color: var(--white);
---dark-popover-background-color: var(--dark-gray4);
+--popover-background-color: var(--pt-app-top-background-color);
+--dark-popover-background-color: var(--pt-dark-app-top-background-color);
 
 // popover.scss
 // --popover-width: calc(var(--pt-grid-size) * 35);

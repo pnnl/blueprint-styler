@@ -2,10 +2,10 @@
 
 /*! Components */
 
-// --card-padding: $pt-grid-size * 2;
+// --card-padding: calc(var(--pt-grid-size) * 2);
 
---card-background-color: var(--white);
---dark-card-background-color: var(--dark-gray4);
+--card-background-color: var(--pt-app-top-background-color);
+--dark-card-background-color: var(--pt-dark-app-top-background-color);
 
 }
 

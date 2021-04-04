@@ -26,7 +26,8 @@ hsla
 # TODO
 - export more vars
 - dark theme color mirror
-- `--shadow-color:--black;` and `--shine-color:--white`
+- `--shadow-color:var(--black);` and `--shine-color:var(--white);`
+- `--background:var(--white);`
 - math?
 - fix the other styles, now that merge properties and delete duplicates is gone...
 

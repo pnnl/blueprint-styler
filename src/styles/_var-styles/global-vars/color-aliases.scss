@@ -1,5 +1,6 @@
 :root, .bpx-vars{
 
+
 /*! IntentColors */
 
 --pt-intent-primary-hue:        var(--blue-hue);
@@ -60,16 +61,18 @@
 
 /*! LayoutColors */
 
---pt-app-background-color:      var(--light-gray5);
---pt-dark-app-background-color: var(--dark-gray3);
+--pt-app-background-color:          var(--light-gray5);
+--pt-dark-app-background-color:     var(--dark-gray3);
+--pt-app-top-background-color:      var(--white); // custom
+--pt-dark-app-top-background-color: var(--dark-gray4); // custom
 
---pt-divider-black:             hsla(var(--black-hsl), 0.15);
---pt-dark-divider-black:        hsla(var(--black-hsl), 0.4);
---pt-dark-divider-white:        hsla(var(--white-hsl), 0.15);
+--pt-divider-black:                 hsla(var(--black-hsl), 0.15);
+--pt-dark-divider-black:            hsla(var(--black-hsl), 0.4);
+--pt-dark-divider-white:            hsla(var(--white-hsl), 0.15);
 
---pt-outline-color:             hsla(var(--pt-intent-primary-hsl), 0.6);
+--pt-outline-color:                 hsla(var(--pt-intent-primary-hsl), 0.6);
 
---pt-disabled-opacity:         0.3;
+--pt-disabled-opacity:              0.3;
 
 
 /*! TextColors */

@@ -16,8 +16,8 @@
 // --menu-item-padding-vertical: calc((var(--pt-button-height) - var(--menu-item-line-height)) / 2);
 // --menu-item-padding-vertical-large: calc((var(--pt-button-height-large) - var(--menu-item-line-height-large)) / 2);
 
---menu-background-color: var(--white);
---dark-menu-background-color: var(--dark-gray4);
+--menu-background-color: var(--pt-app-top-background-color);
+--dark-menu-background-color: var(--pt-dark-app-top-background-color);
 
 --menu-item-color-hover: var(--minimal-button-background-color-hover);
 --menu-item-color-active: var(--minimal-button-background-color-active);

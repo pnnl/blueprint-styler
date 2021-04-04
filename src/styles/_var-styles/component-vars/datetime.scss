@@ -8,12 +8,12 @@
 // --datepicker-min-width: calc(var(--pt-grid-size) * 21);
 // --datepicker-day-size: calc(var(--pt-grid-size) * 3);
 // --datepicker-header-height: calc(var(--pt-grid-size) * 4);
-// --datepicker-header-margin: calc((var(--datepicker-header-height) - var(--pt-input-height)) / 2;)
+// --datepicker-header-margin: calc((var(--datepicker-header-height) - var(--pt-input-height)) / 2);
 
---datepicker-background-color: var(--white);
+--datepicker-background-color: var(--pt-app-top-background-color);
 --datepicker-day-background-color-hover: var(--light-gray2);
 --datepicker-day-background-color-active: var(--light-gray1);
---dark-datepicker-background-color: var(--dark-gray4);
+--dark-datepicker-background-color: var(--pt-dark-app-top-background-color);
 --dark-datepicker-day-background-color-hover: var(--gray1);
 --dark-datepicker-day-background-color-active: var(--gray2);
 
