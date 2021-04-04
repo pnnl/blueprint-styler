@@ -1,6 +1,16 @@
-// $handle-size: $pt-icon-size-standard;
-// $track-size: $handle-size - $pt-grid-size;
-// $label-offset: $handle-size + 4px;
+:root, .bpx-vars{
+
+/*! Components */
+
+// --handle-size: var(--pt-icon-size-standard);
+// --track-size: calc(var(--handle-size) - var(--pt-grid-size));
+// --label-offset: calc(var(--handle-size) + 4px);
+
+}
+
+// $handle-size: var(--handle-size);
+// $track-size: var(--track-size);
+// $label-offset: var(--label-offset);
 
 // // retain legacy variable aliases so as to not break consumers
 // $handle-height: $handle-size;

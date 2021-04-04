@@ -19,15 +19,15 @@ $dark-header-menu-hover-background:
 $selectable-header-menu-hover-background:
   menu-background($header-hover-background-color-hsl);
 $selectable-header-menu-selected-background:
-  menu-background($header-selected-background-hsl);
+  menu-background($header-selected-background-color-hsl);
 $selectable-header-menu-selected-hover-background:
-  menu-background($header-selected-hover-background-hsl);
+  menu-background($header-selected-hover-background-color-hsl);
 $dark-selectable-header-menu-hover-background:
   menu-background($dark-header-hover-background-color-hsl);
 $dark-selectable-header-menu-selected-background:
-  menu-background($dark-header-selected-background-hsl);
+  menu-background($dark-header-selected-background-color-hsl);
 $dark-selectable-header-menu-selected-hover-background:
-  menu-background($dark-header-selected-hover-background-hsl);
+  menu-background($dark-header-selected-hover-background-color-hsl);
 
 .#{$ns}-table-header {
   align-items: flex-start;

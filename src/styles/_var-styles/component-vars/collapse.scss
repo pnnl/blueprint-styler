@@ -1,1 +1,9 @@
-// $collapse-transition: ($pt-transition-duration * 2) $pt-transition-ease;
+:root, .bpx-vars{
+
+/*! Components */
+
+// --collapse-transition: calc((var(--pt-transition-duration) * 2) var(--pt-transition-ease));
+
+}
+
+// $collapse-transition: var(--collapse-transition);

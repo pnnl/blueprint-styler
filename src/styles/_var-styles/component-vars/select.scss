@@ -1,8 +1,22 @@
+:root, .bpx-vars{
+
+/*! Select */
+
 // // omnibar.scss
-// $omnibar-height: 60vh;
-// $omnibar-width: $pt-grid-size * 50;
-// $omnibar-input-height: $pt-grid-size * 4;
+// --omnibar-height: 60vh;
+// --omnibar-width: calc(var(--pt-grid-size) * 50);
+// --omnibar-input-height: calc(var(--pt-grid-size) * 4);
 
 // // select.scss
-// $select-popover-max-height: $pt-grid-size * 30;
-// $select-popover-max-width: $pt-grid-size * 40;
+// --select-popover-max-height: calc(var(--pt-grid-size) * 30);
+// --select-popover-max-width: calc(var(--pt-grid-size) * 40);
+}
+
+// // omnibar.scss
+// $omnibar-height: var(--omnibar-height);
+// $omnibar-width: var(--omnibar-width);
+// $omnibar-input-height: var(--omnibar-input-height);
+
+// // select.scss
+// $select-popover-max-height: var(--select-popover-max-height);
+// $select-popover-max-width: var(--select-popover-max-width);

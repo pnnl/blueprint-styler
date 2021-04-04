@@ -1,5 +1,17 @@
-// $drawer-margin: ($pt-grid-size * 3) 0;
-// $drawer-padding: $pt-grid-size * 2;
+:root, .bpx-vars{
 
-// $drawer-background-color: $white;
-// $dark-drawer-background-color: $dark-gray4;
+/*! Components */
+
+// --drawer-margin: calc((var(--pt-grid-size) * 3) 0);
+// --drawer-padding: calc(var(--pt-grid-size) * 2);
+
+--drawer-background-color: var(--white);
+--dark-drawer-background-color: var(--dark-gray4);
+}
+
+
+// $drawer-margin: var(--drawer-margin);
+// $drawer-padding: var(--drawer-padding);
+
+$drawer-background-color: var(--drawer-background-color);
+$dark-drawer-background-color: var(--dark-drawer-background-color);

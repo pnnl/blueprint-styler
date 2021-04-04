@@ -1,6 +1,19 @@
-// // common.scss
-// $popover-background-color: $white;
-// $dark-popover-background-color: $dark-gray4;
+:root, .bpx-vars{
+
+/*! Components */
+
+// common.scss
+--popover-background-color: var(--white);
+--dark-popover-background-color: var(--dark-gray4);
+
+// popover.scss
+// --popover-width: calc(var(--pt-grid-size) * 35);
+
+}
+
+// common.scss
+$popover-background-color: var(--popover-background-color);
+$dark-popover-background-color: var(--dark-popover-background-color);
 
 // // popover.scss
-// $popover-width: $pt-grid-size * 35;
+// $popover-width: var(--popover-width);

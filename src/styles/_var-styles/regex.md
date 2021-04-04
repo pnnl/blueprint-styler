@@ -1,14 +1,25 @@
 # regex
 ```regex
 :[^;]*;
-
-\$([^:]*):.*
-$$$1: var(--$1);
-
 :[^;]*(;|,)
 
 rgba\(\$((\w|-)*),
 hslax(var(--$1-hsl),
+
+# $original-variable: $whatever; => --original-variable: $whatever;
+\$([^:]*):
+--$1:
+
+# $variable => var(--variable);
+\$([\w-]*)
+var(--$1)
+
+# $identity: $whatever; => $identity: var(--identity);
+\$([^:]*):.*
+$$$1: var(--$1);
+
+hslax
+hsla
 ```
 
 

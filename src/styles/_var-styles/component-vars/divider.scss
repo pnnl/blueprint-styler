@@ -1,1 +1,9 @@
-// $divider-margin: $pt-grid-size / 2;
+:root, .bpx-vars{
+
+/*! Components */
+
+// --divider-margin: calc(var(--pt-grid-size) / 2);
+
+}
+
+// $divider-margin: var(--divider-margin);

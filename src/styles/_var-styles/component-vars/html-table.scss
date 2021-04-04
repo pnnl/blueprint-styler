@@ -1,5 +1,15 @@
-// $table-row-height: $pt-grid-size * 4;
-// $table-row-height-small: $pt-grid-size * 3;
-// $table-border-width: 1px;
-// $table-border-color: $pt-divider-black;
-// $dark-table-border-color: $pt-dark-divider-white;
+:root, .bpx-vars{
+
+/*! Components */
+
+// --table-row-height: calc(var(--pt-grid-size) * 4);
+// --table-row-height-small: calc(var(--pt-grid-size) * 3);
+// --table-border-width: 1px;
+--table-border-color: var(--pt-divider-black);
+--dark-table-border-color: var(--pt-dark-divider-white);
+}
+// $table-row-height: var(--table-row-height);
+// $table-row-height-small: var(--table-row-height-small);
+// $table-border-width: var(--table-border-width);
+$table-border-color: var(--table-border-color);
+$dark-table-border-color: var(--dark-table-border-color);

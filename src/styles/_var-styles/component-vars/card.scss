@@ -1,4 +1,15 @@
-// $card-padding: $pt-grid-size * 2;
+:root, .bpx-vars{
 
-// $card-background-color: $white;
-// $dark-card-background-color: $dark-gray4;
+/*! Components */
+
+// --card-padding: $pt-grid-size * 2;
+
+--card-background-color: var(--white);
+--dark-card-background-color: var(--dark-gray4);
+
+}
+
+// $card-padding: var(--card-padding);
+
+$card-background-color: var(--card-background-color);
+$dark-card-background-color: var(--dark-card-background-color);

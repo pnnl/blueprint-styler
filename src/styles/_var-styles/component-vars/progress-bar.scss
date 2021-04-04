@@ -1,22 +1,43 @@
-// // common.scss
-// $progress-track-color: hslax(var(--gray1-hsl), 0.2);
-// $progress-head-color: hslax(var(--gray1-hsl), 0.8);
-// $dark-progress-track-color: hslax(var(--black-hsl), 0.5);
-// $dark-progress-head-color: $gray3;
+:root, .bpx-vars{
 
-// // progress-bar.scss
-// $progress-bar-stripes-color: hslax(var(--white-hsl), 0.2);
+/*! Components */
 
-// $progress-bar-height: round($pt-grid-size * 0.8);
-// $progress-bar-stripes-size: $pt-grid-size * 3;
-// $progress-bar-border-radius: $pt-grid-size * 4;
+// common.scss
+--progress-track-color: hsla(var(--gray1-hsl), 0.2);
+--progress-head-color: hsla(var(--gray1-hsl), 0.8);
+--dark-progress-track-color: hsla(var(--black-hsl), 0.5);
+--dark-progress-head-color: var(--gray3);
 
-// $progress-bar-gradient: linear-gradient(
-//   -45deg,
-//   $progress-bar-stripes-color 25%,
-//   transparent 25%,
-//   transparent 50%,
-//   $progress-bar-stripes-color 50%,
-//   $progress-bar-stripes-color 75%,
-//   transparent 75%
-// );
+// progress-bar.scss
+--progress-bar-stripes-color: hsla(var(--white-hsl), 0.2);
+
+// --progress-bar-height: calc(var(--pt-grid-size) * 0.8);
+// --progress-bar-stripes-size: calc(var(--pt-grid-size) * 3);
+// --progress-bar-border-radius: calc(var(--pt-grid-size) * 4);
+
+--progress-bar-gradient: linear-gradient(
+  -45deg,
+  var(--progress-bar-stripes-color) 25%,
+  transparent 25%,
+  transparent 50%,
+  var(--progress-bar-stripes-color) 50%,
+  var(--progress-bar-stripes-color) 75%,
+  transparent 75%
+);
+
+}
+
+// common.scss
+$progress-track-color: var(--progress-track-color);
+$progress-head-color: var(--progress-head-color);
+$dark-progress-track-color: var(--dark-progress-track-color);
+$dark-progress-head-color: var(--dark-progress-head-color);
+
+// progress-bar.scss
+$progress-bar-stripes-color: var(--progress-bar-stripes-color);
+
+// $progress-bar-height: var(--progress-bar-height);
+// $progress-bar-stripes-size: var(--progress-bar-stripes-size);
+// $progress-bar-border-radius: var(--progress-bar-border-radius);
+
+$progress-bar-gradient: var(--progress-bar-gradient);

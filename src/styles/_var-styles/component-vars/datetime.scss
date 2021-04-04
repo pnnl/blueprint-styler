@@ -1,35 +1,77 @@
-// // common.scss
-// $datepicker-padding: $pt-grid-size / 2;
+:root, .bpx-vars{
 
-// $datepicker-min-width: $pt-grid-size * 21;
-// $datepicker-day-size: $pt-grid-size * 3;
-// $datepicker-header-height: $pt-grid-size * 4;
-// $datepicker-header-margin: ($datepicker-header-height - $pt-input-height) / 2;
+/*! Datetime */
 
-// $datepicker-background-color: $white;
-// $datepicker-day-background-color-hover: $light-gray2;
-// $datepicker-day-background-color-active: $light-gray1;
-// $dark-datepicker-background-color: $dark-gray4;
-// $dark-datepicker-day-background-color-hover: $gray1;
-// $dark-datepicker-day-background-color-active: $gray2;
+// common.scss
+// --datepicker-padding: calc(var(--pt-grid-size) / 2);
 
-// $daterangepicker-range-background-color: $light-gray4;
-// $daterangepicker-range-background-color-selected: $light-gray4;
-// $daterangepicker-range-background-color-selected-hover: $light-gray1;
-// $dark-daterangepicker-range-background-color: $dark-gray5;
-// $dark-daterangepicker-range-background-color-selected: $dark-gray5;
-// $dark-daterangepicker-range-background-color-selected-hover: $gray1;
+// --datepicker-min-width: calc(var(--pt-grid-size) * 21);
+// --datepicker-day-size: calc(var(--pt-grid-size) * 3);
+// --datepicker-header-height: calc(var(--pt-grid-size) * 4);
+// --datepicker-header-margin: calc((var(--datepicker-header-height) - var(--pt-input-height)) / 2;)
+
+--datepicker-background-color: var(--white);
+--datepicker-day-background-color-hover: var(--light-gray2);
+--datepicker-day-background-color-active: var(--light-gray1);
+--dark-datepicker-background-color: var(--dark-gray4);
+--dark-datepicker-day-background-color-hover: var(--gray1);
+--dark-datepicker-day-background-color-active: var(--gray2);
+
+--daterangepicker-range-background-color: var(--light-gray4);
+--daterangepicker-range-background-color-selected: var(--light-gray4);
+--daterangepicker-range-background-color-selected-hover: var(--light-gray1);
+--dark-daterangepicker-range-background-color: var(--dark-gray5);
+--dark-daterangepicker-range-background-color-selected: var(--dark-gray5);
+--dark-daterangepicker-range-background-color-selected-hover: var(--gray1);
 
 // // datepicker.scss
-// $cell-size: $pt-grid-size * 3;
-// $header-height: $pt-grid-size * 4;
-// $header-margin: ($header-height - $pt-input-height) / 2;
+// --cell-size: calc(var(--pt-grid-size) * 3);
+// --header-height: calc(var(--pt-grid-size) * 4);
+// --header-margin: calc((var(--header-height) - var(--pt-input-height)) / 2);
 
 // // timepicker.scss
-// $timepicker-input-row-height: $pt-grid-size * 3;
+// --timepicker-input-row-height: calc(var(--pt-grid-size) * 3);
 // // subtract two because of inset shadow
-// $timepicker-input-row-inner-height: $timepicker-input-row-height - 2;
+// --timepicker-input-row-inner-height: calc(var(--timepicker-input-row-height) - 2);
 // // helps focus states of inputs line up correctly
-// $timepicker-row-padding: 0 1px;
-// $timepicker-divider-width: $pt-grid-size * 1.1;
-// $timepicker-control-width: $pt-grid-size * 3.3;
+// --timepicker-row-padding: 0 1px;
+// --timepicker-divider-width: calc(var(--pt-grid-size) * 1.1);
+// --timepicker-control-width: calc(var(--pt-grid-size) * 3.3);
+
+}
+
+// // common.scss
+// $datepicker-padding: var(--datepicker-padding);
+
+$datepicker-min-width: var(--datepicker-min-width);
+$datepicker-day-size: var(--datepicker-day-size);
+$datepicker-header-height: var(--datepicker-header-height);
+$datepicker-header-margin: var(--datepicker-header-margin);
+
+$datepicker-background-color: var(--datepicker-background-color);
+$datepicker-day-background-color-hover: var(--datepicker-day-background-color-hover);
+$datepicker-day-background-color-active: var(--datepicker-day-background-color-active);
+$dark-datepicker-background-color: var(--dark-datepicker-background-color);
+$dark-datepicker-day-background-color-hover: var(--dark-datepicker-day-background-color-hover);
+$dark-datepicker-day-background-color-active: var(--dark-datepicker-day-background-color-active);
+
+// $daterangepicker-range-background-color: var(--daterangepicker-range-background-color);
+// $daterangepicker-range-background-color-selected: var(--daterangepicker-range-background-color-selected);
+// $daterangepicker-range-background-color-selected-hover: var(--daterangepicker-range-background-color-selected-hover);
+// $dark-daterangepicker-range-background-color: var(--dark-daterangepicker-range-background-color);
+// $dark-daterangepicker-range-background-color-selected: var(--dark-daterangepicker-range-background-color-selected);
+// $dark-daterangepicker-range-background-color-selected-hover: var(--dark-daterangepicker-range-background-color-selected-hover);
+
+// // datepicker.scss
+// $cell-size: var(--cell-size);
+// $header-height: var(--header-height);
+// $header-margin: var(--header-margin);
+
+// // timepicker.scss
+// $timepicker-input-row-height: var(--timepicker-input-row-height);
+// // subtract two because of inset shadow
+// $timepicker-input-row-inner-height: var(--timepicker-input-row-inner-height);
+// // helps focus states of inputs line up correctly
+// $timepicker-row-padding: var(--timepicker-row-padding);
+// $timepicker-divider-width: var(--timepicker-divider-width);
+// $timepicker-control-width: var(--timepicker-control-width);

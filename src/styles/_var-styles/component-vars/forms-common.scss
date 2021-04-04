@@ -1,27 +1,59 @@
-// $input-padding-horizontal: $pt-grid-size;
-// $input-small-padding: $pt-input-height-small - $pt-icon-size-standard;
-// $input-font-weight: 400;
-// $input-transition: box-shadow $pt-transition-duration $pt-transition-ease;
+:root, .bpx-vars{
 
-// $input-color: $pt-text-color;
-// $input-color-disabled: $button-color-disabled;
-// $input-placeholder-color: $pt-text-color-disabled;
-// $input-background-color: $white;
-$input-background-color-disabled: hslax(var(--light-gray1-hsl), 0.5);
-// $input-shadow-color-focus: $pt-intent-primary;
-$input-shadow-color-focus-hsl: var(--blue3-hsl);
+/*! Components */
 
-// $dark-input-color: $pt-dark-text-color;
-// $dark-input-color-disabled: $dark-button-color-disabled;
-// $dark-input-placeholder-color: $pt-dark-text-color-disabled;
-$dark-input-background-color: hslax(var(--black-hsl), 0.3);
-$dark-input-background-color-disabled: hslax(var(--dark-gray5-hsl), 0.5);
-// $dark-input-shadow-color-focus: $pt-intent-primary;
-$dark-input-shadow-color-focus-hsl: var(--blue3-hsl);
+// --input-padding-horizontal: var(--pt-grid-size);
+// --input-small-padding: calc(var(--pt-input-height-small) - var(--pt-icon-size-standard));
+// --input-font-weight: 400;
+// --input-transition: box-shadow var(--pt-transition-duration) var(--pt-transition-ease);
 
-// $control-indicator-size: $pt-icon-size-standard;
-// $control-indicator-size-large: $pt-icon-size-large;
+--input-color: var(--pt-text-color);
+--input-color-disabled: var(--button-color-disabled);
+--input-placeholder-color: var(--pt-text-color-disabled);
+--input-background-color: var(--white);
+--input-background-color-disabled: hsla(var(--light-gray1-hsl), 0.5);
+--input-shadow-color-focus: var(--pt-intent-primary);
+--input-shadow-color-focus-hsl: var(--blue3-hsl);
+
+--dark-input-color: var(--pt-dark-text-color);
+--dark-input-color-disabled: var(--dark-button-color-disabled);
+--dark-input-placeholder-color: var(--pt-dark-text-color-disabled);
+--dark-input-background-color: hsla(var(--black-hsl), 0.3);
+--dark-input-background-color-disabled: hsla(var(--dark-gray5-hsl), 0.5);
+--dark-input-shadow-color-focus: var(--pt-intent-primary);
+--dark-input-shadow-color-focus-hsl: var(--blue3-hsl);
+
+// --control-indicator-size: var(--pt-icon-size-standard);
+// --control-indicator-size-large: var(--pt-icon-size-large);
 
 // avoids edge blurriness for light theme focused default input
-// second box-shadow of $pt-input-box-shadow
-$input-box-shadow-focus: inset 0 1px 1px hslax(var(--black-hsl), $pt-drop-shadow-opacity);
+// second box-shadow of var(--pt-input-box-shadow)
+--input-box-shadow-focus: inset 0 1px 1px hsla(var(--black-hsl), var(--pt-drop-shadow-opacity));
+
+}
+
+// $input-padding-horizontal: var(--input-padding-horizontal);
+// $input-small-padding: var(--input-small-padding);
+// $input-font-weight: var(--input-font-weight);
+// $input-transition: var(--input-transition);
+
+$input-color: var(--input-color);
+$input-color-disabled: var(--input-color-disabled);
+$input-placeholder-color: var(--input-placeholder-color);
+$input-background-color: var(--input-background-color);
+$input-background-color-disabled: var(--input-background-color-disabled);
+$input-shadow-color-focus: var(--input-shadow-color-focus);
+$input-shadow-color-focus-hsl: var(--input-shadow-color-focus-hsl);
+
+$dark-input-color: var(--dark-input-color);
+$dark-input-color-disabled: var(--dark-input-color-disabled);
+$dark-input-placeholder-color: var(--dark-input-placeholder-color);
+$dark-input-background-color: var(--dark-input-background-color);
+$dark-input-background-color-disabled: var(--dark-input-background-color-disabled);
+$dark-input-shadow-color-focus: var(--dark-input-shadow-color-focus);
+$dark-input-shadow-color-focus-hsl: var(--dark-input-shadow-color-focus-hsl);
+
+// $control-indicator-size: var(--control-indicator-size);
+// $control-indicator-size-large: var(--control-indicator-size-large);
+
+$input-box-shadow-focus: var(--input-box-shadow-focus);

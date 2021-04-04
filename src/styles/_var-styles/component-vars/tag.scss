@@ -1,0 +1,61 @@
+:root, .bpx-vars{
+
+/*! Components */
+
+// common.scss ------------------------------------
+--tag-default-color: var(--gray1);
+--dark-tag-default-color: var(--gray5);
+--tag-default-color-hsl: var(--gray1-hsl);
+--dark-tag-default-color-hsl: var(--gray5-hsl);
+
+// --tag-height: calc(var(--pt-grid-size) * 2);
+// --tag-line-height: calc(var(--pt-icon-size-standard));
+// --tag-padding-top: calc(var(--tag-height) - var(--tag-line-height)) / 2;
+// --tag-padding: calc(var(--tag-padding-top) * 3);
+// --tag-margin: calc(var(--pt-input-height) - var(--tag-height)) / 2;
+
+// --tag-height-large: calc(var(--pt-grid-size) * 3);
+// --tag-line-height-large: var(--pt-icon-size-large);
+// --tag-padding-large: calc(var(--tag-height-large) - var(--tag-line-height-large));
+
+// --tag-icon-spacing: calc((var(--tag-height) - 12px) / 2);
+// --tag-icon-spacing-large: calc((var(--tag-height-large) - var(--pt-icon-size-standard)) / 2);
+
+// --tag-round-adjustment: 2px;
+
+
+// input.scss ------------------------------------
+// --tag-input-padding: calc((var(--pt-input-height) - var(--tag-height)) / 2);
+
+// --tag-input-icon-padding: calc((var(--pt-input-height) - var(--pt-icon-size-standard)) / 2);
+// --tag-input-icon-padding-large: calc((var(--pt-input-height-large) - var(--pt-icon-size-large)) / 2);
+
+}
+
+// common.scss ------------------------------------
+$tag-default-color: var(--tag-default-color);
+$dark-tag-default-color: var(--dark-tag-default-color);
+$tag-default-color-hsl: var(--tag-default-color-hsl);
+$dark-tag-default-color-hsl: var(--dark-tag-default-color-hsl);
+
+// $tag-height: var(--tag-height);
+// $tag-line-height: var(--tag-line-height);
+// $tag-padding-top: var(--tag-padding-top);
+// $tag-padding: var(--tag-padding);
+// $tag-margin: var(--tag-margin);
+
+// $tag-height-large: var(--tag-height-large);
+// $tag-line-height-large: var(--tag-line-height-large);
+// $tag-padding-large: var(--tag-padding-large);
+
+// $tag-icon-spacing: var(--tag-icon-spacing);
+// $tag-icon-spacing-large: var(--tag-icon-spacing-large);
+
+// $tag-round-adjustment: var(--tag-round-adjustment);
+
+
+// input.scss ------------------------------------
+// $tag-input-padding: var(--tag-input-padding);
+
+// $tag-input-icon-padding: var(--tag-input-icon-padding);
+// $tag-input-icon-padding-large: var(--tag-input-icon-padding-large);

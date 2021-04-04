@@ -1,7 +1,22 @@
-// $dialog-border-radius: $pt-border-radius * 2;
-// $dialog-margin: ($pt-grid-size * 3) 0;
-// $dialog-padding: $pt-grid-size * 2;
+:root, .bpx-vars{
+
+/*! Components */
+
+// --dialog-border-radius: calc(var(--pt-border-radius) * 2);
+// --dialog-margin: calc(var(--pt-grid-size) * 3) 0;
+// --dialog-padding: calc(var(--pt-grid-size) * 2);
 
 // // multistep-dialog.scss
-// $dialog-border-radius: $pt-border-radius * 2;
-// $step-radius: $pt-border-radius * 2;
+// --dialog-border-radius: calc(var(--pt-border-radius) * 2);
+// --step-radius: calc(var(--pt-border-radius) * 2);
+
+}
+
+
+// $dialog-border-radius: var(--dialog-border-radius);
+// $dialog-margin: var(--dialog-margin);
+// $dialog-padding: var(--dialog-padding);
+
+// // multistep-dialog.scss
+// $dialog-border-radius: var(--dialog-border-radius);
+// $step-radius: var(--step-radius);

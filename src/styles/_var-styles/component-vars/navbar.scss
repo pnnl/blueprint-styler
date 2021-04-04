@@ -1,4 +1,15 @@
-// $navbar-padding: $pt-grid-size * 1.5;
+:root, .bpx-vars{
 
-// $navbar-background-color: $white;
-// $dark-navbar-background-color: $dark-gray5;
+/*! Components */
+
+// --navbar-padding: calc(var(--pt-grid-size) * 1.5);
+
+--navbar-background-color: var(--white);
+--dark-navbar-background-color: var(--dark-gray5);
+
+}
+
+// $navbar-padding: var(--navbar-padding);
+
+$navbar-background-color: var(--navbar-background-color);
+$dark-navbar-background-color: var(--dark-navbar-background-color);

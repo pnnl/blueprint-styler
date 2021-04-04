@@ -1,126 +1,261 @@
+:root, .bpx-vars{
+
+/*! Table */
+
+
 // table.scss --------------------------------------
-// $body-z-index: $pt-z-index-content;
-// $column-z-index: $body-z-index + 1;
-// $row-z-index: $column-z-index + 1;
-// $menu-z-index: $row-z-index + 1;
+// --body-z-index: var(--pt-z-index-content);
+// --column-z-index: var(--body-z-index) + 1;
+// --row-z-index: var(--column-z-index) + 1;
+// --menu-z-index: var(--row-z-index) + 1;
 
 
 
 // cell/common.scss.scss --------------------------------------
 
-// $cell-border-width: 1px;
-// $frozen-cell-border-width: 3px;
+// --cell-border-width: 1px;
+// --frozen-cell-border-width: 3px;
 
-// $cell-padding-horizontal: $pt-grid-size;
-// $cell-padding-vertical: 0;
-// $cell-padding: $cell-padding-vertical $cell-padding-horizontal;
-// $cell-height: $pt-grid-size * 2;
-// $large-cell-height: $pt-grid-size * 3;
+// --cell-padding-horizontal: var(--pt-grid-size);
+// --cell-padding-vertical: 0;
+// --cell-padding: var(--cell-padding-vertical) var(--cell-padding-horizontal);
+// --cell-height: var(--pt-grid-size) * 2;
+// --large-cell-height: var(--pt-grid-size) * 3;
 
-$cell-background-color: $white;
-// $cell-background-color-opacity: 0.1;
-// $cell-border-color: $pt-divider-black;
-// $cell-text-color: $pt-text-color;
-// $dark-cell-background-color: $dark-gray3;
-$dark-cell-border-color: $pt-dark-divider-black;
-$dark-cell-text-color: $pt-dark-text-color;
+--cell-background-color: var(--white);
+--cell-background-color-opacity: 0.1;
+--cell-border-color: var(--pt-divider-black);
+--cell-text-color: var(--pt-text-color);
+--dark-cell-background-color: var(--dark-gray3);
+--dark-cell-border-color: var(--pt-dark-divider-black);
+--dark-cell-text-color: var(--pt-dark-text-color);
 
-// $cell-transition-duration: $pt-transition-duration * 3;
+// --cell-transition-duration: var(--pt-transition-duration) * 3;
 
 
 
 // common/variables.scss --------------------------------------
-// $cell-border-width : 1px;
+// --cell-border-width : 1px;
 
-$table-background-color: $light-gray5;
-$dark-table-background-color: $dark-gray4;
+--table-background-color: var(--light-gray5);
+--dark-table-background-color: var(--dark-gray4);
 
 // EXTRA-hsl
-$table-background-color-hsl: var(--light-gray5-hsl);
-$dark-table-background-color-hsl: var(--dark-gray4-hsl);
+--table-background-color-hsl: var(--light-gray5-hsl);
+--dark-table-background-color-hsl: var(--dark-gray4-hsl);
 
 // // Selecting
-// $select-column-cursor: s-resize;
-// $select-row-cursor: e-resize;
-// $select-table-cursor: se-resize;
-// $select-cell-cursor: cell;
-// $select-text-cursor: text;
+// --select-column-cursor: s-resize;
+// --select-row-cursor: e-resize;
+// --select-table-cursor: se-resize;
+// --select-cell-cursor: cell;
+// --select-text-cursor: text;
 
 // // Resizing
-// $resize-vertical-cursor: ew-resize;
-// $resize-horizontal-cursor: ns-resize;
+// --resize-vertical-cursor: ew-resize;
+// --resize-horizontal-cursor: ns-resize;
 
 // // Actions
-// $action-cursor: pointer;
+// --action-cursor: pointer;
 
-// $region-layer-z-index: $pt-z-index-overlay;
-// $interactive-cell-z-index: $pt-z-index-overlay + 1;
+// --region-layer-z-index: var(--pt-z-index-overlay);
+// --interactive-cell-z-index: var(--pt-z-index-overlay) + 1;
 
 
 
 // headers/common.scss --------------------------------------
 
-// $column-header-min-height: $pt-grid-size * 3;
-// $row-header-min-width: $column-header-min-height;
-// $row-header-padding: 0 $pt-grid-size / 2;
+// --column-header-min-height: var(--pt-grid-size) * 3;
+// --row-header-min-width: var(--column-header-min-height);
+// --row-header-padding: 0 var(--pt-grid-size) / 2;
 
-// $column-header-min-height: $pt-grid-size * 3;
-// $row-header-min-width: $column-header-min-height;
-// $row-header-padding: 0 $pt-grid-size / 2;
-// $column-name-text-skeleton-height: $pt-grid-size * 0.8;
-// $interaction-bar-height: $pt-grid-size * 2;
+// --column-header-min-height: var(--pt-grid-size) * 3;
+// --row-header-min-width: var(--column-header-min-height);
+// --row-header-padding: 0 var(--pt-grid-size) / 2;
+// --column-name-text-skeleton-height: var(--pt-grid-size) * 0.8;
+// --interaction-bar-height: var(--pt-grid-size) * 2;
 
-$header-background-color: $table-background-color;
-$header-hover-background-color: $light-gray3;
-$column-header-text-color: $pt-text-color;
-$row-header-text-color: $pt-text-color-muted;
+--header-background-color: var(--table-background-color);
+--header-hover-background-color: var(--light-gray3);
+--column-header-text-color: var(--pt-text-color);
+--row-header-text-color: var(--pt-text-color-muted);
 
-$dark-header-background-color: $dark-table-background-color;
-$dark-header-hover-background-color: $dark-gray5;
-$dark-column-header-text-color: $pt-dark-text-color;
-$dark-row-header-text-color: $pt-dark-text-color-muted;
+--dark-header-background-color: var(--dark-table-background-color);
+--dark-header-hover-background-color: var(--dark-gray5);
+--dark-column-header-text-color: var(--pt-dark-text-color);
+--dark-row-header-text-color: var(--pt-dark-text-color-muted);
 
-$header-selected-background-color: $pt-intent-primary;
+--header-selected-background-color: var(--pt-intent-primary);
 
-// $interaction-bar-height: $pt-grid-size * 2;
+// --interaction-bar-height: var(--pt-grid-size) * 2;
 
 // EXTRA-hsl
-$header-background-color-hsl: $table-background-color-hsl;
-$header-hover-background-color-hsl: var(--light-gray3-hsl);
-$header-selected-background-hsl: var(--pt-intent-primary-hue), 40%, 97%; // mix($pt-intent-primary, $header-background-color, 10%)
-$header-selected-hover-background-hsl: var(--pt-intent-primary-hue), 40%, 91%; // mix($pt-intent-primary, $header-hover-background-color, 10%)
-// $column-header-text-color-hsl: $pt-text-color;
-// $row-header-text-color-hsl: $pt-text-color-muted;
+--header-background-color-hsl: var(--table-background-color-hsl);
+--header-hover-background-color-hsl: var(--light-gray3-hsl);
+--header-selected-background-color-hsl: var(--pt-intent-primary-hue), 40%, 97%; // mix(var(--pt-intent-primary), var(--header-background-color), 10%)
+--header-selected-hover-background-color-hsl: var(--pt-intent-primary-hue), 40%, 91%; // mix(var(--pt-intent-primary), var(--header-hover-background-color), 10%)
+--column-header-text-color-hsl: var(--pt-text-color);
+--row-header-text-color-hsl: var(--pt-text-color-muted);
 
-$dark-header-background-color-hsl: $dark-table-background-color-hsl;
-$dark-header-hover-background-color-hsl: var(--dark-gray5-hsl);
-$dark-header-selected-background-hsl:  var(--pt-intent-primary-hue), 40%, 25%; // mix($pt-intent-primary, $dark-header-background-color, 10%)
-$dark-header-selected-hover-background-hsl:  var(--pt-intent-primary-hue), 40%, 29%; // mix($pt-intent-primary, $dark-header-hover-background-color, 10%)
-// $dark-column-header-text-color-hsl: $pt-dark-text-color;
-// $dark-row-header-text-color-hsl: $pt-dark-text-color-muted;
+--dark-header-background-color-hsl: var(--dark-table-background-color-hsl);
+--dark-header-hover-background-color-hsl: var(--dark-gray5-hsl);
+--dark-header-selected-background-color-hsl:  var(--pt-intent-primary-hue), 40%, 25%; // mix(var(--pt-intent-primary), var(--dark-header-background-color), 10%)
+--dark-header-selected-hover-background-color-hsl:  var(--pt-intent-primary-hue), 40%, 29%; // mix(var(--pt-intent-primary), var(--dark-header-hover-background-color), 10%)
+--dark-column-header-text-color-hsl: var(--pt-dark-text-color);
+--dark-row-header-text-color-hsl: var(--pt-dark-text-color-muted);
 
-$header-selected-background-color-hsl: $pt-intent-primary-hsl;
+--header-selected-background-color-hsl: var(--pt-intent-primary-hsl);
 
 
 
 // interactions/interactions.scss --------------------------------------
 
-// $resize-handle-target-width: 5px;
-// $resize-handle-width: 3px;
-// $resize-handle-position-correction: -3px;
-// $resize-handle-padding: 2px;
-// $resize-handle-color: $pt-intent-primary;
-// $resize-handle-dragging-color: $pt-intent-primary;
+// --resize-handle-target-width: 5px;
+// --resize-handle-width: 3px;
+// --resize-handle-position-correction: -3px;
+// --resize-handle-padding: 2px;
+--resize-handle-color: var(--pt-intent-primary);
+--resize-handle-dragging-color: var(--pt-intent-primary);
 
 // // we want to square off the margin around the handle
 // // so we need a special value based on the handle icon shape
-// $reorder-handle-width: 22px;
+// --reorder-handle-width: 22px;
 
 
 
 // layers.scss --------------------------------------
-$region-default-color: $gray3;
-$region-selected-color: $pt-intent-primary;
+--region-default-color: var(--gray3);
+--region-selected-color: var(--pt-intent-primary);
 // EXTRA-hsl
-$region-default-color-hsl: var(--gray3-hsl);
-$region-selected-color-hsl: var(--pt-intent-primary-hsl);
+--region-default-color-hsl: var(--gray3-hsl);
+--region-selected-color-hsl: var(--pt-intent-primary-hsl);
+
+
+}
+
+// table.scss --------------------------------------
+// $body-z-index: var(--body-z-index);
+// $column-z-index: var(--column-z-index);
+// $row-z-index: var(--row-z-index);
+// $menu-z-index: var(--menu-z-index);
+
+
+
+// cell/common.scss.scss --------------------------------------
+
+// $cell-border-width: var(--cell-border-width);
+// $frozen-cell-border-width: var(--frozen-cell-border-width);
+
+// $cell-padding-horizontal: var(--cell-padding-horizontal);
+// $cell-padding-vertical: var(--cell-padding-vertical);
+// $cell-padding: var(--cell-padding);
+// $cell-height: var(--cell-height);
+// $large-cell-height: var(--large-cell-height);
+
+$cell-background-color: var(--cell-background-color);
+$cell-background-color-opacity: var(--cell-background-color-opacity);
+$cell-border-color: var(--cell-border-color);
+$cell-text-color: var(--cell-text-color);
+$dark-cell-background-color: var(--dark-cell-background-color);
+$dark-cell-border-color: var(--dark-cell-border-color);
+$dark-cell-text-color: var(--dark-cell-text-color);
+
+// $cell-transition-duration: var(--cell-transition-duration);
+
+
+
+// common/variables.scss --------------------------------------
+// $cell-border-width : var(--cell-border-width );
+
+$table-background-color: var(--table-background-color);
+$dark-table-background-color: var(--dark-table-background-color);
+
+// EXTRA-hsl
+$table-background-color-hsl: var(--table-background-color-hsl);
+$dark-table-background-color-hsl: var(--dark-table-background-color-hsl);
+
+// // Selecting
+// $select-column-cursor: var(--select-column-cursor);
+// $select-row-cursor: var(--select-row-cursor);
+// $select-table-cursor: var(--select-table-cursor);
+// $select-cell-cursor: var(--select-cell-cursor);
+// $select-text-cursor: var(--select-text-cursor);
+
+// // Resizing
+// $resize-vertical-cursor: var(--resize-vertical-cursor);
+// $resize-horizontal-cursor: var(--resize-horizontal-cursor);
+
+// // Actions
+// $action-cursor: var(--action-cursor);
+
+// $region-layer-z-index: var(--region-layer-z-index);
+// $interactive-cell-z-index: var(--interactive-cell-z-index);
+
+
+
+// headers/common.scss --------------------------------------
+
+// $column-header-min-height: var(--column-header-min-height);
+// $row-header-min-width: var(--row-header-min-width);
+// $row-header-padding: var(--row-header-padding);
+
+// $column-header-min-height: var(--column-header-min-height);
+// $row-header-min-width: var(--row-header-min-width);
+// $row-header-padding: var(--row-header-padding);
+// $column-name-text-skeleton-height: var(--column-name-text-skeleton-height);
+// $interaction-bar-height: var(--interaction-bar-height);
+
+$header-background-color: var(--header-background-color);
+$header-hover-background-color: var(--header-hover-background-color);
+$column-header-text-color: var(--column-header-text-color);
+$row-header-text-color: var(--row-header-text-color);
+
+$dark-header-background-color: var(--dark-header-background-color);
+$dark-header-hover-background-color: var(--dark-header-hover-background-color);
+$dark-column-header-text-color: var(--dark-column-header-text-color);
+$dark-row-header-text-color: var(--dark-row-header-text-color);
+
+$header-selected-background-color: var(--header-selected-background-color);
+
+// $interaction-bar-height: var(--interaction-bar-height);
+
+// EXTRA-hsl
+$header-background-color-hsl: var(--header-background-color-hsl);
+$header-hover-background-color-hsl: var(--header-hover-background-color-hsl);
+$header-selected-background-color-hsl: var(--header-selected-background-color-hsl);
+$header-selected-hover-background-color-hsl: var(--header-selected-hover-background-color-hsl);
+$column-header-text-color-hsl: var(--column-header-text-color-hsl);
+$row-header-text-color-hsl: var(--row-header-text-color-hsl);
+
+$dark-header-background-color-hsl: var(--dark-header-background-color-hsl);
+$dark-header-hover-background-color-hsl: var(--dark-header-hover-background-color-hsl);
+$dark-header-selected-background-color-hsl: var(--dark-header-selected-background-color-hsl);
+$dark-header-selected-hover-background-color-hsl: var(--dark-header-selected-hover-background-color-hsl);
+$dark-column-header-text-color-hsl: var(--dark-column-header-text-color-hsl);
+$dark-row-header-text-color-hsl: var(--dark-row-header-text-color-hsl);
+
+$header-selected-background-color-hsl: var(--header-selected-background-color-hsl);
+
+
+
+// interactions/interactions.scss --------------------------------------
+
+// $resize-handle-target-width: var(--resize-handle-target-width);
+// $resize-handle-width: var(--resize-handle-width);
+// $resize-handle-position-correction: var(--resize-handle-position-correction);
+// $resize-handle-padding: var(--resize-handle-padding);
+$resize-handle-color: var(--resize-handle-color);
+$resize-handle-dragging-color: var(--resize-handle-dragging-color);
+
+// // we want to square off the margin around the handle
+// // so we need a special value based on the handle icon shape
+// $reorder-handle-width: var(--reorder-handle-width);
+
+
+
+// layers.scss --------------------------------------
+$region-default-color: var(--region-default-color);
+$region-selected-color: var(--region-selected-color);
+// EXTRA-hsl
+$region-default-color-hsl: var(--region-default-color-hsl);
+$region-selected-color-hsl: var(--region-selected-color-hsl);
