@@ -24,12 +24,9 @@ hsla
 
 
 # TODO
-- export more vars
-- dark theme color mirror
-- `--shadow-color:var(--black);` and `--shine-color:var(--white);`
-- `--background:var(--white);`
-- math?
 - fix the other styles, now that merge properties and delete duplicates is gone...
+- dark theme color mirror
+- math?
 
 # Changes
 - @import `~@blueprintjs` except `~@blueprintjs/icons`

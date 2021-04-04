@@ -28,7 +28,7 @@
 
 // avoids edge blurriness for light theme focused default input
 // second box-shadow of var(--pt-input-box-shadow)
---input-box-shadow-focus: inset 0 1px 1px hsla(var(--black-hsl), var(--pt-drop-shadow-opacity));
+--input-box-shadow-focus: inset 0 1px 1px hsla(var(--pt-shadow-color-hsl), var(--pt-drop-shadow-opacity));
 
 }
 

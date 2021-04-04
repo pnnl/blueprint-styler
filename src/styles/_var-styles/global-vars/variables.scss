@@ -62,54 +62,57 @@
 /* --pt-z-index-overlay: $pt-z-index-content + 10; */
 
 /* Shadow opacities */
---pt-border-shadow-opacity: 0.1;
---pt-drop-shadow-opacity: 0.2;
+--pt-border-shadow-opacity:      0.1;
+--pt-drop-shadow-opacity:        0.2;
 --pt-dark-border-shadow-opacity: 0.2; /* $pt-border-shadow-opacity * 2;*/
---pt-dark-drop-shadow-opacity: 0.4; /* $pt-drop-shadow-opacity * 2;*/
+--pt-dark-drop-shadow-opacity:   0.4; /* $pt-drop-shadow-opacity * 2;*/
+
+--pt-shadow-color-hsl: var(--black-hsl);
+--pt-dark-shadow-color-hsl: var(--pt-shadow-color-hsl);
 
 /* Elevations */
 /* all shadow lists must be the same length to avoid flicker in transitions. */
 --pt-elevation-shadow-0:
   0 0 0 1px var(--pt-divider-black),
-  0 0 0 hsla(var(--black-hsl), 0),
-  0 0 0 hsla(var(--black-hsl), 0);
+  0 0 0 hsla(var(--pt-shadow-color-hsl), 0),
+  0 0 0 hsla(var(--pt-shadow-color-hsl), 0);
 --pt-elevation-shadow-1:
-  0 0 0 1px hsla(var(--black-hsl), var(--pt-border-shadow-opacity)),
-  0 0 0 hsla(var(--black-hsl), 0),
-  0 1px 1px hsla(var(--black-hsl), var(--pt-drop-shadow-opacity));
+  0 0 0 1px hsla(var(--pt-shadow-color-hsl), var(--pt-border-shadow-opacity)),
+  0 0 0 hsla(var(--pt-shadow-color-hsl), 0),
+  0 1px 1px hsla(var(--pt-shadow-color-hsl), var(--pt-drop-shadow-opacity));
 --pt-elevation-shadow-2:
-  0 0 0 1px hsla(var(--black-hsl), var(--pt-border-shadow-opacity)),
-  0 1px 1px hsla(var(--black-hsl), var(--pt-drop-shadow-opacity)),
-  0 2px 6px hsla(var(--black-hsl), var(--pt-drop-shadow-opacity));
+  0 0 0 1px hsla(var(--pt-shadow-color-hsl), var(--pt-border-shadow-opacity)),
+  0 1px 1px hsla(var(--pt-shadow-color-hsl), var(--pt-drop-shadow-opacity)),
+  0 2px 6px hsla(var(--pt-shadow-color-hsl), var(--pt-drop-shadow-opacity));
 --pt-elevation-shadow-3:
-  0 0 0 1px hsla(var(--black-hsl), var(--pt-border-shadow-opacity)),
-  0 2px 4px hsla(var(--black-hsl), var(--pt-drop-shadow-opacity)),
-  0 8px 24px hsla(var(--black-hsl), var(--pt-drop-shadow-opacity));
+  0 0 0 1px hsla(var(--pt-shadow-color-hsl), var(--pt-border-shadow-opacity)),
+  0 2px 4px hsla(var(--pt-shadow-color-hsl), var(--pt-drop-shadow-opacity)),
+  0 8px 24px hsla(var(--pt-shadow-color-hsl), var(--pt-drop-shadow-opacity));
 --pt-elevation-shadow-4:
-  0 0 0 1px hsla(var(--black-hsl), var(--pt-border-shadow-opacity)),
-  0 4px 8px hsla(var(--black-hsl), var(--pt-drop-shadow-opacity)),
-  0 18px 46px 6px hsla(var(--black-hsl), var(--pt-drop-shadow-opacity));
+  0 0 0 1px hsla(var(--pt-shadow-color-hsl), var(--pt-border-shadow-opacity)),
+  0 4px 8px hsla(var(--pt-shadow-color-hsl), var(--pt-drop-shadow-opacity)),
+  0 18px 46px 6px hsla(var(--pt-shadow-color-hsl), var(--pt-drop-shadow-opacity));
 
 --pt-dark-elevation-shadow-0:
-  0 0 0 1px var(--pt-dark-divider-black),
-  0 0 0 hsla(var(--black-hsl), 0),
-  0 0 0 hsla(var(--black-hsl), 0);
+  0 0 0 1px var(--pt-dark-shadow-color-hsl),
+  0 0 0 hsla(var(--pt-dark-shadow-color-hsl), 0),
+  0 0 0 hsla(var(--pt-dark-shadow-color-hsl), 0);
 --pt-dark-elevation-shadow-1:
-  0 0 0 1px hsla(var(--black-hsl), var(--pt-dark-border-shadow-opacity)),
-  0 0 0 hsla(var(--black-hsl), 0),
-  0 1px 1px hsla(var(--black-hsl), var(--pt-dark-drop-shadow-opacity));
+  0 0 0 1px hsla(var(--pt-dark-shadow-color-hsl), var(--pt-dark-border-shadow-opacity)),
+  0 0 0 hsla(var(--pt-dark-shadow-color-hsl), 0),
+  0 1px 1px hsla(var(--pt-dark-shadow-color-hsl), var(--pt-dark-drop-shadow-opacity));
 --pt-dark-elevation-shadow-2:
-  0 0 0 1px hsla(var(--black-hsl), var(--pt-dark-border-shadow-opacity)),
-  0 1px 1px hsla(var(--black-hsl), var(--pt-dark-drop-shadow-opacity)),
-  0 2px 6px hsla(var(--black-hsl), var(--pt-dark-drop-shadow-opacity));
+  0 0 0 1px hsla(var(--pt-dark-shadow-color-hsl), var(--pt-dark-border-shadow-opacity)),
+  0 1px 1px hsla(var(--pt-dark-shadow-color-hsl), var(--pt-dark-drop-shadow-opacity)),
+  0 2px 6px hsla(var(--pt-dark-shadow-color-hsl), var(--pt-dark-drop-shadow-opacity));
 --pt-dark-elevation-shadow-3:
-  0 0 0 1px hsla(var(--black-hsl), var(--pt-dark-border-shadow-opacity)),
-  0 2px 4px hsla(var(--black-hsl), var(--pt-dark-drop-shadow-opacity)),
-  0 8px 24px hsla(var(--black-hsl), var(--pt-dark-drop-shadow-opacity));
+  0 0 0 1px hsla(var(--pt-dark-shadow-color-hsl), var(--pt-dark-border-shadow-opacity)),
+  0 2px 4px hsla(var(--pt-dark-shadow-color-hsl), var(--pt-dark-drop-shadow-opacity)),
+  0 8px 24px hsla(var(--pt-dark-shadow-color-hsl), var(--pt-dark-drop-shadow-opacity));
 --pt-dark-elevation-shadow-4:
-  0 0 0 1px hsla(var(--black-hsl), var(--pt-dark-border-shadow-opacity)),
-  0 4px 8px hsla(var(--black-hsl), var(--pt-dark-drop-shadow-opacity)),
-  0 18px 46px 6px hsla(var(--black-hsl), var(--pt-dark-drop-shadow-opacity));
+  0 0 0 1px hsla(var(--pt-dark-shadow-color-hsl), var(--pt-dark-border-shadow-opacity)),
+  0 4px 8px hsla(var(--pt-dark-shadow-color-hsl), var(--pt-dark-drop-shadow-opacity)),
+  0 18px 46px 6px hsla(var(--pt-dark-shadow-color-hsl), var(--pt-dark-drop-shadow-opacity));
 
 /* Transitions */
 --pt-transition-ease: cubic-bezier(0.4, 1, 0.75, 0.9);
@@ -119,7 +122,7 @@
 /* Light theme styles */
 
 --pt-input-box-shadow:
-  inset 0 0 0 1px hsla(var(--black-hsl), 0.15),
+  inset 0 0 0 1px hsla(var(--pt-dark-shadow-color-hsl), 0.15),
   inset 0 1px 1px hsla(var(--black-hsl), var(--pt-drop-shadow-opacity));
 
 --pt-dialog-box-shadow: var(--pt-elevation-shadow-4);
@@ -129,8 +132,8 @@
 /* Dark theme styles */
 
 --pt-dark-input-box-shadow:
-  inset 0 0 0 1px hsla(var(--black-hsl), 0.3),
-  inset 0 1px 1px hsla(var(--black-hsl), var(--pt-dark-drop-shadow-opacity));
+  inset 0 0 0 1px hsla(var(--pt-dark-shadow-color-hsl), 0.3),
+  inset 0 1px 1px hsla(var(--pt-dark-shadow-color-hsl), var(--pt-dark-drop-shadow-opacity));
 
 --pt-dark-dialog-box-shadow: var(--pt-dark-elevation-shadow-4);
 --pt-dark-popover-box-shadow: var(--pt-dark-elevation-shadow-3);
