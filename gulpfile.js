@@ -13,7 +13,7 @@ const cssBeautify = require('gulp-cssbeautify')
 const extractCssVarsToAllFormats = require('./scripts/gulp-extract-css-vars-to-all-formats')
 
 const sassTask = function () {
-    const scssOutput = gulp.src('./src/styles/_var-styles/*.index.scss')
+    const scssOutput = gulp.src('./src/styles/_*-styles/*.index.scss')
         .pipe(sass(sassConfig).on('error', sass.logError))
 
     const cssOutput = scssOutput
