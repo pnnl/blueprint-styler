@@ -25,6 +25,8 @@ hsla
 
 # TODO
 - fix the other styles, now that merge properties and delete duplicates is gone...
+  - [postcss-remove-declaration](https://www.npmjs.com/package/postcss-remove-declaration/v/1.0.0)
+- https://github.com/postcss/postcss-custom-properties
 - dark theme color mirror
 - math?
 

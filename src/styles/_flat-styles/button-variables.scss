@@ -1,0 +1,35 @@
+#{$root-selector}{
+  --button-box-shadow:
+    inset 0 0 0 var(--button-border-width) hsla(var(--pt-shadow-color-hsl), 0.15);
+    // inset 0 var(--button-border-width) 0 hsla(var(--pt-shadow-color-hsl), 0.1);
+  --button-box-shadow-active:
+    inset 0 0 0 var(--button-border-width) hsla(var(--pt-shadow-color-hsl), 0.3),
+    // inset 0 1px 2px hsla(var(--pt-shadow-color-hsl), 0.2);
+  --button-intent-box-shadow: unset;
+    // inset 0 0 0 var(--button-border-width) hsla(var(--pt-shadow-color-hsl), 0.4),
+    // inset 0 var(--button-border-width) 0 hsla(var(--pt-shadow-color-hsl), 0.2);
+  --button-intent-box-shadow-active: unset;
+    // inset 0 0 0 var(--button-border-width) hsla(var(--pt-shadow-color-hsl), 0.4),
+    // inset 0 1px 2px hsla(var(--pt-shadow-color-hsl), 0.2);
+
+  --button-gradient: unset; // linear-gradient(to bottom, rgba($white, 0.8), rgba($white, 0)) ;
+  --button-intent-gradient: unset; // linear-gradient(to bottom, rgba($white, 0.1), rgba($white, 0)) ;
+  --dark-button-gradient: unset; // linear-gradient(to bottom, rgba($white, 0.05), rgba($white, 0)) ;
+
+  --pt-intent-primary-hsl:        var(--blue3-hsl);
+  --pt-intent-primary-hover-hsl:  var(--blue4-hsl);
+  --pt-intent-primary-active-hsl: var(--blue2-hsl);
+
+  --pt-intent-success-hsl:        var(--green3-hsl);
+  --pt-intent-success-hover-hsl:  var(--green4-hsl);
+  --pt-intent-success-active-hsl: var(--green2-hsl);
+
+  --pt-intent-warning-hsl:        var(--orange3-hsl);
+  --pt-intent-warning-hover-hsl:  var(--orange4-hsl);
+  --pt-intent-warning-active-hsl: var(--orange2-hsl);
+
+  --pt-intent-danger-hsl:        var(--red3-hsl);
+  --pt-intent-danger-hover-hsl:  var(--red4-hsl);
+  --pt-intent-danger-active-hsl: var(--red2-hsl);
+
+}

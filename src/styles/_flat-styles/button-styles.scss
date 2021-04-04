@@ -1,0 +1,14 @@
+.bp3-button, a, a.bp3-button{
+  transition: background-color 100ms linear;
+  &:active{
+    transition-duration: 50ms;
+  }
+}
+
+// .bp3-input, .bp3-file-upload-input{
+//   box-shadow:
+//     0 0 0 0 transparent,
+//     0 0 0 0 transparent,
+//     inset 0 0 0 $button-border-width rgba($black, 0.15);
+//     // inset 0 1px 1px rgba(16,22,26,.2);
+// }
