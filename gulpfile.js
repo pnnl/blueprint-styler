@@ -9,6 +9,7 @@ sass.compiler = require('node-sass')
 
 const rename = require("gulp-rename")
 const postcss = require('gulp-postcss')
+const postcssCssNano = require("cssnano")
 const cssBeautify = require('gulp-cssbeautify')
 const extractCssVarsToAllFormats = require('./scripts/gulp-extract-css-vars-to-all-formats')
 
@@ -29,12 +30,14 @@ const sassTask = function () {
         .pipe(gulp.dest('./lib'))
 
     const varsOutput = scssOutput
-        .pipe(postcss([require("cssnano")]))
+        .pipe(postcss([
+            postcssCssNano // combines :root{} into a single block
+        ]))
         .pipe(rename(path => {
             path.dirname = '/' + path.basename
         }))
         .pipe(cssBeautify())
-        .pipe(extractCssVarsToAllFormats())
+        .pipe(extractCssVarsToAllFormats()) // build variable files
         // .pipe(rename(path => { console.log(path) }))
         .pipe(gulp.dest('./lib')) // ???
 
