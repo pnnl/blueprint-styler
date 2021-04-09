@@ -1,5 +1,5 @@
 
-exports.ColorsHsl = {
+export const ColorsHsl = {
   GRAYSCALE_HUE: "204",
   BLACK_HSL: "var(--grayscale-hue),24%,8%",
   DARK_GRAY1_HSL: "var(--grayscale-hue),23%,12%",
@@ -104,7 +104,7 @@ exports.ColorsHsl = {
   SEPIA5_HSL: "var(--sepia-hue),48%,59%"
 };
 
-exports.Colors = {
+export const Colors = {
   BLACK: "hsl(var(--black-hsl))",
   DARK_GRAY1: "hsl(var(--dark-gray1-hsl))",
   DARK_GRAY2: "hsl(var(--dark-gray2-hsl))",
@@ -194,30 +194,34 @@ exports.Colors = {
   SEPIA5: "hsl(var(--sepia5-hsl))"
 };
 
-exports.IntentColors = {
+export const IntentColors = {
   PT_INTENT_PRIMARY_HUE: "var(--blue-hue)",
+  PT_INTENT_PRIMARY_HSL: "var(--blue3-hsl)",
   PT_INTENT_PRIMARY_HOVER_HSL: "var(--blue2-hsl)",
   PT_INTENT_PRIMARY_ACTIVE_HSL: "var(--blue1-hsl)",
   PT_INTENT_PRIMARY_TEXT_COLOR_HSL: "var(--blue2-hsl)",
   PT_DARK_INTENT_PRIMARY_TEXT_COLOR_HSL: "var(--blue5-hsl)",
   PT_INTENT_SUCCESS_HUE: "var(--green-hue)",
+  PT_INTENT_SUCCESS_HSL: "var(--green3-hsl)",
   PT_INTENT_SUCCESS_HOVER_HSL: "var(--green2-hsl)",
   PT_INTENT_SUCCESS_ACTIVE_HSL: "var(--green1-hsl)",
   PT_INTENT_SUCCESS_TEXT_COLOR_HSL: "var(--green2-hsl)",
   PT_DARK_INTENT_SUCCESS_TEXT_COLOR_HSL: "var(--green5-hsl)",
   PT_INTENT_WARNING_HUE: "var(--orange-hue)",
+  PT_INTENT_WARNING_HSL: "var(--orange3-hsl)",
   PT_INTENT_WARNING_HOVER_HSL: "var(--orange2-hsl)",
   PT_INTENT_WARNING_ACTIVE_HSL: "var(--orange1-hsl)",
   PT_INTENT_WARNING_TEXT_COLOR_HSL: "var(--orange2-hsl)",
   PT_DARK_INTENT_WARNING_TEXT_COLOR_HSL: "var(--orange5-hsl)",
   PT_INTENT_DANGER_HUE: "var(--red-hue)",
+  PT_INTENT_DANGER_HSL: "var(--red3-hsl)",
   PT_INTENT_DANGER_HOVER_HSL: "var(--red2-hsl)",
   PT_INTENT_DANGER_ACTIVE_HSL: "var(--red1-hsl)",
   PT_INTENT_DANGER_TEXT_COLOR_HSL: "var(--red2-hsl)",
   PT_DARK_INTENT_DANGER_TEXT_COLOR_HSL: "var(--red5-hsl)"
 };
 
-exports.LayoutColors = {
+export const LayoutColors = {
   PT_APP_BACKGROUND_COLOR: "var(--light-gray5)",
   PT_DARK_APP_BACKGROUND_COLOR: "var(--dark-gray3)",
   PT_APP_TOP_BACKGROUND_COLOR: "var(--white)",
@@ -229,7 +233,7 @@ exports.LayoutColors = {
   PT_DISABLED_OPACITY: "0.3"
 };
 
-exports.TextColors = {
+export const TextColors = {
   PT_TEXT_COLOR: "var(--dark-gray1)",
   PT_TEXT_COLOR_MUTED: "var(--gray1)",
   PT_TEXT_COLOR_DISABLED: "hsla(var(--black-hsl),var(--pt-disabled-opacity))",
@@ -247,7 +251,7 @@ exports.TextColors = {
   PT_DARK_CODE_BACKGROUND_COLOR: "hsla(var(--black-hsl),0.3)"
 };
 
-exports.IconColors = {
+export const IconColors = {
   PT_ICON_COLOR: "var(--pt-text-color-muted)",
   PT_ICON_COLOR_HOVER: "var(--pt-text-color)",
   PT_ICON_COLOR_DISABLED: "var(--pt-text-color-disabled)",
@@ -276,6 +280,8 @@ exports.IconColors = {
   PT_INTENT_DANGER_ACTIVE: "hsl(var(--pt-intent-danger-active-hsl))",
   PT_INTENT_DANGER_TEXT_COLOR: "hsl(var(--pt-intent-danger-text-color-hsl))",
   PT_DARK_INTENT_DANGER_TEXT_COLOR: "hsl(var(--pt-dark-intent-danger-text-color-hsl))",
+  PT_FONT_FAMILY: "-apple-system,\"BlinkMacSystemFont\",\"Segoe UI\",\"Roboto\",\"Oxygen\",\"Ubuntu\",\"Cantarell\",\"Open Sans\",\"Helvetica Neue\",\"Icons16\",sans-serif",
+  PT_FONT_FAMILY_MONOSPACE: "Consolas,Menlo,monospace",
   PT_BORDER_RADIUS: "3px",
   PT_ICON_SIZE_STANDARD: "16px",
   PT_ICON_SIZE_LARGE: "20px",
@@ -307,7 +313,7 @@ exports.IconColors = {
   PT_DARK_TOOLTIP_BOX_SHADOW: "var(--pt-dark-popover-box-shadow)"
 };
 
-exports.Components = {
+export const Components = {
   BUTTON_BORDER_WIDTH: "1px",
   BUTTON_BOX_SHADOW: "inset 0 0 0 var(--button-border-width) hsla(var(--pt-shadow-color-hsl),0.2),inset 0 var(--button-border-width) 0 hsla(var(--pt-shadow-color-hsl),0.1)",
   BUTTON_BOX_SHADOW_ACTIVE: "inset 0 0 0 var(--button-border-width) hsla(var(--pt-shadow-color-hsl),0.2),inset 0 1px 2px hsla(var(--pt-shadow-color-hsl),0.2)",
@@ -440,7 +446,7 @@ exports.Components = {
   DARK_TOOLTIP_TEXT_COLOR: "var(--dark-gray5)"
 };
 
-exports.Datetime = {
+export const Datetime = {
   DATEPICKER_BACKGROUND_COLOR: "var(--pt-app-top-background-color)",
   DATEPICKER_DAY_BACKGROUND_COLOR_HOVER: "var(--light-gray2)",
   DATEPICKER_DAY_BACKGROUND_COLOR_ACTIVE: "var(--light-gray1)",
@@ -455,7 +461,7 @@ exports.Datetime = {
   DARK_DATERANGEPICKER_RANGE_BACKGROUND_COLOR_SELECTED_HOVER: "var(--gray1)"
 };
 
-exports.Table = {
+export const Table = {
   CELL_BACKGROUND_COLOR: "var(--pt-app-top-background-color)",
   CELL_BACKGROUND_COLOR_OPACITY: "0.1",
   CELL_BORDER_COLOR: "var(--pt-divider-black)",
