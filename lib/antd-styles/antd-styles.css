@@ -12707,28 +12707,28 @@ a.bp3-button.bp3-intent-danger:after {
 }
 
 .bp3-button-group:not(.bp3-vertical) .bp3-button[class*=bp3-intent-] {
-    border: 0 solid hsla(0,0%,100%,.25);
+    border: 0 solid hslax(var(--white-hsl),.25);
     border-width: 0 1px
 }
 
-.bp3-popover-wrapper:first-child .bp3-button-group:not(.bp3-vertical) .bp3-button[class*=bp3-intent-],>.bp3-button-group:not(.bp3-vertical) .bp3-button[class*=bp3-intent-]:first-child {
+.bp3-button-group:not(.bp3-vertical) .bp3-button[class*=bp3-intent-]:first-child,.bp3-popover-wrapper:first-child .bp3-button-group:not(.bp3-vertical) .bp3-button[class*=bp3-intent-] {
     border-left: 0
 }
 
-.bp3-popover-wrapper:last-child .bp3-button-group:not(.bp3-vertical) .bp3-button[class*=bp3-intent-],>.bp3-button-group:not(.bp3-vertical) .bp3-button[class*=bp3-intent-]:last-child {
+.bp3-button-group:not(.bp3-vertical) .bp3-button[class*=bp3-intent-]:last-child,.bp3-popover-wrapper:last-child .bp3-button-group:not(.bp3-vertical) .bp3-button[class*=bp3-intent-] {
     border-right: 0
 }
 
 .bp3-button-group.bp3-vertical .bp3-button[class*=bp3-intent-] {
-    border: 0 solid hsla(0,0%,100%,.25);
+    border: 0 solid hslax(var(--white-hsl),.25);
     border-width: 1px 0
 }
 
-.bp3-popover-wrapper:first-child .bp3-button-group.bp3-vertical .bp3-button[class*=bp3-intent-],>.bp3-button-group.bp3-vertical .bp3-button[class*=bp3-intent-]:first-child {
+.bp3-button-group.bp3-vertical .bp3-button[class*=bp3-intent-]:first-child,.bp3-popover-wrapper:first-child .bp3-button-group.bp3-vertical .bp3-button[class*=bp3-intent-] {
     border-top: 0
 }
 
-.bp3-popover-wrapper:last-child .bp3-button-group.bp3-vertical .bp3-button[class*=bp3-intent-],>.bp3-button-group.bp3-vertical .bp3-button[class*=bp3-intent-]:last-child {
+.bp3-button-group.bp3-vertical .bp3-button[class*=bp3-intent-]:last-child,.bp3-popover-wrapper:last-child .bp3-button-group.bp3-vertical .bp3-button[class*=bp3-intent-] {
     border-bottom: 0
 }
 
