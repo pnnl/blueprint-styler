@@ -39,6 +39,33 @@
 --pt-dark-intent-danger-text-color-hsl: var(--red5-hsl);
 
 
+$colorAliasesList:
+  pt-intent-primary,
+  pt-intent-primary-hover,
+  pt-intent-primary-active,
+  pt-intent-primary-text-color,
+  pt-dark-intent-primary-text-color,
+  pt-intent-success,
+  pt-intent-success-hover,
+  pt-intent-success-active,
+  pt-intent-success-text-color,
+  pt-dark-intent-success-text-color,
+  pt-intent-warning,
+  pt-intent-warning-hover,
+  pt-intent-warning-active,
+  pt-intent-warning-text-color,
+  pt-dark-intent-warning-text-color,
+  pt-intent-danger,
+  pt-intent-danger-hover,
+  pt-intent-danger-active,
+  pt-intent-danger-text-color,
+  pt-dark-intent-danger-text-color;
+
+@each $colorName in $colorAliasesList {
+  @include emit-identity-hsl($colorName)
+}
+
+
 
 /*! LayoutColors */
 
@@ -90,32 +117,6 @@
 --pt-dark-icon-color-hover:      var(--pt-dark-text-color);
 --pt-dark-icon-color-disabled:   var(--pt-dark-text-color-disabled);
 --pt-dark-icon-color-selected:   var(--pt-intent-primary);
-
-$colorAliasesList:
-  pt-intent-primary,
-  pt-intent-primary-hover,
-  pt-intent-primary-active,
-  pt-intent-primary-text-color,
-  pt-dark-intent-primary-text-color,
-  pt-intent-success,
-  pt-intent-success-hover,
-  pt-intent-success-active,
-  pt-intent-success-text-color,
-  pt-dark-intent-success-text-color,
-  pt-intent-warning,
-  pt-intent-warning-hover,
-  pt-intent-warning-active,
-  pt-intent-warning-text-color,
-  pt-dark-intent-warning-text-color,
-  pt-intent-danger,
-  pt-intent-danger-hover,
-  pt-intent-danger-active,
-  pt-intent-danger-text-color,
-  pt-dark-intent-danger-text-color;
-
-@each $colorName in $colorAliasesList {
-  @include emit-identity-hsl($colorName)
-}
 
 }
 

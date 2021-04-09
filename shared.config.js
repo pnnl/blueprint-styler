@@ -14,9 +14,9 @@ exports.postCssConfig = {
             // colormin: false, // prevent color transformations
             // calc: false // prevent pre-calc
         }),
-        // require('postcss-combine-duplicated-selectors')({
+        require('postcss-combine-duplicated-selectors')({
             // removeDuplicatedProperties: true // this is broken in v10 :(
-        // }),
+        }),
         // require('postcss-remove-null'),
         require("autoprefixer"),
     ],

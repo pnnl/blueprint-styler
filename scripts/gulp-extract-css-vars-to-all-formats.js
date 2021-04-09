@@ -3,6 +3,17 @@ var through2 = require('through2');
 var File = require('vinyl');
 
 const convertKebabToScreamingSnakeCase = string => string.toUpperCase().replace(/-/g, '_')
+const convertKebabToCamelCase = string => { // pt-dark-border-shadow-opacity => PtDarkBorderShadowOpacity
+    return string
+        .toLowerCase()
+        .replace(
+            /^(\w)|-(\w)/gi,
+            (match, firstLetter, otherLetter) => {
+                const letter = firstLetter || otherLetter
+                return letter.toUpperCase()
+            }
+        ).replace(/-/g, '')
+}
 const convertJsonToJsObjString = jsonString => jsonString.replace(/"([^"]+)":/g, '$1:')
 
 module.exports = () => through2.obj(function (file, enc, next) {
@@ -18,11 +29,16 @@ module.exports = () => through2.obj(function (file, enc, next) {
     let cssVars = cssVarsMatch[1];
     // cssVars = cssVars.replace(/\s{2,}/g, '')
 
-    const customPropPrefixRegex = /\s{2,}--/g
     const css = `:root{${cssVars}\n}`;
-    const less = cssVars.replace(customPropPrefixRegex, `\n@`) // broken
-    const scss = cssVars.replace(customPropPrefixRegex, `\n$`) // broken
 
+    // vars equal raw values // @css-var: 24px;
+    // const customPropPrefixRegex = /\s{2,}--/g
+    // const less = cssVars.replace(customPropPrefixRegex, `\n@`) // broken
+    // const scss = cssVars.replace(customPropPrefixRegex, `\n$`) // broken
+
+    // identity // @css-var: var(--css-var);
+    const less = cssVars.replace(/\s*--([^:]*):[^;]*;?/gi, (match, propertyName) => `\n@${propertyName}: var(--${propertyName});`)
+    const scss = less.replace(/@/g, '$')
 
     // extract all the vars and values as regex matches
     const jsKeyValMatches = [...cssVars.matchAll(/(--([^:]*):\s?([^;]*);?|\/\*![\s]*(\w*))/ig)];
@@ -38,9 +54,16 @@ module.exports = () => through2.obj(function (file, enc, next) {
                 jsObj[currentCategory] = {}
             }
             let name = match[2];
-            const value = match[3]
-                .replace(/[\n\t\r]+/g, '') // replace all newlines, tabs, and line feeds
-            name = convertKebabToScreamingSnakeCase(name)
+
+            // vars equal raw values // CSS_VAR: 24px;
+            // const value = match[3] // value of the css
+            //     .replace(/[\n\t\r]+/g, '') // replace all newlines, tabs, and line feeds
+            // name = convertKebabToScreamingSnakeCase(name)
+
+            // identity // CssVar: "var(--css-var)",
+            const value = `var(--${name})`
+            name = convertKebabToCamelCase(name)
+
             jsObj[currentCategory][name] = value;
         }
     });
