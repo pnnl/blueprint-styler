@@ -72,8 +72,9 @@ span.#{$ns}-icon:empty {
   }
 }
 
-@each $name, $content in $icons {
-  .#{$ns}-icon-#{$name}::before {
-    content: $content;
-  }
-}
+// no icon Fonts
+// @each $name, $content in $icons {
+//   .#{$ns}-icon-#{$name}::before {
+//     content: $content;
+//   }
+// }
