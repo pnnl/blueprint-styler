@@ -245,6 +245,8 @@
 	--pt-dark-app-background-color: var(--dark-gray3);
 	--pt-app-top-background-color: var(--white);
 	--pt-dark-app-top-background-color: var(--dark-gray4);
+	--pt-code-background-color: hsla(var(--white-hsl),0.7);
+	--pt-dark-code-background-color: hsla(var(--black-hsl),0.3);
 	--pt-divider-black: hsla(var(--black-hsl),0.15);
 	--pt-dark-divider-black: hsla(var(--black-hsl),0.4);
 	--pt-dark-divider-white: hsla(var(--white-hsl),0.15);
@@ -265,8 +267,6 @@
 	--pt-text-selection-color: hsla(var(--blue-hue),100%,75%,0.6);
 	--pt-code-text-color: var(--pt-text-color-muted);
 	--pt-dark-code-text-color: var(--pt-dark-text-color-muted);
-	--pt-code-background-color: hsla(var(--white-hsl),0.7);
-	--pt-dark-code-background-color: hsla(var(--black-hsl),0.3);
 
 /*! IconColors */
 	--pt-icon-color: var(--pt-text-color-muted);

@@ -243,6 +243,8 @@
     "PtDarkAppBackgroundColor": "var(--pt-dark-app-background-color)",
     "PtAppTopBackgroundColor": "var(--pt-app-top-background-color)",
     "PtDarkAppTopBackgroundColor": "var(--pt-dark-app-top-background-color)",
+    "PtCodeBackgroundColor": "var(--pt-code-background-color)",
+    "PtDarkCodeBackgroundColor": "var(--pt-dark-code-background-color)",
     "PtDividerBlack": "var(--pt-divider-black)",
     "PtDarkDividerBlack": "var(--pt-dark-divider-black)",
     "PtDarkDividerWhite": "var(--pt-dark-divider-white)",
@@ -262,9 +264,7 @@
     "PtDarkLinkColor": "var(--pt-dark-link-color)",
     "PtTextSelectionColor": "var(--pt-text-selection-color)",
     "PtCodeTextColor": "var(--pt-code-text-color)",
-    "PtDarkCodeTextColor": "var(--pt-dark-code-text-color)",
-    "PtCodeBackgroundColor": "var(--pt-code-background-color)",
-    "PtDarkCodeBackgroundColor": "var(--pt-dark-code-background-color)"
+    "PtDarkCodeTextColor": "var(--pt-dark-code-text-color)"
   },
   "IconColors": {
     "PtIconColor": "var(--pt-icon-color)",
