@@ -1,4 +1,7 @@
 #{$root-selector}{
+
+  /*! Components */
+
   --button-box-shadow:
     inset 0 0 0 var(--button-border-width) hsla(var(--pt-shadow-color-hsl), 0.15);
     // inset 0 var(--button-border-width) 0 hsla(var(--pt-shadow-color-hsl), 0.1);
@@ -16,6 +19,8 @@
   --button-intent-gradient: unset; // linear-gradient(to bottom, rgba($white, 0.1), rgba($white, 0)) ;
   --dark-button-gradient: unset; // linear-gradient(to bottom, rgba($white, 0.05), rgba($white, 0)) ;
 
+  /*! IntentColors */
+
   --pt-intent-primary-hsl:        var(--blue3-hsl);
   --pt-intent-primary-hover-hsl:  var(--blue4-hsl);
   --pt-intent-primary-active-hsl: var(--blue2-hsl);
@@ -28,8 +33,8 @@
   --pt-intent-warning-hover-hsl:  var(--orange4-hsl);
   --pt-intent-warning-active-hsl: var(--orange2-hsl);
 
-  --pt-intent-danger-hsl:        var(--red3-hsl);
-  --pt-intent-danger-hover-hsl:  var(--red4-hsl);
-  --pt-intent-danger-active-hsl: var(--red2-hsl);
+  --pt-intent-danger-hsl:         var(--red3-hsl);
+  --pt-intent-danger-hover-hsl:   var(--red4-hsl);
+  --pt-intent-danger-active-hsl:  var(--red2-hsl);
 
 }

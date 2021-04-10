@@ -31,9 +31,6 @@ const sassTask = function () {
         .pipe(gulp.dest('./lib'))
 
     const varsOutput = scssOutput
-        // .pipe(postcss([
-        //     postcssCssNano // combines :root{} into a single block
-        // ]))
         .pipe(rename(path => {
             path.dirname = '/' + path.basename
         }))
