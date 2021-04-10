@@ -1,4 +1,16 @@
 
-.bp3-input.bp3-input[type=search]{ // double .class for specificity
-  border-radius: $pt-border-radius;
+// .#{$ns}-input.#{$ns}-input[type=search]{ // double .class for specificity
+//   border-radius: $pt-border-radius;
+// }
+
+.#{$ns}-input.#{$ns}-round,.#{$ns}-input[type=search] {
+    border-radius: null;
+    box-sizing:    null;
+    padding-left:  null;
+}
+
+.#{$ns}-input.#{$ns}-round {
+    border-radius: 30px;
+    box-sizing: border-box;
+    padding-left: 10px
 }

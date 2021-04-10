@@ -25,7 +25,6 @@ hsla
 
 # TODO
 - do a build
-  - export css, less and scss from the jsobject so we can dedupe
   - remove css declarations try the null remove... again
   - remove :root from regular css?
   - postcss default css vars

@@ -9,17 +9,18 @@ sass.compiler = require('node-sass')
 
 const rename = require("gulp-rename")
 const postcss = require('gulp-postcss')
-const postcssCssNano = require("cssnano")
+const cssnano = require("cssnano")
 const cssBeautify = require('gulp-cssbeautify')
 const extractCssVarsToAllFormats = require('./scripts/gulp-extract-css-vars-to-all-formats')
 
 const sassTask = function () {
-    // const scssOutput = gulp.src('./src/styles/_default-var-styles/*.index.scss')
+    // const scssOutput = gulp.src('./src/styles/_flat-styles/*.index.scss')
     const scssOutput = gulp.src('./src/styles/_*-styles/*.index.scss')
         .pipe(sass(sassConfig).on('error', sass.logError))
-        .pipe(postcss(postCssConfig.plugins))
 
     const cssOutput = scssOutput
+        .pipe(postcss(postCssConfig.plugins))
+        .pipe(postcss(postCssConfig.removeNull))
         .pipe(rename(path => {
             path.basename = path.basename.split('.')[0]
             path.dirname = '/' + path.basename
@@ -31,6 +32,7 @@ const sassTask = function () {
         .pipe(gulp.dest('./lib'))
 
     const varsOutput = scssOutput
+        .pipe(postcss(postCssConfig.varsOutput))
         .pipe(rename(path => {
             path.dirname = '/' + path.basename
         }))

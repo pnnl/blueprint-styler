@@ -24,6 +24,7 @@ const convertJsonToJsObjString = jsonString => jsonString.replace(/"([^"]+)":/g,
 /** css-var => var(--css-var) */
 const cssKebabNameToVarIdentity = string => `var(--${string})`
 
+
 module.exports = () => through2.obj(function (file, enc, next) {
     const content = file.contents.toString('utf8')
 
@@ -90,7 +91,7 @@ module.exports = () => through2.obj(function (file, enc, next) {
         if (Object.hasOwnProperty.call(cssObjValues, categoryName)) {
             const currentCategory = cssObjValues[categoryName];
             const currentCategoryComment = `\n/*! ${categoryName} */\n`
-            css += `\t` + currentCategoryComment
+            css += currentCategoryComment
             less += currentCategoryComment
             for (const varName in currentCategory) {
                 if (Object.hasOwnProperty.call(currentCategory, varName)) {
@@ -158,5 +159,5 @@ module.exports = () => through2.obj(function (file, enc, next) {
     // completed log
     console.log(`>> Extracted ${jsKeyValMatches.length} vars from ${file.basename}`);
     next();
-});
 
+});
