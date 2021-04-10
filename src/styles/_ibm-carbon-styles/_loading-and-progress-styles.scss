@@ -11,10 +11,11 @@
   .#{$ns}-progress-meter {
     border-radius: unset;
     // background-size: 60px;
-    background-image: linear-gradient(-90deg,
-      hsla(0,0%,100%,.15) 0%,
-      hsla(0,0%,100%,0) 50%,
-      hsla(0,0%,100%,.15) 100%
+    background-image: linear-gradient(
+      -90deg,
+      hsla(0, 0%, 100%,.15) 0%,
+      hsla(0, 0%, 100%,  0) 50%,
+      hsla(0, 0%, 100%,.15) 100%
     );
   }
 }

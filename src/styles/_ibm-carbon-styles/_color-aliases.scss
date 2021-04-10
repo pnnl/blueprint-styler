@@ -1,84 +1,136 @@
-// CUSTOM COLORS with grayscale with transparency
 
-$white-trans-dark-gray1:   rgba($white, lightness( $dark-gray1  )/100);
-$white-trans-dark-gray2:   rgba($white, lightness( $dark-gray2  )/100);
-$white-trans-dark-gray3:   rgba($white, lightness( $dark-gray3  )/100);
-$white-trans-dark-gray4:   rgba($white, lightness( $dark-gray4  )/100);
-$white-trans-dark-gray5:   rgba($white, lightness( $dark-gray5  )/100);
-$white-trans-gray1:        rgba($white, lightness( $gray1       )/100);
-$white-trans-gray2:        rgba($white, lightness( $gray2       )/100);
-$white-trans-gray3:        rgba($white, lightness( $gray3       )/100);
-$white-trans-gray4:        rgba($white, lightness( $gray4       )/100);
-$white-trans-gray5:        rgba($white, lightness( $gray5       )/100);
-$white-trans-light-gray1:  rgba($white, lightness( $light-gray1 )/100);
-$white-trans-light-gray2:  rgba($white, lightness( $light-gray2 )/100);
-$white-trans-light-gray3:  rgba($white, lightness( $light-gray3 )/100);
-$white-trans-light-gray4:  rgba($white, lightness( $light-gray4 )/100);
-$white-trans-light-gray5:  rgba($white, lightness( $light-gray5 )/100);
+#{$root-selector}{
 
-$black-trans-dark-gray1:   rgba($black, 1 - lightness( $dark-gray1  )/100);
-$black-trans-dark-gray2:   rgba($black, 1 - lightness( $dark-gray2  )/100);
-$black-trans-dark-gray3:   rgba($black, 1 - lightness( $dark-gray3  )/100);
-$black-trans-dark-gray4:   rgba($black, 1 - lightness( $dark-gray4  )/100);
-$black-trans-dark-gray5:   rgba($black, 1 - lightness( $dark-gray5  )/100);
-$black-trans-gray1:        rgba($black, 1 - lightness( $gray1       )/100);
-$black-trans-gray2:        rgba($black, 1 - lightness( $gray2       )/100);
-$black-trans-gray3:        rgba($black, 1 - lightness( $gray3       )/100);
-$black-trans-gray4:        rgba($black, 1 - lightness( $gray4       )/100);
-$black-trans-gray5:        rgba($black, 1 - lightness( $gray5       )/100);
-$black-trans-light-gray1:  rgba($black, 1 - lightness( $light-gray1 )/100);
-$black-trans-light-gray2:  rgba($black, 1 - lightness( $light-gray2 )/100);
-$black-trans-light-gray3:  rgba($black, 1 - lightness( $light-gray3 )/100);
-$black-trans-light-gray4:  rgba($black, 1 - lightness( $light-gray4 )/100);
-$black-trans-light-gray5:  rgba($black, 1 - lightness( $light-gray5 )/100);
+/*! ColorsGrayscaleTransparent */
+
+--white-trans-dark-gray1:   hsla(var(--white-hsl),  0.06); // custom
+--white-trans-dark-gray2:   hsla(var(--white-hsl),  0.13); // custom
+--white-trans-dark-gray3:   hsla(var(--white-hsl),  0.20); // custom
+--white-trans-dark-gray4:   hsla(var(--white-hsl),  0.26); // custom
+--white-trans-dark-gray5:   hsla(var(--white-hsl),  0.33); // custom
+--white-trans-gray1:        hsla(var(--white-hsl),  0.40); // custom
+--white-trans-gray2:        hsla(var(--white-hsl),  0.47); // custom
+--white-trans-gray3:        hsla(var(--white-hsl),  0.54); // custom
+--white-trans-gray4:        hsla(var(--white-hsl),  0.60); // custom
+--white-trans-gray5:        hsla(var(--white-hsl),  0.67); // custom
+--white-trans-light-gray1:  hsla(var(--white-hsl),  0.73); // custom
+--white-trans-light-gray2:  hsla(var(--white-hsl),  0.79); // custom
+--white-trans-light-gray3:  hsla(var(--white-hsl),  0.85); // custom
+--white-trans-light-gray4:  hsla(var(--white-hsl),  0.91); // custom
+--white-trans-light-gray5:  hsla(var(--white-hsl),  0.96); // custom
+
+--black-trans-dark-gray1:   hsla(var(--black-hsl),  calc(1 - 0.06)); // custom
+--black-trans-dark-gray2:   hsla(var(--black-hsl),  calc(1 - 0.13)); // custom
+--black-trans-dark-gray3:   hsla(var(--black-hsl),  calc(1 - 0.20)); // custom
+--black-trans-dark-gray4:   hsla(var(--black-hsl),  calc(1 - 0.26)); // custom
+--black-trans-dark-gray5:   hsla(var(--black-hsl),  calc(1 - 0.33)); // custom
+--black-trans-gray1:        hsla(var(--black-hsl),  calc(1 - 0.40)); // custom
+--black-trans-gray2:        hsla(var(--black-hsl),  calc(1 - 0.47)); // custom
+--black-trans-gray3:        hsla(var(--black-hsl),  calc(1 - 0.54)); // custom
+--black-trans-gray4:        hsla(var(--black-hsl),  calc(1 - 0.60)); // custom
+--black-trans-gray5:        hsla(var(--black-hsl),  calc(1 - 0.67)); // custom
+--black-trans-light-gray1:  hsla(var(--black-hsl),  calc(1 - 0.73)); // custom
+--black-trans-light-gray2:  hsla(var(--black-hsl),  calc(1 - 0.79)); // custom
+--black-trans-light-gray3:  hsla(var(--black-hsl),  calc(1 - 0.85)); // custom
+--black-trans-light-gray4:  hsla(var(--black-hsl),  calc(1 - 0.91)); // custom
+--black-trans-light-gray5:  hsla(var(--black-hsl),  calc(1 - 0.96)); // custom
 
 
-// BP COLORS
 
-$pt-intent-primary:   $cobalt3;
-$pt-intent-success:   $green3;
-$pt-intent-warning:   $orange3;
-$pt-intent-danger:    $red3;
+/*! IntentColors */
 
-$pt-app-background-color:      $light-gray5;
-$pt-dark-app-background-color: $dark-gray2;
+--pt-intent-primary-hue:                 var(--cobalt-hue);
+--pt-intent-primary-hsl:                 var(--cobalt3-hsl);
+--pt-intent-primary-hover-hsl:           var(--cobalt2-hsl);
+--pt-intent-primary-active-hsl:          var(--cobalt1-hsl);
 
-$pt-outline-color: $pt-intent-primary;
+--pt-intent-primary-text-color-hsl:      var(--cobalt2-hsl);
+--pt-dark-intent-primary-text-color-hsl: var(--cobalt5-hsl);
 
-$pt-heading-color:            $black-trans-dark-gray2;
-$pt-text-color:               $black-trans-dark-gray4;
-$pt-text-color-muted:         $black-trans-gray1;
-$pt-text-color-disabled:      $black-trans-gray4;
-$pt-link-color:               $cobalt3;
 
-$pt-dark-heading-color:       $white;
-$pt-dark-text-color:          $white-trans-light-gray5;
-$pt-dark-text-color-muted:    $white-trans-gray4;
-$pt-dark-text-color-disabled: $white-trans-dark-gray5;
-$pt-dark-link-color:          $cobalt4;
 
-// Default text selection color using #7dbcff
-$pt-text-selection-color: rgba(125, 188, 255, 0.6);
+/*! LayoutColors */
 
-$pt-icon-color:               $pt-text-color;
-$pt-icon-color-hover:         $pt-text-color;
-$pt-icon-color-disabled:      $pt-text-color-disabled;
-$pt-icon-color-selected:      $pt-intent-primary;
+--pt-app-background-color:          var(--light-gray5);
+--pt-dark-app-background-color:     var(--dark-gray2);
+--pt-app-top-background-color:      var(--white); // custom
+--pt-dark-app-top-background-color: var(--dark-gray3); // custom
 
-$pt-dark-icon-color:          $pt-dark-text-color;
-$pt-dark-icon-color-hover:    $pt-dark-text-color;
-$pt-dark-icon-color-disabled: $pt-dark-text-color-disabled;
-$pt-dark-icon-color-selected: $pt-intent-primary;
+--pt-code-background-color:         var(--white-trans-light-gray2);
+--pt-dark-code-background-color:    var(--black-trans-light-gray1);
 
-$pt-divider-black:      $black-trans-light-gray3;
-$pt-dark-divider-black: $black-trans-gray4;
-$pt-dark-divider-white: $white-trans-dark-gray2;
+--pt-divider-black:                 var(--black-trans-light-gray3);
+--pt-dark-divider-black:            var(--black-trans-gray4);
+--pt-dark-divider-white:            var(--white-trans-dark-gray2);
 
-$pt-code-text-color:            $pt-text-color-muted;
-$pt-dark-code-text-color:       $pt-dark-text-color-muted;
-$pt-code-background-color:      $white-trans-light-gray2;
-$pt-dark-code-background-color: $black-trans-light-gray1;
+--pt-outline-color:                 var(--pt-intent-primary);
 
-$ibm-input-border:      $black-trans-gray5;
-$ibm-dark-input-border: $white-trans-gray1;
 
+
+/*! TextColors */
+
+--pt-text-color:                    var(--black-trans-dark-gray4);
+--pt-text-color-muted:              var(--black-trans-gray1);
+--pt-text-color-disabled:           var(--black-trans-gray4);
+--pt-heading-color:                 var(--black-trans-dark-gray2);
+--pt-link-color:                    var(--cobalt3);
+
+--pt-dark-text-color:               var(--white-trans-light-gray5);
+--pt-dark-text-color-muted:         var(--white-trans-gray4);
+--pt-dark-text-color-disabled:      var(--white-trans-dark-gray5);
+--pt-dark-heading-color:            var(--white);
+--pt-dark-link-color:               var(--cobalt4);
+
+--pt-code-text-color:               var(--pt-text-color-muted);
+--pt-dark-code-text-color:          var(--pt-dark-text-color-muted);
+
+
+
+/*! IconColors */
+
+--pt-icon-color:                    var(--pt-text-color);
+--pt-icon-color-hover:              var(--pt-text-color);
+--pt-icon-color-disabled:           var(--pt-text-color-disabled);
+--pt-icon-color-selected:           var(--pt-intent-primary);
+
+--pt-dark-icon-color:               var(--pt-dark-text-color);
+--pt-dark-icon-color-hover:         var(--pt-dark-text-color);
+--pt-dark-icon-color-disabled:      var(--pt-dark-text-color-disabled);
+--pt-dark-icon-color-selected:      var(--pt-intent-primary);
+
+}
+
+
+
+// non-standard CARBON Identity
+$white-trans-dark-gray1:   var(--white-trans-dark-gray1);
+$white-trans-dark-gray2:   var(--white-trans-dark-gray2);
+$white-trans-dark-gray3:   var(--white-trans-dark-gray3);
+$white-trans-dark-gray4:   var(--white-trans-dark-gray4);
+$white-trans-dark-gray5:   var(--white-trans-dark-gray5);
+$white-trans-gray1:        var(--white-trans-gray1);
+$white-trans-gray2:        var(--white-trans-gray2);
+$white-trans-gray3:        var(--white-trans-gray3);
+$white-trans-gray4:        var(--white-trans-gray4);
+$white-trans-gray5:        var(--white-trans-gray5);
+$white-trans-light-gray1:  var(--white-trans-light-gray1);
+$white-trans-light-gray2:  var(--white-trans-light-gray2);
+$white-trans-light-gray3:  var(--white-trans-light-gray3);
+$white-trans-light-gray4:  var(--white-trans-light-gray4);
+$white-trans-light-gray5:  var(--white-trans-light-gray5);
+
+$black-trans-dark-gray1:   var(--black-trans-dark-gray1);
+$black-trans-dark-gray2:   var(--black-trans-dark-gray2);
+$black-trans-dark-gray3:   var(--black-trans-dark-gray3);
+$black-trans-dark-gray4:   var(--black-trans-dark-gray4);
+$black-trans-dark-gray5:   var(--black-trans-dark-gray5);
+$black-trans-gray1:        var(--black-trans-gray1);
+$black-trans-gray2:        var(--black-trans-gray2);
+$black-trans-gray3:        var(--black-trans-gray3);
+$black-trans-gray4:        var(--black-trans-gray4);
+$black-trans-gray5:        var(--black-trans-gray5);
+$black-trans-light-gray1:  var(--black-trans-light-gray1);
+$black-trans-light-gray2:  var(--black-trans-light-gray2);
+$black-trans-light-gray3:  var(--black-trans-light-gray3);
+$black-trans-light-gray4:  var(--black-trans-light-gray4);
+$black-trans-light-gray5:  var(--black-trans-light-gray5);

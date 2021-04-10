@@ -7,6 +7,7 @@
 
 // BLUEPRINT STYLER SPECIFIC //
 // for the (stolen) docs examples
+$pt-border-radius-raw: 0;
 @import "../global/examples-index";
 // then our own styles
 @import "../global/styler";
@@ -21,7 +22,7 @@
 }
 
 .docs-example-options {
-  background-color: white;
+  background-color: $white;
   // background-color: $light-gray5;
   // border: 1px solid $light-gray4;
 }

@@ -24,12 +24,11 @@ hsla
 
 
 # TODO
-- do a build
-  - remove css declarations try the null remove... again
-  - remove :root from regular css?
+- build
+  - remove :root from regular css? change :root{} selector
   - postcss default css vars
-  -
-- dark theme color mirror
+  - rename files and folders
+- dark theme color mirror @media (prefers-color-scheme: dark)
 - fix the other styles, now that merge properties and delete duplicates is gone...
   - [postcss-remove-declaration](https://www.npmjs.com/package/postcss-remove-declaration/v/1.0.0)
   - ant

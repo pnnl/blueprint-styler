@@ -1,6 +1,10 @@
 exports.styleSetConfig = [
     // add new styles here...
     {
+        slug: 'ibm-carbon-styles',
+        name: 'IBM Carbon'
+    },
+    {
         slug: 'flat-styles',
         name: 'Flat'
     },
@@ -13,14 +17,9 @@ exports.styleSetConfig = [
         name: 'Default'
     },
     {
-        slug: 'ibm-carbon-styles',
-        name: 'IBM Carbon'
-    },
-    {
         slug: 'antd-styles',
         name: 'Ant Design'
     },
-
 ]
 
 exports.styleSetAsEntry = function (styleSetConfig = []) {
