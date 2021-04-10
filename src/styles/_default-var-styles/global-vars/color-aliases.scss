@@ -74,6 +74,9 @@ $colorAliasesList:
 --pt-app-top-background-color:      var(--white); // custom
 --pt-dark-app-top-background-color: var(--dark-gray4); // custom
 
+--pt-code-background-color:         hsla(var(--white-hsl), 0.7);
+--pt-dark-code-background-color:    hsla(var(--black-hsl), 0.3);
+
 --pt-divider-black:                 hsla(var(--black-hsl), 0.15);
 --pt-dark-divider-black:            hsla(var(--black-hsl), 0.4);
 --pt-dark-divider-white:            hsla(var(--white-hsl), 0.15);
@@ -102,8 +105,6 @@ $colorAliasesList:
 
 --pt-code-text-color:            var(--pt-text-color-muted);
 --pt-dark-code-text-color:       var(--pt-dark-text-color-muted);
---pt-code-background-color:      hsla(var(--white-hsl), 0.7);
---pt-dark-code-background-color: hsla(var(--black-hsl), 0.3);
 
 
 

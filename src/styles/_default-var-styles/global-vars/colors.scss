@@ -4,27 +4,23 @@
 
 --grayscale-hue: 204;
 
---black-hsl: var(--grayscale-hue), 24%, 8%;
-
---dark-gray1-hsl: var(--grayscale-hue), 23%, 12%;
---dark-gray2-hsl: var(--grayscale-hue), 23%, 16%;
---dark-gray3-hsl: var(--grayscale-hue), 23%, 21%;
---dark-gray4-hsl: var(--grayscale-hue), 23%, 25%;
---dark-gray5-hsl: var(--grayscale-hue), 22%, 29%;
-
---gray1-hsl: var(--grayscale-hue), 16%, 43%;
---gray2-hsl: var(--grayscale-hue), 13%, 52%;
---gray3-hsl: var(--grayscale-hue), 15%, 60%;
---gray4-hsl: var(--grayscale-hue), 18%, 71%;
---gray5-hsl: var(--grayscale-hue), 22%, 79%;
-
---light-gray1-hsl: var(--grayscale-hue), 22%, 84%;
---light-gray2-hsl: var(--grayscale-hue), 26%, 88%;
---light-gray3-hsl: var(--grayscale-hue), 25%, 91%;
---light-gray4-hsl: var(--grayscale-hue), 33%, 94%;
---light-gray5-hsl: var(--grayscale-hue), 33%, 97%;
-
---white-hsl: var(--grayscale-hue), 0%, 100%;
+--black-hsl:       var(--grayscale-hue), 24%,   8%;
+--dark-gray1-hsl:  var(--grayscale-hue), 23%,  12%;
+--dark-gray2-hsl:  var(--grayscale-hue), 23%,  16%;
+--dark-gray3-hsl:  var(--grayscale-hue), 23%,  21%;
+--dark-gray4-hsl:  var(--grayscale-hue), 23%,  25%;
+--dark-gray5-hsl:  var(--grayscale-hue), 22%,  29%;
+--gray1-hsl:       var(--grayscale-hue), 16%,  43%;
+--gray2-hsl:       var(--grayscale-hue), 13%,  52%;
+--gray3-hsl:       var(--grayscale-hue), 15%,  60%;
+--gray4-hsl:       var(--grayscale-hue), 18%,  71%;
+--gray5-hsl:       var(--grayscale-hue), 22%,  79%;
+--light-gray1-hsl: var(--grayscale-hue), 22%,  84%;
+--light-gray2-hsl: var(--grayscale-hue), 26%,  88%;
+--light-gray3-hsl: var(--grayscale-hue), 25%,  91%;
+--light-gray4-hsl: var(--grayscale-hue), 33%,  94%;
+--light-gray5-hsl: var(--grayscale-hue), 33%,  97%;
+--white-hsl:       var(--grayscale-hue),  0%, 100%;
 
 --vermilion-hue: 12;
 --vermilion1-hsl: var(--vermilion-hue), 84%, 34%;
