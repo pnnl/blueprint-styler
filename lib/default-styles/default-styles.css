@@ -1,5 +1,4 @@
-@charset "UTF-8";
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html {
+@charset "UTF-8";/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
     box-sizing: border-box
@@ -43,7 +42,6 @@ a {
 
 abbr[title] {
     border-bottom: none;
-    text-decoration: underline;
     -webkit-text-decoration: underline dotted;
     text-decoration: underline dotted
 }
@@ -58,7 +56,6 @@ code,kbd,samp {
 }
 
 small {
-    font-size: 80%;
     font-size: 12px
 }
 
@@ -3633,7 +3630,6 @@ a.bp3-button.bp3-disabled {
     border: none;
     border-radius: 3px;
     box-shadow: 0 0 0 0 rgba(19,124,189,0),0 0 0 0 rgba(19,124,189,0),inset 0 0 0 1px rgba(16,22,26,.15),inset 0 1px 1px rgba(16,22,26,.2);
-    color: #182026;
     font-size: 14px;
     font-weight: 400;
     height: 30px;
@@ -3712,17 +3708,16 @@ a.bp3-button.bp3-disabled {
     right: 0;
     text-align: center;
     top: 0;
-    width: 70px;
+    width: 70px
+}
+
+.bp3-file-upload-input:after,.bp3-file-upload-input:after:hover {
     box-shadow: inset 0 0 0 1px rgba(16,22,26,.2),inset 0 -1px 0 rgba(16,22,26,.1)
 }
 
 .bp3-file-upload-input:after:hover {
     background-clip: padding-box;
-    background-color: #ebf1f5;
-    box-shadow: inset 0 0 0 1px rgba(16,22,26,.2),inset 0 -1px 0 rgba(16,22,26,.1);
-    background-clip: padding-box;
-    background-color: #ebf1f5;
-    box-shadow: inset 0 0 0 1px rgba(16,22,26,.2),inset 0 -1px 0 rgba(16,22,26,.1)
+    background-color: #ebf1f5
 }
 
 .bp3-file-upload-input:after.bp3-active,.bp3-file-upload-input:after:active {
@@ -3772,7 +3767,6 @@ a.bp3-button.bp3-disabled {
 .bp3-dark .bp3-file-upload-input {
     background: rgba(16,22,26,.3);
     box-shadow: 0 0 0 0 rgba(19,124,189,0),0 0 0 0 rgba(19,124,189,0),0 0 0 0 rgba(19,124,189,0),inset 0 0 0 1px rgba(16,22,26,.3),inset 0 1px 1px rgba(16,22,26,.4);
-    color: #f5f8fa;
     color: rgba(167,182,194,.6)
 }
 
@@ -3814,8 +3808,6 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-dark .bp3-file-upload-input:after:hover {
-    background-color: #30404d;
-    box-shadow: 0 0 0 1px rgba(16,22,26,.4);
     background-color: #30404d;
     box-shadow: 0 0 0 1px rgba(16,22,26,.4)
 }
@@ -5219,7 +5211,6 @@ table.bp3-html-table.bp3-interactive tbody tr:active td {
 }
 
 .bp3-icon:not(:empty):before {
-    content: ""!important;
     content: unset!important
 }
 
@@ -7323,9 +7314,7 @@ span.bp3-icon:empty:before {
 }
 
 .bp3-menu-item.bp3-disabled {
-    background-color: inherit;
     color: rgba(92,112,128,.6);
-    cursor: not-allowed;
     background-color: inherit!important;
     cursor: not-allowed!important;
     outline: none!important
@@ -8601,7 +8590,6 @@ span.bp3-popover-target {
 .bp3-slider-handle {
     background-color: #f5f8fa;
     background-image: linear-gradient(180deg,hsla(0,0%,100%,.8),hsla(0,0%,100%,0));
-    box-shadow: inset 0 0 0 1px rgba(16,22,26,.2),inset 0 -1px 0 rgba(16,22,26,.1);
     color: #182026;
     border-radius: 3px;
     box-shadow: 0 0 0 1px rgba(16,22,26,.2),0 1px 1px rgba(16,22,26,.2);
@@ -8639,7 +8627,6 @@ span.bp3-popover-target {
 .bp3-slider-handle:hover {
     background-clip: padding-box;
     background-color: #ebf1f5;
-    box-shadow: inset 0 0 0 1px rgba(16,22,26,.2),inset 0 -1px 0 rgba(16,22,26,.1);
     box-shadow: 0 0 0 1px rgba(16,22,26,.2),0 1px 1px rgba(16,22,26,.2);
     cursor: -webkit-grab;
     cursor: grab;
@@ -8649,7 +8636,6 @@ span.bp3-popover-target {
 .bp3-slider-handle.bp3-active {
     background-color: #d8e1e8;
     background-image: none;
-    box-shadow: inset 0 0 0 1px rgba(16,22,26,.2),inset 0 1px 2px rgba(16,22,26,.2);
     box-shadow: 0 0 0 1px rgba(16,22,26,.2),inset 0 1px 1px rgba(16,22,26,.1);
     cursor: -webkit-grabbing;
     cursor: grabbing
@@ -9623,11 +9609,11 @@ span.bp3-popover-target {
     color: #f5f8fa
 }
 
-.bp3-dark .bp3-tag-input .bp3-input-ghost::-moz-placeholder, .bp3-tag-input.bp3-dark .bp3-input-ghost::-moz-placeholder {
+.bp3-dark .bp3-tag-input .bp3-input-ghost::-moz-placeholder,.bp3-tag-input.bp3-dark .bp3-input-ghost::-moz-placeholder {
     color: rgba(167,182,194,.6)
 }
 
-.bp3-dark .bp3-tag-input .bp3-input-ghost:-ms-input-placeholder, .bp3-tag-input.bp3-dark .bp3-input-ghost:-ms-input-placeholder {
+.bp3-dark .bp3-tag-input .bp3-input-ghost:-ms-input-placeholder,.bp3-tag-input.bp3-dark .bp3-input-ghost:-ms-input-placeholder {
     color: rgba(167,182,194,.6)
 }
 
@@ -12200,7 +12186,6 @@ span.bp3-popover-target {
 }
 
 .bpx-vars {
-  /*! Colors */
     --black: #10161a;
     --dark-gray1: #182026;
     --dark-gray2: #202b33;
@@ -12288,7 +12273,6 @@ span.bp3-popover-target {
     --sepia3: #96622d;
     --sepia4: #b07b46;
     --sepia5: #c99765;
-  /*! ColorAliases */
     --pt-intent-primary: #137cbd;
     --pt-intent-success: #0f9960;
     --pt-intent-warning: #d9822b;

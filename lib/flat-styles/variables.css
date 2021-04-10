@@ -1,5 +1,5 @@
 :root {
-	
+
 /*! ColorsHsl */
 	--grayscale-hue: 209;
 	--black-hsl: var(--grayscale-hue),var(--grayscale-sat),9%;
@@ -58,7 +58,7 @@
 	--blue-hue: 209;
 	--blue1-hsl: var(--blue-hue),83%,38%;
 	--blue2-hsl: var(--blue-hue),83%,46%;
-	--blue3-hsl: var(--blue-hue),100%,55%;
+	--blue3-hsl: var(--blue-hue),90%,50%;
 	--blue4-hsl: var(--blue-hue),100%,54%;
 	--blue5-hsl: var(--blue-hue),100%,59%;
 	--turquoise-hue: 175;
@@ -104,7 +104,7 @@
 	--sepia4-hsl: var(--sepia-hue),43%,48%;
 	--sepia5-hsl: var(--sepia-hue),48%,59%;
 	--grayscale-sat: 0%;
-	
+
 /*! Colors */
 	--black: hsl(var(--black-hsl));
 	--dark-gray1: hsl(var(--dark-gray1-hsl));
@@ -193,7 +193,7 @@
 	--sepia3: hsl(var(--sepia3-hsl));
 	--sepia4: hsl(var(--sepia4-hsl));
 	--sepia5: hsl(var(--sepia5-hsl));
-	
+
 /*! IntentColors */
 	--pt-intent-primary-hue: var(--blue-hue);
 	--pt-intent-primary-hover-hsl: var(--blue4-hsl);
@@ -239,7 +239,7 @@
 	--pt-intent-success-hsl: var(--green3-hsl);
 	--pt-intent-warning-hsl: var(--orange3-hsl);
 	--pt-intent-danger-hsl: var(--red3-hsl);
-	
+
 /*! LayoutColors */
 	--pt-app-background-color: var(--light-gray5);
 	--pt-dark-app-background-color: var(--dark-gray3);
@@ -250,7 +250,7 @@
 	--pt-dark-divider-white: hsla(var(--white-hsl),0.15);
 	--pt-outline-color: hsla(var(--pt-intent-primary-hsl),0.6);
 	--pt-disabled-opacity: 0.3;
-	
+
 /*! TextColors */
 	--pt-text-color: var(--dark-gray1);
 	--pt-text-color-muted: var(--gray1);
@@ -267,7 +267,7 @@
 	--pt-dark-code-text-color: var(--pt-dark-text-color-muted);
 	--pt-code-background-color: hsla(var(--white-hsl),0.7);
 	--pt-dark-code-background-color: hsla(var(--black-hsl),0.3);
-	
+
 /*! IconColors */
 	--pt-icon-color: var(--pt-text-color-muted);
 	--pt-icon-color-hover: var(--pt-text-color);
@@ -277,7 +277,7 @@
 	--pt-dark-icon-color-hover: var(--pt-dark-text-color);
 	--pt-dark-icon-color-disabled: var(--pt-dark-text-color-disabled);
 	--pt-dark-icon-color-selected: var(--pt-intent-primary);
-	
+
 /*! Variables */
 	--pt-border-radius: 6px;
 	--pt-icon-size-standard: 16px;
@@ -310,7 +310,7 @@
 	--pt-dark-tooltip-box-shadow: var(--pt-dark-popover-box-shadow);
 	--pt-font-family: -apple-system,"BlinkMacSystemFont","Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Open Sans","Helvetica Neue","Icons16",sans-serif;
 	--pt-font-family-monospace: Consolas,Menlo,monospace;
-	
+
 /*! Components */
 	--button-border-width: 1px;
 	--button-box-shadow: inset 0 0 0 var(--button-border-width) hsla(var(--pt-shadow-color-hsl),0.15);
@@ -442,7 +442,7 @@
 	--tooltip-text-color: var(--light-gray5);
 	--dark-tooltip-background-color: var(--light-gray3);
 	--dark-tooltip-text-color: var(--dark-gray5);
-	
+
 /*! Datetime */
 	--datepicker-background-color: var(--pt-app-top-background-color);
 	--datepicker-day-background-color-hover: var(--light-gray2);
@@ -456,7 +456,7 @@
 	--dark-daterangepicker-range-background-color: var(--dark-gray5);
 	--dark-daterangepicker-range-background-color-selected: var(--dark-gray5);
 	--dark-daterangepicker-range-background-color-selected-hover: var(--gray1);
-	
+
 /*! Table */
 	--cell-background-color: var(--pt-app-top-background-color);
 	--cell-background-color-opacity: 0.1;

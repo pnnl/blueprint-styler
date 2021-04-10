@@ -9,7 +9,6 @@ sass.compiler = require('node-sass')
 
 const rename = require("gulp-rename")
 const postcss = require('gulp-postcss')
-const cssnano = require("cssnano")
 const cssBeautify = require('gulp-cssbeautify')
 const extractCssVarsToAllFormats = require('./scripts/gulp-extract-css-vars-to-all-formats')
 

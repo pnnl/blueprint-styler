@@ -1,5 +1,5 @@
 :root {
-	
+
 /*! Colors */
 	--black: #000;
 	--dark-gray1: #141414;
@@ -88,7 +88,7 @@
 	--sepia3: #f5e9dc;
 	--sepia4: #fff;
 	--sepia5: #fff;
-	
+
 /*! ColorAliases */
 	--pt-intent-primary: #1890ff;
 	--pt-intent-success: #52c41a;
@@ -123,7 +123,7 @@
 	--pt-dark-code-text-color: hsla(0,0%,100%,0.65);
 	--pt-code-background-color: hsla(0,0%,100%,0.7);
 	--pt-dark-code-background-color: rgba(0,0,0,0.3);
-	
+
 /*! Variables */
 	--ns: bp3;
 	--pt-grid-size: 10px;

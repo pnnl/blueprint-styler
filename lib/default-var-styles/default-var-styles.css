@@ -1,5 +1,4 @@
-@charset "UTF-8";
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html {
+@charset "UTF-8";/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
     box-sizing: border-box
@@ -43,7 +42,6 @@ a {
 
 abbr[title] {
     border-bottom: none;
-    text-decoration: underline;
     -webkit-text-decoration: underline dotted;
     text-decoration: underline dotted
 }
@@ -58,7 +56,6 @@ code,kbd,samp {
 }
 
 small {
-    font-size: 80%;
     font-size: 12px
 }
 
@@ -166,7 +163,6 @@ summary {
 }
 
 .bpx-vars,:root {
-  /*! ColorsHsl */
     --grayscale-hue: 204;
     --black-hsl: var(--grayscale-hue),24%,8%;
     --dark-gray1-hsl: var(--grayscale-hue),23%,12%;
@@ -269,7 +265,6 @@ summary {
     --sepia3-hsl: var(--sepia-hue),54%,38%;
     --sepia4-hsl: var(--sepia-hue),43%,48%;
     --sepia5-hsl: var(--sepia-hue),48%,59%;
-  /*! Colors */
     --black: hsl(var(--black-hsl));
     --dark-gray1: hsl(var(--dark-gray1-hsl));
     --dark-gray2: hsl(var(--dark-gray2-hsl));
@@ -357,7 +352,6 @@ summary {
     --sepia3: hsl(var(--sepia3-hsl));
     --sepia4: hsl(var(--sepia4-hsl));
     --sepia5: hsl(var(--sepia5-hsl));
-  /*! IntentColors */
     --pt-intent-primary-hue: var(--blue-hue);
     --pt-intent-primary-hsl: var(--blue3-hsl);
     --pt-intent-primary-hover-hsl: var(--blue2-hsl);
@@ -402,7 +396,6 @@ summary {
     --pt-intent-danger-active: hsl(var(--pt-intent-danger-active-hsl));
     --pt-intent-danger-text-color: hsl(var(--pt-intent-danger-text-color-hsl));
     --pt-dark-intent-danger-text-color: hsl(var(--pt-dark-intent-danger-text-color-hsl));
-  /*! LayoutColors */
     --pt-app-background-color: var(--light-gray5);
     --pt-dark-app-background-color: var(--dark-gray3);
     --pt-app-top-background-color: var(--white);
@@ -412,7 +405,6 @@ summary {
     --pt-dark-divider-white: hsla(var(--white-hsl),0.15);
     --pt-outline-color: hsla(var(--pt-intent-primary-hsl),0.6);
     --pt-disabled-opacity: 0.3;
-  /*! TextColors */
     --pt-text-color: var(--dark-gray1);
     --pt-text-color-muted: var(--gray1);
     --pt-text-color-disabled: hsla(var(--black-hsl),var(--pt-disabled-opacity));
@@ -428,7 +420,6 @@ summary {
     --pt-dark-code-text-color: var(--pt-dark-text-color-muted);
     --pt-code-background-color: hsla(var(--white-hsl),0.7);
     --pt-dark-code-background-color: hsla(var(--black-hsl),0.3);
-  /*! IconColors */
     --pt-icon-color: var(--pt-text-color-muted);
     --pt-icon-color-hover: var(--pt-text-color);
     --pt-icon-color-disabled: var(--pt-text-color-disabled);
@@ -437,7 +428,6 @@ summary {
     --pt-dark-icon-color-hover: var(--pt-dark-text-color);
     --pt-dark-icon-color-disabled: var(--pt-dark-text-color-disabled);
     --pt-dark-icon-color-selected: var(--pt-intent-primary);
-  /*! Variables */
     --pt-font-family: -apple-system,"BlinkMacSystemFont","Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Open Sans","Helvetica Neue","Icons16",sans-serif;
     --pt-font-family-monospace: Consolas,Menlo,monospace;
     --pt-border-radius: 3px;
@@ -469,7 +459,6 @@ summary {
     --pt-dark-dialog-box-shadow: var(--pt-dark-elevation-shadow-4);
     --pt-dark-popover-box-shadow: var(--pt-dark-elevation-shadow-3);
     --pt-dark-tooltip-box-shadow: var(--pt-dark-popover-box-shadow);
-  /*! Components */
     --button-border-width: 1px;
     --button-box-shadow: inset 0 0 0 var(--button-border-width) hsla(var(--pt-shadow-color-hsl),0.2),inset 0 var(--button-border-width) 0 hsla(var(--pt-shadow-color-hsl),0.1);
     --button-box-shadow-active: inset 0 0 0 var(--button-border-width) hsla(var(--pt-shadow-color-hsl),0.2),inset 0 1px 2px hsla(var(--pt-shadow-color-hsl),0.2);
@@ -600,7 +589,6 @@ summary {
     --tooltip-text-color: var(--light-gray5);
     --dark-tooltip-background-color: var(--light-gray3);
     --dark-tooltip-text-color: var(--dark-gray5);
-  /*! Datetime */
     --datepicker-background-color: var(--pt-app-top-background-color);
     --datepicker-day-background-color-hover: var(--light-gray2);
     --datepicker-day-background-color-active: var(--light-gray1);
@@ -636,7 +624,6 @@ summary {
     --header-selected-background-color: var(--pt-intent-primary);
     --header-background-color-hsl: var(--table-background-color-hsl);
     --header-hover-background-color-hsl: var(--light-gray3-hsl);
-    --header-selected-background-color-hsl: var(--pt-intent-primary-hue),40%,97%;
     --header-selected-hover-background-color-hsl: var(--pt-intent-primary-hue),40%,91%;
     --column-header-text-color-hsl: var(--pt-text-color);
     --row-header-text-color-hsl: var(--pt-text-color-muted);
@@ -4122,7 +4109,6 @@ a.bp3-button.bp3-disabled {
     border: none;
     border-radius: var(--pt-border-radius);
     box-shadow: 0 0 0 0 hsla(var(--input-shadow-color-focus-hsl),0),0 0 0 0 hsla(var(--input-shadow-color-focus-hsl),0),var(--pt-input-box-shadow);
-    color: var(--input-color);
     font-size: 14px;
     font-weight: 400;
     height: 30px;
@@ -4208,9 +4194,6 @@ a.bp3-button.bp3-disabled {
 .bp3-file-upload-input:after:hover {
     background-clip: padding-box;
     background-color: var(--button-background-color-hover);
-    box-shadow: var(--button-box-shadow);
-    background-clip: padding-box;
-    background-color: var(--button-background-color-hover);
     box-shadow: var(--button-box-shadow)
 }
 
@@ -4261,7 +4244,6 @@ a.bp3-button.bp3-disabled {
 .bp3-dark .bp3-file-upload-input {
     background: var(--dark-input-background-color);
     box-shadow: 0 0 0 0 hsla(var(--dark-input-shadow-color-focus-hsl),0),0 0 0 0 hsla(var(--dark-input-shadow-color-focus-hsl),0),0 0 0 0 hsla(var(--dark-input-shadow-color-focus-hsl),0),var(--pt-dark-input-box-shadow);
-    color: var(--dark-input-color);
     color: var(--pt-dark-text-color-disabled)
 }
 
@@ -4303,8 +4285,6 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-dark .bp3-file-upload-input:after:hover {
-    background-color: var(--dark-button-background-color-hover);
-    box-shadow: var(--dark-button-box-shadow);
     background-color: var(--dark-button-background-color-hover);
     box-shadow: var(--dark-button-box-shadow)
 }
@@ -5712,7 +5692,6 @@ table.bp3-html-table.bp3-interactive tbody tr:active td {
 }
 
 .bp3-icon:not(:empty):before {
-    content: ""!important;
     content: unset!important
 }
 
@@ -5872,9 +5851,6 @@ span.bp3-icon:empty:before {
 }
 
 .bp3-menu-item.bp3-disabled {
-    background-color: inherit;
-    color: var(--pt-text-color-disabled);
-    cursor: not-allowed;
     background-color: inherit!important;
     color: var(--pt-text-color-disabled)!important;
     cursor: not-allowed!important;
@@ -5892,7 +5868,6 @@ span.bp3-icon:empty:before {
 
 .bp3-dark .bp3-menu-item.bp3-disabled {
     background-color: inherit;
-    color: var(--pt-dark-text-color-disabled);
     color: var(--pt-dark-text-color-disabled)!important
 }
 
@@ -7156,7 +7131,6 @@ span.bp3-popover-target {
 .bp3-slider-handle {
     background-color: var(--button-background-color);
     background-image: var(--button-gradient);
-    box-shadow: var(--button-box-shadow);
     color: var(--pt-text-color);
     border-radius: var(--pt-border-radius);
     box-shadow: var(--button-box-shadow-overlay);
@@ -7194,7 +7168,6 @@ span.bp3-popover-target {
 .bp3-slider-handle:hover {
     background-clip: padding-box;
     background-color: var(--button-background-color-hover);
-    box-shadow: var(--button-box-shadow);
     box-shadow: var(--button-box-shadow-overlay);
     cursor: -webkit-grab;
     cursor: grab;
@@ -7204,7 +7177,6 @@ span.bp3-popover-target {
 .bp3-slider-handle.bp3-active {
     background-color: var(--button-background-color-active);
     background-image: none;
-    box-shadow: var(--button-box-shadow-active);
     box-shadow: var(--button-box-shadow-overlay-active);
     cursor: -webkit-grabbing;
     cursor: grabbing
@@ -8177,11 +8149,11 @@ span.bp3-popover-target {
     color: var(--dark-input-color)
 }
 
-.bp3-dark .bp3-tag-input .bp3-input-ghost::-moz-placeholder, .bp3-tag-input.bp3-dark .bp3-input-ghost::-moz-placeholder {
+.bp3-dark .bp3-tag-input .bp3-input-ghost::-moz-placeholder,.bp3-tag-input.bp3-dark .bp3-input-ghost::-moz-placeholder {
     color: var(--dark-input-placeholder-color)
 }
 
-.bp3-dark .bp3-tag-input .bp3-input-ghost:-ms-input-placeholder, .bp3-tag-input.bp3-dark .bp3-input-ghost:-ms-input-placeholder {
+.bp3-dark .bp3-tag-input .bp3-input-ghost:-ms-input-placeholder,.bp3-tag-input.bp3-dark .bp3-input-ghost:-ms-input-placeholder {
     color: var(--dark-input-placeholder-color)
 }
 

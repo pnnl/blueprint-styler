@@ -1,5 +1,4 @@
-@charset "UTF-8";
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html {
+@charset "UTF-8";/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
     box-sizing: border-box
@@ -9,7 +8,6 @@ body {
     margin: 0;
     font-size: 14px;
     font-weight: 400;
-    letter-spacing: 0;
     line-height: 1.28581;
     text-transform: none;
     font-family: IBM Plex Sans,Helvetica Neue,-apple-system,Segoe UI,Arial,sans-serif;
@@ -44,7 +42,6 @@ a {
 
 abbr[title] {
     border-bottom: none;
-    text-decoration: underline;
     -webkit-text-decoration: underline dotted;
     text-decoration: underline dotted
 }
@@ -59,7 +56,6 @@ code,kbd,samp {
 }
 
 small {
-    font-size: 80%;
     font-size: 12px
 }
 
@@ -441,7 +437,6 @@ a:hover {
 .bp3-key,.bp3-running-text kbd {
     align-items: center;
     background: #fff;
-    border-radius: 0;
     box-shadow: 0 0 0 1px rgba(0,0,0,.1),0 0 0 transparent,0 1px 1px rgba(0,0,0,.2);
     color: rgba(0,0,0,.6);
     display: inline-flex;
@@ -451,7 +446,6 @@ a:hover {
     justify-content: center;
     line-height: 24px;
     min-width: 24px;
-    padding: 0;
     vertical-align: middle;
     padding: 3px 6px;
     border-radius: 3px
@@ -861,7 +855,6 @@ a:hover {
 .bp3-button.bp3-large,.bp3-large .bp3-button {
     min-height: 40px;
     min-width: 40px;
-    font-size: 16px;
     padding: 5px 15px;
     font-size: 14px
 }
@@ -1641,7 +1634,6 @@ a.bp3-button.bp3-disabled {
 .bp3-button-group:not(.bp3-minimal)>.bp3-button:not(:last-child),.bp3-button-group:not(.bp3-minimal)>.bp3-popover-wrapper:not(:last-child) .bp3-button {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
-    margin-right: -1px;
     margin-right: 1px
 }
 
@@ -1962,7 +1954,6 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-button-group.bp3-vertical:not(.bp3-minimal)>.bp3-button:not(:last-child),.bp3-button-group.bp3-vertical:not(.bp3-minimal)>.bp3-popover-wrapper:not(:last-child) .bp3-button {
-    margin-bottom: -1px;
     margin-bottom: 1px
 }
 
@@ -2729,14 +2720,12 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-editable-text:hover:before {
-    box-shadow: 0 0 0 0 rgba(15,98,254,0),0 0 0 0 rgba(15,98,254,0),inset 0 0 0 1px rgba(0,0,0,.15);
     box-shadow: inset 0 -1px 0 0 #0f62fe;
     background-color: rgba(0,0,0,.04)
 }
 
 .bp3-editable-text.bp3-editable-text-editing:before {
     background-color: rgba(0,0,0,.04);
-    box-shadow: 0 0 0 1px #0f62fe,0 0 0 3px rgba(15,98,254,.3),inset 0 1px 1px rgba(0,0,0,.2);
     box-shadow: 0 0 0 2px #0f62fe
 }
 
@@ -2749,12 +2738,10 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-editable-text.bp3-intent-primary:hover:before {
-    box-shadow: 0 0 0 0 rgba(15,98,254,0),0 0 0 0 rgba(15,98,254,0),inset 0 0 0 1px rgba(15,98,254,.4);
     box-shadow: inset 0 -1px 0 0 #0f62fe
 }
 
 .bp3-editable-text.bp3-intent-primary.bp3-editable-text-editing:before {
-    box-shadow: 0 0 0 1px #0f62fe,0 0 0 3px rgba(15,98,254,.3),inset 0 1px 1px rgba(0,0,0,.2);
     box-shadow: 0 0 0 2px #0f62fe
 }
 
@@ -2763,12 +2750,10 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-editable-text.bp3-intent-success:hover:before {
-    box-shadow: 0 0 0 0 rgba(25,128,56,0),0 0 0 0 rgba(25,128,56,0),inset 0 0 0 1px rgba(25,128,56,.4);
     box-shadow: inset 0 -1px 0 0 #198038
 }
 
 .bp3-editable-text.bp3-intent-success.bp3-editable-text-editing:before {
-    box-shadow: 0 0 0 1px #198038,0 0 0 3px rgba(25,128,56,.3),inset 0 1px 1px rgba(0,0,0,.2);
     box-shadow: 0 0 0 2px #198038
 }
 
@@ -2777,12 +2762,10 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-editable-text.bp3-intent-warning:hover:before {
-    box-shadow: 0 0 0 0 rgba(248,103,0,0),0 0 0 0 rgba(248,103,0,0),inset 0 0 0 1px rgba(248,103,0,.4);
     box-shadow: inset 0 -1px 0 0 #f86700
 }
 
 .bp3-editable-text.bp3-intent-warning.bp3-editable-text-editing:before {
-    box-shadow: 0 0 0 1px #f86700,0 0 0 3px rgba(248,103,0,.3),inset 0 1px 1px rgba(0,0,0,.2);
     box-shadow: 0 0 0 2px #f86700
 }
 
@@ -2791,24 +2774,20 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-editable-text.bp3-intent-danger:hover:before {
-    box-shadow: 0 0 0 0 rgba(218,30,40,0),0 0 0 0 rgba(218,30,40,0),inset 0 0 0 1px rgba(218,30,40,.4);
     box-shadow: inset 0 -1px 0 0 #da1e28
 }
 
 .bp3-editable-text.bp3-intent-danger.bp3-editable-text-editing:before {
-    box-shadow: 0 0 0 1px #da1e28,0 0 0 3px rgba(218,30,40,.3),inset 0 1px 1px rgba(0,0,0,.2);
     box-shadow: 0 0 0 2px #da1e28
 }
 
 .bp3-dark .bp3-editable-text:hover:before {
-    box-shadow: 0 0 0 0 rgba(15,98,254,0),0 0 0 0 rgba(15,98,254,0),inset 0 0 0 1px hsla(0,0%,100%,.13);
     box-shadow: inset 0 -1px 0 0 #0f62fe;
     background-color: hsla(0,0%,100%,.06)
 }
 
 .bp3-dark .bp3-editable-text.bp3-editable-text-editing:before {
     background-color: hsla(0,0%,100%,.06);
-    box-shadow: 0 0 0 1px #0f62fe,0 0 0 3px rgba(15,98,254,.3),none;
     box-shadow: 0 0 0 2px #0f62fe
 }
 
@@ -2821,12 +2800,10 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-dark .bp3-editable-text.bp3-intent-primary:hover:before {
-    box-shadow: 0 0 0 0 rgba(120,169,255,0),0 0 0 0 rgba(120,169,255,0),inset 0 0 0 1px rgba(120,169,255,.4);
     box-shadow: inset 0 -1px 0 0 #0f62fe
 }
 
 .bp3-dark .bp3-editable-text.bp3-intent-primary.bp3-editable-text-editing:before {
-    box-shadow: 0 0 0 1px #78a9ff,0 0 0 3px rgba(120,169,255,.3),none;
     box-shadow: 0 0 0 2px #0f62fe
 }
 
@@ -2835,12 +2812,10 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-dark .bp3-editable-text.bp3-intent-success:hover:before {
-    box-shadow: 0 0 0 0 rgba(66,190,101,0),0 0 0 0 rgba(66,190,101,0),inset 0 0 0 1px rgba(66,190,101,.4);
     box-shadow: inset 0 -1px 0 0 #198038
 }
 
 .bp3-dark .bp3-editable-text.bp3-intent-success.bp3-editable-text-editing:before {
-    box-shadow: 0 0 0 1px #42be65,0 0 0 3px rgba(66,190,101,.3),none;
     box-shadow: 0 0 0 2px #198038
 }
 
@@ -2849,12 +2824,10 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-dark .bp3-editable-text.bp3-intent-warning:hover:before {
-    box-shadow: 0 0 0 0 rgba(255,131,43,0),0 0 0 0 rgba(255,131,43,0),inset 0 0 0 1px rgba(255,131,43,.4);
     box-shadow: inset 0 -1px 0 0 #f86700
 }
 
 .bp3-dark .bp3-editable-text.bp3-intent-warning.bp3-editable-text-editing:before {
-    box-shadow: 0 0 0 1px #ff832b,0 0 0 3px rgba(255,131,43,.3),none;
     box-shadow: 0 0 0 2px #f86700
 }
 
@@ -2863,12 +2836,10 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-dark .bp3-editable-text.bp3-intent-danger:hover:before {
-    box-shadow: 0 0 0 0 rgba(255,131,137,0),0 0 0 0 rgba(255,131,137,0),inset 0 0 0 1px rgba(255,131,137,.4);
     box-shadow: inset 0 -1px 0 0 #da1e28
 }
 
 .bp3-dark .bp3-editable-text.bp3-intent-danger.bp3-editable-text-editing:before {
-    box-shadow: 0 0 0 1px #ff8389,0 0 0 3px rgba(255,131,137,.3),none;
     box-shadow: 0 0 0 2px #da1e28
 }
 
@@ -3222,7 +3193,6 @@ a.bp3-button.bp3-disabled {
     background-color: rgba(0,0,0,.09);
     background-image: none;
     border: none;
-    box-shadow: none;
     cursor: pointer;
     display: inline-block;
     font-size: 16px;
@@ -3262,11 +3232,8 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-control input:focus~.bp3-control-indicator {
-    outline: 2px auto rgba(0,114,195,.6);
-    -moz-outline-radius: 6px;
     outline: 2px solid #0f62fe;
-    outline-offset: 2px;
-    -moz-outline-radius: null
+    outline-offset: 2px
 }
 
 .bp3-control.bp3-large {
@@ -3431,7 +3398,6 @@ a.bp3-button.bp3-disabled {
 .bp3-control.bp3-switch .bp3-control-indicator:before {
     background: #fff;
     border-radius: 50%;
-    box-shadow: 0 0 0 1px rgba(0,0,0,.2),0 1px 1px rgba(0,0,0,.2);
     height: calc(1em - 4px);
     left: 0;
     margin: 2px;
@@ -3552,7 +3518,6 @@ a.bp3-button.bp3-disabled {
 .bp3-dark .bp3-control .bp3-control-indicator {
     background-color: hsla(0,0%,100%,.13);
     background-image: none;
-    box-shadow: none;
     box-shadow: inset 0 0 0 1px hsla(0,0%,100%,.4)
 }
 
@@ -3654,7 +3619,6 @@ a.bp3-button.bp3-disabled {
     border: none;
     border-radius: 0;
     box-shadow: 0 0 0 0 rgba(15,98,254,0),0 0 0 0 rgba(15,98,254,0),none;
-    color: rgba(0,0,0,.74);
     font-size: 14px;
     font-weight: 400;
     height: 32px;
@@ -3740,9 +3704,6 @@ a.bp3-button.bp3-disabled {
 .bp3-file-upload-input:after:hover {
     background-clip: padding-box;
     background-color: rgba(0,0,0,.15);
-    box-shadow: none;
-    background-clip: padding-box;
-    background-color: rgba(0,0,0,.15);
     box-shadow: none
 }
 
@@ -3793,7 +3754,6 @@ a.bp3-button.bp3-disabled {
 .bp3-dark .bp3-file-upload-input {
     background: hsla(0,0%,100%,.06);
     box-shadow: 0 0 0 0 rgba(15,98,254,0),0 0 0 0 rgba(15,98,254,0),0 0 0 0 rgba(15,98,254,0),none;
-    color: hsla(0,0%,100%,.96);
     color: hsla(0,0%,100%,.33)
 }
 
@@ -3835,8 +3795,6 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-dark .bp3-file-upload-input:after:hover {
-    background-color: hsla(0,0%,100%,.2);
-    box-shadow: none;
     background-color: hsla(0,0%,100%,.2);
     box-shadow: none
 }
@@ -4116,12 +4074,10 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-input-group.bp3-intent-primary .bp3-input {
-    box-shadow: 0 0 0 0 rgba(15,98,254,0),0 0 0 0 rgba(15,98,254,0),inset 0 0 0 1px #0f62fe,none;
     box-shadow: inset 0 -1px 0 0 #0f62fe
 }
 
 .bp3-input-group.bp3-intent-primary .bp3-input:focus {
-    box-shadow: 0 0 0 1px #0f62fe,0 0 0 3px rgba(15,98,254,.3),inset 0 1px 1px rgba(0,0,0,.2);
     box-shadow: inset 0 0 0 2px #0f62fe
 }
 
@@ -4142,12 +4098,10 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-input-group.bp3-intent-success .bp3-input {
-    box-shadow: 0 0 0 0 rgba(25,128,56,0),0 0 0 0 rgba(25,128,56,0),inset 0 0 0 1px #198038,none;
     box-shadow: inset 0 -1px 0 0 #198038
 }
 
 .bp3-input-group.bp3-intent-success .bp3-input:focus {
-    box-shadow: 0 0 0 1px #198038,0 0 0 3px rgba(25,128,56,.3),inset 0 1px 1px rgba(0,0,0,.2);
     box-shadow: inset 0 0 0 2px #198038
 }
 
@@ -4168,12 +4122,10 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-input-group.bp3-intent-warning .bp3-input {
-    box-shadow: 0 0 0 0 rgba(248,103,0,0),0 0 0 0 rgba(248,103,0,0),inset 0 0 0 1px #f86700,none;
     box-shadow: inset 0 -1px 0 0 #f86700
 }
 
 .bp3-input-group.bp3-intent-warning .bp3-input:focus {
-    box-shadow: 0 0 0 1px #f86700,0 0 0 3px rgba(248,103,0,.3),inset 0 1px 1px rgba(0,0,0,.2);
     box-shadow: inset 0 0 0 2px #f86700
 }
 
@@ -4194,12 +4146,10 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-input-group.bp3-intent-danger .bp3-input {
-    box-shadow: 0 0 0 0 rgba(218,30,40,0),0 0 0 0 rgba(218,30,40,0),inset 0 0 0 1px #da1e28,none;
     box-shadow: inset 0 -1px 0 0 #da1e28
 }
 
 .bp3-input-group.bp3-intent-danger .bp3-input:focus {
-    box-shadow: 0 0 0 1px #da1e28,0 0 0 3px rgba(218,30,40,.3),inset 0 1px 1px rgba(0,0,0,.2);
     box-shadow: inset 0 0 0 2px #da1e28
 }
 
@@ -4226,7 +4176,6 @@ a.bp3-button.bp3-disabled {
     background: rgba(0,0,0,.04);
     border: none;
     border-radius: 0;
-    box-shadow: 0 0 0 0 rgba(15,98,254,0),0 0 0 0 rgba(15,98,254,0),none;
     color: rgba(0,0,0,.74);
     font-size: 14px;
     font-weight: 400;
@@ -4256,12 +4205,6 @@ a.bp3-button.bp3-disabled {
 
 .bp3-input.bp3-active,.bp3-input:focus {
     box-shadow: 0 0 0 1px #0f62fe,0 0 0 3px rgba(15,98,254,.3),inset 0 1px 1px rgba(0,0,0,.2)
-}
-
-.bp3-input.bp3-round,.bp3-input[type=search] {
-    border-radius: 32px;
-    box-sizing: border-box;
-    padding-left: 10px
 }
 
 .bp3-input[readonly] {
@@ -4305,7 +4248,6 @@ a.bp3-button.bp3-disabled {
 
 .bp3-dark .bp3-input {
     background: hsla(0,0%,100%,.06);
-    box-shadow: 0 0 0 0 rgba(15,98,254,0),0 0 0 0 rgba(15,98,254,0),0 0 0 0 rgba(15,98,254,0),none;
     color: hsla(0,0%,100%,.96);
     box-shadow: inset 0 -1px 0 0 hsla(0,0%,100%,.4)
 }
@@ -4337,12 +4279,10 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-input.bp3-intent-primary {
-    box-shadow: 0 0 0 0 rgba(15,98,254,0),0 0 0 0 rgba(15,98,254,0),inset 0 0 0 1px #0f62fe,none;
     box-shadow: inset 0 -1px 0 0 #0f62fe
 }
 
 .bp3-input.bp3-intent-primary:focus {
-    box-shadow: 0 0 0 1px #0f62fe,0 0 0 3px rgba(15,98,254,.3),inset 0 1px 1px rgba(0,0,0,.2);
     box-shadow: inset 0 0 0 2px #0f62fe
 }
 
@@ -4371,12 +4311,10 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-input.bp3-intent-success {
-    box-shadow: 0 0 0 0 rgba(25,128,56,0),0 0 0 0 rgba(25,128,56,0),inset 0 0 0 1px #198038,none;
     box-shadow: inset 0 -1px 0 0 #198038
 }
 
 .bp3-input.bp3-intent-success:focus {
-    box-shadow: 0 0 0 1px #198038,0 0 0 3px rgba(25,128,56,.3),inset 0 1px 1px rgba(0,0,0,.2);
     box-shadow: inset 0 0 0 2px #198038
 }
 
@@ -4405,12 +4343,10 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-input.bp3-intent-warning {
-    box-shadow: 0 0 0 0 rgba(248,103,0,0),0 0 0 0 rgba(248,103,0,0),inset 0 0 0 1px #f86700,none;
     box-shadow: inset 0 -1px 0 0 #f86700
 }
 
 .bp3-input.bp3-intent-warning:focus {
-    box-shadow: 0 0 0 1px #f86700,0 0 0 3px rgba(248,103,0,.3),inset 0 1px 1px rgba(0,0,0,.2);
     box-shadow: inset 0 0 0 2px #f86700
 }
 
@@ -4439,12 +4375,10 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-input.bp3-intent-danger {
-    box-shadow: 0 0 0 0 rgba(218,30,40,0),0 0 0 0 rgba(218,30,40,0),inset 0 0 0 1px #da1e28,none;
     box-shadow: inset 0 -1px 0 0 #da1e28
 }
 
 .bp3-input.bp3-intent-danger:focus {
-    box-shadow: 0 0 0 1px #da1e28,0 0 0 3px rgba(218,30,40,.3),inset 0 1px 1px rgba(0,0,0,.2);
     box-shadow: inset 0 0 0 2px #da1e28
 }
 
@@ -5242,7 +5176,6 @@ table.bp3-html-table.bp3-interactive tbody tr:active td {
 }
 
 .bp3-icon:not(:empty):before {
-    content: ""!important;
     content: unset!important
 }
 
@@ -7290,7 +7223,6 @@ span.bp3-icon:empty:before {
     list-style: none;
     margin: 0;
     min-width: 180px;
-    padding: 5px;
     text-align: left;
     padding: 5px 0
 }
@@ -7298,9 +7230,7 @@ span.bp3-icon:empty:before {
 .bp3-menu-divider {
     border-top: 1px solid rgba(0,0,0,.15);
     display: block;
-    margin: 5px;
-    margin-left: 0;
-    margin-right: 0
+    margin: 5px 0
 }
 
 .bp3-dark .bp3-menu-divider {
@@ -7349,9 +7279,7 @@ span.bp3-icon:empty:before {
 }
 
 .bp3-menu-item.bp3-disabled {
-    background-color: inherit;
     color: rgba(0,0,0,.4);
-    cursor: not-allowed;
     background-color: inherit!important;
     cursor: not-allowed!important;
     outline: none!important
@@ -8464,9 +8392,7 @@ span.bp3-popover-target {
 
 .bp3-progress-bar {
     background: hsla(0,0%,40%,.2);
-    border-radius: 40px;
     display: block;
-    height: 8px;
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -8478,7 +8404,6 @@ span.bp3-popover-target {
     background: linear-gradient(-45deg,hsla(0,0%,100%,.2) 25%,transparent 0,transparent 50%,hsla(0,0%,100%,.2) 0,hsla(0,0%,100%,.2) 75%,transparent 0);
     background-color: hsla(0,0%,40%,.8);
     background-size: 30px 30px;
-    border-radius: 40px;
     height: 100%;
     position: absolute;
     transition: width .2s cubic-bezier(.4,1,.75,.9);
@@ -8635,9 +8560,7 @@ span.bp3-popover-target {
 .bp3-slider-handle {
     background-color: rgba(0,0,0,.09);
     background-image: none;
-    box-shadow: none;
     color: rgba(0,0,0,.74);
-    border-radius: 0;
     box-shadow: 0 0 0 1px rgba(0,0,0,.2),0 1px 1px rgba(0,0,0,.2);
     cursor: pointer;
     height: 12px;
@@ -8674,7 +8597,6 @@ span.bp3-popover-target {
 .bp3-slider-handle:hover {
     background-clip: padding-box;
     background-color: rgba(0,0,0,.15);
-    box-shadow: none;
     box-shadow: 0 0 0 1px rgba(0,0,0,.2),0 1px 1px rgba(0,0,0,.2);
     cursor: -webkit-grab;
     cursor: grab;
@@ -8682,9 +8604,7 @@ span.bp3-popover-target {
 }
 
 .bp3-slider-handle.bp3-active {
-    background-color: rgba(0,0,0,.21);
     background-image: none;
-    box-shadow: 0 0 0 1px rgba(0,0,0,.2),inset 0 1px 1px rgba(0,0,0,.1);
     cursor: -webkit-grabbing;
     cursor: grabbing;
     background-color: #0f62fe;
@@ -8736,13 +8656,11 @@ span.bp3-popover-target {
 }
 
 .bp3-dark .bp3-slider-handle,.bp3-dark .bp3-slider-handle:hover {
-    background-color: #545454;
     background-color: #c9c9c9;
     box-shadow: none
 }
 
 .bp3-dark .bp3-slider-handle.bp3-active {
-    background-color: #333;
     background-color: #0f62fe;
     box-shadow: none
 }
@@ -8769,11 +8687,6 @@ span.bp3-popover-target {
 
 .bp3-disabled .bp3-slider-handle .bp3-slider-label {
     box-shadow: none
-}
-
-.bp3-slider-handle.bp3-end,.bp3-slider-handle.bp3-start {
-    width: 6px;
-    width: null
 }
 
 .bp3-slider-handle.bp3-start {
@@ -8834,10 +8747,8 @@ span.bp3-popover-target {
 }
 
 .bp3-slider.bp3-vertical .bp3-slider-handle.bp3-end,.bp3-slider.bp3-vertical .bp3-slider-handle.bp3-start {
-    height: 6px;
     margin-left: 0;
-    width: 12px;
-    height: null
+    width: 12px
 }
 
 .bp3-slider.bp3-vertical .bp3-slider-handle.bp3-start {
@@ -8894,7 +8805,6 @@ span.bp3-popover-target {
 
 .bp3-spinner .bp3-spinner-head {
     stroke: hsla(0,0%,40%,.8);
-    stroke-linecap: round;
     transform-origin: center;
     transition: stroke-dashoffset .2s cubic-bezier(.4,1,.75,.9);
     stroke-linecap: square
@@ -8993,7 +8903,6 @@ span.bp3-popover-target {
     text-overflow: ellipsis;
     white-space: nowrap;
     word-wrap: normal;
-    color: rgba(0,0,0,.74);
     cursor: pointer;
     flex: 0 0 auto;
     font-size: 14px;
@@ -9072,7 +8981,6 @@ span.bp3-popover-target {
 }
 
 .bp3-dark .bp3-tab {
-    color: hsla(0,0%,100%,.96);
     color: hsla(0,0%,100%,.6)
 }
 
@@ -9085,7 +8993,6 @@ span.bp3-popover-target {
 }
 
 .bp3-dark .bp3-tab:not([aria-disabled=true]):hover,.bp3-dark .bp3-tab[aria-selected=true] {
-    color: #4589ff;
     color: hsla(0,0%,100%,.96)
 }
 
@@ -9652,17 +9559,14 @@ span.bp3-popover-target {
 }
 
 .bp3-tag-input.bp3-active.bp3-intent-success {
-    box-shadow: 0 0 0 1px #0e6027,0 0 0 3px rgba(14,96,39,.3),inset 0 1px 1px rgba(0,0,0,.2);
     box-shadow: inset 0 0 0 2px #198038
 }
 
 .bp3-tag-input.bp3-active.bp3-intent-warning {
-    box-shadow: 0 0 0 1px #bb4e00,0 0 0 3px rgba(187,78,0,.3),inset 0 1px 1px rgba(0,0,0,.2);
     box-shadow: inset 0 0 0 2px #f86700
 }
 
 .bp3-tag-input.bp3-active.bp3-intent-danger {
-    box-shadow: 0 0 0 1px #a2191f,0 0 0 3px rgba(162,25,31,.3),inset 0 1px 1px rgba(0,0,0,.2);
     box-shadow: inset 0 0 0 2px #da1e28
 }
 
@@ -9670,11 +9574,11 @@ span.bp3-popover-target {
     color: hsla(0,0%,100%,.96)
 }
 
-.bp3-dark .bp3-tag-input .bp3-input-ghost::-moz-placeholder, .bp3-tag-input.bp3-dark .bp3-input-ghost::-moz-placeholder {
+.bp3-dark .bp3-tag-input .bp3-input-ghost::-moz-placeholder,.bp3-tag-input.bp3-dark .bp3-input-ghost::-moz-placeholder {
     color: hsla(0,0%,100%,.33)
 }
 
-.bp3-dark .bp3-tag-input .bp3-input-ghost:-ms-input-placeholder, .bp3-tag-input.bp3-dark .bp3-input-ghost:-ms-input-placeholder {
+.bp3-dark .bp3-tag-input .bp3-input-ghost:-ms-input-placeholder,.bp3-tag-input.bp3-dark .bp3-input-ghost:-ms-input-placeholder {
     color: hsla(0,0%,100%,.33)
 }
 
@@ -10741,11 +10645,8 @@ span.bp3-popover-target {
 .bp3-timepicker .bp3-timepicker-input-row {
     background: rgba(0,0,0,.04);
     border-radius: 0;
-    box-shadow: none;
     display: inline-block;
-    height: 30px;
     line-height: 28px;
-    padding: 0 1px;
     vertical-align: middle;
     height: 32px;
     padding: 0;
@@ -10766,7 +10667,6 @@ span.bp3-popover-target {
     border-radius: 0;
     box-shadow: 0 0 0 0 rgba(15,98,254,0),0 0 0 0 rgba(15,98,254,0);
     color: rgba(0,0,0,.74);
-    height: 28px;
     outline: 0;
     padding: 0;
     text-align: center;
@@ -10776,7 +10676,6 @@ span.bp3-popover-target {
 }
 
 .bp3-timepicker .bp3-timepicker-input:focus {
-    box-shadow: 0 0 0 1px #0f62fe,0 0 0 3px rgba(15,98,254,.3);
     box-shadow: inset 0 0 0 2px #0f62fe
 }
 
@@ -10909,7 +10808,6 @@ span.bp3-popover-target {
 }
 
 .bp3-timepicker .bp3-timepicker-ampm-select {
-    margin-left: 5px;
     margin-left: 1px
 }
 
@@ -10928,7 +10826,6 @@ span.bp3-popover-target {
 
 .bp3-dark .bp3-timepicker .bp3-timepicker-input-row {
     background: hsla(0,0%,100%,.06);
-    box-shadow: none;
     box-shadow: inset 0 -1px 0 0 hsla(0,0%,100%,.4)
 }
 
@@ -10970,7 +10867,6 @@ span.bp3-popover-target {
 }
 
 .bp3-datetimepicker .bp3-timepicker {
-    margin-top: 10px;
     margin: 3px
 }
 
@@ -12286,11 +12182,7 @@ span.bp3-popover-target {
     margin-bottom: 2px
 }
 
-.bp3-control .bp3-control-indicator:hover {
-    box-shadow: inset 0 0 0 1px #0f62fe
-}
-
-.bp3-dark .bp3-control .bp3-control-indicator:hover {
+.bp3-control .bp3-control-indicator:hover,.bp3-dark .bp3-control .bp3-control-indicator:hover {
     box-shadow: inset 0 0 0 1px #0f62fe
 }
 
@@ -12348,8 +12240,7 @@ span.bp3-popover-target {
 
 :focus {
     outline: 2px solid #0f62fe;
-    outline-offset: 1px;
-    -moz-outline-radius: null
+    outline-offset: 1px
 }
 
 .bp3-focus-disabled :focus,.bp3-focus-disabled :focus~.bp3-control-indicator,.bp3-input:focus {
@@ -12358,12 +12249,13 @@ span.bp3-popover-target {
 
 .bp3-tag-input .bp3-tag.bp3-active,.bp3-tag:focus {
     outline: 2px solid #0f62fe;
-    outline-offset: 1px;
-    -moz-outline-radius: null
+    outline-offset: 1px
 }
 
-.bp3-input.bp3-input[type=search] {
-    border-radius: 0
+.bp3-input.bp3-round {
+    border-radius: 30px;
+    box-sizing: border-box;
+    padding-left: 10px
 }
 
 * {
@@ -12382,7 +12274,6 @@ span.bp3-popover-target {
 }
 
 .bpx-vars {
-  /*! Colors */
     --black: #000;
     --dark-gray1: #0f0f0f;
     --dark-gray2: #212121;
@@ -12470,7 +12361,6 @@ span.bp3-popover-target {
     --sepia3: #ac7134;
     --sepia4: #be8d5c;
     --sepia5: #d3ab82;
-  /*! ColorAliases */
     --pt-intent-primary: #0f62fe;
     --pt-intent-success: #198038;
     --pt-intent-warning: #f86700;

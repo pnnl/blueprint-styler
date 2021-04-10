@@ -1,5 +1,4 @@
-@charset "UTF-8";
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html {
+@charset "UTF-8";/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
     box-sizing: border-box
@@ -43,7 +42,6 @@ a {
 
 abbr[title] {
     border-bottom: none;
-    text-decoration: underline;
     -webkit-text-decoration: underline dotted;
     text-decoration: underline dotted
 }
@@ -58,7 +56,6 @@ code,kbd,samp {
 }
 
 small {
-    font-size: 80%;
     font-size: 12px
 }
 
@@ -717,7 +714,6 @@ a:hover {
 
 .bp3-button:not([class*=bp3-intent-]):hover {
     background-clip: padding-box;
-    box-shadow: inset 0 0 0 1px rgba(0,0,0,.15),0 2px 0 rgba(0,0,0,.015);
     box-shadow: inset 0 0 0 1px #40a9ff,0 2px 0 rgba(0,0,0,.015);
     background-color: #fff;
     color: #40a9ff
@@ -1000,7 +996,6 @@ a:hover {
 .bp3-button.bp3-minimal:hover {
     background: rgba(105,192,255,.2);
     box-shadow: none;
-    color: rgba(0,0,0,.65);
     text-decoration: none;
     color: #40a9ff;
     border-color: #40a9ff
@@ -1009,7 +1004,6 @@ a:hover {
 .bp3-button.bp3-minimal.bp3-active,.bp3-button.bp3-minimal:active {
     background: rgba(24,144,255,.3);
     box-shadow: none;
-    color: rgba(0,0,0,.65);
     color: #096dd9;
     border-color: #096dd9
 }
@@ -1288,7 +1282,6 @@ a:hover {
 .bp3-button.bp3-outlined:hover {
     background: rgba(105,192,255,.2);
     box-shadow: none;
-    color: rgba(0,0,0,.65);
     text-decoration: none;
     color: #40a9ff;
     border-color: #40a9ff
@@ -1297,7 +1290,6 @@ a:hover {
 .bp3-button.bp3-outlined.bp3-active,.bp3-button.bp3-outlined:active {
     background: rgba(24,144,255,.3);
     box-shadow: none;
-    color: rgba(0,0,0,.65);
     color: #096dd9;
     border-color: #096dd9
 }
@@ -1588,7 +1580,6 @@ a:hover {
 a.bp3-button {
     text-align: center;
     text-decoration: none;
-    transition: none;
     transition: .2s linear;
     transition-property: background-color,color,opacity,box-shadow;
     position: relative
@@ -3651,7 +3642,6 @@ a.bp3-button.bp3-disabled {
     border: none;
     border-radius: 2px;
     box-shadow: 0 0 0 0 rgba(24,144,255,0),0 0 0 0 rgba(24,144,255,0),inset 0 0 0 1px rgba(0,0,0,.15);
-    color: rgba(0,0,0,.65);
     font-size: 14px;
     font-weight: 400;
     height: 30px;
@@ -3738,10 +3728,6 @@ a.bp3-button.bp3-disabled {
 
 .bp3-file-upload-input:after:hover {
     background-clip: padding-box;
-    background-color: #fff;
-    box-shadow: inset 0 0 0 1px rgba(0,0,0,.15),0 2px 0 rgba(0,0,0,.015);
-    background-clip: padding-box;
-    box-shadow: inset 0 0 0 1px rgba(0,0,0,.15),0 2px 0 rgba(0,0,0,.015);
     box-shadow: inset 0 0 0 1px #40a9ff,0 2px 0 rgba(0,0,0,.015);
     background-color: #fff;
     color: #40a9ff;
@@ -3795,7 +3781,6 @@ a.bp3-button.bp3-disabled {
 .bp3-dark .bp3-file-upload-input {
     background: rgba(0,0,0,.3);
     box-shadow: 0 0 0 0 rgba(24,144,255,0),0 0 0 0 rgba(24,144,255,0),0 0 0 0 rgba(24,144,255,0),inset 0 0 0 1px rgba(0,0,0,.3),inset 0 1px 1px rgba(0,0,0,.4);
-    color: hsla(0,0%,100%,.85);
     color: hsla(0,0%,100%,.45)
 }
 
@@ -3837,8 +3822,6 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-dark .bp3-file-upload-input:after:hover {
-    background-color: #434343;
-    box-shadow: 0 0 0 1px rgba(0,0,0,.4);
     background-color: #434343;
     box-shadow: 0 0 0 1px rgba(0,0,0,.4)
 }
@@ -4227,7 +4210,6 @@ a.bp3-button.bp3-disabled {
     line-height: 30px;
     outline: none;
     padding: 0 10px;
-    transition: box-shadow .1s cubic-bezier(.4,1,.75,.9);
     vertical-align: middle;
     transition: .2s linear;
     transition-property: background-color,color,opacity,box-shadow;
@@ -4250,14 +4232,7 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-input.bp3-active,.bp3-input:focus {
-    box-shadow: 0 0 0 1px #1890ff,0 0 0 3px rgba(24,144,255,.3),inset 0 1px 1px rgba(0,0,0,.2);
     box-shadow: 0 0 0 1px #1890ff,0 0 0 3px rgba(24,144,255,.3),inset 0 0 0 0 transparent
-}
-
-.bp3-input.bp3-round,.bp3-input[type=search] {
-    border-radius: 30px;
-    box-sizing: border-box;
-    padding-left: 10px
 }
 
 .bp3-input[readonly] {
@@ -4618,11 +4593,9 @@ form {
     -webkit-appearance: none;
     border-radius: 2px;
     height: 30px;
-    padding: 0 25px 0 10px;
     width: 100%;
     position: relative;
-    padding-left: 16px;
-    padding-right: 32px
+    padding: 0 32px 0 16px
 }
 
 .bp3-html-select select>*,.bp3-select select>* {
@@ -5254,7 +5227,6 @@ table.bp3-html-table.bp3-interactive tbody tr:active td {
 }
 
 .bp3-icon:not(:empty):before {
-    content: ""!important;
     content: unset!important
 }
 
@@ -7358,9 +7330,7 @@ span.bp3-icon:empty:before {
 }
 
 .bp3-menu-item.bp3-disabled {
-    background-color: inherit;
     color: rgba(0,0,0,.25);
-    cursor: not-allowed;
     background-color: inherit!important;
     cursor: not-allowed!important;
     outline: none!important
@@ -8636,9 +8606,7 @@ span.bp3-popover-target {
 .bp3-slider-handle {
     background-color: #fff;
     background-image: unset;
-    box-shadow: inset 0 0 0 1px rgba(0,0,0,.15),0 2px 0 rgba(0,0,0,.015);
     color: rgba(0,0,0,.65);
-    border-radius: 2px;
     box-shadow: 0 0 0 1px rgba(0,0,0,.2),0 1px 1px rgba(0,0,0,.2);
     cursor: pointer;
     height: 16px;
@@ -8646,7 +8614,6 @@ span.bp3-popover-target {
     top: 0;
     width: 16px;
     border-radius: 99px;
-    position: relative;
     position: absolute;
     transition: .2s linear;
     transition-property: background-color,color,opacity,box-shadow
@@ -8678,8 +8645,6 @@ span.bp3-popover-target {
 .bp3-slider-handle:hover {
     background-clip: padding-box;
     background-color: #fff;
-    box-shadow: inset 0 0 0 1px rgba(0,0,0,.15),0 2px 0 rgba(0,0,0,.015);
-    box-shadow: 0 0 0 1px rgba(0,0,0,.2),0 1px 1px rgba(0,0,0,.2);
     cursor: -webkit-grab;
     cursor: grab;
     z-index: 2;
@@ -8689,7 +8654,6 @@ span.bp3-popover-target {
 .bp3-slider-handle.bp3-active {
     background-color: #fff;
     background-image: none;
-    box-shadow: inset 0 0 0 1px #096dd9,0 2px 0 rgba(0,0,0,.015);
     box-shadow: 0 0 0 1px #096dd9,0 1px 1px rgba(0,0,0,.1);
     cursor: -webkit-grabbing;
     cursor: grabbing;
@@ -8772,29 +8736,7 @@ span.bp3-popover-target {
     box-shadow: none
 }
 
-.bp3-slider-handle.bp3-end,.bp3-slider-handle.bp3-start {
-    width: 8px;
-    width: null
-}
-
-.bp3-slider-handle.bp3-start {
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: null;
-    border-top-right-radius: null;
-    margin-left: 0
-}
-
-.bp3-slider-handle.bp3-end {
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
-    margin-left: 8px;
-    border-bottom-left-radius: null;
-    border-top-left-radius: null;
-    margin-left: 0
-}
-
-.bp3-slider-handle.bp3-end .bp3-slider-label {
+.bp3-slider-handle.bp3-end,.bp3-slider-handle.bp3-end .bp3-slider-label,.bp3-slider-handle.bp3-start {
     margin-left: 0
 }
 
@@ -8840,12 +8782,8 @@ span.bp3-popover-target {
 }
 
 .bp3-slider.bp3-vertical .bp3-slider-handle.bp3-end,.bp3-slider.bp3-vertical .bp3-slider-handle.bp3-start {
-    height: 8px;
     margin-left: 0;
-    width: 16px;
-    border-bottom-right-radius: null;
-    border-top-left-radius: null;
-    height: null
+    width: 16px
 }
 
 .bp3-slider.bp3-vertical .bp3-slider-handle.bp3-start {
@@ -8858,11 +8796,9 @@ span.bp3-popover-target {
 }
 
 .bp3-slider.bp3-vertical .bp3-slider-handle.bp3-end {
-    border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     border-top-left-radius: 2px;
-    margin-bottom: 8px;
-    border-bottom-left-radius: null
+    margin-bottom: 8px
 }
 
 @-webkit-keyframes pt-spinner-animation {
@@ -9647,9 +9583,7 @@ span.bp3-popover-target {
 }
 
 .bp3-tag-input.bp3-active {
-    background-color: #fff;
-    box-shadow: 0 0 0 1px #1890ff,0 0 0 3px rgba(24,144,255,.3),inset 0 1px 1px rgba(0,0,0,.2);
-    box-shadow: null
+    background-color: #fff
 }
 
 .bp3-tag-input.bp3-active.bp3-intent-primary {
@@ -9676,11 +9610,11 @@ span.bp3-popover-target {
     color: hsla(0,0%,100%,.85)
 }
 
-.bp3-dark .bp3-tag-input .bp3-input-ghost::-moz-placeholder, .bp3-tag-input.bp3-dark .bp3-input-ghost::-moz-placeholder {
+.bp3-dark .bp3-tag-input .bp3-input-ghost::-moz-placeholder,.bp3-tag-input.bp3-dark .bp3-input-ghost::-moz-placeholder {
     color: hsla(0,0%,100%,.45)
 }
 
-.bp3-dark .bp3-tag-input .bp3-input-ghost:-ms-input-placeholder, .bp3-tag-input.bp3-dark .bp3-input-ghost:-ms-input-placeholder {
+.bp3-dark .bp3-tag-input .bp3-input-ghost:-ms-input-placeholder,.bp3-tag-input.bp3-dark .bp3-input-ghost:-ms-input-placeholder {
     color: hsla(0,0%,100%,.45)
 }
 
@@ -12486,8 +12420,10 @@ a.bp3-button.bp3-intent-danger:after {
     content: unset
 }
 
-.bp3-input.bp3-input[type=search] {
-    border-radius: 2px
+.bp3-input.bp3-round {
+    border-radius: 30px;
+    box-sizing: border-box;
+    padding-left: 10px
 }
 
 .bp3-button-group:not(.bp3-vertical) .bp3-button[class*=bp3-intent-] {
@@ -12526,7 +12462,6 @@ a.bp3-button.bp3-intent-danger:after {
 }
 
 .bpx-vars {
-  /*! Colors */
     --black: #000;
     --dark-gray1: #141414;
     --dark-gray2: #1f1f1f;
@@ -12614,7 +12549,6 @@ a.bp3-button.bp3-intent-danger:after {
     --sepia3: #f5e9dc;
     --sepia4: #fff;
     --sepia5: #fff;
-  /*! ColorAliases */
     --pt-intent-primary: #1890ff;
     --pt-intent-success: #52c41a;
     --pt-intent-warning: #fa8c16;
