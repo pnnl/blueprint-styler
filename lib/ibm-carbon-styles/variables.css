@@ -530,3 +530,158 @@
 	--black-trans-light-gray4: hsla(var(--black-hsl),0.09);
 	--black-trans-light-gray5: hsla(var(--black-hsl),0.04);
 }
+
+
+.bp3-dark {
+
+/*! ColorsHsl */
+	--gray1-hsl: var(--dark-gray1-hsl);
+	--gray2-hsl: var(--dark-gray2-hsl);
+	--gray3-hsl: var(--dark-gray3-hsl);
+	--gray4-hsl: var(--dark-gray4-hsl);
+	--gray5-hsl: var(--dark-gray5-hsl);
+
+/*! Colors */
+	--gray1: var(--dark-gray1);
+	--gray2: var(--dark-gray2);
+	--gray3: var(--dark-gray3);
+	--gray4: var(--dark-gray4);
+	--gray5: var(--dark-gray5);
+
+/*! IntentColors */
+	--pt-intent-primary-text-color-hsl: var(--pt-dark-intent-primary-text-color-hsl);
+	--pt-intent-success-text-color-hsl: var(--pt-dark-intent-success-text-color-hsl);
+	--pt-intent-warning-text-color-hsl: var(--pt-dark-intent-warning-text-color-hsl);
+	--pt-intent-danger-text-color-hsl: var(--pt-dark-intent-danger-text-color-hsl);
+	--pt-intent-primary-text-color: var(--pt-dark-intent-primary-text-color);
+	--pt-intent-success-text-color: var(--pt-dark-intent-success-text-color);
+	--pt-intent-warning-text-color: var(--pt-dark-intent-warning-text-color);
+	--pt-intent-danger-text-color: var(--pt-dark-intent-danger-text-color);
+
+/*! LayoutColors */
+	--pt-app-background-color: var(--pt-dark-app-background-color);
+	--pt-app-top-background-color: var(--pt-dark-app-top-background-color);
+	--pt-code-background-color: var(--pt-dark-code-background-color);
+	--pt-divider-black: var(--pt-dark-divider-black);
+	--pt-divider-white: var(--pt-dark-divider-white);
+
+/*! TextColors */
+	--pt-text-color: var(--pt-dark-text-color);
+	--pt-text-color-muted: var(--pt-dark-text-color-muted);
+	--pt-text-color-disabled: var(--pt-dark-text-color-disabled);
+	--pt-heading-color: var(--pt-dark-heading-color);
+	--pt-link-color: var(--pt-dark-link-color);
+	--pt-code-text-color: var(--pt-dark-code-text-color);
+
+/*! IconColors */
+	--pt-icon-color: var(--pt-dark-icon-color);
+	--pt-icon-color-hover: var(--pt-dark-icon-color-hover);
+	--pt-icon-color-disabled: var(--pt-dark-icon-color-disabled);
+	--pt-icon-color-selected: var(--pt-dark-icon-color-selected);
+
+/*! Variables */
+	--pt-border-shadow-opacity: var(--pt-dark-border-shadow-opacity);
+	--pt-drop-shadow-opacity: var(--pt-dark-drop-shadow-opacity);
+	--pt-shadow-color-hsl: var(--pt-dark-shadow-color-hsl);
+	--pt-elevation-shadow-0: var(--pt-dark-elevation-shadow-0);
+	--pt-elevation-shadow-1: var(--pt-dark-elevation-shadow-1);
+	--pt-elevation-shadow-2: var(--pt-dark-elevation-shadow-2);
+	--pt-elevation-shadow-3: var(--pt-dark-elevation-shadow-3);
+	--pt-elevation-shadow-4: var(--pt-dark-elevation-shadow-4);
+	--pt-input-box-shadow: var(--pt-dark-input-box-shadow);
+	--pt-dialog-box-shadow: var(--pt-dark-dialog-box-shadow);
+	--pt-popover-box-shadow: var(--pt-dark-popover-box-shadow);
+	--pt-tooltip-box-shadow: var(--pt-dark-tooltip-box-shadow);
+
+/*! Components */
+	--button-box-shadow: var(--dark-button-box-shadow);
+	--button-box-shadow-active: var(--dark-button-box-shadow-active);
+	--button-intent-box-shadow: var(--dark-button-intent-box-shadow);
+	--button-intent-box-shadow-active: var(--dark-button-intent-box-shadow-active);
+	--shine-color-hsl: var(--dark-shine-color-hsl);
+	--shine-opacity: var(--dark-shine-opacity);
+	--button-gradient: var(--dark-button-gradient);
+	--button-background-color: var(--dark-button-background-color);
+	--button-background-color-hover: var(--dark-button-background-color-hover);
+	--button-background-color-active: var(--dark-button-background-color-active);
+	--button-background-color-disabled: var(--dark-button-background-color-disabled);
+	--button-background-color-active-disabled: var(--dark-button-background-color-active-disabled);
+	--button-intent-color-disabled: var(--dark-button-intent-color-disabled);
+	--minimal-button-background-color-hover: var(--dark-minimal-button-background-color-hover);
+	--minimal-button-background-color-active: var(--dark-minimal-button-background-color-active);
+	--card-background-color: var(--dark-card-background-color);
+	--drawer-background-color: var(--dark-drawer-background-color);
+	--input-color: var(--dark-input-color);
+	--input-color-disabled: var(--dark-input-color-disabled);
+	--input-placeholder-color: var(--dark-input-placeholder-color);
+	--input-background-color: var(--dark-input-background-color);
+	--input-background-color-disabled: var(--dark-input-background-color-disabled);
+	--input-shadow-color-focus: var(--dark-input-shadow-color-focus);
+	--input-shadow-color-focus-hsl: var(--dark-input-shadow-color-focus-hsl);
+	--control-background-color: var(--dark-control-background-color);
+	--control-background-color-hover: var(--dark-control-background-color-hover);
+	--control-background-color-active: var(--dark-control-background-color-active);
+	--switch-background-color: var(--dark-switch-background-color);
+	--switch-background-color-hover: var(--dark-switch-background-color-hover);
+	--switch-background-color-active: var(--dark-switch-background-color-active);
+	--switch-background-color-disabled: var(--dark-switch-background-color-disabled);
+	--switch-checked-background-color: var(--dark-switch-checked-background-color);
+	--switch-checked-background-color-hover: var(--dark-switch-checked-background-color-hover);
+	--switch-checked-background-color-active: var(--dark-switch-checked-background-color-active);
+	--switch-checked-background-color-disabled: var(--dark-switch-checked-background-color-disabled);
+	--switch-indicator-background-color: var(--dark-switch-indicator-background-color);
+	--switch-indicator-background-color-disabled: var(--dark-switch-indicator-background-color-disabled);
+	--table-border-color: var(--dark-table-border-color);
+	--menu-background-color: var(--dark-menu-background-color);
+	--menu-item-color-hover: var(--dark-menu-item-color-hover);
+	--menu-item-color-active: var(--dark-menu-item-color-active);
+	--navbar-background-color: var(--dark-navbar-background-color);
+	--popover-background-color: var(--dark-popover-background-color);
+	--progress-track-color: var(--dark-progress-track-color);
+	--progress-head-color: var(--dark-progress-head-color);
+	--tab-color-selected: var(--dark-tab-color-selected);
+	--tag-default-color: var(--dark-tag-default-color);
+	--tag-default-color-hsl: var(--dark-tag-default-color-hsl);
+	--tooltip-background-color: var(--dark-tooltip-background-color);
+	--tooltip-text-color: var(--dark-tooltip-text-color);
+	--button-color-disabled: var(--dark-button-color-disabled);
+	--minimal-button-background-color: var(--dark-minimal-button-background-color);
+	--ibm-input-border: var(--ibm-dark-input-border);
+
+/*! Datetime */
+	--datepicker-background-color: var(--dark-datepicker-background-color);
+	--datepicker-day-background-color-hover: var(--dark-datepicker-day-background-color-hover);
+	--datepicker-day-background-color-active: var(--dark-datepicker-day-background-color-active);
+	--daterangepicker-range-background-color: var(--dark-daterangepicker-range-background-color);
+	--daterangepicker-range-background-color-selected: var(--dark-daterangepicker-range-background-color-selected);
+	--daterangepicker-range-background-color-selected-hover: var(--dark-daterangepicker-range-background-color-selected-hover);
+
+/*! Table */
+	--cell-background-color: var(--dark-cell-background-color);
+	--cell-border-color: var(--dark-cell-border-color);
+	--cell-text-color: var(--dark-cell-text-color);
+	--table-background-color: var(--dark-table-background-color);
+	--table-background-color-hsl: var(--dark-table-background-color-hsl);
+	--header-background-color: var(--dark-header-background-color);
+	--header-hover-background-color: var(--dark-header-hover-background-color);
+	--column-header-text-color: var(--dark-column-header-text-color);
+	--row-header-text-color: var(--dark-row-header-text-color);
+	--header-background-color-hsl: var(--dark-header-background-color-hsl);
+	--header-hover-background-color-hsl: var(--dark-header-hover-background-color-hsl);
+	--header-selected-background-color-hsl: var(--dark-header-selected-background-color-hsl);
+	--header-selected-hover-background-color-hsl: var(--dark-header-selected-hover-background-color-hsl);
+	--column-header-text-color-hsl: var(--dark-column-header-text-color-hsl);
+	--row-header-text-color-hsl: var(--dark-row-header-text-color-hsl);
+
+/*! ColorsGrayscaleTransparent */
+	--white-trans-gray1: var(--white-trans-dark-gray1);
+	--white-trans-gray2: var(--white-trans-dark-gray2);
+	--white-trans-gray3: var(--white-trans-dark-gray3);
+	--white-trans-gray4: var(--white-trans-dark-gray4);
+	--white-trans-gray5: var(--white-trans-dark-gray5);
+	--black-trans-gray1: var(--black-trans-dark-gray1);
+	--black-trans-gray2: var(--black-trans-dark-gray2);
+	--black-trans-gray3: var(--black-trans-dark-gray3);
+	--black-trans-gray4: var(--black-trans-dark-gray4);
+	--black-trans-gray5: var(--black-trans-dark-gray5);
+}
