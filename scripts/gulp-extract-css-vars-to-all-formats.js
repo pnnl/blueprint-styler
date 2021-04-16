@@ -154,10 +154,11 @@ module.exports = () => through2.obj(function (file, enc, next) {
         [js, 'js'],
         [ts, 'ts'],
     ].forEach(type => {
+        [fileContents, fileType] = type
         this.push(new File({
             // base: base,
-            path: path.join(base, 'variables.' + type[1]),
-            contents: new Buffer(type[0])
+            path: path.join(base, 'variables.' + fileType),
+            contents: new Buffer.from(fileContents)
         }))
     })
 
