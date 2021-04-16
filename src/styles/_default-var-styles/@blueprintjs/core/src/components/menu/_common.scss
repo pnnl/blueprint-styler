@@ -4,6 +4,7 @@
 $half-grid-size: $pt-grid-size / 2 !default;
 
 $menu-item-border-radius: $pt-border-radius - 1 !default;
+$menu-item-border-radius: calc(#{$pt-border-radius} - 1);
 
 // Set line-height of menu items to be a multiple of the font size. This is
 // needed because if the line-height does not extend far enough past the font's
