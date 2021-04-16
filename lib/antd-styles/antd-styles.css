@@ -42,7 +42,6 @@ a {
 
 abbr[title] {
     border-bottom: none;
-    -webkit-text-decoration: underline dotted;
     text-decoration: underline dotted
 }
 
@@ -173,10 +172,6 @@ p {
 
 strong {
     font-weight: 600
-}
-
-::-moz-selection {
-    background: rgba(125,188,255,.6)
 }
 
 ::selection {
@@ -2221,9 +2216,6 @@ a.bp3-button.bp3-disabled {
     justify-content: center;
     min-height: 100%;
     pointer-events: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
     width: 100%
 }
@@ -2265,9 +2257,6 @@ a.bp3-button.bp3-disabled {
     margin: 30px 0;
     padding-bottom: 20px;
     pointer-events: all;
-    -webkit-user-select: text;
-    -moz-user-select: text;
-    -ms-user-select: text;
     user-select: text;
     width: 500px
 }
@@ -2888,16 +2877,6 @@ a.bp3-button.bp3-disabled {
     width: 100%
 }
 
-.bp3-editable-text-input::-moz-placeholder {
-    color: rgba(0,0,0,.25);
-    opacity: 1
-}
-
-.bp3-editable-text-input:-ms-input-placeholder {
-    color: rgba(0,0,0,.25);
-    opacity: 1
-}
-
 .bp3-editable-text-input::placeholder {
     color: rgba(0,0,0,.25);
     opacity: 1
@@ -3224,9 +3203,6 @@ a.bp3-button.bp3-disabled {
     margin-right: 10px;
     margin-top: -3px;
     position: relative;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
     vertical-align: middle;
     width: 1em
@@ -3635,8 +3611,6 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-file-upload-input {
-    -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
     background: #fff;
     border: none;
@@ -3659,20 +3633,7 @@ a.bp3-button.bp3-disabled {
     position: absolute;
     right: 0;
     top: 0;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none
-}
-
-.bp3-file-upload-input::-moz-placeholder {
-    color: rgba(0,0,0,.25);
-    opacity: 1
-}
-
-.bp3-file-upload-input:-ms-input-placeholder {
-    color: rgba(0,0,0,.25);
-    opacity: 1
 }
 
 .bp3-file-upload-input::placeholder {
@@ -3781,14 +3742,6 @@ a.bp3-button.bp3-disabled {
 .bp3-dark .bp3-file-upload-input {
     background: rgba(0,0,0,.3);
     box-shadow: 0 0 0 0 rgba(24,144,255,0),0 0 0 0 rgba(24,144,255,0),0 0 0 0 rgba(24,144,255,0),inset 0 0 0 1px rgba(0,0,0,.3),inset 0 1px 1px rgba(0,0,0,.4);
-    color: hsla(0,0%,100%,.45)
-}
-
-.bp3-dark .bp3-file-upload-input::-moz-placeholder {
-    color: hsla(0,0%,100%,.45)
-}
-
-.bp3-dark .bp3-file-upload-input:-ms-input-placeholder {
     color: hsla(0,0%,100%,.45)
 }
 
@@ -4197,8 +4150,6 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-input {
-    -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
     background: #fff;
     border: none;
@@ -4214,16 +4165,6 @@ a.bp3-button.bp3-disabled {
     transition: .2s linear;
     transition-property: background-color,color,opacity,box-shadow;
     box-shadow: 0 0 0 0 rgba(24,144,255,0),0 0 0 0 rgba(24,144,255,0),inset 0 0 0 1px rgba(0,0,0,.15)
-}
-
-.bp3-input::-moz-placeholder {
-    color: rgba(0,0,0,.25);
-    opacity: 1
-}
-
-.bp3-input:-ms-input-placeholder {
-    color: rgba(0,0,0,.25);
-    opacity: 1
 }
 
 .bp3-input::placeholder {
@@ -4278,14 +4219,6 @@ a.bp3-button.bp3-disabled {
     background: rgba(0,0,0,.3);
     box-shadow: 0 0 0 0 rgba(24,144,255,0),0 0 0 0 rgba(24,144,255,0),0 0 0 0 rgba(24,144,255,0),inset 0 0 0 1px rgba(0,0,0,.3),inset 0 1px 1px rgba(0,0,0,.4);
     color: hsla(0,0%,100%,.85)
-}
-
-.bp3-dark .bp3-input::-moz-placeholder {
-    color: hsla(0,0%,100%,.45)
-}
-
-.bp3-dark .bp3-input:-ms-input-placeholder {
-    color: hsla(0,0%,100%,.45)
 }
 
 .bp3-dark .bp3-input::placeholder {
@@ -4456,14 +4389,6 @@ textarea.bp3-input.bp3-small {
     background: rgba(0,0,0,.3);
     box-shadow: 0 0 0 0 rgba(24,144,255,0),0 0 0 0 rgba(24,144,255,0),0 0 0 0 rgba(24,144,255,0),inset 0 0 0 1px rgba(0,0,0,.3),inset 0 1px 1px rgba(0,0,0,.4);
     color: hsla(0,0%,100%,.85)
-}
-
-.bp3-dark textarea.bp3-input::-moz-placeholder {
-    color: hsla(0,0%,100%,.45)
-}
-
-.bp3-dark textarea.bp3-input:-ms-input-placeholder {
-    color: hsla(0,0%,100%,.45)
 }
 
 .bp3-dark textarea.bp3-input::placeholder {
@@ -7297,9 +7222,6 @@ span.bp3-icon:empty:before {
     line-height: 20px;
     padding: 5px 7px;
     text-decoration: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none
 }
 
@@ -7835,9 +7757,6 @@ body.bp3-overlay-open {
     opacity: 1;
     background-color: rgba(0,0,0,.7);
     overflow: auto;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
     z-index: 20
 }
@@ -8417,16 +8336,6 @@ span.bp3-popover-target {
     top: 0
 }
 
-@-webkit-keyframes linear-progress-bar-stripes {
-    0% {
-        background-position: 0 0
-    }
-
-    to {
-        background-position: 30px 0
-    }
-}
-
 @keyframes linear-progress-bar-stripes {
     0% {
         background-position: 0 0
@@ -8490,18 +8399,6 @@ span.bp3-popover-target {
     background-color: #f5222d
 }
 
-@-webkit-keyframes skeleton-glow {
-    0% {
-        background: hsla(0,0%,80%,.2);
-        border-color: hsla(0,0%,80%,.2)
-    }
-
-    to {
-        background: rgba(89,89,89,.2);
-        border-color: rgba(89,89,89,.2)
-    }
-}
-
 @keyframes skeleton-glow {
     0% {
         background: hsla(0,0%,80%,.2);
@@ -8515,7 +8412,6 @@ span.bp3-popover-target {
 }
 
 .bp3-skeleton {
-    -webkit-animation: skeleton-glow 1s linear infinite alternate;
     animation: skeleton-glow 1s linear infinite alternate;
     background: hsla(0,0%,80%,.2);
     background-clip: padding-box!important;
@@ -8525,9 +8421,6 @@ span.bp3-popover-target {
     color: transparent!important;
     cursor: default;
     pointer-events: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none
 }
 
@@ -8542,9 +8435,6 @@ span.bp3-popover-target {
     cursor: default;
     outline: none;
     position: relative;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none
 }
 
@@ -8553,7 +8443,6 @@ span.bp3-popover-target {
 }
 
 .bp3-slider:active {
-    cursor: -webkit-grabbing;
     cursor: grabbing
 }
 
@@ -8645,7 +8534,6 @@ span.bp3-popover-target {
 .bp3-slider-handle:hover {
     background-clip: padding-box;
     background-color: #fff;
-    cursor: -webkit-grab;
     cursor: grab;
     z-index: 2;
     box-shadow: 0 0 0 1px #40a9ff,0 1px 1px rgba(0,0,0,.1)
@@ -8655,7 +8543,6 @@ span.bp3-popover-target {
     background-color: #fff;
     background-image: none;
     box-shadow: 0 0 0 1px #096dd9,0 1px 1px rgba(0,0,0,.1);
-    cursor: -webkit-grabbing;
     cursor: grabbing;
     transition-duration: 50ms
 }
@@ -8801,16 +8688,6 @@ span.bp3-popover-target {
     margin-bottom: 8px
 }
 
-@-webkit-keyframes pt-spinner-animation {
-    0% {
-        transform: rotate(0deg)
-    }
-
-    to {
-        transform: rotate(1turn)
-    }
-}
-
 @keyframes pt-spinner-animation {
     0% {
         transform: rotate(0deg)
@@ -8849,12 +8726,10 @@ span.bp3-popover-target {
 }
 
 .bp3-spinner-animation {
-    -webkit-animation: pt-spinner-animation .5s linear infinite;
     animation: pt-spinner-animation .5s linear infinite
 }
 
 .bp3-no-spin>.bp3-spinner-animation {
-    -webkit-animation: none;
     animation: none
 }
 
@@ -9610,14 +9485,6 @@ span.bp3-popover-target {
     color: hsla(0,0%,100%,.85)
 }
 
-.bp3-dark .bp3-tag-input .bp3-input-ghost::-moz-placeholder,.bp3-tag-input.bp3-dark .bp3-input-ghost::-moz-placeholder {
-    color: hsla(0,0%,100%,.45)
-}
-
-.bp3-dark .bp3-tag-input .bp3-input-ghost:-ms-input-placeholder,.bp3-tag-input.bp3-dark .bp3-input-ghost:-ms-input-placeholder {
-    color: hsla(0,0%,100%,.45)
-}
-
 .bp3-dark .bp3-tag-input .bp3-input-ghost::placeholder,.bp3-tag-input.bp3-dark .bp3-input-ghost::placeholder {
     color: hsla(0,0%,100%,.45)
 }
@@ -9648,16 +9515,6 @@ span.bp3-popover-target {
     border: none;
     box-shadow: none;
     padding: 0
-}
-
-.bp3-input-ghost::-moz-placeholder {
-    color: rgba(0,0,0,.25);
-    opacity: 1
-}
-
-.bp3-input-ghost:-ms-input-placeholder {
-    color: rgba(0,0,0,.25);
-    opacity: 1
 }
 
 .bp3-input-ghost::placeholder {
@@ -10258,9 +10115,6 @@ span.bp3-popover-target {
     word-wrap: normal;
     flex: 1 1 auto;
     position: relative;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none
 }
 
@@ -10270,9 +10124,6 @@ span.bp3-popover-target {
 
 .bp3-tree-node-secondary-label {
     padding: 0 5px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none
 }
 
@@ -10342,9 +10193,6 @@ span.bp3-popover-target {
     display: flex;
     padding: 5px;
     position: relative;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none
 }
 
@@ -10369,9 +10217,6 @@ span.bp3-popover-target {
     border-spacing: 0;
     display: inline-table;
     margin: 0 5px 5px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none
 }
 
@@ -11228,9 +11073,6 @@ span.bp3-popover-target {
     justify-content: space-between;
     position: relative;
     text-overflow: ellipsis;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none
 }
 
@@ -11402,16 +11244,6 @@ span.bp3-popover-target {
 
 .bp3-dark .bp3-table-quadrant-top .bp3-table-cell.bp3-table-last-in-column {
     box-shadow: inset 0 -3px 0 rgba(0,0,0,.4),inset -1px 0 0 rgba(0,0,0,.4)
-}
-
-@-webkit-keyframes skeleton-fade-in {
-    0% {
-        opacity: 0
-    }
-
-    to {
-        opacity: 1
-    }
 }
 
 @keyframes skeleton-fade-in {
@@ -11735,22 +11567,18 @@ span.bp3-popover-target {
 }
 
 .bp3-table-selection-enabled.bp3-table-column-headers .bp3-table-header.bp3-table-header-reorderable {
-    cursor: -webkit-grab;
     cursor: grab
 }
 
 .bp3-table-selection-enabled.bp3-table-column-headers .bp3-table-header.bp3-table-header-reorderable:active {
-    cursor: -webkit-grabbing;
     cursor: grabbing
 }
 
 .bp3-table-selection-enabled.bp3-table-column-headers .bp3-table-header.bp3-table-header-reorderable .bp3-table-interaction-bar {
-    cursor: -webkit-grab;
     cursor: grab
 }
 
 .bp3-table-selection-enabled.bp3-table-column-headers .bp3-table-header.bp3-table-header-reorderable .bp3-table-interaction-bar:active {
-    cursor: -webkit-grabbing;
     cursor: grabbing
 }
 
@@ -11759,22 +11587,18 @@ span.bp3-popover-target {
 }
 
 .bp3-table-selection-enabled.bp3-table-row-headers .bp3-table-header.bp3-table-header-reorderable {
-    cursor: -webkit-grab;
     cursor: grab
 }
 
 .bp3-table-selection-enabled.bp3-table-row-headers .bp3-table-header.bp3-table-header-reorderable:active {
-    cursor: -webkit-grabbing;
     cursor: grabbing
 }
 
 .bp3-table-selection-enabled.bp3-table-row-headers .bp3-table-header.bp3-table-header-reorderable .bp3-table-interaction-bar {
-    cursor: -webkit-grab;
     cursor: grab
 }
 
 .bp3-table-selection-enabled.bp3-table-row-headers .bp3-table-header.bp3-table-header-reorderable .bp3-table-interaction-bar:active {
-    cursor: -webkit-grabbing;
     cursor: grabbing
 }
 
@@ -11795,7 +11619,6 @@ span.bp3-popover-target {
 }
 
 .bp3-table-reorder-handle-target {
-    cursor: -webkit-grab;
     cursor: grab;
     align-items: center;
     bottom: 0;
@@ -11809,7 +11632,6 @@ span.bp3-popover-target {
 }
 
 .bp3-table-reorder-handle-target:active {
-    cursor: -webkit-grabbing;
     cursor: grabbing;
     color: #1890ff
 }
@@ -11837,9 +11659,6 @@ span.bp3-popover-target {
 .bp3-table-resize-handle-target {
     opacity: 0;
     position: absolute;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
     z-index: 20
 }
@@ -11960,7 +11779,6 @@ span.bp3-popover-target {
 }
 
 .bp3-table-reordering-cursor-overlay {
-    cursor: -webkit-grabbing;
     cursor: grabbing
 }
 
@@ -11993,9 +11811,6 @@ span.bp3-popover-target {
     position: relative;
     right: 0;
     top: 0;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
     will-change: transform
 }
@@ -12080,9 +11895,7 @@ span.bp3-popover-target {
 }
 
 .bp3-table-container .bp3-loading .bp3-skeleton {
-    -webkit-animation: skeleton-fade-in .3s linear forwards,skeleton-glow 1s linear infinite alternate;
     animation: skeleton-fade-in .3s linear forwards,skeleton-glow 1s linear infinite alternate;
-    -webkit-animation-delay: 0s,.3s;
     animation-delay: 0s,.3s;
     height: 5px;
     opacity: 0

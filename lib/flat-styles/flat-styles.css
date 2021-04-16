@@ -46,7 +46,6 @@ a {
 
 abbr[title] {
     border-bottom: none;
-    text-decoration: underline;
     text-decoration: underline dotted
 }
 
@@ -60,7 +59,6 @@ code,kbd,samp {
 }
 
 small {
-    font-size: 80%;
     font-size: 12px
 }
 
@@ -793,7 +791,7 @@ a:hover {
     background-color: hsl(209,0%,87%);
     background-color: var(--button-background-color-active);
     background-image: none;
-    box-shadow: inset 0 0 0 1px hsla(209,0%,9%,0.3),//inset 0 1px 2px hsla(209,0%,9%,0.2);
+    box-shadow: inset 0 0 0 1px hsla(209,0%,9%,0.3);
     box-shadow: var(--button-box-shadow-active)
 }
 
@@ -3792,7 +3790,7 @@ a.bp3-button.bp3-disabled {
 .bp3-control input:not(:disabled):active~.bp3-control-indicator {
     background: hsl(209,0%,87%);
     background: var(--control-background-color-active);
-    box-shadow: inset 0 0 0 1px hsla(209,0%,9%,0.3),//inset 0 1px 2px hsla(209,0%,9%,0.2);
+    box-shadow: inset 0 0 0 1px hsla(209,0%,9%,0.3);
     box-shadow: var(--button-box-shadow-active)
 }
 
@@ -4258,8 +4256,6 @@ a.bp3-button.bp3-disabled {
     border-radius: var(--pt-border-radius);
     box-shadow: 0 0 0 0 hsla(209,90%,50%,0),0 0 0 0 hsla(209,90%,50%,0),inset 0 0 0 1px hsla(209,0%,9%,0.15),inset 0 1px 1px hsla(209,0%,9%,0.2);
     box-shadow: 0 0 0 0 hsla(var(--input-shadow-color-focus-hsl),0),0 0 0 0 hsla(var(--input-shadow-color-focus-hsl),0),var(--pt-input-box-shadow);
-    color: hsl(209,0%,15%);
-    color: var(--input-color);
     font-size: 14px;
     font-weight: 400;
     height: 30px;
@@ -4353,7 +4349,7 @@ a.bp3-button.bp3-disabled {
     background-color: hsl(209,0%,87%);
     background-color: var(--button-background-color-active);
     background-image: none;
-    box-shadow: inset 0 0 0 1px hsla(209,0%,9%,0.3),//inset 0 1px 2px hsla(209,0%,9%,0.2);
+    box-shadow: inset 0 0 0 1px hsla(209,0%,9%,0.3);
     box-shadow: var(--button-box-shadow-active)
 }
 
@@ -4377,7 +4373,7 @@ a.bp3-button.bp3-disabled {
     background-color: hsl(209,0%,87%);
     background-color: var(--button-background-color-active);
     background-image: none;
-    box-shadow: inset 0 0 0 1px hsla(209,0%,9%,0.3),//inset 0 1px 2px hsla(209,0%,9%,0.2);
+    box-shadow: inset 0 0 0 1px hsla(209,0%,9%,0.3);
     box-shadow: var(--button-box-shadow-active)
 }
 
@@ -4405,8 +4401,6 @@ a.bp3-button.bp3-disabled {
     background: var(--dark-input-background-color);
     box-shadow: 0 0 0 0 hsla(209,90%,50%,0),0 0 0 0 hsla(209,90%,50%,0),0 0 0 0 hsla(209,90%,50%,0),inset 0 0 0 1px hsla(209,0%,9%,0.3),inset 0 1px 1px hsla(209,0%,9%,0.4);
     box-shadow: 0 0 0 0 hsla(var(--dark-input-shadow-color-focus-hsl),0),0 0 0 0 hsla(var(--dark-input-shadow-color-focus-hsl),0),0 0 0 0 hsla(var(--dark-input-shadow-color-focus-hsl),0),var(--pt-dark-input-box-shadow);
-    color: hsl(209,0%,97%);
-    color: var(--dark-input-color);
     color: hsla(209,0%,100%,0.3);
     color: var(--pt-dark-text-color-disabled)
 }
@@ -4909,12 +4903,6 @@ a.bp3-button.bp3-disabled {
     box-shadow: 0 0 0 1px hsla(var(--input-shadow-color-focus-hsl),1),0 0 0 3px hsla(var(--input-shadow-color-focus-hsl),.3),var(--input-box-shadow-focus)
 }
 
-.bp3-input.bp3-round,.bp3-input[type=search] {
-    border-radius: 30px;
-    box-sizing: border-box;
-    padding-left: 10px
-}
-
 .bp3-input[readonly] {
     box-shadow: inset 0 0 0 1px hsla(209,0%,9%,0.15);
     box-shadow: inset 0 0 0 1px var(--pt-divider-black)
@@ -5346,7 +5334,7 @@ form {
     background-color: hsl(209,0%,87%);
     background-color: var(--button-background-color-active);
     background-image: none;
-    box-shadow: inset 0 0 0 1px hsla(209,0%,9%,0.3),//inset 0 1px 2px hsla(209,0%,9%,0.2);
+    box-shadow: inset 0 0 0 1px hsla(209,0%,9%,0.3);
     box-shadow: var(--button-box-shadow-active)
 }
 
@@ -6073,7 +6061,6 @@ table.bp3-html-table.bp3-interactive tbody tr:active td {
 }
 
 .bp3-icon:not(:empty):before {
-    content: ""!important;
     content: unset!important
 }
 
@@ -6247,10 +6234,6 @@ span.bp3-icon:empty:before {
 }
 
 .bp3-menu-item.bp3-disabled {
-    background-color: inherit;
-    color: hsla(209,0%,9%,0.3);
-    color: var(--pt-text-color-disabled);
-    cursor: not-allowed;
     background-color: inherit!important;
     color: hsla(209,0%,9%,0.3)!important;
     color: var(--pt-text-color-disabled)!important;
@@ -6270,8 +6253,6 @@ span.bp3-icon:empty:before {
 
 .bp3-dark .bp3-menu-item.bp3-disabled {
     background-color: inherit;
-    color: hsla(209,0%,100%,0.3);
-    color: var(--pt-dark-text-color-disabled);
     color: hsla(209,0%,100%,0.3)!important;
     color: var(--pt-dark-text-color-disabled)!important
 }
@@ -7627,8 +7608,6 @@ span.bp3-popover-target {
     background-color: var(--button-background-color);
     background-image: unset;
     background-image: var(--button-gradient);
-    box-shadow: inset 0 0 0 1px hsla(209,0%,9%,0.15);
-    box-shadow: var(--button-box-shadow);
     color: hsl(209,0%,15%);
     color: var(--pt-text-color);
     border-radius: 6px;
@@ -7647,7 +7626,7 @@ span.bp3-popover-target {
     background-color: hsl(209,0%,87%);
     background-color: var(--button-background-color-active);
     background-image: none;
-    box-shadow: inset 0 0 0 1px hsla(209,0%,9%,0.3),//inset 0 1px 2px hsla(209,0%,9%,0.2);
+    box-shadow: inset 0 0 0 1px hsla(209,0%,9%,0.3);
     box-shadow: var(--button-box-shadow-active)
 }
 
@@ -7675,8 +7654,6 @@ span.bp3-popover-target {
     background-clip: padding-box;
     background-color: hsl(209,0%,94%);
     background-color: var(--button-background-color-hover);
-    box-shadow: inset 0 0 0 1px hsla(209,0%,9%,0.15);
-    box-shadow: var(--button-box-shadow);
     box-shadow: 0 0 0 1px hsla(209,0%,9%,0.2),0 1px 1px hsla(209,0%,9%,0.2);
     box-shadow: var(--button-box-shadow-overlay);
     cursor: grab;
@@ -7687,8 +7664,6 @@ span.bp3-popover-target {
     background-color: hsl(209,0%,87%);
     background-color: var(--button-background-color-active);
     background-image: none;
-    box-shadow: inset 0 0 0 1px hsla(209,0%,9%,0.3),//inset 0 1px 2px hsla(209,0%,9%,0.2);
-    box-shadow: var(--button-box-shadow-active);
     box-shadow: 0 0 0 1px hsla(209,0%,9%,0.2),inset 0 1px 1px hsla(209,0%,9%,0.1);
     box-shadow: var(--button-box-shadow-overlay-active);
     cursor: grabbing
