@@ -15,7 +15,7 @@ exports.postCssConfig = {
             // ^^^ this thing strips /*! CommentsThatWeNeed */ to output variables.css
             // don't call it pre-varsOutput
         }),
-        require('autoprefixer'),
+        // require('autoprefixer'), // gets deleted anyways
     ],
     removeNull: [
         /**

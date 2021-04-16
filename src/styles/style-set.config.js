@@ -1,20 +1,20 @@
 exports.styleSetConfig = [
     // add new styles here...
     {
-        slug: 'ibm-carbon-styles',
-        name: 'IBM Carbon'
+        slug: 'default-var-styles',
+        name: '--default-vars'
     },
     {
         slug: 'flat-styles',
         name: 'Flat'
     },
     {
-        slug: 'default-var-styles',
-        name: '--default-vars'
-    },
-    {
         slug: 'default-styles',
         name: 'Default'
+    },
+    {
+        slug: 'ibm-carbon-styles',
+        name: 'IBM Carbon'
     },
     {
         slug: 'antd-styles',
