@@ -6,16 +6,17 @@ var File = require('vinyl');
 const convertKebabToScreamingSnakeCase = string => string.toUpperCase().replace(/-/g, '_')
 
 /** pt-dark-border-shadow-opacity => PtDarkBorderShadowOpacity */
-const convertKebabToCamelCase = string => {
+const convertKebabToCamelCase = (string) => {
     return string
         .toLowerCase()
         .replace(
             /^(\w)|-(\w)/gi,
             (match, firstLetter, otherLetter) => {
                 const letter = firstLetter || otherLetter
-                return letter.toUpperCase()
+                return letter.toUpperCase() // CamelCase
+                // return firstLetter ? firstLetter.toLowerCase() : otherLetter.toUpperCase() // camelCase
             }
-        ).replace(/-/g, '')
+        ).replace(/-/g, '') // just in case
 }
 
 /** "PtDarkBorderShadowOpacity": "value", => PtDarkBorderShadowOpacity: "value", */
@@ -28,12 +29,12 @@ const cssKebabNameToVarIdentity = string => `var(--${string})`
 module.exports = () => through2.obj(function (file, enc, next) {
     const content = file.contents.toString('utf8')
 
-    //#region - Parse CSS key-values out of :root, .bpx-vars{...} declaration ///////////////////
+    //#region - Parse CSS key-values out of :root{...} declaration ///////////////////
     // find the block of css vars in the file
-    let cssVarsMatch = content.match(/\.bpx-vars[^{]*\{([^\}]*)\}/i);
+    let cssVarsMatch = content.match(/:root[^{]*\{([^\}]*)\}/i); // selector needs to match src/styles/global/root-selector.scss
 
     if (cssVarsMatch == null) {
-        console.log(`>> No --css: vars; in .bpx-vars{} in ${file.basename}!`);
+        console.log(`>> No --css:vars; in :root{} in ${file.basename}!`);
         next();
         return;
     }

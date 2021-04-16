@@ -28,12 +28,13 @@ hsla
   - remove :root from regular css? change :root{} selector
   - postcss default css vars
   - rename files and folders
-  - camelCase not CamelCase
-- dark theme color mirror @media (prefers-color-scheme: dark)
+  - camelCase not CamelCase?
+  - publish
+- dark theme color mirror
+  - @media (prefers-color-scheme: dark) ?
 - fix the other styles, now that merge properties and delete duplicates is gone...
   - [postcss-remove-declaration](https://www.npmjs.com/package/postcss-remove-declaration/v/1.0.0)
   - ant
-  - ibm
 - https://github.com/postcss/postcss-custom-properties
 - math?
 

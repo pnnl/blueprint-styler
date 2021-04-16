@@ -1,4 +1,8 @@
 
-$root-selector: ':root, .bpx-vars';
+$root-selector: ':root';
+// this needs to match scripts/gulp-extract-css-vars-to-all-formats.js
 
-#{$root-selector}{}
+#{$root-selector}{
+  // to move root to the top of the file
+  property: null;
+}
