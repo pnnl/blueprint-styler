@@ -41,7 +41,8 @@ hsla
 # TODO
 - build
   - rename files and folders
-  - camelCase not CamelCase?
+  - remove root
+  - fix Buffer()
   - publish
 - fix the other styles, now that merge properties and delete duplicates is gone...
   - [postcss-remove-declaration](https://www.npmjs.com/package/postcss-remove-declaration/v/1.0.0)

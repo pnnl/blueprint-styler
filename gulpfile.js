@@ -20,6 +20,7 @@ const sassTask = function () {
     const cssOutput = scssOutput
         .pipe(postcss(postCssConfig.plugins))
         .pipe(postcss(postCssConfig.removeNull))
+        .pipe(postcss(postCssConfig.removeRoot))
         .pipe(rename(path => {
             path.basename = path.basename.split('.')[0]
             path.dirname = '/' + path.basename

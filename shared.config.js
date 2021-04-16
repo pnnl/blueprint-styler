@@ -27,6 +27,10 @@ exports.postCssConfig = {
         require('postcss-remove-null'),
         require('cssnano') // nano again to delete .empty-blocks{}
     ],
+    removeRoot: [
+        require('postcss-custom-properties'),
+        require('postcss-remove-root'),
+    ],
     varsOutput: [
         require('cssnano'),
         require('postcss-combine-duplicated-selectors') // combine :root{}
