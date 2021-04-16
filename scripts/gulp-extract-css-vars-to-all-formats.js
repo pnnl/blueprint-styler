@@ -87,23 +87,30 @@ module.exports = () => through2.obj(function (file, enc, next) {
 
     //#region - Process data object into css, less, and scss file strings ///////////////////
     let css = `:root {\n`
+    let cssDarkMirror = `.bp3-dark {\n`
     let less = ``
     for (const categoryName in cssObjValues) {
         if (Object.hasOwnProperty.call(cssObjValues, categoryName)) {
             const currentCategory = cssObjValues[categoryName];
             const currentCategoryComment = `\n/*! ${categoryName} */\n`
             css += currentCategoryComment
+            cssDarkMirror += currentCategoryComment
             less += currentCategoryComment
             for (const varName in currentCategory) {
                 if (Object.hasOwnProperty.call(currentCategory, varName)) {
                     const varValue = currentCategory[varName];
+                    if (varName.includes('dark-')) {
+                        cssDarkMirror += `\t--${varName.replace('dark-', '')}: var(--${varName});\n`
+                    }
                     css += `\t--${varName}: ${varValue};\n` // css contains real value
                     less += `@${varName}: ${cssKebabNameToVarIdentity(varName)};\n` // less an scss are identity
                 }
             }
         }
     }
-    css += '}'
+    css += '}\n'
+    cssDarkMirror += '}\n'
+    css += `\n\n${cssDarkMirror}`
     const scss = less.replace(/@/g, '$')
 
     /* // OLD CSS PROCESSING //
