@@ -1,44 +1,44 @@
 ## TODOS:
 
+### var(--theme) baseline
+- build
+  - try an update
+  - publish
+- fix the other styles
+  - ant
+
 ### General
-- var() theme
-  - search for !default color $vars, map to --custom-props
-  - search for scss color transforms: rgba(), mix(), more... override them
-  - override mixins with rgba() ? duplicate mixins? and find where they apply and re-apply
-  - replace all the math by wrapping in calc functions???
-- add a readme to each project - default styles is project explainer
-- title navigation links
-- add colors section
-- add typography section
-- make search work
-- add shortcut keys
-- save state between loads
-  - switch to create-react-app
-  - use react router
-  - nav bar stays in sync with scroll position
 - Generate new style: `$ npm run new-style <style-name>`
 - Publish: `$ npm run publish <style-name>` publish a lib to npm under `@blueprint-style/<style-name>`
   - update versioning
 - directions for development
 - switch icon libraries
 
-These 4 selectors are broken:
-```css
-.bp3-popover-wrapper:first-child .bp3-button-group:not(.bp3-vertical) .bp3-button[class*=bp3-intent-],>.bp3-button-group:not(.bp3-vertical) .bp3-button[class*=bp3-intent-]:first-child {
-    border-left: 0
-}
-.bp3-popover-wrapper:last-child .bp3-button-group:not(.bp3-vertical) .bp3-button[class*=bp3-intent-],>.bp3-button-group:not(.bp3-vertical) .bp3-button[class*=bp3-intent-]:last-child {
-    border-right: 0
-}
-.bp3-popover-wrapper:first-child .bp3-button-group.bp3-vertical .bp3-button[class*=bp3-intent-],>.bp3-button-group.bp3-vertical .bp3-button[class*=bp3-intent-]:first-child {
-    border-top: 0
-}
-.bp3-popover-wrapper:last-child .bp3-button-group.bp3-vertical .bp3-button[class*=bp3-intent-],>.bp3-button-group.bp3-vertical .bp3-button[class*=bp3-intent-]:last-child {
-    border-bottom: 0
-}
-```
+### App tool
+- switch to create-react-app
+- sections:
+  - for each theme: add a readme to each project - default styles is project explainer
+  - base theme component that imports scss files
+  - custom components
+  - colors
+  - typography
+- Navigation
+  - search
+  - shortcut keys
+  - routing? to specific themes
+  - title navigation link buttons on hovers
+  - nav bar stays in sync with scroll position
+- Custom theme editor
+  - vars editing
+  - make a custom theme export it
+
 
 ### Styles
+- var(--theme) / General
+  - dark theme scrollbars
+  - math with calc()
+  - grayscale transparency alt
+  - js generator of color vars
 - [IBM Carbon](https://www.carbondesignsystem.com/components/overview)
   - file input - focus, hover
   - dark theme button in ControlGroup input
@@ -47,7 +47,7 @@ These 4 selectors are broken:
 - Flat
   - dark theme
   - button component divider
-- Flat Mono - emphasis color is greyscale?
+- Flat Mono - intent primary color is grayscale?
 - Gradient buttons?
 - [ant.design](https://ant.design/components/overview/)
   - dark theme
@@ -64,54 +64,5 @@ These 4 selectors are broken:
 - **Common** - styles that help everywhere
   - better focus for buttons?
 
-### Eventually
-- css vars template
-- design your own theme ui
-
-----
-
-## DONE:
-- better js outputs - split colors and stuff
-  - fix-bug: first var from each category is missing from lib js, ts, and json.
-
-- [IBM Carbon](https://www.carbondesignsystem.com/components/overview)
-  - button
-  - inputs!!
-  - switch
-  - focus
-  - slider handle round & not split
-  - checkbox & radio - unchecked outline
-  - tabs
-  - loading bar & spinner
-  - menu, popover, calendar - padding: 0?
-  - DateTime Picker
-  - time picker focus
-  - editable text focus
-  - control group vertical
-  - button and input large text revert
-  - dark/light theme
-  - bg-fg relationship
-    - input text bg lighter?
-      - make everything else darker
-    - button - outline fills in?
-      - active button lighter like input?
-  - bugs
-    - editable text color dark theme
-    - light theme
-      - disabled hover input
-      - 1px spacing: control group, button group, numeric input buttons
-
-- [ant.design](https://ant.design/components/overview/)
-  - inputs
-  - select element
-  - checkbox and radio animations
-  - slider
-  - file input
-  - textarea?
-- style - common
-  - dividers for intent button groups when outline-less
-- remove radius from search input
-- rename everything from "themer" to "styler"
-- upgrade npm dependencies
-- add extension packages: table, datetime, etc...
-- config to order styles
+### Extras
+- [postcss-remove-declaration](https://www.npmjs.com/package/postcss-remove-declaration/v/1.0.0)
