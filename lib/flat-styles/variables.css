@@ -424,6 +424,16 @@
 	--overlay-background-color: hsla(var(--black-hsl),var(--overlay-background-opacity));
 	--popover-background-color: var(--pt-app-top-background-color);
 	--dark-popover-background-color: var(--pt-dark-app-top-background-color);
+	--pt-popover2-background-color: var(--pt-app-top-background-color);
+	--pt-popover2-box-shadow: var(--pt-elevation-shadow-3);
+	--pt-tooltip2-box-shadow: var(--pt-popover-box-shadow);
+	--pt-dark-popover2-background-color: var(--pt-dark-app-top-background-color);
+	--pt-dark-popover2-box-shadow: var(--pt-dark-elevation-shadow-3);
+	--pt-dark-tooltip2-box-shadow: var(--pt-dark-popover-box-shadow);
+	--tooltip2-background-color: var(--dark-gray5);
+	--tooltip2-text-color: var(--light-gray5);
+	--dark-tooltip2-background-color: var(--light-gray3);
+	--dark-tooltip2-text-color: var(--dark-gray5);
 	--progress-track-color: hsla(var(--gray1-hsl),0.2);
 	--progress-head-color: hsla(var(--gray1-hsl),0.8);
 	--dark-progress-track-color: hsla(var(--black-hsl),0.5);
@@ -606,6 +616,11 @@
 	--menu-item-color-active: var(--dark-menu-item-color-active);
 	--navbar-background-color: var(--dark-navbar-background-color);
 	--popover-background-color: var(--dark-popover-background-color);
+	--pt-popover2-background-color: var(--pt-dark-popover2-background-color);
+	--pt-popover2-box-shadow: var(--pt-dark-popover2-box-shadow);
+	--pt-tooltip2-box-shadow: var(--pt-dark-tooltip2-box-shadow);
+	--tooltip2-background-color: var(--dark-tooltip2-background-color);
+	--tooltip2-text-color: var(--dark-tooltip2-text-color);
 	--progress-track-color: var(--dark-progress-track-color);
 	--progress-head-color: var(--dark-progress-head-color);
 	--tab-color-selected: var(--dark-tab-color-selected);
