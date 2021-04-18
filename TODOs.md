@@ -3,6 +3,9 @@
 ### var(--theme) baseline
 - build
   - try an update
+    - popover2
+    - add vars
+    - add examples?
   - publish
 - fix the other styles
   - ant
@@ -13,6 +16,7 @@
   - update versioning
 - directions for development
 - switch icon libraries
+- update dev examples using similar copy process
 
 ### App tool
 - switch to create-react-app

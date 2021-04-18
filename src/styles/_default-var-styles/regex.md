@@ -23,7 +23,14 @@ hsla
 ```
 
 # Changes
+
+Search for
 - @import `~@blueprintjs` except `~@blueprintjs/icons`
+- `rgba(`
+- `mix(`
+- `menu-background(`
+- `svg-icon(`
+- `$pt-border-radius` with `calc(#{$pt-border-radius} - 1)`
 - `border-shadow(`
 - `input-transition-shadow(`
 - `dark-input-transition-shadow(`
@@ -33,7 +40,6 @@ hsla
 - `pt-tag-minimal-intent(`
 - `pt-tag-interactive(`
 - `pt-tag-minimal-interactive(`
-- `rgba(`
-- `mix(`
-- `menu-background(`
-- `svg-icon(`
+
+Copy `!default` $vars to `src/styles/_default-var-styles/component-vars`
+replace color vars with `// custom` color-aliases if they exist
