@@ -20,8 +20,9 @@
     "test": "exit 0",
     "verify": "run-p dist lint",
     "generate-svg-icon-files": "node ./scripts/generate-svg-icon-files.js",
-    "copy:scss": "copyfiles --all --verbose --up 1 -e './**/lib/**/*' -e './**/icons/**/*' -e './**/docs-theme/**/*' ./node_modules/@blueprintjs/**/*.scss ./src/styles/_var-styles",
-    "copy:examples": "copyfiles --all --verbose --up 6 ../blueprint/packages/docs-app/src/examples/**/**/** ./src/examples"
+    "copy:scss": "copyfiles --all --verbose --up 1 -e './**/lib/**/*' -e './**/icons/**/*' -e './**/docs-theme/**/*' './node_modules/@blueprintjs/**/*.scss' './src/styles/_var-styles'",
+    "copy:examples": "copyfiles --all --verbose --up 5 '../blueprint/packages/docs-app/src/examples/**/*' './src'",
+    "copy": "run-p copy:scss copy:examples"
   },
   "dependencies": {
     "@blueprintjs/core": "^3.43.0",
