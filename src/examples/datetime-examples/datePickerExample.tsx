@@ -14,11 +14,12 @@
  * limitations under the License.
  */
 
-import { Classes, H5, Switch } from "@blueprintjs/core";
-import { Example, handleBooleanChange, handleStringChange, IExampleProps } from "@blueprintjs/docs-theme";
 import * as React from "react";
 
+import { Classes, H5, Switch } from "@blueprintjs/core";
 import { DatePicker, TimePrecision } from "@blueprintjs/datetime";
+import { Example, handleBooleanChange, handleValueChange, IExampleProps } from "@blueprintjs/docs-theme";
+
 import { MomentDate } from "./common/momentDate";
 import { PrecisionSelect } from "./common/precisionSelect";
 
@@ -29,6 +30,7 @@ export interface IDatePickerExampleState {
     shortcuts: boolean;
     showActionsBar: boolean;
     timePrecision: TimePrecision | undefined;
+    showTimeArrowButtons: boolean;
 }
 
 export class DatePickerExample extends React.PureComponent<IExampleProps, IDatePickerExampleState> {
@@ -38,19 +40,28 @@ export class DatePickerExample extends React.PureComponent<IExampleProps, IDateP
         reverseMonthAndYearMenus: false,
         shortcuts: false,
         showActionsBar: false,
+        showTimeArrowButtons: false,
         timePrecision: undefined,
     };
 
     private toggleHighlight = handleBooleanChange(highlightCurrentDay => this.setState({ highlightCurrentDay }));
+
     private toggleActionsBar = handleBooleanChange(showActionsBar => this.setState({ showActionsBar }));
+
     private toggleShortcuts = handleBooleanChange(shortcuts => this.setState({ shortcuts }));
+
     private toggleReverseMenus = handleBooleanChange(reverse => this.setState({ reverseMonthAndYearMenus: reverse }));
-    private handlePrecisionChange = handleStringChange((p: TimePrecision | "none") =>
+
+    private handlePrecisionChange = handleValueChange((p: TimePrecision | "none") =>
         this.setState({ timePrecision: p === "none" ? undefined : p }),
     );
 
+    private toggleTimepickerArrowButtons = handleBooleanChange(showTimeArrowButtons =>
+        this.setState({ showTimeArrowButtons }),
+    );
+
     public render() {
-        const { date, ...props } = this.state;
+        const { date, showTimeArrowButtons, ...props } = this.state;
 
         const options = (
             <>
@@ -73,12 +84,23 @@ export class DatePickerExample extends React.PureComponent<IExampleProps, IDateP
                     value={props.timePrecision}
                     onChange={this.handlePrecisionChange}
                 />
+                <Switch
+                    disabled={this.state.timePrecision === undefined}
+                    checked={showTimeArrowButtons}
+                    label="Show timepicker arrow buttons"
+                    onChange={this.toggleTimepickerArrowButtons}
+                />
             </>
         );
 
         return (
             <Example options={options} {...this.props}>
-                <DatePicker className={Classes.ELEVATION_1} onChange={this.handleDateChange} {...props} />
+                <DatePicker
+                    className={Classes.ELEVATION_1}
+                    onChange={this.handleDateChange}
+                    timePickerProps={{ showArrowButtons: showTimeArrowButtons }}
+                    {...props}
+                />
                 <MomentDate date={date} withTime={props.timePrecision !== undefined} />
             </Example>
         );

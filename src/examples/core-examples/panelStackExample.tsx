@@ -14,6 +14,8 @@
  * limitations under the License.
  */
 
+/* eslint-disable deprecation/deprecation, max-classes-per-file */
+
 import * as React from "react";
 
 import { Button, H5, Intent, IPanel, IPanelProps, NumericInput, PanelStack, Switch, UL } from "@blueprintjs/core";
@@ -21,12 +23,12 @@ import { Example, handleBooleanChange, IExampleProps } from "@blueprintjs/docs-t
 
 export interface IPanelStackExampleState {
     activePanelOnly: boolean;
-    currentPanelStack: IPanel[];
+    currentPanelStack: Array<IPanel<IPanelExampleProps>>;
     showHeader: boolean;
 }
 
 export class PanelStackExample extends React.PureComponent<IExampleProps, IPanelStackExampleState> {
-    public initialPanel: IPanel = {
+    public initialPanel: IPanel<IPanelExampleProps> = {
         component: PanelExample,
         props: {
             panelNumber: 1,
@@ -41,6 +43,7 @@ export class PanelStackExample extends React.PureComponent<IExampleProps, IPanel
     };
 
     private toggleActiveOnly = handleBooleanChange((activePanelOnly: boolean) => this.setState({ activePanelOnly }));
+
     private handleHeaderChange = handleBooleanChange((showHeader: boolean) => this.setState({ showHeader }));
 
     public render() {
@@ -75,7 +78,10 @@ export class PanelStackExample extends React.PureComponent<IExampleProps, IPanel
     }
 
     private addToPanelStack = (newPanel: IPanel) => {
-        this.setState(state => ({ currentPanelStack: [newPanel, ...state.currentPanelStack] }));
+        this.setState(state => ({
+            // HACKHACK: https://github.com/palantir/blueprint/issues/4272
+            currentPanelStack: [(newPanel as unknown) as IPanel<IPanelExampleProps>, ...state.currentPanelStack],
+        }));
     };
 
     private removeFromPanelStack = (_lastPanel: IPanel) => {
@@ -85,7 +91,7 @@ export class PanelStackExample extends React.PureComponent<IExampleProps, IPanel
     };
 }
 
-interface IPanelExampleProps extends IPanelProps {
+interface IPanelExampleProps {
     panelNumber: number;
 }
 
@@ -93,8 +99,7 @@ interface IPanelExampleState {
     counter: number;
 }
 
-// tslint:disable-next-line:max-classes-per-file
-class PanelExample extends React.PureComponent<IPanelExampleProps> {
+class PanelExample extends React.PureComponent<IPanelExampleProps & IPanelProps> {
     public state: IPanelExampleState = {
         counter: 0,
     };

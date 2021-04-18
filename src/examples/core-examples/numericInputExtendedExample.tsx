@@ -58,6 +58,7 @@ export class NumericInputExtendedExample extends React.PureComponent<IExamplePro
     };
 
     private handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        // eslint-disable-next-line deprecation/deprecation
         if (e.keyCode === Keys.ENTER) {
             this.handleConfirm((e.target as HTMLInputElement).value);
         }
@@ -97,7 +98,6 @@ export class NumericInputExtendedExample extends React.PureComponent<IExamplePro
         return value.replace(NUMBER_ABBREVIATION_REGEX, this.expandAbbreviatedNumber);
     };
 
-    // tslint:disable-next-line:max-line-length
     // Adapted from http://stackoverflow.com/questions/2276021/evaluating-a-string-as-a-mathematical-expression-in-javascript
     private evaluateSimpleMathExpression = (value: string) => {
         // leave empty strings empty

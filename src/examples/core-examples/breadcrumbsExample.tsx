@@ -14,6 +14,8 @@
  * limitations under the License.
  */
 
+/* eslint-disable max-classes-per-file */
+
 import * as React from "react";
 
 import {
@@ -57,7 +59,9 @@ export class BreadcrumbsExample extends React.PureComponent<IExampleProps, IBrea
         width: 50,
     };
 
-    private handleChangeCollapse = handleStringChange((collapseFrom: Boundary) => this.setState({ collapseFrom }));
+    private handleChangeCollapse = handleStringChange(collapseFrom =>
+        this.setState({ collapseFrom: collapseFrom as Boundary }),
+    );
 
     public render() {
         const options = (
@@ -104,11 +108,12 @@ export class BreadcrumbsExample extends React.PureComponent<IExampleProps, IBrea
         );
     }
 
-    private renderLabel(value: number) {
+    private renderLabel = (value: number) => {
         return `${value}%`;
-    }
+    };
 
     private handleChangeWidth = (width: number) => this.setState({ width });
+
     private handleChangeRenderCurrentAsInput = () =>
         this.setState({ renderCurrentAsInput: !this.state.renderCurrentAsInput });
 
@@ -117,7 +122,6 @@ export class BreadcrumbsExample extends React.PureComponent<IExampleProps, IBrea
     };
 }
 
-/* tslint:disable max-classes-per-file */
 class BreadcrumbInput extends React.PureComponent<IBreadcrumbProps & { defaultValue: string | undefined }> {
     public state = {
         text: this.props.defaultValue ?? "",

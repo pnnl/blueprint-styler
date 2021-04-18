@@ -19,6 +19,7 @@ import * as React from "react";
 import { Button, H5, Intent, ITagProps, MenuItem, Switch } from "@blueprintjs/core";
 import { Example, IExampleProps } from "@blueprintjs/docs-theme";
 import { ItemRenderer, MultiSelect } from "@blueprintjs/select";
+
 import {
     areFilmsEqual,
     arrayContainsFilm,
@@ -65,27 +66,32 @@ export class MultiSelectExample extends React.PureComponent<IExampleProps, IMult
     };
 
     private handleAllowCreateChange = this.handleSwitchChange("allowCreate");
+
     private handleKeyDownChange = this.handleSwitchChange("openOnKeyDown");
+
     private handleResetChange = this.handleSwitchChange("resetOnSelect");
+
     private handlePopoverMinimalChange = this.handleSwitchChange("popoverMinimal");
+
     private handleTagMinimalChange = this.handleSwitchChange("tagMinimal");
+
     private handleFillChange = this.handleSwitchChange("fill");
+
     private handleIntentChange = this.handleSwitchChange("intent");
+
     private handleInitialContentChange = this.handleSwitchChange("hasInitialContent");
 
     public render() {
         const { allowCreate, films, hasInitialContent, tagMinimal, popoverMinimal, ...flags } = this.state;
-        const getTagProps = (_value: string, index: number): ITagProps => ({
+        const getTagProps = (_value: React.ReactNode, index: number): ITagProps => ({
             intent: this.state.intent ? INTENTS[index % INTENTS.length] : Intent.NONE,
             minimal: tagMinimal,
         });
 
         const initialContent = this.state.hasInitialContent ? (
             <MenuItem disabled={true} text={`${TOP_100_FILMS.length} items loaded.`} />
-        ) : (
-            // explicit undefined (not null) for default behavior (show full list)
-            undefined
-        );
+        ) : // explicit undefined (not null) for default behavior (show full list)
+        undefined;
         const maybeCreateNewItemFromQuery = allowCreate ? createFilm : undefined;
         const maybeCreateNewItemRenderer = allowCreate ? renderCreateFilmOption : null;
 
@@ -110,7 +116,11 @@ export class MultiSelectExample extends React.PureComponent<IExampleProps, IMult
                     onItemsPaste={this.handleFilmsPaste}
                     popoverProps={{ minimal: popoverMinimal }}
                     tagRenderer={this.renderTag}
-                    tagInputProps={{ tagProps: getTagProps, onRemove: this.handleTagRemove, rightElement: clearButton }}
+                    tagInputProps={{
+                        onRemove: this.handleTagRemove,
+                        rightElement: clearButton,
+                        tagProps: getTagProps,
+                    }}
                     selectedItems={this.state.films}
                 />
             </Example>
@@ -183,7 +193,7 @@ export class MultiSelectExample extends React.PureComponent<IExampleProps, IMult
         );
     };
 
-    private handleTagRemove = (_tag: string, index: number) => {
+    private handleTagRemove = (_tag: React.ReactNode, index: number) => {
         this.deselectFilm(index);
     };
 

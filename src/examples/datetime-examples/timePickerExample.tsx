@@ -14,16 +14,18 @@
  * limitations under the License.
  */
 
-import { Classes, H5, HTMLSelect, Switch } from "@blueprintjs/core";
-import { Example, handleNumberChange, handleStringChange, IExampleProps } from "@blueprintjs/docs-theme";
 import * as React from "react";
-import { PrecisionSelect } from "./common/precisionSelect";
 
+import { Classes, H5, HTMLSelect, Switch } from "@blueprintjs/core";
 import { TimePicker, TimePrecision } from "@blueprintjs/datetime";
 // tslint:disable-next-line:no-submodule-imports
 import { getDefaultMaxTime, getDefaultMinTime } from "@blueprintjs/datetime/lib/esm/common/timeUnit";
+import { Example, handleNumberChange, handleValueChange, IExampleProps } from "@blueprintjs/docs-theme";
+
+import { PrecisionSelect } from "./common/precisionSelect";
 
 export interface ITimePickerExampleState {
+    autoFocus: boolean;
     precision?: TimePrecision;
     selectAllOnFocus?: boolean;
     showArrowButtons?: boolean;
@@ -47,6 +49,7 @@ enum MaximumHours {
 
 export class TimePickerExample extends React.PureComponent<IExampleProps, ITimePickerExampleState> {
     public state = {
+        autoFocus: true,
         disabled: false,
         precision: TimePrecision.MINUTE,
         selectAllOnFocus: false,
@@ -54,7 +57,7 @@ export class TimePickerExample extends React.PureComponent<IExampleProps, ITimeP
         useAmPm: false,
     };
 
-    private handlePrecisionChange = handleStringChange((precision: TimePrecision) => this.setState({ precision }));
+    private handlePrecisionChange = handleValueChange((precision: TimePrecision) => this.setState({ precision }));
 
     public render() {
         return (
@@ -80,6 +83,7 @@ export class TimePickerExample extends React.PureComponent<IExampleProps, ITimeP
                 />
                 <Switch checked={this.state.disabled} label="Disabled" onChange={this.toggleDisabled} />
                 <Switch checked={this.state.useAmPm} label="Use AM/PM" onChange={this.toggleUseAmPm} />
+                <Switch checked={this.state.autoFocus} label="Auto focus" onChange={this.toggleAutoFocus} />
                 <PrecisionSelect value={this.state.precision} onChange={this.handlePrecisionChange} />
                 <label className={Classes.LABEL}>
                     Minimum time
@@ -115,6 +119,10 @@ export class TimePickerExample extends React.PureComponent<IExampleProps, ITimeP
 
     private toggleUseAmPm = () => {
         this.setState({ useAmPm: !this.state.useAmPm });
+    };
+
+    private toggleAutoFocus = () => {
+        this.setState({ autoFocus: !this.state.autoFocus });
     };
 
     private changeMinHour = (hour: MinimumHours) => {

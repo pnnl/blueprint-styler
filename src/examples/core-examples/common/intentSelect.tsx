@@ -14,8 +14,9 @@
  * limitations under the License.
  */
 
-import { HTMLSelect, Intent, Label } from "@blueprintjs/core";
 import * as React from "react";
+
+import { HTMLSelect, Intent, Label } from "@blueprintjs/core";
 
 const INTENTS = [
     { label: "None", value: Intent.NONE },
@@ -31,7 +32,7 @@ export interface IIntentSelectProps {
     onChange: React.FormEventHandler<HTMLSelectElement>;
 }
 
-export const IntentSelect: React.SFC<IIntentSelectProps> = props => (
+export const IntentSelect: React.FunctionComponent<IIntentSelectProps> = props => (
     <Label>
         Intent
         <HTMLSelect value={props.intent} onChange={props.onChange} options={INTENTS} />
