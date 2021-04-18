@@ -1,6 +1,0 @@
-body{
-  color: $pt-text-color;
-  &.#{$ns}-dark, .#{$ns}-dark & {
-    color: $pt-dark-text-color;
-  }
-}
