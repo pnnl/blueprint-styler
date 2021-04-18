@@ -7,6 +7,7 @@
     - add vars
     - add examples?
   - publish
+    - version and name
 - fix the other styles
   - ant
 
@@ -20,6 +21,7 @@
 
 ### App tool
 - switch to create-react-app
+- separate different packages on build
 - sections:
   - for each theme: add a readme to each project - default styles is project explainer
   - base theme component that imports scss files
