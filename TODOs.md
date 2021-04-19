@@ -1,13 +1,9 @@
-## TODOS:
+# TODO:
 
 ### var(--theme) baseline
 - build
-  - try an update
-    - popover2
-    - add vars
-    - add examples?
-    - dark mirror with -dark-gray?
   - publish
+    - crete correct branches
     - version and name
 - fix the other styles
   - ant

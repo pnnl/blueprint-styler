@@ -94,12 +94,14 @@ module.exports = () => through2.obj(function (file, enc, next) {
             const currentCategory = cssObjValues[categoryName];
             const currentCategoryComment = `\n/*! ${categoryName} */\n`
             css += currentCategoryComment
-            cssDarkMirror += currentCategoryComment
+            cssDarkMirror += currentCategoryComment // appears even when there are no contents?
             less += currentCategoryComment
             for (const varName in currentCategory) {
                 if (Object.hasOwnProperty.call(currentCategory, varName)) {
                     const varValue = currentCategory[varName];
-                    if (varName.includes('dark-')) {
+                    if (varName.includes('dark-') && !varName.includes('gray')) {
+                        // !varName.includes('gray') is hacky! // maybe use another flag?
+                        // raw Colors should not have an invert, only ColorAliases
                         cssDarkMirror += `\t--${varName.replace('dark-', '')}: var(--${varName});\n`
                     }
                     css += `\t--${varName}: ${varValue};\n` // css contains real value
