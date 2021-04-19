@@ -75,7 +75,7 @@ const TIME_ZONES: ITimezone[] = ([
     };
 });
 
-const FORMAT_OPTIONS: any = {
+const FORMAT_OPTIONS = {
     day: "2-digit",
     hour: "2-digit",
     minute: "2-digit",

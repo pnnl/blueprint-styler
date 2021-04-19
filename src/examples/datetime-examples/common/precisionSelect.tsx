@@ -37,12 +37,13 @@ export interface IPrecisionSelectProps {
 
     /**
      * Label to show over the dropdown of precisions.
+     *
      * @default "Precision"
      */
     label?: string;
 }
 
-export const PrecisionSelect: React.SFC<IPrecisionSelectProps> = props => (
+export const PrecisionSelect: React.FunctionComponent<IPrecisionSelectProps> = props => (
     <label className={Classes.LABEL}>
         {props.label || "Precision"}
         <HTMLSelect value={props.value} onChange={props.onChange}>
