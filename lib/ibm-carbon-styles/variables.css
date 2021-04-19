@@ -545,18 +545,8 @@
 .bp3-dark {
 
 /*! ColorsHsl */
-	--gray1-hsl: var(--dark-gray1-hsl);
-	--gray2-hsl: var(--dark-gray2-hsl);
-	--gray3-hsl: var(--dark-gray3-hsl);
-	--gray4-hsl: var(--dark-gray4-hsl);
-	--gray5-hsl: var(--dark-gray5-hsl);
 
 /*! Colors */
-	--gray1: var(--dark-gray1);
-	--gray2: var(--dark-gray2);
-	--gray3: var(--dark-gray3);
-	--gray4: var(--dark-gray4);
-	--gray5: var(--dark-gray5);
 
 /*! IntentColors */
 	--pt-intent-primary-text-color-hsl: var(--pt-dark-intent-primary-text-color-hsl);
@@ -689,14 +679,4 @@
 	--row-header-text-color-hsl: var(--dark-row-header-text-color-hsl);
 
 /*! ColorsGrayscaleTransparent */
-	--white-trans-gray1: var(--white-trans-dark-gray1);
-	--white-trans-gray2: var(--white-trans-dark-gray2);
-	--white-trans-gray3: var(--white-trans-dark-gray3);
-	--white-trans-gray4: var(--white-trans-dark-gray4);
-	--white-trans-gray5: var(--white-trans-dark-gray5);
-	--black-trans-gray1: var(--black-trans-dark-gray1);
-	--black-trans-gray2: var(--black-trans-dark-gray2);
-	--black-trans-gray3: var(--black-trans-dark-gray3);
-	--black-trans-gray4: var(--black-trans-dark-gray4);
-	--black-trans-gray5: var(--black-trans-dark-gray5);
 }

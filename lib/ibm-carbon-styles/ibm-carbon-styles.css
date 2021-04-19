@@ -10,7 +10,6 @@ body {
     margin: 0;
     font-size: 14px;
     font-weight: 400;
-    letter-spacing: 0;
     line-height: 1.28581;
     text-transform: none;
     color: hsla(218,0%,0%,0.74);
@@ -47,7 +46,6 @@ a {
 
 abbr[title] {
     border-bottom: none;
-    text-decoration: underline;
     text-decoration: underline dotted
 }
 
@@ -61,7 +59,6 @@ code,kbd,samp {
 }
 
 small {
-    font-size: 80%;
     font-size: 12px
 }
 
@@ -477,8 +474,6 @@ a:hover {
     align-items: center;
     background: hsl(218,0%,100%);
     background: var(--white);
-    border-radius: 0px;
-    border-radius: var(--pt-border-radius);
     box-shadow: 0 0 0 1px hsla(218,0%,0%,0.1),0 0 0 hsla(218,0%,0%,0),0 1px 1px hsla(218,0%,0%,0.2);
     box-shadow: var(--pt-elevation-shadow-1);
     color: hsla(218,0%,0%,0.6);
@@ -553,10 +548,6 @@ a:hover {
 }
 
 :focus {
-    outline: hsl(220,100%,53%) auto 2px;
-    outline: var(--pt-outline-color) auto 2px;
-    outline-offset: 2px;
-    -moz-outline-radius: 6px;
     outline: hsl(220,100%,53%) solid 2px;
     outline: var(--pt-intent-primary) solid 2px;
     outline-offset: 1px
@@ -985,7 +976,6 @@ a:hover {
 .bp3-button.bp3-large,.bp3-large .bp3-button {
     min-height: 40px;
     min-width: 40px;
-    font-size: 16px;
     padding: 5px 15px;
     font-size: 14px
 }
@@ -3261,8 +3251,6 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-editable-text:hover:before {
-    box-shadow: 0 0 0 0 hsla(205,100%,38%,0),0 0 0 0 hsla(205,100%,38%,0),inset 0 0 0 1px hsla(218,0%,0%,0.15);
-    box-shadow: 0 0 0 0 hsla(var(--input-shadow-color-focus-hsl),0),0 0 0 0 hsla(var(--input-shadow-color-focus-hsl),0),inset 0 0 0 1px var(--pt-divider-black);
     box-shadow: inset 0 -1px 0 0 hsl(220,100%,53%);
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-primary);
     background-color: hsla(218,0%,0%,0.04);
@@ -3272,8 +3260,6 @@ a.bp3-button.bp3-disabled {
 .bp3-editable-text.bp3-editable-text-editing:before {
     background-color: hsla(218,0%,0%,0.04);
     background-color: var(--input-background-color);
-    box-shadow: 0 0 0 1px hsla(205,100%,38%,1),0 0 0 3px hsla(205,100%,38%,.3),inset 0 1px 1px hsla(218,0%,0%,0.2);
-    box-shadow: 0 0 0 1px hsla(var(--input-shadow-color-focus-hsl),1),0 0 0 3px hsla(var(--input-shadow-color-focus-hsl),.3),var(--input-box-shadow-focus);
     box-shadow: 0 0 0 2px hsl(220,100%,53%);
     box-shadow: 0 0 0 2px var(--pt-intent-primary)
 }
@@ -3288,15 +3274,11 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-editable-text.bp3-intent-primary:hover:before {
-    box-shadow: 0 0 0 0 hsla(220,100%,53%,0),0 0 0 0 hsla(220,100%,53%,0),inset 0 0 0 1px hsla(220,100%,53%,.4);
-    box-shadow: 0 0 0 0 hsla(var(--pt-intent-primary-hsl),0),0 0 0 0 hsla(var(--pt-intent-primary-hsl),0),inset 0 0 0 1px hsla(var(--pt-intent-primary-hsl),.4);
     box-shadow: inset 0 -1px 0 0 hsl(220,100%,53%);
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-primary)
 }
 
 .bp3-editable-text.bp3-intent-primary.bp3-editable-text-editing:before {
-    box-shadow: 0 0 0 1px hsla(220,100%,53%,1),0 0 0 3px hsla(220,100%,53%,.3),inset 0 1px 1px hsla(218,0%,0%,0.2);
-    box-shadow: 0 0 0 1px hsla(var(--pt-intent-primary-hsl),1),0 0 0 3px hsla(var(--pt-intent-primary-hsl),.3),var(--input-box-shadow-focus);
     box-shadow: 0 0 0 2px hsl(220,100%,53%);
     box-shadow: 0 0 0 2px var(--pt-intent-primary)
 }
@@ -3307,15 +3289,11 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-editable-text.bp3-intent-success:hover:before {
-    box-shadow: 0 0 0 0 hsla(138,67%,30%,0),0 0 0 0 hsla(138,67%,30%,0),inset 0 0 0 1px hsla(138,67%,30%,.4);
-    box-shadow: 0 0 0 0 hsla(var(--pt-intent-success-hsl),0),0 0 0 0 hsla(var(--pt-intent-success-hsl),0),inset 0 0 0 1px hsla(var(--pt-intent-success-hsl),.4);
     box-shadow: inset 0 -1px 0 0 hsl(138,67%,30%);
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-success)
 }
 
 .bp3-editable-text.bp3-intent-success.bp3-editable-text-editing:before {
-    box-shadow: 0 0 0 1px hsla(138,67%,30%,1),0 0 0 3px hsla(138,67%,30%,.3),inset 0 1px 1px hsla(218,0%,0%,0.2);
-    box-shadow: 0 0 0 1px hsla(var(--pt-intent-success-hsl),1),0 0 0 3px hsla(var(--pt-intent-success-hsl),.3),var(--input-box-shadow-focus);
     box-shadow: 0 0 0 2px hsl(138,67%,30%);
     box-shadow: 0 0 0 2px var(--pt-intent-success)
 }
@@ -3326,15 +3304,11 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-editable-text.bp3-intent-warning:hover:before {
-    box-shadow: 0 0 0 0 hsla(30,100%,36%,0),0 0 0 0 hsla(30,100%,36%,0),inset 0 0 0 1px hsla(30,100%,36%,.4);
-    box-shadow: 0 0 0 0 hsla(var(--pt-intent-warning-hsl),0),0 0 0 0 hsla(var(--pt-intent-warning-hsl),0),inset 0 0 0 1px hsla(var(--pt-intent-warning-hsl),.4);
     box-shadow: inset 0 -1px 0 0 hsl(30,100%,36%);
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-warning)
 }
 
 .bp3-editable-text.bp3-intent-warning.bp3-editable-text-editing:before {
-    box-shadow: 0 0 0 1px hsla(30,100%,36%,1),0 0 0 3px hsla(30,100%,36%,.3),inset 0 1px 1px hsla(218,0%,0%,0.2);
-    box-shadow: 0 0 0 1px hsla(var(--pt-intent-warning-hsl),1),0 0 0 3px hsla(var(--pt-intent-warning-hsl),.3),var(--input-box-shadow-focus);
     box-shadow: 0 0 0 2px hsl(30,100%,36%);
     box-shadow: 0 0 0 2px var(--pt-intent-warning)
 }
@@ -3345,22 +3319,16 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-editable-text.bp3-intent-danger:hover:before {
-    box-shadow: 0 0 0 0 hsla(357,76%,49%,0),0 0 0 0 hsla(357,76%,49%,0),inset 0 0 0 1px hsla(357,76%,49%,.4);
-    box-shadow: 0 0 0 0 hsla(var(--pt-intent-danger-hsl),0),0 0 0 0 hsla(var(--pt-intent-danger-hsl),0),inset 0 0 0 1px hsla(var(--pt-intent-danger-hsl),.4);
     box-shadow: inset 0 -1px 0 0 hsl(357,76%,49%);
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-danger)
 }
 
 .bp3-editable-text.bp3-intent-danger.bp3-editable-text-editing:before {
-    box-shadow: 0 0 0 1px hsla(357,76%,49%,1),0 0 0 3px hsla(357,76%,49%,.3),inset 0 1px 1px hsla(218,0%,0%,0.2);
-    box-shadow: 0 0 0 1px hsla(var(--pt-intent-danger-hsl),1),0 0 0 3px hsla(var(--pt-intent-danger-hsl),.3),var(--input-box-shadow-focus);
     box-shadow: 0 0 0 2px hsl(357,76%,49%);
     box-shadow: 0 0 0 2px var(--pt-intent-danger)
 }
 
 .bp3-dark .bp3-editable-text:hover:before {
-    box-shadow: 0 0 0 0 hsla(205,100%,38%,0),0 0 0 0 hsla(205,100%,38%,0),inset 0 0 0 1px hsla(218,0%,100%,0.13);
-    box-shadow: 0 0 0 0 hsla(var(--dark-input-shadow-color-focus-hsl),0),0 0 0 0 hsla(var(--dark-input-shadow-color-focus-hsl),0),inset 0 0 0 1px var(--pt-dark-divider-white);
     box-shadow: inset 0 -1px 0 0 hsl(220,100%,53%);
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-primary);
     background-color: hsla(218,0%,100%,0.06);
@@ -3370,8 +3338,6 @@ a.bp3-button.bp3-disabled {
 .bp3-dark .bp3-editable-text.bp3-editable-text-editing:before {
     background-color: hsla(218,0%,100%,0.06);
     background-color: var(--dark-input-background-color);
-    box-shadow: 0 0 0 1px hsla(205,100%,38%,1),0 0 0 3px hsla(205,100%,38%,.3),none;
-    box-shadow: 0 0 0 1px hsla(var(--dark-input-shadow-color-focus-hsl),1),0 0 0 3px hsla(var(--dark-input-shadow-color-focus-hsl),.3),var(--pt-dark-input-box-shadow);
     box-shadow: 0 0 0 2px hsl(220,100%,53%);
     box-shadow: 0 0 0 2px var(--pt-intent-primary)
 }
@@ -3386,15 +3352,11 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-dark .bp3-editable-text.bp3-intent-primary:hover:before {
-    box-shadow: 0 0 0 0 hsla(220,100%,53%,0),0 0 0 0 hsla(220,100%,53%,0),inset 0 0 0 1px hsla(220,100%,53%,.4);
-    box-shadow: 0 0 0 0 hsla(var(--pt-intent-primary-hsl),0),0 0 0 0 hsla(var(--pt-intent-primary-hsl),0),inset 0 0 0 1px hsla(var(--pt-intent-primary-hsl),.4);
     box-shadow: inset 0 -1px 0 0 hsl(220,100%,53%);
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-primary)
 }
 
 .bp3-dark .bp3-editable-text.bp3-intent-primary.bp3-editable-text-editing:before {
-    box-shadow: 0 0 0 1px hsla(220,100%,53%,1),0 0 0 3px hsla(220,100%,53%,.3),none;
-    box-shadow: 0 0 0 1px hsla(var(--pt-intent-primary-hsl),1),0 0 0 3px hsla(var(--pt-intent-primary-hsl),.3),var(--pt-dark-input-box-shadow);
     box-shadow: 0 0 0 2px hsl(220,100%,53%);
     box-shadow: 0 0 0 2px var(--pt-intent-primary)
 }
@@ -3405,15 +3367,11 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-dark .bp3-editable-text.bp3-intent-success:hover:before {
-    box-shadow: 0 0 0 0 hsla(138,67%,30%,0),0 0 0 0 hsla(138,67%,30%,0),inset 0 0 0 1px hsla(138,67%,30%,.4);
-    box-shadow: 0 0 0 0 hsla(var(--pt-intent-success-hsl),0),0 0 0 0 hsla(var(--pt-intent-success-hsl),0),inset 0 0 0 1px hsla(var(--pt-intent-success-hsl),.4);
     box-shadow: inset 0 -1px 0 0 hsl(138,67%,30%);
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-success)
 }
 
 .bp3-dark .bp3-editable-text.bp3-intent-success.bp3-editable-text-editing:before {
-    box-shadow: 0 0 0 1px hsla(138,67%,30%,1),0 0 0 3px hsla(138,67%,30%,.3),none;
-    box-shadow: 0 0 0 1px hsla(var(--pt-intent-success-hsl),1),0 0 0 3px hsla(var(--pt-intent-success-hsl),.3),var(--pt-dark-input-box-shadow);
     box-shadow: 0 0 0 2px hsl(138,67%,30%);
     box-shadow: 0 0 0 2px var(--pt-intent-success)
 }
@@ -3424,15 +3382,11 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-dark .bp3-editable-text.bp3-intent-warning:hover:before {
-    box-shadow: 0 0 0 0 hsla(30,100%,36%,0),0 0 0 0 hsla(30,100%,36%,0),inset 0 0 0 1px hsla(30,100%,36%,.4);
-    box-shadow: 0 0 0 0 hsla(var(--pt-intent-warning-hsl),0),0 0 0 0 hsla(var(--pt-intent-warning-hsl),0),inset 0 0 0 1px hsla(var(--pt-intent-warning-hsl),.4);
     box-shadow: inset 0 -1px 0 0 hsl(30,100%,36%);
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-warning)
 }
 
 .bp3-dark .bp3-editable-text.bp3-intent-warning.bp3-editable-text-editing:before {
-    box-shadow: 0 0 0 1px hsla(30,100%,36%,1),0 0 0 3px hsla(30,100%,36%,.3),none;
-    box-shadow: 0 0 0 1px hsla(var(--pt-intent-warning-hsl),1),0 0 0 3px hsla(var(--pt-intent-warning-hsl),.3),var(--pt-dark-input-box-shadow);
     box-shadow: 0 0 0 2px hsl(30,100%,36%);
     box-shadow: 0 0 0 2px var(--pt-intent-warning)
 }
@@ -3443,15 +3397,11 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-dark .bp3-editable-text.bp3-intent-danger:hover:before {
-    box-shadow: 0 0 0 0 hsla(357,76%,49%,0),0 0 0 0 hsla(357,76%,49%,0),inset 0 0 0 1px hsla(357,76%,49%,.4);
-    box-shadow: 0 0 0 0 hsla(var(--pt-intent-danger-hsl),0),0 0 0 0 hsla(var(--pt-intent-danger-hsl),0),inset 0 0 0 1px hsla(var(--pt-intent-danger-hsl),.4);
     box-shadow: inset 0 -1px 0 0 hsl(357,76%,49%);
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-danger)
 }
 
 .bp3-dark .bp3-editable-text.bp3-intent-danger.bp3-editable-text-editing:before {
-    box-shadow: 0 0 0 1px hsla(357,76%,49%,1),0 0 0 3px hsla(357,76%,49%,.3),none;
-    box-shadow: 0 0 0 1px hsla(var(--pt-intent-danger-hsl),1),0 0 0 3px hsla(var(--pt-intent-danger-hsl),.3),var(--pt-dark-input-box-shadow);
     box-shadow: 0 0 0 2px hsl(357,76%,49%);
     box-shadow: 0 0 0 2px var(--pt-intent-danger)
 }
@@ -3479,8 +3429,6 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-editable-text-input::placeholder {
-    color: hsla(218,0%,0%,0.4);
-    color: var(--input-placeholder-color);
     opacity: 1;
     color: hsla(218,0%,0%,0.4);
     color: var(--pt-text-color-disabled)
@@ -3827,8 +3775,6 @@ a.bp3-button.bp3-disabled {
     background-image: none;
     background-image: var(--button-gradient);
     border: none;
-    box-shadow: none;
-    box-shadow: var(--button-box-shadow);
     cursor: pointer;
     display: inline-block;
     font-size: 16px;
@@ -3870,9 +3816,6 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-control input:focus~.bp3-control-indicator {
-    outline: hsl(220,100%,53%) auto 2px;
-    outline: var(--pt-outline-color) auto 2px;
-    -moz-outline-radius: 6px;
     outline: hsl(220,100%,53%) solid 2px;
     outline: var(--pt-intent-primary) solid 2px;
     outline-offset: 2px
@@ -4069,8 +4012,6 @@ a.bp3-button.bp3-disabled {
     background: hsl(218,0%,100%);
     background: var(--switch-indicator-background-color);
     border-radius: 50%;
-    box-shadow: 0 0 0 1px hsla(218,0%,0%,0.2),0 1px 1px hsla(218,0%,0%,0.2);
-    box-shadow: var(--button-box-shadow-overlay);
     height: calc(1em - 4px);
     left: 0;
     margin: 2px;
@@ -4211,8 +4152,6 @@ a.bp3-button.bp3-disabled {
     background-color: var(--dark-control-background-color);
     background-image: none;
     background-image: var(--dark-button-gradient);
-    box-shadow: none;
-    box-shadow: var(--dark-button-box-shadow);
     box-shadow: inset 0 0 0 1px hsla(218,0%,100%,0.40);
     box-shadow: inset 0 0 0 1px var(--ibm-dark-input-border)
 }
@@ -4333,8 +4272,6 @@ a.bp3-button.bp3-disabled {
     border-radius: var(--pt-border-radius);
     box-shadow: 0 0 0 0 hsla(205,100%,38%,0),0 0 0 0 hsla(205,100%,38%,0),none;
     box-shadow: 0 0 0 0 hsla(var(--input-shadow-color-focus-hsl),0),0 0 0 0 hsla(var(--input-shadow-color-focus-hsl),0),var(--pt-input-box-shadow);
-    color: hsla(218,0%,0%,0.74);
-    color: var(--input-color);
     font-size: 14px;
     font-weight: 400;
     height: 30px;
@@ -4480,8 +4417,6 @@ a.bp3-button.bp3-disabled {
     background: var(--dark-input-background-color);
     box-shadow: 0 0 0 0 hsla(205,100%,38%,0),0 0 0 0 hsla(205,100%,38%,0),0 0 0 0 hsla(205,100%,38%,0),none;
     box-shadow: 0 0 0 0 hsla(var(--dark-input-shadow-color-focus-hsl),0),0 0 0 0 hsla(var(--dark-input-shadow-color-focus-hsl),0),0 0 0 0 hsla(var(--dark-input-shadow-color-focus-hsl),0),var(--pt-dark-input-box-shadow);
-    color: hsla(218,0%,100%,0.96);
-    color: var(--dark-input-color);
     color: hsla(218,0%,100%,0.33);
     color: var(--pt-dark-text-color-disabled)
 }
@@ -4836,15 +4771,11 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-input-group.bp3-intent-primary .bp3-input {
-    box-shadow: 0 0 0 0 hsla(220,100%,53%,0),0 0 0 0 hsla(220,100%,53%,0),inset 0 0 0 1px hsla(220,100%,53%,1),none;
-    box-shadow: 0 0 0 0 hsla(var(--pt-intent-primary-hsl),0),0 0 0 0 hsla(var(--pt-intent-primary-hsl),0),inset 0 0 0 1px hsla(var(--pt-intent-primary-hsl),1),var(--pt-input-box-shadow);
     box-shadow: inset 0 -1px 0 0 hsl(220,100%,53%);
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-primary)
 }
 
 .bp3-input-group.bp3-intent-primary .bp3-input:focus {
-    box-shadow: 0 0 0 1px hsla(220,100%,53%,1),0 0 0 3px hsla(220,100%,53%,.3),inset 0 1px 1px hsla(218,0%,0%,0.2);
-    box-shadow: 0 0 0 1px hsla(var(--pt-intent-primary-hsl),1),0 0 0 3px hsla(var(--pt-intent-primary-hsl),.3),var(--input-box-shadow-focus);
     box-shadow: inset 0 0 0 2px hsl(220,100%,53%);
     box-shadow: inset 0 0 0 2px var(--pt-intent-primary)
 }
@@ -4869,15 +4800,11 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-input-group.bp3-intent-success .bp3-input {
-    box-shadow: 0 0 0 0 hsla(138,67%,30%,0),0 0 0 0 hsla(138,67%,30%,0),inset 0 0 0 1px hsla(138,67%,30%,1),none;
-    box-shadow: 0 0 0 0 hsla(var(--pt-intent-success-hsl),0),0 0 0 0 hsla(var(--pt-intent-success-hsl),0),inset 0 0 0 1px hsla(var(--pt-intent-success-hsl),1),var(--pt-input-box-shadow);
     box-shadow: inset 0 -1px 0 0 hsl(138,67%,30%);
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-success)
 }
 
 .bp3-input-group.bp3-intent-success .bp3-input:focus {
-    box-shadow: 0 0 0 1px hsla(138,67%,30%,1),0 0 0 3px hsla(138,67%,30%,.3),inset 0 1px 1px hsla(218,0%,0%,0.2);
-    box-shadow: 0 0 0 1px hsla(var(--pt-intent-success-hsl),1),0 0 0 3px hsla(var(--pt-intent-success-hsl),.3),var(--input-box-shadow-focus);
     box-shadow: inset 0 0 0 2px hsl(138,67%,30%);
     box-shadow: inset 0 0 0 2px var(--pt-intent-success)
 }
@@ -4902,15 +4829,11 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-input-group.bp3-intent-warning .bp3-input {
-    box-shadow: 0 0 0 0 hsla(30,100%,36%,0),0 0 0 0 hsla(30,100%,36%,0),inset 0 0 0 1px hsla(30,100%,36%,1),none;
-    box-shadow: 0 0 0 0 hsla(var(--pt-intent-warning-hsl),0),0 0 0 0 hsla(var(--pt-intent-warning-hsl),0),inset 0 0 0 1px hsla(var(--pt-intent-warning-hsl),1),var(--pt-input-box-shadow);
     box-shadow: inset 0 -1px 0 0 hsl(30,100%,36%);
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-warning)
 }
 
 .bp3-input-group.bp3-intent-warning .bp3-input:focus {
-    box-shadow: 0 0 0 1px hsla(30,100%,36%,1),0 0 0 3px hsla(30,100%,36%,.3),inset 0 1px 1px hsla(218,0%,0%,0.2);
-    box-shadow: 0 0 0 1px hsla(var(--pt-intent-warning-hsl),1),0 0 0 3px hsla(var(--pt-intent-warning-hsl),.3),var(--input-box-shadow-focus);
     box-shadow: inset 0 0 0 2px hsl(30,100%,36%);
     box-shadow: inset 0 0 0 2px var(--pt-intent-warning)
 }
@@ -4935,15 +4858,11 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-input-group.bp3-intent-danger .bp3-input {
-    box-shadow: 0 0 0 0 hsla(357,76%,49%,0),0 0 0 0 hsla(357,76%,49%,0),inset 0 0 0 1px hsla(357,76%,49%,1),none;
-    box-shadow: 0 0 0 0 hsla(var(--pt-intent-danger-hsl),0),0 0 0 0 hsla(var(--pt-intent-danger-hsl),0),inset 0 0 0 1px hsla(var(--pt-intent-danger-hsl),1),var(--pt-input-box-shadow);
     box-shadow: inset 0 -1px 0 0 hsl(357,76%,49%);
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-danger)
 }
 
 .bp3-input-group.bp3-intent-danger .bp3-input:focus {
-    box-shadow: 0 0 0 1px hsla(357,76%,49%,1),0 0 0 3px hsla(357,76%,49%,.3),inset 0 1px 1px hsla(218,0%,0%,0.2);
-    box-shadow: 0 0 0 1px hsla(var(--pt-intent-danger-hsl),1),0 0 0 3px hsla(var(--pt-intent-danger-hsl),.3),var(--input-box-shadow-focus);
     box-shadow: inset 0 0 0 2px hsl(357,76%,49%);
     box-shadow: inset 0 0 0 2px var(--pt-intent-danger)
 }
@@ -4974,8 +4893,6 @@ a.bp3-button.bp3-disabled {
     border: none;
     border-radius: 0px;
     border-radius: var(--pt-border-radius);
-    box-shadow: 0 0 0 0 hsla(205,100%,38%,0),0 0 0 0 hsla(205,100%,38%,0),none;
-    box-shadow: 0 0 0 0 hsla(var(--input-shadow-color-focus-hsl),0),0 0 0 0 hsla(var(--input-shadow-color-focus-hsl),0),var(--pt-input-box-shadow);
     color: hsla(218,0%,0%,0.74);
     color: var(--input-color);
     font-size: 14px;
@@ -5000,12 +4917,6 @@ a.bp3-button.bp3-disabled {
 .bp3-input.bp3-active,.bp3-input:focus {
     box-shadow: 0 0 0 1px hsla(205,100%,38%,1),0 0 0 3px hsla(205,100%,38%,.3),inset 0 1px 1px hsla(218,0%,0%,0.2);
     box-shadow: 0 0 0 1px hsla(var(--input-shadow-color-focus-hsl),1),0 0 0 3px hsla(var(--input-shadow-color-focus-hsl),.3),var(--input-box-shadow-focus)
-}
-
-.bp3-input.bp3-round,.bp3-input[type=search] {
-    border-radius: 30px;
-    box-sizing: border-box;
-    padding-left: 10px
 }
 
 .bp3-input[readonly] {
@@ -5053,8 +4964,6 @@ a.bp3-button.bp3-disabled {
 .bp3-dark .bp3-input {
     background: hsla(218,0%,100%,0.06);
     background: var(--dark-input-background-color);
-    box-shadow: 0 0 0 0 hsla(205,100%,38%,0),0 0 0 0 hsla(205,100%,38%,0),0 0 0 0 hsla(205,100%,38%,0),none;
-    box-shadow: 0 0 0 0 hsla(var(--dark-input-shadow-color-focus-hsl),0),0 0 0 0 hsla(var(--dark-input-shadow-color-focus-hsl),0),0 0 0 0 hsla(var(--dark-input-shadow-color-focus-hsl),0),var(--pt-dark-input-box-shadow);
     color: hsla(218,0%,100%,0.96);
     color: var(--dark-input-color);
     box-shadow: inset 0 -1px 0 0 hsla(218,0%,100%,0.40);
@@ -5085,15 +4994,11 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-input.bp3-intent-primary {
-    box-shadow: 0 0 0 0 hsla(220,100%,53%,0),0 0 0 0 hsla(220,100%,53%,0),inset 0 0 0 1px hsla(220,100%,53%,1),none;
-    box-shadow: 0 0 0 0 hsla(var(--pt-intent-primary-hsl),0),0 0 0 0 hsla(var(--pt-intent-primary-hsl),0),inset 0 0 0 1px hsla(var(--pt-intent-primary-hsl),1),var(--pt-input-box-shadow);
     box-shadow: inset 0 -1px 0 0 hsl(220,100%,53%);
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-primary)
 }
 
 .bp3-input.bp3-intent-primary:focus {
-    box-shadow: 0 0 0 1px hsla(220,100%,53%,1),0 0 0 3px hsla(220,100%,53%,.3),inset 0 1px 1px hsla(218,0%,0%,0.2);
-    box-shadow: 0 0 0 1px hsla(var(--pt-intent-primary-hsl),1),0 0 0 3px hsla(var(--pt-intent-primary-hsl),.3),var(--input-box-shadow-focus);
     box-shadow: inset 0 0 0 2px hsl(220,100%,53%);
     box-shadow: inset 0 0 0 2px var(--pt-intent-primary)
 }
@@ -5127,15 +5032,11 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-input.bp3-intent-success {
-    box-shadow: 0 0 0 0 hsla(138,67%,30%,0),0 0 0 0 hsla(138,67%,30%,0),inset 0 0 0 1px hsla(138,67%,30%,1),none;
-    box-shadow: 0 0 0 0 hsla(var(--pt-intent-success-hsl),0),0 0 0 0 hsla(var(--pt-intent-success-hsl),0),inset 0 0 0 1px hsla(var(--pt-intent-success-hsl),1),var(--pt-input-box-shadow);
     box-shadow: inset 0 -1px 0 0 hsl(138,67%,30%);
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-success)
 }
 
 .bp3-input.bp3-intent-success:focus {
-    box-shadow: 0 0 0 1px hsla(138,67%,30%,1),0 0 0 3px hsla(138,67%,30%,.3),inset 0 1px 1px hsla(218,0%,0%,0.2);
-    box-shadow: 0 0 0 1px hsla(var(--pt-intent-success-hsl),1),0 0 0 3px hsla(var(--pt-intent-success-hsl),.3),var(--input-box-shadow-focus);
     box-shadow: inset 0 0 0 2px hsl(138,67%,30%);
     box-shadow: inset 0 0 0 2px var(--pt-intent-success)
 }
@@ -5169,15 +5070,11 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-input.bp3-intent-warning {
-    box-shadow: 0 0 0 0 hsla(30,100%,36%,0),0 0 0 0 hsla(30,100%,36%,0),inset 0 0 0 1px hsla(30,100%,36%,1),none;
-    box-shadow: 0 0 0 0 hsla(var(--pt-intent-warning-hsl),0),0 0 0 0 hsla(var(--pt-intent-warning-hsl),0),inset 0 0 0 1px hsla(var(--pt-intent-warning-hsl),1),var(--pt-input-box-shadow);
     box-shadow: inset 0 -1px 0 0 hsl(30,100%,36%);
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-warning)
 }
 
 .bp3-input.bp3-intent-warning:focus {
-    box-shadow: 0 0 0 1px hsla(30,100%,36%,1),0 0 0 3px hsla(30,100%,36%,.3),inset 0 1px 1px hsla(218,0%,0%,0.2);
-    box-shadow: 0 0 0 1px hsla(var(--pt-intent-warning-hsl),1),0 0 0 3px hsla(var(--pt-intent-warning-hsl),.3),var(--input-box-shadow-focus);
     box-shadow: inset 0 0 0 2px hsl(30,100%,36%);
     box-shadow: inset 0 0 0 2px var(--pt-intent-warning)
 }
@@ -5211,15 +5108,11 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-input.bp3-intent-danger {
-    box-shadow: 0 0 0 0 hsla(357,76%,49%,0),0 0 0 0 hsla(357,76%,49%,0),inset 0 0 0 1px hsla(357,76%,49%,1),none;
-    box-shadow: 0 0 0 0 hsla(var(--pt-intent-danger-hsl),0),0 0 0 0 hsla(var(--pt-intent-danger-hsl),0),inset 0 0 0 1px hsla(var(--pt-intent-danger-hsl),1),var(--pt-input-box-shadow);
     box-shadow: inset 0 -1px 0 0 hsl(357,76%,49%);
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-danger)
 }
 
 .bp3-input.bp3-intent-danger:focus {
-    box-shadow: 0 0 0 1px hsla(357,76%,49%,1),0 0 0 3px hsla(357,76%,49%,.3),inset 0 1px 1px hsla(218,0%,0%,0.2);
-    box-shadow: 0 0 0 1px hsla(var(--pt-intent-danger-hsl),1),0 0 0 3px hsla(var(--pt-intent-danger-hsl),.3),var(--input-box-shadow-focus);
     box-shadow: inset 0 0 0 2px hsl(357,76%,49%);
     box-shadow: inset 0 0 0 2px var(--pt-intent-danger)
 }
@@ -6184,7 +6077,6 @@ table.bp3-html-table.bp3-interactive tbody tr:active td {
 }
 
 .bp3-icon:not(:empty):before {
-    content: ""!important;
     content: unset!important
 }
 
@@ -6358,10 +6250,6 @@ span.bp3-icon:empty:before {
 }
 
 .bp3-menu-item.bp3-disabled {
-    background-color: inherit;
-    color: hsla(218,0%,0%,0.4);
-    color: var(--pt-text-color-disabled);
-    cursor: not-allowed;
     background-color: inherit!important;
     color: hsla(218,0%,0%,0.4)!important;
     color: var(--pt-text-color-disabled)!important;
@@ -6381,8 +6269,6 @@ span.bp3-icon:empty:before {
 
 .bp3-dark .bp3-menu-item.bp3-disabled {
     background-color: inherit;
-    color: hsla(218,0%,100%,0.33);
-    color: var(--pt-dark-text-color-disabled);
     color: hsla(218,0%,100%,0.33)!important;
     color: var(--pt-dark-text-color-disabled)!important
 }
@@ -7567,9 +7453,7 @@ span.bp3-popover-target {
 .bp3-progress-bar {
     background: hsla(218,0%,40%,0.2);
     background: var(--progress-track-color);
-    border-radius: 40px;
     display: block;
-    height: 8px;
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -7583,7 +7467,6 @@ span.bp3-popover-target {
     background-color: hsla(218,0%,40%,0.8);
     background-color: var(--progress-head-color);
     background-size: 30px 30px;
-    border-radius: 40px;
     height: 100%;
     position: absolute;
     transition: width .2s cubic-bezier(0.4,1,0.75,0.9);
@@ -7742,12 +7625,8 @@ span.bp3-popover-target {
     background-color: var(--button-background-color);
     background-image: none;
     background-image: var(--button-gradient);
-    box-shadow: none;
-    box-shadow: var(--button-box-shadow);
     color: hsla(218,0%,0%,0.74);
     color: var(--pt-text-color);
-    border-radius: 0px;
-    border-radius: var(--pt-border-radius);
     box-shadow: 0 0 0 1px hsla(218,0%,0%,0.2),0 1px 1px hsla(218,0%,0%,0.2);
     box-shadow: var(--button-box-shadow-overlay);
     cursor: pointer;
@@ -7791,8 +7670,6 @@ span.bp3-popover-target {
     background-clip: padding-box;
     background-color: hsla(218,0%,0%,0.15);
     background-color: var(--button-background-color-hover);
-    box-shadow: none;
-    box-shadow: var(--button-box-shadow);
     box-shadow: 0 0 0 1px hsla(218,0%,0%,0.2),0 1px 1px hsla(218,0%,0%,0.2);
     box-shadow: var(--button-box-shadow-overlay);
     cursor: grab;
@@ -7800,13 +7677,7 @@ span.bp3-popover-target {
 }
 
 .bp3-slider-handle.bp3-active {
-    background-color: hsla(218,0%,0%,0.21);
-    background-color: var(--button-background-color-active);
     background-image: none;
-    box-shadow: none;
-    box-shadow: var(--button-box-shadow-active);
-    box-shadow: 0 0 0 1px hsla(218,0%,0%,0.2),inset 0 1px 1px hsla(218,0%,0%,0.1);
-    box-shadow: var(--button-box-shadow-overlay-active);
     cursor: grabbing;
     background-color: hsl(220,100%,53%);
     background-color: var(--pt-intent-primary);
@@ -7871,16 +7742,12 @@ span.bp3-popover-target {
 }
 
 .bp3-dark .bp3-slider-handle,.bp3-dark .bp3-slider-handle:hover {
-    background-color: hsl(218,0%,33%);
-    background-color: var(--dark-gray5);
     background-color: hsl(218,0%,79%);
     background-color: var(--light-gray2);
     box-shadow: none
 }
 
 .bp3-dark .bp3-slider-handle.bp3-active {
-    background-color: hsl(218,0%,20%);
-    background-color: var(--dark-gray3);
     background-color: hsl(220,100%,53%);
     background-color: var(--pt-intent-primary);
     box-shadow: none
@@ -7917,10 +7784,6 @@ span.bp3-popover-target {
 
 .bp3-disabled .bp3-slider-handle .bp3-slider-label {
     box-shadow: none
-}
-
-.bp3-slider-handle.bp3-end,.bp3-slider-handle.bp3-start {
-    width: 8px
 }
 
 .bp3-slider-handle.bp3-start {
@@ -7982,7 +7845,6 @@ span.bp3-popover-target {
 }
 
 .bp3-slider.bp3-vertical .bp3-slider-handle.bp3-end,.bp3-slider.bp3-vertical .bp3-slider-handle.bp3-start {
-    height: 8px;
     margin-left: 0;
     width: 16px
 }
@@ -8034,7 +7896,6 @@ span.bp3-popover-target {
 .bp3-spinner .bp3-spinner-head {
     stroke: hsla(218,0%,40%,0.8);
     stroke: var(--progress-head-color);
-    stroke-linecap: round;
     transform-origin: center;
     transition: stroke-dashoffset .2s cubic-bezier(0.4,1,0.75,0.9);
     transition: stroke-dashoffset .2s var(--pt-transition-ease);
@@ -8143,8 +8004,6 @@ span.bp3-popover-target {
     text-overflow: ellipsis;
     white-space: nowrap;
     word-wrap: normal;
-    color: hsla(218,0%,0%,0.74);
-    color: var(--pt-text-color);
     cursor: pointer;
     flex: 0 0 auto;
     font-size: 14px;
@@ -8229,8 +8088,6 @@ span.bp3-popover-target {
 }
 
 .bp3-dark .bp3-tab {
-    color: hsla(218,0%,100%,0.96);
-    color: var(--pt-dark-text-color);
     color: hsla(218,0%,100%,0.60);
     color: var(--pt-dark-text-color-muted)
 }
@@ -8246,8 +8103,6 @@ span.bp3-popover-target {
 }
 
 .bp3-dark .bp3-tab:not([aria-disabled=true]):hover,.bp3-dark .bp3-tab[aria-selected=true] {
-    color: hsl(220,100%,64%);
-    color: var(--dark-tab-color-selected);
     color: hsla(218,0%,100%,0.96);
     color: var(--pt-dark-text-color)
 }
@@ -8893,22 +8748,16 @@ span.bp3-popover-target {
 }
 
 .bp3-tag-input.bp3-active.bp3-intent-success {
-    box-shadow: 0 0 0 1px hsla(138,67%,30%,1),0 0 0 3px hsla(138,67%,30%,.3),inset 0 1px 1px hsla(218,0%,0%,0.2);
-    box-shadow: 0 0 0 1px hsla(var(--pt-intent-success-hsl),1),0 0 0 3px hsla(var(--pt-intent-success-hsl),.3),var(--input-box-shadow-focus);
     box-shadow: inset 0 0 0 2px hsl(138,67%,30%);
     box-shadow: inset 0 0 0 2px var(--pt-intent-success)
 }
 
 .bp3-tag-input.bp3-active.bp3-intent-warning {
-    box-shadow: 0 0 0 1px hsla(30,100%,36%,1),0 0 0 3px hsla(30,100%,36%,.3),inset 0 1px 1px hsla(218,0%,0%,0.2);
-    box-shadow: 0 0 0 1px hsla(var(--pt-intent-warning-hsl),1),0 0 0 3px hsla(var(--pt-intent-warning-hsl),.3),var(--input-box-shadow-focus);
     box-shadow: inset 0 0 0 2px hsl(30,100%,36%);
     box-shadow: inset 0 0 0 2px var(--pt-intent-warning)
 }
 
 .bp3-tag-input.bp3-active.bp3-intent-danger {
-    box-shadow: 0 0 0 1px hsla(357,76%,49%,1),0 0 0 3px hsla(357,76%,49%,.3),inset 0 1px 1px hsla(218,0%,0%,0.2);
-    box-shadow: 0 0 0 1px hsla(var(--pt-intent-danger-hsl),1),0 0 0 3px hsla(var(--pt-intent-danger-hsl),.3),var(--input-box-shadow-focus);
     box-shadow: inset 0 0 0 2px hsl(357,76%,49%);
     box-shadow: inset 0 0 0 2px var(--pt-intent-danger)
 }
@@ -10094,10 +9943,7 @@ span.bp3-popover-target {
     background: var(--input-background-color);
     border-radius: 0px;
     border-radius: var(--pt-border-radius);
-    box-shadow: none;
-    box-shadow: var(--pt-input-box-shadow);
     display: inline-block;
-    height: 30px;
     line-height: 28px;
     vertical-align: middle;
     height: 32px;
@@ -10124,7 +9970,6 @@ span.bp3-popover-target {
     box-shadow: 0 0 0 0 hsla(var(--input-shadow-color-focus-hsl),0),0 0 0 0 hsla(var(--input-shadow-color-focus-hsl),0);
     color: hsla(218,0%,0%,0.74);
     color: var(--pt-text-color);
-    height: 28px;
     outline: 0;
     padding: 0;
     text-align: center;
@@ -10135,8 +9980,6 @@ span.bp3-popover-target {
 }
 
 .bp3-timepicker .bp3-timepicker-input:focus {
-    box-shadow: 0 0 0 1px hsla(205,100%,38%,1),0 0 0 3px hsla(205,100%,38%,.3);
-    box-shadow: 0 0 0 1px hsla(var(--input-shadow-color-focus-hsl),1),0 0 0 3px hsla(var(--input-shadow-color-focus-hsl),.3);
     box-shadow: inset 0 0 0 2px hsl(220,100%,53%);
     box-shadow: inset 0 0 0 2px var(--pt-intent-primary)
 }
@@ -10316,8 +10159,6 @@ span.bp3-popover-target {
 .bp3-dark .bp3-timepicker .bp3-timepicker-input-row {
     background: hsla(218,0%,100%,0.06);
     background: var(--dark-input-background-color);
-    box-shadow: none;
-    box-shadow: var(--pt-dark-input-box-shadow);
     box-shadow: inset 0 -1px 0 0 hsla(218,0%,100%,0.40);
     box-shadow: inset 0 -1px 0 0 var(--ibm-dark-input-border)
 }

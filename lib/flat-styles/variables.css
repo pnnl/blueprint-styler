@@ -512,18 +512,8 @@
 .bp3-dark {
 
 /*! ColorsHsl */
-	--gray1-hsl: var(--dark-gray1-hsl);
-	--gray2-hsl: var(--dark-gray2-hsl);
-	--gray3-hsl: var(--dark-gray3-hsl);
-	--gray4-hsl: var(--dark-gray4-hsl);
-	--gray5-hsl: var(--dark-gray5-hsl);
 
 /*! Colors */
-	--gray1: var(--dark-gray1);
-	--gray2: var(--dark-gray2);
-	--gray3: var(--dark-gray3);
-	--gray4: var(--dark-gray4);
-	--gray5: var(--dark-gray5);
 
 /*! IntentColors */
 	--pt-intent-primary-text-color-hsl: var(--pt-dark-intent-primary-text-color-hsl);
