@@ -25,13 +25,13 @@ import {
     DialogStep,
     Switch,
     Classes,
-    ButtonProps,
+    IButtonProps,
     RadioGroup,
     Radio,
 } from "@blueprintjs/core";
 import { Example, handleBooleanChange, handleStringChange, IExampleProps } from "@blueprintjs/docs-theme";
 
-import { IBlueprintExampleData } from "../../tags/types";
+import { IBlueprintExampleData } from "../../tags/reactExamples";
 
 export interface IMultistepDialogExampleState {
     autoFocus: boolean;
@@ -67,7 +67,7 @@ export class MultistepDialogExample extends React.PureComponent<
     private handleOutsideClickChange = handleBooleanChange(val => this.setState({ canOutsideClickClose: val }));
 
     public render() {
-        const finalButtonProps: Partial<ButtonProps> = {
+        const finalButtonProps: Partial<IButtonProps> = {
             intent: "primary",
             onClick: this.handleClose,
             text: "Close",

@@ -18,15 +18,15 @@ import moment from "moment";
 import * as React from "react";
 
 import { Radio, RadioGroup } from "@blueprintjs/core";
-import { DateFormatProps } from "@blueprintjs/datetime";
+import { IDateFormatProps } from "@blueprintjs/datetime";
 import { handleNumberChange } from "@blueprintjs/docs-theme";
 
 export interface IFormatSelectProps {
     /** Selected formatter. */
-    format: DateFormatProps;
+    format: IDateFormatProps;
 
     /** The callback to fire when a new formatter is chosen. */
-    onChange: (format: DateFormatProps) => void;
+    onChange: (format: IDateFormatProps) => void;
 }
 
 export class FormatSelect extends React.PureComponent<IFormatSelectProps> {
@@ -44,7 +44,7 @@ export class FormatSelect extends React.PureComponent<IFormatSelectProps> {
     }
 }
 
-export const FORMATS: DateFormatProps[] = [
+export const FORMATS: IDateFormatProps[] = [
     {
         formatDate: date => (date == null ? "" : date.toLocaleDateString()),
         parseDate: str => new Date(Date.parse(str)),
@@ -55,7 +55,7 @@ export const FORMATS: DateFormatProps[] = [
     momentFormatter("YYYY-MM-DD HH:mm:ss"),
 ];
 
-function momentFormatter(format: string): DateFormatProps {
+function momentFormatter(format: string): IDateFormatProps {
     return {
         formatDate: date => moment(date).format(format),
         parseDate: str => moment(str, format).toDate(),

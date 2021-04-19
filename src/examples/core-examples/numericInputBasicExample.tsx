@@ -19,8 +19,8 @@ import {
     H5,
     HTMLSelect,
     Intent,
-    NumericInputProps,
-    OptionProps,
+    INumericInputProps,
+    IOptionProps,
     Label,
     NumericInput,
     Position,
@@ -58,8 +58,8 @@ const BUTTON_POSITIONS = [
     { label: "Right", value: Position.RIGHT },
 ];
 
-export class NumericInputBasicExample extends React.PureComponent<IExampleProps, NumericInputProps> {
-    public state: NumericInputProps = {
+export class NumericInputBasicExample extends React.PureComponent<IExampleProps, INumericInputProps> {
+    public state: INumericInputProps = {
         allowNumericCharactersOnly: true,
         buttonPosition: "right",
         disabled: false,
@@ -82,7 +82,7 @@ export class NumericInputBasicExample extends React.PureComponent<IExampleProps,
 
     private handleIntentChange = handleValueChange((intent: Intent) => this.setState({ intent }));
 
-    private handleButtonPositionChange = handleValueChange((buttonPosition: NumericInputProps["buttonPosition"]) =>
+    private handleButtonPositionChange = handleValueChange((buttonPosition: INumericInputProps["buttonPosition"]) =>
         this.setState({ buttonPosition }),
     );
 
@@ -168,7 +168,7 @@ export class NumericInputBasicExample extends React.PureComponent<IExampleProps,
     private renderSelectMenu(
         label: string,
         value: number | string,
-        options: OptionProps[],
+        options: IOptionProps[],
         onChange: React.FormEventHandler,
     ) {
         return (

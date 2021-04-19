@@ -35,7 +35,7 @@ import {
 } from "@blueprintjs/core";
 import { Example, handleBooleanChange, handleValueChange, IExampleProps } from "@blueprintjs/docs-theme";
 
-import { IBlueprintExampleData } from "../../tags/types";
+import { IBlueprintExampleData } from "../../tags/reactExamples";
 
 type IToastDemo = IToastProps & { button: string };
 
