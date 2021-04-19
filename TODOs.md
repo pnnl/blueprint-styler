@@ -6,6 +6,7 @@
     - popover2
     - add vars
     - add examples?
+    - dark mirror with -dark-gray?
   - publish
     - version and name
 - fix the other styles
