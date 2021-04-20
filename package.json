@@ -15,12 +15,12 @@
     "/lib",
     "/src/styles"
   ],
-    "keywords": [
-      "palantir",
-      "blueprint",
-      "css",
-      "styles"
-    ],
+  "keywords": [
+    "palantir",
+    "blueprint",
+    "css",
+    "styles"
+  ],
   "scripts": {
     "start": "npm run dev",
     "bundle": "webpack --config ./webpack.config.js",
