@@ -50,7 +50,7 @@ export const allExamples: NestedComponentSets = [
         ['Tabs', [CoreExamples.TabsExample,]],
         ['Tag', [CoreExamples.TagExample,]],
         ['Text', [CoreExamples.TextExample,]],
-        ['Tree', [CoreExamples.TreeExample,]],
+        // ['Tree', [CoreExamples.TreeExample,]],
     ]],
 
     ['Form Controls', [

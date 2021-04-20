@@ -14,16 +14,17 @@
  * limitations under the License.
  */
 
-import { Icon, Intent, IProps, Tag } from "@blueprintjs/core";
-import { DateRange } from "@blueprintjs/datetime";
 import classNames from "classnames";
 import moment from "moment";
 import * as React from "react";
 
+import { Icon, Intent, IProps, Tag } from "@blueprintjs/core";
+import { DateRange } from "@blueprintjs/datetime";
+
 const FORMAT = "dddd, LL";
 const FORMAT_TIME = "dddd, LL LT";
 
-export const MomentDate: React.SFC<{ date: Date; format?: string; withTime?: boolean }> = ({
+export const MomentDate: React.FunctionComponent<{ date: Date; format?: string; withTime?: boolean }> = ({
     date,
     withTime = false,
     format = withTime ? FORMAT_TIME : FORMAT,
@@ -36,12 +37,9 @@ export const MomentDate: React.SFC<{ date: Date; format?: string; withTime?: boo
     }
 };
 
-export const MomentDateRange: React.SFC<{ range: DateRange; format?: string; withTime?: boolean } & IProps> = ({
-    className,
-    range: [start, end],
-    withTime = false,
-    format = withTime ? FORMAT_TIME : FORMAT,
-}) => (
+export const MomentDateRange: React.FunctionComponent<
+    { range: DateRange; format?: string; withTime?: boolean } & IProps
+> = ({ className, range: [start, end], withTime = false, format = withTime ? FORMAT_TIME : FORMAT }) => (
     <div className={classNames("docs-date-range", className)}>
         <MomentDate withTime={withTime} date={start} format={format} />
         <Icon icon="arrow-right" />

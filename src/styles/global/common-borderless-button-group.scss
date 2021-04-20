@@ -1,4 +1,4 @@
-$button-group-intent-divider: rgba(255,255,255,0.25) !default;
+$button-group-intent-divider: hslax(var(--white-hsl),0.25) !default;
 
 .#{$ns}-button-group{
 
@@ -6,11 +6,11 @@ $button-group-intent-divider: rgba(255,255,255,0.25) !default;
     .#{$ns}-button[class*=#{$ns}-intent-]{
       border: 0 solid $button-group-intent-divider;
       border-width: 0 1px;
-      >&:first-child,
+      &:first-child,
       .#{$ns}-popover-wrapper:first-child & {
         border-left: 0;
       }
-      >&:last-child,
+      &:last-child,
       .#{$ns}-popover-wrapper:last-child & {
           border-right: 0;
       }
@@ -21,11 +21,11 @@ $button-group-intent-divider: rgba(255,255,255,0.25) !default;
     .#{$ns}-button[class*=#{$ns}-intent-]{
       border: 0 solid $button-group-intent-divider;
       border-width: 1px 0;
-      >&:first-child,
+      &:first-child,
       .#{$ns}-popover-wrapper:first-child & {
         border-top: 0;
       }
-      >&:last-child,
+      &:last-child,
       .#{$ns}-popover-wrapper:last-child & {
         border-bottom: 0;
       }
@@ -38,8 +38,8 @@ $button-group-intent-divider: rgba(255,255,255,0.25) !default;
 /* // for reference
 .bp3-button-group {
   .bp3-button{
-    >&:not(:last-child),
-    >.bp3-popover-wrapper:not(:last-child) & {
+    &:not(:last-child),
+    .bp3-popover-wrapper:not(:last-child) & {
       border-bottom-right-radius: 0;
       border-top-right-radius: 0;
       margin-right: -1px;

@@ -1,0 +1,107 @@
+#{$root-selector}{
+
+/*! Components */
+
+--control-background-color: var(--button-background-color);
+--control-background-color-hover: var(--button-background-color-hover);
+--control-background-color-active: var(--button-background-color-active);
+--dark-control-background-color: var(--dark-button-background-color);
+--dark-control-background-color-hover: var(--dark-button-background-color-hover);
+--dark-control-background-color-active: var(--dark-button-background-color-active);
+
+--control-checked-background-color:             var(--pt-intent-primary);
+--control-checked-background-color-hover:       var(--pt-intent-primary-hover);
+--control-checked-background-color-active:      var(--pt-intent-primary-active);
+--control-checked-background-color-hsl:         var(--pt-intent-primary-hsl);
+--control-checked-background-color-hover-hsl:   var(--pt-intent-primary-hover-hsl);
+--control-checked-background-color-active-hsl:  var(--pt-intent-primary-active-hsl);
+
+// --control-indicator-size: var(--pt-icon-size-standard);
+// --control-indicator-size-large: var(--pt-icon-size-large);
+// --control-indicator-spacing: var(--pt-grid-size);
+
+// --switch-width: 1.75em;
+// --switch-indicator-margin: 2px;
+// --switch-indicator-size: calc(1em - (var(--switch-indicator-margin) * 2));
+
+// --switch-indicator-child-height: 1em;
+// --switch-indicator-child-outside-margin: 0.5em;
+// --switch-indicator-child-inside-margin: 1.2em;
+
+// --switch-indicator-text-font-size: 0.7em;
+
+--switch-background-color: hsla(var(--gray4-hsl), 0.5);
+--switch-background-color-hover: hsla(var(--gray2-hsl), 0.5);
+--switch-background-color-active: hsla(var(--gray1-hsl), 0.5);
+--switch-background-color-disabled: var(--button-background-color-disabled);
+--switch-checked-background-color: var(--control-checked-background-color);
+--switch-checked-background-color-hover: var(--control-checked-background-color-hover);
+--switch-checked-background-color-active: var(--control-checked-background-color-active);
+--switch-checked-background-color-disabled: hsla(var(--blue3-hsl), 0.5);
+
+--dark-switch-background-color: hsla(var(--black-hsl), 0.5);
+--dark-switch-background-color-hover: hsla(var(--black-hsl), 0.7);
+--dark-switch-background-color-active: hsla(var(--black-hsl), 0.9);
+--dark-switch-background-color-disabled: var(--dark-button-background-color-disabled);
+--dark-switch-checked-background-color: var(--control-checked-background-color);
+--dark-switch-checked-background-color-hover: var(--control-checked-background-color-hover);
+--dark-switch-checked-background-color-active: var(--control-checked-background-color-active);
+--dark-switch-checked-background-color-disabled: hsla(var(--blue1-hsl), 0.5);
+
+--switch-indicator-background-color: var(--pt-app-top-background-color);
+--switch-indicator-background-color-disabled: hsla(var(--white-hsl), 0.8);
+--dark-switch-indicator-background-color: var(--dark-gray5);
+--dark-switch-indicator-background-color-disabled: hsla(var(--black-hsl), 0.4);
+
+}
+
+$control-background-color: var(--control-background-color);
+$control-background-color-hover: var(--control-background-color-hover);
+$control-background-color-active: var(--control-background-color-active);
+$dark-control-background-color: var(--dark-control-background-color);
+$dark-control-background-color-hover: var(--dark-control-background-color-hover);
+$dark-control-background-color-active: var(--dark-control-background-color-active);
+
+$control-checked-background-color: var(--control-checked-background-color);
+$control-checked-background-color-hover: var(--control-checked-background-color-hover);
+$control-checked-background-color-active: var(--control-checked-background-color-active);
+$control-checked-background-color-hsl: var(--control-checked-background-color-hsl);
+$control-checked-background-color-hover-hsl: var(--control-checked-background-color-hover-hsl);
+$control-checked-background-color-active-hsl: var(--control-checked-background-color-active-hsl);
+
+// $control-indicator-size: var(--control-indicator-size);
+// $control-indicator-size-large: var(--control-indicator-size-large);
+// $control-indicator-spacing: var(--control-indicator-spacing);
+
+// $switch-width: var(--switch-width);
+// $switch-indicator-margin: var(--switch-indicator-margin);
+// $switch-indicator-size: var(--switch-indicator-size);
+
+// $switch-indicator-child-height: var(--switch-indicator-child-height);
+// $switch-indicator-child-outside-margin: var(--switch-indicator-child-outside-margin);
+// $switch-indicator-child-inside-margin: var(--switch-indicator-child-inside-margin);
+
+// $switch-indicator-text-font-size: var(--switch-indicator-text-font-size);
+
+$switch-background-color: var(--switch-background-color);
+$switch-background-color-hover: var(--switch-background-color-hover);
+$switch-background-color-active: var(--switch-background-color-active);
+$switch-background-color-disabled: var(--switch-background-color-disabled);
+$switch-checked-background-color: var(--switch-checked-background-color);
+$switch-checked-background-color-hover: var(--switch-checked-background-color-hover);
+$switch-checked-background-color-active: var(--switch-checked-background-color-active);
+$switch-checked-background-color-disabled: var(--switch-checked-background-color-disabled);
+
+$dark-switch-background-color: var(--dark-switch-background-color);
+$dark-switch-background-color-hover: var(--dark-switch-background-color-hover);
+$dark-switch-background-color-active: var(--dark-switch-background-color-active);
+$dark-switch-background-color-disabled: var(--dark-switch-background-color-disabled);
+$dark-switch-checked-background-color: var(--dark-switch-checked-background-color);
+$dark-switch-checked-background-color-hover: var(--dark-switch-checked-background-color-hover);
+$dark-switch-checked-background-color-active: var(--dark-switch-checked-background-color-active);
+$dark-switch-checked-background-color-disabled: var(--dark-switch-checked-background-color-disabled);
+
+$switch-indicator-background-color: var(--switch-indicator-background-color);
+$switch-indicator-background-color-disabled: var(--switch-indicator-background-color-disabled);
+$dark-switch-indicator-background-color: var(--dark-switch-indicator-background-color);
+$dark-switch-indicator-background-color-disabled: var(--dark-switch-indicator-background-color-disabled);

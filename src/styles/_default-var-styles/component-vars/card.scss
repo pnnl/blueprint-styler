@@ -1,0 +1,15 @@
+#{$root-selector}{
+
+/*! Components */
+
+// --card-padding: calc(var(--pt-grid-size) * 2);
+
+--card-background-color: var(--pt-app-top-background-color);
+--dark-card-background-color: var(--pt-dark-app-top-background-color);
+
+}
+
+// $card-padding: var(--card-padding);
+
+$card-background-color: var(--card-background-color);
+$dark-card-background-color: var(--dark-card-background-color);

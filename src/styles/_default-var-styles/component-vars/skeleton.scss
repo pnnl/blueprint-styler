@@ -1,0 +1,13 @@
+#{$root-selector}{
+
+/*! Components */
+
+// --skeleton-animation: calc(var(--pt-transition-duration) * 10) linear infinite alternate skeleton-glow;
+--skeleton-color-start: hsla(var(--light-gray1-hsl), 0.2);
+--skeleton-color-end: hsla(var(--gray1-hsl), 0.2);
+
+}
+
+// $skeleton-animation: var(--skeleton-animation);
+$skeleton-color-start: var(--skeleton-color-start);
+$skeleton-color-end: var(--skeleton-color-end);

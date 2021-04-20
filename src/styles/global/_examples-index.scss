@@ -1,5 +1,7 @@
 @import "~@blueprintjs/docs-theme/src/styles/_variables.scss";
 $attribute-modifier-color: inherit;
 $class-modifier-color: $attribute-modifier-color;
+$pt-border-radius-raw: 3px !default;
+$pt-border-radius: $pt-border-radius-raw;
 @import "~@blueprintjs/docs-theme/src/styles/examples";
 @import "../global/examples";

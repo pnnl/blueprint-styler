@@ -1,0 +1,49 @@
+#{$root-selector}{
+
+/*! Components */
+
+// --half-grid-size: calc(var(--pt-grid-size) / 2);
+
+// --menu-item-border-radius: calc(var(--pt-border-radius) - 1);
+
+// --menu-item-line-height-factor: 1.4;
+// --menu-item-line-height: calc(var(--pt-font-size) * var(--menu-item-line-height-factor));
+// --menu-item-line-height-large: calc(var(--pt-font-size-large) * var(--menu-item-line-height-factor));
+
+// --menu-min-width: calc(var(--pt-grid-size) * 18);
+// --menu-item-padding: calc((var(--pt-button-height) - var(--pt-icon-size-standard)) / 2);
+// --menu-item-padding-large: calc((var(--pt-button-height-large) - var(--pt-icon-size-large)) / 2);
+// --menu-item-padding-vertical: calc((var(--pt-button-height) - var(--menu-item-line-height)) / 2);
+// --menu-item-padding-vertical-large: calc((var(--pt-button-height-large) - var(--menu-item-line-height-large)) / 2);
+
+--menu-background-color: var(--pt-app-top-background-color);
+--dark-menu-background-color: var(--pt-dark-app-top-background-color);
+
+--menu-item-color-hover: var(--minimal-button-background-color-hover);
+--menu-item-color-active: var(--minimal-button-background-color-active);
+--dark-menu-item-color-hover: var(--dark-minimal-button-background-color-hover);
+--dark-menu-item-color-active: var(--dark-minimal-button-background-color-active);
+
+}
+
+// $half-grid-size: var(--half-grid-size);
+
+// $menu-item-border-radius: var(--menu-item-border-radius);
+
+// $menu-item-line-height-factor: var(--menu-item-line-height-factor);
+// $menu-item-line-height: var(--menu-item-line-height);
+// $menu-item-line-height-large: var(--menu-item-line-height-large);
+
+// $menu-min-width: var(--menu-min-width);
+// $menu-item-padding: var(--menu-item-padding);
+// $menu-item-padding-large: var(--menu-item-padding-large);
+// $menu-item-padding-vertical: var(--menu-item-padding-vertical);
+// $menu-item-padding-vertical-large: var(--menu-item-padding-vertical-large);
+
+$menu-background-color: var(--menu-background-color);
+$dark-menu-background-color: var(--dark-menu-background-color);
+
+$menu-item-color-hover: var(--menu-item-color-hover);
+$menu-item-color-active: var(--menu-item-color-active);
+$dark-menu-item-color-hover: var(--dark-menu-item-color-hover);
+$dark-menu-item-color-active: var(--dark-menu-item-color-active);
