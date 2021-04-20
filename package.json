@@ -1,8 +1,15 @@
 {
   "name": "blueprint-styler",
-  "version": "0.1.0",
-  "description": "Make custom blueprint css themes",
-  "private": true,
+  "version": "3.0.0",
+  "description": "Make custom blueprint.css styles",
+  "publishConfig": {
+    "registry": "https://npm.pnnl.gov/artifactory/api/npm/npm"
+  },
+  "main": "./dist/index.html",
+  "files": [
+    "/lib",
+    "/src/styles"
+  ],
   "scripts": {
     "start": "npm run dev",
     "bundle": "webpack --config ./webpack.config.js",
@@ -12,6 +19,7 @@
     "build:icons": "npm run generate-svg-icon-files",
     "build:dist": "cross-env NODE_ENV=production yarn bundle",
     "build:lib": "npm run gulp",
+    "deploy": "npm publish --registry https://npm.pnnl.gov/artifactory/api/npm/npm",
     "gulp": "gulp",
     "lint": "run-p lint:scss lint:es",
     "lint:scss": "sass-lint",
@@ -101,6 +109,5 @@
     "blueprint",
     "docs"
   ],
-  "author": "James Bradford",
-  "license": "Apache-2.0"
+  "author": "James Bradford"
 }
