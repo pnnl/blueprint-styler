@@ -34,6 +34,8 @@
 - Custom theme editor
   - vars editing
   - make a custom theme export it
+- js generator of color vars - [hsluv](https://www.hsluv.org/)!
+- themes are individual packages with font dependencies?
 
 
 ### Styles
@@ -41,18 +43,19 @@
   - dark theme scrollbars
   - math with calc()
   - grayscale transparency alt
-  - js generator of color vars
 - [IBM Carbon](https://www.carbondesignsystem.com/components/overview)
   - file input - focus, hover
   - dark theme button in ControlGroup input
   - card bg color needs to be darker
   - light theme text color needs softening
+  - `.bp3-datepicker .bp3-divider,.bp3-datepicker .DayPicker-Month { margin: default; // not 0; } `
 - Flat
   - dark theme
   - button component divider
-- Flat Mono - intent primary color is grayscale?
-- Gradient buttons?
+- Flat - Mono - intent primary color is grayscale?
+- Flat - Gradient buttons?
 - [ant.design](https://ant.design/components/overview/)
+  - update ant theme to use vars
   - dark theme
 - [Shopify Polaris](https://polaris.shopify.com/components/actions/button#navigation)
 - [Google Material](https://material.io/components)
