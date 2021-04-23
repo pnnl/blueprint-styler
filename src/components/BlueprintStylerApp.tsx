@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 // import './themes/blueprint-custom-theme.css';
 // import './components/components.css';
 import { FocusStyleManager, Classes, Button, AnchorButton, Collapse, HTMLSelect, IOptionProps, Icon } from '@blueprintjs/core';
@@ -13,7 +13,7 @@ FocusStyleManager.onlyShowFocusOnTabs();
 //#region Theme
 
 const DARK_THEME = Classes.DARK;
-const LIGHT_THEME = "";
+const LIGHT_THEME = "bp3-light"; // not a cannon blueprint class
 const THEME_LOCAL_STORAGE_KEY = "blueprint-docs-theme";
 
 /** Return the current theme className. */
@@ -56,6 +56,12 @@ function BlueprintStylerApp() {
     const [theme, setTheme] = useState(getTheme())
     const useDarkTheme = theme === DARK_THEME;
     const data: IBlueprintExampleData = { themeName: useDarkTheme ? DARK_THEME : LIGHT_THEME } // { themeName: getTheme() }
+
+    useEffect(() => {
+        const notThemeName = data.themeName === LIGHT_THEME ? DARK_THEME : LIGHT_THEME
+        document.documentElement.classList.add(data.themeName)
+        document.documentElement.classList.remove(notThemeName)
+    },[data])
 
     return (
         <div className={["app-wrapper", data.themeName].join(' ')}>
