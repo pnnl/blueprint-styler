@@ -40,15 +40,14 @@
 
 ### Styles
 - var(--theme) / General
-  - dark theme scrollbars
-  - math with calc()
+  - editable text focus is broken
   - grayscale transparency alt
+  - math with calc()
 - [IBM Carbon](https://www.carbondesignsystem.com/components/overview)
-  - file input - focus, hover
-  - dark theme button in ControlGroup input
-  - card bg color needs to be darker
-  - light theme text color needs softening
-  - `.bp3-datepicker .bp3-divider,.bp3-datepicker .DayPicker-Month { margin: default; // not 0; } `
+  - dark theme Text input with sub-button icon color
+  - tune colors ??
+  - card bg color needs to be darker ??
+  - light theme text color needs softening ??
 - Flat
   - dark theme
   - button component divider
