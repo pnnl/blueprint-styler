@@ -21,8 +21,12 @@
     margin: 0;
   }
 
+  $day-picker-month-margin: 4px;
   .DayPicker-Month{
-    margin: 0;
+    margin: 0 $day-picker-month-margin $day-picker-month-margin;
+  }
+  .DayPicker-Caption .#{$ns}-divider{
+    margin: 0 (-$day-picker-month-margin);
   }
 
   &.#{$ns}-daterangepicker .DayPicker:last-child{

@@ -546,7 +546,10 @@ a:hover {
 
 .bp3-dark {
     color: hsl(209,0%,97%);
-    color: var(--pt-dark-text-color)
+    color: var(--pt-dark-text-color);
+    scrollbar-color: hsla(209,0%,100%,0.3) hsl(209,0%,31%);
+    scrollbar-color: var(--pt-dark-text-color-disabled) var(--pt-dark-app-top-background-color);
+    color-scheme: dark
 }
 
 :focus {
@@ -4386,6 +4389,14 @@ a.bp3-button.bp3-disabled {
     background: var(--button-background-color-active-disabled)
 }
 
+.bp3-file-upload-input .💩💩💩,.bp3-file-upload-input:hover:after {
+    background-clip: padding-box;
+    background-color: hsl(209,0%,94%);
+    background-color: var(--button-background-color-hover);
+    box-shadow: inset 0 0 0 1px hsla(209,0%,9%,0.15);
+    box-shadow: var(--button-box-shadow)
+}
+
 .bp3-file-upload-input:active:after {
     background-color: hsl(209,0%,87%);
     background-color: var(--button-background-color-active);
@@ -4495,6 +4506,13 @@ a.bp3-button.bp3-disabled {
     background: var(--dark-progress-track-color);
     stroke: hsl(209,0%,63%);
     stroke: var(--dark-progress-head-color)
+}
+
+.bp3-dark .bp3-file-upload-input .💩💩💩,.bp3-dark .bp3-file-upload-input:hover:after {
+    background-color: hsl(209,0%,31%);
+    background-color: var(--dark-button-background-color-hover);
+    box-shadow: 0 0 0 1px hsla(209,0%,9%,0.4);
+    box-shadow: var(--dark-button-box-shadow)
 }
 
 .bp3-dark .bp3-file-upload-input:active:after {
@@ -9681,7 +9699,7 @@ span.bp3-popover-target {
 
 .bp3-datepicker .DayPicker-Day.DayPicker-Day--selected {
     background-color: hsl(209,90%,50%);
-    background-color: var(--blue3);
+    background-color: var(--pt-intent-primary);
     border-radius: 6px;
     border-radius: var(--pt-border-radius);
     color: hsl(209,0%,100%);
@@ -9689,8 +9707,8 @@ span.bp3-popover-target {
 }
 
 .bp3-datepicker .DayPicker-Day.DayPicker-Day--selected:hover {
-    background-color: hsl(209,83%,46%);
-    background-color: var(--blue2)
+    background-color: hsl(209,100%,54%);
+    background-color: var(--pt-intent-primary-hover)
 }
 
 .bp3-datepicker .DayPicker-Day.DayPicker-Day--disabled {
@@ -9797,12 +9815,12 @@ span.bp3-popover-target {
 
 .bp3-dark .bp3-datepicker .DayPicker-Day.DayPicker-Day--selected {
     background-color: hsl(209,90%,50%);
-    background-color: var(--blue3)
+    background-color: var(--pt-intent-primary)
 }
 
 .bp3-dark .bp3-datepicker .DayPicker-Day.DayPicker-Day--selected:hover {
     background-color: hsl(209,100%,54%);
-    background-color: var(--blue4)
+    background-color: var(--pt-intent-primary-hover)
 }
 
 .bp3-dark .bp3-datepicker .DayPicker-Day.DayPicker-Day--disabled {
@@ -12205,6 +12223,12 @@ label.bp3-label .bp3-popover2-target {
 .bp3-tooltip2-indicator {
     border-bottom: 1px dotted;
     cursor: help
+}
+
+:not(.bp3-dark) {
+    scrollbar-color: hsla(209,0%,9%,0.3) hsl(209,0%,100%);
+    scrollbar-color: var(--pt-text-color-disabled) var(--pt-app-top-background-color);
+    color-scheme: light
 }
 
 .bp3-button,a,a.bp3-button {

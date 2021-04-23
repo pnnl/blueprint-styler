@@ -34,25 +34,27 @@
 - Custom theme editor
   - vars editing
   - make a custom theme export it
+- js generator of color vars - [hsluv](https://www.hsluv.org/)!
+- themes are individual packages with font dependencies?
 
 
 ### Styles
 - var(--theme) / General
-  - dark theme scrollbars
-  - math with calc()
+  - editable text focus is broken
   - grayscale transparency alt
-  - js generator of color vars
+  - math with calc()
 - [IBM Carbon](https://www.carbondesignsystem.com/components/overview)
-  - file input - focus, hover
-  - dark theme button in ControlGroup input
-  - card bg color needs to be darker
-  - light theme text color needs softening
+  - dark theme Text input with sub-button icon color
+  - tune colors ??
+  - card bg color needs to be darker ??
+  - light theme text color needs softening ??
 - Flat
   - dark theme
   - button component divider
-- Flat Mono - intent primary color is grayscale?
-- Gradient buttons?
+- Flat - Mono - intent primary color is grayscale?
+- Flat - Gradient buttons?
 - [ant.design](https://ant.design/components/overview/)
+  - update ant theme to use vars
   - dark theme
 - [Shopify Polaris](https://polaris.shopify.com/components/actions/button#navigation)
 - [Google Material](https://material.io/components)
