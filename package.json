@@ -11,5 +11,16 @@
     "copy:scss": "copyfiles --all --verbose --up 1 -e './**/lib/**/*' -e './**/icons/**/*' -e './**/docs-theme/**/*' './node_modules/@blueprintjs/**/*.scss' './src/styles/_var-styles' && echo '> DONE copying scss'",
     "copy:examples": "copyfiles --all --verbose --up 5 '../blueprint/packages/docs-app/src/examples/**/*' './src' && echo '> DONE copying examples'",
     "copy": "npm run copy:scss && npm run copy:examples && echo '> DONE copying all files'"
+  },
+  "dependencies": {
+    "@blueprintjs/core": "^3.44.0",
+    "@blueprintjs/datetime": "^3.23.0",
+    "@blueprintjs/docs-theme": "^3.10.0",
+    "@blueprintjs/icons": "^3.26.0",
+    "@blueprintjs/popover2": "^0.6.0",
+    "@blueprintjs/select": "^3.16.0",
+    "@blueprintjs/table": "^3.8.29",
+    "@blueprintjs/timezone": "^3.9.0",
+    "copyfiles": "^2.4.1"
   }
 }
