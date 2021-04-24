@@ -46,6 +46,7 @@ a {
 
 abbr[title] {
     border-bottom: none;
+    text-decoration: underline;
     text-decoration: underline dotted
 }
 
@@ -59,6 +60,7 @@ code,kbd,samp {
 }
 
 small {
+    font-size: 80%;
     font-size: 12px
 }
 
@@ -2944,12 +2946,12 @@ a.bp3-button.bp3-disabled {
     color: var(--blue4)
 }
 
-.bp3-dialog-step-viewed .bp3-dialog-step-title {
+.bp3-dialog-step-viewed:not(.bp3-active) .bp3-dialog-step-title {
     color: hsl(204,23%,12%);
     color: var(--pt-text-color)
 }
 
-.bp3-dark .bp3-dialog-step-viewed .bp3-dialog-step-title {
+.bp3-dark .bp3-dialog-step-viewed:not(.bp3-active) .bp3-dialog-step-title {
     color: hsl(204,33%,97%);
     color: var(--pt-dark-text-color)
 }
@@ -4276,6 +4278,8 @@ a.bp3-button.bp3-disabled {
     border-radius: var(--pt-border-radius);
     box-shadow: 0 0 0 0 hsla(203,82%,41%,0),0 0 0 0 hsla(203,82%,41%,0),inset 0 0 0 1px hsla(204,24%,8%,0.15),inset 0 1px 1px hsla(204,24%,8%,0.2);
     box-shadow: 0 0 0 0 hsla(var(--input-shadow-color-focus-hsl),0),0 0 0 0 hsla(var(--input-shadow-color-focus-hsl),0),var(--pt-input-box-shadow);
+    color: hsl(204,23%,12%);
+    color: var(--input-color);
     font-size: 14px;
     font-weight: 400;
     height: 30px;
@@ -4429,6 +4433,8 @@ a.bp3-button.bp3-disabled {
     background: var(--dark-input-background-color);
     box-shadow: 0 0 0 0 hsla(203,82%,41%,0),0 0 0 0 hsla(203,82%,41%,0),0 0 0 0 hsla(203,82%,41%,0),inset 0 0 0 1px hsla(204,24%,8%,0.3),inset 0 1px 1px hsla(204,24%,8%,0.4);
     box-shadow: 0 0 0 0 hsla(var(--dark-input-shadow-color-focus-hsl),0),0 0 0 0 hsla(var(--dark-input-shadow-color-focus-hsl),0),0 0 0 0 hsla(var(--dark-input-shadow-color-focus-hsl),0),var(--pt-dark-input-box-shadow);
+    color: hsl(204,33%,97%);
+    color: var(--dark-input-color);
     color: hsla(204,0%,100%,0.3);
     color: var(--pt-dark-text-color-disabled)
 }
@@ -4936,6 +4942,12 @@ a.bp3-button.bp3-disabled {
 .bp3-input.bp3-active,.bp3-input:focus {
     box-shadow: 0 0 0 1px hsla(203,82%,41%,1),0 0 0 3px hsla(203,82%,41%,.3),inset 0 1px 1px hsla(204,24%,8%,0.2);
     box-shadow: 0 0 0 1px hsla(var(--input-shadow-color-focus-hsl),1),0 0 0 3px hsla(var(--input-shadow-color-focus-hsl),.3),var(--input-box-shadow-focus)
+}
+
+.bp3-input.bp3-round,.bp3-input[type=search] {
+    border-radius: 30px;
+    box-sizing: border-box;
+    padding-left: 10px
 }
 
 .bp3-input[readonly] {
@@ -6096,6 +6108,7 @@ table.bp3-html-table.bp3-interactive tbody tr:active td {
 }
 
 .bp3-icon:not(:empty):before {
+    content: ""!important;
     content: unset!important
 }
 
@@ -6269,6 +6282,10 @@ span.bp3-icon:empty:before {
 }
 
 .bp3-menu-item.bp3-disabled {
+    background-color: inherit;
+    color: hsla(204,24%,8%,0.3);
+    color: var(--pt-text-color-disabled);
+    cursor: not-allowed;
     background-color: inherit!important;
     color: hsla(204,24%,8%,0.3)!important;
     color: var(--pt-text-color-disabled)!important;
@@ -6288,6 +6305,8 @@ span.bp3-icon:empty:before {
 
 .bp3-dark .bp3-menu-item.bp3-disabled {
     background-color: inherit;
+    color: hsla(204,0%,100%,0.3);
+    color: var(--pt-dark-text-color-disabled);
     color: hsla(204,0%,100%,0.3)!important;
     color: var(--pt-dark-text-color-disabled)!important
 }
@@ -7643,6 +7662,8 @@ span.bp3-popover-target {
     background-color: var(--button-background-color);
     background-image: linear-gradient(180deg,hsla(204,0%,100%,0.8),hsla(204,0%,100%,0));
     background-image: var(--button-gradient);
+    box-shadow: inset 0 0 0 1px hsla(204,24%,8%,0.2),inset 0 1px 0 hsla(204,24%,8%,0.1);
+    box-shadow: var(--button-box-shadow);
     color: hsl(204,23%,12%);
     color: var(--pt-text-color);
     border-radius: 3px;
@@ -7689,6 +7710,8 @@ span.bp3-popover-target {
     background-clip: padding-box;
     background-color: hsl(204,33%,94%);
     background-color: var(--button-background-color-hover);
+    box-shadow: inset 0 0 0 1px hsla(204,24%,8%,0.2),inset 0 1px 0 hsla(204,24%,8%,0.1);
+    box-shadow: var(--button-box-shadow);
     box-shadow: 0 0 0 1px hsla(204,24%,8%,0.2),0 1px 1px hsla(204,24%,8%,0.2);
     box-shadow: var(--button-box-shadow-overlay);
     cursor: grab;
@@ -7699,6 +7722,8 @@ span.bp3-popover-target {
     background-color: hsl(204,26%,88%);
     background-color: var(--button-background-color-active);
     background-image: none;
+    box-shadow: inset 0 0 0 1px hsla(204,24%,8%,0.2),inset 0 1px 2px hsla(204,24%,8%,0.2);
+    box-shadow: var(--button-box-shadow-active);
     box-shadow: 0 0 0 1px hsla(204,24%,8%,0.2),inset 0 1px 1px hsla(204,24%,8%,0.1);
     box-shadow: var(--button-box-shadow-overlay-active);
     cursor: grabbing

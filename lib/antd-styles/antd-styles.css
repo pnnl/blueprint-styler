@@ -2458,11 +2458,11 @@ a.bp3-button.bp3-disabled {
     color: #40a9ff
 }
 
-.bp3-dialog-step-viewed .bp3-dialog-step-title {
+.bp3-dialog-step-viewed:not(.bp3-active) .bp3-dialog-step-title {
     color: rgba(0,0,0,.65)
 }
 
-.bp3-dark .bp3-dialog-step-viewed .bp3-dialog-step-title {
+.bp3-dark .bp3-dialog-step-viewed:not(.bp3-active) .bp3-dialog-step-title {
     color: hsla(0,0%,100%,.85)
 }
 

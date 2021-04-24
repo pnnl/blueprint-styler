@@ -2937,12 +2937,12 @@ a.bp3-button.bp3-disabled {
     color: var(--blue4)
 }
 
-.bp3-dialog-step-viewed .bp3-dialog-step-title {
+.bp3-dialog-step-viewed:not(.bp3-active) .bp3-dialog-step-title {
     color: hsla(218,0%,0%,0.74);
     color: var(--pt-text-color)
 }
 
-.bp3-dark .bp3-dialog-step-viewed .bp3-dialog-step-title {
+.bp3-dark .bp3-dialog-step-viewed:not(.bp3-active) .bp3-dialog-step-title {
     color: hsla(218,0%,100%,0.96);
     color: var(--pt-dark-text-color)
 }
