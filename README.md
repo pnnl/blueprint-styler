@@ -1,3 +1,5 @@
+<img alt="blueprint-styler logo" src="./src/assets/logo.svg" width="200px"/>
+
 # Blueprint Styler
 
 This project is meant to help create custom global styles for [Blueprint js Components](https://blueprintjs.com/docs/)

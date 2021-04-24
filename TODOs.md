@@ -1,23 +1,9 @@
 # TODO:
 
-### var(--theme) baseline
-- build
-  - publish
-    - crete correct branches
-    - version and name
-- fix the other styles
-  - ant
-
-### General
-- Generate new style: `$ npm run new-style <style-name>`
-- Publish: `$ npm run publish <style-name>` publish a lib to npm under `@blueprint-style/<style-name>`
-  - update versioning
-- directions for development
-- switch icon libraries
-- update dev examples using similar copy process
-
 ### App tool
+- update readmes
 - switch to create-react-app
+  - repair examples?
 - separate different packages on build
 - sections:
   - for each theme: add a readme to each project - default styles is project explainer
@@ -36,13 +22,19 @@
   - make a custom theme export it
 - js generator of color vars - [hsluv](https://www.hsluv.org/)!
 - themes are individual packages with font dependencies?
-
+- Generate new style: `$ npm run new-style <style-name>`
+- Publish: `$ npm run publish <style-name>` publish a lib to npm under `@blueprint-style/<style-name>`
+  - update versioning
+- directions for development
 
 ### Styles
 - var(--theme) / General
   - editable text focus is broken
   - grayscale transparency alt
   - math with calc()
+- [ant.design](https://ant.design/components/overview/)
+  - update ant theme to use vars
+  - dark theme
 - [IBM Carbon](https://www.carbondesignsystem.com/components/overview)
   - dark theme Text input with sub-button icon color
   - tune colors ??
@@ -53,9 +45,6 @@
   - button component divider
 - Flat - Mono - intent primary color is grayscale?
 - Flat - Gradient buttons?
-- [ant.design](https://ant.design/components/overview/)
-  - update ant theme to use vars
-  - dark theme
 - [Shopify Polaris](https://polaris.shopify.com/components/actions/button#navigation)
 - [Google Material](https://material.io/components)
 - [Adobe Spectrum](https://spectrum.adobe.com/)
@@ -71,3 +60,4 @@
 
 ### Extras
 - [postcss-remove-declaration](https://www.npmjs.com/package/postcss-remove-declaration/v/1.0.0)
+- switch icon libraries?
