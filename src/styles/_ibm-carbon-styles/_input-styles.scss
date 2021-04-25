@@ -6,12 +6,18 @@
   }
 
   // LIGHT & DARK are the same
-  &:hover{
-    box-shadow: inset 0 -1px 0 0 $pt-intent-primary;
+  .#{$ns}-dark &, & {
+    &:hover{
+      box-shadow: inset 0 -1px 0 0 $pt-intent-primary;
+    }
+    &:focus {
+      box-shadow: inset 0 0 0 2px $pt-intent-primary;
+    }
   }
 
-  &:focus {
-    box-shadow: inset 0 0 0 2px $pt-intent-primary;
+  // Delete dark theme input focus
+  .#{$ns}-dark &:focus {
+    box-shadow: null;
   }
 
   @each $intent, $color in $pt-intent-colors {

@@ -19,9 +19,9 @@
   Consolas,
   monospace;
 
---pt-input-box-shadow: none;
+--pt-input-box-shadow: 0 0 transparent;
 
---pt-dark-input-box-shadow: none;
+--pt-dark-input-box-shadow: 0 0 transparent;
 
 --pt-border-radius: 0px;
 
@@ -42,8 +42,8 @@ $pt-input-height-small: $pt-grid-size * 2.4;
 $pt-input-height: $pt-grid-size * 3.2;
 $pt-input-height-large: $pt-grid-size * 4;
 
-$pt-input-box-shadow: none;
+$pt-input-box-shadow: 0 0 transparent;
 
-$pt-dark-input-box-shadow: none;
+$pt-dark-input-box-shadow: 0 0 transparent;
 
 $tab-indicator-width: 1px;
