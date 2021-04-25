@@ -4091,7 +4091,7 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-dark .bp3-control.bp3-switch input:checked:disabled~.bp3-control-indicator {
-    background: hsla(209,83%,38%,0.5);
+    background: hsla(209,90%,50%,0.5);
     background: var(--dark-switch-checked-background-color-disabled)
 }
 

@@ -301,11 +301,11 @@
 	--pt-dark-elevation-shadow-4: 0 0 0 1px hsla(var(--pt-dark-shadow-color-hsl),var(--pt-dark-border-shadow-opacity)),0 4px 8px hsla(var(--pt-dark-shadow-color-hsl),var(--pt-dark-drop-shadow-opacity)),0 18px 46px 6px hsla(var(--pt-dark-shadow-color-hsl),var(--pt-dark-drop-shadow-opacity));
 	--pt-transition-ease: cubic-bezier(0.4,1,0.75,0.9);
 	--pt-transition-ease-bounce: cubic-bezier(0.54,1.12,0.38,1.11);
-	--pt-input-box-shadow: none;
+	--pt-input-box-shadow: 0 0 transparent;
 	--pt-dialog-box-shadow: var(--pt-elevation-shadow-4);
 	--pt-popover-box-shadow: var(--pt-elevation-shadow-3);
 	--pt-tooltip-box-shadow: var(--pt-popover-box-shadow);
-	--pt-dark-input-box-shadow: none;
+	--pt-dark-input-box-shadow: 0 0 transparent;
 	--pt-dark-dialog-box-shadow: var(--pt-dark-elevation-shadow-4);
 	--pt-dark-popover-box-shadow: var(--pt-dark-elevation-shadow-3);
 	--pt-dark-tooltip-box-shadow: var(--pt-dark-popover-box-shadow);
@@ -363,14 +363,14 @@
 	--input-background-color: var(--black-trans-light-gray5);
 	--input-background-color-disabled: var(--black-trans-light-gray5);
 	--input-shadow-color-focus: var(--pt-intent-primary);
-	--input-shadow-color-focus-hsl: var(--blue3-hsl);
+	--input-shadow-color-focus-hsl: var(--pt-intent-primary-hsl);
 	--dark-input-color: var(--pt-dark-text-color);
 	--dark-input-color-disabled: var(--dark-button-color-disabled);
 	--dark-input-placeholder-color: var(--pt-dark-text-color-disabled);
 	--dark-input-background-color: var(--white-trans-dark-gray1);
 	--dark-input-background-color-disabled: var(--white-trans-dark-gray1);
 	--dark-input-shadow-color-focus: var(--pt-intent-primary);
-	--dark-input-shadow-color-focus-hsl: var(--blue3-hsl);
+	--dark-input-shadow-color-focus-hsl: var(--pt-intent-primary-hsl);
 	--input-box-shadow-focus: inset 0 1px 1px hsla(var(--pt-shadow-color-hsl),var(--pt-drop-shadow-opacity));
 	--control-background-color: var(--button-background-color);
 	--control-background-color-hover: var(--button-background-color-hover);
@@ -391,7 +391,7 @@
 	--switch-checked-background-color: var(--control-checked-background-color);
 	--switch-checked-background-color-hover: var(--control-checked-background-color-hover);
 	--switch-checked-background-color-active: var(--control-checked-background-color-active);
-	--switch-checked-background-color-disabled: hsla(var(--blue3-hsl),0.5);
+	--switch-checked-background-color-disabled: hsla(var(--control-checked-background-color-hsl),0.5);
 	--dark-switch-background-color: hsla(var(--black-hsl),0.5);
 	--dark-switch-background-color-hover: hsla(var(--black-hsl),0.7);
 	--dark-switch-background-color-active: hsla(var(--black-hsl),0.9);
@@ -399,7 +399,7 @@
 	--dark-switch-checked-background-color: var(--control-checked-background-color);
 	--dark-switch-checked-background-color-hover: var(--control-checked-background-color-hover);
 	--dark-switch-checked-background-color-active: var(--control-checked-background-color-active);
-	--dark-switch-checked-background-color-disabled: hsla(var(--blue1-hsl),0.5);
+	--dark-switch-checked-background-color-disabled: hsla(var(--control-checked-background-color-hsl),0.5);
 	--switch-indicator-background-color: var(--pt-app-top-background-color);
 	--switch-indicator-background-color-disabled: hsla(var(--white-hsl),0.8);
 	--dark-switch-indicator-background-color: var(--dark-gray5);
