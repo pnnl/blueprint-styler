@@ -29,6 +29,7 @@
 
 ### Styles
 - var(--theme) / General
+  - include sizes in lib/variables output
   - editable text focus is broken
   - grayscale transparency alt
   - math with calc()
