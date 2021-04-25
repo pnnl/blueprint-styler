@@ -70,7 +70,7 @@
 --pt-dark-drop-shadow-opacity:   0.4; /* $pt-drop-shadow-opacity * 2;*/
 
 --pt-shadow-color-hsl: var(--black-hsl);
---pt-dark-shadow-color-hsl: var(--pt-shadow-color-hsl);
+--pt-dark-shadow-color-hsl: var(--black-hsl);
 
 /* Elevations */
 /* all shadow lists must be the same length to avoid flicker in transitions. */
@@ -96,7 +96,7 @@
   0 18px 46px 6px hsla(var(--pt-shadow-color-hsl), var(--pt-drop-shadow-opacity));
 
 --pt-dark-elevation-shadow-0:
-  0 0 0 1px var(--pt-dark-shadow-color-hsl),
+  0 0 0 1px var(--pt-dark-divider-black),
   0 0 0 hsla(var(--pt-dark-shadow-color-hsl), 0),
   0 0 0 hsla(var(--pt-dark-shadow-color-hsl), 0);
 --pt-dark-elevation-shadow-1:

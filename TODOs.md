@@ -2,6 +2,7 @@
 
 ### App tool
 - update readmes
+  - a dark color cannot link to its light counterpart or there will be a circular dependency
 - switch to create-react-app
   - repair examples?
 - separate different packages on build
