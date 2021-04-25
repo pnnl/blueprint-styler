@@ -13,7 +13,7 @@
 --input-background-color: var(--pt-app-top-background-color);
 --input-background-color-disabled: hsla(var(--light-gray1-hsl), 0.5);
 --input-shadow-color-focus: var(--pt-intent-primary);
---input-shadow-color-focus-hsl: var(--blue3-hsl);
+--input-shadow-color-focus-hsl: var(--pt-intent-primary-hsl);
 
 --dark-input-color: var(--pt-dark-text-color);
 --dark-input-color-disabled: var(--dark-button-color-disabled);
@@ -21,7 +21,7 @@
 --dark-input-background-color: hsla(var(--black-hsl), 0.3);
 --dark-input-background-color-disabled: hsla(var(--dark-gray5-hsl), 0.5);
 --dark-input-shadow-color-focus: var(--pt-intent-primary);
---dark-input-shadow-color-focus-hsl: var(--blue3-hsl);
+--dark-input-shadow-color-focus-hsl: var(--pt-intent-primary-hsl);
 
 // --control-indicator-size: var(--pt-icon-size-standard);
 // --control-indicator-size-large: var(--pt-icon-size-large);

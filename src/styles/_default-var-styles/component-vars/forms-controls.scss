@@ -37,7 +37,7 @@
 --switch-checked-background-color: var(--control-checked-background-color);
 --switch-checked-background-color-hover: var(--control-checked-background-color-hover);
 --switch-checked-background-color-active: var(--control-checked-background-color-active);
---switch-checked-background-color-disabled: hsla(var(--blue3-hsl), 0.5);
+--switch-checked-background-color-disabled: hsla(var(--control-checked-background-color-hsl), 0.5);
 
 --dark-switch-background-color: hsla(var(--black-hsl), 0.5);
 --dark-switch-background-color-hover: hsla(var(--black-hsl), 0.7);
@@ -46,7 +46,7 @@
 --dark-switch-checked-background-color: var(--control-checked-background-color);
 --dark-switch-checked-background-color-hover: var(--control-checked-background-color-hover);
 --dark-switch-checked-background-color-active: var(--control-checked-background-color-active);
---dark-switch-checked-background-color-disabled: hsla(var(--blue1-hsl), 0.5);
+--dark-switch-checked-background-color-disabled: hsla(var(--control-checked-background-color-hsl), 0.5);
 
 --switch-indicator-background-color: var(--pt-app-top-background-color);
 --switch-indicator-background-color-disabled: hsla(var(--white-hsl), 0.8);
