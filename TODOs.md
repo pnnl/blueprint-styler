@@ -39,6 +39,7 @@
   - dark theme
 - [IBM Carbon](https://www.carbondesignsystem.com/components/overview)
   - `<Callout/>`, `<Toast/>`, `<Alert/>`? more like [Carbon Notification](https://www.carbondesignsystem.com/components/notification/style)
+  - button minimal text blue is too light
   - dark theme Text input with sub-button icon color
   - tune colors ??
   - card bg color needs to be darker ??
