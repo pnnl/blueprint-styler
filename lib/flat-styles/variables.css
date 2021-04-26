@@ -287,13 +287,13 @@
 	--pt-dark-border-shadow-opacity: 0.2;
 	--pt-dark-drop-shadow-opacity: 0.4;
 	--pt-shadow-color-hsl: var(--black-hsl);
-	--pt-dark-shadow-color-hsl: var(--pt-shadow-color-hsl);
+	--pt-dark-shadow-color-hsl: var(--black-hsl);
 	--pt-elevation-shadow-0: 0 0 0 1px var(--pt-divider-black),0 0 0 hsla(var(--pt-shadow-color-hsl),0),0 0 0 hsla(var(--pt-shadow-color-hsl),0);
 	--pt-elevation-shadow-1: 0 0 0 1px hsla(var(--pt-shadow-color-hsl),var(--pt-border-shadow-opacity)),0 0 0 hsla(var(--pt-shadow-color-hsl),0),0 1px 1px hsla(var(--pt-shadow-color-hsl),var(--pt-drop-shadow-opacity));
 	--pt-elevation-shadow-2: 0 0 0 1px hsla(var(--pt-shadow-color-hsl),var(--pt-border-shadow-opacity)),0 1px 1px hsla(var(--pt-shadow-color-hsl),var(--pt-drop-shadow-opacity)),0 2px 6px hsla(var(--pt-shadow-color-hsl),var(--pt-drop-shadow-opacity));
 	--pt-elevation-shadow-3: 0 0 0 1px hsla(var(--pt-shadow-color-hsl),var(--pt-border-shadow-opacity)),0 2px 4px hsla(var(--pt-shadow-color-hsl),var(--pt-drop-shadow-opacity)),0 8px 24px hsla(var(--pt-shadow-color-hsl),var(--pt-drop-shadow-opacity));
 	--pt-elevation-shadow-4: 0 0 0 1px hsla(var(--pt-shadow-color-hsl),var(--pt-border-shadow-opacity)),0 4px 8px hsla(var(--pt-shadow-color-hsl),var(--pt-drop-shadow-opacity)),0 18px 46px 6px hsla(var(--pt-shadow-color-hsl),var(--pt-drop-shadow-opacity));
-	--pt-dark-elevation-shadow-0: 0 0 0 1px var(--pt-dark-shadow-color-hsl),0 0 0 hsla(var(--pt-dark-shadow-color-hsl),0),0 0 0 hsla(var(--pt-dark-shadow-color-hsl),0);
+	--pt-dark-elevation-shadow-0: 0 0 0 1px var(--pt-dark-divider-black),0 0 0 hsla(var(--pt-dark-shadow-color-hsl),0),0 0 0 hsla(var(--pt-dark-shadow-color-hsl),0);
 	--pt-dark-elevation-shadow-1: 0 0 0 1px hsla(var(--pt-dark-shadow-color-hsl),var(--pt-dark-border-shadow-opacity)),0 0 0 hsla(var(--pt-dark-shadow-color-hsl),0),0 1px 1px hsla(var(--pt-dark-shadow-color-hsl),var(--pt-dark-drop-shadow-opacity));
 	--pt-dark-elevation-shadow-2: 0 0 0 1px hsla(var(--pt-dark-shadow-color-hsl),var(--pt-dark-border-shadow-opacity)),0 1px 1px hsla(var(--pt-dark-shadow-color-hsl),var(--pt-dark-drop-shadow-opacity)),0 2px 6px hsla(var(--pt-dark-shadow-color-hsl),var(--pt-dark-drop-shadow-opacity));
 	--pt-dark-elevation-shadow-3: 0 0 0 1px hsla(var(--pt-dark-shadow-color-hsl),var(--pt-dark-border-shadow-opacity)),0 2px 4px hsla(var(--pt-dark-shadow-color-hsl),var(--pt-dark-drop-shadow-opacity)),0 8px 24px hsla(var(--pt-dark-shadow-color-hsl),var(--pt-dark-drop-shadow-opacity));
