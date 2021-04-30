@@ -1,5 +1,5 @@
 
-export const Any = {
+export const ColorsHsl = {
   GrayscaleHue: "var(--grayscale-hue)",
   BlackHsl: "var(--black-hsl)",
   DarkGray1Hsl: "var(--dark-gray1-hsl)",
@@ -101,7 +101,10 @@ export const Any = {
   Sepia2Hsl: "var(--sepia2-hsl)",
   Sepia3Hsl: "var(--sepia3-hsl)",
   Sepia4Hsl: "var(--sepia4-hsl)",
-  Sepia5Hsl: "var(--sepia5-hsl)",
+  Sepia5Hsl: "var(--sepia5-hsl)"
+};
+
+export const Colors = {
   Black: "var(--black)",
   DarkGray1: "var(--dark-gray1)",
   DarkGray2: "var(--dark-gray2)",
@@ -188,7 +191,10 @@ export const Any = {
   Sepia2: "var(--sepia2)",
   Sepia3: "var(--sepia3)",
   Sepia4: "var(--sepia4)",
-  Sepia5: "var(--sepia5)",
+  Sepia5: "var(--sepia5)"
+};
+
+export const IntentColors = {
   PtIntentPrimaryHue: "var(--pt-intent-primary-hue)",
   PtIntentPrimaryHsl: "var(--pt-intent-primary-hsl)",
   PtIntentPrimaryHoverHsl: "var(--pt-intent-primary-hover-hsl)",
@@ -232,7 +238,10 @@ export const Any = {
   PtIntentDangerHover: "var(--pt-intent-danger-hover)",
   PtIntentDangerActive: "var(--pt-intent-danger-active)",
   PtIntentDangerTextColor: "var(--pt-intent-danger-text-color)",
-  PtDarkIntentDangerTextColor: "var(--pt-dark-intent-danger-text-color)",
+  PtDarkIntentDangerTextColor: "var(--pt-dark-intent-danger-text-color)"
+};
+
+export const LayoutColors = {
   PtAppBackgroundColor: "var(--pt-app-background-color)",
   PtDarkAppBackgroundColor: "var(--pt-dark-app-background-color)",
   PtAppTopBackgroundColor: "var(--pt-app-top-background-color)",
@@ -243,7 +252,10 @@ export const Any = {
   PtDarkDividerBlack: "var(--pt-dark-divider-black)",
   PtDarkDividerWhite: "var(--pt-dark-divider-white)",
   PtOutlineColor: "var(--pt-outline-color)",
-  PtDisabledOpacity: "var(--pt-disabled-opacity)",
+  PtDisabledOpacity: "var(--pt-disabled-opacity)"
+};
+
+export const TextColors = {
   PtTextColor: "var(--pt-text-color)",
   PtTextColorMuted: "var(--pt-text-color-muted)",
   PtTextColorDisabled: "var(--pt-text-color-disabled)",
@@ -256,7 +268,10 @@ export const Any = {
   PtDarkLinkColor: "var(--pt-dark-link-color)",
   PtTextSelectionColor: "var(--pt-text-selection-color)",
   PtCodeTextColor: "var(--pt-code-text-color)",
-  PtDarkCodeTextColor: "var(--pt-dark-code-text-color)",
+  PtDarkCodeTextColor: "var(--pt-dark-code-text-color)"
+};
+
+export const IconColors = {
   PtIconColor: "var(--pt-icon-color)",
   PtIconColorHover: "var(--pt-icon-color-hover)",
   PtIconColorDisabled: "var(--pt-icon-color-disabled)",
@@ -264,7 +279,10 @@ export const Any = {
   PtDarkIconColor: "var(--pt-dark-icon-color)",
   PtDarkIconColorHover: "var(--pt-dark-icon-color-hover)",
   PtDarkIconColorDisabled: "var(--pt-dark-icon-color-disabled)",
-  PtDarkIconColorSelected: "var(--pt-dark-icon-color-selected)",
+  PtDarkIconColorSelected: "var(--pt-dark-icon-color-selected)"
+};
+
+export const Variables = {
   PtFontFamily: "var(--pt-font-family)",
   PtFontFamilyMonospace: "var(--pt-font-family-monospace)",
   PtBorderRadius: "var(--pt-border-radius)",
@@ -295,7 +313,10 @@ export const Any = {
   PtDarkInputBoxShadow: "var(--pt-dark-input-box-shadow)",
   PtDarkDialogBoxShadow: "var(--pt-dark-dialog-box-shadow)",
   PtDarkPopoverBoxShadow: "var(--pt-dark-popover-box-shadow)",
-  PtDarkTooltipBoxShadow: "var(--pt-dark-tooltip-box-shadow)",
+  PtDarkTooltipBoxShadow: "var(--pt-dark-tooltip-box-shadow)"
+};
+
+export const Components = {
   ButtonBorderWidth: "var(--button-border-width)",
   ButtonBoxShadow: "var(--button-box-shadow)",
   ButtonBoxShadowActive: "var(--button-box-shadow-active)",
@@ -435,7 +456,10 @@ export const Any = {
   TooltipBackgroundColor: "var(--tooltip-background-color)",
   TooltipTextColor: "var(--tooltip-text-color)",
   DarkTooltipBackgroundColor: "var(--dark-tooltip-background-color)",
-  DarkTooltipTextColor: "var(--dark-tooltip-text-color)",
+  DarkTooltipTextColor: "var(--dark-tooltip-text-color)"
+};
+
+export const Datetime = {
   DatepickerBackgroundColor: "var(--datepicker-background-color)",
   DatepickerDayBackgroundColorHover: "var(--datepicker-day-background-color-hover)",
   DatepickerDayBackgroundColorActive: "var(--datepicker-day-background-color-active)",
@@ -473,6 +497,7 @@ export const Table = {
   HeaderSelectedBackgroundColor: "var(--header-selected-background-color)",
   HeaderBackgroundColorHsl: "var(--header-background-color-hsl)",
   HeaderHoverBackgroundColorHsl: "var(--header-hover-background-color-hsl)",
+  HeaderSelectedBackgroundColorHsl: "var(--header-selected-background-color-hsl)",
   HeaderSelectedHoverBackgroundColorHsl: "var(--header-selected-hover-background-color-hsl)",
   ColumnHeaderTextColorHsl: "var(--column-header-text-color-hsl)",
   RowHeaderTextColorHsl: "var(--row-header-text-color-hsl)",
@@ -482,7 +507,6 @@ export const Table = {
   DarkHeaderSelectedHoverBackgroundColorHsl: "var(--dark-header-selected-hover-background-color-hsl)",
   DarkColumnHeaderTextColorHsl: "var(--dark-column-header-text-color-hsl)",
   DarkRowHeaderTextColorHsl: "var(--dark-row-header-text-color-hsl)",
-  HeaderSelectedBackgroundColorHsl: "var(--header-selected-background-color-hsl)",
   ResizeHandleColor: "var(--resize-handle-color)",
   ResizeHandleDraggingColor: "var(--resize-handle-dragging-color)",
   RegionDefaultColor: "var(--region-default-color)",

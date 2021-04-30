@@ -1,5 +1,5 @@
 
-/*! Any */
+/*! ColorsHsl */
 $grayscale-hue: var(--grayscale-hue);
 $black-hsl: var(--black-hsl);
 $dark-gray1-hsl: var(--dark-gray1-hsl);
@@ -102,6 +102,8 @@ $sepia2-hsl: var(--sepia2-hsl);
 $sepia3-hsl: var(--sepia3-hsl);
 $sepia4-hsl: var(--sepia4-hsl);
 $sepia5-hsl: var(--sepia5-hsl);
+
+/*! Colors */
 $black: var(--black);
 $dark-gray1: var(--dark-gray1);
 $dark-gray2: var(--dark-gray2);
@@ -189,6 +191,8 @@ $sepia2: var(--sepia2);
 $sepia3: var(--sepia3);
 $sepia4: var(--sepia4);
 $sepia5: var(--sepia5);
+
+/*! IntentColors */
 $pt-intent-primary-hue: var(--pt-intent-primary-hue);
 $pt-intent-primary-hsl: var(--pt-intent-primary-hsl);
 $pt-intent-primary-hover-hsl: var(--pt-intent-primary-hover-hsl);
@@ -233,6 +237,8 @@ $pt-intent-danger-hover: var(--pt-intent-danger-hover);
 $pt-intent-danger-active: var(--pt-intent-danger-active);
 $pt-intent-danger-text-color: var(--pt-intent-danger-text-color);
 $pt-dark-intent-danger-text-color: var(--pt-dark-intent-danger-text-color);
+
+/*! LayoutColors */
 $pt-app-background-color: var(--pt-app-background-color);
 $pt-dark-app-background-color: var(--pt-dark-app-background-color);
 $pt-app-top-background-color: var(--pt-app-top-background-color);
@@ -244,6 +250,8 @@ $pt-dark-divider-black: var(--pt-dark-divider-black);
 $pt-dark-divider-white: var(--pt-dark-divider-white);
 $pt-outline-color: var(--pt-outline-color);
 $pt-disabled-opacity: var(--pt-disabled-opacity);
+
+/*! TextColors */
 $pt-text-color: var(--pt-text-color);
 $pt-text-color-muted: var(--pt-text-color-muted);
 $pt-text-color-disabled: var(--pt-text-color-disabled);
@@ -257,6 +265,8 @@ $pt-dark-link-color: var(--pt-dark-link-color);
 $pt-text-selection-color: var(--pt-text-selection-color);
 $pt-code-text-color: var(--pt-code-text-color);
 $pt-dark-code-text-color: var(--pt-dark-code-text-color);
+
+/*! IconColors */
 $pt-icon-color: var(--pt-icon-color);
 $pt-icon-color-hover: var(--pt-icon-color-hover);
 $pt-icon-color-disabled: var(--pt-icon-color-disabled);
@@ -265,6 +275,8 @@ $pt-dark-icon-color: var(--pt-dark-icon-color);
 $pt-dark-icon-color-hover: var(--pt-dark-icon-color-hover);
 $pt-dark-icon-color-disabled: var(--pt-dark-icon-color-disabled);
 $pt-dark-icon-color-selected: var(--pt-dark-icon-color-selected);
+
+/*! Variables */
 $pt-font-family: var(--pt-font-family);
 $pt-font-family-monospace: var(--pt-font-family-monospace);
 $pt-border-radius: var(--pt-border-radius);
@@ -296,6 +308,8 @@ $pt-dark-input-box-shadow: var(--pt-dark-input-box-shadow);
 $pt-dark-dialog-box-shadow: var(--pt-dark-dialog-box-shadow);
 $pt-dark-popover-box-shadow: var(--pt-dark-popover-box-shadow);
 $pt-dark-tooltip-box-shadow: var(--pt-dark-tooltip-box-shadow);
+
+/*! Components */
 $button-border-width: var(--button-border-width);
 $button-box-shadow: var(--button-box-shadow);
 $button-box-shadow-active: var(--button-box-shadow-active);
@@ -436,6 +450,8 @@ $tooltip-background-color: var(--tooltip-background-color);
 $tooltip-text-color: var(--tooltip-text-color);
 $dark-tooltip-background-color: var(--dark-tooltip-background-color);
 $dark-tooltip-text-color: var(--dark-tooltip-text-color);
+
+/*! Datetime */
 $datepicker-background-color: var(--datepicker-background-color);
 $datepicker-day-background-color-hover: var(--datepicker-day-background-color-hover);
 $datepicker-day-background-color-active: var(--datepicker-day-background-color-active);
@@ -472,6 +488,7 @@ $dark-row-header-text-color: var(--dark-row-header-text-color);
 $header-selected-background-color: var(--header-selected-background-color);
 $header-background-color-hsl: var(--header-background-color-hsl);
 $header-hover-background-color-hsl: var(--header-hover-background-color-hsl);
+$header-selected-background-color-hsl: var(--header-selected-background-color-hsl);
 $header-selected-hover-background-color-hsl: var(--header-selected-hover-background-color-hsl);
 $column-header-text-color-hsl: var(--column-header-text-color-hsl);
 $row-header-text-color-hsl: var(--row-header-text-color-hsl);
@@ -481,7 +498,6 @@ $dark-header-selected-background-color-hsl: var(--dark-header-selected-backgroun
 $dark-header-selected-hover-background-color-hsl: var(--dark-header-selected-hover-background-color-hsl);
 $dark-column-header-text-color-hsl: var(--dark-column-header-text-color-hsl);
 $dark-row-header-text-color-hsl: var(--dark-row-header-text-color-hsl);
-$header-selected-background-color-hsl: var(--header-selected-background-color-hsl);
 $resize-handle-color: var(--resize-handle-color);
 $resize-handle-dragging-color: var(--resize-handle-dragging-color);
 $region-default-color: var(--region-default-color);
