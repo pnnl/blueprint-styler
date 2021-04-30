@@ -3,7 +3,10 @@
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
-    box-sizing: border-box
+    box-sizing: border-box;
+    scrollbar-color: hsla(209,0%,9%,0.3) hsl(209,0%,100%);
+    scrollbar-color: var(--pt-text-color-disabled) var(--pt-app-top-background-color);
+    color-scheme: light
 }
 
 body {
@@ -2546,7 +2549,7 @@ a.bp3-button.bp3-disabled {
 .bp3-card.bp3-dark,.bp3-dark .bp3-card {
     background-color: hsl(209,0%,31%);
     background-color: var(--dark-card-background-color);
-    box-shadow: 0 0 0 1px 209,0%,9%,0 0 0 hsla(209,0%,9%,0),0 0 0 hsla(209,0%,9%,0);
+    box-shadow: 0 0 0 1px hsla(209,0%,9%,0.4),0 0 0 hsla(209,0%,9%,0),0 0 0 hsla(209,0%,9%,0);
     box-shadow: var(--pt-dark-elevation-shadow-0)
 }
 
@@ -2556,7 +2559,7 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-dark .bp3-elevation-0,.bp3-elevation-0.bp3-dark {
-    box-shadow: 0 0 0 1px 209,0%,9%,0 0 0 hsla(209,0%,9%,0),0 0 0 hsla(209,0%,9%,0);
+    box-shadow: 0 0 0 1px hsla(209,0%,9%,0.4),0 0 0 hsla(209,0%,9%,0),0 0 0 hsla(209,0%,9%,0);
     box-shadow: var(--pt-dark-elevation-shadow-0)
 }
 
@@ -12223,12 +12226,6 @@ label.bp3-label .bp3-popover2-target {
 .bp3-tooltip2-indicator {
     border-bottom: 1px dotted;
     cursor: help
-}
-
-:not(.bp3-dark) {
-    scrollbar-color: hsla(209,0%,9%,0.3) hsl(209,0%,100%);
-    scrollbar-color: var(--pt-text-color-disabled) var(--pt-app-top-background-color);
-    color-scheme: light
 }
 
 .bp3-button,a,a.bp3-button {
