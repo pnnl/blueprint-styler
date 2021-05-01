@@ -198,8 +198,8 @@
 	--pt-intent-primary-hsl: var(--cobalt3-hsl);
 	--pt-intent-primary-hover-hsl: var(--cobalt2-hsl);
 	--pt-intent-primary-active-hsl: var(--cobalt1-hsl);
-	--pt-intent-primary-text-color-hsl: var(--cobalt2-hsl);
-	--pt-dark-intent-primary-text-color-hsl: var(--cobalt5-hsl);
+	--pt-intent-primary-text-color-hsl: var(--cobalt3-hsl);
+	--pt-dark-intent-primary-text-color-hsl: var(--cobalt4-hsl);
 	--pt-intent-success-hue: var(--green-hue);
 	--pt-intent-success-hsl: var(--green3-hsl);
 	--pt-intent-success-hover-hsl: var(--green2-hsl);
@@ -257,13 +257,13 @@
 	--pt-text-color-muted: var(--black-trans-gray1);
 	--pt-text-color-disabled: var(--black-trans-gray4);
 	--pt-heading-color: var(--black-trans-dark-gray2);
-	--pt-link-color: var(--cobalt3);
 	--pt-dark-text-color: var(--white-trans-light-gray5);
 	--pt-dark-text-color-muted: var(--white-trans-gray4);
 	--pt-dark-text-color-disabled: var(--white-trans-dark-gray5);
 	--pt-dark-heading-color: var(--white);
-	--pt-dark-link-color: var(--cobalt4);
 	--pt-text-selection-color: hsla(var(--blue-hue),100%,75%,0.6);
+	--pt-link-color: var(--pt-intent-primary-text-color);
+	--pt-dark-link-color: var(--pt-dark-intent-primary-text-color);
 	--pt-code-text-color: var(--pt-text-color-muted);
 	--pt-dark-code-text-color: var(--pt-dark-text-color-muted);
 
@@ -433,7 +433,7 @@
 	--dark-progress-track-color: hsla(var(--black-hsl),0.5);
 	--dark-progress-head-color: var(--gray3);
 	--progress-bar-stripes-color: hsla(var(--white-hsl),0.2);
-	--progress-bar-gradient: linear-gradient(-45deg,var(--progress-bar-stripes-color) 25%,transparent 0,transparent 50%,var(--progress-bar-stripes-color) 0,var(--progress-bar-stripes-color) 75%,transparent 0);
+	--progress-bar-gradient: linear-gradient(-45deg,var(--progress-bar-stripes-color) 25%,transparent 25%,transparent 50%,var(--progress-bar-stripes-color) 50%,var(--progress-bar-stripes-color) 75%,transparent 75%);
 	--skeleton-color-start: hsla(var(--light-gray1-hsl),0.2);
 	--skeleton-color-end: hsla(var(--gray1-hsl),0.2);
 	--tab-color-selected: var(--pt-link-color);
