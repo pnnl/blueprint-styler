@@ -15,11 +15,6 @@
     }
   }
 
-  // Delete dark theme input focus
-  .#{$ns}-dark &:focus {
-    box-shadow: null;
-  }
-
   @each $intent, $color in $pt-intent-colors {
     &.#{$ns}-intent-#{$intent} {
       box-shadow: inset 0 -1px 0 0 $color;
@@ -35,6 +30,12 @@
     }
   }
 
+}
+
+// Delete dark theme input focus
+.#{$ns}-dark {
+  & .#{$ns}-input:focus         { box-shadow: null; }
+  & textarea.#{$ns}-input:focus { box-shadow: null; }
 }
 
 .#{$ns}-tag-input{ // needs work...
