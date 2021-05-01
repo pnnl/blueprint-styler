@@ -24,9 +24,6 @@ exports.styleSetConfig = [
 
 exports.styleSetAsEntry = function (styleSetConfig = []) {
     const entry = {}
-    styleSetConfig.forEach(style => {
-        entry[style.slug] = `./src/styles/_${style.slug}/styler-styles.scss`
-        // entry[style.slug] = `./src/styles/_${style.slug}/styler-styles.scss`
-    });
+    styleSetConfig.forEach(style => entry[style.slug] = `./src/styles/_${style.slug}/styler-styles.scss`);
     return entry
 }
