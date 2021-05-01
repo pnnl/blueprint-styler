@@ -1,8 +1,16 @@
 // this is not included in the final ibm-carbon.css output
 
 // IBM Plex - https://github.com/IBM/plex
-$font-prefix: '~@ibm/plex';
 
+// all weights from google fonts
+// @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+// regular-bold 400-700 from google fonts
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+// $font-prefix: '~@ibm/plex';
+
+/*
 // SANS // @import '~@ibm/plex/scss/sans/index';
 @import '~@ibm/plex/scss/sans/bold/index';
 @import '~@ibm/plex/scss/sans/bold/italic/index';
@@ -12,16 +20,19 @@ $font-prefix: '~@ibm/plex';
 @import '~@ibm/plex/scss/sans/medium/italic/index';
 @import '~@ibm/plex/scss/sans/regular/index';
 @import '~@ibm/plex/scss/sans/italic/index';
-// @import '~@ibm/plex/scss/sans/text/index';
-// @import '~@ibm/plex/scss/sans/text/italic/index';
-// @import '~@ibm/plex/scss/sans/light/index';
-// @import '~@ibm/plex/scss/sans/light/italic/index';
-// @import '~@ibm/plex/scss/sans/extralight/index';
-// @import '~@ibm/plex/scss/sans/extralight/italic/index';
-// @import '~@ibm/plex/scss/sans/thin/index';
-// @import '~@ibm/plex/scss/sans/thin/italic/index';
+//---
+@import '~@ibm/plex/scss/sans/text/index';
+@import '~@ibm/plex/scss/sans/text/italic/index';
+@import '~@ibm/plex/scss/sans/light/index';
+@import '~@ibm/plex/scss/sans/light/italic/index';
+@import '~@ibm/plex/scss/sans/extralight/index';
+@import '~@ibm/plex/scss/sans/extralight/italic/index';
+@import '~@ibm/plex/scss/sans/thin/index';
+@import '~@ibm/plex/scss/sans/thin/italic/index';
+*/
 
 // MONO // @import '~@ibm/plex/scss/mono/index';
+/*
 @import '~@ibm/plex/scss/mono/bold/index';
 @import '~@ibm/plex/scss/mono/bold/italic/index';
 @import '~@ibm/plex/scss/mono/semibold/index';
@@ -30,11 +41,13 @@ $font-prefix: '~@ibm/plex';
 @import '~@ibm/plex/scss/mono/medium/italic/index';
 @import '~@ibm/plex/scss/mono/regular/index';
 @import '~@ibm/plex/scss/mono/italic/index';
-// @import '~@ibm/plex/scss/mono/text/index';
-// @import '~@ibm/plex/scss/mono/text/italic/index';
-// @import '~@ibm/plex/scss/mono/light/index';
-// @import '~@ibm/plex/scss/mono/light/italic/index';
-// @import '~@ibm/plex/scss/mono/extralight/index';
-// @import '~@ibm/plex/scss/mono/extralight/italic/index';
-// @import '~@ibm/plex/scss/mono/thin/index';
-// @import '~@ibm/plex/scss/mono/thin/italic/index';
+//---
+@import '~@ibm/plex/scss/mono/text/index';
+@import '~@ibm/plex/scss/mono/text/italic/index';
+@import '~@ibm/plex/scss/mono/light/index';
+@import '~@ibm/plex/scss/mono/light/italic/index';
+@import '~@ibm/plex/scss/mono/extralight/index';
+@import '~@ibm/plex/scss/mono/extralight/italic/index';
+@import '~@ibm/plex/scss/mono/thin/index';
+@import '~@ibm/plex/scss/mono/thin/italic/index';
+*/
