@@ -6,7 +6,7 @@ import { IBlueprintExampleData } from '../tags/types';
 import { allExamples } from './allExamples';
 // import { IExampleProps } from '@blueprintjs/docs-theme';
 import logo from '../assets/logo.svg';
-import { styleSetConfig } from '../styles/style-set.config';
+import { styleSetConfig, styleOptionProps } from '../styles';
 
 import '../styles/_default-var-styles/styler-styles.scss'
 
@@ -36,38 +36,50 @@ function handleThemeChange(themeState: string, setThemeState: React.Dispatch<Rea
 
 //#endregion
 
-const styleList: IOptionProps[] = styleSetConfig.map(
-    (style: { name: string, slug: string }) => ({
-        value: `./${style.slug}.css`,
-        label: style.name
-    })
-)
-function addStylerStyleSheet(href: string): HTMLLinkElement {
-    var styleSheet = document.getElementById('stylerStyleSheet') as HTMLLinkElement;
-    if (href != null && styleSheet != null) styleSheet.href = href;
-    return styleSheet;
-}
-const stylerStyleSheet = addStylerStyleSheet(styleList[0].value as string)
-function switchCss(styleSheetHref: string) {
-    stylerStyleSheet.href = styleSheetHref
-}
+// const styleList: IOptionProps[] = styleSetConfig.map(
+//     (style: { name: string, slug: string }) => ({
+//         value: `./${style.slug}.css`,
+//         label: style.name
+//     })
+// )
+// function addStylerStyleSheet(href: string): HTMLLinkElement {
+//     var styleSheet = document.getElementById('stylerStyleSheet') as HTMLLinkElement;
+//     if (href != null && styleSheet != null) styleSheet.href = href;
+//     return styleSheet;
+// }
+// const stylerStyleSheet = addStylerStyleSheet(styleList[0].value as string)
+// function switchCss(styleSheetHref: string) {
+//     stylerStyleSheet.href = styleSheetHref
+// }
 
 function BlueprintStylerApp() {
 
+    // nav
     const [openIndex, setOpenIndex] = useState(-1)
+
+    // theme
     const [theme, setTheme] = useState(getTheme())
     const useDarkTheme = theme === DARK_THEME;
     const data: IBlueprintExampleData = { themeName: useDarkTheme ? DARK_THEME : LIGHT_THEME } // { themeName: getTheme() }
-
     useEffect(() => {
         const notThemeName = data.themeName === LIGHT_THEME ? DARK_THEME : LIGHT_THEME
         document.documentElement.classList.add(data.themeName)
         document.documentElement.classList.remove(notThemeName)
     }, [data])
 
+    // style
+    const [currentStyleConfig, setCurrentStyleConfig] = useState(styleSetConfig.DefaultStyleVars)
+    const CurrentStyleComponent = currentStyleConfig.Component
+
     return (
         <div className={["app-wrapper", data.themeName].join(' ')}>
             <div className="app">
+
+                <React.Suspense fallback={<></>}>
+                    {/* CurrentStyleComponent is not un-imported when this changes, so css imported stays */}
+                    {/* https://prawira.medium.com/react-conditional-import-conditional-css-import-110cc58e0da6 */}
+                    <CurrentStyleComponent />
+                </React.Suspense>
 
                 <section className="styler-menu">
 
@@ -83,20 +95,19 @@ function BlueprintStylerApp() {
                         </h3>
 
                         <HTMLSelect
-                            fill
-                            options={styleList}
+                            options={styleOptionProps}
+                            onChange={e => setCurrentStyleConfig(styleSetConfig[e.target.value])}
                             style={{ marginBottom: 8 }}
-                            onChange={e => switchCss(e.target.value)}
+                            fill
                         />
 
                         <Button
                             rightIcon={useDarkTheme ? "flash" : "moon"}
                             text={useDarkTheme ? "Light theme" : "Dark theme"}
                             onClick={e => handleThemeChange(theme, setTheme)}
-                            className="bp3-fill"
-                            // minimal
-                            outlined
                             style={{ justifyContent: 'space-between', marginBottom: 8 }}
+                            outlined
+                            fill
                         />
 
                         {/* <div
@@ -147,19 +158,19 @@ function BlueprintStylerApp() {
                 </section>
 
                 <main className="styler-examples">
-                    {allExamples.map(([componentGroupTitle, componentGroup], k: number) => (
-                        <section key={k}>
+                    {allExamples.map(([componentGroupTitle, componentGroup]) => (
+                        <section key={componentGroupTitle}>
                             <h3 className={`styler-section-header ${Classes.HEADING}`}>
                                 {componentGroupTitle}
                             </h3>
-                            {componentGroup.map(([componentName, componentExamples], j: number) => (
-                                <div key={j} className="styler-component">
+                            {componentGroup.map(([componentName, componentExamples]) => (
+                                <div key={componentName} className="styler-component">
                                     <h4 id={componentName} className={`styler-component-header ${Classes.HEADING}`} >
                                         {componentName}
                                     </h4>
-                                    {componentExamples.map((ExampleComponent,i) => (
+                                    {componentExamples.map((ExampleComponent, i) => (
                                         <ExampleComponent
-                                            key={componentName}
+                                            key={componentName + '-' + i}
                                             id={componentName + '-' + i}
                                             data={data}
                                         />
