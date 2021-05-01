@@ -1,5 +1,4 @@
-.#{$ns}-input {
-
+@mixin input-overrides(){
   box-shadow: inset 0 -1px 0 0 $ibm-input-border;
   .#{$ns}-dark & {
     box-shadow: inset 0 -1px 0 0 $ibm-dark-input-border;
@@ -15,46 +14,70 @@
     }
   }
 
+  .#{$ns}-dark &:focus {
+    box-shadow: null;// Delete dark theme input focus
+  }
+
   @each $intent, $color in $pt-intent-colors {
     &.#{$ns}-intent-#{$intent} {
       box-shadow: inset 0 -1px 0 0 $color;
       &:focus {
         box-shadow: inset 0 0 0 2px $color;
+        .#{$ns}-dark & {
+          box-shadow: null;// Delete dark theme input focus
+        }
       }
     }
     .#{$ns}-input-group.#{$ns}-intent-#{$intent} & {
       box-shadow: inset 0 -1px 0 0 $color;
       &:focus {
         box-shadow: inset 0 0 0 2px $color;
+        .#{$ns}-dark & {
+          box-shadow: null;// Delete dark theme input focus
+        }
       }
     }
   }
 
 }
-
-// Delete dark theme input focus
-.#{$ns}-dark {
-  & .#{$ns}-input:focus         { box-shadow: null; }
-  & textarea.#{$ns}-input:focus { box-shadow: null; }
+.#{$ns}-input {
+  @include input-overrides();
 }
+.#{$ns}-timepicker .#{$ns}-timepicker-input{
+  @include input-overrides();
+}
+.#{$ns}-dark textarea.#{$ns}-input:focus {
+  box-shadow: null; // Delete dark theme input focus
+}
+
 
 .#{$ns}-tag-input{ // needs work...
-  @each $intent, $color in $pt-intent-colors {
-    &.#{$ns}-intent-#{$intent}:not(.#{$ns}-active):hover {
-      box-shadow: inset 0 -1px 0 0 $color;
-    }
-  }
-
-  &.#{$ns}-active{ //:focus
-    box-shadow: inset 0 0 0 2px $pt-intent-primary;
-
+  .#{$ns}-dark &, &{
     @each $intent, $color in $pt-intent-colors {
-      &.#{$ns}-intent-#{$intent} {
-        box-shadow: inset 0 0 0 2px $color;
+      &.#{$ns}-intent-#{$intent}:not(.#{$ns}-active):hover {
+        box-shadow: inset 0 -1px 0 0 $color;
+      }
+    }
+
+    &.#{$ns}-active{ //:focus
+      box-shadow: inset 0 0 0 2px $pt-intent-primary;
+
+      @each $intent, $color in $pt-intent-colors {
+        &.#{$ns}-intent-#{$intent} {
+          box-shadow: inset 0 0 0 2px $color;
+        }
       }
     }
   }
 }
+// .#{$ns}-dark .#{$ns}-tag-input.#{$ns}-active,
+// .#{$ns}-tag-input.#{$ns}-dark.#{$ns}-active{
+//   box-shadow: null;// Delete dark theme input focus
+// }
+// .#{$ns}-dark .#{$ns}-tag-input.#{$ns}-active.#{$ns}-intent-primary,
+// .#{$ns}-tag-input.#{$ns}-dark.#{$ns}-active.#{$ns}-intent-primary{
+//   box-shadow: null;// Delete dark theme input focus
+// }
 
 .#{$ns}-button-group:not(.#{$ns}-minimal) > .#{$ns}-button:not(:last-child),
 .#{$ns}-button-group:not(.#{$ns}-minimal) > .#{$ns}-popover-wrapper:not(:last-child) .#{$ns}-button{
@@ -64,6 +87,7 @@
 .#{$ns}-button-group.#{$ns}-vertical:not(.#{$ns}-minimal)>.#{$ns}-popover-wrapper:not(:last-child) .#{$ns}-button{
   margin-bottom: 1px;
 }
+
 
 .#{$ns}-control-group{
   &:not(.#{$ns}-vertical) > :not(.#{$ns}-divider) {
