@@ -1,5 +1,11 @@
 import React from 'react'
+import { createUseGlobalStyleSwitcher } from '../../components/useGlobalStyleSwitcher'
 import './styler-styles.scss'
 
-export const DefaultVarStyles: React.FC<{}> = () => (<></>)
-export default DefaultVarStyles
+const useGlobalStyleSwitcher = createUseGlobalStyleSwitcher()
+
+export const CssComponent: React.FC<{}> = () => {
+    useGlobalStyleSwitcher()
+    return null
+}
+export default CssComponent

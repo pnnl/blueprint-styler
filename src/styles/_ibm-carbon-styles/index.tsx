@@ -1,5 +1,10 @@
 import React from 'react'
+import { createUseGlobalStyleSwitcher } from '../../components/useGlobalStyleSwitcher'
 import './styler-styles.scss'
+const useGlobalStyleSwitcher = createUseGlobalStyleSwitcher()
 
-export const IbmCarbonStyles: React.FC<{}> = () => (<></>)
-export default IbmCarbonStyles
+export const CssComponent: React.FC<{}> = () => {
+    useGlobalStyleSwitcher()
+    return null
+}
+export default CssComponent

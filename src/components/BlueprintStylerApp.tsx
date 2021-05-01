@@ -1,18 +1,11 @@
 import React, { useEffect, useState } from 'react';
-// import './themes/blueprint-custom-theme.css';
-// import './components/components.css';
 import { FocusStyleManager, Classes, Button, AnchorButton, Collapse, HTMLSelect, IOptionProps, Icon } from '@blueprintjs/core';
 import { IBlueprintExampleData } from '../tags/types';
 import { allExamples } from './allExamples';
-// import { IExampleProps } from '@blueprintjs/docs-theme';
 import logo from '../assets/logo.svg';
-import { styleSetConfig, styleOptionProps } from '../styles';
-
-import '../styles/_default-var-styles/styler-styles.scss'
+import { styleSwitcherOptionProps, StyleSwitcher, ComponentLabel, styleSwitcherConfig, styleSwitcherConfigInitial } from '../styles';
 
 FocusStyleManager.onlyShowFocusOnTabs();
-
-//#region Theme
 
 const DARK_THEME = Classes.DARK;
 const LIGHT_THEME = "bp3-light"; // not a cannon blueprint class
@@ -34,24 +27,6 @@ function handleThemeChange(themeState: string, setThemeState: React.Dispatch<Rea
     setTheme(setToTheme)
 };
 
-//#endregion
-
-// const styleList: IOptionProps[] = styleSetConfig.map(
-//     (style: { name: string, slug: string }) => ({
-//         value: `./${style.slug}.css`,
-//         label: style.name
-//     })
-// )
-// function addStylerStyleSheet(href: string): HTMLLinkElement {
-//     var styleSheet = document.getElementById('stylerStyleSheet') as HTMLLinkElement;
-//     if (href != null && styleSheet != null) styleSheet.href = href;
-//     return styleSheet;
-// }
-// const stylerStyleSheet = addStylerStyleSheet(styleList[0].value as string)
-// function switchCss(styleSheetHref: string) {
-//     stylerStyleSheet.href = styleSheetHref
-// }
-
 function BlueprintStylerApp() {
 
     // nav
@@ -68,18 +43,13 @@ function BlueprintStylerApp() {
     }, [data])
 
     // style
-    const [currentStyleConfig, setCurrentStyleConfig] = useState(styleSetConfig.DefaultStyleVars)
-    const CurrentStyleComponent = currentStyleConfig.Component
+    const [currentStyleSwitcherConfig, setCurrentStyleSwitcherConfig] = useState<ComponentLabel>(styleSwitcherConfigInitial)
 
     return (
         <div className={["app-wrapper", data.themeName].join(' ')}>
             <div className="app">
 
-                <React.Suspense fallback={<></>}>
-                    {/* CurrentStyleComponent is not un-imported when this changes, so css imported stays */}
-                    {/* https://prawira.medium.com/react-conditional-import-conditional-css-import-110cc58e0da6 */}
-                    <CurrentStyleComponent />
-                </React.Suspense>
+                <StyleSwitcher currentStyleSwitcherConfig={currentStyleSwitcherConfig}/>
 
                 <section className="styler-menu">
 
@@ -95,8 +65,8 @@ function BlueprintStylerApp() {
                         </h3>
 
                         <HTMLSelect
-                            options={styleOptionProps}
-                            onChange={e => setCurrentStyleConfig(styleSetConfig[e.target.value])}
+                            options={styleSwitcherOptionProps}
+                            onChange={e => setCurrentStyleSwitcherConfig(styleSwitcherConfig[e.target.value]) }
                             style={{ marginBottom: 8 }}
                             fill
                         />

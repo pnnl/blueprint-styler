@@ -1,5 +1,10 @@
 import React from 'react'
+import { createUseGlobalStyleSwitcher } from '../../components/useGlobalStyleSwitcher'
 import './styler-styles.scss'
+const useGlobalStyleSwitcher = createUseGlobalStyleSwitcher()
 
-export const FlatStyles: React.FC<{}> = () => (<></>)
-export default FlatStyles
+export const CssComponent: React.FC<{}> = () => {
+    useGlobalStyleSwitcher()
+    return null
+}
+export default CssComponent
