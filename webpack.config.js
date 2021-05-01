@@ -42,19 +42,22 @@ module.exports = Object.assign({}, baseConfig, {
                 test: /\.scss$/,
                 use: [
                     MiniCssExtractPlugin.loader,
+                    // require('css-loader'),
                     {
                         loader: require.resolve("css-loader"),
-                        options: {
+                        // options: {
                             // necessary to minify @import-ed files using cssnano
-                            importLoaders: 1,
-                        },
+                            // importLoaders: 2,
+                        // },
                     },
                     {
                         loader: require.resolve("postcss-loader"),
                         // options: postCssConfig // depends on the version of webpack and postcss-loader
-                        options: {
-                            postcssOptions: postCssConfig
-                        }
+                        // options: {
+                        //     postcssOptions: {
+                        //         plugins: postCssConfig.plugins
+                        //     }
+                        // }
                     },
                     {
                         loader: require.resolve("sass-loader"),

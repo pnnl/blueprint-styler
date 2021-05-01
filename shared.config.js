@@ -9,7 +9,11 @@ exports.sassConfig = {
 
 exports.postCssConfig = {
     plugins: [
-        require('cssnano'),
+        require('cssnano')({
+            preset: ['default', {
+                colormin: false
+            }]
+        }),
         require('postcss-combine-duplicated-selectors')({
             removeDuplicatedProperties: true
             // ^^^ this thing strips /*! CommentsThatWeNeed */ to output variables.css
@@ -31,6 +35,7 @@ exports.postCssConfig = {
         require('postcss-custom-properties'),
         require('postcss-remove-root'),
     ],
+
     varsOutput: [
         require('cssnano'),
         require('postcss-combine-duplicated-selectors') // combine :root{}
