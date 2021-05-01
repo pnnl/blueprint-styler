@@ -38,10 +38,8 @@
   - update ant theme to use vars
   - dark theme
 - [IBM Carbon](https://www.carbondesignsystem.com/components/overview)
-  - textara focus state is wrong
-  - tag colors look wrong?
+  - dark timepicker-input intent-danger (error) :focus states are broken
   - `<Callout/>`, `<Toast/>`, `<Alert/>`? more like [Carbon Notification](https://www.carbondesignsystem.com/components/notification/style)
-  - button minimal text blue is too light
   - dark theme Text input with sub-button icon color
   - tune colors ??
   - card bg color needs to be darker ??
