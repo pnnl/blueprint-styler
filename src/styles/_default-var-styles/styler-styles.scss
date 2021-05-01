@@ -1,5 +1,9 @@
 // don't edit this file //
 
+@function svg-icon($path, $atts-edit) {
+  @return url();
+}
+
 // THE INDEX //
 @import "./default-var-styles.index.scss";
 

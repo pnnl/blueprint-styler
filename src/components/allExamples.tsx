@@ -1,3 +1,4 @@
+import { IExampleProps } from '@blueprintjs/docs-theme';
 import * as CoreExamples from '../examples/core-examples';
 import { CustomWorkingExample } from '../examples/custom-examples/customWorkingExample';
 import * as DateTimeExamples from '../examples/datetime-examples';
@@ -6,7 +7,7 @@ import * as TableExamples from '../examples/table-examples';
 import * as TimezoneExamples from '../examples/timezone-examples';
 
 
-type ComponentSet = [string, React.ComponentClass[]]
+type ComponentSet = [string, React.ComponentClass<IExampleProps<{}> | Readonly<IExampleProps<{}>>>[]]
 type NestedComponentSets = [string, ComponentSet[]][];
 
 export const allExamples: NestedComponentSets = [
@@ -82,7 +83,7 @@ export const allExamples: NestedComponentSets = [
         ['Overlay', [CoreExamples.OverlayExample,]],
         ['Portal', [CoreExamples.PopoverPortalExample,]],
         ['Alert', [CoreExamples.AlertExample,]],
-        ['Context menu', [CoreExamples.ContextMenuExample,]],
+        // ['Context menu', [CoreExamples.ContextMenuExample,]], // Decorator
         ['Dialog', [CoreExamples.DialogExample,]],
         ['Drawer', [CoreExamples.DrawerExample,]],
         ['Popover', [

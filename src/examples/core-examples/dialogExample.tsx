@@ -20,7 +20,7 @@ import { AnchorButton, Button, Classes, Code, Dialog, H5, Intent, Switch } from 
 import { Example, handleBooleanChange, IExampleProps } from "@blueprintjs/docs-theme";
 import { Tooltip2 } from "@blueprintjs/popover2";
 
-import { IBlueprintExampleData } from "../../tags/reactExamples";
+import { IBlueprintExampleData } from "../../tags/types";
 
 export interface IDialogExampleState {
     autoFocus: boolean;

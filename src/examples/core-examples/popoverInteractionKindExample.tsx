@@ -40,7 +40,6 @@ export class PopoverInteractionKindExample extends React.PureComponent<IExampleP
         // in this example, since it introduces an additional way popovers can
         // close. set it to false here for clarity.
 
-        /* eslint-disable deprecation/deprecation */
         return (
             <Popover
                 content={<FileMenu shouldDismissPopover={false} />}
@@ -51,6 +50,5 @@ export class PopoverInteractionKindExample extends React.PureComponent<IExampleP
                 <Button intent={Intent.PRIMARY}>{buttonLabel}</Button>
             </Popover>
         );
-        /* eslint-enable deprecation/deprecation */
     }
 }

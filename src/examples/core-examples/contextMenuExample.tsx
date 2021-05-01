@@ -39,7 +39,6 @@ class GraphNode extends React.PureComponent<any, { isContextMenuOpen: boolean }>
         // must prevent default to cancel parent's context menu
         e.preventDefault();
         // invoke static API, getting coordinates from mouse event
-        // eslint-disable-next-line deprecation/deprecation
         ContextMenu.show(
             <Menu>
                 <MenuItem icon="search-around" text="Search around..." />
@@ -60,7 +59,6 @@ class GraphNode extends React.PureComponent<any, { isContextMenuOpen: boolean }>
 /**
  * This component uses the decorator API and implements the IContextMenuTarget interface.
  */
-// eslint-disable-next-line deprecation/deprecation
 @ContextMenuTarget
 export class ContextMenuExample extends React.PureComponent<IExampleProps> {
     public render() {

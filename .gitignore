@@ -1,34 +1,24 @@
 # macOS
 .DS_Store
 
-# IDEA
-*.iml
-*.ipr
-*.iws
-.idea/
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
 
-# Node
-node_modules
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
 npm-debug.log*
-lerna-debug.log
-package-lock.json
-yarn-error.log
-
-# Sass
-.sass-cache/
-
-# Blueprint
-# build
-# dist
-# lib
-generated
-coverage
-/docs
-docs-static/**/*.d.ts
-
-# exclude site except for site/docs/versions
-site/*
-site/docs/*
-!site/docs/
-!site/docs/versions/
-site/docs/versions/**/*.d.ts
+yarn-debug.log*
+yarn-error.log*

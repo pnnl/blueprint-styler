@@ -2,11 +2,13 @@ import React, { useEffect, useState } from 'react';
 // import './themes/blueprint-custom-theme.css';
 // import './components/components.css';
 import { FocusStyleManager, Classes, Button, AnchorButton, Collapse, HTMLSelect, IOptionProps, Icon } from '@blueprintjs/core';
-import { IBlueprintExampleData } from '../tags/reactExamples';
+import { IBlueprintExampleData } from '../tags/types';
 import { allExamples } from './allExamples';
-import { IExampleProps } from '@blueprintjs/docs-theme';
+// import { IExampleProps } from '@blueprintjs/docs-theme';
 import logo from '../assets/logo.svg';
 import { styleSetConfig } from '../styles/style-set.config';
+
+import '../styles/_default-var-styles/styler-styles.scss'
 
 FocusStyleManager.onlyShowFocusOnTabs();
 
@@ -42,7 +44,7 @@ const styleList: IOptionProps[] = styleSetConfig.map(
 )
 function addStylerStyleSheet(href: string): HTMLLinkElement {
     var styleSheet = document.getElementById('stylerStyleSheet') as HTMLLinkElement;
-    if (href != null) styleSheet.href = href;
+    if (href != null && styleSheet != null) styleSheet.href = href;
     return styleSheet;
 }
 const stylerStyleSheet = addStylerStyleSheet(styleList[0].value as string)
@@ -61,7 +63,7 @@ function BlueprintStylerApp() {
         const notThemeName = data.themeName === LIGHT_THEME ? DARK_THEME : LIGHT_THEME
         document.documentElement.classList.add(data.themeName)
         document.documentElement.classList.remove(notThemeName)
-    },[data])
+    }, [data])
 
     return (
         <div className={["app-wrapper", data.themeName].join(' ')}>
@@ -155,16 +157,13 @@ function BlueprintStylerApp() {
                                     <h4 id={componentName} className={`styler-component-header ${Classes.HEADING}`} >
                                         {componentName}
                                     </h4>
-                                    {componentExamples.map((
-                                        ExampleComponent: React.ComponentClass<IExampleProps<IBlueprintExampleData>>,
-                                        i: number
-                                    ) => (
-                                            <ExampleComponent
-                                                key={i}
-                                                id={componentName + '-' + i}
-                                                data={data}
-                                            />
-                                        ))}
+                                    {componentExamples.map((ExampleComponent,i) => (
+                                        <ExampleComponent
+                                            key={componentName}
+                                            id={componentName + '-' + i}
+                                            data={data}
+                                        />
+                                    ))}
                                 </div>
                             ))}
                         </section>

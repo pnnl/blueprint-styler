@@ -24,7 +24,7 @@ import {
     Card,
     Checkbox,
     H5,
-    IBreadcrumbProps,
+    BreadcrumbProps,
     InputGroup,
     Label,
     RadioGroup,
@@ -44,7 +44,7 @@ const COLLAPSE_FROM_RADIOS = [
     { label: "End", value: Boundary.END.toString() },
 ];
 
-const ITEMS: IBreadcrumbProps[] = [
+const ITEMS: BreadcrumbProps[] = [
     { icon: "folder-close", text: "All files" },
     { icon: "folder-close", text: "Users" },
     { icon: "folder-close", text: "Janet" },
@@ -53,7 +53,7 @@ const ITEMS: IBreadcrumbProps[] = [
     { icon: "document", text: "image.jpg", current: true },
 ];
 // Show less items for always redner example so we can see when everything fits
-const ITEMS_FOR_ALWAYS_RENDER: IBreadcrumbProps[] = [
+const ITEMS_FOR_ALWAYS_RENDER: BreadcrumbProps[] = [
     { href: "#", icon: "folder-close", text: "Root" },
     { icon: "document", text: "image.jpg", current: true },
 ];
@@ -134,12 +134,12 @@ export class BreadcrumbsExample extends React.PureComponent<IExampleProps, IBrea
     private handleChangeAlwaysRenderOverflow = () =>
         this.setState({ alwaysRenderOverflow: !this.state.alwaysRenderOverflow });
 
-    private renderBreadcrumbInput = ({ text }: IBreadcrumbProps) => {
+    private renderBreadcrumbInput = ({ text }: BreadcrumbProps) => {
         return <BreadcrumbInput defaultValue={typeof text === "string" ? text : undefined} />;
     };
 }
 
-class BreadcrumbInput extends React.PureComponent<IBreadcrumbProps & { defaultValue: string | undefined }> {
+class BreadcrumbInput extends React.PureComponent<BreadcrumbProps & { defaultValue: string | undefined }> {
     public state = {
         text: this.props.defaultValue ?? "",
     };
