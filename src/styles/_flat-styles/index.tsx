@@ -1,10 +1,10 @@
 import React from 'react'
-import { createUseGlobalStyleSwitcher } from '../../components/useGlobalStyleSwitcher'
+import { createUseDisableImportedStyles } from '../useDisableImportedStyles'
 import './styler-styles.scss'
-const useGlobalStyleSwitcher = createUseGlobalStyleSwitcher()
+const useDisableImportedStyles = createUseDisableImportedStyles()
 
 export const CssComponent: React.FC<{}> = () => {
-    useGlobalStyleSwitcher()
+    useDisableImportedStyles()
     return null
 }
 export default CssComponent
