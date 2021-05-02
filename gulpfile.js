@@ -3,7 +3,7 @@
 const gulp = require('gulp')
 const mergeStream = require('merge-stream');
 
-const { sassConfig, postCssConfig } = require('./shared.config')
+const { postCssConfig, sassConfig } = require('./shared.config')
 const sass = require('gulp-sass')
 sass.compiler = require('node-sass')
 
@@ -11,6 +11,14 @@ const rename = require("gulp-rename")
 const postcss = require('gulp-postcss')
 const cssBeautify = require('gulp-cssbeautify')
 const extractCssVarsToAllFormats = require('./scripts/gulp-extract-css-vars-to-all-formats')
+
+process.env.NODE_ENV = 'production'
+const createReactAppWebpackConfigProduction = require('react-scripts/config/webpack.config.js')('production')
+const createReactAppPostCssConfig = createReactAppWebpackConfigProduction.module.rules[1].oneOf[6].use[3].options // WOW!
+console.log(createReactAppPostCssConfig);
+// copy-pasted from ./node_modules/react-scripts/config/webpack.config.js:130
+
+
 
 const sassTask = function () {
     // const scssOutput = gulp.src('./src/styles/_flat-styles/*.index.scss')

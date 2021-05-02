@@ -55,12 +55,26 @@
     "@types/react-dom": "^17.0.3",
     "copyfiles": "^2.4.1",
     "lodash-es": "^4.17.21",
-    "node-sass": "^5.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "typescript": "^4.2.4",
     "web-vitals": "^1.1.1"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.11",
+    "gulp": "^4.0.2",
+    "gulp-cssbeautify": "^3.0.0",
+    "gulp-postcss": "^9.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "merge-stream": "^2.0.0",
+    "node-sass": "^5.0.0",
+    "node-sass-tilde-importer": "^1.0.2",
+    "postcss-combine-duplicated-selectors": "^10.0.2",
+    "postcss-custom-properties": "^8.0.11",
+    "postcss-remove-null": "^1.2.1",
+    "postcss-remove-root": "^0.0.2"
   },
   "eslintConfig": {
     "extends": [
