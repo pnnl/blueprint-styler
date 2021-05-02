@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { FocusStyleManager, Classes, Button, AnchorButton, Collapse, HTMLSelect, IOptionProps, Icon } from '@blueprintjs/core';
+import React, { useEffect, useMemo, useState } from 'react';
+import { FocusStyleManager, Classes, Button, AnchorButton, Collapse, HTMLSelect } from '@blueprintjs/core';
 import { IBlueprintExampleData } from '../tags/types';
 import { allExamples } from './allExamples';
 import logo from '../assets/logo.svg';
@@ -35,7 +35,7 @@ function BlueprintStylerApp() {
     // theme
     const [theme, setTheme] = useState(getTheme())
     const useDarkTheme = theme === DARK_THEME;
-    const data: IBlueprintExampleData = { themeName: useDarkTheme ? DARK_THEME : LIGHT_THEME } // { themeName: getTheme() }
+    const data: IBlueprintExampleData = useMemo(() => ({ themeName: useDarkTheme ? DARK_THEME : LIGHT_THEME }), [useDarkTheme]) // { themeName: getTheme() }
     useEffect(() => {
         const notThemeName = data.themeName === LIGHT_THEME ? DARK_THEME : LIGHT_THEME
         document.documentElement.classList.add(data.themeName)
@@ -58,7 +58,7 @@ function BlueprintStylerApp() {
                         <h3
                             className={Classes.HEADING}
                             style={{ display: 'flex', alignItems: 'center', marginBottom: 32 }}>
-                            <img src={logo} style={{ width: 80 }} />
+                            <img src={logo} style={{ width: 80 }} alt="Blueprint Styler Logo"/>
                             <span style={{ marginLeft: 16 }}>
                                 Blueprint<br />Styler
                             </span>

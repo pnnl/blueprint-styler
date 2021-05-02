@@ -4,7 +4,8 @@
 - update readmes
   - a dark color cannot link to its light counterpart or there will be a circular dependency
 - switch to create-react-app
-  - repair examples?
+  - create build for libs
+  - repair examples - include new ones...
 - separate different packages on build
 - sections:
   - for each theme: add a readme to each project - default styles is project explainer

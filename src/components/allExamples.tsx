@@ -1,6 +1,6 @@
 import { IExampleProps } from '@blueprintjs/docs-theme';
 import * as CoreExamples from '../examples/core-examples';
-import { CustomWorkingExample } from '../examples/custom-examples/customWorkingExample';
+// import { CustomWorkingExample } from '../examples/custom-examples/customWorkingExample';
 import * as DateTimeExamples from '../examples/datetime-examples';
 import * as SelectExamples from '../examples/select-examples';
 import * as TableExamples from '../examples/table-examples';

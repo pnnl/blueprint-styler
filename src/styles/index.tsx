@@ -1,5 +1,5 @@
 import { OptionProps } from '@blueprintjs/core';
-import React, { useState } from 'react'
+import React from 'react'
 import FallbackStylesComponent from './_fallback-styles' // the scss in this one for the default
 
 export type ComponentLabel = {
