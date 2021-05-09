@@ -20,6 +20,18 @@ $$$1: var(--$1);
 
 hslax
 hsla
+
+# comment out // property: $dark-something;
+(\s)([^$][a-z][^:$]*:[^\$]*\$[^;]*dark-[^;]*;)
+ $1//$2
+
+# comment out @include dark-something()
+(@include.*dark-.*\(\);)
+// $1
+
+# find this
+// replace var
+
 ```
 
 # Changes
