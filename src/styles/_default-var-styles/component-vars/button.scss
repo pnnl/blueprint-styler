@@ -3,6 +3,8 @@
 /*! Components */
 
 --button-border-width: 1px;
+--control-group-spacing: calc(-1 * var(--control-group-spacing)); // custom
+--dark-control-group-spacing: 0; // custom
 /* --button-padding:            calc(var(--pt-grid-size) / 2) var(var(--pt-grid-size)); */
 /* --button-padding-small:      0 calc(var(--pt-grid-size) * 0.7); */
 /* --button-padding-large:      calc(var(--pt-grid-size) / 2) (var(--pt-grid-size) * 1.5); */
@@ -98,7 +100,7 @@ Switches and slider handles both use these variables.
 --button-outlined-border-disabled-intent-opacity: 0.2;
 --button-outlined-border-color:                   hsla(var(--dark-gray1-hsl), 0.2); // custom
 --button-outlined-border-color-disabled:          hsla(var(--black-hsl), 0.1); // custom
---dark-button-outlined-border-color:              hsla(var(--white-hsl), 0.4); // custom
---dark-button-outlined-border-color-disabled:     hsla(var(--white-hsl), 0.2); // custom
+--dark-button-outlined-border-color:              hsla(var(--white-hsl), 0.2); // custom
+--dark-button-outlined-border-color-disabled:     hsla(var(--white-hsl), 0.1); // custom
 
 }
