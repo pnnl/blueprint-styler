@@ -15,7 +15,7 @@
     > .#{$ns}-popover2-target:not(:last-child) .#{$ns}-button {
       border-bottom-right-radius: 0;
       border-top-right-radius: 0;
-      margin-right: -$button-border-width;
+      margin-right: var(--control-group-spacing);
     }
   }
 
@@ -35,7 +35,7 @@
       }
 
       > .#{$ns}-popover2-target:not(:last-child) .#{$ns}-button {
-        margin-bottom: -$button-border-width;
+        margin-bottom: var(--control-group-spacing);
       }
     }
   }
@@ -47,13 +47,13 @@
   //     // deeply nested selector necessary to target the appropriate popover
   //     // wrapper, yet ensure we only style buttons within the target.
   //     > .#{$ns}-popover2-wrapper:not(:last-child) .#{$ns}-button {
-  //       margin-right: $button-border-width;
+  //       margin-right: var(--dark-control-group-spacing);
   //     }
   //   }
 
   //   &.#{$ns}-vertical {
   //     > .#{$ns}-popover2-wrapper:not(:last-child) .#{$ns}-button {
-  //       margin-bottom: $button-border-width;
+  //       margin-bottom: var(--dark-control-group-spacing);
   //     }
   //   }
   // }

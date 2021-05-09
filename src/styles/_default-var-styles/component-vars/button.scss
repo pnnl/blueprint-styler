@@ -3,7 +3,7 @@
 /*! Components */
 
 --button-border-width: 1px;
---control-group-spacing: calc(-1 * var(--control-group-spacing)); // custom
+--control-group-spacing: calc(-1 * var(--button-border-width)); // custom
 --dark-control-group-spacing: 0; // custom
 /* --button-padding:            calc(var(--pt-grid-size) / 2) var(var(--pt-grid-size)); */
 /* --button-padding-small:      0 calc(var(--pt-grid-size) * 0.7); */

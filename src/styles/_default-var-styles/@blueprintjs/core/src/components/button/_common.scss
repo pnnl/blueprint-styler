@@ -155,7 +155,7 @@ $button-intents: (
 }
 
 @mixin pt-button-hover() {
-  background-clip: padding-box;
+  // background-clip: padding-box;
   background-color: $button-background-color-hover;
   box-shadow: $button-box-shadow;
 }

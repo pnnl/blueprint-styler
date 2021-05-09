@@ -114,7 +114,7 @@ $control-indicator-spacing: $pt-grid-size !default;
   }
 
   .#{$ns}-control-indicator {
-    background-clip: padding-box;
+    // background-clip: padding-box;
     background-color: $control-background-color;
     background-image: $button-gradient;
     border: none;
