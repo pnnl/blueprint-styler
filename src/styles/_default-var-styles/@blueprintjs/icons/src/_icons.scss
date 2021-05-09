@@ -1,8 +1,8 @@
 // Copyright 2015 Palantir Technologies, Inc. All rights reserved.
 // Licensed under the Apache License, Version 2.0.
 
-@import "generated/icon-variables";
-@import "generated/icon-map";
+// @import "generated/icon-variables";
+// @import "generated/icon-map";
 
 $ns: "bp3" !default;
 
@@ -35,13 +35,13 @@ $icon-classes: (
     color: $pt-icon-color-hover;
   }
 
-  .#{$ns}-dark & {
-    color: $pt-dark-icon-color;
+  // .#{$ns}-dark & {
+  //   color: $pt-dark-icon-color;
 
-    &:hover {
-      color: $pt-dark-icon-color-hover;
-    }
-  }
+  //   &:hover {
+  //     color: $pt-dark-icon-color-hover;
+  //   }
+  // }
 }
 
 @mixin pt-icon(

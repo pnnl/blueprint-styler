@@ -3,7 +3,7 @@
 
 @import "../../common/variables";
 @import "../../common/mixins";
-@import "~@blueprintjs/icons/src/icons";
+@import "../../../../icons/src/blueprint-icons.scss";
 
 /*
 Trees
@@ -111,9 +111,9 @@ $tree-icon-spacing: ($tree-row-height - $pt-icon-size-standard) / 2 !default;
   }
 
   // CSS API support
-  &.#{$ns}-icon-standard::before {
-    content: $pt-icon-chevron-right;
-  }
+  // &.#{$ns}-icon-standard::before {
+  //   content: $pt-icon-chevron-right;
+  // }
 }
 
 .#{$ns}-tree-node-icon {
