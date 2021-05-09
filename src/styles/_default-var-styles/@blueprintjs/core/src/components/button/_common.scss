@@ -456,14 +456,14 @@ $button-intents: (
 }
 
 @mixin pt-button-outlined() {
-  border: $button-outlined-width solid hslax(var(--dark-gray1-hsl), 0.2); // replace var
+  border: $button-outlined-width solid var(--button-outlined-border-color);
   box-sizing: border-box;
 
   &:disabled,
   &.#{$ns}-disabled,
   &:disabled:hover,
   &.#{$ns}-disabled:hover {
-    border-color: hslax(var(--black-hsl), 0.1); // replace var
+    border-color: var(--button-outlined-border-color-disabled);
   }
 
   // .#{$ns}-dark & {

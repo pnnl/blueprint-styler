@@ -8,6 +8,9 @@
 --tag-default-color-hsl: var(--gray1-hsl);
 --dark-tag-default-color-hsl: var(--gray5-hsl);
 
+--tag-text-color: var(--light-gray5); // custom // inverted --pt-dark-text-color
+--dark-tag-text-color: var(--dark-gray1); // custom // inverted --pt-text-color
+
 // --tag-height: calc(var(--pt-grid-size) * 2);
 // --tag-line-height: calc(var(--pt-icon-size-standard));
 // --tag-padding-top: calc(var(--tag-height) - var(--tag-line-height)) / 2;

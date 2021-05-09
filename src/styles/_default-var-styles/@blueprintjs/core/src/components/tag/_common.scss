@@ -27,7 +27,7 @@ $tag-round-adjustment: 2px !default;
   border: none;
   border-radius: $pt-border-radius;
   box-shadow: none;
-  // color: $pt-dark-text-color; // replace var
+  color: var(--tag-text-color);
   font-size: $pt-font-size-small;
   line-height: $tag-line-height;
   max-width: 100%;
@@ -49,9 +49,9 @@ $tag-round-adjustment: 2px !default;
   }
 
   // .#{$ns}-dark & {
-  //   @include pt-tag-interactive($dark-tag-default-color-hsl, 1);  // replace var
+  //   @include pt-tag-interactive($dark-tag-default-color-hsl, 1);
 
-  //   // background-color: $dark-tag-default-color; // replace var
+  //   // background-color: var(--dark-tag-text-color);
   //   color: $pt-text-color;
 
   //   > #{$icon-classes} {
@@ -98,7 +98,7 @@ $tag-round-adjustment: 2px !default;
     color: $pt-text-color;
 
     // .#{$ns}-dark & {
-    //   @include pt-tag-minimal-interactive($dark-tag-default-color-hsl, 0.2); // replace var
+    //   @include pt-tag-minimal-interactive($dark-tag-default-color-hsl, 0.2);
 
     //   // color: $pt-dark-text-color;
 
@@ -120,7 +120,7 @@ $tag-round-adjustment: 2px !default;
   }
 
   // .#{$ns}-dark & {
-  //   @include pt-tag-minimal-interactive($background-color-hsl, 0.25); // replace var
+  //   @include pt-tag-minimal-interactive($background-color-hsl, 0.25);
 
   //   background-color: hslax($background-color-hsl, 0.25);
   //   // color: $dark-text-color;

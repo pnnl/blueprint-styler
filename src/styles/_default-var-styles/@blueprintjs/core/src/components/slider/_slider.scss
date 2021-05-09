@@ -49,10 +49,10 @@ $track-height: $track-size !default;
 }
 
 .#{$ns}-slider-progress {
-  background: hslax(var(--gray1-hsl), 0.2); // replace var
+  background: var(--slider-progress-color);
 
   // .#{$ns}-dark & {
-  //   background: hslax(var(--black-hsl), 0.5); // replace var
+  //   background: var(--dark-slider-progress-color);
   // }
 
   @each $intent, $color in $pt-intent-colors {
@@ -92,7 +92,7 @@ $track-height: $track-size !default;
   }
 
   .#{$ns}-disabled & {
-    background: $gray5;
+    background: var(--slider-handle-disabled);
     box-shadow: none;
     // easy way to avoid lots of special cases to ignore mouse states when disabled:
     pointer-events: none;
@@ -103,17 +103,17 @@ $track-height: $track-size !default;
 
   //   &,
   //   &:hover {
-  //     // background-color: $dark-gray5;
+  //     // background-color: $dark-gray5; // replace var ?
   //   }
 
   //   &.#{$ns}-active {
-  //     // background-color: $dark-gray3;
+  //     // background-color: $dark-gray3; // replace var ?
   //   }
   // }
 
   // .#{$ns}-dark .#{$ns}-disabled & {
-  //   background: $gray1;// replace var
-  //   border-color: $gray1;// replace var
+  //   background: var(--dark-slider-handle-disabled);
+  //   border-color: $gray1; // replace var ?
   //   box-shadow: none;
   // }
 

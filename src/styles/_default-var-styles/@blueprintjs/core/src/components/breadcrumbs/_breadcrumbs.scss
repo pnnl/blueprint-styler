@@ -90,7 +90,7 @@ Styleguide breadcrumbs
 }
 
 .#{$ns}-breadcrumbs-collapsed {
-  background: $light-gray1;
+  background: var(--button-background-color-active-disabled);
   border: none;
   border-radius: $pt-border-radius;
   cursor: pointer;
@@ -107,7 +107,7 @@ Styleguide breadcrumbs
   }
 
   &:hover {
-    background: $gray5;
+    background: var(--button-background-color-active);
     color: $pt-text-color;
     text-decoration: none;
   }
@@ -132,10 +132,10 @@ Styleguide breadcrumbs
 //   }
 
 //   .#{$ns}-breadcrumbs-collapsed {
-//     background: hslax(var(--black-hsl), 0.4); // replace var
+//     background: var(--dark-button-background-color-active-disabled);
 
 //     &:hover {
-//       background: hslax(var(--black-hsl), 0.6); // replace var
+//       background: var(--dark-button-background-color-active);
 //       // color: $pt-dark-text-color;
 //     }
 //   }

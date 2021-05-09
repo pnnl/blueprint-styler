@@ -368,12 +368,12 @@ Styleguide blockquote
 */
 
 %blockquote {
-  border-left: solid 4px hslax(var(--gray4-hsl), 0.5); // replace var
+  border-left: solid 4px var(--pt-text-color-disabled);
   margin: 0 0 $pt-grid-size;
   padding: 0 ($pt-grid-size * 2);
 
   // .#{$ns}-dark & {
-  //   border-color: hslax(var(--gray2-hsl), 0.5); // replace var
+  //   border-color: var(--pt-dark-text-color-disabled);
   // }
 }
 
