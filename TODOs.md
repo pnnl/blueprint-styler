@@ -15,6 +15,7 @@
   - remove the need for the property:null delection strategy
     - [postcss-remove-declaration](https://www.npmjs.com/package/postcss-remove-declaration/v/1.0.0)
     - or always allow direct editing of the bas blueprint css
+    - null doesn't work
 - sections:
   - for each theme: add a readme to each project - default styles is project explainer
   - base theme component that imports scss files
