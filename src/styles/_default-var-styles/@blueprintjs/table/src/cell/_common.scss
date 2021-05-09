@@ -29,11 +29,11 @@ $cell-transition-duration: $pt-transition-duration * 3;
   padding: $cell-padding;
   transition: color $cell-transition-duration;
 
-  .#{$ns}-dark & {
-    &:not([class*="#{$ns}-intent-"]):not(.#{$ns}-loading) {
-      color: $dark-cell-text-color;
-    }
-  }
+  // .#{$ns}-dark & {
+  //   &:not([class*="#{$ns}-intent-"]):not(.#{$ns}-loading) {
+  //     // color: $dark-cell-text-color;
+  //   }
+  // }
 
   @each $intent, $color-hsl in $pt-intent-colors-hsl {
     &.#{$ns}-intent-#{$intent} {
@@ -41,10 +41,10 @@ $cell-transition-duration: $pt-transition-duration * 3;
       color: map-get($pt-intent-text-colors, $intent);
     }
 
-    .#{$ns}-dark &.#{$ns}-intent-#{$intent} {
-      background: hslax($color-hsl, $cell-background-color-opacity);
-      color: map-get($pt-dark-intent-text-colors, $intent);
-    }
+    // .#{$ns}-dark &.#{$ns}-intent-#{$intent} {
+    //   background: hslax($color-hsl, $cell-background-color-opacity);
+    //   // color: map-get($pt-dark-intent-text-colors, $intent);
+    // }
   }
 }
 

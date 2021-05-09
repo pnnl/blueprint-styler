@@ -77,15 +77,15 @@ $toast-margin: $pt-grid-size * 2 !default;
     margin-right: 0;
   }
 
-  &.#{$ns}-dark,
-  .#{$ns}-dark & {
-    background-color: $dark-gray5;
-    box-shadow: $pt-dark-elevation-shadow-3;
+  // &.#{$ns}-dark,
+  // .#{$ns}-dark & {
+  //   // background-color: $dark-gray5;
+  //   // box-shadow: $pt-dark-elevation-shadow-3;
 
-    > .#{$ns}-icon {
-      color: $pt-dark-icon-color;
-    }
-  }
+  //   > .#{$ns}-icon {
+  //     // color: $pt-dark-icon-color;
+  //   }
+  // }
 
   &[class*="#{$ns}-intent-"] {
     a {

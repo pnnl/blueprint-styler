@@ -198,52 +198,52 @@ $header-margin: ($header-height - $pt-input-height) / 2 !default;
   justify-content: space-between;
 }
 
-.#{$ns}-dark .#{$ns}-datepicker {
-  background: $dark-datepicker-background-color;
+// .#{$ns}-dark .#{$ns}-datepicker {
+//   // background: $dark-datepicker-background-color;
 
-  .DayPicker-WeekNumber {
-    color: $pt-dark-text-color-disabled;
-  }
+//   .DayPicker-WeekNumber {
+//     // color: $pt-dark-text-color-disabled;
+//   }
 
-  .DayPicker-Day {
-    &.DayPicker-Day--outside {
-      color: $pt-dark-text-color-disabled;
-    }
+//   .DayPicker-Day {
+//     &.DayPicker-Day--outside {
+//       // color: $pt-dark-text-color-disabled;
+//     }
 
-    &.DayPicker-Day--isToday {
-      .#{$ns}-datepicker-day-wrapper {
-        border: 1px solid $pt-dark-divider-white;
-      }
-    }
+//     &.DayPicker-Day--isToday {
+//       .#{$ns}-datepicker-day-wrapper {
+//         // border: 1px solid $pt-dark-divider-white;
+//       }
+//     }
 
-    &:hover,
-    &:focus {
-      background: $dark-datepicker-day-background-color-hover;
-      color: $white;
-    }
+//     &:hover,
+//     &:focus {
+//       // background: $dark-datepicker-day-background-color-hover;
+//       color: $white;
+//     }
 
-    &:active {
-      background: $dark-datepicker-day-background-color-active;
-    }
+//     &:active {
+//       // background: $dark-datepicker-day-background-color-active;
+//     }
 
-    &.DayPicker-Day--selected {
-      background-color: var(--pt-intent-primary);
+//     &.DayPicker-Day--selected {
+//       background-color: var(--pt-intent-primary);
 
-      &:hover {
-        background-color: var(--pt-intent-primary-hover);
-      }
-    }
+//       &:hover {
+//         background-color: var(--pt-intent-primary-hover);
+//       }
+//     }
 
-    &.DayPicker-Day--disabled {
-      background: none;
-      color: $pt-dark-text-color-disabled;
-    }
-  }
+//     &.DayPicker-Day--disabled {
+//       background: none;
+//       // color: $pt-dark-text-color-disabled;
+//     }
+//   }
 
-  .#{$ns}-datepicker-footer {
-    border-top-color: $pt-dark-divider-black;
-  }
-}
+//   .#{$ns}-datepicker-footer {
+//     // border-top-color: $pt-dark-divider-black;
+//   }
+// }
 
 .#{$ns}-datepicker-timepicker-wrapper {
   align-items: center;

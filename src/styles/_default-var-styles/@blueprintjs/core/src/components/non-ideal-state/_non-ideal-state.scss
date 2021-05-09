@@ -37,7 +37,7 @@ Styleguide non-ideal-state
   color: $pt-icon-color-disabled;
   font-size: $pt-icon-size-large * 3;
 
-  .#{$ns}-dark & {
-    color: $pt-dark-icon-color-disabled;
-  }
+  // .#{$ns}-dark & {
+  //   // color: $pt-dark-icon-color-disabled;
+  // }
 }

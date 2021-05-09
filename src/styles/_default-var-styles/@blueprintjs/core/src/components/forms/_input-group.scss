@@ -121,9 +121,9 @@ $input-button-height-small: $pt-button-height-smaller !default;
 
       // same goes for dark
       /* stylelint-disable-next-line selector-max-compound-selectors */
-      .#{$ns}-dark & {
-        color: $pt-dark-text-color-muted;
-      }
+      // .#{$ns}-dark & {
+      //   // color: $pt-dark-text-color-muted;
+      // }
 
       #{$icon-classes} {
         color: $pt-icon-color;
@@ -219,32 +219,32 @@ $input-button-height-small: $pt-button-height-smaller !default;
     }
   }
 
-  .#{$ns}-dark & {
-    .#{$ns}-icon {
-      color: $pt-dark-icon-color;
-    }
+  // .#{$ns}-dark & {
+  //   .#{$ns}-icon {
+  //     // color: $pt-dark-icon-color;
+  //   }
 
-    &.#{$ns}-disabled .#{$ns}-icon {
-      color: $pt-dark-icon-color-disabled;
-    }
-  }
+  //   &.#{$ns}-disabled .#{$ns}-icon {
+  //     // color: $pt-dark-icon-color-disabled;
+  //   }
+  // }
 
-  @each $intent, $color in $pt-intent-colors {
+  // @each $intent, $color in $pt-intent-colors {
 
-    $color-hsl: nth(map-get($button-intents, $intent), 4);
+  //   $color-hsl: nth(map-get($button-intents, $intent), 4);
 
-    &.#{$ns}-intent-#{$intent} {
-      .#{$ns}-input {
-        @include pt-input-intent($color, $color-hsl);
-      }
+  //   &.#{$ns}-intent-#{$intent} {
+  //     .#{$ns}-input {
+  //       @include pt-input-intent($color, $color-hsl);
+  //     }
 
-      > .#{$ns}-icon {
-        color: map-get($pt-intent-text-colors, $intent);
+  //     > .#{$ns}-icon {
+  //       color: map-get($pt-intent-text-colors, $intent);
 
-        .#{$ns}-dark & {
-          color: map-get($pt-dark-intent-text-colors, $intent);
-        }
-      }
-    }
-  }
+  //       .#{$ns}-dark & {
+  //         // color: map-get($pt-dark-intent-text-colors, $intent);
+  //       }
+  //     }
+  //   }
+  // }
 }

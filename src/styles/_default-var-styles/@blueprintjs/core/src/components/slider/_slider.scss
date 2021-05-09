@@ -49,11 +49,11 @@ $track-height: $track-size !default;
 }
 
 .#{$ns}-slider-progress {
-  background: hslax(var(--gray1-hsl), 0.2);
+  background: hslax(var(--gray1-hsl), 0.2); // replace var
 
-  .#{$ns}-dark & {
-    background: hslax(var(--black-hsl), 0.5);
-  }
+  // .#{$ns}-dark & {
+  //   background: hslax(var(--black-hsl), 0.5); // replace var
+  // }
 
   @each $intent, $color in $pt-intent-colors {
     &.#{$ns}-intent-#{$intent} {
@@ -98,24 +98,24 @@ $track-height: $track-size !default;
     pointer-events: none;
   }
 
-  .#{$ns}-dark & {
-    @include pt-dark-button();
+  // .#{$ns}-dark & {
+  //   // @include pt-dark-button();
 
-    &,
-    &:hover {
-      background-color: $dark-gray5;
-    }
+  //   &,
+  //   &:hover {
+  //     // background-color: $dark-gray5;
+  //   }
 
-    &.#{$ns}-active {
-      background-color: $dark-gray3;
-    }
-  }
+  //   &.#{$ns}-active {
+  //     // background-color: $dark-gray3;
+  //   }
+  // }
 
-  .#{$ns}-dark .#{$ns}-disabled & {
-    background: $gray1;
-    border-color: $gray1;
-    box-shadow: none;
-  }
+  // .#{$ns}-dark .#{$ns}-disabled & {
+  //   background: $gray1;// replace var
+  //   border-color: $gray1;// replace var
+  //   box-shadow: none;
+  // }
 
   .#{$ns}-slider-label {
     background: $tooltip-background-color;
@@ -124,11 +124,11 @@ $track-height: $track-size !default;
     color: $tooltip-text-color;
     margin-left: $handle-size / 2;
 
-    .#{$ns}-dark & {
-      background: $dark-tooltip-background-color;
-      box-shadow: $pt-dark-tooltip-box-shadow;
-      color: $dark-tooltip-text-color;
-    }
+    // .#{$ns}-dark & {
+    //   // background: $dark-tooltip-background-color;
+    //   // box-shadow: $pt-dark-tooltip-box-shadow;
+    //   // color: $dark-tooltip-text-color;
+    // }
 
     .#{$ns}-disabled & {
       box-shadow: none;

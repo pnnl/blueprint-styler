@@ -32,9 +32,9 @@ $menu-z-index: $row-z-index + 1 !default;
   overflow: hidden;
   will-change: transform; // forces hardware acceleration for smoother animations
 
-  .#{$ns}-dark & {
-    background-color: $dark-table-background-color;
-  }
+  // .#{$ns}-dark & {
+  //   // background-color: $dark-table-background-color;
+  // }
 
   .#{$ns}-loading {
     @include table-skeleton();
@@ -61,9 +61,9 @@ $menu-z-index: $row-z-index + 1 !default;
   height: 100%; // IE 11
   min-height: 0%; // Must use % unit for IE11
 
-  .#{$ns}-dark & {
-    color: $dark-cell-text-color;
-  }
+  // .#{$ns}-dark & {
+  //   // color: $dark-cell-text-color;
+  // }
 }
 
 .#{$ns}-table-menu {
@@ -73,9 +73,9 @@ $menu-z-index: $row-z-index + 1 !default;
   position: relative;
   z-index: $menu-z-index;
 
-  .#{$ns}-dark & {
-    background-color: $dark-header-background-color;
-  }
+  // .#{$ns}-dark & {
+  //   // background-color: $dark-header-background-color;
+  // }
 }
 
 .#{$ns}-table-column-headers {
@@ -88,10 +88,10 @@ $menu-z-index: $row-z-index + 1 !default;
   // make custom header content overlap table body
   z-index: $column-z-index;
 
-  .#{$ns}-dark & {
-    background-color: $dark-header-background-color;
-    color: $dark-column-header-text-color;
-  }
+  // .#{$ns}-dark & {
+  //   // background-color: $dark-header-background-color;
+  //   // color: $dark-column-header-text-color;
+  // }
 }
 
 .#{$ns}-table-row-headers {
@@ -106,10 +106,10 @@ $menu-z-index: $row-z-index + 1 !default;
   // make custom header content overlap table body
   z-index: $row-z-index;
 
-  .#{$ns}-dark & {
-    background-color: $dark-header-background-color;
-    color: $dark-row-header-text-color;
-  }
+  // .#{$ns}-dark & {
+  //   // background-color: $dark-header-background-color;
+  //   // color: $dark-row-header-text-color;
+  // }
 }
 
 .#{$ns}-table-body {
@@ -126,9 +126,9 @@ $menu-z-index: $row-z-index + 1 !default;
 .#{$ns}-table-cell-client {
   background: $cell-background-color;
 
-  .#{$ns}-dark & {
-    background: $dark-cell-background-color;
-  }
+  // .#{$ns}-dark & {
+  //   // background: $dark-cell-background-color;
+  // }
 }
 
 .#{$ns}-table-tbody {

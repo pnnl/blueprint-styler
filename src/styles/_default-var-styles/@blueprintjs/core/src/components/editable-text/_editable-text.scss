@@ -54,40 +54,40 @@
     }
   }
 
-  .#{$ns}-dark & {
-    &:hover::before {
-      box-shadow: input-transition-shadow($dark-input-shadow-color-focus-hsl),
-                  inset 0 0 0 1px $pt-dark-divider-white;
-    }
+  // .#{$ns}-dark & {
+  //   &:hover::before {
+  //     // box-shadow: input-transition-shadow($dark-input-shadow-color-focus-hsl),
+  //     //             inset 0 0 0 1px $pt-dark-divider-white;
+  //   }
 
-    &.#{$ns}-editable-text-editing::before {
-      background-color: $dark-input-background-color;
-      box-shadow: input-transition-shadow($dark-input-shadow-color-focus-hsl, true),
-                  $pt-dark-input-box-shadow;
-    }
+  //   &.#{$ns}-editable-text-editing::before {
+  //     // background-color: $dark-input-background-color;
+  //     // box-shadow: input-transition-shadow($dark-input-shadow-color-focus-hsl, true),
+  //     //             $pt-dark-input-box-shadow;
+  //   }
 
-    &.#{$ns}-disabled::before {
-      box-shadow: none;
-    }
+  //   &.#{$ns}-disabled::before {
+  //     // box-shadow: none;
+  //   }
 
-    @each $intent, $color in $pt-dark-intent-text-colors {
-      &.#{$ns}-intent-#{$intent} {
-        .#{$ns}-editable-text-content {
-          color: $color;
-        }
+  //   @each $intent, $color in $pt-dark-intent-text-colors {
+  //     &.#{$ns}-intent-#{$intent} {
+  //       .#{$ns}-editable-text-content {
+  //         // color: $color;
+  //       }
 
-        $color-hsl: nth(map-get($button-intents, $intent), 4);
+  //       $color-hsl: nth(map-get($button-intents, $intent), 4);
 
-        &:hover::before {
-          box-shadow: input-transition-shadow($color-hsl), inset border-shadow(0.4, $color-hsl, 1px);
-        }
+  //       &:hover::before {
+  //         // box-shadow: input-transition-shadow($color-hsl), inset border-shadow(0.4, $color-hsl, 1px);
+  //       }
 
-        &.#{$ns}-editable-text-editing::before {
-          box-shadow: input-transition-shadow($color-hsl, true), $pt-dark-input-box-shadow;
-        }
-      }
-    }
-  }
+  //       &.#{$ns}-editable-text-editing::before {
+  //         // box-shadow: input-transition-shadow($color-hsl, true), $pt-dark-input-box-shadow;
+  //       }
+  //     }
+  //   }
+  // }
 }
 
 .#{$ns}-editable-text-input,
@@ -143,9 +143,9 @@
   .#{$ns}-editable-text-placeholder > & {
     color: $input-placeholder-color;
 
-    .#{$ns}-dark & {
-      color: $dark-input-placeholder-color;
-    }
+    // .#{$ns}-dark & {
+    //   // color: $dark-input-placeholder-color;
+    // }
   }
 }
 

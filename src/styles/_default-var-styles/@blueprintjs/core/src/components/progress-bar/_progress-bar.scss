@@ -83,13 +83,13 @@ $progress-bar-gradient: linear-gradient(
   }
 }
 
-.#{$ns}-dark .#{$ns}-progress-bar {
-  background: $dark-progress-track-color;
+// .#{$ns}-dark .#{$ns}-progress-bar {
+//   // background: $dark-progress-track-color;
 
-  .#{$ns}-progress-meter {
-    background-color: $dark-progress-head-color;
-  }
-}
+//   .#{$ns}-progress-meter {
+//     // background-color: $dark-progress-head-color;
+//   }
+// }
 
 @each $intent, $color in $pt-intent-colors {
   .#{$ns}-progress-bar.#{$ns}-intent-#{$intent} .#{$ns}-progress-meter {

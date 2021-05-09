@@ -113,30 +113,30 @@ Styleguide breadcrumbs
   }
 }
 
-.#{$ns}-dark {
-  .#{$ns}-breadcrumb,
-  .#{$ns}-breadcrumbs-collapsed {
-    color: $pt-dark-text-color-muted;
-  }
+// .#{$ns}-dark {
+//   .#{$ns}-breadcrumb,
+//   .#{$ns}-breadcrumbs-collapsed {
+//     // color: $pt-dark-text-color-muted;
+//   }
 
-  .#{$ns}-breadcrumbs > li::after {
-    color: $pt-dark-icon-color;
-  }
+//   .#{$ns}-breadcrumbs > li::after {
+//     // color: $pt-dark-icon-color;
+//   }
 
-  .#{$ns}-breadcrumb.#{$ns}-disabled {
-    color: $pt-dark-text-color-disabled;
-  }
+//   .#{$ns}-breadcrumb.#{$ns}-disabled {
+//     // color: $pt-dark-text-color-disabled;
+//   }
 
-  .#{$ns}-breadcrumb-current {
-    color: $pt-dark-text-color;
-  }
+//   .#{$ns}-breadcrumb-current {
+//     // color: $pt-dark-text-color;
+//   }
 
-  .#{$ns}-breadcrumbs-collapsed {
-    background: hslax(var(--black-hsl), 0.4);
+//   .#{$ns}-breadcrumbs-collapsed {
+//     background: hslax(var(--black-hsl), 0.4); // replace var
 
-    &:hover {
-      background: hslax(var(--black-hsl), 0.6);
-      color: $pt-dark-text-color;
-    }
-  }
-}
+//     &:hover {
+//       background: hslax(var(--black-hsl), 0.6); // replace var
+//       // color: $pt-dark-text-color;
+//     }
+//   }
+// }

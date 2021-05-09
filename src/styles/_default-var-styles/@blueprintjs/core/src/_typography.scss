@@ -86,17 +86,17 @@ Styleguide ui-text
 .#{$ns}-text-muted {
   color: $pt-text-color-muted;
 
-  .#{$ns}-dark & {
-    color: $pt-dark-text-color-muted;
-  }
+  // .#{$ns}-dark & {
+  //   // color: $pt-dark-text-color-muted;
+  // }
 }
 
 .#{$ns}-text-disabled {
   color: $pt-text-color-disabled;
 
-  .#{$ns}-dark & {
-    color: $pt-dark-text-color-disabled;
-  }
+  // .#{$ns}-dark & {
+  //   // color: $pt-dark-text-color-disabled;
+  // }
 }
 
 .#{$ns}-text-overflow-ellipsis {
@@ -148,9 +148,9 @@ Styleguide running-text
     border-bottom: 1px solid $pt-divider-black;
     margin: ($pt-grid-size * 2) 0;
 
-    .#{$ns}-dark & {
-      border-color: $pt-dark-divider-white;
-    }
+    // .#{$ns}-dark & {
+    //   // border-color: $pt-dark-divider-white;
+    // }
   }
 
   p {
@@ -220,19 +220,19 @@ a {
     color: inherit;
   }
 
-  code,
-  .#{$ns}-dark & code {
+  code{
+  // .#{$ns}-dark & code {
     color: inherit;
   }
 
-  .#{$ns}-dark &,
-  .#{$ns}-dark &:hover {
-    color: $pt-dark-link-color;
+  // .#{$ns}-dark &,
+  // .#{$ns}-dark &:hover {
+  //   // color: $pt-dark-link-color;
 
-    #{$icon-classes} {
-      color: inherit;
-    }
-  }
+  //   #{$icon-classes} {
+  //     color: inherit;
+  //   }
+  // }
 }
 
 /*
@@ -267,20 +267,20 @@ Styleguide preformatted
   font-size: smaller;
   padding: 2px 5px;
 
-  .#{$ns}-dark & {
-    background: $pt-dark-code-background-color;
-    box-shadow: inset border-shadow(0.4);
-    color: $pt-dark-code-text-color;
-  }
+  // .#{$ns}-dark & {
+  //   // background: $pt-dark-code-background-color;
+  //   // box-shadow: inset border-shadow(0.4);
+  //   // color: $pt-dark-code-text-color;
+  // }
 
   a > & {
     // <code> in links. markdown: [`code`](http://url)
     // $pt-link-color does not have good contrast with non-link <code>'s in light theme, so we use a brighter hue
     color: $pt-intent-primary;
 
-    .#{$ns}-dark & {
-      color: inherit;
-    }
+    // .#{$ns}-dark & {
+    //   color: inherit;
+    // }
   }
 }
 
@@ -299,11 +299,11 @@ Styleguide preformatted
   word-break: break-all;
   word-wrap: break-word;
 
-  .#{$ns}-dark & {
-    background: $pt-dark-code-background-color;
-    box-shadow: inset 0 0 0 1px $pt-dark-divider-black;
-    color: $pt-dark-text-color;
-  }
+  // .#{$ns}-dark & {
+  //   // background: $pt-dark-code-background-color;
+  //   // box-shadow: inset 0 0 0 1px $pt-dark-divider-black;
+  //   // color: $pt-dark-text-color;
+  // }
 
   > code {
     background: none;
@@ -342,11 +342,11 @@ Styleguide preformatted
     margin-right: $pt-grid-size / 2;
   }
 
-  .#{$ns}-dark & {
-    background: $dark-gray5;
-    box-shadow: $pt-dark-elevation-shadow-1;
-    color: $pt-dark-text-color-muted;
-  }
+  // .#{$ns}-dark & {
+  //   // background: $dark-gray5;
+  //   // box-shadow: $pt-dark-elevation-shadow-1;
+  //   // color: $pt-dark-text-color-muted;
+  // }
 }
 
 .#{$ns}-key {
@@ -368,13 +368,13 @@ Styleguide blockquote
 */
 
 %blockquote {
-  border-left: solid 4px hslax(var(--gray4-hsl), 0.5);
+  border-left: solid 4px hslax(var(--gray4-hsl), 0.5); // replace var
   margin: 0 0 $pt-grid-size;
   padding: 0 ($pt-grid-size * 2);
 
-  .#{$ns}-dark & {
-    border-color: hslax(var(--gray2-hsl), 0.5);
-  }
+  // .#{$ns}-dark & {
+  //   border-color: hslax(var(--gray2-hsl), 0.5); // replace var
+  // }
 }
 
 .#{$ns}-blockquote {
@@ -454,6 +454,6 @@ Styleguide rtl
   text-align: right;
 }
 
-.#{$ns}-dark {
-  color: $pt-dark-text-color;
-}
+// .#{$ns}-dark {
+//   // color: $pt-dark-text-color;
+// }

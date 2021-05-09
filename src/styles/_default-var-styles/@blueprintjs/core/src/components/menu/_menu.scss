@@ -144,52 +144,52 @@ Styleguide menu-header
 }
 
 // dark theme
-.#{$ns}-dark {
-  .#{$ns}-menu {
-    background: $dark-menu-background-color;
-    color: $pt-dark-text-color;
-  }
+// .#{$ns}-dark {
+//   .#{$ns}-menu {
+//     // background: $dark-menu-background-color;
+//     // color: $pt-dark-text-color;
+//   }
 
-  .#{$ns}-menu-item {
-    @include menu-item-intent($pt-dark-intent-text-colors);
+//   .#{$ns}-menu-item {
+//     @include menu-item-intent($pt-dark-intent-text-colors);
 
-    &::before,
-    > .#{$ns}-icon {
-      color: $pt-dark-icon-color;
-    }
+//     &::before,
+//     > .#{$ns}-icon {
+//       // color: $pt-dark-icon-color;
+//     }
 
-    .#{$ns}-menu-item-label {
-      color: $pt-dark-text-color-muted;
-    }
+//     .#{$ns}-menu-item-label {
+//       // color: $pt-dark-text-color-muted;
+//     }
 
-    &.#{$ns}-active,
-    &:active {
-      background-color: $dark-menu-item-color-active;
-    }
+//     &.#{$ns}-active,
+//     &:active {
+//       // background-color: $dark-menu-item-color-active;
+//     }
 
-    // pt-disable always overrides over styles
-    /* stylelint-disable declaration-no-important */
-    &.#{$ns}-disabled {
-      color: $pt-dark-text-color-disabled !important;
+//     // pt-disable always overrides over styles
+//     /* stylelint-disable declaration-no-important */
+//     &.#{$ns}-disabled {
+//       // color: $pt-dark-text-color-disabled !important;
 
-      &::before,
-      > .#{$ns}-icon,
-      .#{$ns}-menu-item-label {
-        color: $pt-dark-icon-color-disabled !important;
-      }
-    }
-    /* stylelint-enable declaration-no-important */
-  }
+//       &::before,
+//       > .#{$ns}-icon,
+//       .#{$ns}-menu-item-label {
+//         // color: $pt-dark-icon-color-disabled !important;
+//       }
+//     }
+//     /* stylelint-enable declaration-no-important */
+//   }
 
-  .#{$ns}-menu-divider,
-  .#{$ns}-menu-header {
-    border-color: $pt-dark-divider-white;
-  }
+//   .#{$ns}-menu-divider,
+//   .#{$ns}-menu-header {
+//     // border-color: $pt-dark-divider-white;
+//   }
 
-  .#{$ns}-menu-header > h6 {
-    color: $pt-dark-heading-color;
-  }
-}
+//   .#{$ns}-menu-header > h6 {
+//     // color: $pt-dark-heading-color;
+//   }
+// }
 
 // #402 support menu inside label
 .#{$ns}-label .#{$ns}-menu {

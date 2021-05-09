@@ -20,9 +20,9 @@ $step-radius: calc(#{$pt-border-radius} * 2);;
   flex: 1;
   flex-direction: column;
 
-  .#{$ns}-dark & {
-    background: $dark-gray2;
-  }
+  // .#{$ns}-dark & {
+  //   // background: $dark-gray2;
+  // }
 }
 
 .#{$ns}-multistep-dialog-right-panel {
@@ -32,10 +32,10 @@ $step-radius: calc(#{$pt-border-radius} * 2);;
   flex: 3;
   min-width: 0;
 
-  .#{$ns}-dark & {
-    background-color: $dark-gray3;
-    border-left: 1px solid $pt-dark-divider-black;
-  }
+  // .#{$ns}-dark & {
+  //   // background-color: $dark-gray3;
+  //   // border-left: 1px solid $pt-dark-divider-black;
+  // }
 }
 
 .#{$ns}-multistep-dialog-footer {
@@ -44,26 +44,26 @@ $step-radius: calc(#{$pt-border-radius} * 2);;
   border-top: 1px solid $pt-divider-black;
   padding: 10px;
 
-  .#{$ns}-dark & {
-    background: $dark-gray4;
-    border-top: 1px solid $pt-dark-divider-black;
-  }
+  // .#{$ns}-dark & {
+  //   // background: $dark-gray4;
+  //   // border-top: 1px solid $pt-dark-divider-black;
+  // }
 }
 
 .#{$ns}-dialog-step-container {
   background-color: $light-gray5;
   border-bottom: 1px solid $pt-divider-black;
 
-  .#{$ns}-dark & {
-    background: $dark-gray3;
-    border-bottom: 1px solid $pt-dark-divider-black;
-  }
+  // .#{$ns}-dark & {
+  //   // background: $dark-gray3;
+  //   // border-bottom: 1px solid $pt-dark-divider-black;
+  // }
 
   &.#{$ns}-dialog-step-viewed {
     background-color: $white;
-    .#{$ns}-dark & {
-      background: $dark-gray4;
-    }
+    // .#{$ns}-dark & {
+    //   // background: $dark-gray4;
+    // }
   }
 }
 
@@ -76,26 +76,26 @@ $step-radius: calc(#{$pt-border-radius} * 2);;
   margin: 4px;
   padding: 6px 14px;
 
-  .#{$ns}-dark & {
-    background: $dark-gray3;
-  }
+  // .#{$ns}-dark & {
+  //   // background: $dark-gray3;
+  // }
 
   // by default, steps are inactive until they are visited
   .#{$ns}-dialog-step-viewed & {
     background-color: $white;
     cursor: pointer;
 
-    .#{$ns}-dark & {
-      background: $dark-gray4;
-    }
+    // .#{$ns}-dark & {
+    //   // background: $dark-gray4;
+    // }
   }
 
   &:hover {
     background-color: $light-gray5;
 
-    .#{$ns}-dark & {
-      background: $dark-gray3;
-    }
+    // .#{$ns}-dark & {
+    //   // background: $dark-gray3;
+    // }
   }
 }
 
@@ -109,9 +109,9 @@ $step-radius: calc(#{$pt-border-radius} * 2);;
   justify-content: center;
   width: 25px;
 
-  .#{$ns}-dark & {
-    background-color: $pt-dark-icon-color-disabled;
-  }
+  // .#{$ns}-dark & {
+  //   // background-color: $pt-dark-icon-color-disabled;
+  // }
 
   .#{$ns}-active.#{$ns}-dialog-step-viewed & {
     background-color: $blue4;
@@ -127,9 +127,9 @@ $step-radius: calc(#{$pt-border-radius} * 2);;
   flex: 1;
   padding-left: 10px;
 
-  .#{$ns}-dark & {
-    color: $pt-dark-text-color-disabled;
-  }
+  // .#{$ns}-dark & {
+  //   // color: $pt-dark-text-color-disabled;
+  // }
 
   // step title is active only when the step is selected
   .#{$ns}-active.#{$ns}-dialog-step-viewed & {
@@ -139,8 +139,8 @@ $step-radius: calc(#{$pt-border-radius} * 2);;
   .#{$ns}-dialog-step-viewed:not(.#{$ns}-active) & {
     color: $pt-text-color;
 
-    .#{$ns}-dark & {
-      color: $pt-dark-text-color;
-    }
+    // .#{$ns}-dark & {
+    //   // color: $pt-dark-text-color;
+    // }
   }
 }

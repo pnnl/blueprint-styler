@@ -219,81 +219,81 @@ $button-intents: (
 }
 
 @mixin pt-dark-button() {
-  background-color: $dark-button-background-color;
-  background-image: $dark-button-gradient;
-  box-shadow: $dark-button-box-shadow;
-  color: $pt-dark-text-color;
+  // background-color: $dark-button-background-color;
+  // background-image: $dark-button-gradient;
+  // box-shadow: $dark-button-box-shadow;
+  // color: $pt-dark-text-color;
 
   &:hover,
   &:active,
   &.#{$ns}-active {
-    color: $pt-dark-text-color;
+    // color: $pt-dark-text-color;
   }
 
   &:hover {
-    @include pt-dark-button-hover();
+    // @include pt-dark-button-hover();
   }
 
   &:active,
   &.#{$ns}-active {
-    @include pt-dark-button-active();
+    // @include pt-dark-button-active();
   }
 
   &:disabled,
   &.#{$ns}-disabled {
-    @include pt-dark-button-disabled();
+    // @include pt-dark-button-disabled();
   }
 
   .#{$ns}-button-spinner .#{$ns}-spinner-head {
-    background: $dark-progress-track-color;
-    stroke: $dark-progress-head-color;
+    // background: $dark-progress-track-color;
+    // stroke: $dark-progress-head-color;
   }
 }
 
 @mixin pt-dark-button-hover() {
-  background-color: $dark-button-background-color-hover;
-  box-shadow: $dark-button-box-shadow;
+  // background-color: $dark-button-background-color-hover;
+  // box-shadow: $dark-button-box-shadow;
 }
 
 @mixin pt-dark-button-active() {
-  background-color: $dark-button-background-color-active;
+  // background-color: $dark-button-background-color-active;
   background-image: none;
-  box-shadow: $dark-button-box-shadow-active;
+  // box-shadow: $dark-button-box-shadow-active;
 }
 
 @mixin pt-dark-button-disabled() {
-  background-color: $dark-button-background-color-disabled;
+  // background-color: $dark-button-background-color-disabled;
   background-image: none;
   box-shadow: none;
-  color: $dark-button-color-disabled;
+  // color: $dark-button-color-disabled;
 
   &.#{$ns}-active {
-    background: $dark-button-background-color-active-disabled;
+    // background: $dark-button-background-color-active-disabled;
   }
 }
 
 @mixin pt-dark-button-intent() {
-  box-shadow: $dark-button-intent-box-shadow;
+  // box-shadow: $dark-button-intent-box-shadow;
 
   &:hover {
-    box-shadow: $dark-button-intent-box-shadow;
+    // box-shadow: $dark-button-intent-box-shadow;
   }
 
   &:active,
   &.#{$ns}-active {
-    box-shadow: $dark-button-intent-box-shadow-active;
+    // box-shadow: $dark-button-intent-box-shadow-active;
   }
 
   &:disabled,
   &.#{$ns}-disabled {
-    @include pt-dark-button-intent-disabled();
+    // @include pt-dark-button-intent-disabled();
   }
 }
 
 @mixin pt-dark-button-intent-disabled() {
   background-image: none;
   box-shadow: none;
-  color: $dark-button-intent-color-disabled;
+  // color: $dark-button-intent-color-disabled;
 }
 
 @mixin pt-button-minimal() {
@@ -327,9 +327,9 @@ $button-intents: (
     }
   }
 
-  .#{$ns}-dark & {
-    @include pt-dark-button-minimal();
-  }
+  // .#{$ns}-dark & {
+  //   // @include pt-dark-button-minimal();
+  // }
 
   @each $intent, $colors in $button-intents {
     &.#{$ns}-intent-#{$intent} {
@@ -346,7 +346,7 @@ $button-intents: (
 }
 
 @mixin pt-dark-button-minimal() {
-  background: $dark-minimal-button-background-color;
+  // background: $dark-minimal-button-background-color;
   box-shadow: none;
   color: inherit;
 
@@ -358,13 +358,13 @@ $button-intents: (
   }
 
   &:hover {
-    background: $dark-minimal-button-background-color-hover;
+    // background: $dark-minimal-button-background-color-hover;
   }
 
   &:active,
   &.#{$ns}-active {
-    background: $dark-minimal-button-background-color-active;
-    color: $pt-dark-text-color;
+    // background: $dark-minimal-button-background-color-active;
+    // color: $pt-dark-text-color;
   }
 
   &:disabled,
@@ -372,11 +372,11 @@ $button-intents: (
   &.#{$ns}-disabled,
   &.#{$ns}-disabled:hover {
     background: none;
-    color: $pt-dark-text-color-disabled;
+    // color: $pt-dark-text-color-disabled;
     cursor: not-allowed;
 
     &.#{$ns}-active {
-      background: $dark-minimal-button-background-color-active;
+      // background: $dark-minimal-button-background-color-active;
     }
   }
 }
@@ -417,30 +417,30 @@ $button-intents: (
     stroke: $text-color;
   }
 
-  .#{$ns}-dark & {
-    color: $dark-text-color;
+  // .#{$ns}-dark & {
+  //   // color: $dark-text-color;
 
-    &:hover {
-      background: hslax($intent-color-hsl, 0.2);
-      color: $dark-text-color;
-    }
+  //   &:hover {
+  //     // background: hslax($intent-color-hsl, 0.2);
+  //     // color: $dark-text-color;
+  //   }
 
-    &:active,
-    &.#{$ns}-active {
-      background: hslax($intent-color-hsl, 0.3);
-      color: $dark-text-color;
-    }
+  //   &:active,
+  //   &.#{$ns}-active {
+  //     // background: hslax($intent-color-hsl, 0.3);
+  //     // color: $dark-text-color;
+  //   }
 
-    &:disabled,
-    &.#{$ns}-disabled {
-      background: none;
-      color: hslax($dark-text-color-hsl, 0.5);
+  //   &:disabled,
+  //   &.#{$ns}-disabled {
+  //     // background: none;
+  //     // color: hslax($dark-text-color-hsl, 0.5);
 
-      &.#{$ns}-active {
-        background: hslax($intent-color-hsl, 0.3);
-      }
-    }
-  }
+  //     &.#{$ns}-active {
+  //       // background: hslax($intent-color-hsl, 0.3);
+  //     }
+  //   }
+  // }
 }
 
 @mixin pt-button-minimal-divider() {
@@ -450,25 +450,25 @@ $button-intents: (
   margin: ($pt-button-height - $divider-height) / 2;
   width: $minimal-button-divider-width;
 
-  .#{$ns}-dark & {
-    background: $pt-dark-divider-white;
-  }
+  // .#{$ns}-dark & {
+  //   // background: $pt-dark-divider-white;
+  // }
 }
 
 @mixin pt-button-outlined() {
-  border: $button-outlined-width solid hslax(var(--dark-gray1-hsl), 0.2);
+  border: $button-outlined-width solid hslax(var(--dark-gray1-hsl), 0.2); // replace var
   box-sizing: border-box;
 
   &:disabled,
   &.#{$ns}-disabled,
   &:disabled:hover,
   &.#{$ns}-disabled:hover {
-    border-color: hslax(var(--black-hsl), 0.1);
+    border-color: hslax(var(--black-hsl), 0.1); // replace var
   }
 
-  .#{$ns}-dark & {
-    @include pt-dark-button-outlined();
-  }
+  // .#{$ns}-dark & {
+  //   // @include pt-dark-button-outlined();
+  // }
 
   @each $intent, $colors in $button-intents {
     &.#{$ns}-intent-#{$intent} {
@@ -499,12 +499,12 @@ $button-intents: (
     border-color: hslax($text-color-hsl, $button-outlined-border-disabled-intent-opacity);
   }
 
-  .#{$ns}-dark & {
-    border-color: hslax($dark-text-color-hsl, $button-outlined-border-intent-opacity);
+  // .#{$ns}-dark & {
+  //   // border-color: hslax($dark-text-color-hsl, $button-outlined-border-intent-opacity);
 
-    &:disabled,
-    &.#{$ns}-disabled {
-      border-color: hslax($dark-text-color-hsl, $button-outlined-border-disabled-intent-opacity);
-    }
-  }
+  //   &:disabled,
+  //   &.#{$ns}-disabled {
+  //     // border-color: hslax($dark-text-color-hsl, $button-outlined-border-disabled-intent-opacity);
+  //   }
+  // }
 }

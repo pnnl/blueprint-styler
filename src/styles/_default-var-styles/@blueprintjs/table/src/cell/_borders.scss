@@ -121,10 +121,10 @@ for all borders with minimal duplication. See the bottom of this file.
 
 @include pt-table-borders-mixin($cell-border-width, $frozen-cell-border-width, $cell-border-color);
 
-.#{$ns}-dark {
-  @include pt-table-borders-mixin(
-    $cell-border-width,
-    $frozen-cell-border-width,
-    $dark-cell-border-color
-  );
-}
+// .#{$ns}-dark {
+//   @include pt-table-borders-mixin(
+//     $cell-border-width,
+//     $frozen-cell-border-width,
+//     $dark-cell-border-color
+//   );
+// }
