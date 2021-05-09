@@ -6,7 +6,14 @@
 - switch to create-react-app
   - create build for libs
   - repair examples - include new ones...
-- separate different packages on build
+  - does create react app accept the null deletion? probably not...
+- CSS Build?
+  - separate different packages on build - core, selection, table, etc...
+  - provide no minified?
+  - provide non-fallback version of css?
+  - remove the need for the property:null delection strategy
+    - [postcss-remove-declaration](https://www.npmjs.com/package/postcss-remove-declaration/v/1.0.0)
+    - or always allow direct editing of the bas blueprint css
 - sections:
   - for each theme: add a readme to each project - default styles is project explainer
   - base theme component that imports scss files
@@ -31,6 +38,7 @@
 
 ### Styles
 - var(--theme) / General
+  - **BUG** rgba in `.bp3-popover2 .bp3-popover2-arrow:before`
   - include sizes in lib/variables output
   - editable text focus is broken
   - grayscale transparency alt
