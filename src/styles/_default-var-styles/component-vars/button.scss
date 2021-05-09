@@ -31,6 +31,20 @@ CSS `border` property issues:
   inset 0 0 0 var(--button-border-width) hsla(var(--pt-shadow-color-hsl), 0.4),
   inset 0 1px 2px hsla(var(--pt-shadow-color-hsl), 0.2);
 
+--dark-button-box-shadow:
+  0 0 0 var(--button-border-width) hsla(var(--pt-dark-shadow-color-hsl), 0.4),
+  0 0 0 transparent;
+--dark-button-box-shadow-active:
+  0 0 0 var(--button-border-width) hsla(var(--pt-dark-shadow-color-hsl), 0.6),
+  inset 0 1px 2px hsla(var(--pt-dark-shadow-color-hsl), 0.2);
+--dark-button-intent-box-shadow:
+  0 0 0 var(--button-border-width) hsla(var(--pt-dark-shadow-color-hsl), 0.4),
+  0 0 0 transparent;
+--dark-button-intent-box-shadow-active:
+  0 0 0 var(--button-border-width) hsla(var(--pt-dark-shadow-color-hsl), 0.4),
+  inset 0 1px 2px hsla(var(--pt-dark-shadow-color-hsl), 0.2);
+
+
 /*
 Overlay shadows are used for default buttons
 floating on top of other elements. This way, the
@@ -44,16 +58,6 @@ Switches and slider handles both use these variables.
   0 0 0 var(--button-border-width) hsla(var(--pt-shadow-color-hsl), 0.2),
   inset 0 1px 1px hsla(var(--pt-shadow-color-hsl), 0.1);
 
---dark-button-box-shadow:
-  0 0 0 var(--button-border-width) hsla(var(--pt-dark-shadow-color-hsl), 0.4);
---dark-button-box-shadow-active:
-  0 0 0 var(--button-border-width) hsla(var(--pt-dark-shadow-color-hsl), 0.6),
-  inset 0 1px 2px hsla(var(--pt-dark-shadow-color-hsl), 0.2);
---dark-button-intent-box-shadow:
-  0 0 0 var(--button-border-width) hsla(var(--pt-dark-shadow-color-hsl), 0.4);
---dark-button-intent-box-shadow-active:
-  0 0 0 var(--button-border-width) hsla(var(--pt-dark-shadow-color-hsl), 0.4),
-  inset 0 1px 2px hsla(var(--pt-dark-shadow-color-hsl), 0.2);
 
 --shine-color-hsl:        var(--white-hsl);
 --shine-opacity:          0.8;
