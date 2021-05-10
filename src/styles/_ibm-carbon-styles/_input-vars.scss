@@ -12,5 +12,9 @@
 
 }
 
+.#{$ns}-dark{
+  --ibm-input-border: var(--ibm-dark-input-border); // custom
+}
+
 $ibm-input-border:         var(--ibm-input-border); // custom
 $ibm-dark-input-border:    var(--ibm-dark-input-border); // custom

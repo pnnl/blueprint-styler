@@ -7,26 +7,13 @@
 .#{$ns}-slider-handle{
 
   &, &:hover{
-    background-color: $dark-gray5;
+    // background-color: $dark-gray5;
     box-shadow: none;
   }
 
   &.#{$ns}-active{
     background-color: $pt-intent-primary;
     box-shadow: none;
-  }
-
-  .#{$ns}-dark & {
-    &, &:hover{
-      background-color: $light-gray2;
-      box-shadow: none;
-    }
-
-    &.#{$ns}-active{
-      background-color: $pt-intent-primary;
-      box-shadow: none;
-    }
-
   }
 
   @include slider-handles(99px);

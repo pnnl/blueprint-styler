@@ -1,24 +1,9 @@
-.#{$ns}-tab:not([aria-disabled=true]):hover,
-.#{$ns}-tab[aria-selected=true] {
-  // color: $pt-text-color;
-  .#{$ns}-dark & {
-    color: $pt-dark-text-color;
-  }
-}
-
 .#{$ns}-tab{
   font-weight: 600;
-
   color: $pt-text-color-muted;
-  .#{$ns}-dark & {
-    color: $pt-dark-text-color-muted;
-  }
 }
 
 .#{$ns}-tab-indicator{
   // margin-bottom: -1px;
   background-color: $pt-intent-primary;
-  .#{$ns}-dark & {
-    background-color: $pt-intent-primary;
-  }
 }
