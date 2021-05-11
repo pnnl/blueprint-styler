@@ -53,5 +53,5 @@ Search for
 - `pt-tag-interactive(`
 - `pt-tag-minimal-interactive(`
 
-Copy `!default` $vars to `src/styles/_default-var-styles/component-vars`
+Copy `!default` $vars to `src/styles/_default-var-styles/components`
 replace color vars with `// custom` color-aliases if they exist

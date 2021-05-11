@@ -5,8 +5,8 @@
 @import "../global/svg-icon-replacement";
 
 // Override $vars //
-@import "./global-vars/index";
-@import "./component-vars/index";
+@import "./common/index";
+@import "./components/index";
 
 // Blueprint Originals
 @import "./@blueprintjs/core/src/blueprint";
