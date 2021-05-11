@@ -5,7 +5,7 @@
 @import '../_default-var-styles/default-var-styles.index';
 
 // .overrides{}
-@import './common/index.scss';
-@import './components/index.scss';
+@import './common/index';
+@import './components/index';
 @import '../global/common-standard-search';
 @import '../global/common-control-group';

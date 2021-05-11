@@ -1,5 +1,5 @@
 // CSS //
-@import "~normalize.css/normalize";
+@import '~normalize.css/normalize';
 @import '~@blueprintjs/core/lib/css/blueprint.css';
 @import '~@blueprintjs/datetime/lib/css/blueprint-datetime.css';
 @import '~@blueprintjs/select/lib/css/blueprint-select.css';
@@ -9,10 +9,10 @@
 
 // SCSS //
 // $pt-font-family-monospace: Consolas, Menlo, monospace; // the one thing I MUST change
-// @import "~@blueprintjs/core/src/blueprint.scss";
-// @import "~@blueprintjs/datetime/src/blueprint-datetime.scss";
-// @import "~@blueprintjs/select/src/blueprint-select.scss";
-// @import "~@blueprintjs/table/src/table.scss";
-// @import "~@blueprintjs/timezone/src/blueprint-timezone.scss";
+// @import '~@blueprintjs/core/src/blueprint';
+// @import '~@blueprintjs/datetime/src/blueprint-datetime';
+// @import '~@blueprintjs/select/src/blueprint-select';
+// @import '~@blueprintjs/table/src/table';
+// @import '~@blueprintjs/timezone/src/blueprint-timezone';
 
-// @import "../global/common-control-group.scss";
+// @import '../global/common-control-group';
