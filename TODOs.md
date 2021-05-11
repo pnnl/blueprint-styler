@@ -8,6 +8,8 @@
   - repair examples - include new ones...
   - does create react app accept the null deletion? probably not...
   - antd and default are broken due to svg-icon()
+  - copy dark mirror automatically on gulp build?
+  - rename default to original?
   - no dark theme
     - tags
     - dark button outlines should be inset?
