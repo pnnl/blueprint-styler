@@ -1,27 +1,11 @@
 @import '../global/root-selector';
 
-@import "../global/svg-icon-replacement";
+@import '../global/svg-icon-replacement';
 
 @import '../_default-var-styles/default-var-styles.index';
 
-// --variables & $variables
-// @import './carbon-colors'; // ???
-@import './colors';
-@import './color-aliases';
-@import "./variables";
-@import "./button-common";
-@import "./input-vars";
-@import "./slider-vars";
-
 // .overrides{}
-@import "./button-styles";
-@import './slider-styles';
-@import './input-styles';
-@import './editable-text-styles';
-@import './tabs-styles';
-@import './loading-and-progress-styles';
-@import './overlay-styles';
-@import './focus-states';
-@import "./typography";
-@import "../global/common-standard-search";
-@import "../global/common-control-group";
+@import './common/index.scss';
+@import './components/index.scss';
+@import '../global/common-standard-search';
+@import '../global/common-control-group';

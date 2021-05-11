@@ -1,8 +1,8 @@
 #{$root-selector}{
 
 /*! Components */ // move this?
---ibm-input-border:                     var(--black-trans-gray5); // custom
---ibm-dark-input-border:                var(--white-trans-gray1); // custom
+--input-border:                     var(--black-trans-gray5); // custom
+--dark-input-border:                var(--white-trans-gray1); // custom
 
 --input-background-color:               var(--black-trans-light-gray5);
 --input-background-color-disabled:      var(--black-trans-light-gray5);
@@ -13,8 +13,5 @@
 }
 
 .#{$ns}-dark{
-  --ibm-input-border: var(--ibm-dark-input-border); // custom
+  --input-border: var(--dark-input-border); // custom
 }
-
-$ibm-input-border:         var(--ibm-input-border); // custom
-$ibm-dark-input-border:    var(--ibm-dark-input-border); // custom
