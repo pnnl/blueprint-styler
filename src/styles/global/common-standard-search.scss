@@ -4,9 +4,9 @@
 // }
 
 .#{$ns}-input.#{$ns}-round,.#{$ns}-input[type=search] {
-    border-radius: null;
-    box-sizing:    null;
-    padding-left:  null;
+    border-radius: revert;
+    box-sizing:    revert;
+    padding-left:  revert;
 }
 
 .#{$ns}-input.#{$ns}-round {

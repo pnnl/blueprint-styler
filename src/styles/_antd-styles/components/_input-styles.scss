@@ -38,12 +38,6 @@
 
 }
 
-.#{$ns}-tag-input{
-  &.#{$ns}-active{
-    box-shadow: null; // .#{$ns}-input
-  }
-}
-
 .#{$ns}-control-indicator{
 
   @include antd-button-active-effect;

@@ -1,7 +1,7 @@
 @mixin focus-outline($offset: 1px) {
   outline: $pt-intent-primary solid 2px;
   outline-offset: $offset;
-  -moz-outline-radius: null;
+  -moz-outline-radius: 0;
 }
 
 :focus {

@@ -5,15 +5,14 @@
   - a dark color cannot link to its light counterpart or there will be a circular dependency
   - crazy css switching scheme
 - switch to create-react-app
-  - remove all instances of null in css, remove that build step
-  - switching to the standard default doesn't breaks the switcher
+  - dark-mirror generator at runtime
+  - circular dependency checker
+  - switching to default (from css) breaks the css import switcher
   - include default dimensions as vars for consumption
   - redo commenting out dark mode - for easier merges later on...
-  - circular dependency checker
 - v4
   - do it
 - CSS Build?
-  - dark-mirror on at runtime
   - separate different packages on build - core, selection, table, etc...
   - provide no minified?
   - provide non-fallback version of css?
@@ -45,12 +44,11 @@
 
 ### Styles
 - var(--theme) / General
-  - **BUG** rgba in `.bp3-popover2 .bp3-popover2-arrow:before`
-  - include sizes in lib/variables output
+  - ellipsize button text by default
   - editable text focus is broken
   - grayscale transparency alt
   - math with calc()
-  - input-transition-shadow needs to be broken into input shadow vars...
+  - input-transition-shadow could to be broken into input shadow vars...
 
 - [ant.design](https://ant.design/components/overview/)
   - button group with active could be slightly different - see original
