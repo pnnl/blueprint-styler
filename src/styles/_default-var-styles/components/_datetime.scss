@@ -43,10 +43,10 @@
 // // common.scss
 // $datepicker-padding: var(--datepicker-padding);
 
-$datepicker-min-width: var(--datepicker-min-width);
-$datepicker-day-size: var(--datepicker-day-size);
-$datepicker-header-height: var(--datepicker-header-height);
-$datepicker-header-margin: var(--datepicker-header-margin);
+// $datepicker-min-width: var(--datepicker-min-width);
+// $datepicker-day-size: var(--datepicker-day-size);
+// $datepicker-header-height: var(--datepicker-header-height);
+// $datepicker-header-margin: var(--datepicker-header-margin);
 
 $datepicker-background-color: var(--datepicker-background-color);
 $datepicker-day-background-color-hover: var(--datepicker-day-background-color-hover);
@@ -55,12 +55,12 @@ $dark-datepicker-background-color: var(--dark-datepicker-background-color);
 $dark-datepicker-day-background-color-hover: var(--dark-datepicker-day-background-color-hover);
 $dark-datepicker-day-background-color-active: var(--dark-datepicker-day-background-color-active);
 
-// $daterangepicker-range-background-color: var(--daterangepicker-range-background-color);
-// $daterangepicker-range-background-color-selected: var(--daterangepicker-range-background-color-selected);
-// $daterangepicker-range-background-color-selected-hover: var(--daterangepicker-range-background-color-selected-hover);
-// $dark-daterangepicker-range-background-color: var(--dark-daterangepicker-range-background-color);
-// $dark-daterangepicker-range-background-color-selected: var(--dark-daterangepicker-range-background-color-selected);
-// $dark-daterangepicker-range-background-color-selected-hover: var(--dark-daterangepicker-range-background-color-selected-hover);
+$daterangepicker-range-background-color: var(--daterangepicker-range-background-color);
+$daterangepicker-range-background-color-selected: var(--daterangepicker-range-background-color-selected);
+$daterangepicker-range-background-color-selected-hover: var(--daterangepicker-range-background-color-selected-hover);
+$dark-daterangepicker-range-background-color: var(--dark-daterangepicker-range-background-color);
+$dark-daterangepicker-range-background-color-selected: var(--dark-daterangepicker-range-background-color-selected);
+$dark-daterangepicker-range-background-color-selected-hover: var(--dark-daterangepicker-range-background-color-selected-hover);
 
 // // datepicker.scss
 // $cell-size: var(--cell-size);
