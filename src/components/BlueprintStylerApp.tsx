@@ -76,7 +76,6 @@ function BlueprintStylerApp() {
                             text={useDarkTheme ? "Light theme" : "Dark theme"}
                             onClick={e => handleThemeChange(theme, setTheme)}
                             style={{ justifyContent: 'space-between', marginBottom: 8 }}
-                            outlined
                             fill
                         />
 
