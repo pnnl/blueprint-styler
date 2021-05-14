@@ -65,7 +65,7 @@ Switches and slider handles both use these variables.
 --shine-opacity:          0.8;
 --shine-intent-color-hsl: var(--shine-color-hsl);
 --shine-intent-opacity:   0.1;
---dark-shine-color-hsl:   var(--shine-color-hsl);
+--dark-shine-color-hsl:   var(--white-hsl);
 --dark-shine-opacity:     0.05;
 --button-gradient:        linear-gradient(to bottom, hsla(var(--shine-color-hsl),        var(--shine-opacity)),        hsla(var(--shine-color-hsl),        0));
 --button-intent-gradient: linear-gradient(to bottom, hsla(var(--shine-intent-color-hsl), var(--shine-intent-opacity)), hsla(var(--shine-intent-color-hsl), 0));
