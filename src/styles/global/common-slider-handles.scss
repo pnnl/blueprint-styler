@@ -10,7 +10,7 @@
     margin-left: 0;
   }
   &.#{$ns}-end, &.#{$ns}-start {
-    width: null;
+    width: $handle-size;
   }
 
   .#{$ns}-slider.#{$ns}-vertical &{
@@ -22,7 +22,7 @@
     }
     &.#{$ns}-end,
     &.#{$ns}-start {
-      height: null;
+      height: $handle-size;
     }
   }
 }
