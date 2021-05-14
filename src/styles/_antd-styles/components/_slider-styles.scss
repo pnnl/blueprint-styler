@@ -1,49 +1,34 @@
+@import '../../global/common-slider-handles';
+
+#{$root-selector}{
+  /*! Components */
+  --slider-background-color:      var(--button-background-color); // custom
+  --dark-slider-background-color: var(--dark-gray5); // custom
+}
+.#{$ns}-dark{
+  --slider-background-color:      var(--dark-slider-background-color); // custom
+}
+
 .#{$ns}-slider-handle{
-  border-radius: 99px;
+
   // @include button-customizations();
   @include antd-button-active-effect();
   position: absolute;
 
+  background-color: var(--slider-background-color);
+
   transition: 200ms linear ;
-  transition-property: background-color, color, opacity, box-shadow ;
+  transition-property: background-color, color, opacity, box-shadow;
 
   &:hover {
+    background-color: var(--slider-background-color);
     box-shadow: var(--button-box-shadow-overlay-hover);
   }
 
   &.#{$ns}-active {
     transition-duration: 50ms;
-    // box-shadow: var(--button-box-shadow-overlay-active);
   }
 
-  &.#{$ns}-end {
-    border-bottom-left-radius: null;
-    border-top-left-radius: null;
-    margin-left: 0;
-  }
-  &.#{$ns}-start {
-    border-bottom-right-radius: null;
-    border-top-right-radius: null;
-    margin-left: 0;
-  }
-  &.#{$ns}-end, &.#{$ns}-start {
-    width: null;
-  }
-
-  .#{$ns}-slider.#{$ns}-vertical &{
-    &.#{$ns}-end {
-      border-bottom-left-radius: null;
-      border-bottom-right-radius: null;
-      border-top-left-radius: null;
-    }
-    &.#{$ns}-start {
-      border-bottom-right-radius: null;
-      border-top-left-radius: null;
-    }
-    &.#{$ns}-end,
-    &.#{$ns}-start {
-      height: null;
-    }
-  }
+  @include slider-handles();
 
 }

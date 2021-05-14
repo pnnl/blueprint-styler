@@ -1,28 +1,4 @@
-@mixin button-minimal-overrides() {
-  &:hover {
-    // box-shadow: unset;
-    // background: var(--minimal-button-background-color-hover);
-    // text-decoration: none;
-    color: var(--pt-intent-primary-hover);
-    border-color: var(--pt-intent-primary-hover);
-  }
-
-  &:active,
-  &.#{$ns}-active {
-    // box-shadow: unset;
-    // background: var(--minimal-button-background-color-active);
-    color: var(--pt-intent-primary-active);
-    border-color: var(--pt-intent-primary-active);
-  }
-
-  // &:disabled,
-  // &:disabled:hover,
-  // &.#{$ns}-disabled,
-  // &.#{$ns}-disabled:hover {
-  //   // border-color: var(--pt-text-color-disabled);
-  // }
-
-}
+// https://ant.design/components/button/
 
 @mixin antd-button-active-effect() {
   // creates the active animation of an expanding border
@@ -68,12 +44,13 @@
 
 @mixin button-base-overrides {
   transition: 200ms linear ;
-  transition-property: background-color, color, opacity, box-shadow ;
+  transition-property: background-color, color, opacity, box-shadow, border-color ;
   &:active{
     transition-duration: 50ms;
   }
 
   @include antd-button-active-effect;
+
   @each $intent, $colors in $button-intents {
     &.#{$ns}-intent-#{$intent} {
       @include antd-active-border-color(nth(($colors),3))
@@ -87,7 +64,9 @@
     color: inherit;
   }
 
-  &:not([class*="#{$ns}-intent-"]) {
+  // &:not([class*="#{$ns}-intent-"]) {
+  &:not([class*="#{$ns}-intent-"]):not(.#{$ns}-minimal):not(.#{$ns}-outlined):not(:disabled):not(.#{$ns}-disabled) {
+  // &.#{$ns}-button { // extra specificity?
 
     &:hover {
       box-shadow: var(--button-box-shadow-hover);
@@ -105,23 +84,43 @@
   }
 }
 
+@mixin button-outlined-customizations {
+
+    // Ghost Button
+
+    background-color: unset !important;
+    box-shadow:       unset !important;
+
+    &:hover {
+      border-color: var(--pt-intent-primary-hover);
+      color:        var(--pt-intent-primary-hover);
+    }
+
+    &:active,
+    &.#{$ns}-active {
+      border-color: var(--pt-intent-primary-active);
+      color:        var(--pt-intent-primary-active);
+    }
+
+    @each $intent, $colors in $button-intents {
+      &.#{$ns}-intent-#{$intent} {
+        border-color: currentColor;
+        // no hover changes, but good enough for now
+      }
+    }
+}
+
+
 
 .#{$ns}-button{  @include button-base-overrides }
 a.#{$ns}-button{ @include button-base-overrides }
 
 
 .#{$ns}-button{
-
   @include button-customizations();
-
-  // minimal must come last to override all default styles
-  &.#{$ns}-minimal {
-    @include button-minimal-overrides();
+  &.#{$ns}-outlined{
+    @include button-outlined-customizations();
   }
-  &.#{$ns}-outlined {
-    @include button-minimal-overrides();
-  }
-
 }
 
 

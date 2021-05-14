@@ -1,5 +1,6 @@
 
 // Ant D Button
+// https://ant.design/components/button/
 // https://github.com/ant-design/ant-design/blob/master/components/button/style/index.less
 
 #{$root-selector}{
@@ -9,8 +10,8 @@
 
 --button-active-effect-easing: cubic-bezier(.08,.82,.17,1); // custom
 
---button-border-color: hsla(var(--black-hsl), 0.15); // custom
---dark-button-border-color: hsla(var(--white-hsl), 0.2); // custom
+--button-border-color:      hsla(var(--black-hsl), 0.15); // var(--light-gray2); // custom
+--dark-button-border-color: hsla(var(--white-hsl), 0.2);  // var(--dark-gray5);  // custom
 --button-bottom-box-shadow: 0 2px 0 hsla(var(--black-hsl), .015); // custom
 
 --control-group-spacing: calc(-1 * var(--button-border-width)); // custom
@@ -82,10 +83,10 @@
 --dark-button-background-color-disabled:  hsla(var(--dark-gray5-hsl), 0.2);
 
 
---minimal-button-background-color-hover:          hsla(var(--blue5-hsl), var(--minimal-button-background-opacity)); // hsla(var(--blue5-hsl), 0.2);
---minimal-button-background-color-active:         hsla(var(--blue3-hsl), var(--minimal-button-background-opacity)); // hsla(var(--blue3-hsl), 0.3);
---dark-minimal-button-background-color-hover:     hsla(var(--blue2-hsl), var(--minimal-button-background-opacity)); // hsla(var(--blue5-hsl), 0.2);
---dark-minimal-button-background-color-active:    hsla(var(--blue1-hsl), var(--minimal-button-background-opacity)); // hsla(var(--blue3-hsl), 0.3);
+--minimal-button-background-color-hover:         hsla(var(--black-hsl), 0.05); // hsla(var(--blue5-hsl), var(--minimal-button-background-opacity)); // hsla(var(--blue5-hsl), 0.2);
+--minimal-button-background-color-active:        hsla(var(--black-hsl), 0.1); // hsla(var(--blue3-hsl), var(--minimal-button-background-opacity)); // hsla(var(--blue3-hsl), 0.3);
+--dark-minimal-button-background-color-hover:    hsla(var(--white-hsl), 0.05); // hsla(var(--blue2-hsl), var(--minimal-button-background-opacity)); // hsla(var(--blue5-hsl), 0.2);
+--dark-minimal-button-background-color-active:   hsla(var(--white-hsl), 0.1); // hsla(var(--blue1-hsl), var(--minimal-button-background-opacity)); // hsla(var(--blue3-hsl), 0.3);
 
 --button-outlined-border-color:  var(--button-border-color);
 --dark-button-outlined-border-color:  var(--dark-button-border-color);

@@ -6,21 +6,14 @@
   - crazy css switching scheme
 - switch to create-react-app
   - remove all instances of null in css, remove that build step
-  - fix antd
-    - disabled button still has hover state
-    - disabled button doesn't have a border
-    - link border color and outlined border color
-    - outlined button border gets too thick on hover?
-    - slider is broke
-    - calendar selection bg is broken
-    - input outline
+  - switching to the standard default doesn't breaks the switcher
   - include default dimensions as vars for consumption
   - redo commenting out dark mode - for easier merges later on...
   - circular dependency checker
 - v4
   - do it
 - CSS Build?
-  - copy dark mirror automatically on gulp build?
+  - dark-mirror on at runtime
   - separate different packages on build - core, selection, table, etc...
   - provide no minified?
   - provide non-fallback version of css?
@@ -60,8 +53,9 @@
   - input-transition-shadow needs to be broken into input shadow vars...
 
 - [ant.design](https://ant.design/components/overview/)
-  - update ant theme to use vars
-  - dark theme
+  - button group with active could be slightly different - see original
+  - disabled button in button group could have a border?
+  - slider
 - [IBM Carbon](https://www.carbondesignsystem.com/components/overview)
   - dark timepicker-input intent-danger (error) :focus states are broken
   - `<Callout/>`, `<Toast/>`, `<Alert/>`? more like [Carbon Notification](https://www.carbondesignsystem.com/components/notification/style)
