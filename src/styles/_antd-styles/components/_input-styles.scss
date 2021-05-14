@@ -9,16 +9,22 @@
   box-shadow: input-transition-shadow($input-shadow-color-focus), $pt-input-box-shadow;
 
   &:hover:not(:disabled):not(:focus):not(.#{$ns}-active){
-      box-shadow: input-transition-shadow($input-shadow-color-focus), inset 0 0 0 $button-border-width $antd-intent-primary-hover;
+      box-shadow:
+        input-transition-shadow($input-shadow-color-focus),
+        inset 0 0 0 $button-border-width var(--pt-intent-primary-hover);
   }
   &:active{
-    box-shadow: input-transition-shadow($antd-intent-primary-active, true), inset 0 0 0 0 transparent;
+    box-shadow:
+      input-transition-shadow(var(--pt-intent-primary-active), true),
+      inset 0 0 0 0 transparent;
   }
 
   &:focus,
   &.#{$ns}-active
   {
-    box-shadow: input-transition-shadow($input-shadow-color-focus, true), inset 0 0 0 0 transparent;
+    box-shadow:
+      input-transition-shadow($input-shadow-color-focus, true),
+      inset 0 0 0 0 transparent;
   }
 
 }
@@ -40,7 +46,7 @@
   transition-property: background-color, color, opacity, box-shadow ;
 
   .#{$ns}-control input:not(:disabled):hover~&{
-    box-shadow: $antd-button-box-shadow-hover;
+    box-shadow: var(--button-box-shadow-hover);
   }
 
   .#{$ns}-control input:not(:disabled):active~&{

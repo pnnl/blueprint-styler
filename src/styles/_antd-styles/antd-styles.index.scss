@@ -1,47 +1,12 @@
-// NORMALIZE //
-@import '~normalize.css/normalize';
+@import '../global/root-selector';
 
-// @import '../global/svg-icon-no-op';
+@import '../global/svg-icon-replacement';
 
-// COLORS //
-@import '~@blueprintjs/core/src/common/colors'; // !defaults
-@import './common/colors'; // overrides
-@import './common/color-aliases'; // overrides
+@import './components/button-vars'; // $button-... sizes
+@import '../_default-var-styles/default-var-styles.index';
 
-// GLOBAL VARIABLES //
-@import '~@blueprintjs/core/src/common/mixins'; // !defaults
-@import '~@blueprintjs/core/src/common/variables'; // !defaults
-@import './common/variables'; // overrides
-
-// COMPONENT VARIABLES //
-@import './components/button-vars';
-
-
-// COMPONENTS BUILD //
-// build components based on customized scss vars
-// CORE //
-@import '~@blueprintjs/core/src/reset';
-@import '../global/common-reset';
-@import '~@blueprintjs/core/src/typography';
-@import '~@blueprintjs/core/src/accessibility/focus-states';
-@import '~@blueprintjs/core/src/components/index';
-// EXTENSIONS //
-@import '~@blueprintjs/datetime/src/blueprint-datetime';
-@import '~@blueprintjs/select/src/blueprint-select';
-@import '~@blueprintjs/table/src/table';
-@import '~@blueprintjs/timezone/src/blueprint-timezone';
-
-
-// COMPONENT CSS OVERRIDES //
-// post css will combine class declarations and overwrite repeating properties
-@import './components/button-styles';
-@import './components/input-styles';
-@import './components/slider-styles';
+// .overrides{}
+@import './common/index';
+@import './components/index';
 @import '../global/common-standard-search';
-@import '../global/common-borderless-button-group';
-@import '../global/common-control-group';
-
-
-// CSS VARS //
-// import the css vars - they will be parsed by the css-vars-copy-loader.js
-@import '../global/variables-map';
+// @import '../global/common-control-group';

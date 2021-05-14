@@ -1,31 +1,31 @@
 @mixin button-minimal-overrides() {
   &:hover {
     // box-shadow: unset;
-    // background: $minimal-button-background-color-hover;
+    // background: var(--minimal-button-background-color-hover);
     // text-decoration: none;
-    color: $antd-intent-primary-hover;
-    border-color: $antd-intent-primary-hover;
+    color: var(--pt-intent-primary-hover);
+    border-color: var(--pt-intent-primary-hover);
   }
 
   &:active,
   &.#{$ns}-active {
     // box-shadow: unset;
-    // background: $minimal-button-background-color-active;
-    color: $antd-intent-primary-active;
-    border-color: $antd-intent-primary-active;
+    // background: var(--minimal-button-background-color-active);
+    color: var(--pt-intent-primary-active);
+    border-color: var(--pt-intent-primary-active);
   }
 
-  &:disabled,
-  &:disabled:hover,
-  &.#{$ns}-disabled,
-  &.#{$ns}-disabled:hover {
-    // border-color: $pt-text-color-disabled;
-  }
+  // &:disabled,
+  // &:disabled:hover,
+  // &.#{$ns}-disabled,
+  // &.#{$ns}-disabled:hover {
+  //   // border-color: var(--pt-text-color-disabled);
+  // }
 
 }
 
 @mixin antd-button-active-effect() {
-  $antd-active-effect-easing: cubic-bezier(.08,.82,.17,1);
+  // creates the active animation of an expanding border
 
   position: relative;
   &:after{
@@ -39,12 +39,12 @@
     pointer-events: none;
     border-radius: inherit;
 
-    color: $antd-intent-primary-hover; // easier to override other 'intent' colors
+    color: var(--pt-intent-primary-hover); // easier to override other 'intent' colors
     box-shadow: 0 0 0 6px currentColor;
     opacity: 0;
     transition:
-      opacity 2s $antd-active-effect-easing,
-      box-shadow .4s $antd-active-effect-easing;
+      opacity 2s var(--button-active-effect-easing),
+      box-shadow .4s var(--button-active-effect-easing);
   }
 
   &:active:after{
@@ -90,16 +90,16 @@
   &:not([class*="#{$ns}-intent-"]) {
 
     &:hover {
-      box-shadow: $antd-button-box-shadow-hover;
-      background-color: $button-background-color-hover;
-      color: $antd-intent-primary-hover;
+      box-shadow: var(--button-box-shadow-hover);
+      background-color: var(--button-background-color-hover);
+      color: var(--pt-intent-primary-hover);
     }
 
     &:active,
     &.#{$ns}-active {
-      box-shadow: $button-box-shadow-active;
-      background-color: $button-background-color-active;
-      color: $antd-intent-primary-active;
+      box-shadow: var(--button-box-shadow-active);
+      background-color: var(--button-background-color-active);
+      color: var(--pt-intent-primary-active);
     }
 
   }
@@ -141,7 +141,7 @@ a.#{$ns}-button{ @include button-base-overrides }
     padding-right: $select-padding + $pt-icon-size-standard;
 
     &:hover~.#{$ns}-icon {
-      color: $antd-intent-primary-hover;
+      color: var(--pt-intent-primary-hover);
     }
 
   }
@@ -159,20 +159,20 @@ a.#{$ns}-button{ @include button-base-overrides }
   &:after {
     transition: 200ms linear ;
     transition-property: background-color, color, opacity, box-shadow ;
-    box-shadow: $button-box-shadow;
+    box-shadow: var(--button-box-shadow);
   }
 
   &:hover:after {
-    box-shadow: $antd-button-box-shadow-hover;
-    background-color: $button-background-color-hover;
-    color: $antd-intent-primary-hover;
+    box-shadow: var(--button-box-shadow-hover);
+    background-color: var(--button-background-color-hover);
+    color: var(--pt-intent-primary-hover);
     transition-duration: 50ms;
   }
 
   &:active:after,
   &.#{$ns}-active:after {
-    box-shadow: $button-box-shadow-active;
-    background-color: $button-background-color-active;
-    color: $antd-intent-primary-active;
+    box-shadow: var(--button-box-shadow-active);
+    background-color: var(--button-background-color-active);
+    color: var(--pt-intent-primary-active);
   }
 }

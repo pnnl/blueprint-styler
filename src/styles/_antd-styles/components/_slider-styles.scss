@@ -8,12 +8,12 @@
   transition-property: background-color, color, opacity, box-shadow ;
 
   &:hover {
-    box-shadow: $antd-button-box-shadow-overlay-hover;
+    box-shadow: var(--button-box-shadow-overlay-hover);
   }
 
   &.#{$ns}-active {
     transition-duration: 50ms;
-    // box-shadow: $button-box-shadow-overlay-active;
+    // box-shadow: var(--button-box-shadow-overlay-active);
   }
 
   &.#{$ns}-end {

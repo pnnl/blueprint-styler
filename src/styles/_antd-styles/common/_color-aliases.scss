@@ -1,47 +1,47 @@
-// Copyright 2015 Palantir Technologies, Inc. All rights reserved.
-// Licensed under the Apache License, Version 2.0.
+#{$root-selector}{
 
 
-$pt-intent-primary:   $blue3;
-$pt-intent-success:   $green3;
-$pt-intent-warning:   $orange3;
-$pt-intent-danger:    $red3;
+/*! IntentColors */
 
-$pt-app-background-color:      $light-gray5;
-$pt-dark-app-background-color: $dark-gray3;
+--pt-intent-primary-hue:        var(--blue-hue);
+--pt-intent-primary-hsl:        var(--blue3-hsl);
+--pt-intent-primary-hover-hsl:  var(--blue4-hsl);
+--pt-intent-primary-active-hsl: var(--blue2-hsl);
 
-$pt-outline-color: rgba($blue3, 0.6);
+--pt-intent-success-hue:        var(--green-hue);
+--pt-intent-success-hsl:        var(--green3-hsl);
+--pt-intent-success-hover-hsl:  var(--green4-hsl);
+--pt-intent-success-active-hsl: var(--green2-hsl);
 
-$pt-heading-color:            rgba($black, 0.85);
-$pt-text-color:               rgba($black, 0.65);
-$pt-text-color-muted:         rgba($black, 0.45);
-$pt-text-color-disabled:      rgba($black, 0.25);
-$pt-link-color:               $blue3;
+--pt-intent-warning-hue:        var(--orange-hue);
+--pt-intent-warning-hsl:        var(--orange3-hsl);
+--pt-intent-warning-hover-hsl:  var(--orange4-hsl);
+--pt-intent-warning-active-hsl: var(--orange2-hsl);
 
-$pt-dark-heading-color:       rgba($white, 1);
-$pt-dark-text-color:          rgba($white, .85);
-$pt-dark-text-color-muted:    rgba($white, .65);
-$pt-dark-text-color-disabled: rgba($white, .45);
-$pt-dark-link-color:          $blue5;
+--pt-intent-danger-hue:        var(--red-hue);
+--pt-intent-danger-hsl:        var(--red3-hsl);
+--pt-intent-danger-hover-hsl:  var(--red4-hsl);
+--pt-intent-danger-active-hsl: var(--red2-hsl);
 
-// Default text selection color using #7dbcff
-$pt-text-selection-color: rgba(125, 188, 255, 0.6);
 
-$pt-icon-color:               rgba($black, 0.55);
-$pt-icon-color-hover:         $pt-heading-color;
-$pt-icon-color-disabled:      $pt-text-color-disabled;
-$pt-icon-color-selected:      $pt-intent-primary;
+/*! TextColors */
 
-$pt-dark-icon-color:          rgba($white, .65);
-$pt-dark-icon-color-hover:    $pt-dark-heading-color;
-$pt-dark-icon-color-disabled: $pt-dark-text-color-disabled;
-$pt-dark-icon-color-selected: $pt-intent-primary;
+--pt-heading-color:            hsla(var(--black-hsl), 0.85);
+--pt-text-color:               hsla(var(--black-hsl), 0.65);
+--pt-text-color-muted:         hsla(var(--black-hsl), 0.45);
+--pt-text-color-disabled:      hsla(var(--black-hsl), 0.25);
 
-$pt-divider-black:      rgba($black, 0.09);
-$pt-dark-divider-black: rgba($black, 0.4);
-$pt-dark-divider-white: rgba($white, 0.15);
+--pt-dark-heading-color:       hsla(var(--white-hsl), 1.00);
+--pt-dark-text-color:          hsla(var(--white-hsl), 0.85);
+--pt-dark-text-color-muted:    hsla(var(--white-hsl), 0.65);
+--pt-dark-text-color-disabled: hsla(var(--white-hsl), 0.45);
 
-$pt-code-text-color:            $pt-text-color-muted;
-$pt-dark-code-text-color:       $pt-dark-text-color-muted;
-$pt-code-background-color:      rgba($white, 0.7);
-$pt-dark-code-background-color: rgba($black, 0.3);
+
+/*! LayoutColors */
+
+--pt-divider-black:      hsla(var(--black-hsl), 0.09);
+--pt-dark-divider-black: hsla(var(--black-hsl), 0.4);
+--pt-dark-divider-white: hsla(var(--white-hsl), 0.15);
+
+
+}

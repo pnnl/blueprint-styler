@@ -1,130 +1,140 @@
-// Copyright 2015 Palantir Technologies, Inc. All rights reserved.
-// Licensed under the Apache License, Version 2.0.
+#{$root-selector}{
 
-@import './antd-colors';
+/*! ColorsHsl */
 
-// Gray scale
+// BEWARE: the colors in this files are reversed in order: 54321 NOT 12345
 
-$black: $gray-13;
+--grayscale-hue: 0;
 
-$dark-gray1: $gray-12;
-$dark-gray2: $gray-11;
-$dark-gray3: $gray-10;
-$dark-gray4: $gray-9;
-$dark-gray5: mix($gray-9, $gray-8);
-
-$gray1: $gray-8;
-$gray2: mix($gray-8, $gray-7);
-$gray3: $gray-7;
-$gray4: mix($gray-7, $gray-6);
-$gray5: $gray-6;
-
-$light-gray1: mix($gray-6, $gray-5);
-$light-gray2: $gray-5;
-$light-gray3: $gray-4;
-$light-gray4: $gray-3;
-$light-gray5: $gray-2;
-
-$white: $gray-1;
-
-// Core colors
-
-// blue
-$blue1: $blue-8;
-$blue2: $blue-7;
-$blue3: $blue-6;
-$blue4: $blue-5;
-$blue5: $blue-4;
-
-// green
-$green1: $green-8;
-$green2: $green-7;
-$green3: $green-6;
-$green4: $green-5;
-$green5: $green-4;
-
-// orange
-$orange1: $orange-8;
-$orange2: $orange-7;
-$orange3: $orange-6;
-$orange4: $orange-5;
-$orange5: $orange-4;
-
-// red
-$red1: $red-8;
-$red2: $red-7;
-$red3: $red-6;
-$red4: $red-5;
-$red5: $red-4;
-
-// Extended colors
+// ramped from bezier(0.3,0.3,0.7,0.8) // then kinda mapped
+--white-hsl:       0, 0%, 100%; //1
+--light-gray5-hsl: 0, 0%,  98%; //2
+--light-gray4-hsl: 0, 0%,  96%; //3
+--light-gray3-hsl: 0, 0%,  94%; //4
+--light-gray2-hsl: 0, 0%,  85%; //5
+--light-gray1-hsl: 0, 0%,  75%; //6
+--gray5-hsl:       0, 0%,  67%; //
+--gray4-hsl:       0, 0%,  60%; //
+--gray3-hsl:       0, 0%,  54%; //7
+--gray2-hsl:       0, 0%,  47%; //
+--gray1-hsl:       0, 0%,  40%; //
+--dark-gray5-hsl:  0, 0%,  33%; //8
+--dark-gray4-hsl:  0, 0%,  26%; //9
+--dark-gray3-hsl:  0, 0%,  20%; //
+--dark-gray2-hsl:  0, 0%,  12%; //10
+--dark-gray1-hsl:  0, 0%,   8%; //12
+--black-hsl:       0, 0%,   0%; //13
 
 // volcano
-$vermilion1: $volcano-8;
-$vermilion2: $volcano-7;
-$vermilion3: $volcano-6;
-$vermilion4: $volcano-5;
-$vermilion5: $volcano-4;
+--vermilion-hue: 15;
+--vermilion5-hsl: 19, 100%, 72%; //4
+--vermilion4-hsl: 17, 100%, 64%; //5
+--vermilion3-hsl: 15,  96%, 55%; //6
+--vermilion2-hsl: 13,  88%, 44%; //7
+--vermilion1-hsl: 11,  98%, 34%; //8
 
-// pink / magenta
-$rose1: $magenta-8;
-$rose2: $magenta-7;
-$rose3: $magenta-6;
-$rose4: $magenta-5;
-$rose5: $magenta-4;
+// red
+--red-hue: 357; // CORE //
+--red5-hsl:   1, 100%, 73%; //4
+--red4-hsl: 359, 100%, 65%; //5
+--red3-hsl: 357,  91%, 55%; //6
+--red2-hsl: 355,  83%, 44%; //7
+--red1-hsl: 353,  92%, 34%; //8
 
-// mix purple of magenta
-$violet1: mix($purple-8,$magenta-8);
-$violet2: mix($purple-7,$magenta-7);
-$violet3: mix($purple-6,$magenta-6);
-$violet4: mix($purple-5,$magenta-5);
-$violet5: mix($purple-4,$magenta-4);
+// magenta (pink)
+--rose-hue: 327;
+--rose5-hsl: 331, 100%, 76%; //4
+--rose4-hsl: 329,  91%, 66%; //5
+--rose3-hsl: 327,  82%, 55%; //6
+--rose2-hsl: 325,  74%, 44%; //7
+--rose1-hsl: 323,  82%, 34%; //8
+
+// magenta:327 + purple:265 / 2 = 296
+--violet-hue: 296; // magenta:327 purple:265
+--violet5-hsl: 296,  73%, 71%; //4
+--violet4-hsl: 296,  68%, 60%; //5
+--violet3-hsl: 296,  64%, 50%; //6
+--violet2-hsl: 296,  71%, 39%; //7
+--violet1-hsl: 296,  79%, 29%; //8
 
 // purple
-$indigo1: $purple-8;
-$indigo2: $purple-7;
-$indigo3: $purple-6;
-$indigo4: $purple-5;
-$indigo5: $purple-4;
+--indigo-hue: 265;
+--indigo5-hsl: 269,  73%, 71%; //4
+--indigo4-hsl: 267,  68%, 60%; //5
+--indigo3-hsl: 265,  64%, 50%; //6
+--indigo2-hsl: 263,  71%, 39%; //7
+--indigo1-hsl: 261,  79%, 29%; //8
 
 // geekblue
-$cobalt1: $geekblue-8;
-$cobalt2: $geekblue-7;
-$cobalt3: $geekblue-6;
-$cobalt4: $geekblue-5;
-$cobalt5: $geekblue-4;
+--cobalt-hue: 228;
+--cobalt5-hsl: 224, 100%, 76%; //4
+--cobalt4-hsl: 226,  91%, 66%; //5
+--cobalt3-hsl: 228,  82%, 55%; //6
+--cobalt2-hsl: 230,  74%, 44%; //7
+--cobalt1-hsl: 232,  82%, 34%; //8
+
+// blue
+--blue-hue: 209; // CORE //
+--blue5-hsl: 205, 100%, 71%; //4
+--blue4-hsl: 207, 100%, 63%; //5
+--blue3-hsl: 209, 100%, 55%; //6
+--blue2-hsl: 211,  92%, 44%; //7
+--blue1-hsl: 213, 100%, 35%; //8
 
 // cyan
-$turquoise1: $cyan-8;
-$turquoise2: $cyan-7;
-$turquoise3: $cyan-6;
-$turquoise4: $cyan-5;
-$turquoise5: $cyan-4;
+--turquoise-hue: 180;
+--turquoise5-hsl: 176,  64%, 61%; //4
+--turquoise4-hsl: 178,  61%, 51%; //5
+--turquoise3-hsl: 180,  82%, 42%; //6
+--turquoise2-hsl: 182,  90%, 32%; //7
+--turquoise1-hsl: 184, 100%, 23%; //8
 
-// mix cyan and lime?
-$forest1: mix($cyan-8,$lime-8);
-$forest2: mix($cyan-7,$lime-7);
-$forest3: mix($cyan-6,$lime-6);
-$forest4: mix($cyan-5,$lime-5);
-$forest5: mix($cyan-4,$lime-4);
+// green
+--green-hue: 100; // CORE //
+--green5-hsl:  96,  65%, 63%; //4
+--green4-hsl:  98,  62%, 53%; //5
+--green3-hsl: 100,  77%, 44%; //6
+--green2-hsl: 102,  85%, 34%; //7
+--green1-hsl: 104,  94%, 24%; //8
+
+// green:100 + lime:77 / 2 = 88.5?
+--forest-hue: 89;
+--forest5-hsl: 89, 65%, 63%; //4
+--forest4-hsl: 89, 62%, 53%; //5
+--forest3-hsl: 89, 77%, 44%; //6
+--forest2-hsl: 89, 85%, 34%; //7
+--forest1-hsl: 89, 94%, 24%; //8
 
 // lime
-$lime1: $lime-8;
-$lime2: $lime-7;
-$lime3: $lime-6;
-$lime4: $lime-5;
-$lime5: $lime-4;
+--lime-hue: 77;
+--lime1-hsl: 73,  85%, 66%; //4
+--lime2-hsl: 75,  78%, 56%; //5
+--lime3-hsl: 77,  85%, 46%; //6
+--lime4-hsl: 79,  95%, 36%; //7
+--lime5-hsl: 81, 100%, 27%; //8
 
 // gold
-$gold1: $gold-8;
-$gold2: $gold-7;
-$gold3: $gold-6;
-$gold4: $gold-5;
-$gold5: $gold-4;
+--gold-hue: 40;
+--gold5-hsl: 44, 100%, 70%; //4
+--gold4-hsl: 42, 100%, 62%; //5
+--gold3-hsl: 40,  96%, 53%; //6
+--gold2-hsl: 38,  94%, 43%; //7
+--gold1-hsl: 36, 100%, 34%; //8
+
+// orange
+--orange-hue: 30; // CORE //
+--orange5-hsl: 35, 100%, 71%; //4
+--orange4-hsl: 33, 100%, 63%; //5
+--orange3-hsl: 31,  96%, 53%; //6
+--orange2-hsl: 29,  93%, 43%; //7
+--orange1-hsl: 27, 100%, 34%; //8
 
 // hue of original with lightness of gold
-$sepia1: adjust-color(#63411e, $lightness: lightness($gold-8));
-$sepia2: adjust-color(#7d5125, $lightness: lightness($gold-7));
-$sepia3: adjust-color(#96622d, $lightness: lightness($gold-6));
-$sepia4: adjust-color(#b07b46, $lightness: lightness($gold-5));
-$sepia5: adjust-color(#c99765, $lightness: lightness($gold-4));
+--sepia-hue: 30;
+--sepia5-hsl: 30, 53%, 70%; //4
+--sepia4-hsl: 30, 54%, 62%; //5
+--sepia3-hsl: 30, 54%, 53%; //6
+--sepia2-hsl: 30, 43%, 43%; //7
+--sepia1-hsl: 30, 48%, 34%; //8
+
+}

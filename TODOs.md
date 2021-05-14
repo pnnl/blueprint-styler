@@ -3,18 +3,24 @@
 ### App tool
 - update readmes
   - a dark color cannot link to its light counterpart or there will be a circular dependency
+  - crazy css switching scheme
 - switch to create-react-app
-  - create build for libs
-  - repair examples - include new ones...
-  - does create react app accept the null deletion? probably not...
-  - antd and default are broken due to svg-icon()
-  - copy dark mirror automatically on gulp build?
-  - rename default to original?
-  - no dark theme
-    - tags
-    - dark button outlines should be inset?
-    - input-transition-shadow needs to be broken into input shadow vars...
+  - remove all instances of null in css, remove that build step
+  - fix antd
+    - disabled button still has hover state
+    - disabled button doesn't have a border
+    - link border color and outlined border color
+    - outlined button border gets too thick on hover?
+    - slider is broke
+    - calendar selection bg is broken
+    - input outline
+  - include default dimensions as vars for consumption
+  - redo commenting out dark mode - for easier merges later on...
+  - circular dependency checker
+- v4
+  - do it
 - CSS Build?
+  - copy dark mirror automatically on gulp build?
   - separate different packages on build - core, selection, table, etc...
   - provide no minified?
   - provide non-fallback version of css?
@@ -51,6 +57,8 @@
   - editable text focus is broken
   - grayscale transparency alt
   - math with calc()
+  - input-transition-shadow needs to be broken into input shadow vars...
+
 - [ant.design](https://ant.design/components/overview/)
   - update ant theme to use vars
   - dark theme

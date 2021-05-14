@@ -1,0 +1,93 @@
+
+// Ant D Button
+// https://github.com/ant-design/ant-design/blob/master/components/button/style/index.less
+
+#{$root-selector}{
+
+
+/*! Components */
+
+--button-active-effect-easing: cubic-bezier(.08,.82,.17,1); // custom
+
+--button-border-color: hsla(var(--black-hsl), 0.15); // custom
+--dark-button-border-color: hsla(var(--white-hsl), 0.2); // custom
+--button-bottom-box-shadow: 0 2px 0 hsla(var(--black-hsl), .015); // custom
+
+--control-group-spacing: calc(-1 * var(--button-border-width)); // custom
+--dark-control-group-spacing: calc(-1 * var(--button-border-width)); // custom
+
+--button-box-shadow:
+  inset 0 0 0 var(--button-border-width) var(--button-border-color),
+  var(--button-bottom-box-shadow);
+--button-box-shadow-hover:
+  inset 0 0 0 var(--button-border-width) var(--pt-intent-primary-hover),
+  var(--button-bottom-box-shadow);  // custom
+--button-box-shadow-active:
+  inset 0 0 0 var(--button-border-width) var(--pt-intent-primary-active),
+  var(--button-bottom-box-shadow);
+--button-box-shadow-selected:
+  inset 0 0 0 var(--button-border-width) var(--pt-intent-primary),
+  var(--button-bottom-box-shadow);  // custom
+
+--button-intent-box-shadow:
+  0 2px 0 hsla(var(--black-hsl), .045),
+  0 0 0 transparent;
+--button-intent-box-shadow-active: var(--button-intent-box-shadow);
+
+
+--dark-button-box-shadow:
+  inset 0 0 0 var(--button-border-width) var(--dark-button-border-color),
+  var(--button-bottom-box-shadow);
+--dark-button-box-shadow-hover:
+  inset 0 0 0 var(--button-border-width) var(--pt-intent-primary-hover),
+  var(--button-bottom-box-shadow); // custom
+--dark-button-box-shadow-active:
+  inset 0 0 0 var(--button-border-width) var(--pt-intent-primary-active),
+  var(--button-bottom-box-shadow);
+--dark-button-box-shadow-selected:
+  inset 0 0 0 var(--button-border-width) var(--pt-intent-primary),
+  var(--button-bottom-box-shadow); // custom
+
+--dark-button-intent-box-shadow:
+  0 2px 0 hsla(var(--black-hsl), .045),
+  0 0 0 transparent;
+--dark-button-intent-box-shadow-active: var(--dark-button-intent-box-shadow);
+
+
+
+--button-box-shadow-overlay:
+  0 0 0 var(--button-border-width) hsla(var(--black-hsl), 0.2),
+  0 1px 1px hsla(var(--black-hsl), 0.2);
+--button-box-shadow-overlay-hover:
+  0 0 0 var(--button-border-width) var(--pt-intent-primary-hover),
+  0 1px 1px hsla(var(--black-hsl), 0.1);  // custom
+--button-box-shadow-overlay-active:
+  0 0 0 var(--button-border-width) var(--pt-intent-primary-active),
+  0 1px 1px hsla(var(--black-hsl), 0.1);
+
+
+--button-gradient:        unset;
+--button-intent-gradient: unset;
+--dark-button-gradient:   unset;
+
+
+--button-background-color:           var(--white);
+--button-background-color-hover:     var(--button-background-color);
+--button-background-color-active:    var(--button-background-color);
+--button-background-color-disabled:  hsla(var(--light-gray1-hsl), 0.2);
+
+--dark-button-background-color:           var(--dark-gray2); // hsla(var(--dark-gray4-hsl), 0.8); // var(--dark-gray4);
+--dark-button-background-color-hover:     var(--dark-button-background-color);
+--dark-button-background-color-active:    var(--dark-button-background-color);
+--dark-button-background-color-disabled:  hsla(var(--dark-gray5-hsl), 0.2);
+
+
+--minimal-button-background-color-hover:          hsla(var(--blue5-hsl), var(--minimal-button-background-opacity)); // hsla(var(--blue5-hsl), 0.2);
+--minimal-button-background-color-active:         hsla(var(--blue3-hsl), var(--minimal-button-background-opacity)); // hsla(var(--blue3-hsl), 0.3);
+--dark-minimal-button-background-color-hover:     hsla(var(--blue2-hsl), var(--minimal-button-background-opacity)); // hsla(var(--blue5-hsl), 0.2);
+--dark-minimal-button-background-color-active:    hsla(var(--blue1-hsl), var(--minimal-button-background-opacity)); // hsla(var(--blue3-hsl), 0.3);
+
+--button-outlined-border-color:  var(--button-border-color);
+--dark-button-outlined-border-color:  var(--dark-button-border-color);
+
+}
