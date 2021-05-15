@@ -5,3 +5,7 @@
 @function hslax($arguments...) {
   @return #{'hsla(#{$arguments})'};
 }
+
+@mixin emit-identity-var($varName, $varValue) {
+  --#{$varName}: #{$varValue};
+}

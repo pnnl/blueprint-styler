@@ -6,7 +6,6 @@
   - crazy css switching scheme
   - importing a css file in scss with the .css suffix will break the style because it adds a css partial
 - switch to create-react-app
-  - include default dimensions as vars for consumption
   - redo commenting out dark mode - for easier merges later on...
 - v4
   - do it
@@ -14,10 +13,6 @@
   - separate different packages on build - core, selection, table, etc...
   - provide no minified?
   - provide non-fallback version of css?
-  - remove the need for the property:null delection strategy
-    - [postcss-remove-declaration](https://www.npmjs.com/package/postcss-remove-declaration/v/1.0.0)
-    - or always allow direct editing of the bas blueprint css
-    - null doesn't work
 - sections:
   - for each theme: add a readme to each project - default styles is project explainer
   - base theme component that imports scss files

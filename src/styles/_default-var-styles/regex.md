@@ -32,6 +32,10 @@ hsla
 # find this
 // replace var
 
+# replace emit-idnetity var // --pt-font-size: $pt-grid-size * 1.4; => @include emit-identity-var('pt-font-size', $pt-font-size);
+// --([\w-]*):
+@include emit-identity-var('$1', $$$1); // --$1:
+
 ```
 
 # Changes
