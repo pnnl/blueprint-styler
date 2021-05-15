@@ -324,7 +324,7 @@ Styleguide preformatted
 
 %keyboard {
   align-items: center;
-  background: $white;
+  background: var(--pt-app-top-background-color);
   border-radius: $pt-border-radius;
   box-shadow: $pt-elevation-shadow-1;
   color: $pt-text-color-muted;

@@ -75,7 +75,7 @@ $table-quadrant-scroll-container-overflow: 20px;
   }
 
   .#{$ns}-table-cell-client {
-    background: $white;
+    background: var(--cell-background-color);
   }
 }
 

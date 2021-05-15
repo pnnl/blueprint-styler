@@ -4,7 +4,7 @@
 @import "./common";
 
 .#{$ns}-datetimepicker {
-  background-color: $white;
+  background-color: var(--pt-app-top-background-color);
   border-radius: $pt-border-radius;
   padding: $pt-grid-size;
   text-align: center;
