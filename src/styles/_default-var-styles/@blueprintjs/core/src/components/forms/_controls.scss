@@ -43,7 +43,7 @@ $control-indicator-spacing: $pt-grid-size !default;
     box-shadow: none;
   }
 
-  .#{$ns}-dark & {
+  /* .#{$ns}-dark & {
     input#{$selector} ~ .#{$ns}-control-indicator {
       box-shadow: $dark-button-intent-box-shadow;
     }
@@ -62,7 +62,7 @@ $control-indicator-spacing: $pt-grid-size !default;
       background: hslax($control-checked-background-color-active-hsl, 0.5);
       box-shadow: none;
     }
-  }
+  } */
 }
 
 @mixin indicator-position($size) {
@@ -395,7 +395,7 @@ $control-indicator-spacing: $pt-grid-size !default;
       @include indicator-position($switch-width / 1em * $control-indicator-size-large);
     }
 
-    .#{$ns}-dark & {
+    /* .#{$ns}-dark & {
       @include indicator-colors(
         "",
         $dark-switch-background-color,
@@ -422,7 +422,7 @@ $control-indicator-spacing: $pt-grid-size !default;
         // inset shadow so it forms a dark line instead of blurring into the blue
         box-shadow: inset $dark-button-box-shadow;
       }
-    }
+    } */
 
     .#{$ns}-switch-inner-text {
       font-size: $switch-indicator-text-font-size;
@@ -458,7 +458,7 @@ $control-indicator-spacing: $pt-grid-size !default;
     }
   }
 
-  .#{$ns}-dark & {
+  /* .#{$ns}-dark & {
     color: $pt-dark-text-color;
 
     &.#{$ns}-disabled {
@@ -494,7 +494,7 @@ $control-indicator-spacing: $pt-grid-size !default;
         }
       }
     }
-  }
+  } */
 
   /*
   Inline labels

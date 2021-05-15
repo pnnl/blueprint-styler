@@ -167,12 +167,12 @@ $dark-drawer-background-color: $dark-gray4 !default;
     }
   }
 
-  &.#{$ns}-dark,
+  /* &.#{$ns}-dark,
   .#{$ns}-dark & {
     background: $dark-drawer-background-color;
     box-shadow: $pt-dark-dialog-box-shadow;
     color: $pt-dark-text-color;
-  }
+  } */
 }
 
 .#{$ns}-drawer-header {
@@ -204,14 +204,14 @@ $dark-drawer-background-color: $dark-gray4 !default;
     }
   }
 
-  .#{$ns}-dark & {
+  /* .#{$ns}-dark & {
     box-shadow: 0 1px 0 $pt-dark-divider-black;
 
     .#{$ns}-icon-large,
     .#{$ns}-icon {
       color: $pt-dark-icon-color;
     }
-  }
+  } */
 }
 
 .#{$ns}-drawer-body {
@@ -226,7 +226,7 @@ $dark-drawer-background-color: $dark-gray4 !default;
   padding: $drawer-padding/2 $drawer-padding;
   position: relative;
 
-  .#{$ns}-dark & {
+  /* .#{$ns}-dark & {
     box-shadow: inset 0 1px 0 $pt-dark-divider-black;
-  }
+  } */
 }

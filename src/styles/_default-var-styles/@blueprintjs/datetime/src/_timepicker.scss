@@ -79,9 +79,9 @@ $timepicker-control-width: $pt-grid-size * 3.3 !default;
       &.#{$ns}-intent-#{$intent} {
         @include pt-input-intent($color, $color-hsl);
 
-        .#{$ns}-dark & {
+        /* .#{$ns}-dark & {
           @include pt-dark-input-intent($color, $color-hsl);
-        }
+        } */
       }
     }
   }
@@ -109,7 +109,7 @@ $timepicker-control-width: $pt-grid-size * 3.3 !default;
   }
 }
 
-.#{$ns}-dark .#{$ns}-timepicker {
+/* .#{$ns}-dark .#{$ns}-timepicker {
   .#{$ns}-timepicker-input-row {
     background: $dark-input-background-color;
     box-shadow: $pt-dark-input-box-shadow;
@@ -122,7 +122,7 @@ $timepicker-control-width: $pt-grid-size * 3.3 !default;
   .#{$ns}-timepicker-input {
     color: $pt-dark-text-color;
   }
-}
+} */
 
 .#{$ns}-datepicker .#{$ns}-timepicker {
   margin-bottom: $datepicker-padding * 2;

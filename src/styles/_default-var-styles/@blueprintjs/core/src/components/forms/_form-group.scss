@@ -87,14 +87,14 @@ Styleguide form-group
 
   .#{$ns}-dark & {
     @each $intent, $color in $pt-dark-intent-text-colors {
-      &.#{$ns}-intent-#{$intent} {
+      /* &.#{$ns}-intent-#{$intent} {
         .#{$ns}-form-helper-text {
           color: $color;
         }
-      }
+      } */
     }
 
-    .#{$ns}-form-helper-text {
+    /* .#{$ns}-form-helper-text {
       color: $pt-dark-text-color-muted;
     }
 
@@ -103,9 +103,9 @@ Styleguide form-group
       .#{$ns}-text-muted,
       .#{$ns}-form-helper-text {
         // disabled state always overrides over styles
-        /* stylelint-disable-next-line declaration-no-important */
+        // stylelint-disable-next-line declaration-no-important
         color: $pt-dark-text-color-disabled !important;
       }
-    }
+    } */
   }
 }

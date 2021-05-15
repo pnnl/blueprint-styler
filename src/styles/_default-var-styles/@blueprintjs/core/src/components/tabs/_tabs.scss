@@ -171,7 +171,7 @@ $tab-indicator-width: 3px !default;
   }
 }
 
-.#{$ns}-dark {
+/* .#{$ns}-dark {
   .#{$ns}-tab {
     color: $pt-dark-text-color;
 
@@ -192,7 +192,7 @@ $tab-indicator-width: 3px !default;
   .#{$ns}-tab-indicator {
     background-color: $dark-tab-color-selected;
   }
-}
+} */
 
 .#{$ns}-flex-expander {
   flex: 1 1;

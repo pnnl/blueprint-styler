@@ -81,16 +81,16 @@
     }
   }
 
-  .#{$ns}-dark & {
+  /* .#{$ns}-dark & {
     .DayPicker-Day {
       &--hovered-range {
         // same for dark theme
 
-        /* stylelint-disable max-line-length */
+        // stylelint-disable max-line-length
         &:not(.DayPicker-Day--selected):not(.DayPicker-Day--selected-range):not(.DayPicker-Day--selected-range-start):not(.DayPicker-Day--selected-range-end) {
           background-color: $dark-daterangepicker-range-background-color;
         }
-        /* stylelint-enable max-line-length */
+        // stylelint-enable max-line-length
       }
 
       &--selected-range {
@@ -101,7 +101,7 @@
         }
       }
     }
-  }
+  } */
 }
 
 .#{$ns}-menu.#{$ns}-daterangepicker-shortcuts {

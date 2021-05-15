@@ -9,13 +9,13 @@
   padding: $pt-grid-size;
   text-align: center;
 
-  .#{$ns}-dark & {
+  /* .#{$ns}-dark & {
     background: $dark-gray4;
 
     .#{$ns}-datepicker {
       border-bottom: 1px solid $pt-dark-divider-black;
     }
-  }
+  } */
 
   .#{$ns}-datepicker {
     border-bottom: 1px solid $pt-divider-black;

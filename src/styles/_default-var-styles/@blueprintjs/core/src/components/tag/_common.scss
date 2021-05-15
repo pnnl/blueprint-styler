@@ -48,7 +48,7 @@ $tag-round-adjustment: 2px !default;
     padding-right: $tag-padding + $tag-round-adjustment;
   }
 
-  .#{$ns}-dark & {
+  /* .#{$ns}-dark & {
     @include pt-tag-interactive($dark-tag-default-color-hsl, 1);
 
     background-color: $dark-tag-default-color;
@@ -57,7 +57,7 @@ $tag-round-adjustment: 2px !default;
     > #{$icon-classes} {
       fill: currentColor;
     }
-  }
+  } */
 
   > #{$icon-classes} {
     fill: $white;
@@ -97,7 +97,7 @@ $tag-round-adjustment: 2px !default;
     background-color: hslax(var(--gray3-hsl), 0.2);
     color: $pt-text-color;
 
-    .#{$ns}-dark & {
+    /* .#{$ns}-dark & {
       @include pt-tag-minimal-interactive($dark-tag-default-color-hsl, 0.2);
 
       color: $pt-dark-text-color;
@@ -105,7 +105,7 @@ $tag-round-adjustment: 2px !default;
       > #{$icon-classes} {
         fill: $pt-dark-icon-color;
       }
-    }
+    } */
   }
 }
 
@@ -119,12 +119,12 @@ $tag-round-adjustment: 2px !default;
     fill: hslax($background-color-hsl,1);
   }
 
-  .#{$ns}-dark & {
+  /* .#{$ns}-dark & {
     @include pt-tag-minimal-interactive($background-color-hsl, 0.25);
 
     background-color: hslax($background-color-hsl, 0.25);
     color: $dark-text-color;
-  }
+  } */
 }
 
 @mixin pt-tag-interactive($background-color-hsl, $opacity) {
@@ -184,18 +184,18 @@ $tag-round-adjustment: 2px !default;
   }
 
   // CSS API support
-  // &:empty::before {
-  //   @include pt-icon();
-  //   content: $pt-icon-small-cross;
-  // }
+  /* &:empty::before {
+    @include pt-icon();
+    content: $pt-icon-small-cross;
+  } */
 
   .#{$ns}-large & {
     /* stylelint-disable-next-line declaration-no-important */
     margin-right: -$tag-padding-large !important;
     padding: 0 ($tag-padding-large / 2) 0 0;
 
-    // &:empty::before {
-    //   @include pt-icon-sized($pt-icon-size-large);
-    // }
+    /* &:empty::before {
+      @include pt-icon-sized($pt-icon-size-large);
+    } */
   }
 }

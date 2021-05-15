@@ -48,7 +48,7 @@
   }
 }
 
-.#{$ns}-dark .#{$ns}-spinner {
+/* .#{$ns}-dark .#{$ns}-spinner {
   .#{$ns}-spinner-head {
     stroke: $dark-progress-head-color;
   }
@@ -56,7 +56,7 @@
   .#{$ns}-spinner-track {
     stroke: $dark-progress-track-color;
   }
-}
+} */
 
 @each $intent, $color in $pt-intent-colors {
   .#{$ns}-spinner.#{$ns}-intent-#{$intent} .#{$ns}-spinner-head {

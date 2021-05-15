@@ -218,7 +218,7 @@ $button-intents: (
   color: $button-intent-color-disabled;
 }
 
-@mixin pt-dark-button() {
+/* @mixin pt-dark-button() {
   background-color: $dark-button-background-color;
   background-image: $dark-button-gradient;
   box-shadow: $dark-button-box-shadow;
@@ -248,20 +248,20 @@ $button-intents: (
     background: $dark-progress-track-color;
     stroke: $dark-progress-head-color;
   }
-}
+} */
 
-@mixin pt-dark-button-hover() {
+/* @mixin pt-dark-button-hover() {
   background-color: $dark-button-background-color-hover;
   box-shadow: $dark-button-box-shadow;
-}
+} */
 
-@mixin pt-dark-button-active() {
+/* @mixin pt-dark-button-active() {
   background-color: $dark-button-background-color-active;
   background-image: none;
   box-shadow: $dark-button-box-shadow-active;
-}
+} */
 
-@mixin pt-dark-button-disabled() {
+/* @mixin pt-dark-button-disabled() {
   background-color: $dark-button-background-color-disabled;
   background-image: none;
   box-shadow: none;
@@ -270,9 +270,9 @@ $button-intents: (
   &.#{$ns}-active {
     background: $dark-button-background-color-active-disabled;
   }
-}
+} */
 
-@mixin pt-dark-button-intent() {
+/* @mixin pt-dark-button-intent() {
   box-shadow: $dark-button-intent-box-shadow;
 
   &:hover {
@@ -288,13 +288,13 @@ $button-intents: (
   &.#{$ns}-disabled {
     @include pt-dark-button-intent-disabled();
   }
-}
+} */
 
-@mixin pt-dark-button-intent-disabled() {
+/* @mixin pt-dark-button-intent-disabled() {
   background-image: none;
   box-shadow: none;
   color: $dark-button-intent-color-disabled;
-}
+} */
 
 @mixin pt-button-minimal() {
   background: $minimal-button-background-color;
@@ -327,9 +327,9 @@ $button-intents: (
     }
   }
 
-  .#{$ns}-dark & {
+  /* .#{$ns}-dark & {
     @include pt-dark-button-minimal();
-  }
+  } */
 
   @each $intent, $colors in $button-intents {
     &.#{$ns}-intent-#{$intent} {
@@ -345,7 +345,7 @@ $button-intents: (
   }
 }
 
-@mixin pt-dark-button-minimal() {
+/* @mixin pt-dark-button-minimal() {
   background: $dark-minimal-button-background-color;
   box-shadow: none;
   color: inherit;
@@ -379,7 +379,7 @@ $button-intents: (
       background: $dark-minimal-button-background-color-active;
     }
   }
-}
+} */
 
 @mixin pt-button-minimal-intent($intent-color, $text-color, $dark-text-color, $intent-color-hsl, $text-color-hsl, $dark-text-color-hsl) {
   color: $text-color;
@@ -417,7 +417,7 @@ $button-intents: (
     stroke: $text-color;
   }
 
-  .#{$ns}-dark & {
+  /* .#{$ns}-dark & {
     color: $dark-text-color;
 
     &:hover {
@@ -440,7 +440,7 @@ $button-intents: (
         background: hslax($intent-color-hsl, 0.3);
       }
     }
-  }
+  } */
 }
 
 @mixin pt-button-minimal-divider() {
@@ -450,9 +450,9 @@ $button-intents: (
   margin: ($pt-button-height - $divider-height) / 2;
   width: $minimal-button-divider-width;
 
-  .#{$ns}-dark & {
+  /* .#{$ns}-dark & {
     background: $pt-dark-divider-white;
-  }
+  } */
 }
 
 @mixin pt-button-outlined() {
@@ -466,9 +466,9 @@ $button-intents: (
     border-color: var(--button-outlined-border-color-disabled);
   }
 
-  .#{$ns}-dark & {
+  /* .#{$ns}-dark & {
     @include pt-dark-button-outlined();
-  }
+  } */
 
   @each $intent, $colors in $button-intents {
     &.#{$ns}-intent-#{$intent} {
@@ -480,7 +480,7 @@ $button-intents: (
   }
 }
 
-@mixin pt-dark-button-outlined() {
+/* @mixin pt-dark-button-outlined() {
   border-color: hslax(var(--white-hsl), 0.4);
 
   &:disabled,
@@ -489,7 +489,7 @@ $button-intents: (
   &.#{$ns}-disabled:hover {
     border-color: hslax(var(--white-hsl), 0.2);
   }
-}
+} */
 
 @mixin pt-button-outlined-intent($text-color-hsl, $dark-text-color-hsl) {
   border-color: hslax($text-color-hsl, $button-outlined-border-intent-opacity);
@@ -499,12 +499,12 @@ $button-intents: (
     border-color: hslax($text-color-hsl, $button-outlined-border-disabled-intent-opacity);
   }
 
-  .#{$ns}-dark & {
+  /* .#{$ns}-dark & {
     border-color: hslax($dark-text-color-hsl, $button-outlined-border-intent-opacity);
 
     &:disabled,
     &.#{$ns}-disabled {
       border-color: hslax($dark-text-color-hsl, $button-outlined-border-disabled-intent-opacity);
     }
-  }
+  } */
 }

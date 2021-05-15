@@ -38,9 +38,9 @@
     &.#{$ns}-intent-#{$intent} {
       color: $color;
 
-      .#{$ns}-dark & {
+      /* .#{$ns}-dark & {
         color: map-get($pt-dark-intent-text-colors, $intent);
-      }
+      } */
     }
   }
 }

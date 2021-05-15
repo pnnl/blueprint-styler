@@ -40,7 +40,7 @@
     }
   }
 
-  .#{$ns}-dark & {
+  /* .#{$ns}-dark & {
     // support wrapping buttons in a tooltip, which adds a wrapper element
     // in dark theme, we adjust the spacing between buttons for best visual results
     &:not(.#{$ns}-minimal) {
@@ -56,5 +56,5 @@
         margin-bottom: $button-border-width;
       }
     }
-  }
+  } */
 }

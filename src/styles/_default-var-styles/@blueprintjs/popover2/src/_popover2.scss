@@ -61,7 +61,7 @@ $popover2-width: $pt-grid-size * 35 !default;
     }
   }
 
-  &.#{$ns}-dark,
+  /* &.#{$ns}-dark,
   .#{$ns}-dark & {
     @include popover2-appearance(
       $pt-dark-popover2-background-color,
@@ -70,7 +70,7 @@ $popover2-width: $pt-grid-size * 35 !default;
       $pt-dark-drop-shadow-opacity,
       $pt-dark-border-shadow-opacity
     );
-  }
+  } */
 }
 
 // the box-shadow under the arrow SVG paths

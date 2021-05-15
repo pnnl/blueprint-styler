@@ -28,9 +28,9 @@
   padding-right: $input-padding-horizontal * 3.5;
 }
 
-%pt-dark-select {
+/* %pt-dark-select {
   @include pt-dark-button();
-}
+} */
 
 %pt-select-disabled {
   background-color: $button-background-color-disabled;

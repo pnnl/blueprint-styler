@@ -127,7 +127,7 @@ Styleguide button
   }
 
   // dark theme
-  .#{$ns}-dark & {
+  /* .#{$ns}-dark & {
     &:not([class*="#{$ns}-intent-"]) {
       @include pt-dark-button();
 
@@ -147,7 +147,7 @@ Styleguide button
         stroke: $dark-progress-head-color;
       }
     }
-  }
+  } */
 
   // disabled and intent button icon should use same color as text
   &:disabled,

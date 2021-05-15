@@ -51,13 +51,13 @@ $file-input-button-padding-large: ($pt-input-height-large - $pt-button-height) /
         @include pt-button-disabled();
       }
 
-      .#{$ns}-dark & {
+      /* .#{$ns}-dark & {
         @include pt-dark-input-disabled();
 
         &::after {
           @include pt-dark-button-disabled();
         }
-      }
+      } */
     }
   }
 
@@ -66,9 +66,9 @@ $file-input-button-padding-large: ($pt-input-height-large - $pt-button-height) /
       color: $pt-text-color;
     }
 
-    .#{$ns}-dark & .#{$ns}-file-upload-input {
+    /* .#{$ns}-dark & .#{$ns}-file-upload-input {
       color: $pt-dark-text-color;
-    }
+    } */
   }
 
   &.#{$ns}-fill {
@@ -131,7 +131,7 @@ $file-input-button-padding-large: ($pt-input-height-large - $pt-button-height) /
     }
   }
 
-  .#{$ns}-dark & {
+  /* .#{$ns}-dark & {
     @include pt-dark-input();
     color: $pt-dark-text-color-disabled;
 
@@ -146,7 +146,7 @@ $file-input-button-padding-large: ($pt-input-height-large - $pt-button-height) /
     &:active::after {
       @include pt-dark-button-active();
     }
-  }
+  } */
 }
 
 // hack to force the button shadow to display since

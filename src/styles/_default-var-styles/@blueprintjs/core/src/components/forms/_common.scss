@@ -163,19 +163,19 @@ $control-group-stack: (
   }
 }
 
-@mixin pt-dark-input-disabled() {
+/* @mixin pt-dark-input-disabled() {
   background: $dark-input-background-color-disabled;
   box-shadow: none;
   color: $dark-input-color-disabled;
-}
+} */
 
-@mixin pt-dark-input-placeholder() {
+/* @mixin pt-dark-input-placeholder() {
   &::placeholder {
     color: $dark-input-placeholder-color;
   }
-}
+} */
 
-@mixin pt-dark-input() {
+/* @mixin pt-dark-input() {
   @include pt-dark-input-placeholder();
   background: $dark-input-background-color;
 
@@ -196,7 +196,7 @@ $control-group-stack: (
   &.#{$ns}-disabled {
     @include pt-dark-input-disabled();
   }
-}
+} */
 
 @mixin pt-input-intent($color, $color-hsl) {
   box-shadow: input-transition-shadow($color-hsl),
@@ -218,7 +218,7 @@ $control-group-stack: (
   }
 }
 
-@mixin pt-dark-input-intent($color, $color-hsl) {
+/* @mixin pt-dark-input-intent($color, $color-hsl) {
   box-shadow: dark-input-transition-shadow($color-hsl),
               inset border-shadow(1, $color-hsl),
               $pt-dark-input-box-shadow;
@@ -236,4 +236,4 @@ $control-group-stack: (
   &.#{$ns}-disabled {
     box-shadow: none;
   }
-}
+} */

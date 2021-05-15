@@ -204,7 +204,7 @@ Styleguide control-group
       margin-left: calc(var(--divider-margin) - var(--control-group-spacing));
     }
 
-    .#{$ns}-dark & {
+    /* .#{$ns}-dark & {
       > *:not(.#{$ns}-divider) {
         margin-right: 0;
       }
@@ -216,7 +216,7 @@ Styleguide control-group
       > .#{$ns}-button + .#{$ns}-button {
         margin-left: $button-border-width;
       }
-    }
+    } */
   }
 
   // Add border radius inheritance to support components wrapped in a popover

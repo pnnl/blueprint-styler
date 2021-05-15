@@ -35,13 +35,13 @@ $icon-classes: (
     color: $pt-icon-color-hover;
   }
 
-  // .#{$ns}-dark & {
-  //   color: $pt-dark-icon-color;
+  /* .#{$ns}-dark & {
+    color: $pt-dark-icon-color;
 
-  //   &:hover {
-  //     color: $pt-dark-icon-color-hover;
-  //   }
-  // }
+    &:hover {
+      color: $pt-dark-icon-color-hover;
+    }
+  } */
 }
 
 @mixin pt-icon(

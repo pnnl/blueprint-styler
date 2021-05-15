@@ -218,7 +218,7 @@ Styleguide button-group
     text-align: left;
   }
 
-  .#{$ns}-dark & {
+  /* .#{$ns}-dark & {
     // support wrapping buttons in a Blueprint.Tooltip, which adds a wrapper element
     // in dark theme, we adjust the spacing between buttons for best visual results
     &:not(.#{$ns}-minimal) {
@@ -236,5 +236,5 @@ Styleguide button-group
         margin-bottom: $button-border-width;
       }
     }
-  }
+  } */
 }
