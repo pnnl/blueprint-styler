@@ -279,9 +279,27 @@
 	--pt-dark-icon-color-selected: var(--pt-intent-primary);
 
 /*! Variables */
+	--pt-grid-size: 10px;
 	--pt-border-radius: 6px;
+	--pt-font-size: 14px;
+	--pt-font-size-large: 16px;
+	--pt-font-size-small: 12px;
+	--pt-line-height: 1.28581;
+	--icons16-family: Icons16;
+	--icons20-family: Icons20;
 	--pt-icon-size-standard: 16px;
 	--pt-icon-size-large: 20px;
+	--pt-button-height: 30px;
+	--pt-button-height-small: 24px;
+	--pt-button-height-smaller: 20px;
+	--pt-button-height-large: 40px;
+	--pt-input-height: 30px;
+	--pt-input-height-large: 40px;
+	--pt-input-height-small: 24px;
+	--pt-navbar-height: 50px;
+	--pt-z-index-base: 0;
+	--pt-z-index-content: 10;
+	--pt-z-index-overlay: 20;
 	--pt-border-shadow-opacity: 0.1;
 	--pt-drop-shadow-opacity: 0.2;
 	--pt-dark-border-shadow-opacity: 0.2;
@@ -300,7 +318,8 @@
 	--pt-dark-elevation-shadow-4: 0 0 0 1px hsla(var(--pt-dark-shadow-color-hsl),var(--pt-dark-border-shadow-opacity)),0 4px 8px hsla(var(--pt-dark-shadow-color-hsl),var(--pt-dark-drop-shadow-opacity)),0 18px 46px 6px hsla(var(--pt-dark-shadow-color-hsl),var(--pt-dark-drop-shadow-opacity));
 	--pt-transition-ease: cubic-bezier(0.4,1,0.75,0.9);
 	--pt-transition-ease-bounce: cubic-bezier(0.54,1.12,0.38,1.11);
-	--pt-input-box-shadow: inset 0 0 0 1px hsla(var(--pt-dark-shadow-color-hsl),0.15),inset 0 1px 1px hsla(var(--black-hsl),var(--pt-drop-shadow-opacity));
+	--pt-transition-duration: 100ms;
+	--pt-input-box-shadow: inset 0 0 0 1px hsla(var(--pt-shadow-color-hsl),0.15),inset 0 1px 1px hsla(var(--black-hsl),var(--pt-drop-shadow-opacity));
 	--pt-dialog-box-shadow: var(--pt-elevation-shadow-4);
 	--pt-popover-box-shadow: var(--pt-elevation-shadow-3);
 	--pt-tooltip-box-shadow: var(--pt-popover-box-shadow);
@@ -329,7 +348,7 @@
 	--shine-opacity: 0.8;
 	--shine-intent-color-hsl: var(--shine-color-hsl);
 	--shine-intent-opacity: 0.1;
-	--dark-shine-color-hsl: var(--shine-color-hsl);
+	--dark-shine-color-hsl: var(--white-hsl);
 	--dark-shine-opacity: 0.05;
 	--button-gradient: unset;
 	--button-intent-gradient: unset;
