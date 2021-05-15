@@ -4,8 +4,8 @@
 - update readmes
   - a dark color cannot link to its light counterpart or there will be a circular dependency
   - crazy css switching scheme
+  - importing a css file in scss with the .css suffix will break the style because it adds a css partial
 - switch to create-react-app
-  - switching to default (from css) breaks the css import switcher
   - include default dimensions as vars for consumption
   - redo commenting out dark mode - for easier merges later on...
 - v4
