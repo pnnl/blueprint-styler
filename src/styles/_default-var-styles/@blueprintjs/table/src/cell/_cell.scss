@@ -41,15 +41,15 @@
     background-color: $table-background-color // mix($table-background-color, $cell-background-color, 50%);
   }
 
-  // .#{$ns}-dark & {
-  //   .#{$ns}-table-cell-ledger-even {
-  //     // background-color: $dark-cell-background-color;
-  //   }
+  .#{$ns}-dark & {
+    .#{$ns}-table-cell-ledger-even {
+      background-color: $dark-cell-background-color;
+    }
 
-  //   .#{$ns}-table-cell-ledger-odd {
-  //     // background-color: $dark-table-background-color; // mix($dark-table-background-color, $dark-cell-background-color, 50%);
-  //   }
-  // }
+    .#{$ns}-table-cell-ledger-odd {
+      background-color: $dark-table-background-color; // mix($dark-table-background-color, $dark-cell-background-color, 50%);
+    }
+  }
 }
 
 .#{$ns}-table-editable-name input {

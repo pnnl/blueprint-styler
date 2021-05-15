@@ -177,24 +177,24 @@ $tree-icon-spacing: ($tree-row-height - $pt-icon-size-standard) / 2 !default;
   }
 }
 
-// .#{$ns}-dark {
-//   .#{$ns}-tree-node-content:hover {
-//     background-color: hslax(var(--gray1-hsl), 0.3);
-//   }
+.#{$ns}-dark {
+  .#{$ns}-tree-node-content:hover {
+    background-color: hslax(var(--gray1-hsl), 0.3);
+  }
 
-//   .#{$ns}-tree {
-//     #{$icon-classes} {
-//       // color: $pt-dark-icon-color;
+  .#{$ns}-tree {
+    #{$icon-classes} {
+      color: $pt-dark-icon-color;
 
-//       @each $intent, $colors in $pt-intent-colors {
-//         &.#{$ns}-intent-#{$intent} {
-//           @include intent-color($intent);
-//         }
-//       }
-//     }
-//   }
+      @each $intent, $colors in $pt-intent-colors {
+        &.#{$ns}-intent-#{$intent} {
+          @include intent-color($intent);
+        }
+      }
+    }
+  }
 
-//   .#{$ns}-tree-node.#{$ns}-tree-node-selected > .#{$ns}-tree-node-content {
-//     background-color: $pt-intent-primary;
-//   }
-// }
+  .#{$ns}-tree-node.#{$ns}-tree-node-selected > .#{$ns}-tree-node-content {
+    background-color: $pt-intent-primary;
+  }
+}

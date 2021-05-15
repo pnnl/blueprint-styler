@@ -101,14 +101,14 @@ label.#{$ns}-label {
     display: block;
   }
 
-  // .#{$ns}-dark & {
-  //   // color: $pt-dark-heading-color;
+  .#{$ns}-dark & {
+    color: $pt-dark-heading-color;
 
-  //   &.#{$ns}-disabled {
-  //     &,
-  //     .#{$ns}-text-muted {
-  //       // color: $pt-dark-text-color-disabled;
-  //     }
-  //   }
-  // }
+    &.#{$ns}-disabled {
+      &,
+      .#{$ns}-text-muted {
+        color: $pt-dark-text-color-disabled;
+      }
+    }
+  }
 }

@@ -171,28 +171,28 @@ $tab-indicator-width: 3px !default;
   }
 }
 
-// .#{$ns}-dark {
-//   .#{$ns}-tab {
-//     // color: $pt-dark-text-color;
+.#{$ns}-dark {
+  .#{$ns}-tab {
+    color: $pt-dark-text-color;
 
-//     &[aria-disabled="true"] {
-//       // color: $pt-dark-text-color-disabled;
-//     }
+    &[aria-disabled="true"] {
+      color: $pt-dark-text-color-disabled;
+    }
 
-//     &[aria-selected="true"] {
-//       // box-shadow: inset 0 (-$tab-indicator-width) 0 $dark-tab-color-selected;
-//     }
+    &[aria-selected="true"] {
+      box-shadow: inset 0 (-$tab-indicator-width) 0 $dark-tab-color-selected;
+    }
 
-//     &[aria-selected="true"],
-//     &:not([aria-disabled="true"]):hover {
-//       // color: $dark-tab-color-selected;
-//     }
-//   }
+    &[aria-selected="true"],
+    &:not([aria-disabled="true"]):hover {
+      color: $dark-tab-color-selected;
+    }
+  }
 
-//   .#{$ns}-tab-indicator {
-//     // background-color: $dark-tab-color-selected;
-//   }
-// }
+  .#{$ns}-tab-indicator {
+    background-color: $dark-tab-color-selected;
+  }
+}
 
 .#{$ns}-flex-expander {
   flex: 1 1;

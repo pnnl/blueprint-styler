@@ -39,9 +39,9 @@ Styleguide input
     width: 100%;
   }
 
-  // .#{$ns}-dark & {
-  //   // @include pt-dark-input();
-  // }
+  .#{$ns}-dark & {
+    @include pt-dark-input();
+  }
 
   @each $intent, $color in $pt-intent-colors {
 
@@ -50,9 +50,9 @@ Styleguide input
     &.#{$ns}-intent-#{$intent} {
       @include pt-input-intent($color, $color-hsl);
 
-      // .#{$ns}-dark & {
-      //   @include pt-dark-input-intent($color, $color-hsl);
-      // }
+      .#{$ns}-dark & {
+        @include pt-dark-input-intent($color, $color-hsl);
+      }
     }
   }
 
@@ -112,7 +112,7 @@ textarea.#{$ns}-input {
     padding: $input-small-padding;
   }
 
-  // .#{$ns}-dark & {
-  //   // @include pt-dark-input();
-  // }
+  .#{$ns}-dark & {
+    @include pt-dark-input();
+  }
 }

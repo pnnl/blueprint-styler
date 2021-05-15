@@ -17,9 +17,9 @@
   height: $pt-grid-size * 3;
   z-index: 1;
 
-  // .#{$ns}-dark & {
-  //   // box-shadow: 0 1px $pt-dark-divider-white;
-  // }
+  .#{$ns}-dark & {
+    box-shadow: 0 1px $pt-dark-divider-white;
+  }
 
   // two span children act as spacers to keep the title centered.
   > span {
@@ -57,9 +57,9 @@
   overflow-y: auto;
   z-index: 1;
 
-  // .#{$ns}-dark & {
-  //   // background-color: $dark-gray4;
-  // }
+  .#{$ns}-dark & {
+    background-color: $dark-gray4;
+  }
 
   &:nth-last-child(n + 4) {
     display: none;

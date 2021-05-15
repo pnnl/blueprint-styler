@@ -29,7 +29,7 @@
 }
 
 %pt-dark-select {
-  // @include pt-dark-button();
+  @include pt-dark-button();
 }
 
 %pt-select-disabled {

@@ -204,19 +204,19 @@ Styleguide control-group
       margin-left: calc(var(--divider-margin) - var(--control-group-spacing));
     }
 
-    // .#{$ns}-dark & {
-    //   > *:not(.#{$ns}-divider) {
-    //     margin-right: var(--dark-control-group-spacing);
-    //   }
+    .#{$ns}-dark & {
+      > *:not(.#{$ns}-divider) {
+        margin-right: 0;
+      }
 
 
-    //   // consecutive buttons within a button group look okay out of the box, but
-    //   // we need need to make a small correction for non-grouped buttons. this
-    //   // replicates what's already done in dark theme button groups.
-    //   > .#{$ns}-button + .#{$ns}-button {
-    //     margin-left: var(--control-group-spacing);
-    //   }
-    // }
+      // consecutive buttons within a button group look okay out of the box, but
+      // we need need to make a small correction for non-grouped buttons. this
+      // replicates what's already done in dark theme button groups.
+      > .#{$ns}-button + .#{$ns}-button {
+        margin-left: $button-border-width;
+      }
+    }
   }
 
   // Add border radius inheritance to support components wrapped in a popover

@@ -124,33 +124,33 @@ $tag-input-icon-padding-large: ($pt-input-height-large - $pt-icon-size-large) / 
     }
   }
 
-  // .#{$ns}-dark &,
-  // &.#{$ns}-dark {
-  //   .#{$ns}-tag-input-icon {
-  //     // color: $pt-dark-icon-color;
-  //   }
+  .#{$ns}-dark &,
+  &.#{$ns}-dark {
+    .#{$ns}-tag-input-icon {
+      color: $pt-dark-icon-color;
+    }
 
-  //   .#{$ns}-input-ghost {
-  //     // @include pt-dark-input-placeholder();
+    .#{$ns}-input-ghost {
+      @include pt-dark-input-placeholder();
 
-  //     // color: $dark-input-color;
-  //   }
+      color: $dark-input-color;
+    }
 
-  //   &.#{$ns}-active {
-  //     // background-color: $dark-input-background-color;
-  //     box-shadow: dark-input-transition-shadow($dark-input-shadow-color-focus-hsl, true),
-  //                 $pt-dark-input-box-shadow;
+    &.#{$ns}-active {
+      background-color: $dark-input-background-color;
+      box-shadow: dark-input-transition-shadow($dark-input-shadow-color-focus-hsl, true),
+                  $pt-dark-input-box-shadow;
 
-  //     @each $intent, $color in $pt-intent-text-colors {
+      @each $intent, $color in $pt-intent-text-colors {
 
-  //     $color-hsl: nth(map-get($button-intents, $intent), 4);
+      $color-hsl: nth(map-get($button-intents, $intent), 4);
 
-  //       &.#{$ns}-intent-#{$intent} {
-  //         // box-shadow: input-transition-shadow($color-hsl, true), $pt-dark-input-box-shadow;
-  //       }
-  //     }
-  //   }
-  // }
+        &.#{$ns}-intent-#{$intent} {
+          box-shadow: input-transition-shadow($color-hsl, true), $pt-dark-input-box-shadow;
+        }
+      }
+    }
+  }
 }
 
 // TODO: this is probably a useful modifier that we should pull into core, and use in EditableText

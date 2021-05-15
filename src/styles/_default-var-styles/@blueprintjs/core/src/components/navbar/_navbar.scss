@@ -22,7 +22,7 @@ Markup:
   </div>
 </nav>
 
-// .#{$ns}-dark - Dark theme
+.#{$ns}-dark - Dark theme
 
 Styleguide navbar
 */
@@ -41,20 +41,20 @@ $dark-navbar-background-color: $dark-gray5 !default;
   width: 100%;
   z-index: $pt-z-index-content;
 
-  // &.#{$ns}-dark,
-  // .#{$ns}-dark & {
-  //   // background-color: $dark-navbar-background-color;
-  // }
+  &.#{$ns}-dark,
+  .#{$ns}-dark & {
+    background-color: $dark-navbar-background-color;
+  }
 
   // shadow for dark navbar in light theme apps
-  // &.#{$ns}-dark {
-  //   // box-shadow: inset $pt-dark-elevation-shadow-1;
-  // }
+  &.#{$ns}-dark {
+    box-shadow: inset $pt-dark-elevation-shadow-1;
+  }
 
   // shadow for dark navbar in dark theme apps
-  // .#{$ns}-dark & {
-  //   // box-shadow: $pt-dark-elevation-shadow-1;
-  // }
+  .#{$ns}-dark & {
+    box-shadow: $pt-dark-elevation-shadow-1;
+  }
 
   &.#{$ns}-fixed-top {
     left: 0;
@@ -88,9 +88,9 @@ $dark-navbar-background-color: $dark-gray5 !default;
   height: $pt-navbar-height - $pt-grid-size * 3;
   margin: 0 $pt-grid-size;
 
-  // .#{$ns}-dark & {
-  //   // border-left-color: $pt-dark-divider-white;
-  // }
+  .#{$ns}-dark & {
+    border-left-color: $pt-dark-divider-white;
+  }
 }
 
 /*

@@ -51,13 +51,13 @@ $file-input-button-padding-large: ($pt-input-height-large - $pt-button-height) /
         @include pt-button-disabled();
       }
 
-      // .#{$ns}-dark & {
-      //   // @include pt-dark-input-disabled();
+      .#{$ns}-dark & {
+        @include pt-dark-input-disabled();
 
-      //   &::after {
-      //     // @include pt-dark-button-disabled();
-      //   }
-      // }
+        &::after {
+          @include pt-dark-button-disabled();
+        }
+      }
     }
   }
 
@@ -66,9 +66,9 @@ $file-input-button-padding-large: ($pt-input-height-large - $pt-button-height) /
       color: $pt-text-color;
     }
 
-    // .#{$ns}-dark & .#{$ns}-file-upload-input {
-    //   // color: $pt-dark-text-color;
-    // }
+    .#{$ns}-dark & .#{$ns}-file-upload-input {
+      color: $pt-dark-text-color;
+    }
   }
 
   &.#{$ns}-fill {
@@ -131,22 +131,22 @@ $file-input-button-padding-large: ($pt-input-height-large - $pt-button-height) /
     }
   }
 
-  // .#{$ns}-dark & {
-  //   // @include pt-dark-input();
-  //   // color: $pt-dark-text-color-disabled;
+  .#{$ns}-dark & {
+    @include pt-dark-input();
+    color: $pt-dark-text-color-disabled;
 
-  //   &::after {
-  //     // @include pt-dark-button();
-  //   }
+    &::after {
+      @include pt-dark-button();
+    }
 
-  //   &:hover::after, .💩💩💩 { // poop emoji so this selector is not INCORRECTLY merged with .bp3-file-upload-input:after:hover
-  //     // @include pt-dark-button-hover();
-  //   }
+    &:hover::after, .💩💩💩 { // poop emoji so this selector is not INCORRECTLY merged with .bp3-file-upload-input:after:hover
+      @include pt-dark-button-hover();
+    }
 
-  //   &:active::after {
-  //     // @include pt-dark-button-active();
-  //   }
-  // }
+    &:active::after {
+      @include pt-dark-button-active();
+    }
+  }
 }
 
 // hack to force the button shadow to display since

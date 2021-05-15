@@ -25,9 +25,9 @@ $table-quadrant-scroll-container-overflow: 20px;
   position: absolute;
   top: 0;
 
-  // .#{$ns}-dark & {
-  //   // background-color: $dark-table-background-color;
-  // }
+  .#{$ns}-dark & {
+    background-color: $dark-table-background-color;
+  }
 }
 
 .#{$ns}-table-quadrant-scroll-container {

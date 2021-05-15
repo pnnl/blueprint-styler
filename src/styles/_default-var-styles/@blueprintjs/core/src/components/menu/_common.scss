@@ -59,22 +59,22 @@ $dark-menu-item-color-active: $dark-minimal-button-background-color-active !defa
     cursor: not-allowed;
   }
 
-  // .#{$ns}-dark & {
-  //   @include dark-menu-item($disabled-selector, $hover-selector);
-  // }
+  .#{$ns}-dark & {
+    @include dark-menu-item($disabled-selector, $hover-selector);
+  }
 }
 
 @mixin dark-menu-item($disabled-selector: ".#{$ns}-disabled", $hover-selector: ":hover") {
   color: inherit;
 
   &#{$hover-selector} {
-    // background-color: $dark-menu-item-color-hover;
+    background-color: $dark-menu-item-color-hover;
     color: inherit;
   }
 
   &#{$disabled-selector} {
     background-color: inherit;
-    // color: $pt-dark-text-color-disabled;
+    color: $pt-dark-text-color-disabled;
   }
 }
 
@@ -127,9 +127,9 @@ $dark-menu-item-color-active: $dark-minimal-button-background-color-active !defa
   display: block;
   margin: $half-grid-size;
 
-  // .#{$ns}-dark & {
-  //   // border-top-color: $pt-dark-divider-white;
-  // }
+  .#{$ns}-dark & {
+    border-top-color: $pt-dark-divider-white;
+  }
 }
 
 @mixin menu-header($heading-selector: null) {

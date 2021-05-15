@@ -43,26 +43,26 @@ $control-indicator-spacing: $pt-grid-size !default;
     box-shadow: none;
   }
 
-  // .#{$ns}-dark & {
-  //   input#{$selector} ~ .#{$ns}-control-indicator {
-  //     // box-shadow: $dark-button-intent-box-shadow;
-  //   }
+  .#{$ns}-dark & {
+    input#{$selector} ~ .#{$ns}-control-indicator {
+      box-shadow: $dark-button-intent-box-shadow;
+    }
 
-  //   &:hover input#{$selector} ~ .#{$ns}-control-indicator {
-  //     // background-color: $control-checked-background-color-hover;
-  //     // box-shadow: $dark-button-intent-box-shadow;
-  //   }
+    &:hover input#{$selector} ~ .#{$ns}-control-indicator {
+      background-color: $control-checked-background-color-hover;
+      box-shadow: $dark-button-intent-box-shadow;
+    }
 
-  //   input:not(:disabled):active#{$selector} ~ .#{$ns}-control-indicator {
-  //     // background-color: $control-checked-background-color-active;
-  //     // box-shadow: $dark-button-intent-box-shadow-active;
-  //   }
+    input:not(:disabled):active#{$selector} ~ .#{$ns}-control-indicator {
+      background-color: $control-checked-background-color-active;
+      box-shadow: $dark-button-intent-box-shadow-active;
+    }
 
-  //   input:disabled#{$selector} ~ .#{$ns}-control-indicator {
-  //     // background: hslax($control-checked-background-color-active-hsl, 0.5);
-  //     // box-shadow: none;
-  //   }
-  // }
+    input:disabled#{$selector} ~ .#{$ns}-control-indicator {
+      background: hslax($control-checked-background-color-active-hsl, 0.5);
+      box-shadow: none;
+    }
+  }
 }
 
 @mixin indicator-position($size) {
@@ -395,34 +395,34 @@ $control-indicator-spacing: $pt-grid-size !default;
       @include indicator-position($switch-width / 1em * $control-indicator-size-large);
     }
 
-    // .#{$ns}-dark & {
-    //   // @include indicator-colors(
-    //   //   "",
-    //   //   $dark-switch-background-color,
-    //   //   $dark-switch-background-color-hover,
-    //   //   $dark-switch-background-color-active,
-    //   //   $dark-switch-background-color-disabled,
-    //   //   $dark-switch-indicator-background-color-disabled
-    //   // );
-    //   // @include indicator-colors(
-    //   //   ":checked",
-    //   //   $dark-switch-checked-background-color,
-    //   //   $dark-switch-checked-background-color-hover,
-    //   //   $dark-switch-checked-background-color-active,
-    //   //   $dark-switch-checked-background-color-disabled,
-    //   //   $dark-switch-indicator-background-color-disabled
-    //   // );
+    .#{$ns}-dark & {
+      @include indicator-colors(
+        "",
+        $dark-switch-background-color,
+        $dark-switch-background-color-hover,
+        $dark-switch-background-color-active,
+        $dark-switch-background-color-disabled,
+        $dark-switch-indicator-background-color-disabled
+      );
+      @include indicator-colors(
+        ":checked",
+        $dark-switch-checked-background-color,
+        $dark-switch-checked-background-color-hover,
+        $dark-switch-checked-background-color-active,
+        $dark-switch-checked-background-color-disabled,
+        $dark-switch-indicator-background-color-disabled
+      );
 
-    //   .#{$ns}-control-indicator::before {
-    //     // background: $dark-switch-indicator-background-color;
-    //     // box-shadow: $dark-button-box-shadow;
-    //   }
+      .#{$ns}-control-indicator::before {
+        background: $dark-switch-indicator-background-color;
+        box-shadow: $dark-button-box-shadow;
+      }
 
-    //   input:checked ~ .#{$ns}-control-indicator::before {
-    //     // inset shadow so it forms a dark line instead of blurring into the blue
-    //     // box-shadow: inset $dark-button-box-shadow;
-    //   }
-    // }
+      input:checked ~ .#{$ns}-control-indicator::before {
+        // inset shadow so it forms a dark line instead of blurring into the blue
+        box-shadow: inset $dark-button-box-shadow;
+      }
+    }
 
     .#{$ns}-switch-inner-text {
       font-size: $switch-indicator-text-font-size;
@@ -458,43 +458,43 @@ $control-indicator-spacing: $pt-grid-size !default;
     }
   }
 
-  // .#{$ns}-dark & {
-  //   // color: $pt-dark-text-color;
+  .#{$ns}-dark & {
+    color: $pt-dark-text-color;
 
-  //   &.#{$ns}-disabled {
-  //     // color: $pt-dark-text-color-disabled;
-  //   }
+    &.#{$ns}-disabled {
+      color: $pt-dark-text-color-disabled;
+    }
 
-  //   .#{$ns}-control-indicator {
-  //     // background-color: $dark-control-background-color;
-  //     // background-image: $dark-button-gradient;
-  //     // box-shadow: $dark-button-box-shadow;
-  //   }
+    .#{$ns}-control-indicator {
+      background-color: $dark-control-background-color;
+      background-image: $dark-button-gradient;
+      box-shadow: $dark-button-box-shadow;
+    }
 
-  //   &:hover .#{$ns}-control-indicator {
-  //     // background-color: $dark-control-background-color-hover;
-  //   }
+    &:hover .#{$ns}-control-indicator {
+      background-color: $dark-control-background-color-hover;
+    }
 
-  //   input:not(:disabled):active ~ .#{$ns}-control-indicator {
-  //     // background: $dark-control-background-color-active;
-  //     // box-shadow: $dark-button-box-shadow-active;
-  //   }
+    input:not(:disabled):active ~ .#{$ns}-control-indicator {
+      background: $dark-control-background-color-active;
+      box-shadow: $dark-button-box-shadow-active;
+    }
 
-  //   input:disabled ~ .#{$ns}-control-indicator {
-  //     // background: $dark-button-background-color-disabled;
-  //     // box-shadow: none;
-  //     // cursor: not-allowed;
-  //   }
+    input:disabled ~ .#{$ns}-control-indicator {
+      background: $dark-button-background-color-disabled;
+      box-shadow: none;
+      cursor: not-allowed;
+    }
 
-  //   &.#{$ns}-checkbox input:disabled {
-  //     &:checked,
-  //     &:indeterminate {
-  //       ~ .#{$ns}-control-indicator {
-  //         // color: $dark-button-color-disabled;
-  //       }
-  //     }
-  //   }
-  // }
+    &.#{$ns}-checkbox input:disabled {
+      &:checked,
+      &:indeterminate {
+        ~ .#{$ns}-control-indicator {
+          color: $dark-button-color-disabled;
+        }
+      }
+    }
+  }
 
   /*
   Inline labels
