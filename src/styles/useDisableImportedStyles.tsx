@@ -69,6 +69,7 @@ export const createUseDisableImportedStyles = (
     // add .bpx-dark { --all-the-vars: var(--all-the-dark-vars); }
     addDarkMirrorToStyleSheet(localStyleSheet)
 
+    // add it to the globally accessible list
     switchableGlobalStyleSheets.push(localStyleSheet)
 
     return () => {
