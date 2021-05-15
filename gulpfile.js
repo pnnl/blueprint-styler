@@ -31,8 +31,8 @@ const createReactAppPostCssPlugins = createReactAppPostCssConfig.plugins()
 
 
 const compileLibsTask = function () {
-    const scssOutput = gulp.src('./src/styles/_default-var-styles/*.index.scss')
-    // const scssOutput = gulp.src('./src/styles/_*-styles/*.index.scss')
+    // const scssOutput = gulp.src('./src/styles/_default-var-styles/*.index.scss')
+    const scssOutput = gulp.src('./src/styles/_*-styles/*.index.scss')
         .pipe(sass(sassConfig).on('error', sass.logError))
         .pipe(postcss(createReactAppPostCssPlugins)) // make sure we are consistent with create-react-app
 

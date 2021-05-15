@@ -5,9 +5,6 @@
   --slider-background-color:      var(--button-background-color); // custom
   --dark-slider-background-color: var(--dark-gray5); // custom
 }
-.#{$ns}-dark{
-  --slider-background-color:      var(--dark-slider-background-color); // custom
-}
 
 .#{$ns}-slider-handle{
 

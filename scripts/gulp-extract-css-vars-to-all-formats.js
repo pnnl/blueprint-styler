@@ -72,7 +72,7 @@ module.exports = () => through2.obj(function (file, enc, next) {
 
             // vars equal raw values // CSS_VAR: 24px;
             const cssValue = match[3] // value of the css
-                .replace(/[\n\t\r]+/g, '') // replace all newlines, tabs, and line feeds
+                .replace(/[\n\t\r]+/ig, '') // replace all newlines, tabs, and line feeds
             cssObjValues[currentCategory][cssName] = cssValue;
 
             // identity // CssVar: "var(--css-var)",

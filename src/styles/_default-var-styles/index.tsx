@@ -4,8 +4,8 @@ import './styler-styles.scss'
 
 const useDisableImportedStyles = createUseDisableImportedStyles()
 
-export const CssComponent: React.FC<{}> = () => {
+export const CssComponent: React.FC = (props) => {
     useDisableImportedStyles()
-    return null
+    return <>{props.children}</>
 }
 export default CssComponent

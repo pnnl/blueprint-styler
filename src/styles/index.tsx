@@ -49,7 +49,7 @@ export type StyleSwitcherProps = {
     currentStyleSwitcherConfig?: ComponentLabel
 }
 export const StyleSwitcher: React.FC<StyleSwitcherProps> = ({ currentStyleSwitcherConfig: currentStyleConfig }) => {
-    const CurrentStyleComponent = currentStyleConfig?.Component
+    const CurrentStyleComponent: React.FC = currentStyleConfig?.Component
     return (<>
         {/* just importing FallbackStylesComponent is good enough, even if it never actually renders */}
         {currentStyleConfig == null && <FallbackStylesComponent />}

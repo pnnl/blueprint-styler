@@ -1,7 +1,8 @@
 import { useEffect } from 'react'
+import { addDarkMirrorToStyleSheet } from './createDarkMirrorStyles'
 
 // global list of all the StyleSheets that are touched in useDisableImportedStyles
-const switchableGlobalStyleSheets: StyleSheet[] = []
+export const switchableGlobalStyleSheets: CSSStyleSheet[] = []
 
 // just to clarify what createUseDisableImportedStyles() returns
 type useDisableImportedStyles = () => void
@@ -57,18 +58,21 @@ export const createUseDisableImportedStyles = (
     // if false: waits to unloads the StyleSheet until another instance of useDisableImportedStyles is called.This avoids a flash of unstyled content
 
 ): useDisableImportedStyles => {
-    let localStyleSheet: StyleSheet
+    let localStyleSheet: CSSStyleSheet
+
+    // if there are no stylesheets, you did something wrong...
+    if (document.styleSheets.length < 1) return
+
+    // set the localStyleSheet to the newest stylesheet added
+    localStyleSheet = document.styleSheets[document.styleSheets.length - 1]
+
+    // add .bpx-dark { --all-the-vars: var(--all-the-dark-vars); }
+    addDarkMirrorToStyleSheet(localStyleSheet)
+
+    switchableGlobalStyleSheets.push(localStyleSheet)
+
     return () => {
         useEffect(() => {
-
-            // if there are no stylesheets, you did something wrong...
-            if (document.styleSheets.length < 1) return
-
-            // set the localStyleSheet if this is the first time this instance of this useEffect is called
-            if (localStyleSheet == null) {
-                localStyleSheet = document.styleSheets[document.styleSheets.length - 1]
-                switchableGlobalStyleSheets.push(localStyleSheet)
-            }
 
             // if we are switching StyleSheets, disable all switchableGlobalStyleSheets
             if (!immediatelyUnloadStyle) {
