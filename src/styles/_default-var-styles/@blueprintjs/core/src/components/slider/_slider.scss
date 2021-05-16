@@ -49,11 +49,11 @@ $track-height: $track-size !default;
 }
 
 .#{$ns}-slider-progress {
-  background: hslax(var(--gray1-hsl), 0.2);
+  background: var(--slider-progress-color);
 
-  .#{$ns}-dark & {
-    background: hslax(var(--black-hsl), 0.5);
-  }
+  /* .#{$ns}-dark & {
+    background: var(--dark-slider-progress-color);
+  } */
 
   @each $intent, $color in $pt-intent-colors {
     &.#{$ns}-intent-#{$intent} {
@@ -92,13 +92,13 @@ $track-height: $track-size !default;
   }
 
   .#{$ns}-disabled & {
-    background: $gray5;
+    background: var(--slider-handle-disabled);
     box-shadow: none;
     // easy way to avoid lots of special cases to ignore mouse states when disabled:
     pointer-events: none;
   }
 
-  .#{$ns}-dark & {
+  /* .#{$ns}-dark & {
     @include pt-dark-button();
 
     &,
@@ -109,13 +109,13 @@ $track-height: $track-size !default;
     &.#{$ns}-active {
       background-color: $dark-gray3;
     }
-  }
+  } */
 
-  .#{$ns}-dark .#{$ns}-disabled & {
+  /* .#{$ns}-dark .#{$ns}-disabled & {
     background: $gray1;
     border-color: $gray1;
     box-shadow: none;
-  }
+  } */
 
   .#{$ns}-slider-label {
     background: $tooltip-background-color;
@@ -124,11 +124,11 @@ $track-height: $track-size !default;
     color: $tooltip-text-color;
     margin-left: $handle-size / 2;
 
-    .#{$ns}-dark & {
+    /* .#{$ns}-dark & {
       background: $dark-tooltip-background-color;
       box-shadow: $pt-dark-tooltip-box-shadow;
       color: $dark-tooltip-text-color;
-    }
+    } */
 
     .#{$ns}-disabled & {
       box-shadow: none;

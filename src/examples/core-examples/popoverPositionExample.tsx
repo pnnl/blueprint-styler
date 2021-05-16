@@ -28,7 +28,6 @@ export class PopoverPositionExample extends React.PureComponent<IExampleProps> {
     public render() {
         return (
             <Example className={EXAMPLE_CLASS} options={false} {...this.props}>
-                {/* eslint-disable-next-line @blueprintjs/html-components */}
                 <table>
                     <tbody>
                         <tr>
@@ -103,12 +102,10 @@ export class PopoverPositionExample extends React.PureComponent<IExampleProps> {
             </div>
         );
 
-        /* eslint-disable deprecation/deprecation */
         return (
             <Popover content={content} position={position} usePortal={false}>
                 <Button className={Classes.MONOSPACE_TEXT}>{buttonLabel}</Button>
             </Popover>
         );
-        /* eslint-enable deprecation/deprecation */
     }
 }

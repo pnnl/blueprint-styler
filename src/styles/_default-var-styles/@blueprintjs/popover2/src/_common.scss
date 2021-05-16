@@ -60,7 +60,7 @@ $pt-dark-tooltip2-box-shadow: $pt-dark-popover-box-shadow !default;
   }
 
   .#{$ns}-popover2-arrow::before {
-    box-shadow: 1px 1px 6px rgba($black, $arrow-drop-shadow-opacity);
+    box-shadow: 1px 1px 6px hslax(var(--black-hsl), $arrow-drop-shadow-opacity);
   }
 
   .#{$ns}-popover2-arrow-border {

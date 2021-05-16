@@ -20,6 +20,22 @@ $$$1: var(--$1);
 
 hslax
 hsla
+
+# comment out // property: $dark-something;
+(\s)([^$][a-z][^:$]*:[^\$]*\$[^;]*dark-[^;]*;)
+ $1//$2
+
+# comment out @include dark-something()
+(@include.*dark-.*\(\);)
+// $1
+
+# find this
+// replace var
+
+# replace emit-idnetity var // --pt-font-size: $pt-grid-size * 1.4; => @include emit-identity-var('pt-font-size', $pt-font-size);
+// --([\w-]*):
+@include emit-identity-var('$1', $$$1); // --$1:
+
 ```
 
 # Changes
@@ -41,5 +57,5 @@ Search for
 - `pt-tag-interactive(`
 - `pt-tag-minimal-interactive(`
 
-Copy `!default` $vars to `src/styles/_default-var-styles/component-vars`
+Copy `!default` $vars to `src/styles/_default-var-styles/components`
 replace color vars with `// custom` color-aliases if they exist

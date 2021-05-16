@@ -72,7 +72,7 @@ module.exports = () => through2.obj(function (file, enc, next) {
 
             // vars equal raw values // CSS_VAR: 24px;
             const cssValue = match[3] // value of the css
-                .replace(/[\n\t\r]+/g, '') // replace all newlines, tabs, and line feeds
+                .replace(/[\n\t\r]+/ig, '') // replace all newlines, tabs, and line feeds
             cssObjValues[currentCategory][cssName] = cssValue;
 
             // identity // CssVar: "var(--css-var)",
@@ -99,10 +99,15 @@ module.exports = () => through2.obj(function (file, enc, next) {
             for (const varName in currentCategory) {
                 if (Object.hasOwnProperty.call(currentCategory, varName)) {
                     const varValue = currentCategory[varName];
-                    if (varName.includes('dark-') && !varName.includes('gray')) {
-                        // !varName.includes('gray') is hacky! // maybe use another flag?
+                    if (varName.search(/dark-(?!gray)/g) !== -1) {
                         // raw Colors should not have an invert, only ColorAliases
-                        cssDarkMirror += `\t--${varName.replace('dark-', '')}: var(--${varName});\n`
+                        const inverseVarName = varName.replace('dark-', '')
+                        cssDarkMirror += `\t--${inverseVarName}: var(--${varName});\n`
+                        if (varValue.includes(`--${inverseVarName}`)) {
+                            console.log(`>> WARNING: Possible circular dependency! A --dark-var contains its normal --var counterpart in: --${varName}: ${varValue};`);
+                        }
+                    } else if (varValue.search(/dark-(?!gray)/g) !== -1) {
+                        console.log(`>> WARNING: Possible circular dependency! A normal --var contains a --dark-var in: --${varName}: ${varValue};`);
                     }
                     css += `\t--${varName}: ${varValue};\n` // css contains real value
                     less += `@${varName}: ${cssKebabNameToVarIdentity(varName)};\n` // less an scss are identity

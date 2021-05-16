@@ -71,6 +71,33 @@ export class CustomWorkingExample extends React.PureComponent<IExampleProps> {
                     </HTMLSelect> */}
                 </ControlGroup>
 
+                <ControlGroup fill >
+                    <InputGroup
+                        // onChange={updateSearchFilter}
+                        // inputValue={text}
+                        // onInputChange={(e) => setText((e.target as HTMLInputElement).value)}
+                        // values={terms}
+                        type={'search'}
+                        // value={'one two three'}
+                        placeholder={`this is type="search"`}
+                        rightElement={
+                            <Button
+                                // onClick={clearSearch}
+                                icon={'cross'} minimal
+                            // disabled={terms.length === 0 && text.length === 0}
+                            />
+                        }
+                        fill
+                        leftIcon={'search'}
+                    />
+                    <Button
+                        text={'Search'}
+                        intent={'primary'}
+                        type="submit"
+                        className={Classes.FIXED}
+                    />
+                </ControlGroup>
+
             </Example>
         );
     }

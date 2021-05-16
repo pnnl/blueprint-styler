@@ -3,6 +3,6 @@ html {
   color-scheme: light; // also changes other default stuff in chromium?
 }
 .#{$ns}-dark {
-  scrollbar-color: var(--pt-dark-text-color-disabled) var(--pt-dark-app-top-background-color);
+  // scrollbar-color: var(--pt-dark-text-color-disabled) var(--pt-dark-app-top-background-color);
   color-scheme: dark; // also changes other default stuff in chromium?
 }

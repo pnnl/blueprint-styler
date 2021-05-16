@@ -101,7 +101,7 @@ label.#{$ns}-label {
     display: block;
   }
 
-  .#{$ns}-dark & {
+  /* .#{$ns}-dark & {
     color: $pt-dark-heading-color;
 
     &.#{$ns}-disabled {
@@ -110,5 +110,5 @@ label.#{$ns}-label {
         color: $pt-dark-text-color-disabled;
       }
     }
-  }
+  } */
 }

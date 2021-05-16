@@ -3,7 +3,7 @@
 
 @import "../../common/variables";
 @import "../../common/mixins";
-@import "~@blueprintjs/icons/src/icons";
+@import "../../../../icons/src/blueprint-icons.scss";
 
 /*
 Trees
@@ -111,9 +111,9 @@ $tree-icon-spacing: ($tree-row-height - $pt-icon-size-standard) / 2 !default;
   }
 
   // CSS API support
-  &.#{$ns}-icon-standard::before {
-    content: $pt-icon-chevron-right;
-  }
+  // &.#{$ns}-icon-standard::before {
+  //   content: $pt-icon-chevron-right;
+  // }
 }
 
 .#{$ns}-tree-node-icon {
@@ -177,24 +177,24 @@ $tree-icon-spacing: ($tree-row-height - $pt-icon-size-standard) / 2 !default;
   }
 }
 
-.#{$ns}-dark {
+/* .#{$ns}-dark {
   .#{$ns}-tree-node-content:hover {
     background-color: hslax(var(--gray1-hsl), 0.3);
   }
 
   .#{$ns}-tree {
     #{$icon-classes} {
-      color: $pt-dark-icon-color;
+      color: $pt-dark-icon-color; */
 
       @each $intent, $colors in $pt-intent-colors {
-        &.#{$ns}-intent-#{$intent} {
+        /* &.#{$ns}-intent-#{$intent} {
           @include intent-color($intent);
-        }
+        } */
       }
-    }
+    /* }
   }
 
   .#{$ns}-tree-node.#{$ns}-tree-node-selected > .#{$ns}-tree-node-content {
     background-color: $pt-intent-primary;
   }
-}
+} */

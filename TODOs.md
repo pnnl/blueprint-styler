@@ -3,9 +3,16 @@
 ### App tool
 - update readmes
   - a dark color cannot link to its light counterpart or there will be a circular dependency
-- switch to create-react-app
-  - repair examples?
-- separate different packages on build
+  - crazy css switching scheme
+  - importing a css file in scss with the .css suffix will break the style because it adds a css partial
+  - create-react-app hot reload with theme switching does some weird things sometimes
+- switch to create-react-apps
+- v4
+  - do it
+- CSS Build?
+  - separate different packages on build - core, selection, table, etc...
+  - provide no minified?
+  - provide non-fallback version of css?
 - sections:
   - for each theme: add a readme to each project - default styles is project explainer
   - base theme component that imports scss files
@@ -30,13 +37,16 @@
 
 ### Styles
 - var(--theme) / General
-  - include sizes in lib/variables output
+  - ellipsize button text by default
   - editable text focus is broken
   - grayscale transparency alt
   - math with calc()
+  - input-transition-shadow could to be broken into input shadow vars...
+
 - [ant.design](https://ant.design/components/overview/)
-  - update ant theme to use vars
-  - dark theme
+  - button group with active could be slightly different - see original
+  - disabled button in button group could have a border?
+  - slider
 - [IBM Carbon](https://www.carbondesignsystem.com/components/overview)
   - dark timepicker-input intent-danger (error) :focus states are broken
   - `<Callout/>`, `<Toast/>`, `<Alert/>`? more like [Carbon Notification](https://www.carbondesignsystem.com/components/notification/style)

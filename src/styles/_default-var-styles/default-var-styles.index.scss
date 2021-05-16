@@ -1,17 +1,22 @@
-@import "../global/root-selector";
+@import '../global/root-selector';
 
-@import "~normalize.css/normalize";
+@import '~normalize.css/normalize';
+
+@import '../global/svg-icon-replacement';
 
 // Override $vars //
-@import "./global-vars/index";
-@import "./component-vars/index";
+@import './common/index';
+@import './components/index';
 
 // Blueprint Originals
-@import "./@blueprintjs/core/src/blueprint.scss";
-@import "./@blueprintjs/datetime/src/blueprint-datetime.scss";
-@import "./@blueprintjs/select/src/blueprint-select.scss";
-@import "./@blueprintjs/table/src/table.scss";
-@import "./@blueprintjs/popover2/src/blueprint-popover2.scss";
+@import './@blueprintjs/core/src/blueprint';
+@import './@blueprintjs/datetime/src/blueprint-datetime';
+@import './@blueprintjs/select/src/blueprint-select';
+@import './@blueprintjs/table/src/table';
+@import './@blueprintjs/popover2/src/blueprint-popover2';
 
-@import "../global/common-standard-search.scss";
-@import "../global/common-dark-theme-scrollbars.scss";
+@import '../global/common-standard-search';
+@import '../global/common-dark-theme-scrollbars';
+@import '../global/common-select-option';
+
+// @import '../global/circular-dependency-test';

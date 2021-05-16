@@ -4,7 +4,7 @@
 
 This project is meant to help create custom global styles for [Blueprint js Components](https://blueprintjs.com/docs/)
 
-[Project Demo](https://stash.pnnl.gov/pages/UXRSRC/blueprint-styler/master/browse/dist/index.html)
+[Project Demo](https://stash.pnnl.gov/pages/UXRSRC/blueprint-styler/master/browse/build/index.html)
 
 ## Quick start
 

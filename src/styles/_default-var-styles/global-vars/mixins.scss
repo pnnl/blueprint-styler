@@ -1,7 +1,0 @@
-@mixin emit-identity-hsl($colorName) {
-  --#{$colorName}: hsl(var(--#{$colorName}-hsl));
-}
-
-@function hslax($arguments...) {
-  @return #{'hsla(#{$arguments})'};
-}

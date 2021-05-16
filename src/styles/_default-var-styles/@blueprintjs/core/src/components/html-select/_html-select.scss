@@ -75,7 +75,7 @@ Styleguide select
     }
   }
 
-  .#{$ns}-dark & {
+  /* .#{$ns}-dark & {
     select {
       @extend %pt-dark-select;
     }
@@ -92,13 +92,13 @@ Styleguide select
     &::after {
       color: $pt-dark-icon-color;
     }
-  }
+  } */
 }
 
-.#{$ns}-select {
+/* .#{$ns}-select {
   &::after {
     @extend %pt-select-arrow;
     @include pt-icon();
     content: $pt-icon-double-caret-vertical;
   }
-}
+} */

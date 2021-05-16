@@ -2,7 +2,7 @@
 // Licensed under the Apache License, Version 2.0.
 
 @import "../../common/variables";
-@import "~@blueprintjs/icons/src/icons";
+@import "../../../../icons/src/blueprint-icons.scss";
 @import "../../common/mixins";
 
 @import "./common";
@@ -144,7 +144,7 @@ Styleguide menu-header
 }
 
 // dark theme
-.#{$ns}-dark {
+/* .#{$ns}-dark {
   .#{$ns}-menu {
     background: $dark-menu-background-color;
     color: $pt-dark-text-color;
@@ -168,7 +168,7 @@ Styleguide menu-header
     }
 
     // pt-disable always overrides over styles
-    /* stylelint-disable declaration-no-important */
+    //stylelint-disable declaration-no-important
     &.#{$ns}-disabled {
       color: $pt-dark-text-color-disabled !important;
 
@@ -178,7 +178,7 @@ Styleguide menu-header
         color: $pt-dark-icon-color-disabled !important;
       }
     }
-    /* stylelint-enable declaration-no-important */
+    // stylelint-enable declaration-no-important
   }
 
   .#{$ns}-menu-divider,
@@ -189,7 +189,7 @@ Styleguide menu-header
   .#{$ns}-menu-header > h6 {
     color: $pt-dark-heading-color;
   }
-}
+} */
 
 // #402 support menu inside label
 .#{$ns}-label .#{$ns}-menu {

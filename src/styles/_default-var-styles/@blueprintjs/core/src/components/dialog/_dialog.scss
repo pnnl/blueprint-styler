@@ -1,7 +1,7 @@
 // Copyright 2015 Palantir Technologies, Inc. All rights reserved.
 // Licensed under the Apache License, Version 2.0.
 
-@import "~@blueprintjs/icons/src/icons";
+@import "../../../../icons/src/blueprint-icons.scss";
 @import "../../common/mixins";
 @import "../../common/react-transition";
 @import "../../common/variables";
@@ -79,12 +79,12 @@ $dialog-border-radius: calc(#{$pt-border-radius} * 2);
     outline: 0;
   }
 
-  &.#{$ns}-dark,
+  /* &.#{$ns}-dark,
   .#{$ns}-dark & {
     background: $pt-dark-app-background-color;
     box-shadow: $pt-dark-dialog-box-shadow;
     color: $pt-dark-text-color;
-  }
+  } */
 }
 
 .#{$ns}-dialog-header {
@@ -117,7 +117,7 @@ $dialog-border-radius: calc(#{$pt-border-radius} * 2);
     }
   }
 
-  .#{$ns}-dark & {
+  /* .#{$ns}-dark & {
     background: $dark-gray4;
     box-shadow: 0 1px 0 $pt-dark-divider-black;
 
@@ -125,7 +125,7 @@ $dialog-border-radius: calc(#{$pt-border-radius} * 2);
     .#{$ns}-icon {
       color: $pt-dark-icon-color;
     }
-  }
+  } */
 }
 
 .#{$ns}-dialog-body {

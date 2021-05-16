@@ -34,7 +34,8 @@ export const UseHotkeysExample: React.FC<IExampleProps> = props => {
 
     // create a dictionary of key states and updater functions
     const keys = Array.apply(null, Array(24))
-        .map(() => React.useState(() => false), [])
+        // @ts-ignore: useState() cannot be called inside a callback
+        // .map(() => React.useState(() => false), [])
         .map(([pressed, setPressed]) => ({
             pressed,
             setPressed,

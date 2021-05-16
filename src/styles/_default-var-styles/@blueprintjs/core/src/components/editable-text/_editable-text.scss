@@ -54,8 +54,8 @@
     }
   }
 
-  .#{$ns}-dark & {
-    &:hover::before {
+  // .#{$ns}-dark & {
+    /* &:hover::before {
       box-shadow: input-transition-shadow($dark-input-shadow-color-focus-hsl),
                   inset 0 0 0 1px $pt-dark-divider-white;
     }
@@ -68,10 +68,10 @@
 
     &.#{$ns}-disabled::before {
       box-shadow: none;
-    }
+    } */
 
     @each $intent, $color in $pt-dark-intent-text-colors {
-      &.#{$ns}-intent-#{$intent} {
+      /* &.#{$ns}-intent-#{$intent} {
         .#{$ns}-editable-text-content {
           color: $color;
         }
@@ -85,9 +85,9 @@
         &.#{$ns}-editable-text-editing::before {
           box-shadow: input-transition-shadow($color-hsl, true), $pt-dark-input-box-shadow;
         }
-      }
+      } */
     }
-  }
+  // }
 }
 
 .#{$ns}-editable-text-input,
@@ -143,9 +143,9 @@
   .#{$ns}-editable-text-placeholder > & {
     color: $input-placeholder-color;
 
-    .#{$ns}-dark & {
+    /* .#{$ns}-dark & {
       color: $dark-input-placeholder-color;
-    }
+    } */
   }
 }
 

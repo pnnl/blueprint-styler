@@ -1,0 +1,85 @@
+// MENU //
+.#{$ns}-menu{
+  padding: $pt-grid-size/2 0;
+}
+
+.#{$ns}-menu-divider{
+  margin-left:  0;
+  margin-right: 0;
+}
+
+// POPOVER //
+.#{$ns}-select-popover .#{$ns}-popover-content{
+  padding: 0;
+}
+
+// DATE PICKER //
+.#{$ns}-datepicker {
+
+  padding: 0;
+
+  .#{$ns}-divider{
+    margin: 0;
+  }
+
+  $day-picker-month-margin: 4px;
+  .DayPicker-Month{
+    margin: 0 $day-picker-month-margin $day-picker-month-margin;
+  }
+  .DayPicker-Caption .#{$ns}-divider{
+    margin: 0 (-$day-picker-month-margin);
+  }
+
+  &.#{$ns}-daterangepicker .DayPicker:last-child{
+    border-left: 1px solid $pt-divider-black; // dark themes
+  }
+
+  .#{$ns}-datepicker-caption{
+    margin-bottom: 0;
+  }
+
+  .DayPicker-Day.DayPicker-Day--selected{
+    background-color: $pt-intent-primary;
+  }
+
+}
+
+// DATE TIME PICKER //
+.#{$ns}-datetimepicker{
+  padding: 0;
+
+  .#{$ns}-datepicker{
+    padding: 0;
+  }
+
+  .#{$ns}-timepicker{
+    margin: 3px;
+  }
+
+}
+
+// TIME PICKER //
+.#{$ns}-timepicker {
+
+  .#{$ns}-timepicker-input-row{
+    height: $pt-input-height; // why not already?
+    padding: 0;
+    box-shadow: inset 0 -1px 0 0 var(--input-border)
+  }
+
+  .#{$ns}-timepicker-ampm-select{
+    margin-left: 1px;
+  }
+
+  .#{$ns}-timepicker-input{
+    height: 100%;
+    &:hover:not(:focus){
+      box-shadow: inset 0 -1px 0 0 $pt-intent-primary;
+    }
+    &:focus {
+      box-shadow: inset 0 0 0 2px $pt-intent-primary;
+    }
+  }
+
+}
+

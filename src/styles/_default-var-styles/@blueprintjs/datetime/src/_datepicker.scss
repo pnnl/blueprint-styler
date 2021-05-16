@@ -198,7 +198,7 @@ $header-margin: ($header-height - $pt-input-height) / 2 !default;
   justify-content: space-between;
 }
 
-.#{$ns}-dark .#{$ns}-datepicker {
+/* .#{$ns}-dark .#{$ns}-datepicker {
   background: $dark-datepicker-background-color;
 
   .DayPicker-WeekNumber {
@@ -243,7 +243,7 @@ $header-margin: ($header-height - $pt-input-height) / 2 !default;
   .#{$ns}-datepicker-footer {
     border-top-color: $pt-dark-divider-black;
   }
-}
+} */
 
 .#{$ns}-datepicker-timepicker-wrapper {
   align-items: center;

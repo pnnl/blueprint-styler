@@ -197,14 +197,14 @@ Styleguide control-group
   // have consecutive elements share a border
   &:not(.#{$ns}-vertical) {
     > *:not(.#{$ns}-divider) {
-      margin-right: -$button-border-width;
+      margin-right: var(--control-group-spacing);
     }
 
     > .#{$ns}-divider:not(:first-child) {
-      margin-left: $divider-margin + $button-border-width;
+      margin-left: calc(var(--divider-margin) - var(--control-group-spacing));
     }
 
-    .#{$ns}-dark & {
+    /* .#{$ns}-dark & {
       > *:not(.#{$ns}-divider) {
         margin-right: 0;
       }
@@ -216,7 +216,7 @@ Styleguide control-group
       > .#{$ns}-button + .#{$ns}-button {
         margin-left: $button-border-width;
       }
-    }
+    } */
   }
 
   // Add border radius inheritance to support components wrapped in a popover
@@ -307,7 +307,7 @@ Styleguide control-group
     flex-direction: column;
 
     > * {
-      margin-top: -$button-border-width;
+      margin-top: var(--control-group-spacing);
     }
 
     > :first-child {

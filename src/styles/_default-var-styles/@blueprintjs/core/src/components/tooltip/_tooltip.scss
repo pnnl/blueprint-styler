@@ -30,7 +30,7 @@
     padding: $tooltip-padding-vertical $tooltip-padding-horizontal;
   }
 
-  &.#{$ns}-dark,
+  /* &.#{$ns}-dark,
   .#{$ns}-dark & {
     @include popover-appearance(
       $dark-tooltip-background-color,
@@ -39,7 +39,7 @@
       $pt-dark-drop-shadow-opacity,
       $pt-dark-border-shadow-opacity
     );
-  }
+  } */
 
   @each $intent, $color in $pt-intent-colors {
     &.#{$ns}-intent-#{$intent} {

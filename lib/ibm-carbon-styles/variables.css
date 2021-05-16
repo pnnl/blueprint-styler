@@ -278,11 +278,29 @@
 	--pt-dark-icon-color-selected: var(--pt-intent-primary);
 
 /*! Variables */
+	--pt-grid-size: 10px;
 	--pt-font-family: "IBM Plex Sans","Helvetica Neue",-apple-system,"Segoe UI",Arial,sans-serif;
 	--pt-font-family-monospace: "IBM Plex Mono",Menlo,Consolas,monospace;
 	--pt-border-radius: 0px;
+	--pt-font-size: 14px;
+	--pt-font-size-large: 16px;
+	--pt-font-size-small: 12px;
+	--pt-line-height: 1.28581;
+	--icons16-family: Icons16;
+	--icons20-family: Icons20;
 	--pt-icon-size-standard: 16px;
 	--pt-icon-size-large: 20px;
+	--pt-button-height: 30px;
+	--pt-button-height-small: 24px;
+	--pt-button-height-smaller: 20px;
+	--pt-button-height-large: 40px;
+	--pt-input-height: 30px;
+	--pt-input-height-large: 40px;
+	--pt-input-height-small: 24px;
+	--pt-navbar-height: 50px;
+	--pt-z-index-base: 0;
+	--pt-z-index-content: 10;
+	--pt-z-index-overlay: 20;
 	--pt-border-shadow-opacity: 0.1;
 	--pt-drop-shadow-opacity: 0.2;
 	--pt-dark-border-shadow-opacity: 0.2;
@@ -301,6 +319,7 @@
 	--pt-dark-elevation-shadow-4: 0 0 0 1px hsla(var(--pt-dark-shadow-color-hsl),var(--pt-dark-border-shadow-opacity)),0 4px 8px hsla(var(--pt-dark-shadow-color-hsl),var(--pt-dark-drop-shadow-opacity)),0 18px 46px 6px hsla(var(--pt-dark-shadow-color-hsl),var(--pt-dark-drop-shadow-opacity));
 	--pt-transition-ease: cubic-bezier(0.4,1,0.75,0.9);
 	--pt-transition-ease-bounce: cubic-bezier(0.54,1.12,0.38,1.11);
+	--pt-transition-duration: 100ms;
 	--pt-input-box-shadow: 0 0 transparent;
 	--pt-dialog-box-shadow: var(--pt-elevation-shadow-4);
 	--pt-popover-box-shadow: var(--pt-elevation-shadow-3);
@@ -312,21 +331,23 @@
 
 /*! Components */
 	--button-border-width: 1px;
+	--control-group-spacing: 1px;
+	--dark-control-group-spacing: 1px;
 	--button-box-shadow: none;
 	--button-box-shadow-active: none;
 	--button-intent-box-shadow: none;
 	--button-intent-box-shadow-active: none;
-	--button-box-shadow-overlay: 0 0 0 var(--button-border-width) hsla(var(--pt-shadow-color-hsl),0.2),0 1px 1px hsla(var(--pt-shadow-color-hsl),0.2);
-	--button-box-shadow-overlay-active: 0 0 0 var(--button-border-width) hsla(var(--pt-shadow-color-hsl),0.2),inset 0 1px 1px hsla(var(--pt-shadow-color-hsl),0.1);
 	--dark-button-box-shadow: none;
 	--dark-button-box-shadow-active: none;
 	--dark-button-intent-box-shadow: none;
 	--dark-button-intent-box-shadow-active: none;
+	--button-box-shadow-overlay: 0 0 0 var(--button-border-width) hsla(var(--pt-shadow-color-hsl),0.2),0 1px 1px hsla(var(--pt-shadow-color-hsl),0.2);
+	--button-box-shadow-overlay-active: 0 0 0 var(--button-border-width) hsla(var(--pt-shadow-color-hsl),0.2),inset 0 1px 1px hsla(var(--pt-shadow-color-hsl),0.1);
 	--shine-color-hsl: var(--white-hsl);
 	--shine-opacity: 0.8;
 	--shine-intent-color-hsl: var(--shine-color-hsl);
 	--shine-intent-opacity: 0.1;
-	--dark-shine-color-hsl: var(--shine-color-hsl);
+	--dark-shine-color-hsl: var(--white-hsl);
 	--dark-shine-opacity: 0.05;
 	--button-gradient: none;
 	--button-intent-gradient: none;
@@ -351,10 +372,17 @@
 	--dark-minimal-button-background-color-active: var(--white-trans-dark-gray2);
 	--button-outlined-width: 1px;
 	--button-outlined-border-intent-opacity: 0.3;
+	--button-outlined-border-color: hsla(var(--dark-gray1-hsl),0.2);
+	--button-outlined-border-color-disabled: hsla(var(--black-hsl),0.1);
+	--dark-button-outlined-border-color: hsla(var(--white-hsl),0.2);
+	--dark-button-outlined-border-color-disabled: hsla(var(--white-hsl),0.1);
+	--callout-background-color: hsla(var(--gray3-hsl),0.15);
+	--dark-callout-background-color: hsla(var(--gray3-hsl),0.2);
 	--card-background-color: var(--pt-app-top-background-color);
 	--dark-card-background-color: var(--pt-dark-app-top-background-color);
 	--dialog-border-radius: calc(var(--pt-border-radius)*2);
 	--step-radius: calc(var(--pt-border-radius)*2);
+	--divider-margin: calc(var(--pt-grid-size)/2);
 	--drawer-background-color: var(--pt-app-top-background-color);
 	--dark-drawer-background-color: var(--pt-dark-app-top-background-color);
 	--input-color: var(--pt-text-color);
@@ -436,12 +464,18 @@
 	--progress-bar-gradient: linear-gradient(-45deg,var(--progress-bar-stripes-color) 25%,transparent 25%,transparent 50%,var(--progress-bar-stripes-color) 50%,var(--progress-bar-stripes-color) 75%,transparent 75%);
 	--skeleton-color-start: hsla(var(--light-gray1-hsl),0.2);
 	--skeleton-color-end: hsla(var(--gray1-hsl),0.2);
+	--slider-progress-color: hsla(var(--gray1-hsl),0.2);
+	--dark-slider-progress-color: hsla(var(--black-hsl),0.5);
+	--slider-handle-disabled: var(--gray5);
+	--dark-slider-handle-disabled: var(--gray1);
 	--tab-color-selected: var(--pt-link-color);
 	--dark-tab-color-selected: var(--pt-dark-link-color);
 	--tag-default-color: var(--gray1);
 	--dark-tag-default-color: var(--gray5);
 	--tag-default-color-hsl: var(--gray1-hsl);
 	--dark-tag-default-color-hsl: var(--gray5-hsl);
+	--tag-text-color: var(--light-gray5);
+	--dark-tag-text-color: var(--dark-gray1);
 	--tooltip-background-color: var(--dark-gray5);
 	--tooltip-text-color: var(--light-gray5);
 	--dark-tooltip-background-color: var(--light-gray3);
@@ -451,8 +485,8 @@
 	--minimal-button-background-color: none;
 	--dark-minimal-button-background-color: none;
 	--button-outlined-border-disabled-intent-opacity: 0.2;
-	--ibm-input-border: var(--black-trans-gray5);
-	--ibm-dark-input-border: var(--white-trans-gray1);
+	--input-border: var(--black-trans-gray5);
+	--dark-input-border: var(--white-trans-gray1);
 
 /*! Datetime */
 	--datepicker-background-color: var(--pt-app-top-background-color);
@@ -507,6 +541,123 @@
 	--region-selected-color: var(--pt-intent-primary);
 	--region-default-color-hsl: var(--gray3-hsl);
 	--region-selected-color-hsl: var(--pt-intent-primary-hsl);
+
+/*! CarbonColors */
+	--carbon--black-100: #000;
+	--carbon--warm-gray-10: #f7f3f2;
+	--carbon--warm-gray-20: #e6e1e0;
+	--carbon--warm-gray-30: #cac5c4;
+	--carbon--warm-gray-40: #ada8a8;
+	--carbon--warm-gray-50: #8f8a8a;
+	--carbon--warm-gray-60: #726e6e;
+	--carbon--warm-gray-70: #575252;
+	--carbon--warm-gray-80: #3c3939;
+	--carbon--warm-gray-90: #272525;
+	--carbon--warm-gray-100: #161313;
+	--carbon--gray-10: #f5f5f5;
+	--carbon--gray-20: #e0e0e0;
+	--carbon--gray-30: #c7c7c7;
+	--carbon--gray-40: #a8a8a8;
+	--carbon--gray-50: #8c8c8c;
+	--carbon--gray-60: #707070;
+	--carbon--gray-70: #525252;
+	--carbon--gray-80: #383838;
+	--carbon--gray-90: #262626;
+	--carbon--gray-100: #171717;
+	--carbon--cool-gray-10: #f2f4f8;
+	--carbon--cool-gray-20: #dce0e5;
+	--carbon--cool-gray-30: #c1c7cd;
+	--carbon--cool-gray-40: #a1a8af;
+	--carbon--cool-gray-50: #878d97;
+	--carbon--cool-gray-60: #697077;
+	--carbon--cool-gray-70: #4c5257;
+	--carbon--cool-gray-80: #353b41;
+	--carbon--cool-gray-90: #22282b;
+	--carbon--cool-gray-100: #111518;
+	--carbon--white-0: #fff;
+	--carbon--red-10: #fff0f0;
+	--carbon--red-20: #ffd6d8;
+	--carbon--red-30: #ffb3b8;
+	--carbon--red-40: #ff858b;
+	--carbon--red-50: #fa4c55;
+	--carbon--red-60: #dc1e27;
+	--carbon--red-70: #a31920;
+	--carbon--red-80: #770e13;
+	--carbon--red-90: #530408;
+	--carbon--red-100: #2c0709;
+	--carbon--orange-30: #ffa05c;
+	--carbon--orange-40: #ff8229;
+	--carbon--orange-50: #d15700;
+	--carbon--orange-60: #b84d00;
+	--carbon--orange-70: #8a3700;
+	--carbon--orange-80: #471d00;
+	--carbon--yellow-20: #fdd03a;
+	--carbon--yellow-30: #f1c31e;
+	--carbon--yellow-40: #d0a106;
+	--carbon--yellow-50: #b38600;
+	--carbon--yellow-60: #997300;
+	--carbon--yellow-70: #705400;
+	--carbon--yellow-80: #473600;
+	--carbon--green-10: #dffbe7;
+	--carbon--green-20: #a8f0bb;
+	--carbon--green-30: #6fdc8c;
+	--carbon--green-40: #41be64;
+	--carbon--green-50: #25a248;
+	--carbon--green-60: #198038;
+	--carbon--green-70: #0e6227;
+	--carbon--green-80: #044317;
+	--carbon--green-90: #022c0d;
+	--carbon--green-100: #071808;
+	--carbon--teal-10: #dafbfb;
+	--carbon--teal-20: #9ef0f0;
+	--carbon--teal-30: #3ddbd9;
+	--carbon--teal-40: #08bfbc;
+	--carbon--teal-50: #009e9b;
+	--carbon--teal-60: #00807b;
+	--carbon--teal-70: #005c5c;
+	--carbon--teal-80: #003f42;
+	--carbon--teal-90: #022b31;
+	--carbon--teal-100: #081a1c;
+	--carbon--cyan-10: #e5f6ff;
+	--carbon--cyan-20: #b8e5ff;
+	--carbon--cyan-30: #80ceff;
+	--carbon--cyan-40: #33b1ff;
+	--carbon--cyan-50: #1192e8;
+	--carbon--cyan-60: #0071c2;
+	--carbon--cyan-70: #005299;
+	--carbon--cyan-80: #00396b;
+	--carbon--cyan-90: #01294b;
+	--carbon--cyan-100: #061828;
+	--carbon--blue-10: #ebf4ff;
+	--carbon--blue-20: #d1e3ff;
+	--carbon--blue-30: #a8caff;
+	--carbon--blue-40: #7aabff;
+	--carbon--blue-50: #478bff;
+	--carbon--blue-60: #1064fe;
+	--carbon--blue-70: #04c;
+	--carbon--blue-80: #002d9e;
+	--carbon--blue-90: #001d6b;
+	--carbon--blue-100: #001242;
+	--carbon--purple-10: #f4f0ff;
+	--carbon--purple-20: #e9dbff;
+	--carbon--purple-30: #d5bdff;
+	--carbon--purple-40: #bd94ff;
+	--carbon--purple-50: #a770ff;
+	--carbon--purple-60: #8b40fc;
+	--carbon--purple-70: #6929c2;
+	--carbon--purple-80: #491d8b;
+	--carbon--purple-90: #31135d;
+	--carbon--purple-100: #1b0f2f;
+	--carbon--magenta-10: #fff0f7;
+	--carbon--magenta-20: #ffd6e8;
+	--carbon--magenta-30: #ffadd1;
+	--carbon--magenta-40: #ff80b7;
+	--carbon--magenta-50: #ee5396;
+	--carbon--magenta-60: #cf266f;
+	--carbon--magenta-70: #a01853;
+	--carbon--magenta-80: #770938;
+	--carbon--magenta-90: #500224;
+	--carbon--magenta-100: #290a17;
 
 /*! ColorsGrayscaleTransparent */
 	--white-trans-dark-gray1: hsla(var(--white-hsl),0.06);
@@ -594,6 +745,7 @@
 	--pt-tooltip-box-shadow: var(--pt-dark-tooltip-box-shadow);
 
 /*! Components */
+	--control-group-spacing: var(--dark-control-group-spacing);
 	--button-box-shadow: var(--dark-button-box-shadow);
 	--button-box-shadow-active: var(--dark-button-box-shadow-active);
 	--button-intent-box-shadow: var(--dark-button-intent-box-shadow);
@@ -609,6 +761,9 @@
 	--button-intent-color-disabled: var(--dark-button-intent-color-disabled);
 	--minimal-button-background-color-hover: var(--dark-minimal-button-background-color-hover);
 	--minimal-button-background-color-active: var(--dark-minimal-button-background-color-active);
+	--button-outlined-border-color: var(--dark-button-outlined-border-color);
+	--button-outlined-border-color-disabled: var(--dark-button-outlined-border-color-disabled);
+	--callout-background-color: var(--dark-callout-background-color);
 	--card-background-color: var(--dark-card-background-color);
 	--drawer-background-color: var(--dark-drawer-background-color);
 	--input-color: var(--dark-input-color);
@@ -644,14 +799,17 @@
 	--tooltip2-text-color: var(--dark-tooltip2-text-color);
 	--progress-track-color: var(--dark-progress-track-color);
 	--progress-head-color: var(--dark-progress-head-color);
+	--slider-progress-color: var(--dark-slider-progress-color);
+	--slider-handle-disabled: var(--dark-slider-handle-disabled);
 	--tab-color-selected: var(--dark-tab-color-selected);
 	--tag-default-color: var(--dark-tag-default-color);
 	--tag-default-color-hsl: var(--dark-tag-default-color-hsl);
+	--tag-text-color: var(--dark-tag-text-color);
 	--tooltip-background-color: var(--dark-tooltip-background-color);
 	--tooltip-text-color: var(--dark-tooltip-text-color);
 	--button-color-disabled: var(--dark-button-color-disabled);
 	--minimal-button-background-color: var(--dark-minimal-button-background-color);
-	--ibm-input-border: var(--ibm-dark-input-border);
+	--input-border: var(--dark-input-border);
 
 /*! Datetime */
 	--datepicker-background-color: var(--dark-datepicker-background-color);
@@ -677,6 +835,8 @@
 	--header-selected-hover-background-color-hsl: var(--dark-header-selected-hover-background-color-hsl);
 	--column-header-text-color-hsl: var(--dark-column-header-text-color-hsl);
 	--row-header-text-color-hsl: var(--dark-row-header-text-color-hsl);
+
+/*! CarbonColors */
 
 /*! ColorsGrayscaleTransparent */
 }

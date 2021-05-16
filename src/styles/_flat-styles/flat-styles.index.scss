@@ -1,14 +1,11 @@
 @import '../global/root-selector';
 
+@import '../global/svg-icon-replacement';
+
 @import '../_default-var-styles/default-var-styles.index';
 
-// --variables
-@import './colors';
-@import './variables';
-@import './button-variables';
-
-// .overrides{}
-@import './button-styles.scss';
-@import "../global/common-standard-search.scss";
-@import "../global/common-borderless-button-group.scss";
-@import "../global/common-control-group.scss";
+@import './common/index';
+@import './components/index';
+@import '../global/common-standard-search';
+@import '../global/common-borderless-button-group';
+@import '../global/common-control-group';

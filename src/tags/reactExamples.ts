@@ -1,21 +1,6 @@
-/*
- * Copyright 2015 Palantir Technologies, Inc. All rights reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-import { IExampleMap, IExampleProps } from "@blueprintjs/docs-theme";
 import * as React from "react";
+import { IExampleMap, IExampleProps } from "@blueprintjs/docs-theme";
+import { IBlueprintExampleData } from "./types";
 
 import * as CoreExamples from "../examples/core-examples";
 import * as DateExamples from "../examples/datetime-examples";
@@ -25,10 +10,7 @@ import * as TimezoneExamples from "../examples/timezone-examples";
 import { getTheme } from '../components/BlueprintStylerApp';
 
 /** Interface for `IExampleProps` `data` in this here Blueprint docs-app. */
-export interface IBlueprintExampleData {
-    /** CSS class of theme, typically `""` or `Classes.DARK`. */
-    themeName: string;
-}
+
 
 const SRC_HREF_BASE = "https://github.com/palantir/blueprint/blob/develop/packages/docs-app/src/examples";
 

@@ -17,11 +17,9 @@
 import { cloneDeep } from "lodash-es";
 import * as React from "react";
 
-import { Classes, Icon, Intent, /*TreeNodeInfo,*/ Tree } from "@blueprintjs/core";
+import { Classes, Icon, Intent, TreeNodeInfo, Tree } from "@blueprintjs/core";
 import { Example, IExampleProps } from "@blueprintjs/docs-theme";
 import { Classes as Popover2Classes, ContextMenu2, Tooltip2 } from "@blueprintjs/popover2";
-
-type TreeNodeInfo = any // ???
 
 type NodePath = number[];
 
@@ -115,7 +113,7 @@ const INITIAL_STATE: TreeNodeInfo[] = [
         hasCaret: true,
         icon: "folder-close",
         label: (
-            <ContextMenu2 popoverClassName={Popover2Classes.POPOVER2_CONTENT_SIZING} content={<div>Hello there!</div>}>
+            <ContextMenu2 className={Popover2Classes.POPOVER2_CONTENT_SIZING} content={<div>Hello there!</div>}>
                 Folder 0
             </ContextMenu2>
         ),
@@ -125,7 +123,7 @@ const INITIAL_STATE: TreeNodeInfo[] = [
         icon: "folder-close",
         isExpanded: true,
         label: (
-            <ContextMenu2 popoverClassName={Popover2Classes.POPOVER2_CONTENT_SIZING} content={<div>Hello there!</div>}>
+            <ContextMenu2 className={Popover2Classes.POPOVER2_CONTENT_SIZING} content={<div>Hello there!</div>}>
                 <Tooltip2 content="I'm a folder <3" placement="right">
                     Folder 1
                 </Tooltip2>
@@ -153,7 +151,7 @@ const INITIAL_STATE: TreeNodeInfo[] = [
                 icon: "folder-close",
                 label: (
                     <ContextMenu2
-                        popoverClassName={Popover2Classes.POPOVER2_CONTENT_SIZING}
+                        className={Popover2Classes.POPOVER2_CONTENT_SIZING}
                         content={<div>Hello there!</div>}
                     >
                         <Tooltip2 content="foo" placement="right">
@@ -170,7 +168,7 @@ const INITIAL_STATE: TreeNodeInfo[] = [
                         icon: "folder-close",
                         label: (
                             <ContextMenu2
-                                popoverClassName={Popover2Classes.POPOVER2_CONTENT_SIZING}
+                                className={Popover2Classes.POPOVER2_CONTENT_SIZING}
                                 content={<div>Hello there!</div>}
                             >
                                 Folder 3

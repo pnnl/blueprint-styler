@@ -25,9 +25,9 @@ $table-quadrant-scroll-container-overflow: 20px;
   position: absolute;
   top: 0;
 
-  .#{$ns}-dark & {
+  /* .#{$ns}-dark & {
     background-color: $dark-table-background-color;
-  }
+  } */
 }
 
 .#{$ns}-table-quadrant-scroll-container {
@@ -75,7 +75,7 @@ $table-quadrant-scroll-container-overflow: 20px;
   }
 
   .#{$ns}-table-cell-client {
-    background: $white;
+    background: var(--cell-background-color);
   }
 }
 

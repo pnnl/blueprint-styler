@@ -60,9 +60,9 @@ $dark-selectable-header-menu-selected-hover-background:
     &::before {
       background-color: $header-hover-background-color;
 
-      .#{$ns}-dark & {
+      /* .#{$ns}-dark & {
         background-color: $dark-header-hover-background-color;
-      }
+      } */
     }
   }
 
@@ -108,9 +108,9 @@ $dark-selectable-header-menu-selected-hover-background:
   .#{$ns}-table-th-menu-open & {
     background-image: $header-menu-hover-background;
 
-    .#{$ns}-dark & {
+    /* .#{$ns}-dark & {
       background-image: $dark-header-menu-hover-background;
-    }
+    } */
   }
 
   // background doesn't change on hover when selection is disabled; match the default background
@@ -119,9 +119,9 @@ $dark-selectable-header-menu-selected-hover-background:
   .#{$ns}-table-th-menu-open & {
     background-image: $header-menu-hover-background;
 
-    .#{$ns}-dark & {
+    /* .#{$ns}-dark & {
       background-image: $dark-header-menu-hover-background;
-    }
+    } */
   }
 
   // background changes on hover/select when selection is enabled; need to match the new background
@@ -129,25 +129,25 @@ $dark-selectable-header-menu-selected-hover-background:
   .#{$ns}-table-selection-enabled .#{$ns}-table-header-active & {
     background-image: $selectable-header-menu-hover-background;
 
-    .#{$ns}-dark & {
+    /* .#{$ns}-dark & {
       background-image: $dark-selectable-header-menu-hover-background;
-    }
+    } */
   }
 
   .#{$ns}-table-selection-enabled .#{$ns}-table-header.#{$ns}-table-header-selected & {
     background-image: $selectable-header-menu-selected-background;
 
-    .#{$ns}-dark & {
+    /* .#{$ns}-dark & {
       background-image: $dark-selectable-header-menu-selected-background;
-    }
+    } */
   }
 
   .#{$ns}-table-selection-enabled .#{$ns}-table-header.#{$ns}-table-header-selected:hover & {
     background-image: $selectable-header-menu-selected-hover-background;
 
-    .#{$ns}-dark & {
+    /* .#{$ns}-dark & {
       background-image: $dark-selectable-header-menu-selected-hover-background;
-    }
+    } */
   }
 }
 
@@ -194,31 +194,31 @@ $dark-selectable-header-menu-selected-hover-background:
 
     // dark theme
 
-    .#{$ns}-dark & {
+    /* .#{$ns}-dark & {
       background-color: $dark-header-background-color;
       box-shadow: inset 0 0 0 1px hslax(var(--white-hsl), $pt-drop-shadow-opacity);
       color: $pt-dark-icon-color;
-    }
+    } */
 
-    .#{$ns}-dark .#{$ns}-table-selection-enabled & {
+    /* .#{$ns}-dark .#{$ns}-table-selection-enabled & {
       background-color: $dark-header-hover-background-color;
-    }
+    } */
 
     // need to use a long selector here to properly scope the style
     /* stylelint-disable-next-line selector-max-compound-selectors,max-line-length */
-    .#{$ns}-dark .#{$ns}-table-selection-enabled .#{$ns}-table-header.#{$ns}-table-header-selected & {
+    /* .#{$ns}-dark .#{$ns}-table-selection-enabled .#{$ns}-table-header.#{$ns}-table-header-selected & {
       background-color: $dark-selectable-header-menu-selected-background;
-    }
+    } */
   }
 
   &:hover .#{$ns}-icon {
     box-shadow: inset 0 0 0 1px hslax(var(--black-hsl), calc(var(--pt-drop-shadow-opacity) * 2));
     color: $pt-icon-color-hover;
 
-    .#{$ns}-dark & {
+    /* .#{$ns}-dark & {
       box-shadow: inset 0 0 0 1px hslax(var(--white-hsl), calc(var(--pt-drop-shadow-opacity) * 2));
       color: $pt-dark-icon-color-hover;
-    }
+    } */
   }
 
   &.#{$ns}-popover-open .#{$ns}-icon {
@@ -226,11 +226,11 @@ $dark-selectable-header-menu-selected-hover-background:
     box-shadow: none;
     color: $white;
 
-    .#{$ns}-dark & {
+    /* .#{$ns}-dark & {
       background-color: $pt-dark-icon-color-selected;
       box-shadow: none;
       color: $white;
-    }
+    } */
   }
 }
 
