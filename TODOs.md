@@ -6,6 +6,7 @@
   - crazy css switching scheme
   - importing a css file in scss with the .css suffix will break the style because it adds a css partial
   - create-react-app hot reload with theme switching does some weird things sometimes
+  - how to consume libs and customize
 - switch to create-react-apps
 - v4
   - do it

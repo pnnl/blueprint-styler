@@ -14,7 +14,7 @@
   "main": "./dist/index.html",
   "files": [
     "/lib",
-    "/src/styles"
+    "/src/styles/**/*.scss"
   ],
   "keywords": [
     "palantir",
