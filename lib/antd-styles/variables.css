@@ -466,7 +466,7 @@
 	--dark-progress-track-color: hsla(var(--black-hsl),0.5);
 	--dark-progress-head-color: var(--gray3);
 	--progress-bar-stripes-color: hsla(var(--white-hsl),0.2);
-	--progress-bar-gradient: linear-gradient(-45deg,var(--progress-bar-stripes-color) 25%,transparent 0,transparent 50%,var(--progress-bar-stripes-color) 0,var(--progress-bar-stripes-color) 75%,transparent 0);
+	--progress-bar-gradient: linear-gradient(-45deg,var(--progress-bar-stripes-color) 25%,transparent 25%,transparent 50%,var(--progress-bar-stripes-color) 50%,var(--progress-bar-stripes-color) 75%,transparent 75%);
 	--skeleton-color-start: hsla(var(--light-gray1-hsl),0.2);
 	--skeleton-color-end: hsla(var(--gray1-hsl),0.2);
 	--slider-progress-color: hsla(var(--gray1-hsl),0.2);
