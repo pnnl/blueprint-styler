@@ -46,7 +46,7 @@ textarea.#{$ns}-input {
 
 
 .#{$ns}-control .#{$ns}-control-indicator{
-  box-shadow: inset 0 0 0 1px var(--input-border)
+  box-shadow: inset 0 0 0 1px var(--input-border);
   &:hover{
     box-shadow: inset 0 0 0 1px $pt-intent-primary;
   }
