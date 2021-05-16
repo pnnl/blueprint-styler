@@ -5,18 +5,8 @@
   - a dark color cannot link to its light counterpart or there will be a circular dependency
   - crazy css switching scheme
   - importing a css file in scss with the .css suffix will break the style because it adds a css partial
-- switch to create-react-app
-  - redo commenting out dark mode - for easier merges later on...
-    ```scss
-        code,
-        .#{$ns}-dark & code {
-            color: inherit;
-        }
-        ... tags
-        color: $pt-dark-text-color;
-        ...
-
-    ```
+  - create-react-app hot reload with theme switching does some weird things sometimes
+- switch to create-react-apps
 - v4
   - do it
 - CSS Build?
