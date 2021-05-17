@@ -1,15 +1,19 @@
 # TODO:
 
 ### App tool
-- update readmes
-  - a dark color cannot link to its light counterpart or there will be a circular dependency
-  - crazy css switching scheme
-  - importing a css file in scss with the .css suffix will break the style because it adds a css partial
-  - create-react-app hot reload with theme switching does some weird things sometimes
-  - how to consume libs and customize
-- switch to create-react-apps
-- v4
-  - do it
+- publish beta of v3.1
+  - add `Tokens` and `TokensAll` export to js and ts lib
+  - update readme
+    - a dark color cannot link to its light counterpart or there will be a circular dependency
+    - crazy css switching scheme
+    - importing a css file in scss with the .css suffix will break the style because it adds a css partial
+    - create-react-app hot reload with theme switching does some weird things sometimes
+    - how to consume libs and customize
+    - how branching works
+    - how copying works
+    - how versioning works
+- change project name to blueprintjs-styler ... add js because thats how its searched?
+- v4 - wait until a beta from blueprintjs
 - CSS Build?
   - separate different packages on build - core, selection, table, etc...
   - provide no minified?
@@ -21,6 +25,7 @@
   - colors
   - typography
 - Navigation
+  - maybe we can only use params due to the `"homepage": "."` thing with create-react-app
   - search
   - shortcut keys
   - routing? to specific themes
@@ -30,24 +35,26 @@
   - vars editing
   - make a custom theme export it
 - js generator of color vars - [hsluv](https://www.hsluv.org/)!
-- themes are individual packages with font dependencies?
-- Generate new style: `$ npm run new-style <style-name>`
-- Publish: `$ npm run publish <style-name>` publish a lib to npm under `@blueprint-style/<style-name>`
-  - update versioning
-- directions for development
+- Themes are individually published packages - with font dependencies? - monorepo?
+  - Add a dependency on the core repo,
+  - Generate new style: `$ npm run new-style <style-name>`
+  - build it and publish it under `@blueprintjs-style/<style-name>`
+
 
 ### Styles
-- var(--theme) / General
+- var(--style) / General
   - ellipsize button text by default
   - editable text focus is broken
   - grayscale transparency alt
-  - math with calc()
+  - math with calc() ?
   - input-transition-shadow could to be broken into input shadow vars...
-
-- [ant.design](https://ant.design/components/overview/)
-  - button group with active could be slightly different - see original
-  - disabled button in button group could have a border?
-  - slider
+  - better focus for buttons?
+  - switch icon libraries? - replace icons in svg-icon()
+- Flat
+  - dark theme ?
+  - button component divider
+- Flat Monochrome - intent primary color is grayscale - or all blue tint?
+- Flat Colorful - buttons have a colorful gradient?
 - [IBM Carbon](https://www.carbondesignsystem.com/components/overview)
   - dark timepicker-input intent-danger (error) :focus states are broken
   - `<Callout/>`, `<Toast/>`, `<Alert/>`? more like [Carbon Notification](https://www.carbondesignsystem.com/components/notification/style)
@@ -55,24 +62,22 @@
   - tune colors ??
   - card bg color needs to be darker ??
   - light theme text color needs softening ??
-- Flat
-  - dark theme
-  - button component divider
-- Flat - Mono - intent primary color is grayscale?
-- Flat - Gradient buttons?
-- [Shopify Polaris](https://polaris.shopify.com/components/actions/button#navigation)
+- [ant.design](https://ant.design/components/overview/)
+  - button group with active could be slightly different - see original
+  - disabled button in button group could have a border?
+- [Microsoft Fluent](https://developer.microsoft.com/en-us/fluentui#/controls/web)
+- [PNNL](https://forge.pnl.gov/standards/) - v2 and v3
+- [Shopify Polaris](https://polaris.shopify.com/components/actions/button#navigation) v5 & v6
+- HydroFERC eLibrary - DOE + FERC + Hydro + Serberus
+- Serberus - Burgundy Theme
 - [Google Material](https://material.io/components)
 - [Adobe Spectrum](https://spectrum.adobe.com/)
-- [Microsoft Fluent](https://developer.microsoft.com/en-us/fluentui#/controls/web)
+- [Amazon AWS](https://abduzeedo.com/amazon-web-services-design-system)
 - [Apple HMI](https://developer.apple.com/design/human-interface-guidelines/)
 - [Wordpress](https://make.wordpress.org/design/)?
-- [Amazon AWS](https://abduzeedo.com/amazon-web-services-design-system)
-- [PNNL](https://forge.pnl.gov/standards/)
+- [REI Cedar](https://rei.github.io/rei-cedar-docs/)
 - Maybe themes that are just colors and fonts?
-- something fancy? serif fonts and such...
-- **Common** - styles that help everywhere
-  - better focus for buttons?
+  - something fancy? serif fonts and such...
 
-### Extras
+### Notes
 - [postcss-remove-declaration](https://www.npmjs.com/package/postcss-remove-declaration/v/1.0.0)
-- switch icon libraries?
