@@ -38,6 +38,16 @@
     "generate-svg-icon-files": "node ./scripts/generate-svg-icon-files.js",
     "copy:examples": "copyfiles --all --verbose --up 5 '../blueprint/packages/docs-app/src/examples/**/*' './src' && echo '> DONE copying examples'"
   },
+  "peerDependencies": {
+    "@blueprintjs/core": "^3.44.2",
+    "@blueprintjs/datetime": "^3.23.2",
+    "@blueprintjs/docs-theme": "^3.10.2",
+    "@blueprintjs/icons": "^3.26.0",
+    "@blueprintjs/popover2": "^0.8.0",
+    "@blueprintjs/select": "^3.16.2",
+    "@blueprintjs/table": "^3.8.31",
+    "@blueprintjs/timezone": "^3.9.2"
+  },
   "devDependencies": {
     "@blueprintjs/core": "^3.44.2",
     "@blueprintjs/datetime": "^3.23.2",
