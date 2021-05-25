@@ -38,7 +38,7 @@
     "generate-svg-icon-files": "node ./scripts/generate-svg-icon-files.js",
     "copy:examples": "copyfiles --all --verbose --up 5 '../blueprint/packages/docs-app/src/examples/**/*' './src' && echo '> DONE copying examples'"
   },
-  "dependencies": {
+  "devDependencies": {
     "@blueprintjs/core": "^3.44.2",
     "@blueprintjs/datetime": "^3.23.2",
     "@blueprintjs/docs-theme": "^3.10.2",
@@ -58,9 +58,7 @@
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "typescript": "^4.2.4",
-    "web-vitals": "^1.1.2"
-  },
-  "devDependencies": {
+    "web-vitals": "^1.1.2",
     "cssnano": "^5.0.2",
     "gulp": "^4.0.2",
     "gulp-cssbeautify": "^3.0.0",

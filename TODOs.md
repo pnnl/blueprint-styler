@@ -50,6 +50,8 @@
   - input-transition-shadow could to be broken into input shadow vars...
   - better focus for buttons?
   - switch icon libraries? - replace icons in svg-icon()
+- Common
+  - Segmented Button Group like [this](https://dribbble.com/shots/14424288-Material-X-design-system-UI-kit-Figma-Segments)
 - Flat
   - dark theme ?
   - button component divider
