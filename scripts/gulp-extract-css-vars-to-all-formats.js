@@ -136,7 +136,8 @@ module.exports = () => through2.obj(function (file, enc, next) {
 
     //#region - Process data object into js, ts, and json - all identity ///////////////////
     const json = JSON.stringify(jsObjIdentity, null, 2)
-    let js = ts = '';
+    let js = ts = ''
+    let categories = []
 
     for (const category in jsObjIdentity) {
         if (jsObjIdentity.hasOwnProperty(category)) {
@@ -144,8 +145,13 @@ module.exports = () => through2.obj(function (file, enc, next) {
             const jsObjString = convertJsonToJsObjString(JSON.stringify(set, null, 2))
             js += `\nexports.${category} = ${jsObjString};\n`
             ts += `\nexport const ${category} = ${jsObjString};\n`
+            categories.push(category);
         }
     }
+    const tokens = `Tokens = {\n${categories.map(category => `  ${category}`).join(`,\n`)}\n}`;
+    const tokensAll = `TokensAll = {\n${categories.map(category => `  ...${category}`).join(`,\n`)}\n}`;
+    ts += `\nexport const ${tokens}\n\nexport const ${tokensAll}\n`;
+    js += `\nexports.${tokens}\n\nexports.${tokensAll}\n`;
     //#endregion ////////////////////////////////////////////////////////////////////////////////
 
 
