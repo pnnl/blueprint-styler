@@ -701,3 +701,33 @@ export const ColorsGrayscaleTransparent = {
   BlackTransLightGray4: "var(--black-trans-light-gray4)",
   BlackTransLightGray5: "var(--black-trans-light-gray5)"
 };
+
+export const Tokens = {
+  ColorsHsl,
+  Colors,
+  IntentColors,
+  LayoutColors,
+  TextColors,
+  IconColors,
+  Variables,
+  Components,
+  Datetime,
+  Table,
+  CarbonColors,
+  ColorsGrayscaleTransparent
+}
+
+export const TokensAll = {
+  ...ColorsHsl,
+  ...Colors,
+  ...IntentColors,
+  ...LayoutColors,
+  ...TextColors,
+  ...IconColors,
+  ...Variables,
+  ...Components,
+  ...Datetime,
+  ...Table,
+  ...CarbonColors,
+  ...ColorsGrayscaleTransparent
+}

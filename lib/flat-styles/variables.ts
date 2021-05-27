@@ -549,3 +549,29 @@ export const Table = {
   RegionDefaultColorHsl: "var(--region-default-color-hsl)",
   RegionSelectedColorHsl: "var(--region-selected-color-hsl)"
 };
+
+export const Tokens = {
+  ColorsHsl,
+  Colors,
+  IntentColors,
+  LayoutColors,
+  TextColors,
+  IconColors,
+  Variables,
+  Components,
+  Datetime,
+  Table
+}
+
+export const TokensAll = {
+  ...ColorsHsl,
+  ...Colors,
+  ...IntentColors,
+  ...LayoutColors,
+  ...TextColors,
+  ...IconColors,
+  ...Variables,
+  ...Components,
+  ...Datetime,
+  ...Table
+}

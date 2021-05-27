@@ -715,3 +715,31 @@ export const AntdColors = {
   Gold9: "var(--gold-9)",
   Gold10: "var(--gold-10)"
 };
+
+export const Tokens = {
+  ColorsHsl,
+  Colors,
+  IntentColors,
+  LayoutColors,
+  TextColors,
+  IconColors,
+  Variables,
+  Components,
+  Datetime,
+  Table,
+  AntdColors
+}
+
+export const TokensAll = {
+  ...ColorsHsl,
+  ...Colors,
+  ...IntentColors,
+  ...LayoutColors,
+  ...TextColors,
+  ...IconColors,
+  ...Variables,
+  ...Components,
+  ...Datetime,
+  ...Table,
+  ...AntdColors
+}
