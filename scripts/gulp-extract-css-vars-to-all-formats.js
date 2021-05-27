@@ -151,7 +151,7 @@ module.exports = () => through2.obj(function (file, enc, next) {
     const tokens = `Tokens = {\n${categories.map(category => `  ${category}`).join(`,\n`)}\n}`;
     const tokensAll = `TokensAll = {\n${categories.map(category => `  ...${category}`).join(`,\n`)}\n}`;
     ts += `\nexport const ${tokens}\n\nexport const ${tokensAll}\n`;
-    js += `\nexports.${tokens}\n\nexports.${tokensAll}\n`;
+    // js += `\nexports.${tokens}\n\nexports.${tokensAll}\n`;
     //#endregion ////////////////////////////////////////////////////////////////////////////////
 
 
@@ -164,8 +164,8 @@ module.exports = () => through2.obj(function (file, enc, next) {
         [less, 'less'],
         [scss, 'scss'],
         [json, 'json'],
-        [js, 'js'],
-        [ts, 'ts'],
+        [js, 'cjs.js'],
+        [ts, 'es6.js'], // ts is really es6 js
     ].forEach(type => {
         [fileContents, fileType] = type
         this.push(new File({
