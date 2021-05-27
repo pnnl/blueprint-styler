@@ -170,7 +170,7 @@ module.exports = () => through2.obj(function (file, enc, next) {
         [fileContents, fileType] = type
         this.push(new File({
             // base: base,
-            path: path.join(base, 'variables.' + fileType),
+            path: path.join(base, 'tokens.' + fileType),
             contents: new Buffer.from(fileContents)
         }))
     })
