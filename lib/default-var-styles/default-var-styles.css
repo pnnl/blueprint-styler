@@ -1,11 +1,11 @@
 @charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html {
-    scrollbar-color: hsla(204,24%,8%,.3) hsl(204,0%,100%);
-    scrollbar-color: var(--pt-text-color-disabled) var(--pt-app-top-background-color);
-    color-scheme: light;
+    -webkit-text-size-adjust: 100%;
     box-sizing: border-box;
+    color-scheme: light;
     line-height: 1.15;
-    -webkit-text-size-adjust: 100%
+    scrollbar-color: hsla(204,24%,8%,.3) hsl(204,0%,100%);
+    scrollbar-color: var(--pt-text-color-disabled) var(--pt-app-top-background-color)
 }
 
 body {
@@ -3201,9 +3201,9 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-file-upload-input {
+    word-wrap: normal;
     -webkit-appearance: none;
     appearance: none;
-    word-wrap: normal;
     background: hsl(204,0%,100%);
     background: var(--input-background-color);
     border: none;
@@ -3976,10 +3976,10 @@ form {
 }
 
 .bp3-html-select select,.bp3-select select {
-    -moz-appearance: none;
-    -webkit-appearance: none;
     -webkit-align-items: center;
     align-items: center;
+    -moz-appearance: none;
+    -webkit-appearance: none;
     background-color: hsl(204,33%,97%);
     background-color: var(--button-background-color);
     background-image: linear-gradient(180deg,hsla(204,0%,100%,.8),hsla(204,0%,100%,0));

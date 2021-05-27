@@ -1,8 +1,8 @@
 @charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html {
+    -webkit-text-size-adjust: 100%;
     box-sizing: border-box;
-    line-height: 1.15;
-    -webkit-text-size-adjust: 100%
+    line-height: 1.15
 }
 
 body {
@@ -3725,20 +3725,23 @@ a.bp3-button.bp3-disabled {
     background: rgba(206,217,224,.7)
 }
 
-.bp3-dark .bp3-file-input input.bp3-disabled+.bp3-file-upload-input,.bp3-dark .bp3-file-input input:disabled+.bp3-file-upload-input {
+.bp3-dark
+.bp3-file-input input.bp3-disabled+.bp3-file-upload-input,.bp3-dark .bp3-file-input input:disabled+.bp3-file-upload-input {
     background: rgba(57,75,89,.5);
     box-shadow: none;
     color: rgba(167,182,194,.6)
 }
 
-.bp3-dark .bp3-file-input input.bp3-disabled+.bp3-file-upload-input:after,.bp3-dark .bp3-file-input input:disabled+.bp3-file-upload-input:after {
+.bp3-dark
+.bp3-file-input input.bp3-disabled+.bp3-file-upload-input:after,.bp3-dark .bp3-file-input input:disabled+.bp3-file-upload-input:after {
     background-color: rgba(57,75,89,.5);
     background-image: none;
     box-shadow: none;
     color: rgba(167,182,194,.6)
 }
 
-.bp3-dark .bp3-file-input input.bp3-disabled+.bp3-file-upload-input:after.bp3-active,.bp3-dark .bp3-file-input input:disabled+.bp3-file-upload-input:after.bp3-active {
+.bp3-dark
+.bp3-file-input input.bp3-disabled+.bp3-file-upload-input:after.bp3-active,.bp3-dark .bp3-file-input input:disabled+.bp3-file-upload-input:after.bp3-active {
     background: rgba(57,75,89,.7)
 }
 
@@ -3763,9 +3766,9 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-file-upload-input {
+    word-wrap: normal;
     -webkit-appearance: none;
     appearance: none;
-    word-wrap: normal;
     background: #ffffff;
     border: none;
     border-radius: 3px;
@@ -4135,7 +4138,8 @@ a.bp3-button.bp3-disabled {
     color: #5c7080
 }
 
-.bp3-dark .bp3-input-group .bp3-input:not(:focus)+.bp3-button.bp3-minimal:not(:hover):not(:focus),.bp3-dark .bp3-input-group .bp3-input:not(:focus)+.bp3-input-action .bp3-button.bp3-minimal:not(:hover):not(:focus) {
+.bp3-dark .bp3-input-group .bp3-input:not(:focus)+.bp3-button.bp3-minimal:not(:hover):not(:focus),.bp3-dark
+.bp3-input-group .bp3-input:not(:focus)+.bp3-input-action .bp3-button.bp3-minimal:not(:hover):not(:focus) {
     color: #a7b6c2
 }
 
@@ -4713,10 +4717,10 @@ form {
 }
 
 .bp3-html-select select,.bp3-select select {
-    -moz-appearance: none;
-    -webkit-appearance: none;
     -webkit-align-items: center;
     align-items: center;
+    -moz-appearance: none;
+    -webkit-appearance: none;
     background-color: #f5f8fa;
     background-image: linear-gradient(180deg,rgba(255,255,255,.8),rgba(255,255,255,0));
     border: none;
@@ -5149,11 +5153,13 @@ form {
     color: #182026
 }
 
-.bp3-dark .bp3-html-select .bp3-icon,.bp3-dark .bp3-select .bp3-icon {
+.bp3-dark .bp3-html-select .bp3-icon,.bp3-dark
+.bp3-select .bp3-icon {
     color: #a7b6c2
 }
 
-.bp3-dark .bp3-html-select .bp3-icon:hover,.bp3-dark .bp3-select .bp3-icon:hover {
+.bp3-dark .bp3-html-select .bp3-icon:hover,.bp3-dark
+.bp3-select .bp3-icon:hover {
     color: #f5f8fa
 }
 
@@ -5166,16 +5172,19 @@ form {
     width: 100%
 }
 
-.bp3-dark .bp3-html-select option,.bp3-dark .bp3-select option {
+.bp3-dark .bp3-html-select option,.bp3-dark
+.bp3-select option {
     background-color: #30404d;
     color: #f5f8fa
 }
 
-.bp3-dark .bp3-html-select option:disabled,.bp3-dark .bp3-select option:disabled {
+.bp3-dark .bp3-html-select option:disabled,.bp3-dark
+.bp3-select option:disabled {
     color: rgba(167,182,194,.6)
 }
 
-.bp3-dark .bp3-html-select:after,.bp3-dark .bp3-select:after {
+.bp3-dark .bp3-html-select:after,.bp3-dark
+.bp3-select:after {
     color: #a7b6c2
 }
 
@@ -11887,7 +11896,9 @@ span.bp3-popover-target {
     background-image: linear-gradient(90deg,rgba(245,248,250,0),#f5f8fa 50%)
 }
 
-.bp3-dark .bp3-table-header-active .bp3-table-th-menu-container-background,.bp3-dark .bp3-table-header:hover .bp3-table-th-menu-container-background,.bp3-dark .bp3-table-th-menu-open .bp3-table-th-menu-container-background {
+.bp3-dark
+.bp3-table-header-active .bp3-table-th-menu-container-background,.bp3-dark .bp3-table-header:hover .bp3-table-th-menu-container-background,.bp3-dark
+.bp3-table-th-menu-open .bp3-table-th-menu-container-background {
     background-image: linear-gradient(90deg,rgba(48,64,77,0),#30404d 50%)
 }
 
@@ -11895,7 +11906,8 @@ span.bp3-popover-target {
     background-image: linear-gradient(90deg,rgba(225,232,237,0),#e1e8ed 50%)
 }
 
-.bp3-dark .bp3-table-selection-enabled .bp3-table-header-active .bp3-table-th-menu-container-background,.bp3-dark .bp3-table-selection-enabled .bp3-table-header:hover .bp3-table-th-menu-container-background {
+.bp3-dark
+.bp3-table-selection-enabled .bp3-table-header-active .bp3-table-th-menu-container-background,.bp3-dark .bp3-table-selection-enabled .bp3-table-header:hover .bp3-table-th-menu-container-background {
     background-image: linear-gradient(90deg,rgba(57,75,89,0),#394b59 50%)
 }
 

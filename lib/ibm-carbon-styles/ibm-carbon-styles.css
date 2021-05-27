@@ -1,11 +1,11 @@
 @charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html {
-    scrollbar-color: hsla(218,0%,0%,.4) hsl(218,0%,100%);
-    scrollbar-color: var(--pt-text-color-disabled) var(--pt-app-top-background-color);
-    color-scheme: light;
+    -webkit-text-size-adjust: 100%;
     box-sizing: border-box;
+    color-scheme: light;
     line-height: 1.15;
-    -webkit-text-size-adjust: 100%
+    scrollbar-color: hsla(218,0%,0%,.4) hsl(218,0%,100%);
+    scrollbar-color: var(--pt-text-color-disabled) var(--pt-app-top-background-color)
 }
 
 body {
@@ -3234,9 +3234,9 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-file-upload-input {
+    word-wrap: normal;
     -webkit-appearance: none;
     appearance: none;
-    word-wrap: normal;
     background: hsla(218,0%,0%,.04);
     background: var(--input-background-color);
     border: none;
@@ -4046,10 +4046,10 @@ form {
 }
 
 .bp3-html-select select,.bp3-select select {
-    -moz-appearance: none;
-    -webkit-appearance: none;
     -webkit-align-items: center;
     align-items: center;
+    -moz-appearance: none;
+    -webkit-appearance: none;
     background-color: hsla(218,0%,0%,.09);
     background-color: var(--button-background-color);
     background-image: none;
@@ -10109,9 +10109,9 @@ textarea.bp3-input.bp3-intent-danger:focus {
 }
 
 * {
+    text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility
+    -moz-osx-font-smoothing: grayscale
 }
 
 .bp3-control-group .bp3-input.bp3-active,.bp3-control-group .bp3-input:focus {
