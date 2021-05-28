@@ -165,7 +165,7 @@ module.exports = () => through2.obj(function (file, enc, next) {
         [scss, 'scss'],
         [json, 'json'],
         [js, 'cjs.js'],
-        [ts, 'es6.js'], // ts is really es6 js
+        [ts, 'js'], // ts is really es6 js
     ].forEach(type => {
         [fileContents, fileType, fileName] = type
         this.push(new File({
