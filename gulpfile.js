@@ -51,11 +51,12 @@ const compileLibsTask = function () {
         .pipe(rename(path => {
             path.basename = path.basename.split('.')[0]
             path.dirname = '/' + path.basename
-            path.extname = '.min' + path.extname
+        //     path.extname = '.min' + path.extname // add .min
+            path.basename = 'blueprint'
         }))
-        .pipe(gulp.dest('./lib'))
+        // .pipe(gulp.dest('./lib'))
         .pipe(cssBeautify())
-        .pipe(rename(path => { path.basename = path.basename.split('.')[0] })) // remove .min
+        // .pipe(rename(path => { path.basename = path.basename.split('.')[0] })) // remove .min
         .pipe(gulp.dest('./lib'))
 
 

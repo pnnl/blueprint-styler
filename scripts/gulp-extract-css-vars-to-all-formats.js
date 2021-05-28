@@ -160,12 +160,13 @@ module.exports = () => through2.obj(function (file, enc, next) {
     const base = path.basename(file.path).split('.')[0]; // return file name as base
 
     [
-        [css, 'css', 'tokenValues'], // css file contains values, the rest are just names
+        [css, 'css', 'blueprint-token-values'], // css file contains values, the rest are just names
         [less, 'less'],
         [scss, 'scss'],
         [json, 'json'],
         [js, 'cjs.js'],
         [ts, 'js'], // ts is really es6 js
+        [ts, 'ts'],
     ].forEach(type => {
         [fileContents, fileType, fileName] = type
         this.push(new File({
