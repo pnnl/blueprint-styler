@@ -2,7 +2,7 @@
 
 ### App tool
 - publish beta of v3.1
-  - BUG: manually replace the --#000 --#fff ?
+  - BUG: manually replace the --#000 --#fff ? react-scripts compiles build scss and replaces `--white:` and `--black:` with `--#fff:` and `--#000:`
   - remove dark theme colors from tokens export?
   - update readme
     - a dark color cannot link to its light counterpart or there will be a circular dependency
@@ -13,11 +13,10 @@
     - how branching works
     - how copying works
     - how versioning works
-- change project name to blueprintjs-styler ... add js because thats how its searched?
+- change project name to blueprintjs-styler ... add js because thats how its named?
 - v4 - wait until a beta from blueprintjs
 - CSS Build?
   - separate different packages on build - core, selection, table, etc...
-  - provide no minified?
   - provide non-fallback version of css?
 - sections:
   - for each theme: add a readme to each project - default styles is project explainer
@@ -60,6 +59,7 @@
 - Flat Colorful - buttons have a colorful gradient?
 - [IBM Carbon](https://www.carbondesignsystem.com/components/overview)
   - dark timepicker-input intent-danger (error) :focus states are broken
+  - slider thumb colors
   - `<Callout/>`, `<Toast/>`, `<Alert/>`? more like [Carbon Notification](https://www.carbondesignsystem.com/components/notification/style)
   - dark theme Text input with sub-button icon color
   - tune colors ??
@@ -69,7 +69,7 @@
   - button group with active could be slightly different - see original
   - disabled button in button group could have a border?
 - [Microsoft Fluent](https://developer.microsoft.com/en-us/fluentui#/controls/web)
-- [PNNL](https://forge.pnl.gov/standards/) - v2 and v3
+- [PNNL v2](https://forge.pnl.gov/standards/) & [PNNL v3](https://forgedev.pnnl.gov/prc3/)
 - [Shopify Polaris](https://polaris.shopify.com/components/actions/button#navigation) v5 & v6
 - HydroFERC eLibrary - DOE + FERC + Hydro + Serberus
 - Serberus - Burgundy Theme
