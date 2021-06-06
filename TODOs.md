@@ -18,6 +18,7 @@
 - CSS Build?
   - separate different packages on build - core, selection, table, etc...
   - provide non-fallback version of css?
+  - export a font file
 - sections:
   - for each theme: add a readme to each project - default styles is project explainer
   - base theme component that imports scss files
@@ -44,6 +45,7 @@
 ### Styles
 - var(--style) / General
   - ellipsize button text by default
+  - --font-weight-normal and --font-weight-bold
   - editable text focus is broken
   - grayscale transparency alt
   - math with calc() ?
