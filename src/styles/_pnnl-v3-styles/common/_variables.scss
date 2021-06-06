@@ -5,10 +5,12 @@
 
 // see https://bitsofco.de/the-new-system-font-stack/
 --pt-font-family:
+  Metropolis,
+  Montserrat,
+  "Roboto",
   -apple-system,
   "BlinkMacSystemFont",
   "Segoe UI",
-  "Roboto",
   "Oxygen",
   "Ubuntu",
   "Cantarell",
@@ -18,10 +20,11 @@
   sans-serif;
 
 --pt-font-family-monospace:
+  Inconsolata,
   Consolas,
   Menlo,
   monospace;
 
---pt-border-radius: 6px;
+--pt-border-radius: 4px;
 
 }

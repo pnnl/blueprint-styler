@@ -13,7 +13,7 @@ $pt-border-radius-raw: 0;
 @import '../global/styler';
 
 // IBM PLEX FONTS //
-@import './ipm-plex';
+@import './font-face';
 
 // custom presentation for the styler docs
 .#{$ns}-dark .docs-example-options {

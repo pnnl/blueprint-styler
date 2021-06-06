@@ -1,0 +1,152 @@
+
+// https://fonts.google.com/specimen/Montserrat
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+// https://fonts.google.com/specimen/Inconsolata
+@import url('https://fonts.googleapis.com/css?family=Inconsolata&display=swap');
+
+@font-face{
+  font-family:Metropolis;
+  font-weight:100;
+  font-style:normal;
+  src:
+    url('https://cdn.pnl.gov/fonts/Metropolis/WOFF2/Metropolis-Thin.woff2') format("woff2"),
+    url('https://cdn.pnl.gov/fonts/Metropolis/WOFF/Metropolis-Thin.woff') format("woff")
+}
+
+@font-face{
+  font-family:Metropolis;
+  font-weight:200;
+  font-style:normal;
+  src:
+    url('https://cdn.pnl.gov/fonts/Metropolis/WOFF2/Metropolis-ExtraLight.woff2') format("woff2"),
+    url('https://cdn.pnl.gov/fonts/Metropolis/WOFF/Metropolis-ExtraLight.woff') format("woff")
+}
+@font-face{
+  font-family:Metropolis;
+  font-weight:300;
+  font-style:normal;
+  src:
+    url('https://cdn.pnl.gov/fonts/Metropolis/WOFF2/Metropolis-Light.woff2') format("woff2"),
+    url('https://cdn.pnl.gov/fonts/Metropolis/WOFF/Metropolis-Light.woff') format("woff")
+}
+@font-face{
+  font-family:Metropolis;
+  font-weight:400;
+  font-style:normal;
+  src:
+    url('https://cdn.pnl.gov/fonts/Metropolis/WOFF2/Metropolis-Regular.woff2') format("woff2"),
+    url('https://cdn.pnl.gov/fonts/Metropolis/WOFF/Metropolis-Regular.woff') format("woff")
+}
+@font-face{
+  font-family:Metropolis;
+  font-weight:500;
+  font-style:normal;
+  src:
+    url('https://cdn.pnl.gov/fonts/Metropolis/WOFF2/Metropolis-Medium.woff2') format("woff2"),
+    url('https://cdn.pnl.gov/fonts/Metropolis/WOFF/Metropolis-Medium.woff') format("woff")
+}
+@font-face{
+  font-family:Metropolis;
+  font-weight:600;
+  font-style:normal;
+  src:
+    url('https://cdn.pnl.gov/fonts/Metropolis/WOFF2/Metropolis-SemiBold.woff2') format("woff2"),
+    url('https://cdn.pnl.gov/fonts/Metropolis/WOFF/Metropolis-SemiBold.woff') format("woff")
+}
+@font-face{
+  font-family:Metropolis;
+  font-weight:700;
+  font-style:normal;
+  src:
+    url('https://cdn.pnl.gov/fonts/Metropolis/WOFF2/Metropolis-Bold.woff2') format("woff2"),
+    url('https://cdn.pnl.gov/fonts/Metropolis/WOFF/Metropolis-Bold.woff') format("woff")
+}
+@font-face{
+  font-family:Metropolis;
+  font-weight:800;
+  font-style:normal;
+  src:
+    url('https://cdn.pnl.gov/fonts/Metropolis/WOFF2/Metropolis-ExtraBold.woff2') format("woff2"),
+    url('https://cdn.pnl.gov/fonts/Metropolis/WOFF/Metropolis-ExtraBold.woff') format("woff")
+}
+@font-face{
+  font-family:Metropolis;
+  font-weight:900;
+  font-style:normal;
+  src:
+    url('https://cdn.pnl.gov/fonts/Metropolis/WOFF2/Metropolis-Black.woff2') format("woff2"),
+    url('https://cdn.pnl.gov/fonts/Metropolis/WOFF/Metropolis-Black.woff') format("woff")
+}
+@font-face{
+  font-family:Metropolis;
+  font-weight:100;
+  font-style:italic;
+  src:
+    url('https://cdn.pnl.gov/fonts/Metropolis/WOFF2/Metropolis-ThinItalic.woff2') format("woff2"),
+    url('https://cdn.pnl.gov/fonts/Metropolis/WOFF/Metropolis-ThinItalic.woff') format("woff")
+}
+@font-face{
+  font-family:Metropolis;
+  font-weight:200;
+  font-style:italic;
+  src:
+    url('https://cdn.pnl.gov/fonts/Metropolis/WOFF2/Metropolis-ExtraLightItalic.woff2') format("woff2"),
+    url('https://cdn.pnl.gov/fonts/Metropolis/WOFF/Metropolis-ExtraLightItalic.woff') format("woff")
+}
+@font-face{
+  font-family:Metropolis;
+  font-weight:300;
+  font-style:italic;
+  src:
+    url('https://cdn.pnl.gov/fonts/Metropolis/WOFF2/Metropolis-LightItalic.woff2') format("woff2"),
+    url('https://cdn.pnl.gov/fonts/Metropolis/WOFF/Metropolis-LightItalic.woff') format("woff")
+}
+@font-face{
+  font-family:Metropolis;
+  font-weight:400;
+  font-style:italic;
+  src:
+    url('https://cdn.pnl.gov/fonts/Metropolis/WOFF2/Metropolis-RegularItalic.woff2') format("woff2"),
+    url('https://cdn.pnl.gov/fonts/Metropolis/WOFF/Metropolis-RegularItalic.woff') format("woff")
+}
+@font-face{
+  font-family:Metropolis;
+  font-weight:500;
+  font-style:italic;
+  src:
+    url('https://cdn.pnl.gov/fonts/Metropolis/WOFF2/Metropolis-MediumItalic.woff2') format("woff2"),
+    url('https://cdn.pnl.gov/fonts/Metropolis/WOFF/Metropolis-MediumItalic.woff') format("woff")
+}
+@font-face{
+  font-family:Metropolis;
+  font-weight:600;
+  font-style:italic;
+  src:
+    url('https://cdn.pnl.gov/fonts/Metropolis/WOFF2/Metropolis-SemiBoldItalic.woff2') format("woff2"),
+    url('https://cdn.pnl.gov/fonts/Metropolis/WOFF/Metropolis-SemiBoldItalic.woff') format("woff")
+}
+@font-face{
+  font-family:Metropolis;
+  font-weight:700;
+  font-style:italic;
+  src:
+    url('https://cdn.pnl.gov/fonts/Metropolis/WOFF2/Metropolis-BoldItalic.woff2') format("woff2"),
+    url('https://cdn.pnl.gov/fonts/Metropolis/WOFF/Metropolis-BoldItalic.woff') format("woff")
+}
+@font-face{
+  font-family:Metropolis;
+  font-weight:800;
+  font-style:italic;
+  src:
+    url('https://cdn.pnl.gov/fonts/Metropolis/WOFF2/Metropolis-ExtraBoldItalic.woff2') format("woff2"),
+    url('https://cdn.pnl.gov/fonts/Metropolis/WOFF/Metropolis-ExtraBoldItalic.woff') format("woff")
+}
+@font-face{
+  font-family:Metropolis;
+  font-weight:900;
+  font-style:italic;
+  src:
+    url('https://cdn.pnl.gov/fonts/Metropolis/WOFF2/Metropolis-BlackItalic.woff2') format("woff2"),
+    url('https://cdn.pnl.gov/fonts/Metropolis/WOFF/Metropolis-BlackItalic.woff') format("woff")
+}
