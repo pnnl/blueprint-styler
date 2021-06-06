@@ -1,8 +1,7 @@
 # TODO:
 
 ### App tool
-- publish beta of v3.1
-  - BUG: manually replace the --#000 --#fff ? react-scripts compiles build scss and replaces `--white:` and `--black:` with `--#fff:` and `--#000:`
+- publish beta of v3.1s
   - remove dark theme colors from tokens export?
   - update readme
     - a dark color cannot link to its light counterpart or there will be a circular dependency
