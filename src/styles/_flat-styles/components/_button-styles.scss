@@ -1,11 +1,11 @@
-.bp3-button, a, a.bp3-button{
+.#{$ns}-button, a, a.#{$ns}-button{
   transition: background-color 100ms linear;
   &:active{
     transition-duration: 50ms;
   }
 }
 
-// .bp3-input, .bp3-file-upload-input{
+// .#{$ns}-input, .#{$ns}-file-upload-input{
 //   box-shadow:
 //     0 0 0 0 transparent,
 //     0 0 0 0 transparent,
