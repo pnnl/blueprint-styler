@@ -2,6 +2,9 @@
 
 ### App tool
 - publish beta of v3.1s
+  - bump to latest blueprint v
+  - ellipsize button text by default
+  - --font-weight-normal and --font-weight-bold
   - remove dark theme colors from tokens export?
   - update readme
     - a dark color cannot link to its light counterpart or there will be a circular dependency
@@ -43,9 +46,7 @@
 
 ### Styles
 - var(--style) / General
-  - ellipsize button text by default
-  - --font-weight-normal and --font-weight-bold
-  - editable text focus is broken
+  - editable text focus is still broken
   - grayscale transparency alt
   - math with calc() ?
   - input-transition-shadow could to be broken into input shadow vars...
@@ -55,8 +56,8 @@
   - Segmented Button Group like [this](https://dribbble.com/shots/14424288-Material-X-design-system-UI-kit-Figma-Segments)
 - Flat
   - dark theme ?
-  - button component divider
-- Flat Monochrome - intent primary color is grayscale - or all blue tint?
+  - button component divider // ?? isn't this done?
+- Flat Monochrome - intent primary color is grayscale - or all blue tint? - FERC and Starfish
 - Flat Colorful - buttons have a colorful gradient?
 - [IBM Carbon](https://www.carbondesignsystem.com/components/overview)
   - dark timepicker-input intent-danger (error) :focus states are broken
