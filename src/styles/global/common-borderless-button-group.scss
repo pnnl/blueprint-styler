@@ -1,49 +1,52 @@
 $button-group-intent-divider: hslax(var(--white-hsl),0.25) !default;
+$button-intent: '#{$ns}-button[class*=#{$ns}-intent-]';
 
-.#{$ns}-button-group{
+.#{$ns}-button-group {
 
-  &:not(.#{$ns}-vertical) {
-    .#{$ns}-button[class*=#{$ns}-intent-]{
+  .#{$button-intent} { // not outline?
       border: 0 solid $button-group-intent-divider;
       border-width: 0 1px;
-      &:first-child,
-      .#{$ns}-popover-wrapper:first-child & {
-        border-left: 0;
-      }
-      &:last-child,
-      .#{$ns}-popover-wrapper:last-child & {
-          border-right: 0;
-      }
+  }
+
+  // from _button-group.scss && _popover2-in-button-group.scss
+  // support wrapping buttons in a tooltip, which adds a wrapper element
+
+  &:not(.#{$ns}-minimal) {
+    > .#{$ns}-popover-wrapper:first-child .#{$button-intent},
+    > .#{$ns}-popover2-target:first-child .#{$button-intent},
+    > .#{$button-intent}:first-child {
+      border-width: 0 1px 0 0;
+    }
+
+    > .#{$ns}-popover-wrapper:last-child .#{$button-intent},
+    > .#{$ns}-popover2-target:last-child .#{$button-intent},
+    > .#{$button-intent}:last-child {
+      border-width: 0 0 0 1px;
     }
   }
+
 
   &.#{$ns}-vertical {
-    .#{$ns}-button[class*=#{$ns}-intent-]{
-      border: 0 solid $button-group-intent-divider;
-      border-width: 1px 0;
-      &:first-child,
-      .#{$ns}-popover-wrapper:first-child & {
-        border-top: 0;
+
+    .#{$button-intent}{ // not outline?
+        border-width: 1px 0;
+    }
+
+    &:not(.#{$ns}-minimal) {
+      > .#{$ns}-popover-wrapper:first-child .#{$button-intent},
+      > .#{$ns}-popover2-target:first-child .#{$button-intent},
+      > .#{$button-intent}:first-child {
+        border-width: 0 0 1px 0;
       }
-      &:last-child,
-      .#{$ns}-popover-wrapper:last-child & {
-        border-bottom: 0;
+
+      > .#{$ns}-popover-wrapper:last-child .#{$button-intent},
+      > .#{$ns}-popover2-target:last-child .#{$button-intent},
+      > .#{$button-intent}:last-child {
+        border-width: 1px 0 0 0;
       }
+
     }
   }
 
 }
 
-
-/* // for reference
-.bp3-button-group {
-  .bp3-button{
-    &:not(:last-child),
-    .bp3-popover-wrapper:not(:last-child) & {
-      border-bottom-right-radius: 0;
-      border-top-right-radius: 0;
-      margin-right: -1px;
-    }
-  }
-}
-*/
