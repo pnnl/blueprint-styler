@@ -1371,6 +1371,11 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-button-group .bp3-button[class*=bp3-intent-] {
+    border: 0 solid hsla(240,0%,100%,.25);
+    border-bottom: 0 solid hsla(var(--white-hsl),.25);
+    border-left: 1px solid hsla(var(--white-hsl),.25);
+    border-right: 1px solid hsla(var(--white-hsl),.25);
+    border-top: 0 solid hsla(var(--white-hsl),.25);
     z-index: 9
 }
 
@@ -2704,7 +2709,7 @@ a.bp3-button.bp3-disabled {
     z-index: 8
 }
 
-.bp3-control-group .bp3-input-group>.bp3-button,.bp3-control-group .bp3-input-group>.bp3-icon,.bp3-control-group .bp3-input-group>.bp3-input-action {
+.bp3-control-group .bp3-input-group>.bp3-button,.bp3-control-group .bp3-input-group>.bp3-icon,.bp3-control-group .bp3-input-group>.bp3-input-action,.bp3-control-group .bp3-input-group>.bp3-input-left-container {
     z-index: 16
 }
 
@@ -7332,11 +7337,6 @@ span.bp3-popover-target {
     color: var(--pt-intent-danger)
 }
 
-.bp3-tree.bp3-fixed-positioning-containing-block {
-    -webkit-transform: translateY(0);
-    transform: translateY(0)
-}
-
 .bp3-tree-node-list {
     list-style: none;
     margin: 0;
@@ -9207,7 +9207,7 @@ span.bp3-popover-target {
     display: block
 }
 
-.bp3-context-menu2-popover2-target {
+.bp3-context-menu2-virtual-target {
     position: fixed
 }
 
@@ -9835,36 +9835,24 @@ option {
     --skeleton-highlight-color: hsl(0deg 0% 100%/10%)
 }
 
-.bp3-button-group:not(.bp3-vertical) .bp3-button[class*=bp3-intent-] {
-    border: 0 solid hsla(240,0%,100%,.25);
-    border-bottom: 0 solid hsla(var(--white-hsl),.25);
-    border-left: 1px solid hsla(var(--white-hsl),.25);
-    border-right: 1px solid hsla(var(--white-hsl),.25);
-    border-top: 0 solid hsla(var(--white-hsl),.25)
+.bp3-button-group:not(.bp3-minimal)>.bp3-button[class*=bp3-intent-]:first-child,.bp3-button-group:not(.bp3-minimal)>.bp3-popover2-target:first-child .bp3-button[class*=bp3-intent-],.bp3-button-group:not(.bp3-minimal)>.bp3-popover-wrapper:first-child .bp3-button[class*=bp3-intent-] {
+    border-width: 0 1px 0 0
 }
 
-.bp3-button-group:not(.bp3-vertical) .bp3-button[class*=bp3-intent-]:first-child,.bp3-popover-wrapper:first-child .bp3-button-group:not(.bp3-vertical) .bp3-button[class*=bp3-intent-] {
-    border-left: 0
-}
-
-.bp3-button-group:not(.bp3-vertical) .bp3-button[class*=bp3-intent-]:last-child,.bp3-popover-wrapper:last-child .bp3-button-group:not(.bp3-vertical) .bp3-button[class*=bp3-intent-] {
-    border-right: 0
+.bp3-button-group:not(.bp3-minimal)>.bp3-button[class*=bp3-intent-]:last-child,.bp3-button-group:not(.bp3-minimal)>.bp3-popover2-target:last-child .bp3-button[class*=bp3-intent-],.bp3-button-group:not(.bp3-minimal)>.bp3-popover-wrapper:last-child .bp3-button[class*=bp3-intent-] {
+    border-width: 0 0 0 1px
 }
 
 .bp3-button-group.bp3-vertical .bp3-button[class*=bp3-intent-] {
-    border: 0 solid hsla(240,0%,100%,.25);
-    border-bottom: 1px solid hsla(var(--white-hsl),.25);
-    border-left: 0 solid hsla(var(--white-hsl),.25);
-    border-right: 0 solid hsla(var(--white-hsl),.25);
-    border-top: 1px solid hsla(var(--white-hsl),.25)
+    border-width: 1px 0
 }
 
-.bp3-button-group.bp3-vertical .bp3-button[class*=bp3-intent-]:first-child,.bp3-popover-wrapper:first-child .bp3-button-group.bp3-vertical .bp3-button[class*=bp3-intent-] {
-    border-top: 0
+.bp3-button-group.bp3-vertical:not(.bp3-minimal)>.bp3-button[class*=bp3-intent-]:first-child,.bp3-button-group.bp3-vertical:not(.bp3-minimal)>.bp3-popover2-target:first-child .bp3-button[class*=bp3-intent-],.bp3-button-group.bp3-vertical:not(.bp3-minimal)>.bp3-popover-wrapper:first-child .bp3-button[class*=bp3-intent-] {
+    border-width: 0 0 1px
 }
 
-.bp3-button-group.bp3-vertical .bp3-button[class*=bp3-intent-]:last-child,.bp3-popover-wrapper:last-child .bp3-button-group.bp3-vertical .bp3-button[class*=bp3-intent-] {
-    border-bottom: 0
+.bp3-button-group.bp3-vertical:not(.bp3-minimal)>.bp3-button[class*=bp3-intent-]:last-child,.bp3-button-group.bp3-vertical:not(.bp3-minimal)>.bp3-popover2-target:last-child .bp3-button[class*=bp3-intent-],.bp3-button-group.bp3-vertical:not(.bp3-minimal)>.bp3-popover-wrapper:last-child .bp3-button[class*=bp3-intent-] {
+    border-width: 1px 0 0
 }
 
 .bp3-control-group .bp3-input.bp3-active,.bp3-control-group .bp3-input:focus {

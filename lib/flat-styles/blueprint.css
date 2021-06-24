@@ -1371,6 +1371,11 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-button-group .bp3-button[class*=bp3-intent-] {
+    border: 0 solid hsla(209,0%,100%,.25);
+    border-bottom: 0 solid hsla(var(--white-hsl),.25);
+    border-left: 1px solid hsla(var(--white-hsl),.25);
+    border-right: 1px solid hsla(var(--white-hsl),.25);
+    border-top: 0 solid hsla(var(--white-hsl),.25);
     z-index: 9
 }
 
@@ -2704,7 +2709,7 @@ a.bp3-button.bp3-disabled {
     z-index: 8
 }
 
-.bp3-control-group .bp3-input-group>.bp3-button,.bp3-control-group .bp3-input-group>.bp3-icon,.bp3-control-group .bp3-input-group>.bp3-input-action {
+.bp3-control-group .bp3-input-group>.bp3-button,.bp3-control-group .bp3-input-group>.bp3-icon,.bp3-control-group .bp3-input-group>.bp3-input-action,.bp3-control-group .bp3-input-group>.bp3-input-left-container {
     z-index: 16
 }
 
@@ -3208,7 +3213,7 @@ a.bp3-button.bp3-disabled {
     border: none;
     border-radius: 6px;
     border-radius: var(--pt-border-radius);
-    box-shadow: 0 0 0 0 hsla(209,90%,50%,0),0 0 0 0 hsla(209,90%,50%,0),inset 0 0 0 1px hsla(209,0%,9%,.15),inset 0 1px 1px hsla(209,0%,9%,.2);
+    box-shadow: 0 0 0 0 hsla(209,90%,50%,0),0 0 0 0 hsla(209,90%,50%,0),inset 0 0 0 1px hsla(209,0%,9%,.15);
     box-shadow: 0 0 0 0 hsla(var(--input-shadow-color-focus-hsl),0),0 0 0 0 hsla(var(--input-shadow-color-focus-hsl),0),var(--pt-input-box-shadow);
     color: hsl(209,0%,15%);
     color: var(--input-color);
@@ -3599,7 +3604,7 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-input-group.bp3-intent-primary .bp3-input {
-    box-shadow: 0 0 0 0 hsla(209,90%,50%,0),0 0 0 0 hsla(209,90%,50%,0),inset 0 0 0 1px hsla(209,90%,50%,1),inset 0 0 0 1px hsla(209,0%,9%,.15),inset 0 1px 1px hsla(209,0%,9%,.2);
+    box-shadow: 0 0 0 0 hsla(209,90%,50%,0),0 0 0 0 hsla(209,90%,50%,0),inset 0 0 0 1px hsla(209,90%,50%,1),inset 0 0 0 1px hsla(209,0%,9%,.15);
     box-shadow: 0 0 0 0 hsla(var(--pt-intent-primary-hsl),0),0 0 0 0 hsla(var(--pt-intent-primary-hsl),0),inset 0 0 0 1px hsla(var(--pt-intent-primary-hsl),1),var(--pt-input-box-shadow)
 }
 
@@ -3623,7 +3628,7 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-input-group.bp3-intent-success .bp3-input {
-    box-shadow: 0 0 0 0 hsla(113,100%,34%,0),0 0 0 0 hsla(113,100%,34%,0),inset 0 0 0 1px hsla(113,100%,34%,1),inset 0 0 0 1px hsla(209,0%,9%,.15),inset 0 1px 1px hsla(209,0%,9%,.2);
+    box-shadow: 0 0 0 0 hsla(113,100%,34%,0),0 0 0 0 hsla(113,100%,34%,0),inset 0 0 0 1px hsla(113,100%,34%,1),inset 0 0 0 1px hsla(209,0%,9%,.15);
     box-shadow: 0 0 0 0 hsla(var(--pt-intent-success-hsl),0),0 0 0 0 hsla(var(--pt-intent-success-hsl),0),inset 0 0 0 1px hsla(var(--pt-intent-success-hsl),1),var(--pt-input-box-shadow)
 }
 
@@ -3647,7 +3652,7 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-input-group.bp3-intent-warning .bp3-input {
-    box-shadow: 0 0 0 0 hsla(30,70%,51%,0),0 0 0 0 hsla(30,70%,51%,0),inset 0 0 0 1px hsla(30,70%,51%,1),inset 0 0 0 1px hsla(209,0%,9%,.15),inset 0 1px 1px hsla(209,0%,9%,.2);
+    box-shadow: 0 0 0 0 hsla(30,70%,51%,0),0 0 0 0 hsla(30,70%,51%,0),inset 0 0 0 1px hsla(30,70%,51%,1),inset 0 0 0 1px hsla(209,0%,9%,.15);
     box-shadow: 0 0 0 0 hsla(var(--pt-intent-warning-hsl),0),0 0 0 0 hsla(var(--pt-intent-warning-hsl),0),inset 0 0 0 1px hsla(var(--pt-intent-warning-hsl),1),var(--pt-input-box-shadow)
 }
 
@@ -3671,7 +3676,7 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-input-group.bp3-intent-danger .bp3-input {
-    box-shadow: 0 0 0 0 hsla(0,69%,54%,0),0 0 0 0 hsla(0,69%,54%,0),inset 0 0 0 1px hsla(0,69%,54%,1),inset 0 0 0 1px hsla(209,0%,9%,.15),inset 0 1px 1px hsla(209,0%,9%,.2);
+    box-shadow: 0 0 0 0 hsla(0,69%,54%,0),0 0 0 0 hsla(0,69%,54%,0),inset 0 0 0 1px hsla(0,69%,54%,1),inset 0 0 0 1px hsla(209,0%,9%,.15);
     box-shadow: 0 0 0 0 hsla(var(--pt-intent-danger-hsl),0),0 0 0 0 hsla(var(--pt-intent-danger-hsl),0),inset 0 0 0 1px hsla(var(--pt-intent-danger-hsl),1),var(--pt-input-box-shadow)
 }
 
@@ -3702,7 +3707,7 @@ a.bp3-button.bp3-disabled {
     border: none;
     border-radius: 6px;
     border-radius: var(--pt-border-radius);
-    box-shadow: 0 0 0 0 hsla(209,90%,50%,0),0 0 0 0 hsla(209,90%,50%,0),inset 0 0 0 1px hsla(209,0%,9%,.15),inset 0 1px 1px hsla(209,0%,9%,.2);
+    box-shadow: 0 0 0 0 hsla(209,90%,50%,0),0 0 0 0 hsla(209,90%,50%,0),inset 0 0 0 1px hsla(209,0%,9%,.15);
     box-shadow: 0 0 0 0 hsla(var(--input-shadow-color-focus-hsl),0),0 0 0 0 hsla(var(--input-shadow-color-focus-hsl),0),var(--pt-input-box-shadow);
     color: hsl(209,0%,15%);
     color: var(--input-color);
@@ -3792,7 +3797,7 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-input.bp3-intent-primary {
-    box-shadow: 0 0 0 0 hsla(209,90%,50%,0),0 0 0 0 hsla(209,90%,50%,0),inset 0 0 0 1px hsla(209,90%,50%,1),inset 0 0 0 1px hsla(209,0%,9%,.15),inset 0 1px 1px hsla(209,0%,9%,.2);
+    box-shadow: 0 0 0 0 hsla(209,90%,50%,0),0 0 0 0 hsla(209,90%,50%,0),inset 0 0 0 1px hsla(209,90%,50%,1),inset 0 0 0 1px hsla(209,0%,9%,.15);
     box-shadow: 0 0 0 0 hsla(var(--pt-intent-primary-hsl),0),0 0 0 0 hsla(var(--pt-intent-primary-hsl),0),inset 0 0 0 1px hsla(var(--pt-intent-primary-hsl),1),var(--pt-input-box-shadow)
 }
 
@@ -3811,7 +3816,7 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-input.bp3-intent-success {
-    box-shadow: 0 0 0 0 hsla(113,100%,34%,0),0 0 0 0 hsla(113,100%,34%,0),inset 0 0 0 1px hsla(113,100%,34%,1),inset 0 0 0 1px hsla(209,0%,9%,.15),inset 0 1px 1px hsla(209,0%,9%,.2);
+    box-shadow: 0 0 0 0 hsla(113,100%,34%,0),0 0 0 0 hsla(113,100%,34%,0),inset 0 0 0 1px hsla(113,100%,34%,1),inset 0 0 0 1px hsla(209,0%,9%,.15);
     box-shadow: 0 0 0 0 hsla(var(--pt-intent-success-hsl),0),0 0 0 0 hsla(var(--pt-intent-success-hsl),0),inset 0 0 0 1px hsla(var(--pt-intent-success-hsl),1),var(--pt-input-box-shadow)
 }
 
@@ -3830,7 +3835,7 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-input.bp3-intent-warning {
-    box-shadow: 0 0 0 0 hsla(30,70%,51%,0),0 0 0 0 hsla(30,70%,51%,0),inset 0 0 0 1px hsla(30,70%,51%,1),inset 0 0 0 1px hsla(209,0%,9%,.15),inset 0 1px 1px hsla(209,0%,9%,.2);
+    box-shadow: 0 0 0 0 hsla(30,70%,51%,0),0 0 0 0 hsla(30,70%,51%,0),inset 0 0 0 1px hsla(30,70%,51%,1),inset 0 0 0 1px hsla(209,0%,9%,.15);
     box-shadow: 0 0 0 0 hsla(var(--pt-intent-warning-hsl),0),0 0 0 0 hsla(var(--pt-intent-warning-hsl),0),inset 0 0 0 1px hsla(var(--pt-intent-warning-hsl),1),var(--pt-input-box-shadow)
 }
 
@@ -3849,7 +3854,7 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-input.bp3-intent-danger {
-    box-shadow: 0 0 0 0 hsla(0,69%,54%,0),0 0 0 0 hsla(0,69%,54%,0),inset 0 0 0 1px hsla(0,69%,54%,1),inset 0 0 0 1px hsla(209,0%,9%,.15),inset 0 1px 1px hsla(209,0%,9%,.2);
+    box-shadow: 0 0 0 0 hsla(0,69%,54%,0),0 0 0 0 hsla(0,69%,54%,0),inset 0 0 0 1px hsla(0,69%,54%,1),inset 0 0 0 1px hsla(209,0%,9%,.15);
     box-shadow: 0 0 0 0 hsla(var(--pt-intent-danger-hsl),0),0 0 0 0 hsla(var(--pt-intent-danger-hsl),0),inset 0 0 0 1px hsla(var(--pt-intent-danger-hsl),1),var(--pt-input-box-shadow)
 }
 
@@ -7332,11 +7337,6 @@ span.bp3-popover-target {
     color: var(--pt-intent-danger)
 }
 
-.bp3-tree.bp3-fixed-positioning-containing-block {
-    -webkit-transform: translateY(0);
-    transform: translateY(0)
-}
-
 .bp3-tree-node-list {
     list-style: none;
     margin: 0;
@@ -7882,7 +7882,7 @@ span.bp3-popover-target {
     background: var(--input-background-color);
     border-radius: 6px;
     border-radius: var(--pt-border-radius);
-    box-shadow: inset 0 0 0 1px hsla(209,0%,9%,.15),inset 0 1px 1px hsla(209,0%,9%,.2);
+    box-shadow: inset 0 0 0 1px hsla(209,0%,9%,.15);
     box-shadow: var(--pt-input-box-shadow);
     display: inline-block;
     height: 30px;
@@ -7924,7 +7924,7 @@ span.bp3-popover-target {
 }
 
 .bp3-timepicker .bp3-timepicker-input.bp3-intent-primary {
-    box-shadow: 0 0 0 0 hsla(209,90%,50%,0),0 0 0 0 hsla(209,90%,50%,0),inset 0 0 0 1px hsla(209,90%,50%,1),inset 0 0 0 1px hsla(209,0%,9%,.15),inset 0 1px 1px hsla(209,0%,9%,.2);
+    box-shadow: 0 0 0 0 hsla(209,90%,50%,0),0 0 0 0 hsla(209,90%,50%,0),inset 0 0 0 1px hsla(209,90%,50%,1),inset 0 0 0 1px hsla(209,0%,9%,.15);
     box-shadow: 0 0 0 0 hsla(var(--pt-intent-primary-hsl),0),0 0 0 0 hsla(var(--pt-intent-primary-hsl),0),inset 0 0 0 1px hsla(var(--pt-intent-primary-hsl),1),var(--pt-input-box-shadow)
 }
 
@@ -7943,7 +7943,7 @@ span.bp3-popover-target {
 }
 
 .bp3-timepicker .bp3-timepicker-input.bp3-intent-success {
-    box-shadow: 0 0 0 0 hsla(113,100%,34%,0),0 0 0 0 hsla(113,100%,34%,0),inset 0 0 0 1px hsla(113,100%,34%,1),inset 0 0 0 1px hsla(209,0%,9%,.15),inset 0 1px 1px hsla(209,0%,9%,.2);
+    box-shadow: 0 0 0 0 hsla(113,100%,34%,0),0 0 0 0 hsla(113,100%,34%,0),inset 0 0 0 1px hsla(113,100%,34%,1),inset 0 0 0 1px hsla(209,0%,9%,.15);
     box-shadow: 0 0 0 0 hsla(var(--pt-intent-success-hsl),0),0 0 0 0 hsla(var(--pt-intent-success-hsl),0),inset 0 0 0 1px hsla(var(--pt-intent-success-hsl),1),var(--pt-input-box-shadow)
 }
 
@@ -7962,7 +7962,7 @@ span.bp3-popover-target {
 }
 
 .bp3-timepicker .bp3-timepicker-input.bp3-intent-warning {
-    box-shadow: 0 0 0 0 hsla(30,70%,51%,0),0 0 0 0 hsla(30,70%,51%,0),inset 0 0 0 1px hsla(30,70%,51%,1),inset 0 0 0 1px hsla(209,0%,9%,.15),inset 0 1px 1px hsla(209,0%,9%,.2);
+    box-shadow: 0 0 0 0 hsla(30,70%,51%,0),0 0 0 0 hsla(30,70%,51%,0),inset 0 0 0 1px hsla(30,70%,51%,1),inset 0 0 0 1px hsla(209,0%,9%,.15);
     box-shadow: 0 0 0 0 hsla(var(--pt-intent-warning-hsl),0),0 0 0 0 hsla(var(--pt-intent-warning-hsl),0),inset 0 0 0 1px hsla(var(--pt-intent-warning-hsl),1),var(--pt-input-box-shadow)
 }
 
@@ -7981,7 +7981,7 @@ span.bp3-popover-target {
 }
 
 .bp3-timepicker .bp3-timepicker-input.bp3-intent-danger {
-    box-shadow: 0 0 0 0 hsla(0,69%,54%,0),0 0 0 0 hsla(0,69%,54%,0),inset 0 0 0 1px hsla(0,69%,54%,1),inset 0 0 0 1px hsla(209,0%,9%,.15),inset 0 1px 1px hsla(209,0%,9%,.2);
+    box-shadow: 0 0 0 0 hsla(0,69%,54%,0),0 0 0 0 hsla(0,69%,54%,0),inset 0 0 0 1px hsla(0,69%,54%,1),inset 0 0 0 1px hsla(209,0%,9%,.15);
     box-shadow: 0 0 0 0 hsla(var(--pt-intent-danger-hsl),0),0 0 0 0 hsla(var(--pt-intent-danger-hsl),0),inset 0 0 0 1px hsla(var(--pt-intent-danger-hsl),1),var(--pt-input-box-shadow)
 }
 
@@ -9207,7 +9207,7 @@ span.bp3-popover-target {
     display: block
 }
 
-.bp3-context-menu2-popover2-target {
+.bp3-context-menu2-virtual-target {
     position: fixed
 }
 
@@ -9811,36 +9811,24 @@ option {
     transition-duration: 50ms
 }
 
-.bp3-button-group:not(.bp3-vertical) .bp3-button[class*=bp3-intent-] {
-    border: 0 solid hsla(209,0%,100%,.25);
-    border-bottom: 0 solid hsla(var(--white-hsl),.25);
-    border-left: 1px solid hsla(var(--white-hsl),.25);
-    border-right: 1px solid hsla(var(--white-hsl),.25);
-    border-top: 0 solid hsla(var(--white-hsl),.25)
+.bp3-button-group:not(.bp3-minimal)>.bp3-button[class*=bp3-intent-]:first-child,.bp3-button-group:not(.bp3-minimal)>.bp3-popover2-target:first-child .bp3-button[class*=bp3-intent-],.bp3-button-group:not(.bp3-minimal)>.bp3-popover-wrapper:first-child .bp3-button[class*=bp3-intent-] {
+    border-width: 0 1px 0 0
 }
 
-.bp3-button-group:not(.bp3-vertical) .bp3-button[class*=bp3-intent-]:first-child,.bp3-popover-wrapper:first-child .bp3-button-group:not(.bp3-vertical) .bp3-button[class*=bp3-intent-] {
-    border-left: 0
-}
-
-.bp3-button-group:not(.bp3-vertical) .bp3-button[class*=bp3-intent-]:last-child,.bp3-popover-wrapper:last-child .bp3-button-group:not(.bp3-vertical) .bp3-button[class*=bp3-intent-] {
-    border-right: 0
+.bp3-button-group:not(.bp3-minimal)>.bp3-button[class*=bp3-intent-]:last-child,.bp3-button-group:not(.bp3-minimal)>.bp3-popover2-target:last-child .bp3-button[class*=bp3-intent-],.bp3-button-group:not(.bp3-minimal)>.bp3-popover-wrapper:last-child .bp3-button[class*=bp3-intent-] {
+    border-width: 0 0 0 1px
 }
 
 .bp3-button-group.bp3-vertical .bp3-button[class*=bp3-intent-] {
-    border: 0 solid hsla(209,0%,100%,.25);
-    border-bottom: 1px solid hsla(var(--white-hsl),.25);
-    border-left: 0 solid hsla(var(--white-hsl),.25);
-    border-right: 0 solid hsla(var(--white-hsl),.25);
-    border-top: 1px solid hsla(var(--white-hsl),.25)
+    border-width: 1px 0
 }
 
-.bp3-button-group.bp3-vertical .bp3-button[class*=bp3-intent-]:first-child,.bp3-popover-wrapper:first-child .bp3-button-group.bp3-vertical .bp3-button[class*=bp3-intent-] {
-    border-top: 0
+.bp3-button-group.bp3-vertical:not(.bp3-minimal)>.bp3-button[class*=bp3-intent-]:first-child,.bp3-button-group.bp3-vertical:not(.bp3-minimal)>.bp3-popover2-target:first-child .bp3-button[class*=bp3-intent-],.bp3-button-group.bp3-vertical:not(.bp3-minimal)>.bp3-popover-wrapper:first-child .bp3-button[class*=bp3-intent-] {
+    border-width: 0 0 1px
 }
 
-.bp3-button-group.bp3-vertical .bp3-button[class*=bp3-intent-]:last-child,.bp3-popover-wrapper:last-child .bp3-button-group.bp3-vertical .bp3-button[class*=bp3-intent-] {
-    border-bottom: 0
+.bp3-button-group.bp3-vertical:not(.bp3-minimal)>.bp3-button[class*=bp3-intent-]:last-child,.bp3-button-group.bp3-vertical:not(.bp3-minimal)>.bp3-popover2-target:last-child .bp3-button[class*=bp3-intent-],.bp3-button-group.bp3-vertical:not(.bp3-minimal)>.bp3-popover-wrapper:last-child .bp3-button[class*=bp3-intent-] {
+    border-width: 1px 0 0
 }
 
 .bp3-control-group .bp3-input.bp3-active,.bp3-control-group .bp3-input:focus {
