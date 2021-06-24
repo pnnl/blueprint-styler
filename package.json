@@ -14,14 +14,14 @@
     "copy": "npm run copy:scss && npm run copy:examples && echo '> DONE copying all files'"
   },
   "dependencies": {
-    "@blueprintjs/core": "^3.45.0",
-    "@blueprintjs/datetime": "^3.23.4",
-    "@blueprintjs/docs-theme": "^3.10.4",
-    "@blueprintjs/icons": "^3.26.1",
-    "@blueprintjs/popover2": "^0.10.0",
-    "@blueprintjs/select": "^3.16.4",
-    "@blueprintjs/table": "^3.8.33",
-    "@blueprintjs/timezone": "^3.9.4",
+    "@blueprintjs/core": "^3.46.0",
+    "@blueprintjs/datetime": "^3.23.5",
+    "@blueprintjs/docs-theme": "^3.10.5",
+    "@blueprintjs/icons": "^3.27.0",
+    "@blueprintjs/popover2": "^0.11.0",
+    "@blueprintjs/select": "^3.16.5",
+    "@blueprintjs/table": "^3.8.34",
+    "@blueprintjs/timezone": "^3.9.5",
     "copyfiles": "^2.4.1"
   }
 }
