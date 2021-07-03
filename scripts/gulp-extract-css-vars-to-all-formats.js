@@ -86,7 +86,7 @@ module.exports = () => through2.obj(function (file, enc, next) {
 
 
     //#region - Process data object into css, less, and scss file strings ///////////////////
-    let css = `:root {\n`
+    let css = `.bp3-vars, :root {\n`
     let cssDarkMirror = `.bp3-dark {\n`
     let less = ``
     for (const categoryName in cssObjValues) {
