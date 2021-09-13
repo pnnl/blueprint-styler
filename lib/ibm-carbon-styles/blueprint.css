@@ -3789,7 +3789,9 @@ a.bp3-button.bp3-disabled {
 
 .bp3-input.bp3-active,.bp3-input:focus {
     box-shadow: 0 0 0 1px hsla(220,100%,53%,1),0 0 0 3px hsla(220,100%,53%,.3),inset 0 1px 1px hsla(218,0%,0%,.2);
-    box-shadow: 0 0 0 1px hsla(var(--input-shadow-color-focus-hsl),1),0 0 0 3px hsla(var(--input-shadow-color-focus-hsl),.3),var(--input-box-shadow-focus)
+    box-shadow: 0 0 0 1px hsla(var(--input-shadow-color-focus-hsl),1),0 0 0 3px hsla(var(--input-shadow-color-focus-hsl),.3),var(--input-box-shadow-focus);
+    box-shadow: inset 0 0 0 2px hsl(220,100%,53%);
+    box-shadow: inset 0 0 0 2px var(--pt-intent-primary)
 }
 
 .bp3-input.bp3-round,.bp3-input[type=search] {
@@ -9917,12 +9919,20 @@ option {
 }
 
 .bp3-input:focus {
-    box-shadow: inset 0 0 0 2px hsl(220,100%,53%);
-    box-shadow: inset 0 0 0 2px var(--pt-intent-primary);
     outline: none!important
 }
 
-.bp3-input-group.bp3-intent-primary .bp3-timepicker .bp3-timepicker-input,.bp3-input:hover,.bp3-timepicker .bp3-timepicker-input:hover {
+.bp3-input:hover,.bp3-timepicker .bp3-timepicker-input:hover {
+    box-shadow: inset 0 -1px 0 0 hsl(220,100%,53%);
+    box-shadow: inset 0 -1px 0 0 var(--pt-intent-primary)
+}
+
+.bp3-timepicker .bp3-timepicker-input.bp3-active,.bp3-timepicker .bp3-timepicker-input:focus {
+    box-shadow: inset 0 0 0 2px hsl(220,100%,53%);
+    box-shadow: inset 0 0 0 2px var(--pt-intent-primary)
+}
+
+.bp3-input-group.bp3-intent-primary .bp3-timepicker .bp3-timepicker-input {
     box-shadow: inset 0 -1px 0 0 hsl(220,100%,53%);
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-primary)
 }
@@ -9967,7 +9977,7 @@ textarea.bp3-input:hover {
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-primary)
 }
 
-textarea.bp3-input:focus {
+textarea.bp3-input.bp3-active,textarea.bp3-input:focus {
     box-shadow: inset 0 0 0 2px hsl(220,100%,53%);
     box-shadow: inset 0 0 0 2px var(--pt-intent-primary)
 }
@@ -10116,4 +10126,8 @@ textarea.bp3-input.bp3-intent-danger:focus {
 
 .bp3-control-group .bp3-tag-input .bp3-button {
     border-radius: 0
+}
+
+.bp3-tag-input .bp3-input-ghost:not(:focus)[value=""] {
+    width: 1px
 }
