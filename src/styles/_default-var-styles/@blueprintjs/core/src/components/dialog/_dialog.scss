@@ -64,7 +64,7 @@ $dialog-border-radius: calc(#{$pt-border-radius} * 2);
 }
 
 .#{$ns}-dialog {
-  background: $light-gray4;
+  background: $pt-app-background-color;
   border-radius: $dialog-border-radius;
   box-shadow: $pt-dialog-box-shadow;
   display: flex;
@@ -89,7 +89,7 @@ $dialog-border-radius: calc(#{$pt-border-radius} * 2);
 
 .#{$ns}-dialog-header {
   align-items: center;
-  background: $white;
+  // background: $pt-code-background-color;
   border-radius: $dialog-border-radius $dialog-border-radius 0 0;
   box-shadow: 0 1px 0 $pt-divider-black;
   display: flex;
