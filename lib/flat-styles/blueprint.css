@@ -1908,8 +1908,8 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-dialog {
-    background: hsl(209,0%,94%);
-    background: var(--light-gray4);
+    background: hsl(209,0%,97%);
+    background: var(--pt-app-background-color);
     border-radius: 12px;
     border-radius: calc(var(--pt-border-radius)*2);
     box-shadow: 0 0 0 1px hsla(209,0%,9%,.1),0 4px 8px hsla(209,0%,9%,.2),0 18px 46px 6px hsla(209,0%,9%,.2);
@@ -1934,8 +1934,6 @@ a.bp3-button.bp3-disabled {
 .bp3-dialog-header {
     -webkit-align-items: center;
     align-items: center;
-    background: hsl(209,0%,100%);
-    background: var(--white);
     border-radius: 12px 12px 0 0;
     border-radius: calc(var(--pt-border-radius)*2) calc(var(--pt-border-radius)*2) 0 0;
     box-shadow: 0 1px 0 hsla(209,0%,9%,.15);
