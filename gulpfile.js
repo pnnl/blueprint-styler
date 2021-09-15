@@ -24,7 +24,7 @@ const extractCssVarsToAllFormats = require('./scripts/gulp-extract-css-vars-to-a
 // this seems like it takes a long time?
 process.env.NODE_ENV = 'production'
 const createReactAppWebpackConfigProduction = require('react-scripts/config/webpack.config.js')('production')
-const createReactAppPostCssConfig = createReactAppWebpackConfigProduction.module.rules[1].oneOf[6].use[2].options // WOW!
+const createReactAppPostCssConfig = createReactAppWebpackConfigProduction.module.rules[1].oneOf[6].use[2].options // WOW! // needs update
 const createReactAppPostCssPlugins = createReactAppPostCssConfig.plugins()
 // copy-paste from ./node_modules/react-scripts/config/webpack.config.js:130 might be more consistent?
 // console.log(createReactAppPostCssConfig.plugins());
@@ -34,13 +34,13 @@ const compileLibsTask = function () {
     // const scssOutput = gulp.src('./src/styles/_default-var-styles/*.index.scss')
     const scssOutput = gulp.src('./src/styles/_*-styles/*.index.scss')
         .pipe(sass(sassConfig).on('error', sass.logError))
-        .pipe(postcss(createReactAppPostCssPlugins)) // make sure we are consistent with create-react-app
+        // .pipe(postcss(createReactAppPostCssPlugins)) // make sure we are consistent with create-react-app?
 
 
     const cssOutput = scssOutput
         .pipe(postcss([
-            require('postcss-combine-duplicated-selectors'), // ...could change cascade order...
-            require('postcss-custom-properties'), // fallback values for --vars
+            // require('postcss-combine-duplicated-selectors'), // ...could change cascade order...
+            // require('postcss-custom-properties'), // fallback values for --vars // this is already coming from createReactAppPostCssPlugins?
             require('postcss-remove-root'), // remove :root{} with --vars
             require('cssnano')({
                 preset: ['default', {
