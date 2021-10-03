@@ -1,11 +1,10 @@
 # TODO:
 
 ### App tool
-- publish beta of v3.1s
-  - bump to latest blueprint v
-  - ellipsize button text by default
-  - --font-weight-normal and --font-weight-bold
+- publish beta of v3.x
   - remove dark theme colors from tokens export?
+  - jsDoc comment in the computed value & raw value on top of property line!!
+  - bump to latest blueprint v
   - update readme
     - a dark color cannot link to its light counterpart or there will be a circular dependency
     - crazy css switching scheme
@@ -19,8 +18,8 @@
 - v4 - wait until a beta from blueprintjs
 - CSS Build?
   - separate different packages on build - core, selection, table, etc...
+    - export a font file
   - provide non-fallback version of css?
-  - export a font file
 - sections:
   - for each theme: add a readme to each project - default styles is project explainer
   - base theme component that imports scss files
@@ -46,17 +45,20 @@
 
 ### Styles
 - var(--style) / General
+  - ellipsize button text by default
+  - --font-weight-normal and --font-weight-bold
   - editable text focus is still broken
   - grayscale transparency alt
-  - math with calc() ?
   - input-transition-shadow could to be broken into input shadow vars...
   - better focus for buttons?
   - switch icon libraries? - replace icons in svg-icon()
+  - math with calc() ?
 - Common
   - Segmented Button Group like [this](https://dribbble.com/shots/14424288-Material-X-design-system-UI-kit-Figma-Segments)
 - Flat
   - dark theme ?
   - button component divider // ?? isn't this done?
+  - menu selections are not rounded correctly...
 - Flat Monochrome - intent primary color is grayscale - or all blue tint? - FERC and Starfish
 - Flat Colorful - buttons have a colorful gradient?
 - [IBM Carbon](https://www.carbondesignsystem.com/components/overview)
