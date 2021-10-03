@@ -47,6 +47,7 @@
 - var(--style) / General
   - ellipsize button text by default
   - --font-weight-normal and --font-weight-bold
+  - --font-family-serif
   - editable text focus is still broken
   - grayscale transparency alt
   - input-transition-shadow could to be broken into input shadow vars...
