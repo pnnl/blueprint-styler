@@ -124,9 +124,9 @@ module.exports = () => through2.obj(function (file, enc, next) {
                         if (theme === 'light') {
                             const varIdentityValue = cssKebabNameToVarIdentity(varName)
                             const jsVarName = convertKebabToCamelCase(varName)
-                            let jsValue = `  ${jsVarName}: "${varIdentityValue}",\n`
-                            // const jsDocsCommentValue = `  /** \`${varValue}\` */\n` // TODO: calculate raw value?
-                            // jsValue = jsDocsCommentValue + jsValue
+                            let jsValue = `\t${jsVarName}: "${varIdentityValue}",\n`
+                            const jsDocsCommentValue = `\t/** \`${varValue}\` */\n` // TODO: calculate raw value?
+                            jsValue = jsDocsCommentValue + jsValue
                             less += `@${varName}: ${varIdentityValue};\n` // less an scss are identity
                             js += jsValue
                             ts += jsValue
@@ -153,8 +153,8 @@ module.exports = () => through2.obj(function (file, enc, next) {
             categories.push(category);
         }
     }
-    const tokens = `Tokens = {\n${categories.map(category => `  ${category}`).join(`,\n`)}\n}`;
-    const tokensAll = `TokensAll = {\n${categories.map(category => `  ...${category}`).join(`,\n`)}\n}`;
+    const tokens = `Tokens = {\n${categories.map(category => `\t${category}`).join(`,\n`)}\n}`;
+    const tokensAll = `TokensAll = {\n${categories.map(category => `\t...${category}`).join(`,\n`)}\n}`;
     ts += `\nexport const ${tokens}\n\nexport const ${tokensAll}\n`;
     // js += `\nexports.${tokens}\n\nexports.${tokensAll}\n`;
 
