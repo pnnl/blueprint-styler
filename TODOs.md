@@ -2,9 +2,15 @@
 
 ### App tool
 - publish beta of v3.x
-  - bump to latest blueprint v
+  - bump to latest blueprint v - modern
+    - cerulean cobalt color name change
+    - blueprint-modern.scss
+    - colors/src/_colors.scss
+    - blueprint-datetime-modern.scss
+    - table-modern.scss
   - update readme
     - a dark color cannot link to its light counterpart or there will be a circular dependency
+    - dark vars are used in dev only and stripped out in build
     - crazy css switching scheme
     - importing a css file in scss with the .css suffix will break the style because it adds a css partial
     - create-react-app hot reload with theme switching does some weird things sometimes
