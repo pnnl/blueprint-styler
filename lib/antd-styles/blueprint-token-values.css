@@ -1,6 +1,6 @@
 .bp3-vars, :root {
 
-/*! ColorsHsl */
+	/*! ColorsHsl */
 	--grayscale-hue: 0;
 	--black-hsl: 0,0%,0%;
 	--dark-gray1-hsl: 0,0%,8%;
@@ -104,7 +104,7 @@
 	--orange-hue: 30;
 	--sepia-hue: 30;
 
-/*! Colors */
+	/*! Colors */
 	--black: hsl(var(--black-hsl));
 	--dark-gray1: hsl(var(--dark-gray1-hsl));
 	--dark-gray2: hsl(var(--dark-gray2-hsl));
@@ -193,43 +193,35 @@
 	--sepia4: hsl(var(--sepia4-hsl));
 	--sepia5: hsl(var(--sepia5-hsl));
 
-/*! IntentColors */
+	/*! IntentColors */
 	--pt-intent-primary-hover-hsl: var(--blue4-hsl);
 	--pt-intent-primary-active-hsl: var(--blue2-hsl);
 	--pt-intent-primary-text-color-hsl: var(--blue2-hsl);
-	--pt-dark-intent-primary-text-color-hsl: var(--blue5-hsl);
 	--pt-intent-success-hover-hsl: var(--green4-hsl);
 	--pt-intent-success-active-hsl: var(--green2-hsl);
 	--pt-intent-success-text-color-hsl: var(--green2-hsl);
-	--pt-dark-intent-success-text-color-hsl: var(--green5-hsl);
 	--pt-intent-warning-hover-hsl: var(--orange4-hsl);
 	--pt-intent-warning-active-hsl: var(--orange2-hsl);
 	--pt-intent-warning-text-color-hsl: var(--orange2-hsl);
-	--pt-dark-intent-warning-text-color-hsl: var(--orange5-hsl);
 	--pt-intent-danger-hover-hsl: var(--red4-hsl);
 	--pt-intent-danger-active-hsl: var(--red2-hsl);
 	--pt-intent-danger-text-color-hsl: var(--red2-hsl);
-	--pt-dark-intent-danger-text-color-hsl: var(--red5-hsl);
 	--pt-intent-primary: hsl(var(--pt-intent-primary-hsl));
 	--pt-intent-primary-hover: hsl(var(--pt-intent-primary-hover-hsl));
 	--pt-intent-primary-active: hsl(var(--pt-intent-primary-active-hsl));
 	--pt-intent-primary-text-color: hsl(var(--pt-intent-primary-text-color-hsl));
-	--pt-dark-intent-primary-text-color: hsl(var(--pt-dark-intent-primary-text-color-hsl));
 	--pt-intent-success: hsl(var(--pt-intent-success-hsl));
 	--pt-intent-success-hover: hsl(var(--pt-intent-success-hover-hsl));
 	--pt-intent-success-active: hsl(var(--pt-intent-success-active-hsl));
 	--pt-intent-success-text-color: hsl(var(--pt-intent-success-text-color-hsl));
-	--pt-dark-intent-success-text-color: hsl(var(--pt-dark-intent-success-text-color-hsl));
 	--pt-intent-warning: hsl(var(--pt-intent-warning-hsl));
 	--pt-intent-warning-hover: hsl(var(--pt-intent-warning-hover-hsl));
 	--pt-intent-warning-active: hsl(var(--pt-intent-warning-active-hsl));
 	--pt-intent-warning-text-color: hsl(var(--pt-intent-warning-text-color-hsl));
-	--pt-dark-intent-warning-text-color: hsl(var(--pt-dark-intent-warning-text-color-hsl));
 	--pt-intent-danger: hsl(var(--pt-intent-danger-hsl));
 	--pt-intent-danger-hover: hsl(var(--pt-intent-danger-hover-hsl));
 	--pt-intent-danger-active: hsl(var(--pt-intent-danger-active-hsl));
 	--pt-intent-danger-text-color: hsl(var(--pt-intent-danger-text-color-hsl));
-	--pt-dark-intent-danger-text-color: hsl(var(--pt-dark-intent-danger-text-color-hsl));
 	--pt-intent-primary-hue: var(--blue-hue);
 	--pt-intent-primary-hsl: var(--blue3-hsl);
 	--pt-intent-success-hue: var(--green-hue);
@@ -239,45 +231,30 @@
 	--pt-intent-danger-hue: var(--red-hue);
 	--pt-intent-danger-hsl: var(--red3-hsl);
 
-/*! LayoutColors */
+	/*! LayoutColors */
 	--pt-app-background-color: var(--light-gray5);
-	--pt-dark-app-background-color: var(--dark-gray3);
 	--pt-app-top-background-color: var(--white);
-	--pt-dark-app-top-background-color: var(--dark-gray4);
 	--pt-code-background-color: hsla(var(--white-hsl),0.7);
-	--pt-dark-code-background-color: hsla(var(--black-hsl),0.3);
 	--pt-divider-black: hsla(var(--black-hsl),0.09);
 	--pt-outline-color: hsla(var(--pt-intent-primary-hsl),0.6);
 	--pt-disabled-opacity: 0.3;
-	--pt-dark-divider-black: hsla(var(--black-hsl),0.4);
-	--pt-dark-divider-white: hsla(var(--white-hsl),0.15);
 
-/*! TextColors */
+	/*! TextColors */
 	--pt-text-color: hsla(var(--black-hsl),0.85);
 	--pt-text-color-muted: hsla(var(--black-hsl),0.70);
 	--pt-text-color-disabled: hsla(var(--black-hsl),0.25);
 	--pt-heading-color: hsla(var(--black-hsl),1.00);
 	--pt-link-color: var(--pt-intent-primary-text-color);
-	--pt-dark-text-color: hsla(var(--white-hsl),0.85);
-	--pt-dark-text-color-muted: hsla(var(--white-hsl),0.65);
-	--pt-dark-text-color-disabled: hsla(var(--white-hsl),0.45);
-	--pt-dark-heading-color: hsla(var(--white-hsl),1.00);
-	--pt-dark-link-color: var(--pt-dark-intent-primary-text-color);
 	--pt-text-selection-color: hsla(var(--blue-hue),100%,75%,0.6);
 	--pt-code-text-color: var(--pt-text-color-muted);
-	--pt-dark-code-text-color: var(--pt-dark-text-color-muted);
 
-/*! IconColors */
+	/*! IconColors */
 	--pt-icon-color: var(--pt-text-color-muted);
 	--pt-icon-color-hover: var(--pt-text-color);
 	--pt-icon-color-disabled: var(--pt-text-color-disabled);
 	--pt-icon-color-selected: var(--pt-intent-primary);
-	--pt-dark-icon-color: var(--pt-dark-text-color-muted);
-	--pt-dark-icon-color-hover: var(--pt-dark-text-color);
-	--pt-dark-icon-color-disabled: var(--pt-dark-text-color-disabled);
-	--pt-dark-icon-color-selected: var(--pt-intent-primary);
 
-/*! Variables */
+	/*! Variables */
 	--pt-grid-size: 10px;
 	--pt-font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 	--pt-font-family-monospace: sfmono-regular,Consolas,liberation mono,Menlo,Courier,monospace;
@@ -303,20 +280,12 @@
 	--pt-z-index-overlay: 20;
 	--pt-border-shadow-opacity: 0.1;
 	--pt-drop-shadow-opacity: 0.2;
-	--pt-dark-border-shadow-opacity: 0.2;
-	--pt-dark-drop-shadow-opacity: 0.4;
 	--pt-shadow-color-hsl: var(--black-hsl);
-	--pt-dark-shadow-color-hsl: var(--black-hsl);
 	--pt-elevation-shadow-0: 0 0 0 1px var(--pt-divider-black),0 0 0 hsla(var(--pt-shadow-color-hsl),0),0 0 0 hsla(var(--pt-shadow-color-hsl),0);
 	--pt-elevation-shadow-1: 0 0 0 1px hsla(var(--pt-shadow-color-hsl),var(--pt-border-shadow-opacity)),0 0 0 hsla(var(--pt-shadow-color-hsl),0),0 1px 1px hsla(var(--pt-shadow-color-hsl),var(--pt-drop-shadow-opacity));
 	--pt-elevation-shadow-2: 0 0 0 1px hsla(var(--pt-shadow-color-hsl),var(--pt-border-shadow-opacity)),0 1px 1px hsla(var(--pt-shadow-color-hsl),var(--pt-drop-shadow-opacity)),0 2px 6px hsla(var(--pt-shadow-color-hsl),var(--pt-drop-shadow-opacity));
 	--pt-elevation-shadow-3: 0 0 0 1px hsla(var(--pt-shadow-color-hsl),var(--pt-border-shadow-opacity)),0 2px 4px hsla(var(--pt-shadow-color-hsl),var(--pt-drop-shadow-opacity)),0 8px 24px hsla(var(--pt-shadow-color-hsl),var(--pt-drop-shadow-opacity));
 	--pt-elevation-shadow-4: 0 0 0 1px hsla(var(--pt-shadow-color-hsl),var(--pt-border-shadow-opacity)),0 4px 8px hsla(var(--pt-shadow-color-hsl),var(--pt-drop-shadow-opacity)),0 18px 46px 6px hsla(var(--pt-shadow-color-hsl),var(--pt-drop-shadow-opacity));
-	--pt-dark-elevation-shadow-0: 0 0 0 1px var(--pt-dark-divider-black),0 0 0 hsla(var(--pt-dark-shadow-color-hsl),0),0 0 0 hsla(var(--pt-dark-shadow-color-hsl),0);
-	--pt-dark-elevation-shadow-1: 0 0 0 1px hsla(var(--pt-dark-shadow-color-hsl),var(--pt-dark-border-shadow-opacity)),0 0 0 hsla(var(--pt-dark-shadow-color-hsl),0),0 1px 1px hsla(var(--pt-dark-shadow-color-hsl),var(--pt-dark-drop-shadow-opacity));
-	--pt-dark-elevation-shadow-2: 0 0 0 1px hsla(var(--pt-dark-shadow-color-hsl),var(--pt-dark-border-shadow-opacity)),0 1px 1px hsla(var(--pt-dark-shadow-color-hsl),var(--pt-dark-drop-shadow-opacity)),0 2px 6px hsla(var(--pt-dark-shadow-color-hsl),var(--pt-dark-drop-shadow-opacity));
-	--pt-dark-elevation-shadow-3: 0 0 0 1px hsla(var(--pt-dark-shadow-color-hsl),var(--pt-dark-border-shadow-opacity)),0 2px 4px hsla(var(--pt-dark-shadow-color-hsl),var(--pt-dark-drop-shadow-opacity)),0 8px 24px hsla(var(--pt-dark-shadow-color-hsl),var(--pt-dark-drop-shadow-opacity));
-	--pt-dark-elevation-shadow-4: 0 0 0 1px hsla(var(--pt-dark-shadow-color-hsl),var(--pt-dark-border-shadow-opacity)),0 4px 8px hsla(var(--pt-dark-shadow-color-hsl),var(--pt-dark-drop-shadow-opacity)),0 18px 46px 6px hsla(var(--pt-dark-shadow-color-hsl),var(--pt-dark-drop-shadow-opacity));
 	--pt-transition-ease: cubic-bezier(0.4,1,0.75,0.9);
 	--pt-transition-ease-bounce: cubic-bezier(0.54,1.12,0.38,1.11);
 	--pt-transition-duration: 100ms;
@@ -324,34 +293,22 @@
 	--pt-dialog-box-shadow: var(--pt-elevation-shadow-4);
 	--pt-popover-box-shadow: var(--pt-elevation-shadow-3);
 	--pt-tooltip-box-shadow: var(--pt-popover-box-shadow);
-	--pt-dark-input-box-shadow: inset 0 0 0 1px hsla(var(--white-hsl),0.15);
-	--pt-dark-dialog-box-shadow: var(--pt-dark-elevation-shadow-4);
-	--pt-dark-popover-box-shadow: var(--pt-dark-elevation-shadow-3);
-	--pt-dark-tooltip-box-shadow: var(--pt-dark-popover-box-shadow);
 	--pt-font-family-decorative: Avenir,"Nunito Sans",var(--pt-font-family);
 
-/*! Components */
+	/*! Components */
 	--button-border-width: 1px;
-	--dark-control-group-spacing: calc(var(--button-border-width)*-1);
 	--button-box-shadow: inset 0 0 0 var(--button-border-width) var(--button-border-color),var(--button-bottom-box-shadow);
 	--button-box-shadow-active: inset 0 0 0 var(--button-border-width) var(--pt-intent-primary-active),var(--button-bottom-box-shadow);
 	--button-intent-box-shadow: 0 2px 0 hsla(var(--black-hsl),.045),0 0 0 transparent;
 	--button-intent-box-shadow-active: var(--button-intent-box-shadow);
-	--dark-button-box-shadow: inset 0 0 0 var(--button-border-width) var(--dark-button-border-color),var(--button-bottom-box-shadow);
-	--dark-button-box-shadow-active: inset 0 0 0 var(--button-border-width) var(--pt-intent-primary-active),var(--button-bottom-box-shadow);
-	--dark-button-intent-box-shadow: 0 2px 0 hsla(var(--black-hsl),.045),0 0 0 transparent;
-	--dark-button-intent-box-shadow-active: var(--dark-button-intent-box-shadow);
 	--button-box-shadow-overlay: 0 0 0 var(--button-border-width) hsla(var(--black-hsl),0.2),0 1px 1px hsla(var(--black-hsl),0.2);
 	--button-box-shadow-overlay-active: 0 0 0 var(--button-border-width) var(--pt-intent-primary-active),0 1px 1px hsla(var(--black-hsl),0.1);
 	--shine-color-hsl: var(--white-hsl);
 	--shine-opacity: 0.8;
 	--shine-intent-color-hsl: var(--shine-color-hsl);
 	--shine-intent-opacity: 0.1;
-	--dark-shine-color-hsl: var(--white-hsl);
-	--dark-shine-opacity: 0.05;
 	--button-gradient: unset;
 	--button-intent-gradient: unset;
-	--dark-button-gradient: unset;
 	--button-color-disabled: var(--pt-text-color-disabled);
 	--button-background-color: var(--white);
 	--button-background-color-hover: var(--button-background-color);
@@ -359,37 +316,22 @@
 	--button-background-color-disabled: hsla(var(--light-gray1-hsl),0.2);
 	--button-background-color-active-disabled: hsla(var(--light-gray2-hsl),0.7);
 	--button-intent-color-disabled: hsla(var(--white-hsl),0.6);
-	--dark-button-color-disabled: var(--pt-dark-text-color-disabled);
-	--dark-button-background-color: var(--dark-gray2);
-	--dark-button-background-color-hover: var(--dark-button-background-color);
-	--dark-button-background-color-active: var(--dark-button-background-color);
-	--dark-button-background-color-disabled: hsla(var(--dark-gray5-hsl),0.2);
-	--dark-button-background-color-active-disabled: hsla(var(--dark-gray2-hsl),0.7);
-	--dark-button-intent-color-disabled: hsla(var(--white-hsl),0.3);
 	--minimal-button-background-opacity: 0.3;
 	--minimal-button-divider-width: 1px;
 	--minimal-button-background-color: none;
 	--minimal-button-background-color-hover: hsla(var(--black-hsl),0.05);
 	--minimal-button-background-color-active: hsla(var(--black-hsl),0.1);
-	--dark-minimal-button-background-color: none;
-	--dark-minimal-button-background-color-hover: hsla(var(--white-hsl),0.05);
-	--dark-minimal-button-background-color-active: hsla(var(--white-hsl),0.1);
 	--button-outlined-width: 1px;
 	--button-outlined-border-intent-opacity: 0.6;
 	--button-outlined-border-disabled-intent-opacity: 0.2;
 	--button-outlined-border-color: var(--button-border-color);
 	--button-outlined-border-color-disabled: hsla(var(--black-hsl),0.1);
-	--dark-button-outlined-border-color: var(--dark-button-border-color);
-	--dark-button-outlined-border-color-disabled: hsla(var(--white-hsl),0.1);
 	--callout-background-color: hsla(var(--gray3-hsl),0.15);
-	--dark-callout-background-color: hsla(var(--gray3-hsl),0.2);
 	--card-background-color: var(--pt-app-top-background-color);
-	--dark-card-background-color: var(--pt-dark-app-top-background-color);
 	--dialog-border-radius: calc(var(--pt-border-radius)*2);
 	--step-radius: calc(var(--pt-border-radius)*2);
 	--divider-margin: calc(var(--pt-grid-size)/2);
 	--drawer-background-color: var(--pt-app-top-background-color);
-	--dark-drawer-background-color: var(--pt-dark-app-top-background-color);
 	--input-color: var(--pt-text-color);
 	--input-color-disabled: var(--button-color-disabled);
 	--input-placeholder-color: var(--pt-text-color-disabled);
@@ -397,20 +339,10 @@
 	--input-background-color-disabled: hsla(var(--light-gray1-hsl),0.5);
 	--input-shadow-color-focus: var(--pt-intent-primary);
 	--input-shadow-color-focus-hsl: var(--pt-intent-primary-hsl);
-	--dark-input-color: var(--pt-dark-text-color);
-	--dark-input-color-disabled: var(--dark-button-color-disabled);
-	--dark-input-placeholder-color: var(--pt-dark-text-color-disabled);
-	--dark-input-background-color: hsla(var(--black-hsl),0.3);
-	--dark-input-background-color-disabled: hsla(var(--dark-gray5-hsl),0.5);
-	--dark-input-shadow-color-focus: var(--pt-intent-primary);
-	--dark-input-shadow-color-focus-hsl: var(--pt-intent-primary-hsl);
 	--input-box-shadow-focus: inset 0 1px 1px hsla(var(--pt-shadow-color-hsl),var(--pt-drop-shadow-opacity));
 	--control-background-color: var(--button-background-color);
 	--control-background-color-hover: var(--button-background-color-hover);
 	--control-background-color-active: var(--button-background-color-active);
-	--dark-control-background-color: var(--dark-button-background-color);
-	--dark-control-background-color-hover: var(--dark-button-background-color-hover);
-	--dark-control-background-color-active: var(--dark-button-background-color-active);
 	--control-checked-background-color: var(--pt-intent-primary);
 	--control-checked-background-color-hover: var(--pt-intent-primary-hover);
 	--control-checked-background-color-active: var(--pt-intent-primary-active);
@@ -425,113 +357,63 @@
 	--switch-checked-background-color-hover: var(--control-checked-background-color-hover);
 	--switch-checked-background-color-active: var(--control-checked-background-color-active);
 	--switch-checked-background-color-disabled: hsla(var(--control-checked-background-color-hsl),0.5);
-	--dark-switch-background-color: hsla(var(--black-hsl),0.5);
-	--dark-switch-background-color-hover: hsla(var(--black-hsl),0.7);
-	--dark-switch-background-color-active: hsla(var(--black-hsl),0.9);
-	--dark-switch-background-color-disabled: var(--dark-button-background-color-disabled);
-	--dark-switch-checked-background-color: var(--control-checked-background-color);
-	--dark-switch-checked-background-color-hover: var(--control-checked-background-color-hover);
-	--dark-switch-checked-background-color-active: var(--control-checked-background-color-active);
-	--dark-switch-checked-background-color-disabled: hsla(var(--control-checked-background-color-hsl),0.5);
 	--switch-indicator-background-color: var(--pt-app-top-background-color);
 	--switch-indicator-background-color-disabled: hsla(var(--white-hsl),0.8);
-	--dark-switch-indicator-background-color: var(--dark-gray5);
-	--dark-switch-indicator-background-color-disabled: hsla(var(--black-hsl),0.4);
 	--table-border-color: var(--pt-divider-black);
-	--dark-table-border-color: var(--pt-dark-divider-white);
 	--menu-background-color: var(--pt-app-top-background-color);
-	--dark-menu-background-color: var(--pt-dark-app-top-background-color);
 	--menu-item-color-hover: var(--minimal-button-background-color-hover);
 	--menu-item-color-active: var(--minimal-button-background-color-active);
-	--dark-menu-item-color-hover: var(--dark-minimal-button-background-color-hover);
-	--dark-menu-item-color-active: var(--dark-minimal-button-background-color-active);
 	--navbar-background-color: var(--pt-app-top-background-color);
-	--dark-navbar-background-color: var(--dark-gray5);
 	--overlay-background-opacity: 0.7;
 	--overlay-background-color: hsla(var(--black-hsl),var(--overlay-background-opacity));
 	--popover-background-color: var(--pt-app-top-background-color);
-	--dark-popover-background-color: var(--pt-dark-app-top-background-color);
 	--pt-popover2-background-color: var(--pt-app-top-background-color);
 	--pt-popover2-box-shadow: var(--pt-elevation-shadow-3);
 	--pt-tooltip2-box-shadow: var(--pt-popover-box-shadow);
-	--pt-dark-popover2-background-color: var(--pt-dark-app-top-background-color);
-	--pt-dark-popover2-box-shadow: var(--pt-dark-elevation-shadow-3);
-	--pt-dark-tooltip2-box-shadow: var(--pt-dark-popover-box-shadow);
 	--tooltip2-background-color: var(--dark-gray5);
 	--tooltip2-text-color: var(--light-gray5);
-	--dark-tooltip2-background-color: var(--light-gray3);
-	--dark-tooltip2-text-color: var(--dark-gray5);
 	--progress-track-color: hsla(var(--gray1-hsl),0.2);
 	--progress-head-color: hsla(var(--gray1-hsl),0.8);
-	--dark-progress-track-color: hsla(var(--black-hsl),0.5);
-	--dark-progress-head-color: var(--gray3);
 	--progress-bar-stripes-color: hsla(var(--white-hsl),0.2);
 	--progress-bar-gradient: linear-gradient(-45deg,var(--progress-bar-stripes-color) 25%,transparent 25%,transparent 50%,var(--progress-bar-stripes-color) 50%,var(--progress-bar-stripes-color) 75%,transparent 75%);
 	--skeleton-color-start: hsla(var(--light-gray1-hsl),0.2);
 	--skeleton-color-end: hsla(var(--gray1-hsl),0.2);
 	--slider-progress-color: hsla(var(--gray1-hsl),0.2);
-	--dark-slider-progress-color: hsla(var(--black-hsl),0.5);
 	--slider-handle-disabled: var(--gray5);
-	--dark-slider-handle-disabled: var(--gray1);
 	--tab-color-selected: var(--pt-link-color);
-	--dark-tab-color-selected: var(--pt-dark-link-color);
 	--tag-default-color: var(--gray1);
-	--dark-tag-default-color: var(--gray5);
 	--tag-default-color-hsl: var(--gray1-hsl);
-	--dark-tag-default-color-hsl: var(--gray5-hsl);
 	--tag-text-color: var(--light-gray5);
-	--dark-tag-text-color: var(--dark-gray1);
 	--tooltip-background-color: var(--dark-gray5);
 	--tooltip-text-color: var(--light-gray5);
-	--dark-tooltip-background-color: var(--light-gray3);
-	--dark-tooltip-text-color: var(--dark-gray5);
 	--button-active-effect-easing: cubic-bezier(.08,.82,.17,1);
 	--button-border-color: hsla(var(--black-hsl),0.15);
-	--dark-button-border-color: hsla(var(--white-hsl),0.2);
 	--button-bottom-box-shadow: 0 2px 0 hsla(var(--black-hsl),.015);
 	--control-group-spacing: calc(var(--button-border-width)*-1);
 	--button-box-shadow-hover: inset 0 0 0 var(--button-border-width) var(--pt-intent-primary-hover),var(--button-bottom-box-shadow);
 	--button-box-shadow-selected: inset 0 0 0 var(--button-border-width) var(--pt-intent-primary),var(--button-bottom-box-shadow);
-	--dark-button-box-shadow-hover: inset 0 0 0 var(--button-border-width) var(--pt-intent-primary-hover),var(--button-bottom-box-shadow);
-	--dark-button-box-shadow-selected: inset 0 0 0 var(--button-border-width) var(--pt-intent-primary),var(--button-bottom-box-shadow);
 	--button-box-shadow-overlay-hover: 0 0 0 var(--button-border-width) var(--pt-intent-primary-hover),0 1px 1px hsla(var(--black-hsl),0.1);
 	--slider-background-color: var(--button-background-color);
-	--dark-slider-background-color: var(--dark-gray5);
 
-/*! Datetime */
+	/*! Datetime */
 	--datepicker-background-color: var(--pt-app-top-background-color);
 	--datepicker-day-background-color-hover: var(--light-gray2);
 	--datepicker-day-background-color-active: var(--light-gray1);
-	--dark-datepicker-background-color: var(--pt-dark-app-top-background-color);
-	--dark-datepicker-day-background-color-hover: var(--gray1);
-	--dark-datepicker-day-background-color-active: var(--gray2);
 	--daterangepicker-range-background-color: var(--light-gray4);
 	--daterangepicker-range-background-color-selected: var(--light-gray4);
 	--daterangepicker-range-background-color-selected-hover: var(--light-gray1);
-	--dark-daterangepicker-range-background-color: var(--dark-gray5);
-	--dark-daterangepicker-range-background-color-selected: var(--dark-gray5);
-	--dark-daterangepicker-range-background-color-selected-hover: var(--gray1);
 
-/*! Table */
+	/*! Table */
 	--cell-background-color: var(--pt-app-top-background-color);
 	--cell-background-color-opacity: 0.1;
 	--cell-border-color: var(--pt-divider-black);
 	--cell-text-color: var(--pt-text-color);
-	--dark-cell-background-color: var(--dark-gray3);
-	--dark-cell-border-color: var(--pt-dark-divider-black);
-	--dark-cell-text-color: var(--pt-dark-text-color);
 	--table-background-color: var(--light-gray5);
-	--dark-table-background-color: var(--pt-dark-app-top-background-color);
 	--table-background-color-hsl: var(--light-gray5-hsl);
-	--dark-table-background-color-hsl: var(--pt-dark-app-top-background-color-hsl);
 	--header-background-color: var(--table-background-color);
 	--header-hover-background-color: var(--light-gray3);
 	--column-header-text-color: var(--pt-text-color);
 	--row-header-text-color: var(--pt-text-color-muted);
-	--dark-header-background-color: var(--dark-table-background-color);
-	--dark-header-hover-background-color: var(--dark-gray5);
-	--dark-column-header-text-color: var(--pt-dark-text-color);
-	--dark-row-header-text-color: var(--pt-dark-text-color-muted);
 	--header-selected-background-color: var(--pt-intent-primary);
 	--header-background-color-hsl: var(--table-background-color-hsl);
 	--header-hover-background-color-hsl: var(--light-gray3-hsl);
@@ -539,12 +421,6 @@
 	--header-selected-hover-background-color-hsl: var(--pt-intent-primary-hue),40%,91%;
 	--column-header-text-color-hsl: var(--pt-text-color);
 	--row-header-text-color-hsl: var(--pt-text-color-muted);
-	--dark-header-background-color-hsl: var(--dark-table-background-color-hsl);
-	--dark-header-hover-background-color-hsl: var(--dark-gray5-hsl);
-	--dark-header-selected-background-color-hsl: var(--pt-intent-primary-hue),40%,25%;
-	--dark-header-selected-hover-background-color-hsl: var(--pt-intent-primary-hue),40%,29%;
-	--dark-column-header-text-color-hsl: var(--pt-dark-text-color);
-	--dark-row-header-text-color-hsl: var(--pt-dark-text-color-muted);
 	--resize-handle-color: var(--pt-intent-primary);
 	--resize-handle-dragging-color: var(--pt-intent-primary);
 	--region-default-color: var(--gray3);
@@ -552,7 +428,7 @@
 	--region-default-color-hsl: var(--gray3-hsl);
 	--region-selected-color-hsl: var(--pt-intent-primary-hsl);
 
-/*! AntdColors */
+	/*! AntdColors */
 	--gray-hue: 0;
 	--gray-1: #fff;
 	--gray-2: #fafafa;
@@ -710,149 +586,149 @@
 
 .bp3-dark {
 
-/*! ColorsHsl */
+	/*! ColorsHsl */
 
-/*! Colors */
+	/*! Colors */
 
-/*! IntentColors */
-	--pt-intent-primary-text-color-hsl: var(--pt-dark-intent-primary-text-color-hsl);
-	--pt-intent-success-text-color-hsl: var(--pt-dark-intent-success-text-color-hsl);
-	--pt-intent-warning-text-color-hsl: var(--pt-dark-intent-warning-text-color-hsl);
-	--pt-intent-danger-text-color-hsl: var(--pt-dark-intent-danger-text-color-hsl);
-	--pt-intent-primary-text-color: var(--pt-dark-intent-primary-text-color);
-	--pt-intent-success-text-color: var(--pt-dark-intent-success-text-color);
-	--pt-intent-warning-text-color: var(--pt-dark-intent-warning-text-color);
-	--pt-intent-danger-text-color: var(--pt-dark-intent-danger-text-color);
+	/*! IntentColors */
+	--pt-intent-primary-text-color-hsl: var(--blue5-hsl);
+	--pt-intent-success-text-color-hsl: var(--green5-hsl);
+	--pt-intent-warning-text-color-hsl: var(--orange5-hsl);
+	--pt-intent-danger-text-color-hsl: var(--red5-hsl);
+	--pt-intent-primary-text-color: hsl(var(--pt-intent-primary-text-color-hsl));
+	--pt-intent-success-text-color: hsl(var(--pt-intent-success-text-color-hsl));
+	--pt-intent-warning-text-color: hsl(var(--pt-intent-warning-text-color-hsl));
+	--pt-intent-danger-text-color: hsl(var(--pt-intent-danger-text-color-hsl));
 
-/*! LayoutColors */
-	--pt-app-background-color: var(--pt-dark-app-background-color);
-	--pt-app-top-background-color: var(--pt-dark-app-top-background-color);
-	--pt-code-background-color: var(--pt-dark-code-background-color);
-	--pt-divider-black: var(--pt-dark-divider-black);
-	--pt-divider-white: var(--pt-dark-divider-white);
+	/*! LayoutColors */
+	--pt-app-background-color: var(--dark-gray3);
+	--pt-app-top-background-color: var(--dark-gray4);
+	--pt-code-background-color: hsla(var(--black-hsl),0.3);
+	--pt-divider-black: hsla(var(--black-hsl),0.4);
+	--pt-divider-white: hsla(var(--white-hsl),0.15);
 
-/*! TextColors */
-	--pt-text-color: var(--pt-dark-text-color);
-	--pt-text-color-muted: var(--pt-dark-text-color-muted);
-	--pt-text-color-disabled: var(--pt-dark-text-color-disabled);
-	--pt-heading-color: var(--pt-dark-heading-color);
-	--pt-link-color: var(--pt-dark-link-color);
-	--pt-code-text-color: var(--pt-dark-code-text-color);
+	/*! TextColors */
+	--pt-text-color: hsla(var(--white-hsl),0.85);
+	--pt-text-color-muted: hsla(var(--white-hsl),0.65);
+	--pt-text-color-disabled: hsla(var(--white-hsl),0.45);
+	--pt-heading-color: hsla(var(--white-hsl),1.00);
+	--pt-link-color: var(--pt-intent-primary-text-color);
+	--pt-code-text-color: var(--pt-text-color-muted);
 
-/*! IconColors */
-	--pt-icon-color: var(--pt-dark-icon-color);
-	--pt-icon-color-hover: var(--pt-dark-icon-color-hover);
-	--pt-icon-color-disabled: var(--pt-dark-icon-color-disabled);
-	--pt-icon-color-selected: var(--pt-dark-icon-color-selected);
+	/*! IconColors */
+	--pt-icon-color: var(--pt-text-color-muted);
+	--pt-icon-color-hover: var(--pt-text-color);
+	--pt-icon-color-disabled: var(--pt-text-color-disabled);
+	--pt-icon-color-selected: var(--pt-intent-primary);
 
-/*! Variables */
-	--pt-border-shadow-opacity: var(--pt-dark-border-shadow-opacity);
-	--pt-drop-shadow-opacity: var(--pt-dark-drop-shadow-opacity);
-	--pt-shadow-color-hsl: var(--pt-dark-shadow-color-hsl);
-	--pt-elevation-shadow-0: var(--pt-dark-elevation-shadow-0);
-	--pt-elevation-shadow-1: var(--pt-dark-elevation-shadow-1);
-	--pt-elevation-shadow-2: var(--pt-dark-elevation-shadow-2);
-	--pt-elevation-shadow-3: var(--pt-dark-elevation-shadow-3);
-	--pt-elevation-shadow-4: var(--pt-dark-elevation-shadow-4);
-	--pt-input-box-shadow: var(--pt-dark-input-box-shadow);
-	--pt-dialog-box-shadow: var(--pt-dark-dialog-box-shadow);
-	--pt-popover-box-shadow: var(--pt-dark-popover-box-shadow);
-	--pt-tooltip-box-shadow: var(--pt-dark-tooltip-box-shadow);
+	/*! Variables */
+	--pt-border-shadow-opacity: 0.2;
+	--pt-drop-shadow-opacity: 0.4;
+	--pt-shadow-color-hsl: var(--black-hsl);
+	--pt-elevation-shadow-0: 0 0 0 1px var(--pt-divider-black),0 0 0 hsla(var(--pt-shadow-color-hsl),0),0 0 0 hsla(var(--pt-shadow-color-hsl),0);
+	--pt-elevation-shadow-1: 0 0 0 1px hsla(var(--pt-shadow-color-hsl),var(--pt-border-shadow-opacity)),0 0 0 hsla(var(--pt-shadow-color-hsl),0),0 1px 1px hsla(var(--pt-shadow-color-hsl),var(--pt-drop-shadow-opacity));
+	--pt-elevation-shadow-2: 0 0 0 1px hsla(var(--pt-shadow-color-hsl),var(--pt-border-shadow-opacity)),0 1px 1px hsla(var(--pt-shadow-color-hsl),var(--pt-drop-shadow-opacity)),0 2px 6px hsla(var(--pt-shadow-color-hsl),var(--pt-drop-shadow-opacity));
+	--pt-elevation-shadow-3: 0 0 0 1px hsla(var(--pt-shadow-color-hsl),var(--pt-border-shadow-opacity)),0 2px 4px hsla(var(--pt-shadow-color-hsl),var(--pt-drop-shadow-opacity)),0 8px 24px hsla(var(--pt-shadow-color-hsl),var(--pt-drop-shadow-opacity));
+	--pt-elevation-shadow-4: 0 0 0 1px hsla(var(--pt-shadow-color-hsl),var(--pt-border-shadow-opacity)),0 4px 8px hsla(var(--pt-shadow-color-hsl),var(--pt-drop-shadow-opacity)),0 18px 46px 6px hsla(var(--pt-shadow-color-hsl),var(--pt-drop-shadow-opacity));
+	--pt-input-box-shadow: inset 0 0 0 1px hsla(var(--white-hsl),0.15);
+	--pt-dialog-box-shadow: var(--pt-elevation-shadow-4);
+	--pt-popover-box-shadow: var(--pt-elevation-shadow-3);
+	--pt-tooltip-box-shadow: var(--pt-popover-box-shadow);
 
-/*! Components */
-	--control-group-spacing: var(--dark-control-group-spacing);
-	--button-box-shadow: var(--dark-button-box-shadow);
-	--button-box-shadow-active: var(--dark-button-box-shadow-active);
-	--button-intent-box-shadow: var(--dark-button-intent-box-shadow);
-	--button-intent-box-shadow-active: var(--dark-button-intent-box-shadow-active);
-	--shine-color-hsl: var(--dark-shine-color-hsl);
-	--shine-opacity: var(--dark-shine-opacity);
-	--button-gradient: var(--dark-button-gradient);
-	--button-color-disabled: var(--dark-button-color-disabled);
-	--button-background-color: var(--dark-button-background-color);
-	--button-background-color-hover: var(--dark-button-background-color-hover);
-	--button-background-color-active: var(--dark-button-background-color-active);
-	--button-background-color-disabled: var(--dark-button-background-color-disabled);
-	--button-background-color-active-disabled: var(--dark-button-background-color-active-disabled);
-	--button-intent-color-disabled: var(--dark-button-intent-color-disabled);
-	--minimal-button-background-color: var(--dark-minimal-button-background-color);
-	--minimal-button-background-color-hover: var(--dark-minimal-button-background-color-hover);
-	--minimal-button-background-color-active: var(--dark-minimal-button-background-color-active);
-	--button-outlined-border-color: var(--dark-button-outlined-border-color);
-	--button-outlined-border-color-disabled: var(--dark-button-outlined-border-color-disabled);
-	--callout-background-color: var(--dark-callout-background-color);
-	--card-background-color: var(--dark-card-background-color);
-	--drawer-background-color: var(--dark-drawer-background-color);
-	--input-color: var(--dark-input-color);
-	--input-color-disabled: var(--dark-input-color-disabled);
-	--input-placeholder-color: var(--dark-input-placeholder-color);
-	--input-background-color: var(--dark-input-background-color);
-	--input-background-color-disabled: var(--dark-input-background-color-disabled);
-	--input-shadow-color-focus: var(--dark-input-shadow-color-focus);
-	--input-shadow-color-focus-hsl: var(--dark-input-shadow-color-focus-hsl);
-	--control-background-color: var(--dark-control-background-color);
-	--control-background-color-hover: var(--dark-control-background-color-hover);
-	--control-background-color-active: var(--dark-control-background-color-active);
-	--switch-background-color: var(--dark-switch-background-color);
-	--switch-background-color-hover: var(--dark-switch-background-color-hover);
-	--switch-background-color-active: var(--dark-switch-background-color-active);
-	--switch-background-color-disabled: var(--dark-switch-background-color-disabled);
-	--switch-checked-background-color: var(--dark-switch-checked-background-color);
-	--switch-checked-background-color-hover: var(--dark-switch-checked-background-color-hover);
-	--switch-checked-background-color-active: var(--dark-switch-checked-background-color-active);
-	--switch-checked-background-color-disabled: var(--dark-switch-checked-background-color-disabled);
-	--switch-indicator-background-color: var(--dark-switch-indicator-background-color);
-	--switch-indicator-background-color-disabled: var(--dark-switch-indicator-background-color-disabled);
-	--table-border-color: var(--dark-table-border-color);
-	--menu-background-color: var(--dark-menu-background-color);
-	--menu-item-color-hover: var(--dark-menu-item-color-hover);
-	--menu-item-color-active: var(--dark-menu-item-color-active);
-	--navbar-background-color: var(--dark-navbar-background-color);
-	--popover-background-color: var(--dark-popover-background-color);
-	--pt-popover2-background-color: var(--pt-dark-popover2-background-color);
-	--pt-popover2-box-shadow: var(--pt-dark-popover2-box-shadow);
-	--pt-tooltip2-box-shadow: var(--pt-dark-tooltip2-box-shadow);
-	--tooltip2-background-color: var(--dark-tooltip2-background-color);
-	--tooltip2-text-color: var(--dark-tooltip2-text-color);
-	--progress-track-color: var(--dark-progress-track-color);
-	--progress-head-color: var(--dark-progress-head-color);
-	--slider-progress-color: var(--dark-slider-progress-color);
-	--slider-handle-disabled: var(--dark-slider-handle-disabled);
-	--tab-color-selected: var(--dark-tab-color-selected);
-	--tag-default-color: var(--dark-tag-default-color);
-	--tag-default-color-hsl: var(--dark-tag-default-color-hsl);
-	--tag-text-color: var(--dark-tag-text-color);
-	--tooltip-background-color: var(--dark-tooltip-background-color);
-	--tooltip-text-color: var(--dark-tooltip-text-color);
-	--button-border-color: var(--dark-button-border-color);
-	--button-box-shadow-hover: var(--dark-button-box-shadow-hover);
-	--button-box-shadow-selected: var(--dark-button-box-shadow-selected);
-	--slider-background-color: var(--dark-slider-background-color);
+	/*! Components */
+	--control-group-spacing: calc(var(--button-border-width)*-1);
+	--button-box-shadow: inset 0 0 0 var(--button-border-width) var(--button-border-color),var(--button-bottom-box-shadow);
+	--button-box-shadow-active: inset 0 0 0 var(--button-border-width) var(--pt-intent-primary-active),var(--button-bottom-box-shadow);
+	--button-intent-box-shadow: 0 2px 0 hsla(var(--black-hsl),.045),0 0 0 transparent;
+	--button-intent-box-shadow-active: var(--button-intent-box-shadow);
+	--shine-color-hsl: var(--white-hsl);
+	--shine-opacity: 0.05;
+	--button-gradient: unset;
+	--button-color-disabled: var(--pt-text-color-disabled);
+	--button-background-color: var(--dark-gray2);
+	--button-background-color-hover: var(--button-background-color);
+	--button-background-color-active: var(--button-background-color);
+	--button-background-color-disabled: hsla(var(--dark-gray5-hsl),0.2);
+	--button-background-color-active-disabled: hsla(var(--dark-gray2-hsl),0.7);
+	--button-intent-color-disabled: hsla(var(--white-hsl),0.3);
+	--minimal-button-background-color: none;
+	--minimal-button-background-color-hover: hsla(var(--white-hsl),0.05);
+	--minimal-button-background-color-active: hsla(var(--white-hsl),0.1);
+	--button-outlined-border-color: var(--button-border-color);
+	--button-outlined-border-color-disabled: hsla(var(--white-hsl),0.1);
+	--callout-background-color: hsla(var(--gray3-hsl),0.2);
+	--card-background-color: var(--pt-app-top-background-color);
+	--drawer-background-color: var(--pt-app-top-background-color);
+	--input-color: var(--pt-text-color);
+	--input-color-disabled: var(--button-color-disabled);
+	--input-placeholder-color: var(--pt-text-color-disabled);
+	--input-background-color: hsla(var(--black-hsl),0.3);
+	--input-background-color-disabled: hsla(var(--dark-gray5-hsl),0.5);
+	--input-shadow-color-focus: var(--pt-intent-primary);
+	--input-shadow-color-focus-hsl: var(--pt-intent-primary-hsl);
+	--control-background-color: var(--button-background-color);
+	--control-background-color-hover: var(--button-background-color-hover);
+	--control-background-color-active: var(--button-background-color-active);
+	--switch-background-color: hsla(var(--black-hsl),0.5);
+	--switch-background-color-hover: hsla(var(--black-hsl),0.7);
+	--switch-background-color-active: hsla(var(--black-hsl),0.9);
+	--switch-background-color-disabled: var(--button-background-color-disabled);
+	--switch-checked-background-color: var(--control-checked-background-color);
+	--switch-checked-background-color-hover: var(--control-checked-background-color-hover);
+	--switch-checked-background-color-active: var(--control-checked-background-color-active);
+	--switch-checked-background-color-disabled: hsla(var(--control-checked-background-color-hsl),0.5);
+	--switch-indicator-background-color: var(--dark-gray5);
+	--switch-indicator-background-color-disabled: hsla(var(--black-hsl),0.4);
+	--table-border-color: var(--pt-divider-white);
+	--menu-background-color: var(--pt-app-top-background-color);
+	--menu-item-color-hover: var(--minimal-button-background-color-hover);
+	--menu-item-color-active: var(--minimal-button-background-color-active);
+	--navbar-background-color: var(--dark-gray5);
+	--popover-background-color: var(--pt-app-top-background-color);
+	--pt-popover2-background-color: var(--pt-app-top-background-color);
+	--pt-popover2-box-shadow: var(--pt-elevation-shadow-3);
+	--pt-tooltip2-box-shadow: var(--pt-popover-box-shadow);
+	--tooltip2-background-color: var(--light-gray3);
+	--tooltip2-text-color: var(--dark-gray5);
+	--progress-track-color: hsla(var(--black-hsl),0.5);
+	--progress-head-color: var(--gray3);
+	--slider-progress-color: hsla(var(--black-hsl),0.5);
+	--slider-handle-disabled: var(--gray1);
+	--tab-color-selected: var(--pt-link-color);
+	--tag-default-color: var(--gray5);
+	--tag-default-color-hsl: var(--gray5-hsl);
+	--tag-text-color: var(--dark-gray1);
+	--tooltip-background-color: var(--light-gray3);
+	--tooltip-text-color: var(--dark-gray5);
+	--button-border-color: hsla(var(--white-hsl),0.2);
+	--button-box-shadow-hover: inset 0 0 0 var(--button-border-width) var(--pt-intent-primary-hover),var(--button-bottom-box-shadow);
+	--button-box-shadow-selected: inset 0 0 0 var(--button-border-width) var(--pt-intent-primary),var(--button-bottom-box-shadow);
+	--slider-background-color: var(--dark-gray5);
 
-/*! Datetime */
-	--datepicker-background-color: var(--dark-datepicker-background-color);
-	--datepicker-day-background-color-hover: var(--dark-datepicker-day-background-color-hover);
-	--datepicker-day-background-color-active: var(--dark-datepicker-day-background-color-active);
-	--daterangepicker-range-background-color: var(--dark-daterangepicker-range-background-color);
-	--daterangepicker-range-background-color-selected: var(--dark-daterangepicker-range-background-color-selected);
-	--daterangepicker-range-background-color-selected-hover: var(--dark-daterangepicker-range-background-color-selected-hover);
+	/*! Datetime */
+	--datepicker-background-color: var(--pt-app-top-background-color);
+	--datepicker-day-background-color-hover: var(--gray1);
+	--datepicker-day-background-color-active: var(--gray2);
+	--daterangepicker-range-background-color: var(--dark-gray5);
+	--daterangepicker-range-background-color-selected: var(--dark-gray5);
+	--daterangepicker-range-background-color-selected-hover: var(--gray1);
 
-/*! Table */
-	--cell-background-color: var(--dark-cell-background-color);
-	--cell-border-color: var(--dark-cell-border-color);
-	--cell-text-color: var(--dark-cell-text-color);
-	--table-background-color: var(--dark-table-background-color);
-	--table-background-color-hsl: var(--dark-table-background-color-hsl);
-	--header-background-color: var(--dark-header-background-color);
-	--header-hover-background-color: var(--dark-header-hover-background-color);
-	--column-header-text-color: var(--dark-column-header-text-color);
-	--row-header-text-color: var(--dark-row-header-text-color);
-	--header-background-color-hsl: var(--dark-header-background-color-hsl);
-	--header-hover-background-color-hsl: var(--dark-header-hover-background-color-hsl);
-	--header-selected-background-color-hsl: var(--dark-header-selected-background-color-hsl);
-	--header-selected-hover-background-color-hsl: var(--dark-header-selected-hover-background-color-hsl);
-	--column-header-text-color-hsl: var(--dark-column-header-text-color-hsl);
-	--row-header-text-color-hsl: var(--dark-row-header-text-color-hsl);
+	/*! Table */
+	--cell-background-color: var(--dark-gray3);
+	--cell-border-color: var(--pt-divider-black);
+	--cell-text-color: var(--pt-text-color);
+	--table-background-color: var(--pt-app-top-background-color);
+	--table-background-color-hsl: var(--pt-app-top-background-color-hsl);
+	--header-background-color: var(--table-background-color);
+	--header-hover-background-color: var(--dark-gray5);
+	--column-header-text-color: var(--pt-text-color);
+	--row-header-text-color: var(--pt-text-color-muted);
+	--header-background-color-hsl: var(--table-background-color-hsl);
+	--header-hover-background-color-hsl: var(--dark-gray5-hsl);
+	--header-selected-background-color-hsl: var(--pt-intent-primary-hue),40%,25%;
+	--header-selected-hover-background-color-hsl: var(--pt-intent-primary-hue),40%,29%;
+	--column-header-text-color-hsl: var(--pt-text-color);
+	--row-header-text-color-hsl: var(--pt-text-color-muted);
 
-/*! AntdColors */
+	/*! AntdColors */
 }
