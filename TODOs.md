@@ -2,8 +2,6 @@
 
 ### App tool
 - publish beta of v3.x
-  - remove dark theme colors from tokens export?
-  - jsDoc comment in the computed value & raw value on top of property line!!
   - bump to latest blueprint v
   - update readme
     - a dark color cannot link to its light counterpart or there will be a circular dependency
