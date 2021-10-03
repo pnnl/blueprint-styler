@@ -25,6 +25,8 @@ const convertJsonToJsObjString = jsonString => jsonString.replace(/"([^"]+)":/g,
 /** css-var => var(--css-var) */
 const cssKebabNameToVarIdentity = string => `var(--${string})`
 
+const darkRegex = /dark-(?!gray)/g
+
 
 module.exports = () => through2.obj(function (file, enc, next) {
     const content = file.contents.toString('utf8')
@@ -92,25 +94,26 @@ module.exports = () => through2.obj(function (file, enc, next) {
     for (const categoryName in cssObjValues) {
         if (Object.hasOwnProperty.call(cssObjValues, categoryName)) {
             const currentCategory = cssObjValues[categoryName];
-            const currentCategoryComment = `\n/*! ${categoryName} */\n`
+            const currentCategoryComment = `\n\t/*! ${categoryName} */\n`
             css += currentCategoryComment
             cssDarkMirror += currentCategoryComment // appears even when there are no contents?
             less += currentCategoryComment
             for (const varName in currentCategory) {
                 if (Object.hasOwnProperty.call(currentCategory, varName)) {
                     const varValue = currentCategory[varName];
-                    if (varName.search(/dark-(?!gray)/g) !== -1) {
+                    if (varName.search(darkRegex) !== -1) {
                         // raw Colors should not have an invert, only ColorAliases
                         const inverseVarName = varName.replace('dark-', '')
-                        cssDarkMirror += `\t--${inverseVarName}: var(--${varName});\n`
+                        cssDarkMirror += `\t--${inverseVarName}: ${varValue.replace(darkRegex,'')};\n` // var(--${varName});\n`
                         if (varValue.includes(`--${inverseVarName}`)) {
                             console.log(`>> WARNING: Possible circular dependency! A --dark-var contains its normal --var counterpart in: --${varName}: ${varValue};`);
                         }
-                    } else if (varValue.search(/dark-(?!gray)/g) !== -1) {
+                    } else if (varValue.search(darkRegex) !== -1) {
                         console.log(`>> WARNING: Possible circular dependency! A normal --var contains a --dark-var in: --${varName}: ${varValue};`);
+                    } else {
+                        css += `\t--${varName}: ${varValue};\n` // css contains real value
+                        less += `@${varName}: ${cssKebabNameToVarIdentity(varName)};\n` // less an scss are identity
                     }
-                    css += `\t--${varName}: ${varValue};\n` // css contains real value
-                    less += `@${varName}: ${cssKebabNameToVarIdentity(varName)};\n` // less an scss are identity
                 }
             }
         }
