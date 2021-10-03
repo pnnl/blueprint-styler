@@ -57,55 +57,40 @@ module.exports = () => through2.obj(function (file, enc, next) {
         light: {},
         dark: {}
     }
-    let currentCategory = 'Any'
+    let categoryName = 'Any'
     jsKeyValMatches.forEach(match => {
         // creating these objects also deduplicates css --custom-property declarations
         if (match[4] != null) {
-            currentCategory = match[4]
+            categoryName = match[4]
         } else {
 
             // create a category if it doesn't exist
-            if (cssObjValues.light[currentCategory] == null) {
-                cssObjValues.light[currentCategory] = {}
-                cssObjValues.dark[currentCategory] = {}
+            if (cssObjValues.light[categoryName] == null) {
+                cssObjValues.light[categoryName] = {}
+                cssObjValues.dark[categoryName] = {}
             }
 
-            const cssName = match[2];
+            const varName = match[2];
 
             // vars equal raw values // CSS_VAR: 24px;
-            const cssValue = match[3] // value of the css
+            const varValue = match[3] // value of the css
                 .replace(/[\n\t\r]+/ig, '') // replace all newlines, tabs, and line feeds
 
-            // TODO: combine section below into here...
-            cssObjValues.light[currentCategory][cssName] = cssValue;
+            if (varName.search(darkRegex) !== -1) {
+                const inverseVarName = varName.replace(darkRegex, '')
+                const inverseVarValue = varValue.replace(darkRegex, '')
+                cssObjValues.dark[categoryName][inverseVarName] = inverseVarValue
+                if (varValue.includes(`--${inverseVarName}`)) {
+                    console.log(`>> WARNING: Possible circular dependency! A --dark-var contains its normal --var counterpart in: --${varName}: ${varValue};`);
+                }
+            } else if (varValue.search(darkRegex) !== -1) {
+                console.log(`>> WARNING: Possible circular dependency! A normal --var contains a --dark-var in: --${varName}: ${varValue};`);
+            } else {
+                cssObjValues.light[categoryName][varName] = varValue;
+            }
 
         }
     });
-    //#endregion ////////////////////////////////////////////////////////////////////////////////
-
-
-    //#region - transfer dark theme values from cssObjValues.light to cssObjValues.dark ///////////////////
-    for (const categoryName in cssObjValues.light) {
-        if (Object.hasOwnProperty.call(cssObjValues.light, categoryName)) {
-            const currentCategory = cssObjValues.light[categoryName];
-            for (const varName in currentCategory) {
-                if (Object.hasOwnProperty.call(currentCategory, varName)) {
-                    const varValue = currentCategory[varName];
-                    if (varName.search(darkRegex) !== -1) {
-                        const inverseVarName = varName.replace(darkRegex, '')
-                        const inverseVarValue = varValue.replace(darkRegex, '')
-                        cssObjValues.dark[categoryName][inverseVarName] = inverseVarValue
-                        delete cssObjValues.light[categoryName][varName] // editing the object while looping?
-                        if (varValue.includes(`--${inverseVarName}`)) {
-                            console.log(`>> WARNING: Possible circular dependency! A --dark-var contains its normal --var counterpart in: --${varName}: ${varValue};`);
-                        }
-                    } else if (varValue.search(darkRegex) !== -1) {
-                        console.log(`>> WARNING: Possible circular dependency! A normal --var contains a --dark-var in: --${varName}: ${varValue};`);
-                    }
-                }
-            }
-        }
-    }
     //#endregion ////////////////////////////////////////////////////////////////////////////////
 
 
