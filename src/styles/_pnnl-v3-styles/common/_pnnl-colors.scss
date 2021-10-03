@@ -1,0 +1,23 @@
+#{$root-selector} {
+
+  // https://forgedev.pnnl.gov/prc3/colors
+
+  /*! ColorsPnnl */
+
+  --platinum:   hsl(0,   0,   70);
+  --sliver:     hsl(225, 2,   39); // Principal
+  --onyx:       hsl(210, 11,  11);
+
+  --bronze:     hsl(21,  78,  29);
+  --copper:     hsl(30,  100, 35); // Principal // primary
+  --gold:       hsl(42,  100, 48); // warning
+  --emsl-green: hsl(77,  77,  27);
+  --emerald:    hsl(147, 100, 24); // success
+  --topaz:      hsl(197, 94,  34); // link
+  --mercury:    hsl(205, 27,  44); // info
+  --sapphire:   hsl(218, 100, 28);
+  --amethyst:   hsl(266, 48,  34); // visited-link
+  --garnet:     hsl(323, 98,  26);
+  --ruby:       hsl(347, 85,  40); // danger
+
+}

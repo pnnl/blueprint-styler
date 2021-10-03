@@ -25,6 +25,8 @@ const convertJsonToJsObjString = jsonString => jsonString.replace(/"([^"]+)":/g,
 /** css-var => var(--css-var) */
 const cssKebabNameToVarIdentity = string => `var(--${string})`
 
+const darkRegex = /dark-(?!gray)/g
+
 
 module.exports = () => through2.obj(function (file, enc, next) {
     const content = file.contents.toString('utf8')
@@ -51,107 +53,111 @@ module.exports = () => through2.obj(function (file, enc, next) {
     //#region - turn the CSS key-values into parsable objects ///////////////////
 
     // turn the jsKeyValMatches into an object
-    let jsObjIdentity = {}
-    let cssObjValues = {}
-    let currentCategory = 'Any'
+    let cssObjValues = {
+        light: {},
+        dark: {}
+    }
+    let categoryName = 'Any'
     jsKeyValMatches.forEach(match => {
         // creating these objects also deduplicates css --custom-property declarations
         if (match[4] != null) {
-            currentCategory = match[4]
+            categoryName = match[4]
         } else {
 
             // create a category if it doesn't exist
-            if (jsObjIdentity[currentCategory] == null) {
-                jsObjIdentity[currentCategory] = {}
-            }
-            if (cssObjValues[currentCategory] == null) {
-                cssObjValues[currentCategory] = {}
+            if (cssObjValues.light[categoryName] == null) {
+                cssObjValues.light[categoryName] = {}
+                cssObjValues.dark[categoryName] = {}
             }
 
-            const cssName = match[2];
+            const varName = match[2];
 
             // vars equal raw values // CSS_VAR: 24px;
-            const cssValue = match[3] // value of the css
+            const varValue = match[3] // value of the css
                 .replace(/[\n\t\r]+/ig, '') // replace all newlines, tabs, and line feeds
-            cssObjValues[currentCategory][cssName] = cssValue;
 
-            // identity // CssVar: "var(--css-var)",
-            const jsValue = cssKebabNameToVarIdentity(cssName) // "var(--css-var)"
-            // jsName = convertKebabToScreamingSnakeCase(name) // CSS_VAR
-            const jsName = convertKebabToCamelCase(cssName) // CssVar
-            jsObjIdentity[currentCategory][jsName] = jsValue;
+            if (varName.search(darkRegex) !== -1) {
+                const inverseVarName = varName.replace(darkRegex, '')
+                const inverseVarValue = varValue.replace(darkRegex, '')
+                cssObjValues.dark[categoryName][inverseVarName] = inverseVarValue
+                if (varValue.includes(`--${inverseVarName}`)) {
+                    console.log(`>> WARNING: Possible circular dependency! A --dark-var contains its normal --var counterpart in: --${varName}: ${varValue};`);
+                }
+            } else if (varValue.search(darkRegex) !== -1) {
+                console.log(`>> WARNING: Possible circular dependency! A normal --var contains a --dark-var in: --${varName}: ${varValue};`);
+            } else {
+                cssObjValues.light[categoryName][varName] = varValue;
+            }
+
         }
     });
     //#endregion ////////////////////////////////////////////////////////////////////////////////
 
 
-    //#region - Process data object into css, less, and scss file strings ///////////////////
-    let css = `:root {\n`
-    let cssDarkMirror = `.bp3-dark {\n`
-    let less = ``
-    for (const categoryName in cssObjValues) {
-        if (Object.hasOwnProperty.call(cssObjValues, categoryName)) {
-            const currentCategory = cssObjValues[categoryName];
-            const currentCategoryComment = `\n/*! ${categoryName} */\n`
-            css += currentCategoryComment
-            cssDarkMirror += currentCategoryComment // appears even when there are no contents?
-            less += currentCategoryComment
-            for (const varName in currentCategory) {
-                if (Object.hasOwnProperty.call(currentCategory, varName)) {
-                    const varValue = currentCategory[varName];
-                    if (varName.search(/dark-(?!gray)/g) !== -1) {
-                        // raw Colors should not have an invert, only ColorAliases
-                        const inverseVarName = varName.replace('dark-', '')
-                        cssDarkMirror += `\t--${inverseVarName}: var(--${varName});\n`
-                        if (varValue.includes(`--${inverseVarName}`)) {
-                            console.log(`>> WARNING: Possible circular dependency! A --dark-var contains its normal --var counterpart in: --${varName}: ${varValue};`);
+    //#region - Process cssObjValues into strings for different formats: css, less, scss, ts, js, json ///////////////////
+    let less = js = ts = ''
+    const jsObjIdentity = {}
+    const cssThemeStrings = { light: '', dark: '' }
+    const cssThemes = ['light', 'dark']
+    cssThemes.forEach(theme => {
+        for (const categoryName in cssObjValues[theme]) {
+            if (Object.hasOwnProperty.call(cssObjValues[theme], categoryName)) {
+                const currentCategory = cssObjValues[theme][categoryName];
+                const currentCategoryComment = `\n\t/*! ${categoryName} */\n`
+                cssThemeStrings[theme] += currentCategoryComment
+
+                if (theme === 'light') {
+                    less += currentCategoryComment
+                    js += `\nexports.${categoryName} = {\n`
+                    ts += `\nexport const ${categoryName} = {\n`
+                    jsObjIdentity[categoryName] = {}
+                }
+
+                for (const varName in currentCategory) {
+                    if (Object.hasOwnProperty.call(currentCategory, varName)) {
+                        const varValue = currentCategory[varName];
+
+                        // css contains real value
+                        cssThemeStrings[theme] += `\t--${varName}: ${varValue};\n`
+
+                        // all others are identity
+                        if (theme === 'light') {
+                            const varIdentityValue = cssKebabNameToVarIdentity(varName)
+                            const jsVarName = convertKebabToCamelCase(varName)
+                            let jsValue = `\t${jsVarName}: "${varIdentityValue}",\n`
+                            const jsDocsCommentValue = `\t/** \`${varValue}\` */\n` // TODO: calculate raw value?
+                            jsValue = jsDocsCommentValue + jsValue
+                            less += `@${varName}: ${varIdentityValue};\n` // less an scss are identity
+                            js += jsValue
+                            ts += jsValue
+                            jsObjIdentity[categoryName][jsVarName] = varIdentityValue
                         }
-                    } else if (varValue.search(/dark-(?!gray)/g) !== -1) {
-                        console.log(`>> WARNING: Possible circular dependency! A normal --var contains a --dark-var in: --${varName}: ${varValue};`);
                     }
-                    css += `\t--${varName}: ${varValue};\n` // css contains real value
-                    less += `@${varName}: ${cssKebabNameToVarIdentity(varName)};\n` // less an scss are identity
+                }
+
+                if (theme === 'light') {
+                    js += `};\n`
+                    ts += `};\n`
                 }
             }
         }
-    }
-    css += '}\n'
-    cssDarkMirror += '}\n'
-    css += `\n\n${cssDarkMirror}`
+    })
+
+    const css = `.bp3-vars, :root {\n${cssThemeStrings.light}}\n\n\n.bp3-dark {\n${cssThemeStrings.dark}}\n`
     const scss = less.replace(/@/g, '$')
-
-    /* // OLD CSS PROCESSING //
-    const css = `:root{${cssVars}\n}`;
-    // vars equal raw values // @css-var: 24px;
-    const customPropPrefixRegex = /\s{2,}--/g
-    const less = cssVars.replace(customPropPrefixRegex, `\n@`) // broken
-    const scss = cssVars.replace(customPropPrefixRegex, `\n$`) // broken
-    // identity // @css-var: var(--css-var);
-    const less = cssVars.replace(/\s*--([^:]*):[^;]*;?/gi, (match, propertyName) => `\n@${propertyName}: var(--${propertyName});`)
-    const scss = less.replace(/@/g, '$')
-    */
-
-    //#endregion ////////////////////////////////////////////////////////////////////////////////
-
-
-    //#region - Process data object into js, ts, and json - all identity ///////////////////
     const json = JSON.stringify(jsObjIdentity, null, 2)
-    let js = ts = ''
-    let categories = []
 
+    let categories = []
     for (const category in jsObjIdentity) {
         if (jsObjIdentity.hasOwnProperty(category)) {
-            const set = jsObjIdentity[category];
-            const jsObjString = convertJsonToJsObjString(JSON.stringify(set, null, 2))
-            js += `\nexports.${category} = ${jsObjString};\n`
-            ts += `\nexport const ${category} = ${jsObjString};\n`
             categories.push(category);
         }
     }
-    const tokens = `Tokens = {\n${categories.map(category => `  ${category}`).join(`,\n`)}\n}`;
-    const tokensAll = `TokensAll = {\n${categories.map(category => `  ...${category}`).join(`,\n`)}\n}`;
+    const tokens = `Tokens = {\n${categories.map(category => `\t${category}`).join(`,\n`)}\n}`;
+    const tokensAll = `TokensAll = {\n${categories.map(category => `\t...${category}`).join(`,\n`)}\n}`;
     ts += `\nexport const ${tokens}\n\nexport const ${tokensAll}\n`;
     // js += `\nexports.${tokens}\n\nexports.${tokensAll}\n`;
+
     //#endregion ////////////////////////////////////////////////////////////////////////////////
 
 
@@ -177,7 +183,6 @@ module.exports = () => through2.obj(function (file, enc, next) {
     })
 
     //#endregion ////////////////////////////////////////////////////////////////////////////////
-
 
     // completed log
     console.log(`>> Extracted ${jsKeyValMatches.length} vars from ${file.basename}`);

@@ -4,7 +4,7 @@
   &:hover{
     box-shadow: inset 0 -1px 0 0 $pt-intent-primary;
   }
-  &:focus {
+  &:focus, &.#{$ns}-active {
     box-shadow: inset 0 0 0 2px $pt-intent-primary;
   }
 

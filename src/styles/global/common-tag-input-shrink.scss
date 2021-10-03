@@ -1,0 +1,8 @@
+
+// The tag input expands when the tags _almost_ fill the width of the input
+// The original input width applies when the input is focused or has any input text
+
+// .#{$ns}-tag-input..#{$ns}-fill
+.#{$ns}-tag-input .#{$ns}-input-ghost:not(:focus)[value=""]{
+  width: 1px;
+}

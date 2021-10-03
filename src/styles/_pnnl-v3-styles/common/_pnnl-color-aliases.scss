@@ -1,0 +1,84 @@
+#{$root-selector} {
+
+  /*! ColorsPnnl */
+
+  // --copper: hsl(30deg 100% 35%);
+  // --emerald: hsl(147deg 100% 24%);
+  // --gold: hsl(42deg 100% 48%);
+  // --onyx: hsl(210deg 11% 11%);
+  // --ruby: hsl(347deg 85% 40%);
+  // --mercury: hsl(205deg 27% 44%);
+  --primary: var(--copper);
+  --info: var(--mercury);
+  --danger: var(--ruby);
+  --warning: var(--gold);
+  --success: var(--emerald);
+  --text-color: hsl(216deg 3% 29%);
+  --secondary-text-color: hsl(225deg 2% 39%);
+  --disabled-text-color: hsl(0deg 0% 70%);
+  --primary-text-color: hsl(30deg 100% 35%);
+  --info-text-color: hsl(205deg 27% 44%);
+  --warning-text-color: hsl(42deg 100% 48%);
+  --danger-text-color: hsl(347deg 85% 40%);
+  --success-text-color: hsl(147deg 100% 24%);
+  --header-color: hsl(30deg 100% 35%);
+  --subheader-text-color: hsl(21deg 78% 29%);
+  --default-link-color: hsl(197deg 94% 34%);
+  --default-link-underline-color: hsl(197deg 49% 80%);
+  --visited-link-color: hsl(266deg 48% 34%);
+  --visited-link-underline-color: hsl(265deg 24% 80%);
+  --border-color: hsl(0deg 0% 85%);
+  --app-background: hsl(0deg 0% 97%);
+  --secondary-app-background: hsl(0deg 0% 94%);
+  --tertiary-app-background: hsl(0deg 0% 91%);
+  --card-background: hsl(0deg 0% 100%);
+  --overlay-background-color: hsl(0deg 0% 0% / 40%);
+  --header-background-color: hsl(225deg 2% 39%);
+  --toolbar-background-color: hsl(0deg 0% 91%);
+  --toolbar-item-outline: hsl(216deg 3% 29%);
+  --toolbar-item-fill: hsl(0deg 0% 97%);
+  --toolbar-item-active-background: hsl(0deg 0% 85%);
+  --default-button-color: hsl(0deg 0% 91%);
+  --default-button-color-hover: hsl(0deg 0% 94%);
+  --hover-highlight-background: hsl(41deg 93% 95%);
+  --active-highlight-color: hsl(42deg 100% 48%);
+  --form-label-color: var(--secondary-text-color);
+  --form-placeholder-color: hsl(205deg 21% 55%);
+  --form-prefix-background: hsl(206deg 24% 94%);
+  --form-input-border-color: hsl(0deg 0% 76%);
+  --skeleton-base-color: hsl(0deg 0% 0% / 5%);
+  --skeleton-highlight-color: hsl(0deg 0% 100% / 10%);
+}
+
+
+.#{ns}-dark {
+  --text-color: hsl(0deg 0% 97%);
+  --secondary-text-color: hsl(0deg 0% 76%);
+  --disabled-text-color: hsl(225deg 2% 39%);
+  --default-link-color: hsl(197deg 48% 54%);
+  --default-link-underline-color: hsl(197deg 50% 21%);
+  --visited-link-color: hsl(266deg 24% 60%);
+  --visited-link-underline-color: hsl(258deg 24% 22%);
+  --header-color: hsl(30deg 53% 67%);
+  --subheader-text-color: hsl(21deg 32% 50%);
+  --border-color: hsl(210deg 2% 38%);
+  --app-background: hsl(204deg 6% 15%);
+  --secondary-app-background: hsl(216deg 5% 20%);
+  --tertiary-app-background: hsl(216deg 3% 29%);
+  --card-background: hsl(210deg 11% 11%);
+  --header-background-color: hsl(204deg 6% 15%);
+  --toolbar-background-color: hsl(216deg 3% 29%);
+  --toolbar-item-outline: hsl(0deg 0% 97%);
+  --toolbar-item-fill: hsl(216deg 3% 29%);
+  --toolbar-item-active-background: hsl(216deg 5% 20%);
+  --default-button-color: hsl(210deg 2% 38%);
+  --default-button-color-hover: hsl(210deg 2% 47%);
+  --hover-highlight-background: hsl(44deg 39% 22%);
+  --active-highlight-color: hsl(42deg 100% 48%);
+  --form-label-color: var(--secondary-text-color);
+  --form-placeholder-color: hsl(205deg 21% 55%);
+  --form-prefix-background: hsl(206deg 24% 94%);
+  --form-input-border-color: hsl(210deg 2% 38%);
+  --skeleton-base-color: hsl(0deg 0% 100% / 4%);
+  --skeleton-highlight-color: hsl(0deg 0% 100% / 10%);
+}

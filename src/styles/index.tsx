@@ -11,13 +11,17 @@ export const styleSwitcherConfig: {
     [key: string]: ComponentLabel
 } = {
     // add new styles here...
-    DefaultStyleVars:{
+    DefaultVarsStyles: {
         Component: React.lazy(() => import('./_default-var-styles')),
         label: '--default-vars',
     },
-    DefaultVars:{
+    DefaultStyles:{
         Component: React.lazy(() => import('./_default-styles')),
         label: 'Default',
+    },
+    PnnlStyles: {
+        Component: React.lazy(() => import('./_pnnl-v3-styles')),
+        label: 'PNNL v3',
     },
     FlatStyles:{
         Component: React.lazy(() => import('./_flat-styles')),
