@@ -87,7 +87,7 @@ export const allExamples: NestedComponentSets = [
         ['Dialog', [CoreExamples.DialogExample,]],
         ['Drawer', [CoreExamples.DrawerExample,]],
         ['Popover', [
-            CoreExamples.PopoverDismissExample,
+            // CoreExamples.PopoverDismissExample,
             CoreExamples.PopoverExample,
             CoreExamples.PopoverInteractionKindExample,
             CoreExamples.PopoverMinimalExample,
