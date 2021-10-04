@@ -2,6 +2,9 @@
 
 const isStyleRule = (rule: CSSRule) => rule.type === 1;
 
+const customPropertiesRegex = /--([\w\-]*):/ig
+const darkRegex = /dark-(?!gray)/g
+
 export const getDarkMirrorVarNames = (styleSheet: CSSStyleSheet) => (
     Array.from(styleSheet.cssRules)
         .filter(isStyleRule)
@@ -10,8 +13,8 @@ export const getDarkMirrorVarNames = (styleSheet: CSSStyleSheet) => (
             if (!rule.cssText.startsWith(':root'))
                 return accumulator
 
-            const darkPropNames = Array.from(rule.cssText.matchAll(/--([\w\-]*):/ig))
-                .filter(varNameMatch => varNameMatch[1]?.search(/dark-(?!gray)/ig) !== -1)
+            const darkPropNames = Array.from(rule.cssText.matchAll(customPropertiesRegex))
+                .filter(varNameMatch => varNameMatch[1]?.search(darkRegex) !== -1)
                 .map(varNameMatch => varNameMatch[1])
 
             return accumulator.concat(darkPropNames)
@@ -25,6 +28,7 @@ export const createDarkMirrorRootRule = (darkMirrorVarNames: string[]) => {
     darkMirrorVarNames.forEach(varName => {
         const inverseVarName = varName.replace('dark-', '')
         cssDarkMirror += `\t--${inverseVarName}: var(--${varName});\n`
+        // TODO: maybe delete dark styles instead of use identity?
     })
     cssDarkMirror += '}\n'
 
