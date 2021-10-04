@@ -32,7 +32,7 @@
 // // timepicker.scss
 // --timepicker-input-row-height: calc(var(--pt-grid-size) * 3);
 // // subtract two because of inset shadow
-// --timepicker-input-row-inner-height: calc(var(--timepicker-input-row-height) - 2);
+// --timepicker-input-row-inner-height: calc(var(--timepicker-input-row-height) - 2px);
 // // helps focus states of inputs line up correctly
 // --timepicker-row-padding: 0 1px;
 // --timepicker-divider-width: calc(var(--pt-grid-size) * 1.1);

@@ -46,7 +46,7 @@ Search for
 - `mix(`
 - `menu-background(`
 - `svg-icon(`
-- `$pt-border-radius` with `calc(#{$pt-border-radius} - 1)`
+- `$pt-border-radius` with `calc(#{$pt-border-radius} - 1px)`
 - `border-shadow(`
 - `input-transition-shadow(`
 - `dark-input-transition-shadow(`
