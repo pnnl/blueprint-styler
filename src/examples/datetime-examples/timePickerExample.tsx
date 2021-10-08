@@ -49,7 +49,7 @@ enum MaximumHours {
 
 export class TimePickerExample extends React.PureComponent<IExampleProps, ITimePickerExampleState> {
     public state = {
-        autoFocus: true,
+        autoFocus: false,
         disabled: false,
         precision: TimePrecision.MINUTE,
         selectAllOnFocus: false,
