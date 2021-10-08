@@ -69,7 +69,6 @@ function BlueprintStylerApp() {
                             onChange={e => setCurrentStyleSwitcherConfig(styleManifest[e.target.value])}
                             style={{ marginBottom: 8 }}
                             fill
-                            minimal
                         />
 
                         <Button
@@ -78,7 +77,6 @@ function BlueprintStylerApp() {
                             onClick={() => handleThemeChange(theme, setTheme)}
                             style={{ justifyContent: 'space-between', marginBottom: 8 }}
                             fill
-                            minimal
                         />
 
                         {/* <div
@@ -111,7 +109,7 @@ function BlueprintStylerApp() {
                                                     <AnchorButton
                                                         minimal
                                                         fill
-                                                        href={'#' + componentName}
+                                                        href={'#' + nameToId(componentName)}
                                                         text={componentName}
                                                         style={{ justifyContent: 'flex-start', marginBottom: 2 }}
                                                     />
@@ -126,16 +124,18 @@ function BlueprintStylerApp() {
 
                     <footer className="styler-menu__footer">
                         <small>
-                            <span>Produced by</span>{' '}
-                            <a href={'https://www.pnnl.gov/'} {...linkProps} >
-                                PNNL
-                            </a>
-                            <span>{' '}&amp;{' '}</span>
-                            <a href={'https://www.energy.gov/'} {...linkProps} >
-                                DOE
-                            </a>
+                            <strong>
+                                <span>Produced by</span>{' '}
+                                <a href={'https://www.pnnl.gov/'} {...linkProps} >
+                                    PNNL
+                                </a>
+                                <span>{' '}&amp;{' '}</span>
+                                <a href={'https://www.energy.gov/'} {...linkProps} >
+                                    DOE
+                                </a>
+                            </strong>
                             <br />
-                            <span className="styler-menu__footer-references">
+                            <span>
                                 <a href={'https://github.com/pnnl/blueprint-styler'} {...linkProps} >
                                     GitHub
                                 </a>
@@ -157,13 +157,13 @@ function BlueprintStylerApp() {
                             </h3>
                             {componentGroup.map(([componentName, componentExamples]) => (
                                 <div key={componentName} className="styler-component">
-                                    <h4 id={componentName} className={`styler-component-header ${Classes.HEADING}`} >
+                                    <h4 id={nameToId(componentName)} className={`styler-component-header ${Classes.HEADING}`} >
                                         {componentName}
                                     </h4>
                                     {componentExamples.map((ExampleComponent, i) => (
                                         <ExampleComponent
                                             key={componentName + '-' + i}
-                                            id={componentName + '-' + i}
+                                            id={nameToId(componentName) + '-' + i}
                                             data={data}
                                         />
                                     ))}
@@ -182,5 +182,7 @@ const linkProps = {
     target: "_blank",
     rel: "noreferrer onopener",
 }
+
+const nameToId = (name: string) => name.toLowerCase().replaceAll(/\s+/ig, '-')
 
 export default BlueprintStylerApp;
