@@ -2,7 +2,6 @@
 
 ## App tool
 - Publish beta of v3.x
-  - Attribution - me, pnnl, doe
 - Change project name to blueprintjs-styler?... add 'js' because thats how its namespaced on npm: [@blueprintjs](https://www.npmjs.com/package/@blueprintjs/core)
   - maybe its better to not affiliate the official blueprint project with this one
 - Sections:
@@ -38,9 +37,6 @@
   - blueprint-datetime-modern.scss
   - table-modern.scss
 - var(--style) / General
-  - --font-weight-normal and --font-weight-bold
-  - --font-family-serif
-  - editable text focus is still broken
   - grayscale transparency alt
   - input-transition-shadow could to be broken into input shadow vars...
   - better focus for buttons?
