@@ -9,7 +9,7 @@
 @include emit-identity-var('pt-grid-size', $pt-grid-size); // --pt-grid-size: 10px;
 
 // see https://bitsofco.de/the-new-system-font-stack/
---pt-font-family:
+--pt-font-family-sans:
   -apple-system,
   "BlinkMacSystemFont",
   "Segoe UI",
@@ -26,6 +26,17 @@
   Consolas,
   Menlo,
   monospace;
+
+--pt-font-family-serif:
+  "Georgia",
+  "Garamond",
+  "Palatino",
+  "Baskerville",
+  "Times New Roman",
+  "Times",
+  serif;
+
+--pt-font-family: var(--pt-font-family-sans);
 
 --pt-border-radius: 3px;
 
