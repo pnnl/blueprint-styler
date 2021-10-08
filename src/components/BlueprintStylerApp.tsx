@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { FocusStyleManager, Classes, Button, AnchorButton, Collapse, HTMLSelect, Dialog, Divider } from '@blueprintjs/core';
+import { FocusStyleManager, Classes, Button, AnchorButton, Collapse, HTMLSelect } from '@blueprintjs/core';
 import { IBlueprintExampleData } from '../tags/types';
 import { allExamples } from './allExamples';
 import logo from '../assets/logo.svg';
@@ -163,7 +163,7 @@ function BlueprintStylerApp() {
                                     {componentExamples.map((ExampleComponent, i) => (
                                         <ExampleComponent
                                             key={componentName + '-' + i}
-                                            id={nameToId(componentName) + '-' + i}
+                                            id={ExampleComponent.name}
                                             data={data}
                                         />
                                     ))}
