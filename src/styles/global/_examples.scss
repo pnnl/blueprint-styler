@@ -361,7 +361,7 @@
     line-height: 2;
 
     code {
-      font-weight: 600;
+      font-weight: var(--font-weight-bold);
     }
   }
 }
@@ -369,7 +369,7 @@
 .docs-popover-position-value-code-block {
   text-align: center;
   font-size: $pt-font-size-large;
-  font-weight: 600;
+  font-weight: var(--font-weight-bold);
 }
 
 .docs-popover-position-label-side {

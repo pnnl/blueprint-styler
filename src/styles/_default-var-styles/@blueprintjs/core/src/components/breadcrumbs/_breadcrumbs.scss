@@ -80,7 +80,7 @@ Styleguide breadcrumbs
 
 .#{$ns}-breadcrumb-current {
   color: inherit;
-  font-weight: 600;
+  font-weight: var(--font-weight-bold);
 
   .#{$ns}-input {
     font-size: inherit;

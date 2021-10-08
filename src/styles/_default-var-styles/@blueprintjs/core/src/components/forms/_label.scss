@@ -59,7 +59,7 @@ label.#{$ns}-label {
 
   .#{$ns}-select select,
   .#{$ns}-html-select select {
-    font-weight: 400;
+    font-weight: var(--font-weight-normal);
     vertical-align: top;
     width: 100%;
   }

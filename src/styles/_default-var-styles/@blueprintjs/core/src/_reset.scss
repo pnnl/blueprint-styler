@@ -34,7 +34,7 @@ small {
 }
 
 strong {
-  font-weight: 600;
+  font-weight: var(--font-weight-bold);
 }
 
 // consistent cross-browser text selection

@@ -38,6 +38,9 @@
 
 --pt-font-family: var(--pt-font-family-sans);
 
+--font-weight-normal: 400; // custom
+--font-weight-bold: 600; // custom
+
 --pt-border-radius: 3px;
 
 @include emit-identity-var('pt-font-size', $pt-font-size); // --pt-font-size: $pt-grid-size * 1.4;

@@ -72,7 +72,7 @@ $header-margin: ($header-height - $pt-input-height) / 2 !default;
 
   .DayPicker-Weekday {
     @include calendar-day();
-    font-weight: 600;
+    font-weight: var(--font-weight-bold);
     padding-top: $datepicker-padding;
 
     // normalize.css adds an underline to abbr[title] elements, remove it here
@@ -165,7 +165,7 @@ $header-margin: ($header-height - $pt-input-height) / 2 !default;
 
   // HTMLSelect overrides for a narrower appearance
   select {
-    font-weight: 600;
+    font-weight: var(--font-weight-bold);
     padding-left: $datepicker-padding;
     padding-right: $pt-icon-size-standard;
 
@@ -189,7 +189,7 @@ $header-margin: ($header-height - $pt-input-height) / 2 !default;
 }
 
 .#{$ns}-datepicker-caption-measure {
-  font-weight: 600;
+  font-weight: var(--font-weight-bold);
   padding-left: $datepicker-padding;
 }
 

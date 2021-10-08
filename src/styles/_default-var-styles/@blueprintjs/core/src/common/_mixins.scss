@@ -39,7 +39,7 @@ $pt-dark-intent-text-colors: (
 
 @mixin base-typography() {
   font-size: $pt-font-size;
-  font-weight: 400;
+  font-weight: var(--font-weight-normal);
   letter-spacing: 0;
   line-height: $pt-line-height;
   text-transform: none;
@@ -52,7 +52,7 @@ $pt-dark-intent-text-colors: (
 
 @mixin heading-typography() {
   color: $pt-heading-color;
-  font-weight: 600;
+  font-weight: var(--font-weight-bold);
 
     /* .#{$ns}-dark & {
     color: $pt-dark-heading-color;
