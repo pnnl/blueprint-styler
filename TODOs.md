@@ -1,33 +1,12 @@
 # TODO:
 
-### App tool
-- publish beta of v3.x
-  - bump to latest blueprint v - modern
-    - cerulean cobalt color name change
-    - blueprint-modern.scss
-    - colors/src/_colors.scss
-    - blueprint-datetime-modern.scss
-    - table-modern.scss
-  - update readme
-    - a dark color cannot link to its light counterpart or there will be a circular dependency
-    - dark vars are used in dev only and stripped out in build
-    - crazy css switching scheme
-    - importing a css file in scss with the .css suffix will break the style because it adds a css partial
-    - create-react-app hot reload with theme switching does some weird things sometimes
-    - how to consume libs and customize
-    - how branching works
-    - how copying works
-    - how versioning works
-- change project name to blueprintjs-styler ... add js because thats how its named?
-- v4 - wait until a beta from blueprintjs
-- CSS Build?
-  - separate different packages on build - core, selection, table, etc...
-    - export a font file
-  - provide non-fallback version of css?
-- sections:
-  - for each theme: add a readme to each project - default styles is project explainer
-  - base theme component that imports scss files
-  - custom components
+## App tool
+- Publish beta of v3.x
+  - Attribution - me, pnnl, doe
+- Change project name to blueprintjs-styler?... add 'js' because thats how its namespaced on npm: [@blueprintjs](https://www.npmjs.com/package/@blueprintjs/core)
+  - maybe its better to not affiliate the official blueprint project with this one
+- Sections:
+  - for each style: add a customizable readme component that renders at the top
   - colors
   - typography
 - Navigation
@@ -37,19 +16,28 @@
   - routing? to specific themes
   - title navigation link buttons on hovers
   - nav bar stays in sync with scroll position
-- Custom theme editor
+- Custom theme editor in the app
   - vars editing
-  - make a custom theme export it
+  - make a custom theme and export it
 - js generator of color vars - [hsluv](https://www.hsluv.org/)!
+- CSS Build
+  - separate different packages on build - core, selection, table, etc...
+  - export a font file
 - Themes are individually published packages - with font dependencies? - monorepo?
   - Add a dependency on the core repo,
   - Generate new style: `$ npm run new-style <style-name>`
   - build it and publish it under `@blueprintjs-style/<style-name>`
 
 
-### Styles
+## Styles
+- v4 - wait until a beta from blueprintjs
+- modern colors
+  - cerulean cobalt color name change
+  - blueprint-modern.scss
+  - colors/src/_colors.scss
+  - blueprint-datetime-modern.scss
+  - table-modern.scss
 - var(--style) / General
-  - ellipsize button text by default
   - --font-weight-normal and --font-weight-bold
   - --font-family-serif
   - editable text focus is still broken
@@ -59,6 +47,7 @@
   - switch icon libraries? - replace icons in svg-icon()
   - math with calc() ?
 - Common
+  - ellipsize button text by default
   - Segmented Button Group like [this](https://dribbble.com/shots/14424288-Material-X-design-system-UI-kit-Figma-Segments)
 - Flat
   - dark theme ?
@@ -80,7 +69,6 @@
 - [Microsoft Fluent](https://developer.microsoft.com/en-us/fluentui#/controls/web)
 - [PNNL v2](https://forge.pnl.gov/standards/) & [PNNL v3](https://forgedev.pnnl.gov/prc3/)
 - [Shopify Polaris](https://polaris.shopify.com/components/actions/button#navigation) v5 & v6
-- HydroFERC eLibrary - DOE + FERC + Hydro + Serberus
 - Serberus - Burgundy Theme
 - [Google Material](https://material.io/components)
 - [Adobe Spectrum](https://spectrum.adobe.com/)
