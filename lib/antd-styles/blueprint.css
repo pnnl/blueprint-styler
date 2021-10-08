@@ -166,7 +166,7 @@ body {
     color: var(--pt-text-color);
     font-family: var(--pt-font-family);
     font-size: 14px;
-    font-weight: 400;
+    font-weight: var(--font-weight-normal);
     letter-spacing: 0;
     line-height: 1.28581;
     text-transform: none
@@ -182,7 +182,7 @@ small {
 }
 
 strong {
-    font-weight: 600
+    font-weight: var(--font-weight-bold)
 }
 
 ::selection {
@@ -191,7 +191,7 @@ strong {
 
 .bp3-heading {
     color: var(--pt-heading-color);
-    font-weight: 600;
+    font-weight: var(--font-weight-bold);
     margin: 0 0 10px;
     padding: 0
 }
@@ -228,7 +228,7 @@ strong {
 
 .bp3-ui-text {
     font-size: 14px;
-    font-weight: 400;
+    font-weight: var(--font-weight-normal);
     letter-spacing: 0;
     line-height: 1.28581;
     text-transform: none
@@ -261,7 +261,7 @@ strong {
 
 .bp3-running-text h1,.bp3-running-text h2,.bp3-running-text h3,.bp3-running-text h4,.bp3-running-text h5,.bp3-running-text h6 {
     color: var(--pt-heading-color);
-    font-weight: 600;
+    font-weight: var(--font-weight-bold);
     margin-bottom: 20px;
     margin-top: 40px
 }
@@ -486,7 +486,7 @@ a .bp3-icon,a .bp3-icon-large,a .bp3-icon-standard,a code {
 
 .bp3-breadcrumb-current {
     color: inherit;
-    font-weight: 600
+    font-weight: var(--font-weight-bold)
 }
 
 .bp3-breadcrumb-current .bp3-input {
@@ -2031,12 +2031,12 @@ a.bp3-button.bp3-disabled {
 
 .bp3-editable-text:before {
     border-radius: var(--pt-border-radius);
-    bottom: -var(--pt-border-radius);
+    bottom: calc(var(--pt-border-radius)*-1);
     content: "";
-    left: -var(--pt-border-radius);
+    left: calc(var(--pt-border-radius)*-1);
     position: absolute;
-    right: -var(--pt-border-radius);
-    top: -var(--pt-border-radius);
+    right: calc(var(--pt-border-radius)*-1);
+    top: calc(var(--pt-border-radius)*-1);
     transition: background-color .1s var(--pt-transition-ease),box-shadow .1s var(--pt-transition-ease)
 }
 
@@ -3291,7 +3291,7 @@ label.bp3-label .bp3-button-group {
 }
 
 label.bp3-label .bp3-html-select select,label.bp3-label .bp3-select select {
-    font-weight: 400;
+    font-weight: var(--font-weight-normal);
     vertical-align: top;
     width: 100%
 }
@@ -3646,7 +3646,7 @@ form {
 
 .bp3-running-text table th,table.bp3-html-table th {
     color: var(--pt-heading-color);
-    font-weight: 600
+    font-weight: var(--font-weight-bold)
 }
 
 .bp3-running-text table td,table.bp3-html-table td {
@@ -4082,7 +4082,7 @@ button.bp3-menu-item {
 .bp3-menu-header>h6 {
     word-wrap: normal;
     color: var(--pt-heading-color);
-    font-weight: 600;
+    font-weight: var(--font-weight-bold);
     line-height: 17px;
     margin: 0;
     overflow: hidden;
@@ -6401,7 +6401,7 @@ span.bp3-popover-target {
 
 .bp3-datepicker .DayPicker-Weekday {
     display: table-cell;
-    font-weight: 600;
+    font-weight: var(--font-weight-bold);
     height: 30px;
     line-height: 1;
     padding-top: 5px;
@@ -6510,7 +6510,7 @@ span.bp3-popover-target {
 }
 
 .bp3-datepicker-caption select {
-    font-weight: 600;
+    font-weight: var(--font-weight-bold);
     padding-left: 5px;
     padding-right: 16px
 }
@@ -6533,7 +6533,7 @@ span.bp3-popover-target {
 }
 
 .bp3-datepicker-caption-measure {
-    font-weight: 600;
+    font-weight: var(--font-weight-bold);
     padding-left: 5px
 }
 
