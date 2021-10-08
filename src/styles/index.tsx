@@ -1,47 +1,15 @@
 import { OptionProps } from '@blueprintjs/core';
 import React from 'react'
 import FallbackStylesComponent from './_fallback-styles' // the scss in this one for the default
+import { ComponentLabel, styleManifest } from './style-manifest';
 
-export type ComponentLabel = {
-    Component: React.LazyExoticComponent<React.FC<{}>>
-    label: string
-}
-
-export const styleSwitcherConfig: {
-    [key: string]: ComponentLabel
-} = {
-    // add new styles here...
-    DefaultVarsStyles: {
-        Component: React.lazy(() => import('./_default-var-styles')),
-        label: '--default-vars',
-    },
-    DefaultStyles:{
-        Component: React.lazy(() => import('./_default-styles')),
-        label: 'Default',
-    },
-    PnnlStyles: {
-        Component: React.lazy(() => import('./_pnnl-v3-styles')),
-        label: 'PNNL v3',
-    },
-    FlatStyles:{
-        Component: React.lazy(() => import('./_flat-styles')),
-        label: 'Flat',
-    },
-    IbmCarbonStyles:{
-        Component: React.lazy(() => import('./_ibm-carbon-styles')),
-        label: 'IBM Carbon',
-    },
-    AntdStyles:{
-        Component: React.lazy(() => import('./_antd-styles')),
-        label: 'Ant Design',
-    },
-}
+export * from './style-manifest';
 
 // this must match the FallbackStylesComponent imported scss in ./_fallback-styles/styler-styles.scss
-export const styleSwitcherConfigInitial = styleSwitcherConfig.DefaultStyleVars
+export const styleSwitcherConfigInitial = styleManifest.DefaultStyleVars
 
 export let styleSwitcherOptionProps: OptionProps[] = []
-for (const [styleSetName, styleSet] of Object.entries(styleSwitcherConfig)) {
+for (const [styleSetName, styleSet] of Object.entries(styleManifest)) {
     styleSwitcherOptionProps.push({
         value: styleSetName,
         label: styleSet.label

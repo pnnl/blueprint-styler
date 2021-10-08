@@ -3,7 +3,7 @@ import { FocusStyleManager, Classes, Button, AnchorButton, Collapse, HTMLSelect 
 import { IBlueprintExampleData } from '../tags/types';
 import { allExamples } from './allExamples';
 import logo from '../assets/logo.svg';
-import { styleSwitcherOptionProps, StyleSwitcher, ComponentLabel, styleSwitcherConfig, styleSwitcherConfigInitial } from '../styles';
+import { styleSwitcherOptionProps, StyleSwitcher, ComponentLabel, styleManifest, styleSwitcherConfigInitial } from '../styles';
 
 FocusStyleManager.onlyShowFocusOnTabs();
 
@@ -66,7 +66,7 @@ function BlueprintStylerApp() {
 
                         <HTMLSelect
                             options={styleSwitcherOptionProps}
-                            onChange={e => setCurrentStyleSwitcherConfig(styleSwitcherConfig[e.target.value]) }
+                            onChange={e => setCurrentStyleSwitcherConfig(styleManifest[e.target.value]) }
                             style={{ marginBottom: 8 }}
                             fill
                         />
