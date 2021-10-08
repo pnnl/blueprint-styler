@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { FocusStyleManager, Classes, Button, AnchorButton, Collapse, HTMLSelect } from '@blueprintjs/core';
+import { FocusStyleManager, Classes, Button, AnchorButton, Collapse, HTMLSelect, Dialog, Divider } from '@blueprintjs/core';
 import { IBlueprintExampleData } from '../tags/types';
 import { allExamples } from './allExamples';
 import logo from '../assets/logo.svg';
@@ -49,7 +49,7 @@ function BlueprintStylerApp() {
         <div className={["app-wrapper", data.themeName].join(' ')}>
             <div className="app">
 
-                <StyleSwitcher currentStyleSwitcherConfig={currentStyleSwitcherConfig}/>
+                <StyleSwitcher currentStyleSwitcherConfig={currentStyleSwitcherConfig} />
 
                 <section className="styler-menu">
 
@@ -58,7 +58,7 @@ function BlueprintStylerApp() {
                         <h3
                             className={Classes.HEADING}
                             style={{ display: 'flex', alignItems: 'center', marginBottom: 32 }}>
-                            <img src={logo} style={{ width: 80 }} alt="Blueprint Styler Logo"/>
+                            <img src={logo} style={{ width: 80 }} alt="Blueprint Styler Logo" />
                             <span style={{ marginLeft: 16 }}>
                                 Blueprint<br />Styler
                             </span>
@@ -66,17 +66,19 @@ function BlueprintStylerApp() {
 
                         <HTMLSelect
                             options={styleSwitcherOptionProps}
-                            onChange={e => setCurrentStyleSwitcherConfig(styleManifest[e.target.value]) }
+                            onChange={e => setCurrentStyleSwitcherConfig(styleManifest[e.target.value])}
                             style={{ marginBottom: 8 }}
                             fill
+                            minimal
                         />
 
                         <Button
                             rightIcon={useDarkTheme ? "flash" : "moon"}
                             text={useDarkTheme ? "Light theme" : "Dark theme"}
-                            onClick={e => handleThemeChange(theme, setTheme)}
+                            onClick={() => handleThemeChange(theme, setTheme)}
                             style={{ justifyContent: 'space-between', marginBottom: 8 }}
                             fill
+                            minimal
                         />
 
                         {/* <div
@@ -122,7 +124,28 @@ function BlueprintStylerApp() {
                         </ul>
                     </nav>
 
-                    {/* <footer className="styler-menu__footer"></footer> */}
+                    <footer className="styler-menu__footer">
+                        <small>
+                            <span>Produced by</span>{' '}
+                            <a href={'https://www.pnnl.gov/'} {...linkProps} >
+                                PNNL
+                            </a>
+                            <span>{' '}&amp;{' '}</span>
+                            <a href={'https://www.energy.gov/'} {...linkProps} >
+                                DOE
+                            </a>
+                            <br />
+                            <span className="styler-menu__footer-references">
+                                <a href={'https://github.com/pnnl/blueprint-styler'} {...linkProps} >
+                                    GitHub
+                                </a>
+                                {' | '}
+                                <a href={'https://blueprintjs.com/docs'} {...linkProps} >
+                                    Blueprint Docs
+                                </a>
+                            </span>
+                        </small>
+                    </footer>
 
                 </section>
 
@@ -151,8 +174,13 @@ function BlueprintStylerApp() {
                 </main>
 
             </div>
-        </div>
+        </div >
     );
+}
+
+const linkProps = {
+    target: "_blank",
+    rel: "noreferrer onopener",
 }
 
 export default BlueprintStylerApp;

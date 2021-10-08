@@ -13,7 +13,7 @@ body,
 $app-max-width: 70rem;
 $menu-width: 19rem;
 $menu-buffer: 50rem;
-$menu-horz-padding: 4rem;
+$menu-vert-padding: 4rem;
 
 .app-wrapper{
   background-color: $light-gray5;
@@ -29,7 +29,6 @@ $menu-horz-padding: 4rem;
 }
 
 .styler-menu{
-  padding: $menu-horz-padding 1rem $menu-horz-padding 1.5rem;
   position: fixed;
   top: 0;
   // left: 0;
@@ -38,13 +37,36 @@ $menu-horz-padding: 4rem;
   overflow-y: auto;
   width: $menu-width + $menu-buffer;
   margin-left: -$menu-buffer;
-  padding-left: $menu-buffer + $menu-horz-padding;
+  padding: $menu-vert-padding 1rem 2rem ($menu-buffer + $menu-vert-padding);
 
   border-right: 1px solid $pt-divider-black;
   background-color: $white;
   .bp3-dark &{
     background-color: $dark-gray3;
     border-color: $pt-dark-divider-black;
+  }
+
+  display: flex;
+  flex-direction: column;
+  &__nav{
+    flex: 1 0 auto;
+  }
+
+  &__nav{
+    margin-bottom: 2rem;
+  }
+
+  &__footer{
+    color: $pt-text-color-muted;
+    // text-align: right;
+    a{
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+
+  &__footer-references{
+    color: $pt-text-color-disabled;
   }
 }
 
