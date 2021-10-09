@@ -16,7 +16,7 @@ export class ColorsExample extends React.PureComponent<IExampleProps> {
                             <h5 className="color-set-name">{colorSet[0]}</h5>
                             <div className="color-chip-set">
                                 {colorSet[1].map(color => (
-                                    <div className="color-chip" style={{ backgroundColor: `var(${color})` }} />
+                                    <div className="color-chip" style={{ backgroundColor: `var(${color}, ${fallbackColor})` }} />
                                 ))}
                             </div>
                         </div>
@@ -29,7 +29,7 @@ export class ColorsExample extends React.PureComponent<IExampleProps> {
                             <h5 className="gray-set-name">{colorSet[0]}</h5>
                             <div className="gray-chip-set">
                                 {colorSet[1].map(color => (
-                                    <div className="gray-chip" style={{ backgroundColor: `var(${color})` }} />
+                                    <div className="gray-chip" style={{ backgroundColor: `var(${color}, ${fallbackColor})` }} />
                                 ))}
                             </div>
                         </div>
@@ -40,6 +40,8 @@ export class ColorsExample extends React.PureComponent<IExampleProps> {
         );
     }
 }
+
+const fallbackColor = 'hsla(0, 0%, 50%, 0.05)'
 
 type Title = string
 type ColorVar = string
