@@ -6,17 +6,19 @@ export class ColorsExample extends React.PureComponent<IExampleProps> {
 
     // this is a workspace for specific combinations of components
 
+
     public render() {
+        const { className, ...props } = this.props
         return (
-            <Example options={false} {...this.props}>
+            <Example options={false} className={['ColorsExample', className].join(' ')} {...props}>
 
                 <div className="set-wrapper">
                     {colorSets.map(colorSet => (
-                        <div className="color-set">
+                        <div key={colorSet[0]} className="color-set">
                             <h5 className="color-set-name">{colorSet[0]}</h5>
                             <div className="color-chip-set">
                                 {colorSet[1].map(color => (
-                                    <div className="color-chip" style={{ backgroundColor: `var(${color}, ${fallbackColor})` }} />
+                                    <div key={color} className="color-chip" style={{ backgroundColor: `var(${color}, ${fallbackColor})` }} />
                                 ))}
                             </div>
                         </div>
@@ -25,11 +27,11 @@ export class ColorsExample extends React.PureComponent<IExampleProps> {
 
                 <div className="set-wrapper">
                     {grayscaleSets.map(colorSet => (
-                        <div className="gray-set">
+                        <div key={colorSet[0]} className="gray-set">
                             <h5 className="gray-set-name">{colorSet[0]}</h5>
                             <div className="gray-chip-set">
                                 {colorSet[1].map(color => (
-                                    <div className="gray-chip" style={{ backgroundColor: `var(${color}, ${fallbackColor})` }} />
+                                    <div key={color} className="gray-chip" style={{ backgroundColor: `var(${color}, ${fallbackColor})` }} />
                                 ))}
                             </div>
                         </div>

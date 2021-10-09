@@ -6,8 +6,9 @@ import { Blockquote, Classes, H1, H2, H3, H4, H5, H6, OL, UL } from "@blueprintj
 export class TypographyExample extends React.PureComponent<IExampleProps> {
 
     public render() {
+        const { className, ...props } = this.props
         return (
-            <Example options={false} {...this.props}>
+            <Example options={false} className={['TypographyExample', className].join(' ')} {...props}>
 
                 <section className="section--headings" >
 
