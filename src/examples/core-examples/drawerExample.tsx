@@ -167,7 +167,7 @@ export class DrawerExample extends React.PureComponent<IExampleProps<IBlueprintE
 }
 
 const SIZES: Array<string | OptionProps> = [
-    { label: "Default", value: undefined },
+    { label: "Default", value: '' }, // bugfix: value: undefined causes a react.map error
     { label: "Small", value: DrawerSize.SMALL },
     { label: "Standard", value: DrawerSize.STANDARD },
     { label: "Large", value: DrawerSize.LARGE },
