@@ -1,6 +1,6 @@
 import { IExampleProps } from '@blueprintjs/docs-theme';
+import * as CustomExamples from '../examples/custom-examples';
 import * as CoreExamples from '../examples/core-examples';
-// import { CustomWorkingExample } from '../examples/custom-examples/customWorkingExample';
 import * as DateTimeExamples from '../examples/datetime-examples';
 import * as SelectExamples from '../examples/select-examples';
 import * as TableExamples from '../examples/table-examples';
@@ -11,9 +11,10 @@ type ComponentSet = [string, React.ComponentClass<IExampleProps<{}> | Readonly<I
 type NestedComponentSets = [string, ComponentSet[]][];
 
 export const allExamples: NestedComponentSets = [
-    // ['Working Example', [ // for working on specific use cases
-    //     ['Custom Working Example', [CustomWorkingExample,]],
-    // ]],
+    ['Core', [
+        // ['Custom Working Example', [CustomExamples.CustomWorkingExample]], // for working on specific use cases
+        ['Colors', [CustomExamples.ColorsExample]],
+    ]],
     ['Components', [
         ['Breadcrumbs', [CoreExamples.BreadcrumbsExample,]],
         ['Button', [

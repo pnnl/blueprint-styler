@@ -1,0 +1,62 @@
+
+[data-example-id="ColorsExample"] {
+  .docs-example {
+    // display: flex;
+    // flex-wrap: nowrap;
+    align-items: stretch;
+  }
+
+  .set-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+  }
+
+  .color-set{
+    margin: 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .color-set-name, .gray-set-name{
+    margin: 0 1rem;
+  }
+
+  .color-chip{
+    height: 4rem;
+    width:  4rem;
+  }
+
+  .color-chip-set{
+    display: flex;
+  }
+
+  .gray-set{
+    margin: 1px;
+    display: flex;
+    align-items: center;
+    flex: 5 1 auto;
+    &:first-child, &:last-child{
+      flex-grow: 1;
+    }
+
+  }
+
+  .gray-set-name{
+    order: 2;
+  }
+
+  .gray-chip-set{
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+  }
+
+  .gray-chip{
+    width:  5rem;
+    height: 100%;
+    min-height: 3rem;
+  }
+
+}
