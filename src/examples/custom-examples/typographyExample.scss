@@ -1,0 +1,38 @@
+
+[data-example-id="TypographyExample"] {
+
+  .docs-example {
+    display: block;
+  }
+
+  .meta-title{
+    text-transform: uppercase;
+    margin: 0 0 1rem;
+    .label-title{
+      margin:0.25rem 0;
+      font-weight: var(--font-weight-normal);
+    }
+  }
+
+  .label-title{
+    margin: 1.5rem 0 0.5rem;
+    text-transform: none;
+    code{
+      font-size: 0.9em;
+    }
+    span{
+      margin-right: 0.5em;
+    }
+  }
+
+  .section--headings{
+    p{
+      color: var(--pt-text-color-muted);
+    }
+  }
+
+  section{
+    margin: 1rem 1rem 4rem;
+  }
+
+}

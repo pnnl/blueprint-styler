@@ -14,6 +14,7 @@ export const allExamples: NestedComponentSets = [
     ['Core', [
         // ['Custom Working Example', [CustomExamples.CustomWorkingExample]], // for working on specific use cases
         ['Colors', [CustomExamples.ColorsExample]],
+        ['Typography', [CustomExamples.TypographyExample]],
     ]],
     ['Components', [
         ['Breadcrumbs', [CoreExamples.BreadcrumbsExample,]],
