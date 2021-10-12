@@ -17,8 +17,16 @@ export class ColorsExample extends React.PureComponent<IExampleProps> {
                         <div key={colorSet[0]} className="color-set">
                             <h5 className="color-set-name">{colorSet[0]}</h5>
                             <div className="color-chip-set">
-                                {colorSet[1].map(color => (
-                                    <div key={color} className="color-chip" style={{ backgroundColor: `var(${color}, ${fallbackColor})` }} />
+                                {colorSet[1].map((color, i) => (
+                                    <div
+                                        key={color}
+                                        className={[
+                                            "color-chip",
+                                            i > 2 ? "chip-text-dark" : "chip-text-light"
+                                        ].join(' ')}
+                                        style={{ backgroundColor: `var(${color}, ${fallbackColor})` }}
+                                        children={i + 1}
+                                    />
                                 ))}
                             </div>
                         </div>
@@ -26,12 +34,20 @@ export class ColorsExample extends React.PureComponent<IExampleProps> {
                 </div>
 
                 <div className="set-wrapper">
-                    {grayscaleSets.map(colorSet => (
+                    {grayscaleSets.map((colorSet, j) => (
                         <div key={colorSet[0]} className="gray-set">
                             <h5 className="gray-set-name">{colorSet[0]}</h5>
                             <div className="gray-chip-set">
-                                {colorSet[1].map(color => (
-                                    <div key={color} className="gray-chip" style={{ backgroundColor: `var(${color}, ${fallbackColor})` }} />
+                                {colorSet[1].map((color, i) => (
+                                    <div
+                                        key={color}
+                                        className={[
+                                            "gray-chip",
+                                            j > 1 ? "chip-text-dark" : "chip-text-light"
+                                        ].join(' ')}
+                                        style={{ backgroundColor: `var(${color}, ${fallbackColor})` }}
+                                        children={i + 1}
+                                    />
                                 ))}
                             </div>
                         </div>

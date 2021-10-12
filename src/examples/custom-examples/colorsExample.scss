@@ -61,4 +61,18 @@
     min-height: 3rem;
   }
 
+  .gray-chip, .color-chip{
+    // color: hsla(0, 0%, 50%, 0.5);
+    font-weight: var(--font-weight-bold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .chip-text-dark{
+    color: hsla(0, 0%, 0%, 0.7);
+  }
+  .chip-text-light{
+    color: hsla(0, 0%, 100%, 0.7);
+  }
+
 }
