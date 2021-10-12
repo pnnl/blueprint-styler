@@ -160,13 +160,16 @@ function BlueprintStylerApp() {
                                     <h4 id={nameToId(componentName)} className={`styler-component-header ${Classes.HEADING}`} >
                                         {componentName}
                                     </h4>
-                                    {componentExamples.map((ExampleComponent, i) => (
-                                        <ExampleComponent
-                                            key={componentName + '-' + i}
-                                            id={ExampleComponent.name}
-                                            data={data}
-                                        />
-                                    ))}
+                                    {componentExamples.map((ExampleComponent, i) => {
+                                        console.dir(ExampleComponent.prototype.constructor.name);
+                                        return (
+                                            <ExampleComponent
+                                                key={componentName + '-' + i}
+                                                id={ExampleComponent.name}
+                                                data={data}
+                                            />
+                                        )
+                                    })}
                                 </div>
                             ))}
                         </section>
