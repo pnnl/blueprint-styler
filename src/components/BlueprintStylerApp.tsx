@@ -161,7 +161,7 @@ function BlueprintStylerApp() {
                                         {componentName}
                                     </h4>
                                     {componentExamples.map((ExampleComponent, i) => {
-                                        console.dir(ExampleComponent.prototype.constructor.name);
+                                        console.dir(ExampleComponent);
                                         return (
                                             <ExampleComponent
                                                 key={componentName + '-' + i}
