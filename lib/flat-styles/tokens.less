@@ -24,13 +24,11 @@
 @vermilion3-hsl: var(--vermilion3-hsl);
 @vermilion4-hsl: var(--vermilion4-hsl);
 @vermilion5-hsl: var(--vermilion5-hsl);
-@red-hue: var(--red-hue);
 @red1-hsl: var(--red1-hsl);
 @red2-hsl: var(--red2-hsl);
 @red3-hsl: var(--red3-hsl);
 @red4-hsl: var(--red4-hsl);
 @red5-hsl: var(--red5-hsl);
-@rose-hue: var(--rose-hue);
 @rose1-hsl: var(--rose1-hsl);
 @rose2-hsl: var(--rose2-hsl);
 @rose3-hsl: var(--rose3-hsl);
@@ -66,7 +64,6 @@
 @turquoise3-hsl: var(--turquoise3-hsl);
 @turquoise4-hsl: var(--turquoise4-hsl);
 @turquoise5-hsl: var(--turquoise5-hsl);
-@green-hue: var(--green-hue);
 @green1-hsl: var(--green1-hsl);
 @green2-hsl: var(--green2-hsl);
 @green3-hsl: var(--green3-hsl);
@@ -96,13 +93,16 @@
 @orange3-hsl: var(--orange3-hsl);
 @orange4-hsl: var(--orange4-hsl);
 @orange5-hsl: var(--orange5-hsl);
-@sepia-hue: var(--sepia-hue);
 @sepia1-hsl: var(--sepia1-hsl);
 @sepia2-hsl: var(--sepia2-hsl);
 @sepia3-hsl: var(--sepia3-hsl);
 @sepia4-hsl: var(--sepia4-hsl);
 @sepia5-hsl: var(--sepia5-hsl);
 @grayscale-sat: var(--grayscale-sat);
+@red-hue: var(--red-hue);
+@rose-hue: var(--rose-hue);
+@green-hue: var(--green-hue);
+@sepia-hue: var(--sepia-hue);
 
 	/*! Colors */
 @black: var(--black);
@@ -195,21 +195,21 @@
 
 	/*! IntentColors */
 @pt-intent-primary-hue: var(--pt-intent-primary-hue);
+@pt-intent-primary-hsl: var(--pt-intent-primary-hsl);
 @pt-intent-primary-hover-hsl: var(--pt-intent-primary-hover-hsl);
 @pt-intent-primary-active-hsl: var(--pt-intent-primary-active-hsl);
 @pt-intent-primary-text-color-hsl: var(--pt-intent-primary-text-color-hsl);
 @pt-intent-success-hue: var(--pt-intent-success-hue);
+@pt-intent-success-hsl: var(--pt-intent-success-hsl);
 @pt-intent-success-hover-hsl: var(--pt-intent-success-hover-hsl);
 @pt-intent-success-active-hsl: var(--pt-intent-success-active-hsl);
 @pt-intent-success-text-color-hsl: var(--pt-intent-success-text-color-hsl);
-@pt-intent-warning-hue: var(--pt-intent-warning-hue);
+@pt-intent-warning-hsl: var(--pt-intent-warning-hsl);
 @pt-intent-warning-hover-hsl: var(--pt-intent-warning-hover-hsl);
 @pt-intent-warning-active-hsl: var(--pt-intent-warning-active-hsl);
-@pt-intent-warning-text-color-hsl: var(--pt-intent-warning-text-color-hsl);
-@pt-intent-danger-hue: var(--pt-intent-danger-hue);
+@pt-intent-danger-hsl: var(--pt-intent-danger-hsl);
 @pt-intent-danger-hover-hsl: var(--pt-intent-danger-hover-hsl);
 @pt-intent-danger-active-hsl: var(--pt-intent-danger-active-hsl);
-@pt-intent-danger-text-color-hsl: var(--pt-intent-danger-text-color-hsl);
 @pt-intent-primary: var(--pt-intent-primary);
 @pt-intent-primary-hover: var(--pt-intent-primary-hover);
 @pt-intent-primary-active: var(--pt-intent-primary-active);
@@ -226,10 +226,10 @@
 @pt-intent-danger-hover: var(--pt-intent-danger-hover);
 @pt-intent-danger-active: var(--pt-intent-danger-active);
 @pt-intent-danger-text-color: var(--pt-intent-danger-text-color);
-@pt-intent-primary-hsl: var(--pt-intent-primary-hsl);
-@pt-intent-success-hsl: var(--pt-intent-success-hsl);
-@pt-intent-warning-hsl: var(--pt-intent-warning-hsl);
-@pt-intent-danger-hsl: var(--pt-intent-danger-hsl);
+@pt-intent-warning-hue: var(--pt-intent-warning-hue);
+@pt-intent-warning-text-color-hsl: var(--pt-intent-warning-text-color-hsl);
+@pt-intent-danger-hue: var(--pt-intent-danger-hue);
+@pt-intent-danger-text-color-hsl: var(--pt-intent-danger-text-color-hsl);
 
 	/*! LayoutColors */
 @pt-app-background-color: var(--pt-app-background-color);
@@ -256,7 +256,6 @@
 
 	/*! Variables */
 @pt-grid-size: var(--pt-grid-size);
-@pt-font-family-sans: var(--pt-font-family-sans);
 @pt-font-family-serif: var(--pt-font-family-serif);
 @pt-font-family: var(--pt-font-family);
 @font-weight-normal: var(--font-weight-normal);
@@ -296,6 +295,7 @@
 @pt-dialog-box-shadow: var(--pt-dialog-box-shadow);
 @pt-popover-box-shadow: var(--pt-popover-box-shadow);
 @pt-tooltip-box-shadow: var(--pt-tooltip-box-shadow);
+@pt-font-family-sans: var(--pt-font-family-sans);
 @pt-font-family-monospace: var(--pt-font-family-monospace);
 
 	/*! Components */
