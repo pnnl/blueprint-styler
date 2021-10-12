@@ -3,14 +3,9 @@ import { Example, IExampleProps } from "@blueprintjs/docs-theme";
 // import "./colorsExample.scss"; // in src/styles/global/_styler.scss
 
 export class ColorsExample extends React.PureComponent<IExampleProps> {
-
-    // this is a workspace for specific combinations of components
-
-
     public render() {
-        const { className, ...props } = this.props
         return (
-            <Example options={false} className={['ColorsExample', className].join(' ')} {...props}>
+            <Example {...this.props}>
 
                 <div className="set-wrapper">
                     {colorSets.map(colorSet => (
