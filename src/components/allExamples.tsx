@@ -6,140 +6,142 @@ import * as SelectExamples from '../examples/select-examples';
 import * as TableExamples from '../examples/table-examples';
 import * as TimezoneExamples from '../examples/timezone-examples';
 
+type ExampleComponentClassName = string // must be equal to the example component class name
+type ExampleComponent = React.ComponentClass<IExampleProps<{}> | Readonly<IExampleProps<{}>>>
+type ComponentSetName = string
+type ComponentSet = [ComponentSetName, [ExampleComponent, ExampleComponentClassName][] ]
+type GroupedComponentSets = [string, ComponentSet[]][];
 
-type ComponentSet = [string, React.ComponentClass<IExampleProps<{}> | Readonly<IExampleProps<{}>>>[]]
-type NestedComponentSets = [string, ComponentSet[]][];
-
-export const allExamples: NestedComponentSets = [
+export const allExamples: GroupedComponentSets = [
     ['Core', [
-        // ['Custom Working Example', [CustomExamples.CustomWorkingExample]], // for working on specific use cases
-        ['Colors', [CustomExamples.ColorsExample]],
-        ['Typography', [CustomExamples.TypographyExample]],
+        // ['Custom Working Example', [[CustomExamples.CustomWorkingExample, 'CustomWorkingExample'],]], // for working on specific use cases
+        ['Colors', [[CustomExamples.ColorsExample, 'ColorsExample'],]],
+        ['Typography', [[CustomExamples.TypographyExample, 'TypographyExample'],]],
     ]],
     ['Components', [
-        ['Breadcrumbs', [CoreExamples.BreadcrumbsExample,]],
+        ['Breadcrumbs', [[CoreExamples.BreadcrumbsExample, 'BreadcrumbsExample'],]],
         ['Button', [
-            CoreExamples.ButtonsExample,
-            CoreExamples.ButtonsIconsExample,
+            [CoreExamples.ButtonsExample, 'ButtonsExample'],
+            [CoreExamples.ButtonsIconsExample, 'ButtonsIconsExample'],
         ]],
         ['Button Group', [
-            CoreExamples.ButtonGroupExample,
-            CoreExamples.ButtonGroupPopoverExample,
+            [CoreExamples.ButtonGroupExample, 'ButtonGroupExample'],
+            [CoreExamples.ButtonGroupPopoverExample, 'ButtonGroupPopoverExample'],
         ]],
-        ['Callout', [CoreExamples.CalloutExample,]],
-        ['Card', [CoreExamples.CardExample,]],
-        ['Collapse', [CoreExamples.CollapseExample,]],
-        ['Collapsible list', [CoreExamples.CollapsibleListExample,]],
-        ['Divider', [CoreExamples.DividerExample,]],
-        ['Editable text', [CoreExamples.EditableTextExample,]],
-        // ['HTML elements', []],
-        // ['HTML table', []],
+        ['Callout', [[CoreExamples.CalloutExample, 'CalloutExample'],]],
+        ['Card', [[CoreExamples.CardExample, 'CardExample'],]],
+        ['Collapse', [[CoreExamples.CollapseExample, 'CollapseExample'],]],
+        ['Collapsible list', [[CoreExamples.CollapsibleListExample, 'CollapsibleListExample'],]],
+        ['Divider', [[CoreExamples.DividerExample, 'DividerExample'],]],
+        ['Editable text', [[CoreExamples.EditableTextExample, 'EditableTextExample'],]],
+        // ['HTML elements', [[]]],
+        // ['HTML table', [[]]],
         // ['Hotkeys', [
-        //     CoreExamples.HotkeyPiano,
-        //     CoreExamples.HotkeyTester,
+        //     [CoreExamples.HotkeyPiano, 'HotkeyPiano'],
+        //     [CoreExamples.HotkeyTester, 'HotkeyTester'],
         // ]],
-        ['Icon', [CoreExamples.IconExample,]],
+        ['Icon', [[CoreExamples.IconExample, 'IconExample'],]],
         ['Menu', [
-            CoreExamples.MenuExample,
-            CoreExamples.DropdownMenuExample,
+            [CoreExamples.MenuExample, 'MenuExample'],
+            [CoreExamples.DropdownMenuExample, 'DropdownMenuExample'],
         ]],
-        ['Navbar', [CoreExamples.NavbarExample,]],
-        ['Non-ideal state', [CoreExamples.NonIdealStateExample,]],
-        ['Overflow list', [CoreExamples.OverflowListExample,]],
-        ['Panel stack', [CoreExamples.PanelStackExample,]],
-        ['Progress bar', [CoreExamples.ProgressExample,]],
-        ['Skeleton', []],
-        ['Spinner', [CoreExamples.SpinnerExample,]],
-        ['Tabs', [CoreExamples.TabsExample,]],
-        ['Tag', [CoreExamples.TagExample,]],
-        ['Text', [CoreExamples.TextExample,]],
-        // ['Tree', [CoreExamples.TreeExample,]],
+        ['Navbar', [[CoreExamples.NavbarExample, 'NavbarExample'],]],
+        ['Non-ideal state', [[CoreExamples.NonIdealStateExample, 'NonIdealStateExample'],]],
+        ['Overflow list', [[CoreExamples.OverflowListExample, 'OverflowListExample'],]],
+        ['Panel stack', [[CoreExamples.PanelStackExample, 'PanelStackExample'],]],
+        ['Progress bar', [[CoreExamples.ProgressExample, 'ProgressExample'],]],
+        // ['Skeleton', [[]]],
+        ['Spinner', [[CoreExamples.SpinnerExample, 'SpinnerExample'],]],
+        ['Tabs', [[CoreExamples.TabsExample, 'TabsExample'],]],
+        ['Tag', [[CoreExamples.TagExample, 'TagExample'],]],
+        ['Text', [[CoreExamples.TextExample, 'TextExample'],]],
+        // ['Tree', [[CoreExamples.TreeExample, 'TreeExample'],]],
     ]],
 
     ['Form Controls', [
-        ['Form group', [CoreExamples.FormGroupExample]],
-        ['Control group', [CoreExamples.ControlGroupExample,]],
-        // ['Label', []],
-        ['Checkbox', [CoreExamples.CheckboxExample,]],
-        ['Radio', [CoreExamples.RadioExample,]],
-        // ['HTML select', []],
+        ['Form group', [[CoreExamples.FormGroupExample, 'FormGroupExample'],]],
+        ['Control group', [[CoreExamples.ControlGroupExample, 'ControlGroupExample'],]],
+        // ['Label', [[]]],
+        ['Checkbox', [[CoreExamples.CheckboxExample, 'CheckboxExample'],]],
+        ['Radio', [[CoreExamples.RadioExample, 'RadioExample'],]],
+        // ['HTML select', [[]]],
         ['Slider', [
-            CoreExamples.SliderExample,
-            CoreExamples.RangeSliderExample,
-            CoreExamples.MultiSliderExample,
+            [CoreExamples.SliderExample, 'SliderExample'],
+            [CoreExamples.RangeSliderExample, 'RangeSliderExample'],
+            [CoreExamples.MultiSliderExample, 'MultiSliderExample'],
         ]],
-        ['Switch', [CoreExamples.SwitchExample,]],
+        ['Switch', [[CoreExamples.SwitchExample, 'SwitchExample'],]],
     ]],
 
     ['Form Inputs', [
-        ['File input', [CoreExamples.FileInputExample,]],
+        ['File input', [[CoreExamples.FileInputExample, 'FileInputExample'],]],
         ['Numeric input', [
-            CoreExamples.NumericInputBasicExample,
-            CoreExamples.NumericInputExtendedExample,
+            [CoreExamples.NumericInputBasicExample, 'NumericInputBasicExample'],
+            [CoreExamples.NumericInputExtendedExample, 'NumericInputExtendedExample'],
         ]],
-        ['Text inputs', [CoreExamples.InputGroupExample,]],
-        ['Tag input', [CoreExamples.TagInputExample]],
+        ['Text inputs', [[CoreExamples.InputGroupExample, 'InputGroupExample'],]],
+        ['Tag input', [[CoreExamples.TagInputExample, 'TagInputExample'],]],
     ]],
 
     ['Overlays', [
-        ['Overlay', [CoreExamples.OverlayExample,]],
-        ['Portal', [CoreExamples.PopoverPortalExample,]],
-        ['Alert', [CoreExamples.AlertExample,]],
-        // ['Context menu', [CoreExamples.ContextMenuExample,]], // Decorator
-        ['Dialog', [CoreExamples.DialogExample,]],
-        ['Drawer', [CoreExamples.DrawerExample,]],
+        ['Overlay', [[CoreExamples.OverlayExample, 'OverlayExample'],]],
+        ['Portal', [[CoreExamples.PopoverPortalExample, 'PopoverPortalExample'],]],
+        ['Alert', [[CoreExamples.AlertExample, 'AlertExample'],]],
+        // ['Context menu', [[CoreExamples.ContextMenuExample, 'ContextMenuExample'],]], // Decorator
+        ['Dialog', [[CoreExamples.DialogExample, 'DialogExample'],]],
+        ['Drawer', [[CoreExamples.DrawerExample, 'DrawerExample'],]],
         ['Popover', [
-            // CoreExamples.PopoverDismissExample,
-            CoreExamples.PopoverExample,
-            CoreExamples.PopoverInteractionKindExample,
-            CoreExamples.PopoverMinimalExample,
-            CoreExamples.PopoverPositionExample,
-            CoreExamples.PopoverSizingExample,
+            // [CoreExamples.PopoverDismissExample, 'PopoverDismissExample'],
+            [CoreExamples.PopoverExample, 'PopoverExample'],
+            [CoreExamples.PopoverInteractionKindExample, 'PopoverInteractionKindExample'],
+            [CoreExamples.PopoverMinimalExample, 'PopoverMinimalExample'],
+            [CoreExamples.PopoverPositionExample, 'PopoverPositionExample'],
+            [CoreExamples.PopoverSizingExample, 'PopoverSizingExample'],
         ]],
-        ['Toast', [CoreExamples.ToastExample,]],
-        ['Tooltip', [CoreExamples.TooltipExample,]],
+        ['Toast', [[CoreExamples.ToastExample, 'ToastExample'],]],
+        ['Tooltip', [[CoreExamples.TooltipExample, 'TooltipExample'],]],
     ]],
 
     ['Other', [
         ['Focus', [
-            CoreExamples.FocusExample,
+            [CoreExamples.FocusExample, 'FocusExample'],
         ]],
     ]],
 
     ['DateTime', [
-        ['Date Input', [DateTimeExamples.DateInputExample]],
-        ['Date Range Input', [DateTimeExamples.DateRangeInputExample]],
-        ['Date Picker', [DateTimeExamples.DatePickerExample]],
-        ['Date Range Picker', [DateTimeExamples.DateRangePickerExample]],
-        ['DateTime Picker', [DateTimeExamples.DateTimePickerExample]],
-        ['Time Picker', [DateTimeExamples.TimePickerExample]],
-        ['Timezone Picker', [TimezoneExamples.TimezonePickerExample]],
+        ['Date Input', [[DateTimeExamples.DateInputExample, 'DateInputExample'],]],
+        ['Date Range Input', [[DateTimeExamples.DateRangeInputExample, 'DateRangeInputExample'],]],
+        ['Date Picker', [[DateTimeExamples.DatePickerExample, 'DatePickerExample'],]],
+        ['Date Range Picker', [[DateTimeExamples.DateRangePickerExample, 'DateRangePickerExample'],]],
+        ['DateTime Picker', [[DateTimeExamples.DateTimePickerExample, 'DateTimePickerExample'],]],
+        ['Time Picker', [[DateTimeExamples.TimePickerExample, 'TimePickerExample'],]],
+        ['Timezone Picker', [[TimezoneExamples.TimezonePickerExample, 'TimezonePickerExample'],]],
     ]],
 
-    // ['Timezone', [ ['Timezone Picker', [TimezoneExamples.TimezonePickerExample]] ]],
+    // ['Timezone', [ ['Timezone Picker', [[TimezoneExamples.TimezonePickerExample, 'TimezonePickerExample'],]] ]],
 
     ['Select', [
-        ['MultiSelect', [SelectExamples.MultiSelectExample]],
-        ['Omnibar', [SelectExamples.OmnibarExample]],
-        ['Select', [SelectExamples.SelectExample]],
-        ['Suggest', [SelectExamples.SuggestExample]],
+        ['MultiSelect', [[SelectExamples.MultiSelectExample, 'MultiSelectExample'],]],
+        ['Omnibar', [[SelectExamples.OmnibarExample, 'OmnibarExample'],]],
+        ['Select', [[SelectExamples.SelectExample, 'SelectExample'],]],
+        ['Suggest', [[SelectExamples.SuggestExample, 'SuggestExample'],]],
     ]],
 
     ['Table', [
         // TODO: add a component that wraps these components to optionally load them.
         // // ... because they slow the page down
 
-        ['Table Editable', [TableExamples.TableEditableExample]],
-        // ['Table Loading', [TableExamples.TableLoadingExample]],
-        // ['Table Reorderable', [TableExamples.TableReorderableExample]],
-        // ['Table Sortable', [TableExamples.TableSortableExample]],
+        ['Table Editable', [[TableExamples.TableEditableExample, 'TableEditableExample'],]],
+        // ['Table Loading', [[TableExamples.TableLoadingExample, 'TableLoadingExample'],]],
+        // ['Table Reorderable', [[TableExamples.TableReorderableExample, 'TableReorderableExample'],]],
+        // ['Table Sortable', [[TableExamples.TableSortableExample, 'TableSortableExample'],]],
 
         // Less useful for styling
-        // ['Cell Loading', [TableExamples.CellLoadingExample]],
-        // ['Column Loading', [TableExamples.ColumnLoadingExample]],
-        // ['Table Dollar', [TableExamples.TableDollarExample]],
-        // ['Table Formats', [TableExamples.TableFormatsExample]],
-        // ['Table Freezing', [TableExamples.TableFreezingExample]],
+        // ['Cell Loading', [[TableExamples.CellLoadingExample, 'CellLoadingExample'],]],
+        // ['Column Loading', [[TableExamples.ColumnLoadingExample, 'ColumnLoadingExample'],]],
+        // ['Table Dollar', [[TableExamples.TableDollarExample, 'TableDollarExample'],]],
+        // ['Table Formats', [[TableExamples.TableFormatsExample, 'TableFormatsExample'],]],
+        // ['Table Freezing', [[TableExamples.TableFreezingExample, 'TableFreezingExample'],]],
     ]],
 
 ];
