@@ -2027,13 +2027,14 @@ a.bp3-button.bp3-disabled {
 }
 
 .bp3-editable-text:before {
+    --neg-1: -1;
     border-radius: var(--pt-border-radius);
-    bottom: calc(var(--pt-border-radius)*-1);
+    bottom: calc(var(--neg-1)*var(--pt-border-radius));
     content: "";
-    left: calc(var(--pt-border-radius)*-1);
+    left: calc(var(--neg-1)*var(--pt-border-radius));
     position: absolute;
-    right: calc(var(--pt-border-radius)*-1);
-    top: calc(var(--pt-border-radius)*-1);
+    right: calc(var(--neg-1)*var(--pt-border-radius));
+    top: calc(var(--neg-1)*var(--pt-border-radius));
     transition: background-color .1s var(--pt-transition-ease),box-shadow .1s var(--pt-transition-ease)
 }
 
