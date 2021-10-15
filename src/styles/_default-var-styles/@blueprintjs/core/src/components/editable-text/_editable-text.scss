@@ -14,7 +14,8 @@
 
   // input styles on the ::before
   &::before {
-    @include position-all(absolute, calc(-1 * var(--pt-border-radius) )); // must be `-1 * n` not `n * -1`
+    --neg-1: -1; // must be `-1 * n` not `n * -1`
+    @include position-all(absolute, calc(var(--neg-1)*var(--pt-border-radius) ));
     border-radius: $pt-border-radius;
     content: "";
     transition: background-color $pt-transition-duration $pt-transition-ease,
