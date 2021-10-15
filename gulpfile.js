@@ -43,6 +43,9 @@ const compileStylesheetTask = function (cb) {
             require('cssnano')({
                 preset: ['default', {
                     colormin: false, // keep hsl color formats
+                    discardComments: {
+                        removeAll: true,
+                    },
                 }]
             }),
         ]))
