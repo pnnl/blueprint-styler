@@ -6,8 +6,6 @@
   - maybe its better to not affiliate the official blueprint project with this one
 - Sections:
   - for each style: add a customizable readme component that renders at the top
-  - colors
-  - typography
 - Navigation
   - maybe we can only use params due to the `"homepage": "."` thing with create-react-app
   - search
@@ -40,7 +38,6 @@
   - grayscale transparency alt
   - input-transition-shadow could to be broken into input shadow vars...
   - better focus for buttons?
-  - switch icon libraries? - replace icons in svg-icon()
   - math with calc() ?
 - Common
   - ellipsize button text by default
@@ -52,8 +49,8 @@
 - Flat Monochrome - intent primary color is grayscale - or all blue tint? - FERC and Starfish
 - Flat Colorful - buttons have a colorful gradient?
 - [IBM Carbon](https://www.carbondesignsystem.com/components/overview)
-  - dark timepicker-input intent-danger (error) :focus states are broken
   - slider thumb colors
+  - dark timepicker-input intent-danger (error) :focus states are broken
   - `<Callout/>`, `<Toast/>`, `<Alert/>`? more like [Carbon Notification](https://www.carbondesignsystem.com/components/notification/style)
   - dark theme Text input with sub-button icon color
   - tune colors ??
