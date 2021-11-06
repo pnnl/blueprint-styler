@@ -5,14 +5,16 @@
 }
 
 .#{$ns}-slider-handle{
+  background-color: var(--pt-intent-primary);
+  box-shadow: none;
 
-  &, &:hover{
-    // background-color: $dark-gray5;
+  &:hover{
+    background-color: var(--pt-intent-primary-hover);
     box-shadow: none;
   }
 
-  &.#{$ns}-active{
-    background-color: $pt-intent-primary;
+  &.#{$ns}-active, &:active{
+    background-color: var(--pt-intent-primary-active);
     box-shadow: none;
   }
 
