@@ -49,7 +49,6 @@
 - Flat Monochrome - intent primary color is grayscale - or all blue tint? - FERC and Starfish
 - Flat Colorful - buttons have a colorful gradient?
 - [IBM Carbon](https://www.carbondesignsystem.com/components/overview)
-  - dark timepicker-input intent-danger (error) :focus states are broken
   - `<Callout/>`, `<Toast/>`, `<Alert/>`? more like [Carbon Notification](https://www.carbondesignsystem.com/components/notification/style)
   - dark theme Text input with sub-button icon color
   - tune colors ??
