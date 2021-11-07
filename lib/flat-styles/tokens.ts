@@ -558,8 +558,6 @@ export const Variables = {
 	PtBorderShadowOpacity: "var(--pt-border-shadow-opacity)",
 	/** `0.2` */
 	PtDropShadowOpacity: "var(--pt-drop-shadow-opacity)",
-	/** `var(--black-hsl)` */
-	PtShadowColorHsl: "var(--pt-shadow-color-hsl)",
 	/** `0 0 0 1px var(--pt-divider-black),0 0 0 hsla(var(--pt-shadow-color-hsl),0),0 0 0 hsla(var(--pt-shadow-color-hsl),0)` */
 	PtElevationShadow0: "var(--pt-elevation-shadow-0)",
 	/** `0 0 0 1px hsla(var(--pt-shadow-color-hsl),var(--pt-border-shadow-opacity)),0 0 0 hsla(var(--pt-shadow-color-hsl),0),0 1px 1px hsla(var(--pt-shadow-color-hsl),var(--pt-drop-shadow-opacity))` */
@@ -576,7 +574,7 @@ export const Variables = {
 	PtTransitionEaseBounce: "var(--pt-transition-ease-bounce)",
 	/** `100ms` */
 	PtTransitionDuration: "var(--pt-transition-duration)",
-	/** `inset 0 0 0 1px hsla(var(--black-hsl),0.15)` */
+	/** `inset 0 0 0 1px hsla(var(--pt-shadow-color-hsl),0.15),inset 0 1px 1px hsla(var(--black-hsl),var(--pt-drop-shadow-opacity))` */
 	PtInputBoxShadow: "var(--pt-input-box-shadow)",
 	/** `var(--pt-elevation-shadow-4)` */
 	PtDialogBoxShadow: "var(--pt-dialog-box-shadow)",
@@ -588,12 +586,14 @@ export const Variables = {
 	PtFontFamilySans: "var(--pt-font-family-sans)",
 	/** `Consolas,Menlo,monospace` */
 	PtFontFamilyMonospace: "var(--pt-font-family-monospace)",
+	/** `var(--black-hsl)` */
+	PtShadowColorHsl: "var(--pt-shadow-color-hsl)",
 };
 
 export const Components = {
 	/** `1px` */
 	ButtonBorderWidth: "var(--button-border-width)",
-	/** `calc(var(--button-border-width)*-1)` */
+	/** `1px` */
 	ControlGroupSpacing: "var(--control-group-spacing)",
 	/** `inset 0 0 0 var(--button-border-width) hsla(var(--pt-shadow-color-hsl),0.15)` */
 	ButtonBoxShadow: "var(--button-box-shadow)",
