@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import BlueprintStylerApp from './components/BlueprintStylerApp';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
     <React.StrictMode>
-        <BlueprintStylerApp />
+        <BrowserRouter>
+            <BlueprintStylerApp />
+        </BrowserRouter>
     </React.StrictMode>,
     document.getElementById('root')
 );
