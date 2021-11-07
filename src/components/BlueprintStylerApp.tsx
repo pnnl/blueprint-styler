@@ -4,7 +4,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import { IBlueprintExampleData } from '../tags/types';
 import { allExamples } from './allExamples';
 import logo from '../assets/logo.svg';
-import { styleSwitcherOptionProps, StyleSwitcher, ComponentLabel, styleManifest, styleSwitcherConfigInitial } from '../styles';
+import { styleSwitcherOptionProps, StyleSwitcher, ComponentLabel, styleManifest, styleSwitcherConfigNameInitial } from '../styles';
 
 FocusStyleManager.onlyShowFocusOnTabs();
 
@@ -47,13 +47,12 @@ function BlueprintStylerApp() {
 
 
     // style
-    const [currentStyleSwitcherConfig, setCurrentStyleSwitcherConfig] = useState<ComponentLabel>(styleSwitcherConfigInitial)
+    const [currentStyleSwitcherConfig, setCurrentStyleSwitcherConfig] = useState<ComponentLabel>(styleManifest[styleSwitcherConfigNameInitial])
     useEffect(() => {
         const currentStyleName = searchParams.get('style')
-        const styleSwitcherConfig = currentStyleName ? styleManifest[currentStyleName] : styleSwitcherConfigInitial
+        const styleSwitcherConfig = currentStyleName ? styleManifest[currentStyleName] : styleManifest[styleSwitcherConfigNameInitial]
         setCurrentStyleSwitcherConfig(styleSwitcherConfig)
     }, [currentStyleSwitcherConfig, setCurrentStyleSwitcherConfig, searchParams])
-
 
     return (
         <div className={["app-wrapper", data.themeName].join(' ')}>
@@ -69,18 +68,22 @@ function BlueprintStylerApp() {
                             className={Classes.HEADING}
                             style={{ marginBottom: 32 }}
                         >
-                            <Link to={'./'} className="styler-menu__title-link">
+                            <a
+                                href={'#'}
+                                onClick={e => setSearchParams({ })}
+                                className="styler-menu__title-link"
+                            >
                                 <img src={logo} style={{ width: 80 }} alt="Blueprint Styler Logo" />
                                 <span style={{ marginLeft: 16 }}>
                                     Blueprint<br />Styler
                                 </span>
-                            </Link>
+                            </a>
                         </h3>
 
                         <HTMLSelect
                             options={styleSwitcherOptionProps}
                             onChange={e => setSearchParams({ style: e.target.value })}
-                            value={searchParams.get('style')}
+                            value={searchParams.get('style') || styleSwitcherConfigNameInitial}
                             style={{ marginBottom: 8 }}
                             fill
                         />

@@ -6,7 +6,7 @@ import { ComponentLabel, styleManifest } from './style-manifest';
 export * from './style-manifest';
 
 // this must match the FallbackStylesComponent imported scss in ./_fallback-styles/styler-styles.scss
-export const styleSwitcherConfigInitial = styleManifest.DefaultStyleVars
+export const styleSwitcherConfigNameInitial: keyof typeof styleManifest = 'DefaultStyleVars'
 
 export let styleSwitcherOptionProps: OptionProps[] = []
 for (const [styleSetName, styleSet] of Object.entries(styleManifest)) {
