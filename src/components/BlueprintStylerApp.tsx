@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { FocusStyleManager, Classes, Button, AnchorButton, Collapse, HTMLSelect } from '@blueprintjs/core';
+import { FocusStyleManager, Classes, Button, AnchorButton, Collapse, HTMLSelect, Icon } from '@blueprintjs/core';
 import { Link, useSearchParams } from "react-router-dom";
 import { IBlueprintExampleData } from '../tags/types';
 import { allExamples } from './allExamples';
@@ -169,7 +169,8 @@ function BlueprintStylerApp() {
                             {componentGroup.map(([componentName, componentExamples]) => (
                                 <div key={componentName} className="styler-component">
                                     <h4 id={nameToId(componentName)} className={`styler-component-header ${Classes.HEADING}`} >
-                                        {componentName}
+                                        <Icon icon={"link"}/>
+                                        <a href={'#' + nameToId(componentName)} >{componentName}</a>
                                     </h4>
                                     {componentExamples.map(([ExampleComponent, exampleComponentClassName], i) => (
                                         <ExampleComponent

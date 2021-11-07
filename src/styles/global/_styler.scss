@@ -77,7 +77,6 @@ $menu-vert-padding: 4rem;
   &, &:hover{
     color: currentColor;
     text-decoration: none;
-
   }
 }
 
@@ -91,6 +90,22 @@ $menu-vert-padding: 4rem;
 }
 .styler-component-header{
   padding-top: 2rem;
+  position: relative;
+
+  .bp3-icon{
+    position: absolute;
+    right: 100%;
+    margin: 0.1em 0.2em;
+    opacity: 0;
+  }
+  &:hover .bp3-icon{
+    opacity: 0.3;
+  }
+
+  a, a:hover{
+    color: currentColor;
+    text-decoration: none;
+  }
 }
 .styler-section-header{
   margin-top: 5rem;
