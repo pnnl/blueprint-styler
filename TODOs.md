@@ -49,10 +49,10 @@
 - Flat Monochrome - intent primary color is grayscale - or all blue tint? - FERC and Starfish
 - Flat Colorful - buttons have a colorful gradient?
 - [IBM Carbon](https://www.carbondesignsystem.com/components/overview)
-    - `.bp3-dark .bp3-toast` bg color is wrong
 - [ant.design](https://ant.design/components/overview/)
   - button group with active could be slightly different - see original
   - disabled button in button group could have a border?
+  - bugs with icon color in input? or something like that
 - [Microsoft Fluent](https://developer.microsoft.com/en-us/fluentui#/controls/web)
 - [PNNL v2](https://forge.pnl.gov/standards/) & [PNNL v3](https://forgedev.pnnl.gov/prc3/)
 - [Shopify Polaris](https://polaris.shopify.com/components/actions/button#navigation) v5 & v6
