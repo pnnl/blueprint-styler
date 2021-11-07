@@ -70,6 +70,17 @@ $menu-vert-padding: 4rem;
 
 }
 
+.styler-menu__title-link{
+  display: flex;
+  align-items: center;
+
+  &, &:hover{
+    color: currentColor;
+    text-decoration: none;
+
+  }
+}
+
 .styler-examples{
   padding: 1.5rem;
   margin-left: $menu-width;

@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { FocusStyleManager, Classes, Button, AnchorButton, Collapse, HTMLSelect } from '@blueprintjs/core';
-import { useParams, useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 import { IBlueprintExampleData } from '../tags/types';
 import { allExamples } from './allExamples';
 import logo from '../assets/logo.svg';
@@ -33,7 +33,6 @@ function BlueprintStylerApp() {
     // nav
     const [openIndex, setOpenIndex] = useState(-1)
     const navigate = useNavigate();
-    const params = useParams();
     const location = useLocation();
 
 
@@ -47,14 +46,16 @@ function BlueprintStylerApp() {
         document.documentElement.classList.remove(notThemeName)
     }, [data])
 
+
     // style
     const [currentStyleSwitcherConfig, setCurrentStyleSwitcherConfig] = useState<ComponentLabel>(styleSwitcherConfigInitial)
     useEffect(() => {
         console.log(location);
         const currentStyleName = location.pathname.substring(1)
-        if (currentStyleName)
-            setCurrentStyleSwitcherConfig(styleManifest[location.pathname.substring(1)])
-    }, [currentStyleSwitcherConfig, setCurrentStyleSwitcherConfig, location])
+        const styleSwitcherConfig = currentStyleName ? styleManifest[currentStyleName] : styleSwitcherConfigInitial
+        setCurrentStyleSwitcherConfig(styleSwitcherConfig)
+    }, [currentStyleSwitcherConfig, setCurrentStyleSwitcherConfig, location.pathname])
+
 
     return (
         <div className={["app-wrapper", data.themeName].join(' ')}>
@@ -68,18 +69,19 @@ function BlueprintStylerApp() {
 
                         <h3
                             className={Classes.HEADING}
-                            style={{ display: 'flex', alignItems: 'center', marginBottom: 32 }}>
-                            <img src={logo} style={{ width: 80 }} alt="Blueprint Styler Logo" />
-                            <span style={{ marginLeft: 16 }}>
-                                Blueprint<br />Styler
-                            </span>
+                            style={{ marginBottom: 32 }}
+                        >
+                            <Link to={'./'} className="styler-menu__title-link">
+                                <img src={logo} style={{ width: 80 }} alt="Blueprint Styler Logo" />
+                                <span style={{ marginLeft: 16 }}>
+                                    Blueprint<br />Styler
+                                </span>
+                            </Link>
                         </h3>
 
                         <HTMLSelect
                             options={styleSwitcherOptionProps}
-                            onChange={e => {
-                                navigate('/' + e.target.value)
-                            }}
+                            onChange={e => { navigate('/' + e.target.value) }}
                             value={location.pathname.substring(1)}
                             style={{ marginBottom: 8 }}
                             fill
@@ -93,10 +95,7 @@ function BlueprintStylerApp() {
                             fill
                         />
 
-                        {/* <div
-                            className="bp3-input-group"
-                            style={{ marginBottom: 16 }}
-                        >
+                        {/* <div className="bp3-input-group" style={{ marginBottom: 16 }} >
                             <Icon icon="search" />
                             <input type="text" className="bp3-input" placeholder="Search" />
                         </div> */}
