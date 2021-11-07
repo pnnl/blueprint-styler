@@ -24,8 +24,7 @@
 
 --pt-border-radius: 6px;
 
-// flat input border
---pt-input-box-shadow:      inset 0 0 0 1px hsla(var(--black-hsl), 0.15);
---pt-dark-input-box-shadow: inset 0 0 0 1px hsla(var(--white-hsl), 0.3);
+--pt-shadow-color-hsl: var(--black-hsl);
+--pt-dark-shadow-color-hsl: var(--black-hsl);
 
 }

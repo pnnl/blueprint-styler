@@ -43,9 +43,6 @@
   - ellipsize button text by default
   - Segmented Button Group like [this](https://dribbble.com/shots/14424288-Material-X-design-system-UI-kit-Figma-Segments)
 - Flat
-  - dark theme ?
-  - button component divider // ?? isn't this done?
-  - menu selections are not rounded correctly...
 - Flat Monochrome - intent primary color is grayscale - or all blue tint? - FERC and Starfish
 - Flat Colorful - buttons have a colorful gradient?
 - [IBM Carbon](https://www.carbondesignsystem.com/components/overview)

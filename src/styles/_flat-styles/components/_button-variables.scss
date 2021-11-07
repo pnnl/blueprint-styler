@@ -4,20 +4,21 @@
 
   --button-box-shadow:
     inset 0 0 0 var(--button-border-width) hsla(var(--pt-shadow-color-hsl), 0.15);
-    // inset 0 var(--button-border-width) 0 hsla(var(--pt-shadow-color-hsl), 0.1);
   --button-box-shadow-active:
     inset 0 0 0 var(--button-border-width) hsla(var(--pt-shadow-color-hsl), 0.3);
-    // inset 0 1px 2px hsla(var(--pt-shadow-color-hsl), 0.2);
   --button-intent-box-shadow: unset;
-    // inset 0 0 0 var(--button-border-width) hsla(var(--pt-shadow-color-hsl), 0.4),
-    // inset 0 var(--button-border-width) 0 hsla(var(--pt-shadow-color-hsl), 0.2);
   --button-intent-box-shadow-active: unset;
-    // inset 0 0 0 var(--button-border-width) hsla(var(--pt-shadow-color-hsl), 0.4),
-    // inset 0 1px 2px hsla(var(--pt-shadow-color-hsl), 0.2);
+
+  --dark-button-intent-box-shadow: unset;
+  --dark-button-intent-box-shadow-active: unset;
 
   --button-gradient: unset; // linear-gradient(to bottom, rgba($white, 0.8), rgba($white, 0)) ;
   --button-intent-gradient: unset; // linear-gradient(to bottom, rgba($white, 0.1), rgba($white, 0)) ;
   --dark-button-gradient: unset; // linear-gradient(to bottom, rgba($white, 0.05), rgba($white, 0)) ;
+
+  --control-group-spacing: 1px; // custom
+  --dark-control-group-spacing: -1px; // custom
+
 
   /*! IntentColors */
 
