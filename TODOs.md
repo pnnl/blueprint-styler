@@ -50,10 +50,10 @@
 - Flat Colorful - buttons have a colorful gradient?
 - [IBM Carbon](https://www.carbondesignsystem.com/components/overview)
   - `<Callout/>`, `<Toast/>`, `<Alert/>`? more like [Carbon Notification](https://www.carbondesignsystem.com/components/notification/style)
-  - dark theme Text input with sub-button icon color
   - tune colors ??
-  - card bg color needs to be darker ??
-  - light theme text color needs softening ??
+    - card bg color needs to be darker ??
+    - warning
+    - light theme text color needs softening ??
 - [ant.design](https://ant.design/components/overview/)
   - button group with active could be slightly different - see original
   - disabled button in button group could have a border?
