@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { FocusStyleManager, Classes, Button, AnchorButton, Collapse, HTMLSelect } from '@blueprintjs/core';
-import { useNavigate, useLocation, Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { IBlueprintExampleData } from '../tags/types';
 import { allExamples } from './allExamples';
 import logo from '../assets/logo.svg';
@@ -32,8 +32,7 @@ function BlueprintStylerApp() {
 
     // nav
     const [openIndex, setOpenIndex] = useState(-1)
-    const navigate = useNavigate();
-    const location = useLocation();
+    let [searchParams, setSearchParams] = useSearchParams();
 
 
     // theme
@@ -50,11 +49,10 @@ function BlueprintStylerApp() {
     // style
     const [currentStyleSwitcherConfig, setCurrentStyleSwitcherConfig] = useState<ComponentLabel>(styleSwitcherConfigInitial)
     useEffect(() => {
-        console.log(location);
-        const currentStyleName = location.pathname.substring(1)
+        const currentStyleName = searchParams.get('style')
         const styleSwitcherConfig = currentStyleName ? styleManifest[currentStyleName] : styleSwitcherConfigInitial
         setCurrentStyleSwitcherConfig(styleSwitcherConfig)
-    }, [currentStyleSwitcherConfig, setCurrentStyleSwitcherConfig, location.pathname])
+    }, [currentStyleSwitcherConfig, setCurrentStyleSwitcherConfig, searchParams])
 
 
     return (
@@ -81,8 +79,8 @@ function BlueprintStylerApp() {
 
                         <HTMLSelect
                             options={styleSwitcherOptionProps}
-                            onChange={e => { navigate('/' + e.target.value) }}
-                            value={location.pathname.substring(1)}
+                            onChange={e => setSearchParams({ style: e.target.value })}
+                            value={searchParams.get('style')}
                             style={{ marginBottom: 8 }}
                             fill
                         />
