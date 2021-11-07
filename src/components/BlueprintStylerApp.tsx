@@ -1,9 +1,10 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { FocusStyleManager, Classes, Button, AnchorButton, Collapse, HTMLSelect } from '@blueprintjs/core';
+import { FocusStyleManager, Classes, Button, AnchorButton, Collapse, HTMLSelect, Icon } from '@blueprintjs/core';
+import { Link, useSearchParams } from "react-router-dom";
 import { IBlueprintExampleData } from '../tags/types';
 import { allExamples } from './allExamples';
 import logo from '../assets/logo.svg';
-import { styleSwitcherOptionProps, StyleSwitcher, ComponentLabel, styleManifest, styleSwitcherConfigInitial } from '../styles';
+import { styleSwitcherOptionProps, StyleSwitcher, ComponentLabel, styleManifest, styleSwitcherConfigNameInitial } from '../styles';
 
 FocusStyleManager.onlyShowFocusOnTabs();
 
@@ -31,6 +32,8 @@ function BlueprintStylerApp() {
 
     // nav
     const [openIndex, setOpenIndex] = useState(-1)
+    let [searchParams, setSearchParams] = useSearchParams();
+
 
     // theme
     const [theme, setTheme] = useState(getTheme())
@@ -42,8 +45,14 @@ function BlueprintStylerApp() {
         document.documentElement.classList.remove(notThemeName)
     }, [data])
 
+
     // style
-    const [currentStyleSwitcherConfig, setCurrentStyleSwitcherConfig] = useState<ComponentLabel>(styleSwitcherConfigInitial)
+    const [currentStyleSwitcherConfig, setCurrentStyleSwitcherConfig] = useState<ComponentLabel>(styleManifest[styleSwitcherConfigNameInitial])
+    useEffect(() => {
+        const currentStyleName = searchParams.get('style')
+        const styleSwitcherConfig = currentStyleName ? styleManifest[currentStyleName] : styleManifest[styleSwitcherConfigNameInitial]
+        setCurrentStyleSwitcherConfig(styleSwitcherConfig)
+    }, [currentStyleSwitcherConfig, setCurrentStyleSwitcherConfig, searchParams])
 
     return (
         <div className={["app-wrapper", data.themeName].join(' ')}>
@@ -57,16 +66,24 @@ function BlueprintStylerApp() {
 
                         <h3
                             className={Classes.HEADING}
-                            style={{ display: 'flex', alignItems: 'center', marginBottom: 32 }}>
-                            <img src={logo} style={{ width: 80 }} alt="Blueprint Styler Logo" />
-                            <span style={{ marginLeft: 16 }}>
-                                Blueprint<br />Styler
-                            </span>
+                            style={{ marginBottom: 32 }}
+                        >
+                            <a
+                                href={'#'}
+                                onClick={e => setSearchParams({ })}
+                                className="styler-menu__title-link"
+                            >
+                                <img src={logo} style={{ width: 80 }} alt="Blueprint Styler Logo" />
+                                <span style={{ marginLeft: 16 }}>
+                                    Blueprint<br />Styler
+                                </span>
+                            </a>
                         </h3>
 
                         <HTMLSelect
                             options={styleSwitcherOptionProps}
-                            onChange={e => setCurrentStyleSwitcherConfig(styleManifest[e.target.value])}
+                            onChange={e => setSearchParams({ style: e.target.value })}
+                            value={searchParams.get('style') || styleSwitcherConfigNameInitial}
                             style={{ marginBottom: 8 }}
                             fill
                         />
@@ -79,10 +96,7 @@ function BlueprintStylerApp() {
                             fill
                         />
 
-                        {/* <div
-                            className="bp3-input-group"
-                            style={{ marginBottom: 16 }}
-                        >
+                        {/* <div className="bp3-input-group" style={{ marginBottom: 16 }} >
                             <Icon icon="search" />
                             <input type="text" className="bp3-input" placeholder="Search" />
                         </div> */}
@@ -158,7 +172,8 @@ function BlueprintStylerApp() {
                             {componentGroup.map(([componentName, componentExamples]) => (
                                 <div key={componentName} className="styler-component">
                                     <h4 id={nameToId(componentName)} className={`styler-component-header ${Classes.HEADING}`} >
-                                        {componentName}
+                                        <Icon icon={"link"}/>
+                                        <a href={'#' + nameToId(componentName)} >{componentName}</a>
                                     </h4>
                                     {componentExamples.map(([ExampleComponent, exampleComponentClassName], i) => (
                                         <ExampleComponent

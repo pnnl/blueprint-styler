@@ -24,6 +24,8 @@ There are two exports from this project
    - Compile this with `yarn run build:react`
 - Compile both with `yarn run build`
 
+## Contributing
+[TODOs](./TODOs.md)
 
 
 # Create A New Theme

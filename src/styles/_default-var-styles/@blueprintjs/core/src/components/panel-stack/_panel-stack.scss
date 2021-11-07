@@ -47,7 +47,7 @@
 .#{$ns}-panel-stack-view {
   @include position-all(absolute, 0);
 
-  background-color: $white;
+  background-color: var(--card-background-color); // bugfix: ???
   border-right: 1px solid $pt-divider-black;
   display: flex;
   flex-direction: column;
