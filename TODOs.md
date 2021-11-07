@@ -49,11 +49,7 @@
 - Flat Monochrome - intent primary color is grayscale - or all blue tint? - FERC and Starfish
 - Flat Colorful - buttons have a colorful gradient?
 - [IBM Carbon](https://www.carbondesignsystem.com/components/overview)
-  - `<Callout/>`, `<Toast/>`, `<Alert/>`? more like [Carbon Notification](https://www.carbondesignsystem.com/components/notification/style)
-  - tune colors ??
-    - card bg color needs to be darker ??
-    - warning
-    - light theme text color needs softening ??
+    - `.bp3-dark .bp3-toast` bg color is wrong
 - [ant.design](https://ant.design/components/overview/)
   - button group with active could be slightly different - see original
   - disabled button in button group could have a border?
