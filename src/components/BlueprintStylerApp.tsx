@@ -104,28 +104,27 @@ function BlueprintStylerApp() {
                     </header>
 
                     <nav className="styler-menu__nav">
-                        <ul className="bp3-list-unstyled">
+                        <ul className={Classes.LIST_UNSTYLED}>
                             {allExamples.map(([componentGroupTitle, componentGroup], j: number) => (
                                 <li key={j}>
                                     <Button
-                                        minimal
-                                        fill
                                         icon={j === openIndex ? "caret-down" : "caret-right"}
                                         onClick={() => setOpenIndex((j === openIndex ? -1 : j))}
-                                        style={{ justifyContent: 'flex-start', marginBottom: 2 }}
-                                    >
-                                        <b>{componentGroupTitle}</b>
-                                    </Button>
+                                        className="styler-menu__group-button"
+                                        text={componentGroupTitle}
+                                        minimal
+                                        fill
+                                    />
                                     <Collapse isOpen={j === openIndex} >
-                                        <ul className="bp3-list-unstyled" style={{ paddingLeft: 24 }}>
+                                        <ul className={Classes.LIST_UNSTYLED} style={{ paddingLeft: 24 }}>
                                             {componentGroup.map(([componentName, componentExamples], i: number) => (
                                                 <li key={i}>
                                                     <AnchorButton
-                                                        minimal
-                                                        fill
                                                         href={'#' + nameToId(componentName)}
                                                         text={componentName}
                                                         style={{ justifyContent: 'flex-start', marginBottom: 2 }}
+                                                        minimal
+                                                        fill
                                                     />
                                                 </li>
                                             ))}

@@ -1,0 +1,31 @@
+
+#{$root-selector}{
+
+/*! Variables */
+
+// see https://bitsofco.de/the-new-system-font-stack/
+--pt-font-family-sans:
+  "Segoe UI",
+  -apple-system,
+  "BlinkMacSystemFont",
+  "Roboto",
+  "Open Sans",
+  "Helvetica Neue",
+  "Icons16",
+  sans-serif;
+
+--pt-font-family-monospace:
+  Monaco,
+  Menlo,
+  Consolas,
+  "Droid Sans Mono",
+  Inconsolata,
+  "Courier New",
+  monospace;
+
+--pt-border-radius: 2px;
+
+// --pt-shadow-color-hsl: var(--black-hsl);
+// --pt-dark-shadow-color-hsl: var(--black-hsl);
+
+}

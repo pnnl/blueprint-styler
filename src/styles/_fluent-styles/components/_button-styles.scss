@@ -1,0 +1,23 @@
+.#{$ns}-button, a, a.#{$ns}-button{
+  transition: background-color 100ms linear;
+  font-weight: var(--font-weight-bold);
+  &:active{
+    transition-duration: 50ms;
+  }
+}
+.#{$ns}-button.#{$ns}-minimal{
+  .#{$ns}-icon{
+    color: var(--pt-intent-primary-hover);
+  }
+  &:hover{
+    color: var(--pt-intent-primary-hover);
+  }
+}
+
+// .#{$ns}-input, .#{$ns}-file-upload-input{
+//   box-shadow:
+//     0 0 0 0 transparent,
+//     0 0 0 0 transparent,
+//     inset 0 0 0 $button-border-width rgba($black, 0.15);
+//     // inset 0 1px 1px rgba(16,22,26,.2);
+// }

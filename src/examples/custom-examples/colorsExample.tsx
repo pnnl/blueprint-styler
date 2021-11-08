@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Example, IExampleProps } from "@blueprintjs/docs-theme";
+import { Classes } from "@blueprintjs/core";
 // import "./colorsExample.scss"; // in src/styles/global/_styler.scss
 
 export class ColorsExample extends React.PureComponent<IExampleProps> {
@@ -10,7 +11,7 @@ export class ColorsExample extends React.PureComponent<IExampleProps> {
                 <div className="set-wrapper">
                     {colorSets.map(colorSet => (
                         <div key={colorSet[0]} className="color-set">
-                            <h5 className="color-set-name">{colorSet[0]}</h5>
+                            <h6 className={`color-set-name ${Classes.HEADING}`}>{colorSet[0]}</h6>
                             <div className="color-chip-set">
                                 {colorSet[1].map((color, i) => (
                                     <div
@@ -31,7 +32,7 @@ export class ColorsExample extends React.PureComponent<IExampleProps> {
                 <div className="set-wrapper">
                     {grayscaleSets.map((colorSet, j) => (
                         <div key={colorSet[0]} className="gray-set">
-                            <h5 className="gray-set-name">{colorSet[0]}</h5>
+                            <h6 className={`gray-set-name ${Classes.HEADING}`}>{colorSet[0]}</h6>
                             <div className="gray-chip-set">
                                 {colorSet[1].map((color, i) => (
                                     <div
