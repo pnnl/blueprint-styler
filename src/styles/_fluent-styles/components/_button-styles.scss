@@ -1,10 +1,17 @@
-.#{$ns}-button, a, a.#{$ns}-button{
-  transition: background-color 100ms linear;
+a,
+a.#{$ns}-button,
+.#{$ns}-button,
+.#{$ns}-html-select select,
+.#{$ns}-select select
+{
   font-weight: var(--font-weight-bold);
+
+  transition: background-color 100ms linear;
   &:active{
     transition-duration: 50ms;
   }
 }
+
 .#{$ns}-button.#{$ns}-minimal{
   .#{$ns}-icon{
     color: var(--pt-intent-primary-hover);
@@ -13,6 +20,7 @@
     color: var(--pt-intent-primary-hover);
   }
 }
+
 
 // .#{$ns}-input, .#{$ns}-file-upload-input{
 //   box-shadow:

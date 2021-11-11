@@ -7,6 +7,8 @@
   --dark-button-outlined-border-color:              hsla(var(--white-hsl), 0.2); // custom
   --dark-button-outlined-border-color-disabled:     hsla(var(--white-hsl), 0.1); // custom
 
+  --minimal-button-background-opacity:              0.15;
+
   --button-box-shadow: inset 0 0 0 var(--button-border-width) var(--button-outlined-border-color);
   --button-box-shadow-active: var(--button-box-shadow);
   --button-intent-box-shadow: unset;
