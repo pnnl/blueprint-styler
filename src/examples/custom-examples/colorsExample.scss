@@ -4,14 +4,16 @@
 {
   .docs-example {
     // display: flex;
-    // flex-wrap: nowrap;
+    flex-wrap: nowrap;
     align-items: stretch;
+    overflow: hidden;
   }
 
   .set-wrapper{
     display: flex;
     flex-direction: column;
     align-content: stretch;
+    margin: 0;
   }
 
   .color-set{
