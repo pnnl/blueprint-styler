@@ -1,0 +1,74 @@
+// $button-border-width: var(--button-border-width);
+// $button-padding: var(--button-padding);
+// $button-padding-small: var(--button-padding-small);
+// $button-padding-large: var(--button-padding-large);
+// $button-icon-spacing: var(--button-icon-spacing);
+// $button-icon-spacing-large: var(--button-icon-spacing-large);
+
+$button-box-shadow: var(--button-box-shadow);
+$button-box-shadow-active: var(--button-box-shadow-active);
+$button-intent-box-shadow: var(--button-intent-box-shadow);
+$button-intent-box-shadow-active: var(--button-intent-box-shadow-active);
+
+$button-box-shadow-overlay: var(--button-box-shadow-overlay);
+$button-box-shadow-overlay-active: var(--button-box-shadow-overlay-active);
+
+$dark-button-box-shadow: var(--dark-button-box-shadow);
+$dark-button-box-shadow-active: var(--dark-button-box-shadow-active);
+$dark-button-intent-box-shadow: var(--dark-button-intent-box-shadow);
+$dark-button-intent-box-shadow-active: var(--dark-button-intent-box-shadow-active);
+
+$button-gradient: var(--button-gradient);
+$button-intent-gradient: var(--button-intent-gradient);
+$dark-button-gradient: var(--dark-button-gradient);
+
+$button-color-disabled: var(--button-color-disabled);
+$button-background-color: var(--button-background-color);
+$button-background-color-hover: var(--button-background-color-hover);
+$button-background-color-active: var(--button-background-color-active);
+$button-background-color-disabled: var(--button-background-color-disabled);
+$button-background-color-active-disabled: var(--button-background-color-active-disabled);
+$button-intent-color-disabled: var(--button-intent-color-disabled);
+$dark-button-color-disabled: var(--dark-button-color-disabled);
+$dark-button-background-color: var(--dark-button-background-color);
+$dark-button-background-color-hover: var(--dark-button-background-color-hover);
+$dark-button-background-color-active: var(--dark-button-background-color-active);
+$dark-button-background-color-disabled: var(--dark-button-background-color-disabled);
+$dark-button-background-color-active-disabled: var(--dark-button-background-color-active-disabled);
+$dark-button-intent-color-disabled: var(--dark-button-intent-color-disabled);
+
+$minimal-button-divider-width: var(--minimal-button-divider-width);
+$minimal-button-background-color: var(--minimal-button-background-color);
+$minimal-button-background-color-hover: var(--minimal-button-background-color-hover);
+$minimal-button-background-color-active: var(--minimal-button-background-color-active);
+$dark-minimal-button-background-color: var(--dark-minimal-button-background-color);
+$dark-minimal-button-background-color-hover: var(--dark-minimal-button-background-color-hover);
+$dark-minimal-button-background-color-active: var(--dark-minimal-button-background-color-active);
+
+$button-outlined-width: var(--button-outlined-width);
+$button-outlined-border-intent-opacity: var(--button-outlined-border-intent-opacity);
+$button-outlined-border-disabled-intent-opacity: var(--button-outlined-border-disabled-intent-opacity);
+
+/* usage:
+@each $intent, $color in $pt-intent-text-colors {
+  $color-hsl: nth(map-get($button-intents, $intent), 4);
+}
+*/
+@function button-intent-stack($intent) {
+  // "intent": ($default, $hover, $active, $default-hsl, $hover-hsl, $active-hsl)
+  // same a !default $button-intents, but with hsl tacked on to the end
+  @return (
+    var(--pt-intent-#{$intent}),
+    var(--pt-intent-#{$intent}-hover),
+    var(--pt-intent-#{$intent}-active),
+    var(--pt-intent-#{$intent}-hsl),
+    var(--pt-intent-#{$intent}-hover-hsl),
+    var(--pt-intent-#{$intent}-active-hsl)
+  )
+}
+$button-intents: (
+  "primary": button-intent-stack("primary"),
+  "success": button-intent-stack("success"),
+  "warning": button-intent-stack("warning"),
+  "danger":  button-intent-stack("danger"),
+);

@@ -1,0 +1,51 @@
+#{$root-selector}{
+
+/*! Components */
+
+--button-box-shadow:  none;
+--button-box-shadow-active: none;
+--button-intent-box-shadow: none;
+--button-intent-box-shadow-active: none;
+
+--dark-button-box-shadow: none;
+--dark-button-box-shadow-active: none;
+--dark-button-intent-box-shadow: none;
+--dark-button-intent-box-shadow-active: none;
+
+--button-gradient: none;
+--button-intent-gradient: none;
+--dark-button-gradient: none;
+
+--button-color-disabled:                            var(--pt-text-color-disabled);
+--button-intent-color-disabled:                     var(--button-color-disabled);
+--button-background-color:                          var(--black-trans-light-gray4);
+--button-background-color-hover:                    var(--black-trans-light-gray3);
+--button-background-color-active:                   var(--black-trans-light-gray2);
+--button-background-color-disabled:                 var(--black-trans-light-gray4);
+--button-background-color-active-disabled:          var(--black-trans-light-gray3);
+
+--dark-button-color-disabled:                       var(--pt-dark-text-color-disabled);
+--dark-button-intent-color-disabled:                var(--dark-button-color-disabled);
+--dark-button-background-color:                     var(--white-trans-dark-gray2);
+--dark-button-background-color-hover:               var(--white-trans-dark-gray3);
+--dark-button-background-color-active:              var(--white-trans-dark-gray4);
+--dark-button-background-color-disabled:            var(--white-trans-dark-gray1);
+--dark-button-background-color-active-disabled:     var(--white-trans-dark-gray3);
+
+// --minimal-button-divider-width:                     1px;
+--minimal-button-background-color:                  none;
+--minimal-button-background-color-hover:            var(--black-trans-light-gray5);
+--minimal-button-background-color-active:           var(--black-trans-light-gray4);
+--dark-minimal-button-background-color:             none;
+--dark-minimal-button-background-color-hover:       var(--white-trans-dark-gray1);
+--dark-minimal-button-background-color-active:      var(--white-trans-dark-gray2);
+
+// --button-outlined-width:                            1px;
+--button-outlined-border-intent-opacity:            0.3;
+--button-outlined-border-disabled-intent-opacity:   0.2;
+
+
+--control-group-spacing: 1px; // custom
+--dark-control-group-spacing: 1px; // custom
+
+}

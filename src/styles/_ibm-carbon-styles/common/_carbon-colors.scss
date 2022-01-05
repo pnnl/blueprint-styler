@@ -1,0 +1,144 @@
+/*
+copied from: @import '~@carbon/colors/scss/colors';
+then transformed using Devtools > Settings > Appearance > Color-format:HSL
+and copy-pasted back over
+
+https://accessiblepalette.com/?lightness=96.1,89.2,80,68.8,58.5,47,35,24,15,7.3&d02670=1,0&da1e28=1,0&ff832b=1,0&F1C21B=1,0&198038=0,0&007d79=0,0&0072c3=0,0&0f62fe=0,0&8a3ffc=0,0&000000=0,0
+
+*/
+
+#{$root-selector} {
+
+  /*! CarbonColors */
+
+  --carbon--black-100: hsl( 0, 0%, 0% ); // #000000;
+
+  --carbon--warm-gray-10:  hsl( 12, 24%, 96% ); // #f7f3f2;
+  --carbon--warm-gray-20:  hsl( 10, 10%, 89% ); // #e5e0df;
+  --carbon--warm-gray-30:  hsl( 10, 5%,  78% ); // #cac5c4;
+  --carbon--warm-gray-40:  hsl(  0, 3%,  67% ); // #ada8a8;
+  --carbon--warm-gray-50:  hsl(  0, 2%,  55% ); // #8f8b8b;
+  --carbon--warm-gray-60:  hsl(  0, 2%,  44% ); // #726e6e;
+  --carbon--warm-gray-70:  hsl(  0, 3%,  33% ); // #565151;
+  --carbon--warm-gray-80:  hsl(  0, 3%,  23% ); // #3c3838;
+  --carbon--warm-gray-90:  hsl(  0, 3%,  15% ); // #272525;
+  --carbon--warm-gray-100: hsl(  0, 7%,   8% ); // #171414;
+
+  --carbon--gray-10:  hsl( 0, 0%, 96% ); // #f4f4f4;
+  --carbon--gray-20:  hsl( 0, 0%, 88% ); // #e0e0e0;
+  --carbon--gray-30:  hsl( 0, 0%, 78% ); // #c6c6c6;
+  --carbon--gray-40:  hsl( 0, 0%, 66% ); // #a8a8a8;
+  --carbon--gray-50:  hsl( 0, 0%, 55% ); // #8d8d8d;
+  --carbon--gray-60:  hsl( 0, 0%, 44% ); // #6f6f6f;
+  --carbon--gray-70:  hsl( 0, 0%, 32% ); // #525252;
+  --carbon--gray-80:  hsl( 0, 0%, 22% ); // #393939;
+  --carbon--gray-90:  hsl( 0, 0%, 15% ); // #262626;
+  --carbon--gray-100: hsl( 0, 0%,  9% ); // #161616;
+
+  --carbon--cool-gray-10:  hsl( 220, 30%, 96% ); // #f2f4f8;
+  --carbon--cool-gray-20:  hsl( 213, 15%, 88% ); // #dde1e6;
+  --carbon--cool-gray-30:  hsl( 210, 11%, 78% ); // #c1c7cd;
+  --carbon--cool-gray-40:  hsl( 210,  8%, 66% ); // #a2a9b0;
+  --carbon--cool-gray-50:  hsl( 216,  7%, 56% ); // #878d96;
+  --carbon--cool-gray-60:  hsl( 210,  6%, 44% ); // #697077;
+  --carbon--cool-gray-70:  hsl( 207,  7%, 32% ); // #4d5358;
+  --carbon--cool-gray-80:  hsl( 207, 10%, 23% ); // #343a3f;
+  --carbon--cool-gray-90:  hsl( 200, 12%, 15% ); // #21272a;
+  --carbon--cool-gray-100: hsl( 206, 16%,  8% ); // #121619;
+
+  --carbon--white-0:  hsl( 0, 0%, 100% ); // #ffffff;
+
+
+  --carbon--red-10:  hsl(   0, 100%, 97% ); // #fff1f1;
+  --carbon--red-20:  hsl( 357, 100%, 92% ); // #ffd7d9;
+  --carbon--red-30:  hsl( 356, 100%, 85% ); // #ffb3b8;
+  --carbon--red-40:  hsl( 357, 100%, 76% ); // #ff8389;
+  --carbon--red-50:  hsl( 357,  95%, 64% ); // #fa4d56;
+  --carbon--red-60:  hsl( 357,  76%, 49% ); // #da1e28;
+  --carbon--red-70:  hsl( 357,  73%, 37% ); // #a2191f;
+  --carbon--red-80:  hsl( 357,  79%, 26% ); // #750e13;
+  --carbon--red-90:  hsl( 357,  91%, 17% ); // #520408;
+  --carbon--red-100: hsl( 357,  73%, 10% ); // #2d0709;
+
+  --carbon--orange-30:  hsl( 25, 100%, 68% ); // nonstandard orange
+  --carbon--orange-40:  hsl( 25, 100%, 58% ); // #ff832b;
+  --carbon--orange-50:  hsl( 25, 100%, 41% ); // nonstandard orange
+  --carbon--orange-60:  hsl( 25, 100%, 36% ); // #ba4e00;
+  --carbon--orange-70:  hsl( 24, 100%, 27% ); // #8a3800;
+  --carbon--orange-80:  hsl( 24, 100%, 14% ); // nonstandard orange
+
+  --carbon--yellow-20:  hsl( 46,  98%, 61% ); // #fdd13a;
+  --carbon--yellow-30:  hsl( 47,  88%, 53% ); // #f1c21b;
+  --carbon--yellow-40:  hsl( 46,  94%, 42% ); // #d2a106;
+  --carbon--yellow-50:  hsl( 45, 100%, 35% ); // #b28600;
+  --carbon--yellow-60:  hsl( 45, 100%, 30% ); // nonstandard yellow
+  --carbon--yellow-70:  hsl( 45, 100%, 22% ); // nonstandard yellow
+  --carbon--yellow-80:  hsl( 45, 100%, 14% ); // nonstandard yellow
+
+  --carbon--green-10:  hsl( 137, 78%, 93% ); // #defbe6;
+  --carbon--green-20:  hsl( 136, 71%, 80% ); // #a7f0ba;
+  --carbon--green-30:  hsl( 136, 61%, 65% ); // #6fdc8c;
+  --carbon--green-40:  hsl( 137, 49%, 50% ); // #42be65;
+  --carbon--green-50:  hsl( 137, 63%, 39% ); // #24a148;
+  --carbon--green-60:  hsl( 138, 67%, 30% ); // #198038;
+  --carbon--green-70:  hsl( 138, 75%, 22% ); // #0e6027;
+  --carbon--green-80:  hsl( 138, 89%, 14% ); // #044317;
+  --carbon--green-90:  hsl( 135, 91%,  9% ); // #022d0d;
+  --carbon--green-100: hsl( 123, 56%,  6% ); // #071908;
+
+  --carbon--teal-10:  hsl( 180,  81%, 92% ); // #d9fbfb;
+  --carbon--teal-20:  hsl( 180,  73%, 78% ); // #9ef0f0;
+  --carbon--teal-30:  hsl( 179,  69%, 55% ); // #3ddbd9;
+  --carbon--teal-40:  hsl( 179,  92%, 39% ); // #08bdba;
+  --carbon--teal-50:  hsl( 179, 100%, 31% ); // #009d9a;
+  --carbon--teal-60:  hsl( 178, 100%, 25% ); // #007d79;
+  --carbon--teal-70:  hsl( 180, 100%, 18% ); // #005d5d;
+  --carbon--teal-80:  hsl( 183, 100%, 13% ); // #004144;
+  --carbon--teal-90:  hsl( 187,  92%, 10% ); // #022b30;
+  --carbon--teal-100: hsl( 186,  56%,  7% ); // #081a1c;
+
+  --carbon--cyan-10:  hsl( 201, 100%, 95% ); // #e5f6ff;
+  --carbon--cyan-20:  hsl( 202, 100%, 86% ); // #bae6ff;
+  --carbon--cyan-30:  hsl( 203, 100%, 75% ); // #82cfff;
+  --carbon--cyan-40:  hsl( 203, 100%, 60% ); // #33b1ff;
+  --carbon--cyan-50:  hsl( 204,  86%, 49% ); // #1192e8;
+  --carbon--cyan-60:  hsl( 205, 100%, 38% ); // #0072c3;
+  --carbon--cyan-70:  hsl( 208, 100%, 30% ); // #00539a;
+  --carbon--cyan-80:  hsl( 208, 100%, 21% ); // #003a6d;
+  --carbon--cyan-90:  hsl( 208,  97%, 15% ); // #012749;
+  --carbon--cyan-100: hsl( 209,  73%,  9% ); // #061727;
+
+  --carbon--blue-10:  hsl( 213, 100%, 96% ); // #edf5ff;
+  --carbon--blue-20:  hsl( 217, 100%, 91% ); // #d0e2ff;
+  --carbon--blue-30:  hsl( 217, 100%, 83% ); // #a6c8ff;
+  --carbon--blue-40:  hsl( 218, 100%, 74% ); // #78a9ff;
+  --carbon--blue-50:  hsl( 218, 100%, 64% ); // #4589ff;
+  --carbon--blue-60:  hsl( 219,  99%, 53% ); // #0f62fe;
+  --carbon--blue-70:  hsl( 220, 100%, 40% ); // #0043ce;
+  --carbon--blue-80:  hsl( 223, 100%, 31% ); // #002d9c;
+  --carbon--blue-90:  hsl( 224, 100%, 21% ); // #001d6c;
+  --carbon--blue-100: hsl( 224, 100%, 13% ); // #001141;
+
+  --carbon--purple-10:  hsl( 258, 100%, 97% ); // #f6f2ff;
+  --carbon--purple-20:  hsl( 263, 100%, 93% ); // #e8daff;
+  --carbon--purple-30:  hsl( 262, 100%, 87% ); // #d4bbff;
+  --carbon--purple-40:  hsl( 263, 100%, 79% ); // #be95ff;
+  --carbon--purple-50:  hsl( 263, 100%, 72% ); // #a56eff;
+  --carbon--purple-60:  hsl( 264,  97%, 62% ); // #8a3ffc;
+  --carbon--purple-70:  hsl( 265,  65%, 46% ); // #6929c4;
+  --carbon--purple-80:  hsl( 264,  65%, 33% ); // #491d8b;
+  --carbon--purple-90:  hsl( 264,  66%, 22% ); // #31135e;
+  --carbon--purple-100: hsl( 264,  52%, 12% ); // #1c0f30;
+
+  --carbon--magenta-10:  hsl( 332, 100%, 97% ); // #fff0f7;
+  --carbon--magenta-20:  hsl( 334, 100%, 92% ); // #ffd6e8;
+  --carbon--magenta-30:  hsl( 334, 100%, 84% ); // #ffafd2;
+  --carbon--magenta-40:  hsl( 334, 100%, 75% ); // #ff7eb6;
+  --carbon--magenta-50:  hsl( 334,  82%, 63% ); // #ee5396;
+  --carbon--magenta-60:  hsl( 334,  69%, 48% ); // #d02670;
+  --carbon--magenta-70:  hsl( 334,  74%, 36% ); // #9f1853;
+  --carbon--magenta-80:  hsl( 334,  86%, 25% ); // #740937;
+  --carbon--magenta-90:  hsl( 334,  95%, 16% ); // #510224;
+  --carbon--magenta-100: hsl( 334,  62%, 10% ); // #2a0a18;
+
+}

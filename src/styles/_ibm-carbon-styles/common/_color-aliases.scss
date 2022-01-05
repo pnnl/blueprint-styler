@@ -1,0 +1,144 @@
+
+#{$root-selector}{
+
+/*! ColorsGrayscaleTransparent */
+
+--white-trans-dark-gray1:   hsla(var(--white-hsl),  0.06); // custom
+--white-trans-dark-gray2:   hsla(var(--white-hsl),  0.13); // custom
+--white-trans-dark-gray3:   hsla(var(--white-hsl),  0.20); // custom
+--white-trans-dark-gray4:   hsla(var(--white-hsl),  0.26); // custom
+--white-trans-dark-gray5:   hsla(var(--white-hsl),  0.33); // custom
+--white-trans-gray1:        hsla(var(--white-hsl),  0.40); // custom
+--white-trans-gray2:        hsla(var(--white-hsl),  0.47); // custom
+--white-trans-gray3:        hsla(var(--white-hsl),  0.54); // custom
+--white-trans-gray4:        hsla(var(--white-hsl),  0.60); // custom
+--white-trans-gray5:        hsla(var(--white-hsl),  0.67); // custom
+--white-trans-light-gray1:  hsla(var(--white-hsl),  0.73); // custom
+--white-trans-light-gray2:  hsla(var(--white-hsl),  0.79); // custom
+--white-trans-light-gray3:  hsla(var(--white-hsl),  0.85); // custom
+--white-trans-light-gray4:  hsla(var(--white-hsl),  0.91); // custom
+--white-trans-light-gray5:  hsla(var(--white-hsl),  0.96); // custom
+
+--black-trans-dark-gray1:   hsla(var(--black-hsl),  calc(1 - 0.06)); // custom
+--black-trans-dark-gray2:   hsla(var(--black-hsl),  calc(1 - 0.13)); // custom
+--black-trans-dark-gray3:   hsla(var(--black-hsl),  calc(1 - 0.20)); // custom
+--black-trans-dark-gray4:   hsla(var(--black-hsl),  calc(1 - 0.26)); // custom
+--black-trans-dark-gray5:   hsla(var(--black-hsl),  calc(1 - 0.33)); // custom
+--black-trans-gray1:        hsla(var(--black-hsl),  calc(1 - 0.40)); // custom
+--black-trans-gray2:        hsla(var(--black-hsl),  calc(1 - 0.47)); // custom
+--black-trans-gray3:        hsla(var(--black-hsl),  calc(1 - 0.54)); // custom
+--black-trans-gray4:        hsla(var(--black-hsl),  calc(1 - 0.60)); // custom
+--black-trans-gray5:        hsla(var(--black-hsl),  calc(1 - 0.67)); // custom
+--black-trans-light-gray1:  hsla(var(--black-hsl),  calc(1 - 0.73)); // custom
+--black-trans-light-gray2:  hsla(var(--black-hsl),  calc(1 - 0.79)); // custom
+--black-trans-light-gray3:  hsla(var(--black-hsl),  calc(1 - 0.85)); // custom
+--black-trans-light-gray4:  hsla(var(--black-hsl),  calc(1 - 0.91)); // custom
+--black-trans-light-gray5:  hsla(var(--black-hsl),  calc(1 - 0.96)); // custom
+
+
+
+/*! IntentColors */
+
+--pt-intent-primary-hue:                 var(--cobalt-hue);
+--pt-intent-primary-hsl:                 var(--cobalt3-hsl);
+--pt-intent-primary-hover-hsl:           var(--cobalt2-hsl);
+--pt-intent-primary-active-hsl:          var(--cobalt1-hsl);
+
+--pt-intent-primary-text-color-hsl:      var(--cobalt3-hsl);
+--pt-dark-intent-primary-text-color-hsl: var(--cobalt4-hsl);
+
+--pt-intent-warning-hue:                 var(--gold-hue);
+--pt-intent-warning-hsl:                 var(--gold5-hsl);
+--pt-intent-warning-hover-hsl:           var(--gold4-hsl);
+--pt-intent-warning-active-hsl:          var(--gold3-hsl);
+
+--pt-intent-warning-text-color-hsl:      var(--gold3-hsl);
+--pt-dark-intent-warning-text-color-hsl: var(--gold5-hsl);
+
+
+
+/*! LayoutColors */
+
+--pt-app-background-color:          var(--light-gray5);
+--pt-dark-app-background-color:     var(--dark-gray2);
+--pt-app-top-background-color:      var(--white); // custom
+--pt-dark-app-top-background-color: var(--dark-gray3); // custom
+
+--pt-code-background-color:         var(--white-trans-light-gray2);
+--pt-dark-code-background-color:    var(--black-trans-light-gray1);
+
+--pt-divider-black:                 var(--black-trans-light-gray3);
+--pt-dark-divider-black:            var(--black-trans-gray4);
+--pt-dark-divider-white:            var(--white-trans-dark-gray2);
+
+--pt-outline-color:                 var(--pt-intent-primary);
+
+
+
+/*! TextColors */
+
+--pt-text-color:                    var(--black-trans-dark-gray4);
+--pt-text-color-muted:              var(--black-trans-gray1);
+--pt-text-color-disabled:           var(--black-trans-gray4);
+--pt-heading-color:                 var(--black-trans-dark-gray2);
+--pt-link-color:                    var(--pt-intent-primary-text-color);
+
+--pt-dark-text-color:               var(--white-trans-light-gray5);
+--pt-dark-text-color-muted:         var(--white-trans-gray4);
+--pt-dark-text-color-disabled:      var(--white-trans-dark-gray5);
+--pt-dark-heading-color:            var(--white);
+--pt-dark-link-color:               var(--pt-dark-intent-primary-text-color);
+
+--pt-code-text-color:               var(--pt-text-color-muted);
+--pt-dark-code-text-color:          var(--pt-dark-text-color-muted);
+
+
+
+/*! IconColors */
+
+--pt-icon-color:                    var(--pt-text-color);
+--pt-icon-color-hover:              var(--pt-text-color);
+--pt-icon-color-disabled:           var(--pt-text-color-disabled);
+--pt-icon-color-selected:           var(--pt-intent-primary);
+
+--pt-dark-icon-color:               var(--pt-dark-text-color);
+--pt-dark-icon-color-hover:         var(--pt-dark-text-color);
+--pt-dark-icon-color-disabled:      var(--pt-dark-text-color-disabled);
+--pt-dark-icon-color-selected:      var(--pt-intent-primary);
+
+}
+
+
+
+// non-standard CARBON Identity
+$white-trans-dark-gray1:   var(--white-trans-dark-gray1);
+$white-trans-dark-gray2:   var(--white-trans-dark-gray2);
+$white-trans-dark-gray3:   var(--white-trans-dark-gray3);
+$white-trans-dark-gray4:   var(--white-trans-dark-gray4);
+$white-trans-dark-gray5:   var(--white-trans-dark-gray5);
+$white-trans-gray1:        var(--white-trans-gray1);
+$white-trans-gray2:        var(--white-trans-gray2);
+$white-trans-gray3:        var(--white-trans-gray3);
+$white-trans-gray4:        var(--white-trans-gray4);
+$white-trans-gray5:        var(--white-trans-gray5);
+$white-trans-light-gray1:  var(--white-trans-light-gray1);
+$white-trans-light-gray2:  var(--white-trans-light-gray2);
+$white-trans-light-gray3:  var(--white-trans-light-gray3);
+$white-trans-light-gray4:  var(--white-trans-light-gray4);
+$white-trans-light-gray5:  var(--white-trans-light-gray5);
+
+$black-trans-dark-gray1:   var(--black-trans-dark-gray1);
+$black-trans-dark-gray2:   var(--black-trans-dark-gray2);
+$black-trans-dark-gray3:   var(--black-trans-dark-gray3);
+$black-trans-dark-gray4:   var(--black-trans-dark-gray4);
+$black-trans-dark-gray5:   var(--black-trans-dark-gray5);
+$black-trans-gray1:        var(--black-trans-gray1);
+$black-trans-gray2:        var(--black-trans-gray2);
+$black-trans-gray3:        var(--black-trans-gray3);
+$black-trans-gray4:        var(--black-trans-gray4);
+$black-trans-gray5:        var(--black-trans-gray5);
+$black-trans-light-gray1:  var(--black-trans-light-gray1);
+$black-trans-light-gray2:  var(--black-trans-light-gray2);
+$black-trans-light-gray3:  var(--black-trans-light-gray3);
+$black-trans-light-gray4:  var(--black-trans-light-gray4);
+$black-trans-light-gray5:  var(--black-trans-light-gray5);

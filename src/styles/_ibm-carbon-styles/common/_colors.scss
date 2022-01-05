@@ -1,0 +1,138 @@
+#{$root-selector}{
+
+// https://accessiblepalette.com/?lightness=96.1,89.2,80,68.8,58.5,47,35,24,15,7.3&d02670=1,0&d92026=1,0&ef663c=1,0&FF832B=1,0&96622D=0,0&F1C21B=1,0&dae538=0,0&83ba4f=0,0&198038=0,0&007d79=0,0&0072c3=0,0&0f62fe=0,0&8a3ffc=0,0&b33fab=1,0&000000=0,0
+/*! ColorsHsl */
+
+--grayscale-hue: 0;
+
+--black-hsl: 0, 0%, 0%;
+--dark-gray1-hsl: 0, 0%, 9%;
+--dark-gray2-hsl: 0, 0%, 13%;
+--dark-gray3-hsl: 0, 0%, 17%;
+--dark-gray4-hsl: 0, 0%, 21%;
+--dark-gray5-hsl: 0, 0%, 26%;
+--gray1-hsl: 0, 0%, 32%;
+--gray2-hsl: 0, 0%, 38%;
+--gray3-hsl: 0, 0%, 45%;
+--gray4-hsl: 0, 0%, 52%;
+--gray5-hsl: 0, 0%, 59%;
+--light-gray1-hsl: 0, 0%, 65%;
+--light-gray2-hsl: 0, 0%, 73%;
+--light-gray3-hsl: 0, 0%, 79%;
+--light-gray4-hsl: 0, 0%, 85%;
+--light-gray5-hsl: 0, 0%, 95%;
+--white-hsl: 0, 0%, 100%;
+
+// mix($orange, $red);
+--vermilion-hue: 14;
+--vermilion1-hsl: 15, 52%, 24%;
+--vermilion2-hsl: 14, 56%, 34%;
+--vermilion3-hsl: 14, 58%, 45%;
+--vermilion4-hsl: 14, 79%, 57%;
+--vermilion5-hsl: 15, 93%, 69%;
+
+// $red
+--red-hue: 360; // CORE //
+--red1-hsl: 4, 63%, 26%;
+--red2-hsl: 1, 67%, 37%;
+--red3-hsl: 358, 74%, 49%;
+--red4-hsl: 6, 78%, 62%;
+--red5-hsl: 8, 87%, 72%;
+
+// $magenta
+--rose-hue: 338;
+--rose1-hsl: 338, 55%, 26%;
+--rose2-hsl: 336, 61%, 37%;
+--rose3-hsl: 334, 69%, 48%;
+--rose4-hsl: 340, 67%, 63%;
+--rose5-hsl: 342, 71%, 73%;
+
+// mix($magenta, $purple);
+--violet-hue: 305;
+--violet1-hsl: 305, 40%, 25%;
+--violet2-hsl: 304, 44%, 35%;
+--violet3-hsl: 304, 48%, 47%;
+--violet4-hsl: 306, 44%, 60%;
+--violet5-hsl: 308, 46%, 70%;
+
+// $purple
+--indigo-hue: 264;
+--indigo1-hsl: 264, 60%, 32%;
+--indigo2-hsl: 264, 60%, 46%;
+--indigo3-hsl: 264, 97%, 62%;
+--indigo4-hsl: 264, 97%, 71%;
+--indigo5-hsl: 264, 96%, 79%;
+
+// $blue
+--cobalt-hue: 219;
+--cobalt1-hsl: 219, 90%, 27%;
+--cobalt2-hsl: 219, 90%, 39%;
+--cobalt3-hsl: 219, 99%, 53%;
+--cobalt4-hsl: 219, 99%, 64%;
+--cobalt5-hsl: 219, 99%, 74%;
+
+// $cyan
+--blue-hue: 205; // CORE //
+--blue1-hsl: 205, 98%, 20%;
+--blue2-hsl: 205, 100%, 28%;
+--blue3-hsl: 205, 99%, 38%;
+--blue4-hsl: 205, 62%, 53%;
+--blue5-hsl: 205, 62%, 65%;
+
+// $teal
+--turquoise-hue: ;
+--turquoise1-hsl: 179, 100%, 13%;
+--turquoise2-hsl: 178, 96%, 19%;
+--turquoise3-hsl: 178, 100%, 25%;
+--turquoise4-hsl: 178, 45%, 42%;
+--turquoise5-hsl: 178, 32%, 57%;
+
+// $green
+--green-hue: 138; // CORE //
+--green1-hsl: 138, 67%, 15%;
+--green2-hsl: 139, 68%, 22%;
+--green3-hsl: 138, 66%, 30%;
+--green4-hsl: 138, 34%, 46%;
+--green5-hsl: 138, 29%, 59%;
+
+// $mix($turquoise, $green) ??
+--forest-hue: 91;
+--forest1-hsl: 89, 43%, 17%;
+--forest2-hsl: 91, 41%, 25%;
+--forest3-hsl: 91, 40%, 34%;
+--forest4-hsl: 91, 40%, 43%;
+--forest5-hsl: 91, 42%, 51%;
+
+// mix($green, $yellow)
+--lime-hue: 62;
+--lime1-hsl: 64, 36%, 25%;
+--lime2-hsl: 63, 37%, 33%;
+--lime3-hsl: 62, 36%, 42%;
+--lime4-hsl: 62, 36%, 50%;
+--lime5-hsl: 62, 52%, 59%;
+
+// $yellow // shifted 1 step lighter...
+--gold-hue: 46;
+--gold1-hsl: 46, 37%, 29%;
+--gold2-hsl: 45, 36%, 41%;
+--gold3-hsl: 46, 38%, 48%;
+--gold4-hsl: 46, 50%, 55%;
+--gold5-hsl: 47, 88%, 69%;
+
+// $orange
+--orange-hue: 25; // CORE //
+--orange1-hsl: 24, 62%, 30%;
+--orange2-hsl: 25, 67%, 40%;
+--orange3-hsl: 25, 70%, 50%;
+--orange4-hsl: 25, 100%, 60%;
+--orange5-hsl: 25, 100%, 72%;
+
+// $warm-gray ish?
+--sepia-hue: 30;
+--sepia1-hsl: 29, 53%, 20%;
+--sepia2-hsl: 31, 53%, 29%;
+--sepia3-hsl: 30, 53%, 39%;
+--sepia4-hsl: 30, 33%, 52%;
+--sepia5-hsl: 31, 33%, 64%;
+
+}

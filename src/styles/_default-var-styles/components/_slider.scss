@@ -1,0 +1,23 @@
+#{$root-selector}{
+
+/*! Components */
+
+// --handle-size: var(--pt-icon-size-standard);
+// --track-size: calc(var(--handle-size) - var(--pt-grid-size));
+// --label-offset: calc(var(--handle-size) + 4px);
+
+--slider-progress-color: hsla(var(--gray1-hsl), 0.2);
+--dark-slider-progress-color: hsla(var(--black-hsl), 0.5);
+
+--slider-handle-disabled: var(--gray5);
+--dark-slider-handle-disabled: var(--gray1);
+
+}
+
+// $handle-size: var(--handle-size);
+// $track-size: var(--track-size);
+// $label-offset: var(--label-offset);
+
+// // retain legacy variable aliases so as to not break consumers
+// $handle-height: $handle-size;
+// $track-height: $track-size;

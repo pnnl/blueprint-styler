@@ -1,0 +1,52 @@
+$button-group-intent-divider: hslax(var(--white-hsl),0.25) !default;
+$button-intent: '#{$ns}-button[class*=#{$ns}-intent-]';
+
+.#{$ns}-button-group {
+
+  .#{$button-intent} { // not outline?
+      border: 0 solid $button-group-intent-divider;
+      border-width: 0 1px;
+  }
+
+  // from _button-group.scss && _popover2-in-button-group.scss
+  // support wrapping buttons in a tooltip, which adds a wrapper element
+
+  &:not(.#{$ns}-minimal) {
+    > .#{$ns}-popover-wrapper:first-child .#{$button-intent},
+    > .#{$ns}-popover2-target:first-child .#{$button-intent},
+    > .#{$button-intent}:first-child {
+      border-width: 0 1px 0 0;
+    }
+
+    > .#{$ns}-popover-wrapper:last-child .#{$button-intent},
+    > .#{$ns}-popover2-target:last-child .#{$button-intent},
+    > .#{$button-intent}:last-child {
+      border-width: 0 0 0 1px;
+    }
+  }
+
+
+  &.#{$ns}-vertical {
+
+    .#{$button-intent}{ // not outline?
+        border-width: 1px 0;
+    }
+
+    &:not(.#{$ns}-minimal) {
+      > .#{$ns}-popover-wrapper:first-child .#{$button-intent},
+      > .#{$ns}-popover2-target:first-child .#{$button-intent},
+      > .#{$button-intent}:first-child {
+        border-width: 0 0 1px 0;
+      }
+
+      > .#{$ns}-popover-wrapper:last-child .#{$button-intent},
+      > .#{$ns}-popover2-target:last-child .#{$button-intent},
+      > .#{$button-intent}:last-child {
+        border-width: 1px 0 0 0;
+      }
+
+    }
+  }
+
+}
+

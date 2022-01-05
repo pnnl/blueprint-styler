@@ -1,0 +1,18 @@
+#{$root-selector}{
+
+/*! Components */
+
+// --drawer-margin: calc((var(--pt-grid-size) * 3) 0);
+// --drawer-padding: calc(var(--pt-grid-size) * 2);
+
+--drawer-background-color: var(--pt-app-top-background-color);
+--dark-drawer-background-color: var(--pt-dark-app-top-background-color);
+
+}
+
+
+// $drawer-margin: var(--drawer-margin);
+// $drawer-padding: var(--drawer-padding);
+
+$drawer-background-color: var(--drawer-background-color);
+$dark-drawer-background-color: var(--dark-drawer-background-color);

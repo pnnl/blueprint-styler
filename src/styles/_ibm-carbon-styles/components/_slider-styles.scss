@@ -1,0 +1,23 @@
+@import '../../global/common-slider-handles';
+
+.#{$ns}-slider-label{
+  font-family: $pt-font-family-monospace;
+}
+
+.#{$ns}-slider-handle{
+  background-color: var(--pt-intent-primary);
+  box-shadow: none;
+
+  &:hover{
+    background-color: var(--pt-intent-primary-hover);
+    box-shadow: none;
+  }
+
+  &.#{$ns}-active, &:active{
+    background-color: var(--pt-intent-primary-active);
+    box-shadow: none;
+  }
+
+  @include slider-handles(99px);
+
+}

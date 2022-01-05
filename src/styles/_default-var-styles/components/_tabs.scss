@@ -1,0 +1,15 @@
+#{$root-selector}{
+
+/*! Components */
+
+--tab-color-selected: var(--pt-link-color);
+--dark-tab-color-selected: var(--pt-dark-link-color);
+
+// --tab-indicator-width: 3px;
+
+}
+
+$tab-color-selected: var(--tab-color-selected);
+$dark-tab-color-selected: var(--dark-tab-color-selected);
+
+// $tab-indicator-width: var(--tab-indicator-width);

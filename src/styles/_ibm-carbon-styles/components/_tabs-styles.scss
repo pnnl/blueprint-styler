@@ -1,0 +1,9 @@
+.#{$ns}-tab{
+  font-weight: var(--font-weight-bold);
+  color: $pt-text-color-muted;
+}
+
+.#{$ns}-tab-indicator{
+  // margin-bottom: -1px;
+  background-color: $pt-intent-primary;
+}

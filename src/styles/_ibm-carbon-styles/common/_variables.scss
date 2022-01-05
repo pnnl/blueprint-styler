@@ -1,0 +1,49 @@
+#{$root-selector}{
+
+/*! Variables */
+
+// IBM Plex - https://github.com/IBM/plex
+// this is imported at the app level, not in the css, to keep it lean.
+
+--pt-font-family-sans:
+  'IBM Plex Sans',
+  'Helvetica Neue',
+  -apple-system,
+  "Segoe UI",
+  Arial,
+  sans-serif;
+
+--pt-font-family-monospace:
+  'IBM Plex Mono',
+  Menlo,
+  Consolas,
+  monospace;
+
+--pt-input-box-shadow: 0 0 transparent;
+
+--pt-dark-input-box-shadow: 0 0 transparent;
+
+--pt-border-radius: 0px;
+
+}
+
+$pt-border-radius: 0px;
+
+$pt-font-size-small: $pt-grid-size * 1.2;
+$pt-font-size: $pt-grid-size * 1.4;
+$pt-font-size-large: $pt-grid-size * 1.6;
+
+$pt-button-height-smaller: $pt-grid-size * 2;
+$pt-button-height-small: $pt-grid-size * 2.4;
+$pt-button-height: $pt-grid-size * 3.2;
+$pt-button-height-large: $pt-grid-size * 4;
+
+$pt-input-height-small: $pt-grid-size * 2.4;
+$pt-input-height: $pt-grid-size * 3.2;
+$pt-input-height-large: $pt-grid-size * 4;
+
+$pt-input-box-shadow: 0 0 transparent;
+
+$pt-dark-input-box-shadow: 0 0 transparent;
+
+$tab-indicator-width: 1px;

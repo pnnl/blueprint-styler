@@ -1,0 +1,15 @@
+#{$root-selector}{
+
+/*! Components */
+
+// --navbar-padding: calc(var(--pt-grid-size) * 1.5);
+
+--navbar-background-color: var(--pt-app-top-background-color);
+--dark-navbar-background-color: var(--dark-gray5);
+
+}
+
+// $navbar-padding: var(--navbar-padding);
+
+$navbar-background-color: var(--navbar-background-color);
+$dark-navbar-background-color: var(--dark-navbar-background-color);
