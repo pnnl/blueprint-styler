@@ -1,26 +1,27 @@
 {
-  "name": "blueprintjs-theme-test-2",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "author": "",
-  "license": "ISC",
+  "name": "blueprint-styler",
+  "version": "0.0.1",
+  "description": "Make custom blueprint.css styles",
+  "author": "James Bradford",
+  "repository": {
+    "type": "git",
+    "url": "https://stash.pnnl.gov/projects/UXRSRC/repos/blueprint-styler"
+  },
   "scripts": {
-    "compile:css": "node-sass-chokidar ./src --output lib/css/ --source-map true",
-    "compile:css-old": "sass-compile ./src",
-    "dev": "run-p \"compile:esm -- --watch\" \"compile:css -- --watch\"",
-    "dist:css": "css-dist lib/css/*.css",
-    "dist:variables": "generate-css-variables common/_colors.scss common/_color-aliases.scss common/_variables.scss",
-    "lint:scss": "sass-lint"
+    "start": "yarn copy",
+    "copy:scss": "copyfiles --all --verbose --up 1 -e './**/lib/**/*' -e './**/docs-theme/**/*' './node_modules/@blueprintjs/**/*.scss' './src/styles/_default-var-styles' && echo '> DONE copying scss'",
+    "copy:examples": "copyfiles --all --verbose --up 5 '../blueprint/packages/docs-app/src/examples/**/*' '../blueprint/packages/docs-app/src/common/**/*' './src' && echo '> DONE copying examples'",
+    "copy": "npm run copy:scss && npm run copy:examples && echo '> DONE copying all files'"
   },
   "dependencies": {
-    "@blueprintjs/core": "^3.22.3",
-    "@blueprintjs/icons": "^3.12.0",
-    "node-sass-chokidar": "^1.4.0",
-    "normalize.css": "^8.0.1"
-  },
-  "devDependencies": {
-    "npm-run-all": "^4.1.5",
-    "sass-inline-svg": "^1.2.0"
+    "@blueprintjs/core": "^3.50.4",
+    "@blueprintjs/datetime": "^3.23.14",
+    "@blueprintjs/docs-theme": "^3.10.14",
+    "@blueprintjs/icons": "^3.30.2",
+    "@blueprintjs/popover2": "^0.12.4",
+    "@blueprintjs/select": "^3.18.6",
+    "@blueprintjs/table": "^3.9.8",
+    "@blueprintjs/timezone": "^3.9.14",
+    "copyfiles": "^2.4.1"
   }
 }
