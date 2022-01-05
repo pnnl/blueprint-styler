@@ -1,0 +1,10 @@
+$handle-size: 12px;
+$track-size: 4px;
+$label-offset: $handle-size + 4px;
+
+#{$root-selector}{
+  /*! Components */
+  --slider-handle-bg-color: red;
+  --slider-handle-bg-color-hover: green;
+  --slider-handle-bg-color-active: blue;
+}

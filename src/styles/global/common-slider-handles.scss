@@ -1,0 +1,28 @@
+@mixin slider-handles($radius:99px){
+  border-radius: $radius;
+
+  &.#{$ns}-end.#{$ns}-end {
+    border-radius: $radius;
+    margin-left: 0;
+  }
+  &.#{$ns}-start.#{$ns}-start {
+    border-radius: $radius;
+    margin-left: 0;
+  }
+  &.#{$ns}-end, &.#{$ns}-start {
+    width: $handle-size;
+  }
+
+  .#{$ns}-slider.#{$ns}-vertical &{
+    &.#{$ns}-end.#{$ns}-end {
+      border-radius: $radius;
+    }
+    &.#{$ns}-start.#{$ns}-start {
+      border-radius: $radius;
+    }
+    &.#{$ns}-end,
+    &.#{$ns}-start {
+      height: $handle-size;
+    }
+  }
+}

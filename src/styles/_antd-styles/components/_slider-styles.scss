@@ -1,0 +1,31 @@
+@import '../../global/common-slider-handles';
+
+#{$root-selector}{
+  /*! Components */
+  --slider-background-color:      var(--button-background-color); // custom
+  --dark-slider-background-color: var(--dark-gray5); // custom
+}
+
+.#{$ns}-slider-handle{
+
+  // @include button-customizations();
+  @include antd-button-active-effect();
+  position: absolute;
+
+  background-color: var(--slider-background-color);
+
+  transition: 200ms linear ;
+  transition-property: background-color, color, opacity, box-shadow;
+
+  &:hover {
+    background-color: var(--slider-background-color);
+    box-shadow: var(--button-box-shadow-overlay-hover);
+  }
+
+  &.#{$ns}-active {
+    transition-duration: 50ms;
+  }
+
+  @include slider-handles();
+
+}

@@ -1,0 +1,40 @@
+#{$root-selector}{
+
+/*! Variables */
+
+// https://ant.design/docs/spec/font#Font-Family
+
+--pt-font-family-sans:
+  -apple-system,
+  BlinkMacSystemFont,
+  'Segoe UI',
+  Roboto,
+  'Helvetica Neue',
+  Arial,
+  'Noto Sans',
+  sans-serif,
+  'Apple Color Emoji',
+  'Segoe UI Emoji',
+  'Segoe UI Symbol',
+  'Noto Color Emoji';
+
+--pt-font-family-decorative:
+  Avenir,
+  'Nunito Sans',
+  var(--pt-font-family);
+
+--pt-font-family-monospace:
+  sfmono-regular,
+  Consolas,
+  liberation mono,
+  Menlo,
+  Courier,
+  monospace;
+
+--pt-border-radius: 2px;
+
+// flat input border
+--pt-input-box-shadow:      inset 0 0 0 1px hsla(var(--black-hsl), 0.1); // hsla(var(--pt-shadow-color-hsl),      0.15);
+--pt-dark-input-box-shadow: inset 0 0 0 1px hsla(var(--white-hsl), 0.15); // hsla(var(--pt-dark-shadow-color-hsl), 0.3);
+
+}

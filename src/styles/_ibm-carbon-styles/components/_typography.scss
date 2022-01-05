@@ -1,0 +1,14 @@
+* {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body{
+  letter-spacing: 0.035em;
+}
+
+.#{$ns}-key, .#{$ns}-running-text kbd{
+  padding: 3px 6px;
+  border-radius: 3px;
+}

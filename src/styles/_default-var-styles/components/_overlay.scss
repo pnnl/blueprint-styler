@@ -1,0 +1,10 @@
+#{$root-selector}{
+
+/*! Components */
+
+--overlay-background-opacity: 0.7;
+--overlay-background-color: hsla(var(--black-hsl), var(--overlay-background-opacity));
+
+}
+
+// $overlay-background-color: var(--overlay-background-color);

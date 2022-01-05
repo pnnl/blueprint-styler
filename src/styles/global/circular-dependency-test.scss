@@ -1,0 +1,12 @@
+#{$root-selector}{
+
+  --circular-property: anything;
+  --dark-circular-property: var(--circular-property);
+
+  --pt-circular-property: var(--dark-circular-property);
+  --pt-dark-circular-property: var(--dark-circular-property);
+
+  --pt-gray-property: var(--dark-gray5) var(--circular-property);
+  --pt-dark-property: var(--dark-gray1) var(--dark-circular-property);
+
+}

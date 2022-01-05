@@ -1,0 +1,16 @@
+
+// .#{$ns}-input.#{$ns}-input[type=search]{ // double .class for specificity
+//   border-radius: $pt-border-radius;
+// }
+
+.#{$ns}-input.#{$ns}-round,.#{$ns}-input[type=search] {
+    border-radius: revert;
+    box-sizing:    revert;
+    padding-left:  revert;
+}
+
+.#{$ns}-input.#{$ns}-round {
+    border-radius: 30px;
+    box-sizing: border-box;
+    padding-left: 10px
+}

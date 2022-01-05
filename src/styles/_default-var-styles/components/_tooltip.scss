@@ -1,0 +1,23 @@
+#{$root-selector}{
+
+/*! Components */
+
+--tooltip-background-color: var(--dark-gray5);
+--tooltip-text-color: var(--light-gray5);
+
+--dark-tooltip-background-color: var(--light-gray3);
+--dark-tooltip-text-color: var(--dark-gray5);
+
+// --tooltip-padding-vertical: var(--pt-grid-size);
+// --tooltip-padding-horizontal: calc(1.2 * var(--pt-grid-size));
+
+}
+
+$tooltip-background-color: var(--tooltip-background-color);
+$tooltip-text-color: var(--tooltip-text-color);
+
+$dark-tooltip-background-color: var(--dark-tooltip-background-color);
+$dark-tooltip-text-color: var(--dark-tooltip-text-color);
+
+// $tooltip-padding-vertical: var(--tooltip-padding-vertical);
+// $tooltip-padding-horizontal: var(--tooltip-padding-horizontal);

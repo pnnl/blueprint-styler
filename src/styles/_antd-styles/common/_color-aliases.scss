@@ -1,0 +1,47 @@
+#{$root-selector}{
+
+
+/*! IntentColors */
+
+--pt-intent-primary-hue:        var(--blue-hue);
+--pt-intent-primary-hsl:        var(--blue3-hsl);
+--pt-intent-primary-hover-hsl:  var(--blue4-hsl);
+--pt-intent-primary-active-hsl: var(--blue2-hsl);
+
+--pt-intent-success-hue:        var(--green-hue);
+--pt-intent-success-hsl:        var(--green3-hsl);
+--pt-intent-success-hover-hsl:  var(--green4-hsl);
+--pt-intent-success-active-hsl: var(--green2-hsl);
+
+--pt-intent-warning-hue:        var(--orange-hue);
+--pt-intent-warning-hsl:        var(--orange3-hsl);
+--pt-intent-warning-hover-hsl:  var(--orange4-hsl);
+--pt-intent-warning-active-hsl: var(--orange2-hsl);
+
+--pt-intent-danger-hue:        var(--red-hue);
+--pt-intent-danger-hsl:        var(--red3-hsl);
+--pt-intent-danger-hover-hsl:  var(--red4-hsl);
+--pt-intent-danger-active-hsl: var(--red2-hsl);
+
+
+/*! TextColors */
+
+--pt-heading-color:            hsla(var(--black-hsl), 1.00);
+--pt-text-color:               hsla(var(--black-hsl), 0.85);
+--pt-text-color-muted:         hsla(var(--black-hsl), 0.70);
+--pt-text-color-disabled:      hsla(var(--black-hsl), 0.25);
+
+--pt-dark-heading-color:       hsla(var(--white-hsl), 1.00);
+--pt-dark-text-color:          hsla(var(--white-hsl), 0.85);
+--pt-dark-text-color-muted:    hsla(var(--white-hsl), 0.65);
+--pt-dark-text-color-disabled: hsla(var(--white-hsl), 0.45);
+
+
+/*! LayoutColors */
+
+--pt-divider-black:      hsla(var(--black-hsl), 0.09);
+--pt-dark-divider-black: hsla(var(--black-hsl), 0.4);
+--pt-dark-divider-white: hsla(var(--white-hsl), 0.15);
+
+
+}
