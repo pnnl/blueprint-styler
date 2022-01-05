@@ -4,8 +4,7 @@
 
 Create custom global styles for [Blueprint js Components](https://blueprintjs.com/docs/) using css [`--custom-properties`](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)
 
-- [Project Demo](https://stash.pnnl.gov/pages/UXRSRC/blueprint-styler/master/browse/build/index.html)
-- [Dev Branch Demo](https://stash.pnnl.gov/pages/UXRSRC/blueprint-styler/development/browse/build/index.html)
+- [Demo](https://pnnl.github.io/blueprint-styler)
 
 ## Quick Start
 
