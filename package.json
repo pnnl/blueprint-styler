@@ -9,11 +9,12 @@
   },
   "scripts": {
     "start": "yarn copy",
-    "copy:scss": "copyfiles --all --verbose --up 1 -e './**/lib/**/*' -e './**/docs-theme/**/*' './node_modules/@blueprintjs/**/*.scss' './src/styles/_default-var-styles' && echo '> DONE copying scss'",
-    "copy:examples": "copyfiles --all --verbose --up 5 '../blueprint/packages/docs-app/src/examples/**/*' '../blueprint/packages/docs-app/src/common/**/*' './src' && echo '> DONE copying examples'",
-    "copy": "npm run copy:scss && npm run copy:examples && echo '> DONE copying all files'"
+    "copy:clean": "rm -r src",
+    "copy:scss": "copyfiles --all --verbose --up 1 -e './**/lib/**/*' -e './**/docs-theme/**/*' -e './**/monorepo/**/*' './node_modules/@blueprintjs/**/*.scss' './src/styles/_default-var-styles' && echo '> DONE copying scss'",
+    "copy:examples": "copyfiles --all --verbose --up 5 './node_modules/@blueprintjs/monorepo/packages/docs-app/src/examples/**/*' './node_modules/@blueprintjs/monorepo/packages/docs-app/src/common/**/*' './' && echo '> DONE copying examples'",
+    "copy": "yarn copy:clean && yarn copy:scss && yarn copy:examples && echo '> DONE copying all files'"
   },
-  "dependencies": {
+  "devDependencies": {
     "@blueprintjs/core": "^3.52.0",
     "@blueprintjs/datetime": "^3.23.19",
     "@blueprintjs/docs-theme": "^3.10.19",
@@ -22,6 +23,7 @@
     "@blueprintjs/select": "^3.18.11",
     "@blueprintjs/table": "^3.9.13",
     "@blueprintjs/timezone": "^3.9.19",
+    "@blueprintjs/monorepo": "palantir/blueprint#develop",
     "copyfiles": "^2.4.1"
   }
 }
