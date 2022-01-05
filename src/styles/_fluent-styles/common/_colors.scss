@@ -1,0 +1,130 @@
+#{$root-selector}{
+
+// https://accessiblepalette.com/?lightness=94,89,84,75,66,58,47,37,27,19&ff006d=1,0&f10020=1,0&e71000=1,15&ea5b00=1,23&956638=0,0&e68f00=1,22&1cbe00=1,-41&0cac06=0,0&008f00=0,35&00c59b=0,16&0079c8=0,0&006aff=0,-9&6052ff=0,5&bc00c1=1,-13
+
+/*! ColorsHsl */
+
+--grayscale-hue:   213;
+--grayscale-sat:   0%;
+
+--black-hsl:       218, 19%, 8%;
+
+--dark-gray1-hsl:  213, 16%, 13%;
+--dark-gray2-hsl:  213, 13%, 17%;
+--dark-gray3-hsl:  214, 12%, 21%;
+--dark-gray4-hsl:  215, 13%, 25%;
+--dark-gray5-hsl:  215, 12%, 29%;
+
+--gray1-hsl:       218, 10%, 44%;
+--gray2-hsl:       217, 7%, 51%;
+--gray3-hsl:       220, 4%, 60%;
+--gray4-hsl:       216, 3%, 70%;
+--gray5-hsl:       210, 2%, 79%;
+
+--light-gray1-hsl: 0, 0%, 84%;
+--light-gray2-hsl: 0, 0%, 87%;
+--light-gray3-hsl: 0, 0%, 91% ;
+--light-gray4-hsl: 0, 0%, 94% ;
+--light-gray5-hsl: 0, 0%, 97% ;
+
+--white-hsl:       0, 0%, 100%;
+
+--vermilion-hue: 16;
+--vermilion1-hsl: 21, 100%, 23%;
+--vermilion2-hsl: 18, 100%, 31%;
+--vermilion3-hsl: 16, 100%, 41%;
+--vermilion4-hsl: 19, 84%, 52%;
+--vermilion5-hsl: 18, 91%, 63%;
+
+--red-hue:    0; // CORE //
+--red1-hsl:   2,  69%, 29%;
+--red2-hsl: 360,  76%, 38%;
+--red3-hsl: 354,  91%, 46%;
+--red4-hsl:   4,  96%, 62%;
+--red5-hsl:   7, 100%, 70%;
+
+--rose-hue:  337;
+--rose1-hsl: 343,  62%, 29%;
+--rose2-hsl: 340,  72%, 38%;
+--rose3-hsl: 337,  83%, 46%;
+--rose4-hsl: 341, 100%, 62%;
+--rose5-hsl: 346, 100%, 72%;
+
+--violet-hue:  282;
+--violet1-hsl: 277, 53%, 32%;
+--violet2-hsl: 279, 58%, 43%;
+--violet3-hsl: 282, 66%, 53%;
+--violet4-hsl: 285, 65%, 64%;
+--violet5-hsl: 289, 62%, 70%;
+
+--indigo-hue:  255;
+--indigo1-hsl: 257, 54%, 37%;
+--indigo2-hsl: 256, 54%, 50%;
+--indigo3-hsl: 255, 94%, 64%;
+--indigo4-hsl: 252, 94%, 72%;
+--indigo5-hsl: 250, 96%, 78%;
+
+--blue-hue:  204; // CORE //
+--blue1-hsl: 204,  98%, 22%;
+--blue2-hsl: 204, 100%, 29%;
+--blue3-hsl: 204, 100%, 37%;
+--blue4-hsl: 204,  64%, 51%;
+--blue5-hsl: 204,  64%, 61%;
+
+--cobalt-hue:  214;
+--cobalt1-hsl: 214, 100%, 29%;
+--cobalt2-hsl: 214, 100%, 39%;
+--cobalt3-hsl: 214, 100%, 49%;
+--cobalt4-hsl: 207, 100%, 50%;
+--cobalt5-hsl: 211, 100%, 65%;
+
+--turquoise-hue:  173;
+--turquoise1-hsl: 174, 100%, 15%;
+--turquoise2-hsl: 173, 100%, 20%;
+--turquoise3-hsl: 173, 100%, 25%;
+--turquoise4-hsl: 172,  98%, 32%;
+--turquoise5-hsl: 171, 100%, 36%;
+
+--green-hue: 155; // CORE //
+--green1-hsl: 155, 100%, 15%;
+--green2-hsl: 153, 100%, 21%;
+--green3-hsl: 150, 100%, 26%;
+--green4-hsl: 152, 100%, 32%;
+--green5-hsl: 158,  99%, 36%;
+
+--forest-hue:  118;
+--forest1-hsl: 119, 90%, 15%;
+--forest2-hsl: 119, 91%, 21%;
+--forest3-hsl: 118, 93%, 26%;
+--forest4-hsl: 119, 91%, 33%;
+--forest5-hsl: 117, 62%, 45%;
+
+--lime-hue:  72;
+--lime1-hsl: 57, 100%, 14%;
+--lime2-hsl: 61, 100%, 18%;
+--lime3-hsl: 67, 100%, 23%;
+--lime4-hsl: 72,  97%, 30%;
+--lime5-hsl: 77,  98%, 35%;
+
+--gold-hue:  46;
+--gold1-hsl: 48,  71%, 17%;
+--gold2-hsl: 47,  83%, 23%;
+--gold3-hsl: 46,  99%, 27%;
+--gold4-hsl: 45, 100%, 35%;
+--gold5-hsl: 44,  99%, 41%;
+
+--orange-hue:  33; // CORE //
+--orange1-hsl: 36,  98%, 18%;
+--orange2-hsl: 34, 100%, 25%;
+--orange3-hsl: 33, 100%, 33%;
+--orange4-hsl: 31, 100%, 42%;
+--orange5-hsl: 29,  81%, 55%;
+
+--sepia-hue:  30;
+--sepia1-hsl: 29, 45%, 23%;
+--sepia2-hsl: 29, 45%, 31%;
+--sepia3-hsl: 30, 44%, 40%;
+--sepia4-hsl: 30, 31%, 52%;
+--sepia5-hsl: 30, 31%, 61%;
+
+}

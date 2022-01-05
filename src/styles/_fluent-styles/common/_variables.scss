@@ -1,0 +1,64 @@
+
+#{$root-selector}{
+
+/*! Variables */
+
+// see https://bitsofco.de/the-new-system-font-stack/
+--pt-font-family-sans:
+  "Segoe UI",
+  -apple-system,
+  "BlinkMacSystemFont",
+  "Roboto",
+  "Open Sans",
+  "Helvetica Neue",
+  "Icons16",
+  sans-serif;
+
+--pt-font-family-monospace:
+  Monaco,
+  Menlo,
+  Consolas,
+  "Droid Sans Mono",
+  Inconsolata,
+  "Courier New",
+  monospace;
+
+--pt-border-radius: 2px;
+
+
+
+// Shadow opacities
+// --pt-border-shadow-opacity:      0.1;
+--pt-drop-shadow-opacity:        0.11;
+// --pt-dark-border-shadow-opacity: 0.2; // $pt-border-shadow-opacity * 2;*/
+// --pt-dark-drop-shadow-opacity:   0.4; // $pt-drop-shadow-opacity * 2;*/
+
+--pt-shadow-color-hsl: var(--black-hsl);
+--pt-dark-shadow-color-hsl: var(--black-hsl);
+
+// Elevations
+// all shadow lists must be the same length to avoid flicker in transitions.
+// https://developer.microsoft.com/en-us/fluentui#/styles/web/elevation
+--pt-elevation-shadow-0:
+  0 0 0 0 hsla(var(--pt-shadow-color-hsl), 0%),
+  0 0 0 0 hsla(var(--pt-shadow-color-hsl), 0%);
+--pt-elevation-shadow-1:
+  0 1.6px 3.6px 0 hsla(var(--pt-shadow-color-hsl), 13%),
+  0 0.3px 0.9px 0 hsla(var(--pt-shadow-color-hsl), 11%);
+--pt-elevation-shadow-2:
+  0 3.2px 7.2px 0 hsla(var(--pt-shadow-color-hsl), 13%),
+  0 0.6px 1.8px 0 hsla(var(--pt-shadow-color-hsl), 11%);
+--pt-elevation-shadow-3:
+  0 6.4px 14.4px 0 hsla(var(--pt-shadow-color-hsl), 13%),
+  0 1.2px 3.6px 0 hsla(var(--pt-shadow-color-hsl), 11%);
+--pt-elevation-shadow-4:
+  0 25.6px 57.6px 0 hsla(var(--pt-shadow-color-hsl), 22%),
+  0 4.8px 14.4px 0 hsla(var(--pt-shadow-color-hsl), 18%);
+
+--pt-dark-elevation-shadow-0: var(--pt-elevation-shadow-0);
+--pt-dark-elevation-shadow-1: var(--pt-elevation-shadow-1);
+--pt-dark-elevation-shadow-2: var(--pt-elevation-shadow-2);
+--pt-dark-elevation-shadow-3: var(--pt-elevation-shadow-3);
+--pt-dark-elevation-shadow-4: var(--pt-elevation-shadow-4);
+
+}

@@ -16,10 +16,6 @@ export const styleManifest: {
         Component: React.lazy(() => import('./_default-styles')),
         label: 'Default',
     },
-    PnnlStyles: {
-        Component: React.lazy(() => import('./_pnnl-v3-styles')),
-        label: 'PNNL v3',
-    },
     FlatStyles: {
         Component: React.lazy(() => import('./_flat-styles')),
         label: 'Flat',
@@ -31,6 +27,14 @@ export const styleManifest: {
     AntdStyles: {
         Component: React.lazy(() => import('./_antd-styles')),
         label: 'Ant Design',
+    },
+    FluentStyles: {
+        Component: React.lazy(() => import('./_fluent-styles')),
+        label: 'Microsoft Fluent (beta)',
+    },
+    PnnlStyles: {
+        Component: React.lazy(() => import('./_pnnl-v3-styles')),
+        label: 'PNNL v3 (beta)',
     },
     /* // add new styles here...
     ThemeNameStyles: {

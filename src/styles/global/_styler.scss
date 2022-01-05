@@ -79,6 +79,11 @@ $menu-vert-padding: 4rem;
     text-decoration: none;
   }
 }
+.styler-menu__group-button{
+  justify-content: flex-start;
+  margin-bottom: 2px;
+  font-weight: var(--font-weight-bold);
+}
 
 .styler-examples{
   padding: 1.5rem;
