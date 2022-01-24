@@ -37,13 +37,8 @@ function BlueprintStylerApp() {
 
     // theme
     const [theme, setTheme] = useState(getTheme())
-    const useDarkTheme = theme === DARK_THEME;
-    const data: IBlueprintExampleData = useMemo(() => ({ themeName: useDarkTheme ? DARK_THEME : LIGHT_THEME }), [useDarkTheme]) // { themeName: getTheme() }
-    useEffect(() => {
-        const notThemeName = data.themeName === LIGHT_THEME ? DARK_THEME : LIGHT_THEME
-        document.documentElement.classList.add(data.themeName)
-        document.documentElement.classList.remove(notThemeName)
-    }, [data])
+    const isDarkTheme = theme === DARK_THEME;
+    const data: IBlueprintExampleData = useMemo(() => ({ themeName: isDarkTheme ? DARK_THEME : LIGHT_THEME }), [isDarkTheme]) // { themeName: getTheme() }
 
 
     // style
@@ -89,8 +84,8 @@ function BlueprintStylerApp() {
                         />
 
                         <Button
-                            rightIcon={useDarkTheme ? "flash" : "moon"}
-                            text={useDarkTheme ? "Light theme" : "Dark theme"}
+                            rightIcon={isDarkTheme ? "flash" : "moon"}
+                            text={isDarkTheme ? "Light theme" : "Dark theme"}
                             onClick={() => handleThemeChange(theme, setTheme)}
                             style={{ justifyContent: 'space-between', marginBottom: 8 }}
                             fill
