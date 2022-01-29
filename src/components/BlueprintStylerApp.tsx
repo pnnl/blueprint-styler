@@ -59,7 +59,7 @@ function BlueprintStylerApp() {
 
                     <header className="styler-menu__header">
 
-                        <h3
+                        <h4
                             className={Classes.HEADING}
                             style={{ marginBottom: 32 }}
                         >
@@ -73,7 +73,7 @@ function BlueprintStylerApp() {
                                     Blueprint<br />Styler
                                 </span>
                             </a>
-                        </h3>
+                        </h4>
 
                         <HTMLSelect
                             options={styleSwitcherOptionProps}
@@ -158,6 +158,30 @@ function BlueprintStylerApp() {
                 </section>
 
                 <main className="styler-examples">
+                    <section>
+                        <h1 className={`styler-section-header ${Classes.HEADING}`}>
+                            Blueprint Styler
+                        </h1>
+                        <p>
+                            Create custom global styles for{' '}
+                            <a href="https://blueprintjs.com/docs/" {...linkProps} >
+                                Blueprint js Components
+                            </a>{' '}
+                            using css{' '}
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/--*" {...linkProps} >
+                                <code>--custom-properties</code>
+                            </a>
+                        </p>
+                        <p>
+                            <a href={'https://github.com/pnnl/blueprint-styler'} {...linkProps} >
+                                GitHub Repo
+                            </a>
+                            {' | '}
+                            <a href={'https://www.npmjs.com/package/blueprint-styler'} {...linkProps} >
+                                npm
+                            </a>
+                        </p>
+                    </section>
                     {allExamples.map(([componentGroupTitle, componentGroup]) => (
                         <section key={componentGroupTitle}>
                             <h3 className={`styler-section-header ${Classes.HEADING}`}>
