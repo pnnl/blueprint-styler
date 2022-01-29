@@ -9,7 +9,7 @@
   },
   "license": "BSD-3-Clause",
   "homepage": "https://pnnl.github.io/blueprint-styler",
-  "main": "./dist/index.html",
+  "main": "./build/index.html",
   "files": [
     "/lib",
     "/src/styles/**/*.scss"
@@ -61,6 +61,7 @@
     "@types/react-dom": "^17.0.9",
     "copyfiles": "^2.4.1",
     "cssnano": "^5.0.8",
+    "gh-pages": "^3.2.3",
     "gulp": "^4.0.2",
     "gulp-cssbeautify": "^3.0.0",
     "gulp-postcss": "^9.0.1",
@@ -98,8 +99,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "dependencies": {
-    "gh-pages": "^3.2.3"
   }
 }

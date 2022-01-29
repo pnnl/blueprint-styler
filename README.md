@@ -88,14 +88,14 @@ Modification to the original @blueprint scss files:
 ## Updating Blueprint Source Files
 Updating `./src/styles/_default-var-styles/@blueprintjs/` and `./src/examples` to the latest Blueprint involves an intermediary `develop-copy-only` branch to merge.
 
-- The `development-copy-only` branch manually copies blueprint css and the examples from docs into the `./src` locations via a `yarn run copy` command
-- Then `development-copy-only` is merged into `development` so that changes to the modified `@blueprintjs` can be tracked and any conflicts resolved
-- `development` change are never meant to be merged back into `development-copy-only`
+- The `develop-copy-only` branch manually copies blueprint css and the examples from docs into the `./src` locations via a `yarn run copy` command
+- Then `develop-copy-only` is merged into `develop` so that changes to the modified `@blueprintjs` can be tracked and any conflicts resolved
+- `develop` change are never meant to be merged back into `develop-copy-only`
 
 ```
-development-copy-only    0–––1–––––––4–––––––--->
-                              \       \
-development                    2–––3–––5–––6–--->
+develop-copy-only    0–––1–––––––4–––––––--->
+                          \       \
+develop                    2–––3–––5–––6–--->
 ```
 
 This is not a great solution, open to suggestions for improvements.

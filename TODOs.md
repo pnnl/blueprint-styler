@@ -1,9 +1,6 @@
 # TODO:
 
 ## App tool
-- Publish beta of v3.x
-- Change project name to blueprintjs-styler?... add 'js' because thats how its namespaced on npm: [@blueprintjs](https://www.npmjs.com/package/@blueprintjs/core)
-  - maybe its better to not affiliate the official blueprint project with this one
 - Sections:
   - for each style: add a customizable readme component that renders at the top
 - Navigation
@@ -20,7 +17,7 @@
 - Themes are individually published packages - with font dependencies? - monorepo?
   - Add a dependency on the core repo,
   - Generate new style: `$ npm run new-style <style-name>`
-  - build it and publish it under `@blueprintjs-style/<style-name>`
+  - build it and publish it under `@blueprint-styler/<style-name>`
 
 
 ## Styles
