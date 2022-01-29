@@ -9,8 +9,9 @@
 # testing
 /coverage
 
-# production # we want to host from the repo
-# /build
+# production
+/build
+/lib
 
 # misc
 .DS_Store
