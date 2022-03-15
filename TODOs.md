@@ -1,6 +1,7 @@
 # TODO:
 
 ## App tool
+- colors in 'default' css...
 - Sections:
   - for each style: add a customizable readme component that renders at the top
 - Navigation
@@ -46,8 +47,8 @@
   - bugs with icon color in input? or something like that
 - [Microsoft Fluent](https://developer.microsoft.com/en-us/fluentui#/controls/web)
   - [Theme Designer](https://fabricweb.z5.web.core.windows.net/pr-deploy-site/refs/heads/master/theming-designer/)
+  - [Colors](https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/shared)
   - slider
-  - [colors](https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/shared)
 - [PNNL v2](https://forge.pnl.gov/standards/) & [PNNL v3](https://forgedev.pnnl.gov/prc3/)
 - [Shopify Polaris](https://polaris.shopify.com/components/actions/button#navigation) v5 & v6
 - Serberus - Burgundy Theme
