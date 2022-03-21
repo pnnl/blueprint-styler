@@ -9,7 +9,7 @@ other answers:
 
 I found a (sort of) reasonable way to do this in React. In short, you can [lazy-load React components](https://reactjs.org/docs/code-splitting.html#reactlazy) that contain the `import './style.css'`, and when it loads, you can capture the imported [StyleSheet](https://developer.mozilla.org/en-US/docs/Web/API/StyleSheet) to toggle its [StyleSheet.disabled](https://developer.mozilla.org/en-US/docs/Web/API/StyleSheet/disabled) property later.
 
-Here's the main code, with more explanation below. Here's my [Gist](https://gist.github.com/arniebradfo/dc1dcb0793108cfc4cfca).
+Here's the main code, with more explanation below. Here's my [Gist](https://gist.github.com/arniebradfo/dc1dcb0793108cfc4cfca8faf0cb15d3).
 
 ### `useDisableImportedStyles.tsx`
 ```ts
