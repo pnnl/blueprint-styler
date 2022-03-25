@@ -12,9 +12,18 @@
   - vars editing
   - make a custom theme and export it
 - js generator of color vars - [hsluv](https://www.hsluv.org/)!
+
+
+## Build
 - CSS Build
+  - opacity with [#RRGGBBAA](https://caniuse.com/css-rrggbbaa) like
+    - `--color-blue: #0000FF; --opacity-50: 99; color: var(--color-blue)var(--opacity-50);`
+  - just replace all $vars with --vars? after copy
+  - themes are just the modifications to the base theme and the new vars - not an entirely different css file
+  - switch themes with a body theme class rather than with React.Lazy
+    - this theme could add another level of specificity for overrides?
   - separate different packages on build - core, selection, table, etc...
-  - export a font file
+  - export a font file for each theme
 - Themes are individually published packages - with font dependencies? - monorepo?
   - Add a dependency on the core repo,
   - Generate new style: `$ npm run new-style <style-name>`
@@ -54,11 +63,13 @@
 - [Shopify Polaris](https://polaris.shopify.com/components/actions/button#navigation) v5 & v6
 - Serberus - Burgundy Theme
 - [Google Material](https://material.io/components)
+  - Catalyst
 - [Adobe Spectrum](https://spectrum.adobe.com/)
 - [Amazon AWS](https://abduzeedo.com/amazon-web-services-design-system)
 - [Apple HMI](https://developer.apple.com/design/human-interface-guidelines/)
 - [Wordpress](https://make.wordpress.org/design/)?
 - [REI Cedar](https://rei.github.io/rei-cedar-docs/)
+- [Kaizen](https://cultureamp.design/components/overview/)
 - Maybe themes that are just colors and fonts?
   - something fancy? serif fonts and such...
 
