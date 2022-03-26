@@ -43,7 +43,7 @@
     "@blueprintjs/popover2": "^1.0.1",
     "@blueprintjs/select": "^4.0.1",
     "@blueprintjs/table": "^4.0.1",
-    "@blueprintjs/timezone": "^4.0.1",
+    "@blueprintjs/timezone": "^4.0.1"
   },
   "devDependencies": {
     "@blueprintjs/core": "^3.50.4",
