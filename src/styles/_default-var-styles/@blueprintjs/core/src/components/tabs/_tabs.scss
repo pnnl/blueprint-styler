@@ -45,13 +45,13 @@ $tab-indicator-width: 3px !default;
       width: 100%;
 
       &[aria-selected="true"] {
-        background-color: hslax(var(--pt-intent-primary-hsl), 0.2);
+        background-color: hslax($pt-intent-primary, 0.2);
         box-shadow: none;
       }
     }
 
     .#{$ns}-tab-indicator-wrapper .#{$ns}-tab-indicator {
-      background-color: hslax(var(--pt-intent-primary-hsl), 0.2);
+      background-color: hslax($pt-intent-primary, 0.2);
       border-radius: $pt-border-radius;
       bottom: 0;
       height: auto;

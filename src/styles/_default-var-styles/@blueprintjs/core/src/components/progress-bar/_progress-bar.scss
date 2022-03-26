@@ -27,7 +27,7 @@ Markup:
 Styleguide progress-bar
 */
 
-$progress-bar-stripes-color: hslax(var(--white-hsl), 0.2) !default;
+$progress-bar-stripes-color: hslax($white, 0.2) !default;
 
 $progress-bar-height: round($pt-grid-size * 0.8) !default;
 $progress-bar-stripes-size: $pt-grid-size * 3 !default;

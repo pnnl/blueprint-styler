@@ -57,19 +57,26 @@
 --indigo4-hsl: var(--indigo-hue), 82%, 71%;
 --indigo5-hsl: var(--indigo-hue), 100%, 80%;
 
---cobalt-hue: 218;
---cobalt1-hsl: var(--cobalt-hue), 66%, 36%;
---cobalt2-hsl: var(--cobalt-hue), 67%, 42%;
---cobalt3-hsl: var(--cobalt-hue), 67%, 48%;
---cobalt4-hsl: var(--cobalt-hue), 76%, 59%;
---cobalt5-hsl: var(--cobalt-hue), 100%, 70%;
+--cobalt-hue: var(--blue-hue); // cobalt is gone as of v4 //
+--cobalt1-hsl: var(--blue1-hsl);
+--cobalt2-hsl: var(--blue2-hsl);
+--cobalt3-hsl: var(--blue3-hsl);
+--cobalt4-hsl: var(--blue4-hsl);
+--cobalt5-hsl: var(--blue5-hsl);
 
---blue-hue: 203; // CORE //
---blue1-hsl: var(--blue-hue), 82%, 30%;
---blue2-hsl: var(--blue-hue), 82%, 35%;
---blue3-hsl: var(--blue-hue), 82%, 41%;
---blue4-hsl: var(--blue-hue), 68%, 50%;
---blue5-hsl: var(--blue-hue), 85%, 61%;
+--blue-hue: 215; // CORE // was cobalt in v3
+--blue1-hsl: var(--blue-hue), 71%, 33%;
+--blue2-hsl: var(--blue-hue), 68%, 41%;
+--blue3-hsl: var(--blue-hue), 65%, 50%;
+--blue4-hsl: var(--blue-hue), 85%, 62%;
+--blue5-hsl: var(--blue-hue), 100%, 77%;
+
+--cerulean-hue: 203; // was blue in v3
+--cerulean1-hsl: var(--cerulean-hue), 82%, 30%;
+--cerulean2-hsl: var(--cerulean-hue), 82%, 35%;
+--cerulean3-hsl: var(--cerulean-hue), 82%, 41%;
+--cerulean4-hsl: var(--cerulean-hue), 68%, 50%;
+--cerulean5-hsl: var(--cerulean-hue), 85%, 61%;
 
 --turquoise-hue: 175;
 --turquoise1-hsl: var(--turquoise-hue), 100%, 25%;
@@ -177,6 +184,11 @@ $colorsList:
   blue3,
   blue4,
   blue5,
+  cerulean1,
+  cerulean2,
+  cerulean3,
+  cerulean4,
+  cerulean5,
   turquoise1,
   turquoise2,
   turquoise3,

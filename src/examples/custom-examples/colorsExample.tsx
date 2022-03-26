@@ -126,19 +126,26 @@ const colorSets: ColorSet = [
         '--indigo4',
         '--indigo5',
     ]],
-    ['Cobalt', [
-        '--cobalt1',
-        '--cobalt2',
-        '--cobalt3',
-        '--cobalt4',
-        '--cobalt5',
-    ]],
+    // ['Cobalt', [
+    //     '--cobalt1',
+    //     '--cobalt2',
+    //     '--cobalt3',
+    //     '--cobalt4',
+    //     '--cobalt5',
+    // ]],
     ['Blue', [
         '--blue1',
         '--blue2',
         '--blue3',
         '--blue4',
         '--blue5',
+    ]],
+    ['Cerulean', [
+        '--cerulean1',
+        '--cerulean2',
+        '--cerulean3',
+        '--cerulean4',
+        '--cerulean5',
     ]],
     ['Turquoise', [
         '--turquoise1',

@@ -23,10 +23,10 @@ $button-active-minimal-intent-text-modern: (
 );
 
 $dark-minimal-button-intents-modern: (
-  "primary": (hslax(var(--blue3-hsl), 0.2), $blue5, hslax(var(--blue3-hsl), 0.3), $blue6),
-  "success": (hslax(var(--green3-hsl), 0.2), $green5, hslax(var(--green3-hsl), 0.3), $green6),
-  "warning": (hslax(var(--orange3-hsl), 0.2), $orange5, hslax(var(--orange3-hsl), 0.3), $orange6),
-  "danger": (hslax(var(--red3-hsl), 0.2), $red5, hslax(var(--red3-hsl), 0.3), $red6)
+  "primary": (hslax($blue3, 0.2), $blue5, hslax($blue3, 0.3), $blue6),
+  "success": (hslax($green3, 0.2), $green5, hslax($green3, 0.3), $green6),
+  "warning": (hslax($orange3, 0.2), $orange5, hslax($orange3, 0.3), $orange6),
+  "danger": (hslax($red3, 0.2), $red5, hslax($red3, 0.3), $red6)
 );
 
 // Editable text variable overrides
@@ -35,11 +35,11 @@ $dark-input-placeholder-color: $gray4;
 
 // Slider variable overrides
 $button-box-shadow-overlay:
-  0 0 0 1px hslax(var(--black-hsl), 0.5),
-  0 1px 1px hslax(var(--black-hsl), 0.5);
+  0 0 0 1px hslax($black, 0.5),
+  0 1px 1px hslax($black, 0.5);
 
 // Switch variable overrides
-$switch-indicator-background-color: hslax(var(--gray3-hsl), 0.3);
+$switch-indicator-background-color: hslax($gray3, 0.3);
 $switch-checked-background-color-hover: $blue2;
 $switch-checked-background-color-active: $blue1;
 
@@ -67,10 +67,10 @@ $minimal-dark-tag-intent-colors-modern: (
 
 // Toast variables
 $toast-intent-button-colors-modern: (
-  "primary": ($pt-intent-primary, $white, $blue2, $blue1, hslax(var(--white-hsl), 0.7)),
-  "success": ($pt-intent-success, $white, $green2, $green1, hslax(var(--white-hsl), 0.7)),
-  "warning": ($orange5, $dark-gray1, $orange4, $orange3, hslax(var(--dark-gray1-hsl), 0.7)),
-  "danger": ($pt-intent-danger, $white, $red2, $red1, hslax(var(--white-hsl), 0.7))
+  "primary": ($pt-intent-primary, $white, $blue2, $blue1, hslax($white, 0.7)),
+  "success": ($pt-intent-success, $white, $green2, $green1, hslax($white, 0.7)),
+  "warning": ($orange5, $dark-gray1, $orange4, $orange3, hslax($dark-gray1, 0.7)),
+  "danger": ($pt-intent-danger, $white, $red2, $red1, hslax($white, 0.7))
 );
 
 // Tree variables
@@ -104,10 +104,10 @@ $tree-intent-icon-colors-modern: (
 
 // Contrast for breadcrumbs
 .#{$ns}-breadcrumbs-collapsed {
-  background: hslax(var(--gray3-hsl), 0.15);
+  background: hslax($gray3, 0.15);
 
   &:hover {
-    background: hslax(var(--gray3-hsl), 0.3);
+    background: hslax($gray3, 0.3);
   }
 }
 
@@ -119,14 +119,14 @@ $tree-intent-icon-colors-modern: (
     }
   }
   .#{$ns}-breadcrumbs-collapsed {
-    background: hslax(var(--gray3-hsl), 0.2);
+    background: hslax($gray3, 0.2);
 
     &::before {
       background: svg-icon("16px/more.svg", (circle: (fill: $pt-dark-icon-color))) center no-repeat;
     }
 
     &:hover {
-      background: hslax(var(--gray3-hsl), 0.3);
+      background: hslax($gray3, 0.3);
     }
   }
 }
@@ -139,7 +139,7 @@ $tree-intent-icon-colors-modern: (
     color: $pt-text-color;
 
     &:not(.#{$ns}-disabled).#{$ns}-icon > svg {
-      fill: hslax(var(--dark-gray1-hsl), 0.7);
+      fill: hslax($dark-gray1, 0.7);
     }
 
     &:not(.#{$ns}-disabled):not(.#{$ns}-minimal):not(.#{$ns}-outlined) {
@@ -157,11 +157,11 @@ $tree-intent-icon-colors-modern: (
 
     &:disabled,
     &.#{$ns}-disabled {
-      background: hslax(var(--orange3-hsl), 0.5);
-      color: hslax(var(--dark-gray1-hsl), 0.35);
+      background: hslax($orange3, 0.5);
+      color: hslax($dark-gray1, 0.35);
 
       .#{$ns}-dark & {
-        color: hslax(var(--dark-gray1-hsl), 0.6);
+        color: hslax($dark-gray1, 0.6);
       }
     }
 
@@ -208,10 +208,10 @@ $tree-intent-icon-colors-modern: (
 
 // Contrast for callouts
 .#{$ns}-callout {
-  background-color: hslax(var(--gray3-hsl), 0.15);
+  background-color: hslax($gray3, 0.15);
 
   .#{$ns}-dark & {
-    background-color: hslax(var(--gray3-hsl), 0.2);
+    background-color: hslax($gray3, 0.2);
 
     &.#{$ns}-callout-icon:not([class*="#{$ns}-intent-"]) > .#{$ns}-icon:first-child {
       color: $pt-dark-icon-color;
@@ -220,10 +220,10 @@ $tree-intent-icon-colors-modern: (
 
   @each $intent, $color in $pt-intent-colors {
     &.#{$ns}-intent-#{$intent} {
-      background-color: hslax(var(--color-hsl), 0.1);
+      background-color: hslax($color, 0.1);
 
       .#{$ns}-dark & {
-        background-color: hslax(var(--color-hsl), 0.2);
+        background-color: hslax($color, 0.2);
       }
     }
   }
@@ -235,19 +235,19 @@ $tree-intent-icon-colors-modern: (
 table.#{$ns}-html-table {
   &.#{$ns}-html-table-striped {
     tbody tr:nth-child(odd) td {
-      background: hslax(var(--gray3-hsl), 0.15);
+      background: hslax($gray3, 0.15);
     }
   }
 
   &.#{$ns}-interactive {
     tbody tr {
       &:hover td {
-        background-color: hslax(var(--gray3-hsl), 0.3);
+        background-color: hslax($gray3, 0.3);
         cursor: pointer;
       }
 
       &:active td {
-        background-color: hslax(var(--gray3-hsl), 0.35);
+        background-color: hslax($gray3, 0.35);
       }
     }
   }
@@ -269,7 +269,7 @@ table.#{$ns}-html-table {
     &:active,
     &.#{$ns}-active {
       background:
-        linear-gradient(0deg, hslax(var(--white-hsl), 0.1), hslax(var(--white-hsl), 0.1)),
+        linear-gradient(0deg, hslax($white, 0.1), hslax($white, 0.1)),
         linear-gradient(0deg, $gray2, $gray2);
     }
   }
@@ -358,12 +358,12 @@ table.#{$ns}-html-table {
 
       &.#{$ns}-interactive {
         &:hover {
-          background-color: hslax(var(--background-color-hsl), 0.3);
+          background-color: hslax($background-color, 0.3);
           color: $hover-text-color;
         }
 
         &:active {
-          background-color: hslax(var(--background-color-hsl), 0.35);
+          background-color: hslax($background-color, 0.35);
           color: $active-text-color;
         }
       }
@@ -404,7 +404,7 @@ table.#{$ns}-html-table {
   }
 
   .#{$ns}-tag-remove > .#{$ns}-icon:first-child {
-    color: hslax(var(--white-hsl), 0.7);
+    color: hslax($white, 0.7);
 
     &:hover {
       color: $white;
@@ -431,7 +431,7 @@ table.#{$ns}-html-table {
     }
 
     .#{$ns}-tag-remove > .#{$ns}-icon:first-child {
-      color: hslax(var(--dark-gray1-hsl), 0.7);
+      color: hslax($dark-gray1, 0.7);
 
       &:hover {
         color: $dark-gray1;
@@ -453,17 +453,17 @@ table.#{$ns}-html-table {
   // Minimal style contrast
   &.#{$ns}-minimal {
     // Minimal style for default intent
-    background-color: hslax(var(--gray3-hsl), 0.15);
+    background-color: hslax($gray3, 0.15);
     color: $pt-text-color;
 
     &.#{$ns}-interactive {
       &:hover {
-        background-color: hslax(var(--gray3-hsl), 0.3);
+        background-color: hslax($gray3, 0.3);
         color: $black;
       }
 
       &:active {
-        background-color: hslax(var(--gray3-hsl), 0.35);
+        background-color: hslax($gray3, 0.35);
         color: $black;
       }
     }
@@ -482,17 +482,17 @@ table.#{$ns}-html-table {
 
     // Minimal dark style for default intent
     .#{$ns}-dark & {
-      background-color: hslax(var(--gray3-hsl), 0.15);
+      background-color: hslax($gray3, 0.15);
       color: $light-gray1;
 
       &.#{$ns}-interactive {
         &:hover {
-          background-color: hslax(var(--gray3-hsl), 0.3);
+          background-color: hslax($gray3, 0.3);
           color: $white;
         }
 
         &:active {
-          background-color: hslax(var(--gray3-hsl), 0.35);
+          background-color: hslax($gray3, 0.35);
           color: $white;
         }
       }
@@ -554,7 +554,7 @@ table.#{$ns}-html-table {
       }
 
       &:last-child > .#{$ns}-icon-cross {
-        color: hslax(var(--text-color-hsl), 0.7) !important;
+        color: hslax($text-color, 0.7) !important;
       }
     }
   }
@@ -567,7 +567,7 @@ table.#{$ns}-html-table {
     &.#{$ns}-dark,
     .#{$ns}-dark & {
       .#{$ns}-button .#{$ns}-icon {
-        color: hslax(var(--white-hsl), 0.7);
+        color: hslax($white, 0.7);
       }
     }
   }
@@ -589,11 +589,11 @@ table.#{$ns}-html-table {
   background: none;
 
   &:hover {
-    background-color: hslax(var(--gray3-hsl), 0.15);
+    background-color: hslax($gray3, 0.15);
   }
 
   &:active {
-    background-color: hslax(var(--gray3-hsl), 0.3);
+    background-color: hslax($gray3, 0.3);
   }
 
   .#{$ns}-dark & .#{$ns}-icon {

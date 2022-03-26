@@ -20,9 +20,9 @@ $control-checked-background-color-active: nth(map-get($button-intents, "primary"
 $control-checked-background-color-disabled: hslax($control-checked-background-color-hsl, 0.5) !default;
 
 $control-box-shadow: inset 0 0 0 $button-border-width $gray2 !default;
-$control-checked-box-shadow: inset 0 0 0 $button-border-width hslax(var(--black-hsl), 0.2) !default;
+$control-checked-box-shadow: inset 0 0 0 $button-border-width hslax($black, 0.2) !default;
 $dark-control-box-shadow: inset 0 0 0 $button-border-width $gray3 !default;
-$dark-control-checked-box-shadow: inset 0 0 0 $button-border-width hslax(var(--white-hsl), 0.1) !default;
+$dark-control-checked-box-shadow: inset 0 0 0 $button-border-width hslax($white, 0.1) !default;
 
 $control-indicator-size: $pt-icon-size-standard !default;
 $control-indicator-size-large: $pt-icon-size-large !default;
@@ -47,7 +47,7 @@ $control-indicator-spacing: $pt-grid-size !default;
   input:disabled#{$selector} ~ .#{$ns}-control-indicator {
     background: $control-checked-background-color-disabled;
     box-shadow: none;
-    color: hslax(var(--white-hsl), 0.6);
+    color: hslax($white, 0.6);
   }
 
   /* .#{$ns}-dark & {
@@ -68,7 +68,7 @@ $control-indicator-spacing: $pt-grid-size !default;
     input:disabled#{$selector} ~ .#{$ns}-control-indicator {
       background: $control-checked-background-color-disabled;
       box-shadow: none;
-      color: hslax(var(--white-hsl), 0.6);
+      color: hslax($white, 0.6);
     }
   } */
 }
@@ -303,37 +303,37 @@ $control-indicator-spacing: $pt-grid-size !default;
   $switch-text-color: $pt-text-color !default;
   $switch-text-color-disabled: $pt-text-color-disabled !default;
   $switch-checked-text-color: $white !default;
-  $switch-checked-text-color-disabled: hslax(var(--white-hsl), 0.6) !default;
-  $switch-background-color: hslax(var(--gray3-hsl), 0.3) !default;
-  $switch-background-color-hover: hslax(var(--gray3-hsl), 0.4) !default;
-  $switch-background-color-active: hslax(var(--gray3-hsl), 0.5) !default;
-  $switch-background-color-disabled: hslax(var(--gray3-hsl), 0.15) !default;
+  $switch-checked-text-color-disabled: hslax($white, 0.6) !default;
+  $switch-background-color: hslax($gray3, 0.3) !default;
+  $switch-background-color-hover: hslax($gray3, 0.4) !default;
+  $switch-background-color-active: hslax($gray3, 0.5) !default;
+  $switch-background-color-disabled: hslax($gray3, 0.15) !default;
   $switch-checked-background-color: $control-checked-background-color !default;
   $switch-checked-background-color-hover: $control-checked-background-color-hover !default;
   $switch-checked-background-color-active: $control-checked-background-color-active !default;
-  $switch-checked-background-color-disabled: hslax(var(--blue3-hsl), 0.5) !default;
+  $switch-checked-background-color-disabled: hslax($blue3, 0.5) !default;
 
   $dark-switch-text-color: $pt-dark-text-color !default;
   $dark-switch-text-color-disabled: $pt-dark-text-color-disabled !default;
   $dark-switch-checked-text-color: $white !default;
   $dark-switch-checked-text-color-disabled: $pt-dark-text-color-disabled !default;
-  $dark-switch-background-color: hslax(var(--black-hsl), 0.5) !default;
-  $dark-switch-background-color-hover: hslax(var(--black-hsl), 0.8) !default;
-  $dark-switch-background-color-active: hslax(var(--black-hsl), 0.9) !default;
-  $dark-switch-background-color-disabled: hslax(var(--gray3-hsl), 0.15) !default;
+  $dark-switch-background-color: hslax($black, 0.5) !default;
+  $dark-switch-background-color-hover: hslax($black, 0.8) !default;
+  $dark-switch-background-color-active: hslax($black, 0.9) !default;
+  $dark-switch-background-color-disabled: hslax($gray3, 0.15) !default;
   $dark-switch-checked-background-color: $control-checked-background-color !default;
   $dark-switch-checked-background-color-hover: $control-checked-background-color-hover !default;
   $dark-switch-checked-background-color-active: $control-checked-background-color-active !default;
-  $dark-switch-checked-background-color-disabled: hslax(var(--blue3-hsl), 0.5) !default;
+  $dark-switch-checked-background-color-disabled: hslax($blue3, 0.5) !default;
 
   $switch-indicator-background-color: $white !default;
-  $switch-indicator-box-shadow: 0 0 0 $button-border-width hslax(var(--black-hsl), 0.5) !default;
-  $switch-indicator-background-color-disabled: hslax(var(--white-hsl), 0.8) !default;
-  $switch-checked-indicator-background-color-disabled: hslax(var(--white-hsl), 0.5) !default;
+  $switch-indicator-box-shadow: 0 0 0 $button-border-width hslax($black, 0.5) !default;
+  $switch-indicator-background-color-disabled: hslax($white, 0.8) !default;
+  $switch-checked-indicator-background-color-disabled: hslax($white, 0.5) !default;
   $dark-switch-indicator-background-color: $gray4 !default;
-  $dark-switch-indicator-background-color-disabled: hslax(var(--gray4-hsl), 0.5) !default;
+  $dark-switch-indicator-background-color-disabled: hslax($gray4, 0.5) !default;
   $dark-switch-checked-indicator-background-color: $white !default;
-  $dark-switch-checked-indicator-background-color-disabled: hslax(var(--white-hsl), 0.3) !default;
+  $dark-switch-checked-indicator-background-color-disabled: hslax($white, 0.3) !default;
 
   &.#{$ns}-switch {
     @mixin indicator-colors(

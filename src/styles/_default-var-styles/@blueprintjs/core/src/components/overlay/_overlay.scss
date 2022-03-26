@@ -3,7 +3,7 @@
 
 @import "../../common/variables";
 
-$overlay-background-color: hslax(var(--black-hsl), 0.7) !default;
+$overlay-background-color: hslax($black, 0.7) !default;
 
 // restricts scrolling of underlying content while the overlay is open
 body.#{$ns}-overlay-open {

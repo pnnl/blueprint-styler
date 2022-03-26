@@ -5,7 +5,7 @@
 --pt-input-box-shadow:  inset 0 0 0 1px var(--button-outlined-border-color);
 --pt-dark-input-box-shadow: inset 0 0 0 1px var(--button-outlined-border-color);
 
-// --input-box-shadow-focus: inset 0 0 0 2px hslax(var(--input-shadow-color-focus-hsl), 1); // custom
+// --input-box-shadow-focus: inset 0 0 0 2px hslax($input-shadow-color-focus, 1); // custom
 
 }
 // var(--button-outlined-border-color)
@@ -13,7 +13,7 @@
   box-shadow: inset 0 0 0 1px var(--button-outlined-border-color);
 
   &:focus, &.#{$ns}-active{
-   box-shadow: inset 0 0 0 2px hslax(var(--input-shadow-color-focus-hsl), 1);
+   box-shadow: inset 0 0 0 2px hslax($input-shadow-color-focus, 1);
   }
 }
 

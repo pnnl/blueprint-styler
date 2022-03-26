@@ -182,8 +182,8 @@
   .docs-hotkey-tester {
     @include pt-flex-container(column, $pt-grid-size);
     align-items: center;
-    background: rgba($gray3, 0.2);
-    border: 2px solid rgba($gray3, 0.8);
+    background: hslax($gray3, 0.2);
+    border: 2px solid hslax($gray3, 0.8);
     border-radius: $pt-border-radius * 2;
     flex: 1 1;
     justify-content: space-around;
@@ -199,15 +199,15 @@
     }
 
     &:focus {
-      background: rgba($blue3, 0.1);
-      border: 2px solid rgba($blue3, 0.6);
+      background: hslax($blue3, 0.1);
+      border: 2px solid hslax($blue3, 0.6);
       color: map-get($pt-intent-text-colors, "primary");
       cursor: default;
       opacity: 1;
 
       .#{$ns}-dark & {
-        background: rgba($blue4, 0.1);
-        border: 2px solid rgba($blue4, 0.6);
+        background: hslax($blue4, 0.1);
+        border: 2px solid hslax($blue4, 0.6);
         color: map-get($pt-dark-intent-text-colors, "primary");
       }
     }

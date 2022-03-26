@@ -131,10 +131,10 @@ Styleguide breadcrumbs
   }
 
   .#{$ns}-breadcrumbs-collapsed {
-    background: hslax(var(--black-hsl), 0.4);
+    background: hslax($black, 0.4);
 
     &:hover {
-      background: hslax(var(--black-hsl), 0.6);
+      background: hslax($black, 0.6);
       color: $pt-dark-text-color;
     }
   }

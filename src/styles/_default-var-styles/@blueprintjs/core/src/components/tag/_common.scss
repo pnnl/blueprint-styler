@@ -94,7 +94,7 @@ $tag-round-adjustment: 2px !default;
   &:not([class*="#{$ns}-intent-"]) {
     @include pt-tag-minimal-interactive($tag-default-color-hsl, 0.2);
 
-    background-color: hslax(var(--gray3-hsl), 0.2);
+    background-color: hslax($gray3, 0.2);
     color: $pt-text-color;
 
     /* .#{$ns}-dark & {

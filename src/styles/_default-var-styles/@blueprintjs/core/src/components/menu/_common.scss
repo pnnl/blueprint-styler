@@ -25,8 +25,8 @@ $menu-item-padding-vertical-large:
 $menu-background-color: $white !default;
 $dark-menu-background-color: $dark-gray4 !default;
 
-$menu-item-color-hover: hslax(var(--gray3-hsl), 0.15) !default;
-$menu-item-color-active: hslax(var(--gray3-hsl), 0.3) !default;
+$menu-item-color-hover: hslax($gray3, 0.15) !default;
+$menu-item-color-active: hslax($gray3, 0.3) !default;
 
 $menu-item-intent-colors: (
   "primary": (/* bg */ $blue3, /* fg */ $blue2, /* fg active */ $blue1),
@@ -237,18 +237,18 @@ $dark-menu-item-intent-colors: (
 
     &:hover {
       @if $is-dark {
-        background-color: hslax(var(--bg-color-hsl), 0.2);
+        background-color: hslax($bg-color, 0.2);
       } @else {
-        background-color: hslax(var(--bg-color-hsl), 0.1);
+        background-color: hslax($bg-color, 0.1);
       }
     }
 
     &:active,
     &.#{$ns}-active {
       @if $is-dark {
-        background-color: hslax(var(--bg-color-hsl), 0.3);
+        background-color: hslax($bg-color, 0.3);
       } @else {
-        background-color: hslax(var(--bg-color-hsl), 0.2);
+        background-color: hslax($bg-color, 0.2);
       }
       color: $fg-color-active;
     }

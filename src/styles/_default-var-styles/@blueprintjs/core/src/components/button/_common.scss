@@ -479,13 +479,13 @@ $button-intents: (
 }
 
 /* @mixin pt-dark-button-outlined() {
-  border-color: hslax(var(--white-hsl), 0.4);
+  border-color: hslax($white, 0.4);
 
   &:disabled,
   &:disabled:hover,
   &.#{$ns}-disabled,
   &.#{$ns}-disabled:hover {
-    border-color: hslax(var(--white-hsl), 0.2);
+    border-color: hslax($white, 0.2);
   }
 } */
 

@@ -123,7 +123,7 @@ table.#{$ns}-html-table {
 
   &.#{$ns}-html-table-striped {
     tbody tr:nth-child(odd) td {
-      background: hslax(var(--gray5-hsl), 0.15);
+      background: hslax($gray5, 0.15);
     }
   }
 
@@ -156,12 +156,12 @@ table.#{$ns}-html-table {
   &.#{$ns}-interactive {
     tbody tr {
       &:hover td {
-        background-color: hslax(var(--gray5-hsl), 0.3);
+        background-color: hslax($gray5, 0.3);
         cursor: pointer;
       }
 
       &:active td {
-        background-color: hslax(var(--gray5-hsl), 0.4);
+        background-color: hslax($gray5, 0.4);
       }
     }
   }
@@ -170,7 +170,7 @@ table.#{$ns}-html-table {
     // stylelint-disable selector-max-compound-selectors
     &.#{$ns}-html-table-striped {
       tbody tr:nth-child(odd) td {
-        background: hslax(var(--gray1-hsl), 0.15);
+        background: hslax($gray1, 0.15);
       }
     }
 
@@ -204,12 +204,12 @@ table.#{$ns}-html-table {
     &.#{$ns}-interactive {
       tbody tr {
         &:hover td {
-          background-color: hslax(var(--gray1-hsl), 0.3);
+          background-color: hslax($gray1, 0.3);
           cursor: pointer;
         }
 
         &:active td {
-          background-color: hslax(var(--gray1-hsl), 0.4);
+          background-color: hslax($gray1, 0.4);
         }
       }
     }
