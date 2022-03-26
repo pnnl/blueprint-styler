@@ -56,10 +56,16 @@ $$$1: var(--$1);
 (@include.*dark-.*\(\);)
 // $1
 
-# replace emit-idnetity var // --pt-font-size: $pt-grid-size * 1.4; => @include emit-identity-var('pt-font-size', $pt-font-size);
+# replace emit-identity var // --pt-font-size: $pt-grid-size * 1.4; => @include emit-identity-var('pt-font-size', $pt-font-size);
 // --([\w-]*):
 @include emit-identity-var('$1', $$$1); // --$1:
 
 ```
 
-
+Post bp4
+- rgba( => hslax(
+  - update hslax to accept non- hsl colors
+  - revert all -hsl usages in hslax 
+  - find undeclared vars with: https://chrome.google.com/webstore/detail/css-undefined-variable-ch/endbpplgeglmgihkpiapmaimegpkhhcn
+- update base colors
+- -dark theme

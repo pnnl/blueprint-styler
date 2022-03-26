@@ -1,15 +1,14 @@
-@import "../../../@blueprintjs/colors/src/colors";
 
-$datepicker-day-background-color-hover: rgba($gray3, 0.15);
-$datepicker-day-background-color-active: rgba($gray3, 0.3);
-$dark-datepicker-day-background-color-hover: rgba($gray3, 0.15);
-$dark-datepicker-day-background-color-active: rgba($gray3, 0.3);
-$daterangepicker-range-background-color: rgba($blue3, 0.1);
-$daterangepicker-range-background-color-selected: rgba($blue3, 0.1);
-$daterangepicker-range-background-color-selected-hover: rgba($blue3, 0.2);
-$dark-daterangepicker-range-background-color: rgba($blue3, 0.2);
-$dark-daterangepicker-range-background-color-selected: rgba($blue3, 0.2);
-$dark-daterangepicker-range-background-color-selected-hover: rgba($blue3, 0.4);
+$datepicker-day-background-color-hover: hslax(var(--gray3-hsl), 0.15);
+$datepicker-day-background-color-active: hslax(var(--gray3-hsl), 0.3);
+$dark-datepicker-day-background-color-hover: hslax(var(--gray3-hsl), 0.15);
+$dark-datepicker-day-background-color-active: hslax(var(--gray3-hsl), 0.3);
+$daterangepicker-range-background-color: hslax(var(--blue3-hsl), 0.1);
+$daterangepicker-range-background-color-selected: hslax(var(--blue3-hsl), 0.1);
+$daterangepicker-range-background-color-selected-hover: hslax(var(--blue3-hsl), 0.2);
+$dark-daterangepicker-range-background-color: hslax(var(--blue3-hsl), 0.2);
+$dark-daterangepicker-range-background-color-selected: hslax(var(--blue3-hsl), 0.2);
+$dark-daterangepicker-range-background-color-selected-hover: hslax(var(--blue3-hsl), 0.4);
 
 @import "datepicker";
 @import "daterangepicker";

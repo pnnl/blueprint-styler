@@ -31,7 +31,7 @@ $region-selected-color: $pt-intent-primary !default;
   border: $cell-border-width solid $region-selected-color;
 
   .#{$ns}-dark & {
-    background-color: rgba($blue4, 0.1);
+    background-color: hslax(var(--blue4-hsl), 0.1);
     border: $cell-border-width solid $blue4;
   }
 
