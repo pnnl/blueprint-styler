@@ -189,7 +189,7 @@ function DialogFooter(props: { handleClose: (e: React.MouseEvent) => void }) {
 
 function VisitFoundryWebsiteAnchorButton(props: { fill?: boolean }) {
     return (
-        <Tooltip2 content="Opens link in a new page" fill={props.fill}>
+        <Tooltip2 content="Opens link in a new page" /* fill={props.fill} */>
             <AnchorButton
                 intent="primary"
                 href="https://www.palantir.com/palantir-foundry/"

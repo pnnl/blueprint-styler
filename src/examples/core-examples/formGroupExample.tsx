@@ -82,7 +82,7 @@ export class FormGroupExample extends React.PureComponent<IExampleProps, IFormGr
                     label={label && "Label"}
                     labelFor="text-input"
                     labelInfo={requiredLabel && "(required)"}
-                    subLabel={subLabel && "Label helper text with details..."}
+                    // subLabel={subLabel && "Label helper text with details..."}
                 >
                     <InputGroup id="text-input" placeholder="Placeholder text" disabled={disabled} intent={intent} />
                 </FormGroup>

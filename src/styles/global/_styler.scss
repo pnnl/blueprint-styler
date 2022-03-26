@@ -20,7 +20,7 @@ $menu-vert-padding: 4rem;
 
 .app-wrapper{
   background-color: $light-gray5;
-  &.bp3-dark{
+  &.bp4-dark{
     background-color: $dark-gray2;
   }
 }
@@ -44,7 +44,7 @@ $menu-vert-padding: 4rem;
 
   border-right: 1px solid $pt-divider-black;
   background-color: $white;
-  .bp3-dark &{
+  .bp4-dark &{
     background-color: $dark-gray3;
     border-color: $pt-dark-divider-black;
   }
@@ -97,13 +97,13 @@ $menu-vert-padding: 4rem;
   padding-top: 2rem;
   position: relative;
 
-  .bp3-icon{
+  .bp4-icon{
     position: absolute;
     right: 100%;
     margin: 0.1em 0.2em;
     opacity: 0;
   }
-  &:hover .bp3-icon{
+  &:hover .bp4-icon{
     opacity: 0.3;
   }
 

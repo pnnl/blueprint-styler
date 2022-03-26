@@ -123,13 +123,13 @@ __GOOD LUCK!__
 The css pre-processing is currently configured to [combine duplicated selectors](https://www.npmjs.com/package/postcss-combine-duplicated-selectors) and to [remove duplicate properties](https://www.npmjs.com/package/postcss-combine-duplicated-selectors#duplicated-properties). This means that if you want to override some blueprint css you can write the **exact** same selector and property, import it after the original, and the 2 declarations will be merged and properties de-duped. For example (from [.src/styles/_ibm-carbon-styles/_overlay-styles.scss](.src/styles/_ibm-carbon-styles/_overlay-styles.scss)):
 ```scss
 // $pt-grid-size: 10px;
-.bp3-menu{
+.bp4-menu{
   padding: $pt-grid-size/2 0;
 }
 ```
 Will override the default output of blueprint css:
 ```css
-.bp3-menu {
+.bp4-menu {
     ...
     padding: 5px;
     ...
@@ -137,7 +137,7 @@ Will override the default output of blueprint css:
 ```
 to output in [ibm-carbon-styles.css](lib/ibm-carbon-styles/ibm-carbon-styles.css):
 ```css
-.bp3-menu {
+.bp4-menu {
     ...
     padding: 5px 0;
     ...
@@ -147,7 +147,7 @@ which sets the horizontal padding to 0;
 
 To delete a property instead of overriding it. Set an override to [`null`](https://www.npmjs.com/package/postcss-remove-null) in the scss.
 ```scss
-.bp3-selector { property: null; }
+.bp4-selector { property: null; }
 ```
 will delete that property
 -->
