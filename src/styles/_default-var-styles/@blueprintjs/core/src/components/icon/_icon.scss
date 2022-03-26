@@ -2,6 +2,14 @@
 // Licensed under the Apache License, Version 2.0.
 
 @import "../../../../icons/src/blueprint-icons.scss";
+@import "~@blueprintjs/icons/lib/scss/variables";
+@import "icon-mixins";
+
+$icon-classes: (
+  ".#{$ns}-icon",
+  ".#{$ns}-icon-standard",
+  ".#{$ns}-icon-large"
+) !default;
 
 // the icon class which will contain an SVG icon
 .#{$ns}-icon {
@@ -61,7 +69,7 @@ span.#{$ns}-icon-large {
 
 // only apply icon font styles when <svg> image is not present
 span.#{$ns}-icon:empty {
-  font-family: $icons20-family;
+  font-family: $blueprint-icons-20-font;
   font-size: inherit;
   font-style: normal;
   font-weight: 400;
@@ -73,8 +81,8 @@ span.#{$ns}-icon:empty {
 }
 
 // no icon Fonts
-// @each $name, $content in $icons {
+// @each $name, $codepoint in $blueprint-icon-codepoints {
 //   .#{$ns}-icon-#{$name}::before {
-//     content: $content;
+//     content: $codepoint;
 //   }
 // }

@@ -114,7 +114,7 @@ $tag-input-icon-padding-large: ($pt-input-height-large - $pt-icon-size-large) / 
     background-color: $input-background-color;
     box-shadow: input-transition-shadow($input-shadow-color-focus-hsl, true), $input-box-shadow-focus;
 
-    @each $intent, $color in $pt-intent-text-colors {
+    @each $intent, $color in $pt-intent-colors {
 
       $color-hsl: nth(map-get($button-intents, $intent), 4);
 
@@ -141,7 +141,7 @@ $tag-input-icon-padding-large: ($pt-input-height-large - $pt-icon-size-large) / 
       box-shadow: dark-input-transition-shadow($dark-input-shadow-color-focus-hsl, true),
                   $pt-dark-input-box-shadow; */
 
-      @each $intent, $color in $pt-intent-text-colors {
+      @each $intent, $color in $pt-dark-input-intent-box-shadow-colors {
 
         /* $color-hsl: nth(map-get($button-intents, $intent), 4);
 

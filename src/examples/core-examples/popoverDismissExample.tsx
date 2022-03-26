@@ -35,6 +35,8 @@ export class PopoverDismissExample extends React.PureComponent<
         return (
             <Example options={false} {...this.props}>
                 <Popover
+                    autoFocus={false}
+                    enforceFocus={false}
                     isOpen={this.state.isOpen}
                     onInteraction={this.handleInteraction}
                     onClosed={this.reopen}
