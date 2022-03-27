@@ -3,6 +3,7 @@
 /*! Components */
 
 --button-border-width: 1px;
+--button-border-width-negative: calc(var(--button-border-width) * -1);
 --control-group-spacing: calc(-1 * var(--button-border-width)); // custom
 --dark-control-group-spacing: 0; // custom
 // --button-padding:            calc(var(--pt-grid-size) / 2) var(var(--pt-grid-size));
@@ -22,30 +23,16 @@ CSS `border` property issues:
 */
 --button-box-shadow:
   inset 0 0 0 var(--button-border-width) hsla(var(--pt-shadow-color-hsl), 0.2),
-  inset 0 var(--button-border-width) 0 hsla(var(--pt-shadow-color-hsl), 0.1);
+  inset 0 var(--button-border-width-negative) 0 hsla(var(--pt-shadow-color-hsl), 0.1);
 --button-box-shadow-active:
   inset 0 0 0 var(--button-border-width) hsla(var(--pt-shadow-color-hsl), 0.2),
   inset 0 1px 2px hsla(var(--pt-shadow-color-hsl), 0.2);
 --button-intent-box-shadow:
   inset 0 0 0 var(--button-border-width) hsla(var(--pt-shadow-color-hsl), 0.4),
-  inset 0 var(--button-border-width) 0 hsla(var(--pt-shadow-color-hsl), 0.2);
+  inset 0 var(--button-border-width-negative) 0 hsla(var(--pt-shadow-color-hsl), 0.2);
 --button-intent-box-shadow-active:
   inset 0 0 0 var(--button-border-width) hsla(var(--pt-shadow-color-hsl), 0.4),
   inset 0 1px 2px hsla(var(--pt-shadow-color-hsl), 0.2);
-
---dark-button-box-shadow:
-  0 0 0 var(--button-border-width) hsla(var(--pt-dark-shadow-color-hsl), 0.4),
-  0 0 0 transparent;
---dark-button-box-shadow-active:
-  0 0 0 var(--button-border-width) hsla(var(--pt-dark-shadow-color-hsl), 0.6),
-  inset 0 1px 2px hsla(var(--pt-dark-shadow-color-hsl), 0.2);
---dark-button-intent-box-shadow:
-  0 0 0 var(--button-border-width) hsla(var(--pt-dark-shadow-color-hsl), 0.4),
-  0 0 0 transparent;
---dark-button-intent-box-shadow-active:
-  0 0 0 var(--button-border-width) hsla(var(--pt-dark-shadow-color-hsl), 0.4),
-  inset 0 1px 2px hsla(var(--pt-dark-shadow-color-hsl), 0.2);
-
 
 /*
 Overlay shadows are used for default buttons
@@ -60,16 +47,25 @@ Switches and slider handles both use these variables.
   0 0 0 var(--button-border-width) hsla(var(--pt-shadow-color-hsl), 0.2),
   inset 0 1px 1px hsla(var(--pt-shadow-color-hsl), 0.1);
 
+--dark-button-box-shadow:
+  inset 0 0 0 var(--button-border-width) hsla(var(--pt-dark-shadow-color-hsl), 0.8);
+  // 0 0 0 transparent;
+--dark-button-box-shadow-active:
+  var(--dark-button-box-shadow);
+--dark-button-intent-box-shadow:
+  var(--dark-button-box-shadow);
+--dark-button-intent-box-shadow-active:
+  var(--dark-button-box-shadow);
 
---shine-color-hsl:        var(--white-hsl);
---shine-opacity:          0.8;
---shine-intent-color-hsl: var(--shine-color-hsl);
---shine-intent-opacity:   0.1;
---dark-shine-color-hsl:   var(--white-hsl);
---dark-shine-opacity:     0.05;
---button-gradient:        linear-gradient(to bottom, hsla(var(--shine-color-hsl),        var(--shine-opacity)),        hsla(var(--shine-color-hsl),        0));
---button-intent-gradient: linear-gradient(to bottom, hsla(var(--shine-intent-color-hsl), var(--shine-intent-opacity)), hsla(var(--shine-intent-color-hsl), 0));
---dark-button-gradient:   linear-gradient(to bottom, hsla(var(--dark-shine-color-hsl),   var(--dark-shine-opacity)),   hsla(var(--dark-shine-color-hsl),   0));
+--shine-color-hsl:        var(--black-hsl); // custom
+--shine-opacity:          0.05; // custom
+--shine-intent-color-hsl: var(--shine-color-hsl); // custom
+--shine-intent-opacity:   0.05; // custom
+--dark-shine-color-hsl:   var(--black-hsl); // custom
+--dark-shine-opacity:     0.05; // custom
+--button-gradient:        linear-gradient(to bottom, hsla(var(--shine-color-hsl),        0), hsla(var(--shine-color-hsl),        var(--shine-opacity)        ));
+--button-intent-gradient: linear-gradient(to bottom, hsla(var(--shine-intent-color-hsl), 0), hsla(var(--shine-intent-color-hsl), var(--shine-intent-opacity) ));
+--dark-button-gradient:   linear-gradient(to bottom, hsla(var(--dark-shine-color-hsl),   0), hsla(var(--dark-shine-color-hsl),   var(--dark-shine-opacity)   ));
 
 --button-color-disabled:                          var(--pt-text-color-disabled);
 --button-background-color:                        var(--light-gray5);
@@ -86,14 +82,13 @@ Switches and slider handles both use these variables.
 --dark-button-background-color-active-disabled:   hsla(var(--dark-gray2-hsl), 0.7);
 --dark-button-intent-color-disabled:              hsla(var(--white-hsl), 0.3);
 
---minimal-button-background-opacity:              0.3;
 --minimal-button-divider-width:                   1px;
 --minimal-button-background-color:                none;
---minimal-button-background-color-hover:          hsla(var(--gray4-hsl), var(--minimal-button-background-opacity));
---minimal-button-background-color-active:         hsla(var(--gray2-hsl), var(--minimal-button-background-opacity));
+--minimal-button-background-color-hover:          hsla(var(--gray3-hsl), 0.15);
+--minimal-button-background-color-active:         hsla(var(--gray3-hsl), 0.3);
 --dark-minimal-button-background-color:           none;
---dark-minimal-button-background-color-hover:     hsla(var(--gray5-hsl), var(--minimal-button-background-opacity));
---dark-minimal-button-background-color-active:    hsla(var(--gray3-hsl), var(--minimal-button-background-opacity));
+--dark-minimal-button-background-color-hover:     hsla(var(--gray3-hsl), 0.15);
+--dark-minimal-button-background-color-active:    hsla(var(--gray3-hsl), 0.3);
 
 --button-outlined-width:                          1px;
 --button-outlined-border-intent-opacity:          0.6;
