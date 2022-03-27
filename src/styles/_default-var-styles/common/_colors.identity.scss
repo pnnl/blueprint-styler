@@ -15,26 +15,26 @@ $light-gray3: var(--light-gray3);
 $light-gray4: var(--light-gray4);
 $light-gray5: var(--light-gray5);
 $white: var(--white);
-$blue1: var(--blue1);
-$blue2: var(--blue2);
-$blue3: var(--blue3);
-$blue4: var(--blue4);
-$blue5: var(--blue5);
-$green1: var(--green1);
-$green2: var(--green2);
-$green3: var(--green3);
-$green4: var(--green4);
-$green5: var(--green5);
-$orange1: var(--orange1);
-$orange2: var(--orange2);
-$orange3: var(--orange3);
-$orange4: var(--orange4);
-$orange5: var(--orange5);
-$red1: var(--red1);
-$red2: var(--red2);
-$red3: var(--red3);
-$red4: var(--red4);
-$red5: var(--red5);
+$blue1: var(--primary1); // primary
+$blue2: var(--primary2); // primary
+$blue3: var(--primary3); // primary
+$blue4: var(--primary4); // primary
+$blue5: var(--primary5); // primary
+$green1: var(--success1); // success
+$green2: var(--success2); // success
+$green3: var(--success3); // success
+$green4: var(--success4); // success
+$green5: var(--success5); // success
+$orange1: var(--warning1); // warning
+$orange2: var(--warning2); // warning
+$orange3: var(--warning3); // warning
+$orange4: var(--warning4); // warning
+$orange5: var(--warning5); // warning
+$red1: var(--danger1); // danger
+$red2: var(--danger2); // danger
+$red3: var(--danger3); // danger
+$red4: var(--danger4); // danger
+$red5: var(--danger5); // danger
 $vermilion1: var(--vermilion1);
 $vermilion2: var(--vermilion2);
 $vermilion3: var(--vermilion3);
@@ -85,3 +85,9 @@ $sepia2: var(--sepia2);
 $sepia3: var(--sepia3);
 $sepia4: var(--sepia4);
 $sepia5: var(--sepia5);
+
+// extended colors
+$blue6: var(--primary6); // primary
+$green6: var(--success6); // success
+$orange6: var(--warning6); // warning
+$red6: var(--danger6); // danger

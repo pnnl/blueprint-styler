@@ -48,7 +48,7 @@
 --dark-switch-checked-background-color-active: var(--control-checked-background-color-active);
 --dark-switch-checked-background-color-disabled: hsla(var(--control-checked-background-color-hsl), 0.5);
 
---switch-indicator-background-color: var(--pt-app-top-background-color);
+--switch-indicator-background-color: hsla(var(--gray3-hsl), 0.3); // modern
 --switch-indicator-background-color-disabled: hsla(var(--white-hsl), 0.8);
 --dark-switch-indicator-background-color: var(--dark-gray5);
 --dark-switch-indicator-background-color-disabled: hsla(var(--black-hsl), 0.4);

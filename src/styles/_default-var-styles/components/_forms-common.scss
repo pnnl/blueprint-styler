@@ -9,7 +9,7 @@
 
 --input-color: var(--pt-text-color);
 --input-color-disabled: var(--button-color-disabled);
---input-placeholder-color: var(--pt-text-color-disabled);
+--input-placeholder-color: var(--pt-text-color-muted); // modern
 --input-background-color: var(--pt-app-top-background-color);
 --input-background-color-disabled: hsla(var(--light-gray1-hsl), 0.5);
 --input-shadow-color-focus: var(--pt-intent-primary);
@@ -17,7 +17,7 @@
 
 --dark-input-color: var(--pt-dark-text-color);
 --dark-input-color-disabled: var(--dark-button-color-disabled);
---dark-input-placeholder-color: var(--pt-dark-text-color-disabled);
+--dark-input-placeholder-color: var(--pt-dark-text-color-muted); // modern
 --dark-input-background-color: hsla(var(--black-hsl), 0.3);
 --dark-input-background-color-disabled: hsla(var(--dark-gray5-hsl), 0.5);
 --dark-input-shadow-color-focus: var(--pt-intent-primary);

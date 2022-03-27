@@ -20,28 +20,28 @@ $button-active-minimal-intent-text-modern: (
   "success": $green1,
   "warning": $orange1,
   "danger": $red1
-);
+) !default; // PR
 
 $dark-minimal-button-intents-modern: (
   "primary": (hslax($blue3, 0.2), $blue5, hslax($blue3, 0.3), $blue6),
   "success": (hslax($green3, 0.2), $green5, hslax($green3, 0.3), $green6),
   "warning": (hslax($orange3, 0.2), $orange5, hslax($orange3, 0.3), $orange6),
   "danger": (hslax($red3, 0.2), $red5, hslax($red3, 0.3), $red6)
-);
+) !default; // PR
 
 // Editable text variable overrides
-$input-placeholder-color: $gray1;
-$dark-input-placeholder-color: $gray4;
+// $input-placeholder-color: $gray1 !default; // PR
+// $dark-input-placeholder-color: $gray4 !default; // PR
 
 // Slider variable overrides
-$button-box-shadow-overlay:
-  0 0 0 1px hslax($black, 0.5),
-  0 1px 1px hslax($black, 0.5);
+// $button-box-shadow-overlay:
+//   0 0 0 1px hslax($black, 0.5),
+//   0 1px 1px hslax($black, 0.5) !default; // PR
 
 // Switch variable overrides
-$switch-indicator-background-color: hslax($gray3, 0.3);
-$switch-checked-background-color-hover: $blue2;
-$switch-checked-background-color-active: $blue1;
+// $switch-indicator-background-color: hslax($gray3, 0.3) !default; // PR
+// $switch-checked-background-color-hover: $blue2 !default; // PR
+// $switch-checked-background-color-active: $blue1 !default; // PR
 
 // Tag variables
 $tag-intent-colors-modern: (
@@ -49,21 +49,21 @@ $tag-intent-colors-modern: (
   "success": ($pt-intent-success, $green2, $green1, $white, $white),
   "warning": ($orange5, $orange4, $orange3, $pt-text-color, $pt-text-color),
   "danger": ($pt-intent-danger, $red2, $red1, $white, $white)
-);
+) !default; // PR
 
 $minimal-tag-intent-colors-modern: (
   "primary": ($pt-intent-primary, $blue2, $blue1, $blue1),
   "success": ($pt-intent-success, $green2, $green1, $green1),
   "warning": ($pt-intent-warning, $orange2, $orange1, $orange1),
   "danger": ($pt-intent-danger, $red2, $red1, $red1)
-);
+) !default; // PR
 
 $minimal-dark-tag-intent-colors-modern: (
   "primary": ($pt-intent-primary, $blue5, $blue6, $blue6),
   "success": ($pt-intent-success, $green5, $green6, $green6),
   "warning": ($pt-intent-warning, $orange5, $orange6, $orange6),
   "danger": ($pt-intent-danger, $red5, $red6, $red6)
-);
+) !default; // PR
 
 // Toast variables
 $toast-intent-button-colors-modern: (
@@ -71,7 +71,7 @@ $toast-intent-button-colors-modern: (
   "success": ($pt-intent-success, $white, $green2, $green1, hslax($white, 0.7)),
   "warning": ($orange5, $dark-gray1, $orange4, $orange3, hslax($dark-gray1, 0.7)),
   "danger": ($pt-intent-danger, $white, $red2, $red1, hslax($white, 0.7))
-);
+) !default; // PR
 
 // Tree variables
 $tree-intent-icon-colors-modern: (
@@ -79,7 +79,7 @@ $tree-intent-icon-colors-modern: (
   "success": $green5,
   "warning": $orange5,
   "danger" : $red5,
-);
+) !default; // PR
 
 
 @import "components/index";
