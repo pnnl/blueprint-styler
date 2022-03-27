@@ -58,7 +58,7 @@ $timepicker-control-width: $pt-grid-size * 3.3 !default;
     background: transparent;
     border: 0;
     border-radius: $pt-border-radius;
-    box-shadow: input-transition-shadow($input-shadow-color-focus-hsl);
+    box-shadow: input-transition-shadow($input-shadow-color-focus);
     color: $pt-text-color;
     height: $timepicker-input-row-inner-height;
     outline: 0;
@@ -68,16 +68,13 @@ $timepicker-control-width: $pt-grid-size * 3.3 !default;
     width: $timepicker-control-width;
 
     &:focus {
-      box-shadow: input-transition-shadow($input-shadow-color-focus-hsl, true);
+      box-shadow: input-transition-shadow($input-shadow-color-focus, true);
       // test: here;
     }
 
     @each $intent, $color in $pt-intent-colors {
-
-      $color-hsl: nth(map-get($button-intents, $intent), 4);
-
       &.#{$ns}-intent-#{$intent} {
-        @include pt-input-intent($color, $color-hsl);
+        @include pt-input-intent($color);
 
         /* .#{$ns}-dark & {
           @include pt-dark-input-intent(map-get($pt-dark-input-intent-box-shadow-colors, $intent));

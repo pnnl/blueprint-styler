@@ -17,7 +17,7 @@ $dark-control-background-color-disabled: $minimal-button-background-color-hover 
 $control-checked-background-color: nth(map-get($button-intents, "primary"), 1) !default;
 $control-checked-background-color-hover: nth(map-get($button-intents, "primary"), 2) !default;
 $control-checked-background-color-active: nth(map-get($button-intents, "primary"), 3) !default;
-$control-checked-background-color-disabled: hslax($control-checked-background-color-hsl, 0.5) !default;
+$control-checked-background-color-disabled: hslax($control-checked-background-color, 0.5) !default;
 
 $control-box-shadow: inset 0 0 0 $button-border-width $gray2 !default;
 $control-checked-box-shadow: inset 0 0 0 $button-border-width hslax($black, 0.2) !default;

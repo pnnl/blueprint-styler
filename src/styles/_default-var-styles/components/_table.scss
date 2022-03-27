@@ -170,10 +170,6 @@ $dark-cell-text-color: var(--dark-cell-text-color);
 $table-background-color: var(--table-background-color);
 $dark-table-background-color: var(--dark-table-background-color);
 
-// EXTRA-hsl
-$table-background-color-hsl: var(--table-background-color-hsl);
-$dark-table-background-color-hsl: var(--dark-table-background-color-hsl);
-
 // // Selecting
 // $select-column-cursor: var(--select-column-cursor);
 // $select-row-cursor: var(--select-row-cursor);
@@ -220,21 +216,21 @@ $header-selected-background-color: var(--header-selected-background-color);
 // $interaction-bar-height: var(--interaction-bar-height);
 
 // EXTRA-hsl
-$header-background-color-hsl: var(--header-background-color-hsl);
-$header-hover-background-color-hsl: var(--header-hover-background-color-hsl);
+// $header-background-color-hsl: var(--header-background-color-hsl);
+// $header-hover-background-color-hsl: var(--header-hover-background-color-hsl);
 $header-selected-background-color-hsl: var(--header-selected-background-color-hsl);
 $header-selected-hover-background-color-hsl: var(--header-selected-hover-background-color-hsl);
-$column-header-text-color-hsl: var(--column-header-text-color-hsl);
-$row-header-text-color-hsl: var(--row-header-text-color-hsl);
+// $column-header-text-color-hsl: var(--column-header-text-color-hsl);
+// $row-header-text-color-hsl: var(--row-header-text-color-hsl);
 
-$dark-header-background-color-hsl: var(--dark-header-background-color-hsl);
-$dark-header-hover-background-color-hsl: var(--dark-header-hover-background-color-hsl);
+// $dark-header-background-color-hsl: var(--dark-header-background-color-hsl);
+// $dark-header-hover-background-color-hsl: var(--dark-header-hover-background-color-hsl);
 $dark-header-selected-background-color-hsl: var(--dark-header-selected-background-color-hsl);
 $dark-header-selected-hover-background-color-hsl: var(--dark-header-selected-hover-background-color-hsl);
-$dark-column-header-text-color-hsl: var(--dark-column-header-text-color-hsl);
-$dark-row-header-text-color-hsl: var(--dark-row-header-text-color-hsl);
+// $dark-column-header-text-color-hsl: var(--dark-column-header-text-color-hsl);
+// $dark-row-header-text-color-hsl: var(--dark-row-header-text-color-hsl);
 
-$header-selected-background-color-hsl: var(--header-selected-background-color-hsl);
+// $header-selected-background-color-hsl: var(--header-selected-background-color-hsl);
 
 
 
@@ -256,6 +252,3 @@ $resize-handle-dragging-color: var(--resize-handle-dragging-color);
 // layers.scss --------------------------------------
 $region-default-color: var(--region-default-color);
 $region-selected-color: var(--region-selected-color);
-// EXTRA-hsl
-$region-default-color-hsl: var(--region-default-color-hsl);
-$region-selected-color-hsl: var(--region-selected-color-hsl);

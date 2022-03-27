@@ -44,9 +44,9 @@ Styleguide tag
     @include pt-tag-large();
   }
 
-  @each $intent, $color-hsl in $pt-intent-colors-hsl {
+  @each $intent, $color in $pt-intent-colors {
     &.#{$ns}-intent-#{$intent} {
-      @include pt-tag-intent($color-hsl);
+      @include pt-tag-intent($color);
     }
   }
 
@@ -58,10 +58,10 @@ Styleguide tag
   &.#{$ns}-minimal {
     @include pt-tag-minimal();
 
-    @each $intent, $color-hsl in $pt-intent-colors-hsl {
+    @each $intent, $color in $pt-intent-colors {
       &.#{$ns}-intent-#{$intent} {
         @include pt-tag-minimal-intent(
-          $color-hsl,
+          $color,
           map-get($pt-intent-text-colors, $intent),
           map-get($pt-dark-intent-text-colors, $intent)
         );

@@ -73,10 +73,8 @@ Styleguide callout
 
   @each $intent, $color in $pt-intent-colors {
 
-    $color-hsl: nth(map-get($button-intents, $intent), 4);
-
     &.#{$ns}-intent-#{$intent} {
-      background-color: hslax($color-hsl, 0.15);
+      background-color: hslax($color, 0.15);
 
       &[class*="#{$ns}-icon-"]::before,
       > .#{$ns}-icon:first-child,
@@ -85,7 +83,7 @@ Styleguide callout
       }
 
       /* .#{$ns}-dark & {
-        background-color: hslax($color-hsl, 0.25);
+        background-color: hslax($color, 0.25);
 
         &[class*="#{$ns}-icon-"]::before,
         > .#{$ns}-icon:first-child,

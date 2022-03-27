@@ -3,8 +3,7 @@
 
   @each $intent, $color in $pt-intent-colors {
     &.#{$ns}-intent-#{$intent} {
-      $color-hsl: nth(map-get($button-intents, $intent), 4);
-      border-color: hslax($color-hsl, 1);
+      border-color: hslax($color, 1);
     }
   }
 

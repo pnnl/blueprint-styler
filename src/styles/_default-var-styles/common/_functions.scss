@@ -1,6 +1,9 @@
 @mixin emit-identity-hsl($colorName) {
   --#{$colorName}: hsl(var(--#{$colorName}-hsl));
 }
+@mixin emit-identity-var($varName, $varValue) {
+  --#{$varName}: #{$varValue};
+}
 
 @function hslax($color, $opacity) {
   @if type-of($color) != string {
@@ -12,8 +15,4 @@
 		$color-hsl: str-insert($color, '-hsl', -2);
 	}
 	@return #{'hsla(#{$color-hsl}, #{$opacity})'};
-}
-
-@mixin emit-identity-var($varName, $varValue) {
-  --#{$varName}: #{$varValue};
 }

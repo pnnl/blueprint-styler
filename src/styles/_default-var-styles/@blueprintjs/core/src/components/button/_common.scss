@@ -178,7 +178,7 @@ $button-intents: (
   }
 }
 
-@mixin pt-button-intent($default-color, $hover-color, $active-color, $default-color-hsl, $hover-color-hsl, $active-color-hsl) {
+@mixin pt-button-intent($default-color, $hover-color, $active-color) {
   background-color: $default-color;
   background-image: $button-intent-gradient;
   box-shadow: $button-intent-box-shadow;
@@ -204,12 +204,12 @@ $button-intents: (
 
   &:disabled,
   &.#{$ns}-disabled {
-    @include pt-button-intent-disabled($default-color-hsl);
+    @include pt-button-intent-disabled($default-color);
   }
 }
 
-@mixin pt-button-intent-disabled($default-color-hsl) {
-  background-color: hslax($default-color-hsl, 0.5);
+@mixin pt-button-intent-disabled($default-color) {
+  background-color: hslax($default-color, 0.5);
   background-image: none;
   border-color: transparent;
   box-shadow: none;
@@ -335,9 +335,9 @@ $button-intents: (
         map-get($pt-intent-colors, $intent),
         map-get($pt-intent-text-colors, $intent),
         map-get($pt-dark-intent-text-colors, $intent),
-        map-get($pt-intent-colors-hsl, $intent),
-        map-get($pt-intent-text-colors-hsl, $intent),
-        map-get($pt-dark-intent-text-colors-hsl, $intent)
+        // map-get($pt-intent-colors, $intent),
+        // map-get($pt-intent-text-colors, $intent),
+        // map-get($pt-dark-intent-text-colors, $intent)
       );
     }
   }
@@ -379,7 +379,7 @@ $button-intents: (
   }
 } */
 
-@mixin pt-button-minimal-intent($intent-color, $text-color, $dark-text-color, $intent-color-hsl, $text-color-hsl, $dark-text-color-hsl) {
+@mixin pt-button-minimal-intent($intent-color, $text-color, $dark-text-color) {
   color: $text-color;
 
   &:hover,
@@ -391,23 +391,23 @@ $button-intents: (
   }
 
   &:hover {
-    background: hslax($intent-color-hsl, 0.15);
+    background: hslax($intent-color, 0.15);
     color: $text-color;
   }
 
   &:active,
   &.#{$ns}-active {
-    background: hslax($intent-color-hsl, 0.3);
+    background: hslax($intent-color, 0.3);
     color: $text-color;
   }
 
   &:disabled,
   &.#{$ns}-disabled {
     background: none;
-    color: hslax($text-color-hsl, 0.5);
+    color: hslax($text-color, 0.5);
 
     &.#{$ns}-active {
-      background: hslax($intent-color-hsl, 0.3);
+      background: hslax($intent-color, 0.3);
     }
   }
 
@@ -419,23 +419,23 @@ $button-intents: (
     color: $dark-text-color;
 
     &:hover {
-      background: hslax($intent-color-hsl, 0.2);
+      background: hslax($intent-color, 0.2);
       color: $dark-text-color;
     }
 
     &:active,
     &.#{$ns}-active {
-      background: hslax($intent-color-hsl, 0.3);
+      background: hslax($intent-color, 0.3);
       color: $dark-text-color;
     }
 
     &:disabled,
     &.#{$ns}-disabled {
       background: none;
-      color: hslax($dark-text-color-hsl, 0.5);
+      color: hslax($dark-text-color, 0.5);
 
       &.#{$ns}-active {
-        background: hslax($intent-color-hsl, 0.3);
+        background: hslax($intent-color, 0.3);
       }
     }
   } */
@@ -471,8 +471,8 @@ $button-intents: (
   @each $intent, $colors in $button-intents {
     &.#{$ns}-intent-#{$intent} {
       @include pt-button-outlined-intent(
-        map-get($pt-intent-text-colors-hsl, $intent),
-        map-get($pt-dark-intent-text-colors-hsl, $intent)
+        map-get($pt-intent-text-colors, $intent),
+        map-get($pt-dark-intent-text-colors, $intent)
       );
     }
   }
@@ -489,20 +489,20 @@ $button-intents: (
   }
 } */
 
-@mixin pt-button-outlined-intent($text-color-hsl, $dark-text-color-hsl) {
-  border-color: hslax($text-color-hsl, $button-outlined-border-intent-opacity);
+@mixin pt-button-outlined-intent($text-color, $dark-text-color) {
+  border-color: hslax($text-color, $button-outlined-border-intent-opacity);
 
   &:disabled,
   &.#{$ns}-disabled {
-    border-color: hslax($text-color-hsl, $button-outlined-border-disabled-intent-opacity);
+    border-color: hslax($text-color, $button-outlined-border-disabled-intent-opacity);
   }
 
   /* .#{$ns}-dark & {
-    border-color: hslax($dark-text-color-hsl, $button-outlined-border-intent-opacity);
+    border-color: hslax($dark-text-color, $button-outlined-border-intent-opacity);
 
     &:disabled,
     &.#{$ns}-disabled {
-      border-color: hslax($dark-text-color-hsl, $button-outlined-border-disabled-intent-opacity);
+      border-color: hslax($dark-text-color, $button-outlined-border-disabled-intent-opacity);
     }
   } */
 }

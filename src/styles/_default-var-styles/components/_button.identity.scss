@@ -49,21 +49,11 @@ $button-outlined-width: var(--button-outlined-width);
 $button-outlined-border-intent-opacity: var(--button-outlined-border-intent-opacity);
 $button-outlined-border-disabled-intent-opacity: var(--button-outlined-border-disabled-intent-opacity);
 
-/* usage:
-@each $intent, $color in $pt-intent-text-colors {
-  $color-hsl: nth(map-get($button-intents, $intent), 4);
-}
-*/
 @function button-intent-stack($intent) {
-  // "intent": ($default, $hover, $active, $default-hsl, $hover-hsl, $active-hsl)
-  // same a !default $button-intents, but with hsl tacked on to the end
   @return (
     var(--pt-intent-#{$intent}),
     var(--pt-intent-#{$intent}-hover),
     var(--pt-intent-#{$intent}-active),
-    var(--pt-intent-#{$intent}-hsl),
-    var(--pt-intent-#{$intent}-hover-hsl),
-    var(--pt-intent-#{$intent}-active-hsl)
   )
 }
 $button-intents: (

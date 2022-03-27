@@ -1,125 +1,89 @@
-#{$root-selector}{
+#{$root-selector} {
+  /*! IntentColors */
 
+  --pt-intent-primary-hsl: var(--blue3-hsl);
+  --pt-intent-primary-hover-hsl: var(--blue2-hsl);
+  --pt-intent-primary-active-hsl: var(--blue1-hsl);
 
-/*! IntentColors */
+  --pt-intent-primary-text-color-hsl: var(--blue2-hsl);
+  --pt-dark-intent-primary-text-color-hsl: var(--blue5-hsl);
 
---pt-intent-primary-hue:        var(--blue-hue);
---pt-intent-primary-hsl:        var(--blue3-hsl);
---pt-intent-primary-hover-hsl:  var(--blue2-hsl);
---pt-intent-primary-active-hsl: var(--blue1-hsl);
+  --pt-intent-success-hsl: var(--green3-hsl);
+  --pt-intent-success-hover-hsl: var(--green2-hsl);
+  --pt-intent-success-active-hsl: var(--green1-hsl);
 
---pt-intent-primary-text-color-hsl:      var(--blue2-hsl);
---pt-dark-intent-primary-text-color-hsl: var(--blue5-hsl);
+  --pt-intent-success-text-color-hsl: var(--green2-hsl);
+  --pt-dark-intent-success-text-color-hsl: var(--green5-hsl);
 
+  --pt-intent-warning-hsl: var(--orange3-hsl);
+  --pt-intent-warning-hover-hsl: var(--orange2-hsl);
+  --pt-intent-warning-active-hsl: var(--orange1-hsl);
 
---pt-intent-success-hue:        var(--green-hue);
---pt-intent-success-hsl:        var(--green3-hsl);
---pt-intent-success-hover-hsl:  var(--green2-hsl);
---pt-intent-success-active-hsl: var(--green1-hsl);
+  --pt-intent-warning-text-color-hsl: var(--orange2-hsl);
+  --pt-dark-intent-warning-text-color-hsl: var(--orange5-hsl);
 
---pt-intent-success-text-color-hsl:      var(--green2-hsl);
---pt-dark-intent-success-text-color-hsl: var(--green5-hsl);
+  --pt-intent-danger-hsl: var(--red3-hsl);
+  --pt-intent-danger-hover-hsl: var(--red2-hsl);
+  --pt-intent-danger-active-hsl: var(--red1-hsl);
 
+  --pt-intent-danger-text-color-hsl: var(--red2-hsl);
+  --pt-dark-intent-danger-text-color-hsl: var(--red5-hsl);
 
---pt-intent-warning-hue:        var(--orange-hue);
---pt-intent-warning-hsl:        var(--orange3-hsl);
---pt-intent-warning-hover-hsl:  var(--orange2-hsl);
---pt-intent-warning-active-hsl: var(--orange1-hsl);
+  $colorAliasesList: pt-intent-primary, pt-intent-primary-hover, pt-intent-primary-active, pt-intent-primary-text-color,
+    pt-dark-intent-primary-text-color, pt-intent-success, pt-intent-success-hover, pt-intent-success-active,
+    pt-intent-success-text-color, pt-dark-intent-success-text-color, pt-intent-warning, pt-intent-warning-hover,
+    pt-intent-warning-active, pt-intent-warning-text-color, pt-dark-intent-warning-text-color, pt-intent-danger,
+    pt-intent-danger-hover, pt-intent-danger-active, pt-intent-danger-text-color, pt-dark-intent-danger-text-color;
 
---pt-intent-warning-text-color-hsl:      var(--orange2-hsl);
---pt-dark-intent-warning-text-color-hsl: var(--orange5-hsl);
+  @each $colorName in $colorAliasesList {
+    @include emit-identity-hsl($colorName);
+  }
 
+  /*! LayoutColors */
 
---pt-intent-danger-hue:        var(--red-hue);
---pt-intent-danger-hsl:        var(--red3-hsl);
---pt-intent-danger-hover-hsl:  var(--red2-hsl);
---pt-intent-danger-active-hsl: var(--red1-hsl);
+  --pt-app-background-color: var(--light-gray5);
+  --pt-dark-app-background-color: var(--dark-gray3);
+  --pt-app-top-background-color: var(--white); // custom
+  --pt-dark-app-top-background-color: var(--dark-gray4); // custom
 
---pt-intent-danger-text-color-hsl:      var(--red2-hsl);
---pt-dark-intent-danger-text-color-hsl: var(--red5-hsl);
+  --pt-code-background-color: hsla(var(--white-hsl), 0.7);
+  --pt-dark-code-background-color: hsla(var(--black-hsl), 0.3);
 
+  --pt-divider-black: hsla(var(--black-hsl), 0.15);
+  --pt-dark-divider-black: hsla(var(--black-hsl), 0.4);
+  --pt-dark-divider-white: hsla(var(--white-hsl), 0.15);
 
-$colorAliasesList:
-  pt-intent-primary,
-  pt-intent-primary-hover,
-  pt-intent-primary-active,
-  pt-intent-primary-text-color,
-  pt-dark-intent-primary-text-color,
-  pt-intent-success,
-  pt-intent-success-hover,
-  pt-intent-success-active,
-  pt-intent-success-text-color,
-  pt-dark-intent-success-text-color,
-  pt-intent-warning,
-  pt-intent-warning-hover,
-  pt-intent-warning-active,
-  pt-intent-warning-text-color,
-  pt-dark-intent-warning-text-color,
-  pt-intent-danger,
-  pt-intent-danger-hover,
-  pt-intent-danger-active,
-  pt-intent-danger-text-color,
-  pt-dark-intent-danger-text-color;
+  --pt-outline-color: hsla(var(--pt-intent-primary-hsl), 0.6);
 
-@each $colorName in $colorAliasesList {
-  @include emit-identity-hsl($colorName)
+  --pt-disabled-opacity: 0.3;
+
+  /*! TextColors */
+
+  --pt-text-color: var(--dark-gray1);
+  --pt-text-color-muted: var(--gray1);
+  --pt-text-color-disabled: hsla(var(--black-hsl), var(--pt-disabled-opacity));
+  --pt-heading-color: var(--pt-text-color);
+  --pt-link-color: var(--pt-intent-primary-text-color);
+
+  --pt-dark-text-color: var(--light-gray5);
+  --pt-dark-text-color-muted: var(--gray4);
+  --pt-dark-text-color-disabled: hsla(var(--white-hsl), var(--pt-disabled-opacity));
+  --pt-dark-heading-color: var(--pt-dark-text-color);
+  --pt-dark-link-color: var(--pt-dark-intent-primary-text-color);
+
+  --pt-text-selection-color: hsla(215, 100%, 75%, 0.6);
+
+  --pt-code-text-color: var(--pt-text-color-muted);
+  --pt-dark-code-text-color: var(--pt-dark-text-color-muted);
+
+  /*! IconColors */
+
+  --pt-icon-color: var(--pt-text-color-muted);
+  --pt-icon-color-hover: var(--pt-text-color);
+  --pt-icon-color-disabled: var(--pt-text-color-disabled);
+  --pt-icon-color-selected: var(--pt-intent-primary);
+  --pt-dark-icon-color: var(--pt-dark-text-color-muted);
+  --pt-dark-icon-color-hover: var(--pt-dark-text-color);
+  --pt-dark-icon-color-disabled: var(--pt-dark-text-color-disabled);
+  --pt-dark-icon-color-selected: var(--pt-intent-primary);
 }
-
-
-
-/*! LayoutColors */
-
---pt-app-background-color:          var(--light-gray5);
---pt-dark-app-background-color:     var(--dark-gray3);
---pt-app-top-background-color:      var(--white); // custom
---pt-dark-app-top-background-color: var(--dark-gray4); // custom
-
---pt-code-background-color:         hsla(var(--white-hsl), 0.7);
---pt-dark-code-background-color:    hsla(var(--black-hsl), 0.3);
-
---pt-divider-black:                 hsla(var(--black-hsl), 0.15);
---pt-dark-divider-black:            hsla(var(--black-hsl), 0.4);
---pt-dark-divider-white:            hsla(var(--white-hsl), 0.15);
-
---pt-outline-color:                 hsla(var(--pt-intent-primary-hsl), 0.6);
-
---pt-disabled-opacity:              0.3;
-
-
-
-/*! TextColors */
-
---pt-text-color:                 var(--dark-gray1);
---pt-text-color-muted:           var(--gray1);
---pt-text-color-disabled:        hsla(var(--black-hsl), var(--pt-disabled-opacity));
---pt-heading-color:              var(--pt-text-color);
---pt-link-color:                 var(--pt-intent-primary-text-color);
-
---pt-dark-text-color:            var(--light-gray5);
---pt-dark-text-color-muted:      var(--gray4);
---pt-dark-text-color-disabled:   hsla(var(--white-hsl), var(--pt-disabled-opacity));
---pt-dark-heading-color:         var(--pt-dark-text-color);
---pt-dark-link-color:            var(--pt-dark-intent-primary-text-color);
-
---pt-text-selection-color:       hsla(var(--blue-hue), 100%, 75%, 0.6);
-
---pt-code-text-color:            var(--pt-text-color-muted);
---pt-dark-code-text-color:       var(--pt-dark-text-color-muted);
-
-
-
-/*! IconColors */
-
---pt-icon-color:                 var(--pt-text-color-muted);
---pt-icon-color-hover:           var(--pt-text-color);
---pt-icon-color-disabled:        var(--pt-text-color-disabled);
---pt-icon-color-selected:        var(--pt-intent-primary);
---pt-dark-icon-color:            var(--pt-dark-text-color-muted);
---pt-dark-icon-color-hover:      var(--pt-dark-text-color);
---pt-dark-icon-color-disabled:   var(--pt-dark-text-color-disabled);
---pt-dark-icon-color-selected:   var(--pt-intent-primary);
-
-}
-
-
-

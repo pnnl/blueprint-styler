@@ -5,25 +5,25 @@
 @import "../cell/common";
 @import "./common";
 
-@function menu-background($color-hsl) {
-  @return linear-gradient(90deg, hslax($color-hsl, 0) 0%, hslax($color-hsl, 1) 50%);
+@function menu-background($color) {
+  @return linear-gradient(90deg, hslax($color, 0) 0%, hslax($color, 1) 50%);
 }
 
 // when selection is disabled, header background color doesn't change on hover.
 $header-menu-hover-background:
-  menu-background($header-background-color-hsl);
+  menu-background($header-background-color);
 $dark-header-menu-hover-background:
-  menu-background($dark-header-background-color-hsl);
+  menu-background($dark-header-background-color);
 
 // when selection is enabled, background color changes on hover; need to match that.
 $selectable-header-menu-hover-background:
-  menu-background($header-hover-background-color-hsl);
+  menu-background($header-hover-background-color);
 $selectable-header-menu-selected-background:
-  menu-background($header-selected-background-color-hsl);
+  menu-background($header-selected-background-color);
 $selectable-header-menu-selected-hover-background:
   menu-background($header-selected-hover-background-color-hsl);
 $dark-selectable-header-menu-hover-background:
-  menu-background($dark-header-hover-background-color-hsl);
+  menu-background($dark-header-hover-background-color);
 $dark-selectable-header-menu-selected-background:
   menu-background($dark-header-selected-background-color-hsl);
 $dark-selectable-header-menu-selected-hover-background:
@@ -69,8 +69,8 @@ $dark-selectable-header-menu-selected-hover-background:
   &.#{$ns}-table-header-selected::before {
     background-image: linear-gradient(
       90deg,
-      hslax($header-selected-background-color-hsl, 0.1),
-      hslax($header-selected-background-color-hsl, 0.1)
+      hslax($header-selected-background-color, 0.1),
+      hslax($header-selected-background-color, 0.1)
     );
   }
 }

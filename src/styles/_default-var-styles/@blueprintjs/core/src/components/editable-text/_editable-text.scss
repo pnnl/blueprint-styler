@@ -23,13 +23,13 @@
   }
 
   &:hover::before {
-    box-shadow: input-transition-shadow($input-shadow-color-focus-hsl),
+    box-shadow: input-transition-shadow($input-shadow-color-focus),
                 inset 0 0 0 1px $pt-divider-black;
   }
 
   &.#{$ns}-editable-text-editing::before {
     background-color: $input-background-color;
-    box-shadow: input-transition-shadow($input-shadow-color-focus-hsl, true), $input-box-shadow-focus;
+    box-shadow: input-transition-shadow($input-shadow-color-focus, true), $input-box-shadow-focus;
   }
 
   &.#{$ns}-disabled::before {
@@ -43,27 +43,25 @@
         color: $color;
       }
 
-      $color-hsl: nth(map-get($button-intents, $intent), 4);
-
       &:hover::before {
-        box-shadow: input-transition-shadow($color-hsl), inset border-shadow(0.4, $color-hsl, 1px);
+        box-shadow: input-transition-shadow($color), inset border-shadow(0.4, $color, 1px);
       }
 
       &.#{$ns}-editable-text-editing::before {
-        box-shadow: input-transition-shadow($color-hsl, true), $input-box-shadow-focus;
+        box-shadow: input-transition-shadow($color, true), $input-box-shadow-focus;
       }
     }
   }
 
   // .#{$ns}-dark & {
     /* &:hover::before {
-      box-shadow: input-transition-shadow($dark-input-shadow-color-focus-hsl),
+      box-shadow: input-transition-shadow($dark-input-shadow-color-focus),
                   inset 0 0 0 1px $pt-dark-divider-white;
     }
 
     &.#{$ns}-editable-text-editing::before {
       background-color: $dark-input-background-color;
-      box-shadow: input-transition-shadow($dark-input-shadow-color-focus-hsl, true),
+      box-shadow: input-transition-shadow($dark-input-shadow-color-focus, true),
                   $pt-dark-input-box-shadow;
     }
 
@@ -77,14 +75,12 @@
           color: $color;
         }
 
-        $color-hsl: nth(map-get($button-intents, $intent), 4);
-
         &:hover::before {
-          box-shadow: input-transition-shadow($color-hsl), inset border-shadow(0.4, $color-hsl, 1px);
+          box-shadow: input-transition-shadow($color), inset border-shadow(0.4, $color, 1px);
         }
 
         &.#{$ns}-editable-text-editing::before {
-          box-shadow: input-transition-shadow($color-hsl, true), $pt-dark-input-box-shadow;
+          box-shadow: input-transition-shadow($color, true), $pt-dark-input-box-shadow;
         }
       } */
     }

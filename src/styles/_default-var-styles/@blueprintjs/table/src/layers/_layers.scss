@@ -22,12 +22,12 @@ $region-selected-color: $pt-intent-primary !default;
 }
 
 .#{$ns}-table-region {
-  background-color: hslax($region-default-color-hsl, 0.1);
+  background-color: hslax($region-default-color, 0.1);
   border: $cell-border-width solid $region-default-color;
 }
 
 .#{$ns}-table-selection-region {
-  background-color: hslax($region-selected-color-hsl, 0.1);
+  background-color: hslax($region-selected-color, 0.1);
   border: $cell-border-width solid $region-selected-color;
 
   .#{$ns}-dark & {

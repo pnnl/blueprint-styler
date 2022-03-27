@@ -82,7 +82,7 @@ $pt-dark-intent-text-colors: (
   -moz-outline-radius: 6px;
 }
 
-@function border-shadow($alpha, $color: var(--black-hsl), $size: 1px) {
+@function border-shadow($alpha, $color: $black, $size: 1px) {
   @return 0 0 0 $size hslax($color, $alpha);
 }
 
