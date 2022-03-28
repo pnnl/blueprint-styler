@@ -43,9 +43,9 @@
   --pt-intent-success-text-color-hsl: var(--success2-hsl);
   --pt-dark-intent-success-text-color-hsl: var(--success5-hsl);
 
-  --pt-intent-warning-hsl: var(--warning3-hsl);
-  --pt-intent-warning-hover-hsl: var(--warning2-hsl);
-  --pt-intent-warning-active-hsl: var(--warning1-hsl);
+  --pt-intent-warning-hsl: var(--warning5-hsl);
+  --pt-intent-warning-hover-hsl: var(--warning4-hsl);
+  --pt-intent-warning-active-hsl: var(--warning3-hsl);
 
   --pt-intent-warning-text-color-hsl: var(--warning2-hsl);
   --pt-dark-intent-warning-text-color-hsl: var(--warning5-hsl);
@@ -103,6 +103,9 @@
   --pt-dark-link-color: var(--pt-dark-intent-primary-text-color);
 
   --pt-text-selection-color: hsla(215, 100%, 75%, 0.6);
+
+  --pt-text-color-static-hsl: var(--dark-gray1-hsl); // modern // custom
+  @include emit-identity-hsl(pt-text-color-static); // modern // custom
 
   --pt-code-text-color: var(--pt-text-color-muted);
   --pt-dark-code-text-color: var(--pt-dark-text-color-muted);

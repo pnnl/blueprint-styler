@@ -329,6 +329,7 @@ $control-indicator-spacing: $pt-grid-size !default;
   $switch-indicator-background-color: $white !default;
   $switch-indicator-box-shadow: 0 0 0 $button-border-width hslax($black, 0.5) !default;
   $switch-indicator-background-color-disabled: hslax($white, 0.8) !default;
+  $switch-checked-indicator-background-color: $white !default; // PR
   $switch-checked-indicator-background-color-disabled: hslax($white, 0.5) !default;
   $dark-switch-indicator-background-color: $gray4 !default;
   $dark-switch-indicator-background-color-disabled: hslax($gray4, 0.5) !default;
@@ -404,7 +405,7 @@ $control-indicator-spacing: $pt-grid-size !default;
       width: auto;
 
       &::before {
-        background: $white;
+        background: $switch-indicator-background-color; // PR
         border-radius: 50%;
         box-shadow: $switch-indicator-box-shadow;
         height: $switch-indicator-size;
@@ -419,6 +420,7 @@ $control-indicator-spacing: $pt-grid-size !default;
     input:checked ~ .#{$ns}-control-indicator::before {
       // 1em is size of indicator
       left: calc(100% - 1em);
+      background: $switch-checked-indicator-background-color; // PR
     }
 
     &.#{$ns}-large {

@@ -5,7 +5,7 @@
 --button-border-width: 1px;
 --button-border-width-negative: calc(var(--button-border-width) * -1);
 --control-group-spacing: calc(-1 * var(--button-border-width)); // custom
---dark-control-group-spacing: 0; // custom
+// --dark-control-group-spacing: 0; // custom
 // --button-padding:            calc(var(--pt-grid-size) / 2) var(var(--pt-grid-size));
 // --button-padding-small:      0 calc(var(--pt-grid-size) * 0.7);
 // --button-padding-large:      calc(var(--pt-grid-size) / 2) (var(--pt-grid-size) * 1.5);
@@ -78,7 +78,7 @@ Switches and slider handles both use these variables.
 --dark-button-background-color:                   var(--dark-gray5);
 --dark-button-background-color-hover:             var(--dark-gray4);
 --dark-button-background-color-active:            var(--dark-gray2);
---dark-button-background-color-disabled:          hsla(var(--dark-gray5-hsl), 0.5);
+--dark-button-background-color-disabled:          hsla(var(--dark-gray5-hsl), 0.6);
 --dark-button-background-color-active-disabled:   hsla(var(--dark-gray2-hsl), 0.7);
 --dark-button-intent-color-disabled:              hsla(var(--white-hsl), 0.3);
 

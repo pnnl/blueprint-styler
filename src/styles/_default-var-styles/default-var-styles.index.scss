@@ -9,13 +9,14 @@
 @import './components/index';
 
 // Blueprint Originals
-@import './@blueprintjs/core/src/blueprint';
+@import './blueprint-core.scss';
 @import './@blueprintjs/datetime/src/blueprint-datetime';
 @import './@blueprintjs/select/src/blueprint-select';
 @import './@blueprintjs/table/src/table';
 @import './@blueprintjs/popover2/src/blueprint-popover2';
 
 @import './typography';
+@import './modern';
 
 @import '../global/common-dark-theme-color';
 @import '../global/common-standard-search';

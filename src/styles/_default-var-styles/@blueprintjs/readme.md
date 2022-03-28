@@ -71,5 +71,15 @@ Post bp4
 - update base colors
 - -dark theme
 
-
-$color, $color
+Alternate bp4 upgrade?
+- re-copy fresh
+  - update all rgba to hslax
+  - don't comment out dark vars?
+  - no dark mirror?
+- comment out all bp4 'modern' in blueprint.scss - visually recreate _most important_ changes
+  - https://github.com/palantir/blueprint/wiki/Blueprint-4.0
+  - warning foreground color - with text-color-invert
+  - menu-item active
+  - dark theme spacing
+  - look for updates in blueprint.scss
+- alias grayscale colors too?

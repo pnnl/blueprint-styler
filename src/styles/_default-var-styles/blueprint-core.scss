@@ -1,0 +1,13 @@
+// an alternate to
+// @import './@blueprintjs/core/src/blueprint';
+// because that one includes a bunch of override css now for some stupid reason
+
+@import "./@blueprintjs/core/src/common/variables";
+@import "./@blueprintjs/core/src/common/mixins";
+
+@import "./@blueprintjs/core/src/reset";
+@import "./@blueprintjs/core/src/typography";
+@import "./@blueprintjs/core/src/accessibility/focus-states";
+@import "./@blueprintjs/core/src/dark-theme";
+
+@import "./@blueprintjs/core/src/components/index";

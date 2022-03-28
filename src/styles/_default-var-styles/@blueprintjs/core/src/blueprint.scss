@@ -30,24 +30,24 @@ $dark-minimal-button-intents-modern: (
 ) !default; // PR
 
 // Editable text variable overrides
-// $input-placeholder-color: $gray1 !default; // PR
-// $dark-input-placeholder-color: $gray4 !default; // PR
+$input-placeholder-color: $gray1 !default; // PR
+$dark-input-placeholder-color: $gray4 !default; // PR
 
 // Slider variable overrides
-// $button-box-shadow-overlay:
-//   0 0 0 1px hslax($black, 0.5),
-//   0 1px 1px hslax($black, 0.5) !default; // PR
+$button-box-shadow-overlay:
+  0 0 0 1px hslax($black, 0.5),
+  0 1px 1px hslax($black, 0.5) !default; // PR
 
 // Switch variable overrides
-// $switch-indicator-background-color: hslax($gray3, 0.3) !default; // PR
-// $switch-checked-background-color-hover: $blue2 !default; // PR
-// $switch-checked-background-color-active: $blue1 !default; // PR
+$switch-indicator-background-color: hslax($gray3, 0.3) !default; // PR
+$switch-checked-background-color-hover: $blue2 !default; // PR
+$switch-checked-background-color-active: $blue1 !default; // PR
 
 // Tag variables
 $tag-intent-colors-modern: (
   "primary": ($pt-intent-primary, $blue2, $blue1, $white, $white),
   "success": ($pt-intent-success, $green2, $green1, $white, $white),
-  "warning": ($orange5, $orange4, $orange3, $pt-text-color, $pt-text-color),
+  "warning": ($orange5, $orange4, $orange3, $pt-text-color-static, $pt-text-color-static),
   "danger": ($pt-intent-danger, $red2, $red1, $white, $white)
 ) !default; // PR
 
@@ -69,7 +69,7 @@ $minimal-dark-tag-intent-colors-modern: (
 $toast-intent-button-colors-modern: (
   "primary": ($pt-intent-primary, $white, $blue2, $blue1, hslax($white, 0.7)),
   "success": ($pt-intent-success, $white, $green2, $green1, hslax($white, 0.7)),
-  "warning": ($orange5, $dark-gray1, $orange4, $orange3, hslax($dark-gray1, 0.7)),
+  "warning": ($orange5, $pt-text-color-static, $orange4, $orange3, hslax($pt-text-color-static, 0.7)),
   "danger": ($pt-intent-danger, $white, $red2, $red1, hslax($white, 0.7))
 ) !default; // PR
 
@@ -135,33 +135,33 @@ $tree-intent-icon-colors-modern: (
 .#{$ns}-button {
   // Use dark text for warning intent
   &.#{$ns}-intent-warning {
-    background: $orange5;
-    color: $pt-text-color;
+    // background: $orange5;
+    color: $pt-text-color-static;
 
     &:not(.#{$ns}-disabled).#{$ns}-icon > svg {
-      fill: hslax($dark-gray1, 0.7);
+      fill: hslax($pt-text-color-static, 0.7);
     }
 
     &:not(.#{$ns}-disabled):not(.#{$ns}-minimal):not(.#{$ns}-outlined) {
       &:hover {
-        background: $orange4;
-        color: $pt-text-color;
+        // background: $orange4;
+        color: $pt-text-color-static;
       }
 
       &:active,
       &.#{$ns}-active {
-        background: $orange3;
-        color: $pt-text-color;
+        // background: $orange3;
+        color: $pt-text-color-static;
       }
     }
 
     &:disabled,
     &.#{$ns}-disabled {
       background: hslax($orange3, 0.5);
-      color: hslax($dark-gray1, 0.35);
+      color: hslax($pt-text-color-static, 0.35);
 
       .#{$ns}-dark & {
-        color: hslax($dark-gray1, 0.6);
+        color: hslax($pt-text-color-static, 0.6);
       }
     }
 
@@ -418,7 +418,7 @@ table.#{$ns}-html-table {
   // Dark mode contrast for default intent
   .#{$ns}-dark &:not([class*="#{$ns}-intent-"]) {
     background: $gray5;
-    color: $pt-text-color;
+    color: $pt-text-color-static;
 
     &.#{$ns}-interactive {
       &:hover {
