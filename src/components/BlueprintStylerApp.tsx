@@ -4,9 +4,9 @@ import { Link, useSearchParams } from "react-router-dom";
 import { IBlueprintExampleData } from '../tags/types';
 import { allExamples } from './allExamples';
 import logo from '../assets/logo.svg';
+import { changeStyle, defaultStyleName, styleManifest, styleOptions } from '../styles';
 // import { styleSwitcherOptionProps, StyleSwitcher, ComponentLabel, styleManifest, styleSwitcherConfigNameInitial } from '../styles';
-import '../styles/_default-var-styles/styler-styles.scss';
-import '../styles/_flat-styles/styler-styles.scss';
+
 
 FocusStyleManager.onlyShowFocusOnTabs();
 
@@ -25,48 +25,27 @@ export function setTheme(theme: string) {
 }
 
 function handleThemeChange(isDarkTheme: boolean, setIsDarkTheme: React.Dispatch<React.SetStateAction<boolean>>) {
-    // const isDarkTheme = themeState === DARK_THEME
-    // const setToTheme = themeState === LIGHT_THEME ? DARK_THEME : LIGHT_THEME
-    setIsDarkTheme(isDarkTheme)
-    setTheme(isDarkTheme ? LIGHT_THEME: DARK_THEME)
+    setIsDarkTheme(!isDarkTheme)
+    setTheme(isDarkTheme ? LIGHT_THEME : DARK_THEME)
 };
-
-const changeStyle = (styleName: string) => {
-    styleManifest.forEach(({ value }) => {
-        document.documentElement.classList.remove(value)
-    })
-    document.documentElement.classList.add(styleName)
-}
-
-const styleManifest = [
-    {
-        value: 'bpx-default',
-        label: 'Default'
-    },
-    {
-        value: 'bpx-flat',
-        label: 'Flat'
-    }
-]
 
 function BlueprintStylerApp() {
 
     // nav
     const [openIndex, setOpenIndex] = useState(-1)
-    let [searchParams, setSearchParams] = useSearchParams();
-
 
     // theme
     const [isDarkTheme, setIsDarkTheme] = useState(getTheme() === DARK_THEME) // isDarkTheme
     const data: IBlueprintExampleData = useMemo(() => ({ themeName: isDarkTheme ? DARK_THEME : LIGHT_THEME }), [isDarkTheme]) // { themeName: getTheme() }
 
     // style
-    /* const [currentStyleSwitcherConfig, setCurrentStyleSwitcherConfig] = useState<ComponentLabel>(styleManifest[styleSwitcherConfigNameInitial])
+    const [searchParams, setSearchParams] = useSearchParams();
+    const [currentStyle, setCurrentStyle] = useState<string>(styleManifest[defaultStyleName])
     useEffect(() => {
-        const currentStyleName = searchParams.get('style')
-        const styleSwitcherConfig = currentStyleName ? styleManifest[currentStyleName] : styleManifest[styleSwitcherConfigNameInitial]
-        setCurrentStyleSwitcherConfig(styleSwitcherConfig)
-    }, [currentStyleSwitcherConfig, setCurrentStyleSwitcherConfig, searchParams]) */
+        const currentStyleName = searchParams.get('style') || defaultStyleName
+        changeStyle(currentStyleName)
+        setCurrentStyle(currentStyleName)
+    }, [searchParams])
 
     return (
         <div className={["app-wrapper", data.themeName].join(' ')}>
@@ -94,17 +73,10 @@ function BlueprintStylerApp() {
                             </a>
                         </h4>
 
-                        {/* <HTMLSelect
-                            options={styleSwitcherOptionProps}
-                            onChange={e => setSearchParams({ style: e.target.value })}
-                            value={searchParams.get('style') || styleSwitcherConfigNameInitial}
-                            style={{ marginBottom: 8 }}
-                            fill
-                        /> */}
-
                         <HTMLSelect
-                            options={styleManifest}
-                            onChange={(e)=> changeStyle(e.currentTarget.value)}
+                            options={styleOptions}
+                            onChange={e => setSearchParams({ style: e.target.value })}
+                            value={currentStyle}
                             style={{ marginBottom: 8 }}
                             fill
                         />

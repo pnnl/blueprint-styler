@@ -1,6 +1,6 @@
 // credit: https://codepen.io/tylergaw/pen/5061057013e6ddef39cf6b54a8d6bc1f
 
-const isStyleRule = (rule: CSSRule) => rule.type === 1;
+const isStyleRule = (rule: CSSRule) => rule instanceof CSSStyleRule //rule.type === 1;
 
 const customPropertiesRegex = /--([\w\-]*):/ig
 const darkRegex = /dark-(?!gray)/g
@@ -35,11 +35,10 @@ export const createDarkMirrorRootRule = (darkMirrorVarNames: string[]) => {
     return cssDarkMirror
 }
 
-export const addDarkMirrorToStyleSheet = (originStyleSheet: CSSStyleSheet, addToStyleSheet?: CSSStyleSheet) => {
-    addToStyleSheet = addToStyleSheet || originStyleSheet;
-    const darkMirrorVarNames = getDarkMirrorVarNames(originStyleSheet)
-    const darkMirrorRootRule = createDarkMirrorRootRule(darkMirrorVarNames)
-    addToStyleSheet.insertRule(darkMirrorRootRule, addToStyleSheet.cssRules.length);
+export const addDarkMirrorToStyleSheet = (originStyleSheet: CSSStyleSheet, styleNode: HTMLStyleElement) => {
+    const darkMirrorVarNames = getDarkMirrorVarNames(originStyleSheet);
+    const darkMirrorRootRule = createDarkMirrorRootRule(darkMirrorVarNames);
+    styleNode.innerHTML = darkMirrorRootRule
 }
 
 
@@ -50,7 +49,7 @@ const isSameDomain = (styleSheet: CSSStyleSheet) => {
     return styleSheet.href.indexOf(window.location.origin) === 0;
 };
 
-const getAllStyleSheets = () => Array.from(document.styleSheets).filter(isSameDomain)
+export const getAllStyleSheets = () => Array.from(document.styleSheets).filter(isSameDomain)
 
 export const getAllDarkMirrorVarNames = () => (
     getAllStyleSheets()
