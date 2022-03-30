@@ -1,23 +1,19 @@
 #{$root-selector} {
-
   /*! ColorsHsl */
 
-  --grayscale-hue: 213;
-  --grayscale-sat: 0%;
+  --black-hsl: 0, 0%, 8%;
 
-  --black-hsl: 218, 19%, 8%;
+  --dark-gray1-hsl: 0, 0%, 10%;
+  --dark-gray2-hsl: 0, 0%, 17%;
+  --dark-gray3-hsl: 0, 0%, 21%;
+  --dark-gray4-hsl: 0, 0%, 25%;
+  --dark-gray5-hsl: 0, 0%, 29%;
 
-  --dark-gray1-hsl: 213, 16%, 13%;
-  --dark-gray2-hsl: 213, 13%, 17%;
-  --dark-gray3-hsl: 214, 12%, 21%;
-  --dark-gray4-hsl: 215, 13%, 25%;
-  --dark-gray5-hsl: 215, 12%, 29%;
-
-  --gray1-hsl: 218, 10%, 44%;
-  --gray2-hsl: 217, 7%, 51%;
-  --gray3-hsl: 220, 4%, 60%;
-  --gray4-hsl: 216, 3%, 70%;
-  --gray5-hsl: 210, 2%, 79%;
+  --gray1-hsl: 0, 0%, 44%;
+  --gray2-hsl: 0, 0%, 51%;
+  --gray3-hsl: 0, 0%, 60%;
+  --gray4-hsl: 0, 0%, 70%;
+  --gray5-hsl: 0, 0%, 79%;
 
   --light-gray1-hsl: 0, 0%, 84%;
   --light-gray2-hsl: 0, 0%, 87%;
@@ -26,11 +22,4 @@
   --light-gray5-hsl: 0, 0%, 97%;
 
   --white-hsl: 0, 0%, 100%;
-
-  --vermilion-hue: 16;
-  --vermilion1-hsl: 21, 100%, 23%;
-  --vermilion2-hsl: 18, 100%, 31%;
-  --vermilion3-hsl: 16, 100%, 41%;
-  --vermilion4-hsl: 19, 84%, 52%;
-  --vermilion5-hsl: 18, 91%, 63%;
 }

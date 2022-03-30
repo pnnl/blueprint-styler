@@ -1,4 +1,4 @@
-$button-group-intent-divider: hslax($white,0.25) !default;
+$button-group-intent-divider: hslax(var(--white),0.25) !default;
 $button-intent: '#{$ns}-button[class*=#{$ns}-intent-]';
 
 .#{$ns}-button-group {

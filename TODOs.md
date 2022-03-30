@@ -16,17 +16,12 @@
 
 ## Build
 - CSS Build
-  - opacity with [#RRGGBBAA](https://caniuse.com/css-rrggbbaa) like
-    - `--color-blue: #0000FF; --opacity-50: 99; color: var(--color-blue)var(--opacity-50);`
-    - _this doesn't work_
-  - just replace all $vars with --vars? after copy?
-  - opacity by appending -hsl to a var(--color-name) put into hslax (if it doesn't already end in -hsl)
-  - themes are just the modifications to the base theme and the new vars - not an entirely different css file
   - switch themes with a body theme class rather than with React.Lazy
+  - themes are just the modifications to the base theme and the new vars - not an entirely different css file
     - this theme could add another level of specificity for overrides?
   - separate different packages on build - core, selection, table, etc...
-  - export a font file for each theme
-  - https://chrome.google.com/webstore/detail/css-undefined-variable-ch/endbpplgeglmgihkpiapmaimegpkhhcn
+  - export a font file for each theme?
+  - look for undefined vars with: https://chrome.google.com/webstore/detail/css-undefined-variable-ch/endbpplgeglmgihkpiapmaimegpkhhcn
 - Themes are individually published packages - with font dependencies? - monorepo?
   - Add a dependency on the core repo,
   - Generate new style: `$ npm run new-style <style-name>`
@@ -34,7 +29,9 @@
 
 
 ## Styles
-- v4 - wait until a beta from blueprintjs
+- v4
+  - make build changes
+  - repair all current styles
 - modern colors
   - cerulean cobalt color name change
   - blueprint-modern.scss

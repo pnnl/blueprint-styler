@@ -4,7 +4,9 @@ import { Link, useSearchParams } from "react-router-dom";
 import { IBlueprintExampleData } from '../tags/types';
 import { allExamples } from './allExamples';
 import logo from '../assets/logo.svg';
-import { styleSwitcherOptionProps, StyleSwitcher, ComponentLabel, styleManifest, styleSwitcherConfigNameInitial } from '../styles';
+// import { styleSwitcherOptionProps, StyleSwitcher, ComponentLabel, styleManifest, styleSwitcherConfigNameInitial } from '../styles';
+import '../styles/_default-var-styles/styler-styles.scss';
+import '../styles/_flat-styles/styler-styles.scss';
 
 FocusStyleManager.onlyShowFocusOnTabs();
 
@@ -22,11 +24,30 @@ export function setTheme(theme: string) {
     localStorage.setItem(THEME_LOCAL_STORAGE_KEY, theme);
 }
 
-function handleThemeChange(themeState: string, setThemeState: React.Dispatch<React.SetStateAction<string>>) {
-    const setToTheme = themeState === LIGHT_THEME ? DARK_THEME : LIGHT_THEME
-    setThemeState(setToTheme)
-    setTheme(setToTheme)
+function handleThemeChange(isDarkTheme: boolean, setIsDarkTheme: React.Dispatch<React.SetStateAction<boolean>>) {
+    // const isDarkTheme = themeState === DARK_THEME
+    // const setToTheme = themeState === LIGHT_THEME ? DARK_THEME : LIGHT_THEME
+    setIsDarkTheme(isDarkTheme)
+    setTheme(isDarkTheme ? LIGHT_THEME: DARK_THEME)
 };
+
+const changeStyle = (styleName: string) => {
+    styleManifest.forEach(({ value }) => {
+        document.documentElement.classList.remove(value)
+    })
+    document.documentElement.classList.add(styleName)
+}
+
+const styleManifest = [
+    {
+        value: 'bpx-default',
+        label: 'Default'
+    },
+    {
+        value: 'bpx-flat',
+        label: 'Flat'
+    }
+]
 
 function BlueprintStylerApp() {
 
@@ -36,24 +57,22 @@ function BlueprintStylerApp() {
 
 
     // theme
-    const [theme, setTheme] = useState(getTheme())
-    const isDarkTheme = theme === DARK_THEME;
+    const [isDarkTheme, setIsDarkTheme] = useState(getTheme() === DARK_THEME) // isDarkTheme
     const data: IBlueprintExampleData = useMemo(() => ({ themeName: isDarkTheme ? DARK_THEME : LIGHT_THEME }), [isDarkTheme]) // { themeName: getTheme() }
 
-
     // style
-    const [currentStyleSwitcherConfig, setCurrentStyleSwitcherConfig] = useState<ComponentLabel>(styleManifest[styleSwitcherConfigNameInitial])
+    /* const [currentStyleSwitcherConfig, setCurrentStyleSwitcherConfig] = useState<ComponentLabel>(styleManifest[styleSwitcherConfigNameInitial])
     useEffect(() => {
         const currentStyleName = searchParams.get('style')
         const styleSwitcherConfig = currentStyleName ? styleManifest[currentStyleName] : styleManifest[styleSwitcherConfigNameInitial]
         setCurrentStyleSwitcherConfig(styleSwitcherConfig)
-    }, [currentStyleSwitcherConfig, setCurrentStyleSwitcherConfig, searchParams])
+    }, [currentStyleSwitcherConfig, setCurrentStyleSwitcherConfig, searchParams]) */
 
     return (
         <div className={["app-wrapper", data.themeName].join(' ')}>
             <div className="app">
 
-                <StyleSwitcher currentStyleSwitcherConfig={currentStyleSwitcherConfig} />
+                {/* <StyleSwitcher currentStyleSwitcherConfig={currentStyleSwitcherConfig} /> */}
 
                 <section className="styler-menu">
 
@@ -65,7 +84,7 @@ function BlueprintStylerApp() {
                         >
                             <a
                                 href={'#'}
-                                onClick={e => setSearchParams({ })}
+                                onClick={e => setSearchParams({})}
                                 className="styler-menu__title-link"
                             >
                                 <img src={logo} style={{ width: 80 }} alt="Blueprint Styler Logo" />
@@ -75,10 +94,17 @@ function BlueprintStylerApp() {
                             </a>
                         </h4>
 
-                        <HTMLSelect
+                        {/* <HTMLSelect
                             options={styleSwitcherOptionProps}
                             onChange={e => setSearchParams({ style: e.target.value })}
                             value={searchParams.get('style') || styleSwitcherConfigNameInitial}
+                            style={{ marginBottom: 8 }}
+                            fill
+                        /> */}
+
+                        <HTMLSelect
+                            options={styleManifest}
+                            onChange={(e)=> changeStyle(e.currentTarget.value)}
                             style={{ marginBottom: 8 }}
                             fill
                         />
@@ -86,7 +112,7 @@ function BlueprintStylerApp() {
                         <Button
                             rightIcon={isDarkTheme ? "flash" : "moon"}
                             text={isDarkTheme ? "Light theme" : "Dark theme"}
-                            onClick={() => handleThemeChange(theme, setTheme)}
+                            onClick={() => handleThemeChange(isDarkTheme, setIsDarkTheme)}
                             style={{ justifyContent: 'space-between', marginBottom: 8 }}
                             fill
                         />
@@ -190,7 +216,7 @@ function BlueprintStylerApp() {
                             {componentGroup.map(([componentName, componentExamples]) => (
                                 <div key={componentName} className="styler-component">
                                     <h4 id={nameToId(componentName)} className={`styler-component-header ${Classes.HEADING}`} >
-                                        <Icon icon={"link"}/>
+                                        <Icon icon={"link"} />
                                         <a href={'#' + nameToId(componentName)} >{componentName}</a>
                                     </h4>
                                     {componentExamples.map(([ExampleComponent, exampleComponentClassName], i) => (

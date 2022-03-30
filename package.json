@@ -25,6 +25,7 @@
     "build": "yarn run build:react && yarn run build:libs",
     "build:react": "react-scripts build",
     "build:libs": "yarn run gulp",
+    "node-sass":"node-sass",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build:react",

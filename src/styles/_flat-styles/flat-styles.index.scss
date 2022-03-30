@@ -1,7 +1,15 @@
-@import '../_default-var-styles/default-var-styles.index';
+// @import '../_default-var-styles/default-var-styles.index';
 
-@import './common/index';
-@import './components/index';
-@import '../global/common-standard-search';
-@import '../global/common-borderless-button-group';
-@import '../global/common-control-group';
+@import "../global/functions";
+
+$ns: "bp4";
+$root-selector: ":root" !default;
+
+@import "./common/index";
+@import "./components/index";
+
+#{$root-selector} {
+  @import "../global/common-standard-search";
+  @import "../global/common-borderless-button-group";
+  // @import '../global/common-control-group'; // not needed in v4
+}

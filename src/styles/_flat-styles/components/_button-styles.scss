@@ -1,14 +1,17 @@
-.#{$ns}-button, a, a.#{$ns}-button{
-  transition: background-color 100ms linear;
-  &:active{
-    transition-duration: 50ms;
+// #{$root-selector} {
+  .#{$ns}-button,
+  a,
+  a.#{$ns}-button {
+    transition: background-color 100ms linear;
+    &:active {
+      transition-duration: 50ms;
+    }
   }
-}
-
-// .#{$ns}-input, .#{$ns}-file-upload-input{
-//   box-shadow:
-//     0 0 0 0 transparent,
-//     0 0 0 0 transparent,
-//     inset 0 0 0 $button-border-width hslax($black, 0.15);
-//     // inset 0 1px 1px hslax(16,22,26,.2);
+  // .#{$ns}-input, .#{$ns}-file-upload-input{
+  //   box-shadow:
+  //     0 0 0 0 transparent,
+  //     0 0 0 0 transparent,
+  //     inset 0 0 0 $button-border-width hslax($black, 0.15);
+  //     // inset 0 1px 1px hslax(16,22,26,.2);
+  // }
 // }
