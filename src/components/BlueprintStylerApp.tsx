@@ -35,8 +35,17 @@ function BlueprintStylerApp() {
     const [openIndex, setOpenIndex] = useState(-1)
 
     // theme
-    const [isDarkTheme, setIsDarkTheme] = useState(getTheme() === DARK_THEME) // isDarkTheme
-    const data: IBlueprintExampleData = useMemo(() => ({ themeName: isDarkTheme ? DARK_THEME : LIGHT_THEME }), [isDarkTheme]) // { themeName: getTheme() }
+    const [isDarkTheme, setIsDarkTheme] = useState(getTheme() === DARK_THEME); // isDarkTheme
+    const data: IBlueprintExampleData = useMemo(() => ({ themeName: isDarkTheme ? DARK_THEME : LIGHT_THEME }), [isDarkTheme]); // { themeName: getTheme() }
+    useEffect(() => {
+        let toTheme = DARK_THEME
+        let fromTheme = LIGHT_THEME
+        const { classList } = document.documentElement
+        if (!isDarkTheme)
+            [toTheme, fromTheme] = [fromTheme, toTheme]
+        classList.remove(fromTheme)
+        classList.add(toTheme)
+    }, [isDarkTheme])
 
     // style
     const [searchParams, setSearchParams] = useSearchParams();
@@ -48,7 +57,7 @@ function BlueprintStylerApp() {
     }, [searchParams])
 
     return (
-        <div className={["app-wrapper", data.themeName].join(' ')}>
+        <div className="app-wrapper">
             <div className="app">
 
                 {/* <StyleSwitcher currentStyleSwitcherConfig={currentStyleSwitcherConfig} /> */}

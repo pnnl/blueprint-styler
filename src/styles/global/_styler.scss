@@ -20,7 +20,7 @@ $menu-vert-padding: 4rem;
 
 .app-wrapper{
   background-color: $light-gray5;
-  &.bp4-dark{
+  &.bp4-dark, .bp4-dark &{
     background-color: $dark-gray2;
   }
 }
