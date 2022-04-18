@@ -1,11 +1,3 @@
-// don't edit this file //
-
-// THE INDEX //
+// The .bpx-name must match the one in style-manifest.ts
 $root-selector: ":root.bpx-flat" !default;
-@import './flat-styles.index';
-
-// BLUEPRINT STYLER SPECIFIC //
-// for the (stolen) docs examples
-// @import '../global/examples-index';
-// then our own styles
-// @import '../global/styler';
+@import './index';

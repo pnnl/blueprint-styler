@@ -42,9 +42,11 @@ function BlueprintStylerApp() {
         let fromTheme = LIGHT_THEME
         const { classList } = document.documentElement
         if (!isDarkTheme)
-            [toTheme, fromTheme] = [fromTheme, toTheme]
-        classList.remove(fromTheme)
-        classList.add(toTheme)
+            [toTheme, fromTheme] = [fromTheme, toTheme];
+        [document.documentElement, document.body].forEach(element => {
+            element.classList.remove(fromTheme)
+            element.classList.add(toTheme)
+        })
     }, [isDarkTheme])
 
     // style

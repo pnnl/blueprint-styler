@@ -20,9 +20,9 @@ $menu-vert-padding: 4rem;
 
 .app-wrapper{
   background-color: $light-gray5;
-  &.bp4-dark, .bp4-dark &{
-    background-color: $dark-gray2;
-  }
+}
+.#{$ns}-dark .app-wrapper{
+  background-color: $dark-gray2;
 }
 
 .app{
@@ -44,10 +44,6 @@ $menu-vert-padding: 4rem;
 
   border-right: 1px solid $pt-divider-black;
   background-color: $white;
-  .bp4-dark &{
-    background-color: $dark-gray3;
-    border-color: $pt-dark-divider-black;
-  }
 
   display: flex;
   flex-direction: column;
@@ -69,6 +65,10 @@ $menu-vert-padding: 4rem;
   }
 
 }
+.#{$ns}-dark .styler-menu{
+  background-color: $dark-gray3;
+  border-color: $pt-dark-divider-black;
+}
 
 .styler-menu__title-link{
   display: flex;
@@ -82,7 +82,7 @@ $menu-vert-padding: 4rem;
 .styler-menu__group-button{
   justify-content: flex-start;
   margin-bottom: 2px;
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold, 600);
 }
 
 .styler-examples{
@@ -97,13 +97,13 @@ $menu-vert-padding: 4rem;
   padding-top: 2rem;
   position: relative;
 
-  .bp4-icon{
+  .#{$ns}-icon{
     position: absolute;
     right: 100%;
     margin: 0.1em 0.2em;
     opacity: 0;
   }
-  &:hover .bp4-icon{
+  &:hover .#{$ns}-icon{
     opacity: 0.3;
   }
 
@@ -120,3 +120,9 @@ $menu-vert-padding: 4rem;
   margin: 1rem 0;
 }
 
+.#{$ns}-dark .docs-example{
+  background-color: $dark-gray3;
+}
+.#{$ns}-dark .docs-example-options{
+  background-color: $dark-gray5;
+}

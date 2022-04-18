@@ -1,0 +1,7 @@
+
+:root.bpx-static{
+  @import './index';
+  @import '~@blueprintjs/docs-theme/src/styles/_variables';
+  @import '../global/examples-index';
+  @import '../global/styler';
+}

@@ -1,7 +1,7 @@
-// don't edit this file //
-
-// THE INDEX //
-@import './default-var-styles.index';
+// The .bpx-name must match the one in style-manifest.ts
+// in this case we only want
+$root-selector: ":root:not(.bpx-static)" !default;
+@import './index';
 
 // BLUEPRINT STYLER SPECIFIC //
 // for the (stolen) docs examples
