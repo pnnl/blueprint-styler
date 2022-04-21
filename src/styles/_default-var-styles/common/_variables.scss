@@ -43,9 +43,9 @@
 
 --pt-border-radius: 3px;
 
-@include emit-identity-var('pt-font-size', $pt-font-size); // --pt-font-size: $pt-grid-size * 1.4;
-@include emit-identity-var('pt-font-size-large', $pt-font-size-large); // --pt-font-size-large: $pt-grid-size * 1.6;
-@include emit-identity-var('pt-font-size-small', $pt-font-size-small); // --pt-font-size-small: $pt-grid-size * 1.2;
+--pt-font-size: 14px;
+--pt-font-size-large: 16px;
+--pt-font-size-small: 12px;
 
 // a little bit extra to ensure the height comes out to just over 18px (and browser rounds to 18px)
 @include emit-identity-var('pt-line-height', $pt-line-height); // --pt-line-height: ($pt-grid-size * 1.8) / $pt-font-size + 0.0001;

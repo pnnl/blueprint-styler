@@ -89,8 +89,8 @@ $pt-dark-intent-text-colors: (
 // returns the padding necessary to center text in a container of the given height.
 // default line-height is that of base typography, 18px assuming 14px font-size.
 
-@function centered-text($height, $line-height: floor($pt-font-size * $pt-line-height)) {
-  @return floor(($height - $line-height) / 2);
+@function centered-text($height, $line-height: "(#{$pt-font-size} * #{$pt-line-height})") {
+  @return calc((#{$height} - #{$line-height}) / 2);
 }
 
 // Removes the unit from a Sass numeric value (if present): `strip-unit(12px) => 12`
