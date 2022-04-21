@@ -1,59 +1,35 @@
-// this is not included in the final fluent.css output
+// https://docs.microsoft.com/en-us/typography/font-list/segoe-ui
 
-// @font-face {
-//     font-family: "MWF-MDL2";
-//     src:
-//       url("https://www.microsoft.com/mwf/_h/v3.54/mwf.app/fonts/mwfmdl2-v3.54.woff") format("woff"),
-//       url("https://www.microsoft.com/mwf/_h/v3.54/mwf.app/fonts/mwfmdl2-v3.54.ttf") format("truetype"),
-//       url("https://www.microsoft.com/mwf/_h/v3.54/mwf.app/fonts/mwfmdl2-v3.54.svg") format("svg");
-// }
+// @import url('https://fonts.cdnfonts.com/css/segoe-pro');
 
 @font-face {
-    font-family: 'Segoe UI';
-    // src: local('Segoe UI'),
-    src:
-      url('//c.s-microsoft.com/static/fonts/segoe-ui/west-european/Light/latest.woff2') format("woff2"),
-      url('//c.s-microsoft.com/static/fonts/segoe-ui/west-european/Light/latest.woff') format("woff"),
-      url('//c.s-microsoft.com/static/fonts/segoe-ui/west-european/Light/latest.ttf') format("ttf");
-    font-weight: 100;
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Segoe Pro"), local("Segoe UI Regular"), local("Segoe UI"),
+    url("https://fonts.cdnfonts.com/s/16326/SegoePro-Regular.woff") format("woff");
 }
 
 @font-face {
-    font-family: 'Segoe UI';
-    // src: local('Segoe UI'),
-    src:
-      url('//c.s-microsoft.com/static/fonts/segoe-ui/west-european/Semilight/latest.woff2') format("woff2"),
-      url('//c.s-microsoft.com/static/fonts/segoe-ui/west-european/Semilight/latest.woff') format("woff"),
-      url('//c.s-microsoft.com/static/fonts/segoe-ui/west-european/Semilight/latest.ttf') format("ttf");
-    font-weight: 200;
+  font-family: "Segoe UI";
+  font-style: italic;
+  font-weight: 400;
+  src: local("Segoe Pro"), local("Segoe UI Regular"), local("Segoe UI"),
+    url("https://fonts.cdnfonts.com/s/16326/SegoePro-Italic.woff") format("woff");
 }
 
 @font-face {
-    font-family: 'Segoe UI';
-    // src: local('Segoe UI'),
-    src:
-      url('//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.woff2') format("woff2"),
-      url('//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.woff') format("woff"),
-      url('//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.ttf') format("ttf");
-    font-weight: 400;
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 600 700;
+  src: local("Segoe Pro"), local("Segoe UI Semibold"), local("Segoe UI"),
+    url("https://fonts.cdnfonts.com/s/16326/SegoePro-Semibold.woff") format("woff");
 }
 
 @font-face {
-    font-family: 'Segoe UI';
-    // src: local('Segoe UI'),
-    src:
-      url('//c.s-microsoft.com/static/fonts/segoe-ui/west-european/Semibold/latest.woff2') format("woff2"),
-      url('//c.s-microsoft.com/static/fonts/segoe-ui/west-european/Semibold/latest.woff') format("woff"),
-      url('//c.s-microsoft.com/static/fonts/segoe-ui/west-european/Semibold/latest.ttf') format("ttf");
-    font-weight: 600;
-}
-
-@font-face {
-    font-family: 'Segoe UI';
-    // src: local('Segoe UI'),
-    src:
-      url('//c.s-microsoft.com/static/fonts/segoe-ui/west-european/Bold/latest.woff2') format("woff2"),
-      url('//c.s-microsoft.com/static/fonts/segoe-ui/west-european/Bold/latest.woff') format("woff"),
-      url('//c.s-microsoft.com/static/fonts/segoe-ui/west-european/Bold/latest.ttf') format("ttf");
-    font-weight: 700;
+  font-family: "Segoe UI";
+  font-style: italic;
+  font-weight: 600 700;
+  src: local("Segoe Pro"), local("Segoe UI Semibold"), local("Segoe UI"),
+    url("https://fonts.cdnfonts.com/s/16326/SegoePro-SemiboldItalic.woff") format("woff");
 }
