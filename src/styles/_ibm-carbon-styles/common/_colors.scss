@@ -38,6 +38,7 @@
 --red3-hsl: 358, 74%, 49%;
 --red4-hsl: 6, 78%, 62%;
 --red5-hsl: 8, 87%, 72%;
+--red6-hsl: 8, 90%, 82%;
 
 // $magenta
 --rose-hue: 338;
@@ -64,20 +65,21 @@
 --indigo5-hsl: 264, 96%, 79%;
 
 // $blue
---cobalt-hue: 219;
---cobalt1-hsl: 219, 90%, 27%;
---cobalt2-hsl: 219, 90%, 39%;
---cobalt3-hsl: 219, 99%, 53%;
---cobalt4-hsl: 219, 99%, 64%;
---cobalt5-hsl: 219, 99%, 74%;
+--blue-hue: 219; // CORE //
+--blue1-hsl: 219, 90%, 27%;
+--blue2-hsl: 219, 90%, 39%;
+--blue3-hsl: 219, 99%, 53%;
+--blue4-hsl: 219, 99%, 64%;
+--blue5-hsl: 219, 99%, 74%;
+--blue6-hsl: 219, 100%, 84%;
 
 // $cyan
---blue-hue: 205; // CORE //
---blue1-hsl: 205, 98%, 20%;
---blue2-hsl: 205, 100%, 28%;
---blue3-hsl: 205, 99%, 38%;
---blue4-hsl: 205, 62%, 53%;
---blue5-hsl: 205, 62%, 65%;
+--cerulean-hue: 205;
+--cerulean1-hsl: 205, 98%, 20%;
+--cerulean2-hsl: 205, 100%, 28%;
+--cerulean3-hsl: 205, 99%, 38%;
+--cerulean4-hsl: 205, 62%, 53%;
+--cerulean5-hsl: 205, 62%, 65%;
 
 // $teal
 --turquoise-hue: ;
@@ -94,6 +96,7 @@
 --green3-hsl: 138, 66%, 30%;
 --green4-hsl: 138, 34%, 46%;
 --green5-hsl: 138, 29%, 59%;
+--green6-hsl: 138, 29%, 75%;
 
 // $mix($turquoise, $green) ??
 --forest-hue: 91;
@@ -118,6 +121,7 @@
 --gold3-hsl: 46, 38%, 48%;
 --gold4-hsl: 46, 50%, 55%;
 --gold5-hsl: 47, 88%, 69%;
+--gold6-hsl: 47, 90%, 80%;
 
 // $orange
 --orange-hue: 25; // CORE //
@@ -126,6 +130,7 @@
 --orange3-hsl: 25, 70%, 50%;
 --orange4-hsl: 25, 100%, 60%;
 --orange5-hsl: 25, 100%, 72%;
+--orange6-hsl: 25, 100%, 82%;
 
 // $warm-gray ish?
 --sepia-hue: 30;

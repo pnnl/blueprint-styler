@@ -1,7 +1,7 @@
 @import '../../global/common-slider-handles';
 
 .#{$ns}-slider-label{
-  font-family: $pt-font-family-monospace;
+  font-family: var(--pt-font-family-monospace);
 }
 
 .#{$ns}-slider-handle{

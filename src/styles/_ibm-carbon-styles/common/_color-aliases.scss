@@ -39,21 +39,12 @@
 
 /*! IntentColors */
 
---pt-intent-primary-hue:                 var(--cobalt-hue);
---pt-intent-primary-hsl:                 var(--cobalt3-hsl);
---pt-intent-primary-hover-hsl:           var(--cobalt2-hsl);
---pt-intent-primary-active-hsl:          var(--cobalt1-hsl);
-
---pt-intent-primary-text-color-hsl:      var(--cobalt3-hsl);
---pt-dark-intent-primary-text-color-hsl: var(--cobalt4-hsl);
-
---pt-intent-warning-hue:                 var(--gold-hue);
---pt-intent-warning-hsl:                 var(--gold5-hsl);
---pt-intent-warning-hover-hsl:           var(--gold4-hsl);
---pt-intent-warning-active-hsl:          var(--gold3-hsl);
-
---pt-intent-warning-text-color-hsl:      var(--gold3-hsl);
---pt-dark-intent-warning-text-color-hsl: var(--gold5-hsl);
+--warning1-hsl: var(--gold1-hsl);
+--warning2-hsl: var(--gold2-hsl);
+--warning3-hsl: var(--gold3-hsl);
+--warning4-hsl: var(--gold4-hsl);
+--warning5-hsl: var(--gold5-hsl);
+--warning6-hsl: var(--gold6-hsl);
 
 
 

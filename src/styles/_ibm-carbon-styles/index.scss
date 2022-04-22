@@ -1,0 +1,16 @@
+@import '../global/functions';
+@import '../_default-var-styles/common/color-aliases.identity';
+$pt-input-height: 32px;
+
+$ns: "bp4";
+$root-selector: ":root" !default;
+
+@import './common/index';
+@import './components/index';
+@import './icon-overrides';
+
+#{$root-selector} {
+  @import '../global/common-standard-search';
+  // @import '../global/common-control-group'; // not needed in bp4
+  @import '../global/common-tag-input-shrink';
+}

@@ -1,10 +1,3 @@
 .#{$ns}-button.#{$ns}-large, .#{$ns}-large .#{$ns}-button{
-  font-size: $pt-font-size;
-}
-
-.#{$ns}-button.#{$ns}-intent-warning {
-  color: var(--pt-heading-color);
-  .#{$ns}-dark & {
-    color: var(--pt-app-background-color);
-  }
+  font-size: var(--pt-font-size);
 }

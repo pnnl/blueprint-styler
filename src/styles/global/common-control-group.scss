@@ -4,13 +4,13 @@
     &:focus,
     &.#{$ns}-active // not applied in _control-group.scss ?
     {
-      border-radius: $pt-border-radius;
+      border-radius: var(--pt-border-radius);
       z-index: index($control-group-stack, "input-focus");
     }
   }
 
   .#{$ns}-tag-input .#{$ns}-button {
-    border-radius: $pt-border-radius; // this is also a blueprint oversight?
+    border-radius: var(--pt-border-radius); // this is also a blueprint oversight?
   }
 
 }

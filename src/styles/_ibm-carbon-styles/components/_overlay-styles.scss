@@ -1,6 +1,6 @@
 // MENU //
 .#{$ns}-menu{
-  padding: $pt-grid-size/2 0;
+  padding: 5px 0;
 }
 
 .#{$ns}-menu-divider{
@@ -31,7 +31,7 @@
   }
 
   &.#{$ns}-daterangepicker .DayPicker:last-child{
-    border-left: 1px solid $pt-divider-black; // dark themes
+    border-left: 1px solid var(--pt-divider-black); // dark themes
   }
 
   .#{$ns}-datepicker-caption{
@@ -39,7 +39,7 @@
   }
 
   .DayPicker-Day.DayPicker-Day--selected{
-    background-color: $pt-intent-primary;
+    background-color: var(--pt-intent-primary);
   }
 
 }
@@ -74,10 +74,10 @@
   .#{$ns}-timepicker-input{
     height: 100%;
     &:hover:not(:focus){
-      box-shadow: inset 0 -1px 0 0 $pt-intent-primary;
+      box-shadow: inset 0 -1px 0 0 var(--pt-intent-primary);
     }
     &:focus {
-      box-shadow: inset 0 0 0 2px $pt-intent-primary;
+      box-shadow: inset 0 0 0 2px var(--pt-intent-primary);
     }
   }
 

@@ -10,3 +10,5 @@ $chevron-right-icon: create-icon-svg($chevron-right-path-d);
 $more-icon: create-icon-svg($overflow-menu-horizontal-path-d);
 $small-minus-icon: create-icon-svg($subtract-path-d);
 $small-tick-icon: create-icon-svg($checkmark-path-d);
+
+@import '../global/svg-icon-vars';

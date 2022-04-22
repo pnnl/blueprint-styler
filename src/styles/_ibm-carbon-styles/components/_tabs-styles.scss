@@ -1,9 +1,20 @@
-.#{$ns}-tab{
+.#{$ns}-tab {
   font-weight: var(--font-weight-bold);
-  color: $pt-text-color-muted;
+  color: var(--pt-text-color-muted);
 }
 
-.#{$ns}-tab-indicator{
+.#{$ns}-tab[aria-selected="true"],
+.#{$ns}-tab:not([aria-disabled="true"]):hover {
+  color: var(--pt-text-color);
+}
+
+.#{$ns}-tab-indicator {
   // margin-bottom: -1px;
-  background-color: $pt-intent-primary;
+  height: 1px;
+  background-color: var(--pt-intent-primary);
+}
+
+.bp4-tab[aria-selected="true"] {
+  border-radius: 0;
+  box-shadow: inset 0 -1px 0 var(--pt-intent-primary);
 }
