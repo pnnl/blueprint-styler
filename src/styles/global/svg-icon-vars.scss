@@ -1,0 +1,12 @@
+$pt-icon-color-raw: hsl(0, 0%, 43%) !default; // gray1 ish // for svg-icon() //
+#{$root-selector} {
+  /*! Icons */
+
+  // Breadcrumbs //
+  --chevron-right-icon: #{svg-icon($chevron-right-icon, $pt-icon-color-raw)};
+  --more-icon: #{svg-icon($more-icon, $pt-icon-color-raw)};
+
+  // Checkbox //
+  --small-minus-icon: #{svg-icon($small-minus-icon, white)};
+  --small-tick-icon: #{svg-icon($small-tick-icon, white)};
+}
