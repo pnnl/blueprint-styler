@@ -35,7 +35,7 @@ Styleguide breadcrumbs
     display: flex;
 
     &::after {
-      background: svg-icon($chevron-right-icon, $pt-icon-color-raw);
+      background: var(--chevron-right-icon);
       content: "";
       display: block;
       height: $pt-icon-size-standard;
@@ -98,7 +98,7 @@ Styleguide breadcrumbs
   vertical-align: text-bottom;
 
   &::before {
-    background: svg-icon($more-icon, $pt-icon-color-raw) center no-repeat;
+    background: var(--more-icon) center no-repeat;
     content: "";
     display: block;
     height: $pt-icon-size-standard;

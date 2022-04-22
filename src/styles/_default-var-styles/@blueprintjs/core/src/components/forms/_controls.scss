@@ -211,13 +211,13 @@ $control-indicator-spacing: $pt-grid-size !default;
   */
 
   &.#{$ns}-checkbox {
-    @mixin indicator-inline-icon($icon) {
+    /* @mixin indicator-inline-icon($icon) {
       &::before {
         // embed SVG icon image as backgroud-image above gradient.
         // the SVG image content is inlined into the CSS, so use this sparingly.
         background-image: svg-icon($icon, white);
       }
-    }
+    } */
 
     // make :indeterminate look like :checked _for Checkbox only_
     @include control-checked-colors(":indeterminate");
@@ -227,11 +227,11 @@ $control-indicator-spacing: $pt-grid-size !default;
     }
 
     input:checked ~ .#{$ns}-control-indicator {
-      @include indicator-inline-icon($small-tick-icon);
+      &::before { background-image: var(--small-tick-icon); }
     }
 
     input:indeterminate ~ .#{$ns}-control-indicator {
-      @include indicator-inline-icon($small-minus-icon);
+      &::before { background-image: var(--small-minus-icon); }
     }
   }
 
