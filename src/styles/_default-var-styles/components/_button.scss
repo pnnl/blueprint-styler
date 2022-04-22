@@ -4,8 +4,9 @@
 
 --button-border-width: 1px;
 --button-border-width-negative: calc(var(--button-border-width) * -1);
---control-group-spacing: calc(-1 * var(--button-border-width)); // custom
-// --dark-control-group-spacing: 0; // custom
+--control-group-spacing: 2px; // custom
+--button-group-spacing: 0px; // custom
+
 // --button-padding:            calc(var(--pt-grid-size) / 2) var(var(--pt-grid-size));
 // --button-padding-small:      0 calc(var(--pt-grid-size) * 0.7);
 // --button-padding-large:      calc(var(--pt-grid-size) / 2) (var(--pt-grid-size) * 1.5);

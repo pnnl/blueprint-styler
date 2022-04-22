@@ -15,7 +15,7 @@
     > .#{$ns}-popover2-target:not(:last-child) .#{$ns}-button {
       border-bottom-right-radius: 0;
       border-top-right-radius: 0;
-      margin-right: var(--control-group-spacing);
+      margin-right: var(--button-group-spacing);
     }
   }
 
@@ -35,7 +35,7 @@
       }
 
       > .#{$ns}-popover2-target:not(:last-child) .#{$ns}-button {
-        margin-bottom: var(--control-group-spacing);
+        margin-bottom: var(--button-group-spacing);
       }
     }
   }

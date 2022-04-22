@@ -192,7 +192,7 @@ Styleguide control-group
 
   &:not(.#{$ns}-vertical) {
     > :not(:last-child) {
-      margin-right: 2px;
+      margin-right: var(--control-group-spacing); // 2px;
     }
   }
 
@@ -256,7 +256,7 @@ Styleguide control-group
     flex-direction: column;
 
     > :not(:last-child) {
-      margin-bottom: 2px;
+      margin-bottom: var(--control-group-spacing); // 2px;
     }
   }
 }
