@@ -62,7 +62,7 @@ $control-group-stack: (
       border-shadow(0.3, $color, 2px);
   } @else {
     @return
-      border-shadow(0, $color, 0),
+      inset border-shadow(0, $color, 0), // PR
       border-shadow(0, $color, 0);
   }
 }
@@ -75,8 +75,8 @@ $control-group-stack: (
       border-shadow(0.3, $color, 2px);
   } @else {
     @return
-      border-shadow(0, $color, 0),
-      border-shadow(0, $color, 0),
+      inset border-shadow(0, $color, 0), // PR
+      inset border-shadow(0, $color, 0), // PR
       border-shadow(0, $color, 0);
   }
 }
