@@ -3,25 +3,28 @@
 
 /*! IntentColors */
 
---pt-intent-primary-hue:        var(--blue-hue);
---pt-intent-primary-hsl:        var(--blue3-hsl);
---pt-intent-primary-hover-hsl:  var(--blue4-hsl);
---pt-intent-primary-active-hsl: var(--blue2-hsl);
+--primary1-hsl: var(--cerulean1-hsl);
+--primary2-hsl: var(--cerulean2-hsl);
+--primary3-hsl: var(--cerulean3-hsl);
+--primary4-hsl: var(--cerulean4-hsl);
+--primary5-hsl: var(--cerulean5-hsl);
+--primary6-hsl: var(--cerulean6-hsl);
 
---pt-intent-success-hue:        var(--green-hue);
---pt-intent-success-hsl:        var(--green3-hsl);
---pt-intent-success-hover-hsl:  var(--green4-hsl);
---pt-intent-success-active-hsl: var(--green2-hsl);
+--pt-intent-primary-hsl:        var(--primary3-hsl);
+--pt-intent-primary-hover-hsl:  var(--primary4-hsl);
+--pt-intent-primary-active-hsl: var(--primary2-hsl);
 
---pt-intent-warning-hue:        var(--orange-hue);
---pt-intent-warning-hsl:        var(--orange3-hsl);
---pt-intent-warning-hover-hsl:  var(--orange4-hsl);
---pt-intent-warning-active-hsl: var(--orange2-hsl);
+--pt-intent-success-hsl:        var(--success3-hsl);
+--pt-intent-success-hover-hsl:  var(--success4-hsl);
+--pt-intent-success-active-hsl: var(--success2-hsl);
 
---pt-intent-danger-hue:        var(--red-hue);
---pt-intent-danger-hsl:        var(--red3-hsl);
---pt-intent-danger-hover-hsl:  var(--red4-hsl);
---pt-intent-danger-active-hsl: var(--red2-hsl);
+--pt-intent-warning-hsl:        var(--warning4-hsl);
+--pt-intent-warning-hover-hsl:  var(--warning5-hsl);
+--pt-intent-warning-active-hsl: var(--warning3-hsl);
+
+--pt-intent-danger-hsl:        var(--danger3-hsl);
+--pt-intent-danger-hover-hsl:  var(--danger4-hsl);
+--pt-intent-danger-active-hsl: var(--danger2-hsl);
 
 
 /*! TextColors */

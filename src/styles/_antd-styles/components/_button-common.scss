@@ -14,8 +14,7 @@
 --dark-button-border-color: hsla(var(--white-hsl), 0.2);  // var(--dark-gray5);  // custom
 --button-bottom-box-shadow: 0 2px 0 hsla(var(--black-hsl), .015); // custom
 
---control-group-spacing: calc(-1 * var(--button-border-width)); // custom
---dark-control-group-spacing: calc(-1 * var(--button-border-width)); // custom
+--control-group-spacing: 4px; // custom
 
 --button-box-shadow:
   inset 0 0 0 var(--button-border-width) var(--button-border-color),

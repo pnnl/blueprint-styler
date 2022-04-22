@@ -35,6 +35,7 @@
 
 // red
 --red-hue: 357; // CORE //
+--red6-hsl:   3, 100%, 81%; //3
 --red5-hsl:   1, 100%, 73%; //4
 --red4-hsl: 359, 100%, 65%; //5
 --red3-hsl: 357,  91%, 55%; //6
@@ -66,20 +67,22 @@
 --indigo1-hsl: 261,  79%, 29%; //8
 
 // geekblue
---cobalt-hue: 228;
---cobalt5-hsl: 224, 100%, 76%; //4
---cobalt4-hsl: 226,  91%, 66%; //5
---cobalt3-hsl: 228,  82%, 55%; //6
---cobalt2-hsl: 230,  74%, 44%; //7
---cobalt1-hsl: 232,  82%, 34%; //8
+--blue-hue: 228; // CORE //
+--blue6-hsl: 203, 100%, 78%; //3
+--blue5-hsl: 224, 100%, 76%; //4
+--blue4-hsl: 226,  91%, 66%; //5
+--blue3-hsl: 228,  82%, 55%; //6
+--blue2-hsl: 230,  74%, 44%; //7
+--blue1-hsl: 232,  82%, 34%; //8
 
 // blue
---blue-hue: 209; // CORE //
---blue5-hsl: 205, 100%, 71%; //4
---blue4-hsl: 207, 100%, 63%; //5
---blue3-hsl: 209, 100%, 55%; //6
---blue2-hsl: 211,  92%, 44%; //7
---blue1-hsl: 213, 100%, 35%; //8
+--cerulean-hue: 209;
+// --cerulean6-hsl: 205, 100%, 71%; //3
+--cerulean5-hsl: 205, 100%, 71%; //4
+--cerulean4-hsl: 207, 100%, 63%; //5
+--cerulean3-hsl: 209, 100%, 55%; //6
+--cerulean2-hsl: 211,  92%, 44%; //7
+--cerulean1-hsl: 213, 100%, 35%; //8
 
 // cyan
 --turquoise-hue: 180;
@@ -91,6 +94,7 @@
 
 // green
 --green-hue: 100; // CORE //
+--green6-hsl:  94,  70%, 74%; //3
 --green5-hsl:  96,  65%, 63%; //4
 --green4-hsl:  98,  62%, 53%; //5
 --green3-hsl: 100,  77%, 44%; //6
@@ -107,11 +111,11 @@
 
 // lime
 --lime-hue: 77;
---lime1-hsl: 73,  85%, 66%; //4
---lime2-hsl: 75,  78%, 56%; //5
+--lime5-hsl: 73,  85%, 66%; //4
+--lime4-hsl: 75,  78%, 56%; //5
 --lime3-hsl: 77,  85%, 46%; //6
---lime4-hsl: 79,  95%, 36%; //7
---lime5-hsl: 81, 100%, 27%; //8
+--lime2-hsl: 79,  95%, 36%; //7
+--lime1-hsl: 81, 100%, 27%; //8
 
 // gold
 --gold-hue: 40;
@@ -123,6 +127,7 @@
 
 // orange
 --orange-hue: 30; // CORE //
+--orange6-hsl: 37, 100%, 78%; //3
 --orange5-hsl: 35, 100%, 71%; //4
 --orange4-hsl: 33, 100%, 63%; //5
 --orange3-hsl: 31,  96%, 53%; //6

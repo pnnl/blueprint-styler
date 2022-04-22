@@ -31,7 +31,17 @@
 ## Styles
 - v4
   - make build changes
-  - repair all current styles
+  - repair all current styles - color changes, intent color mappings
+    - default
+      - making font size a var()
+    - flat
+    - ibm
+    - –––
+    - antd
+    - fluent
+    - styler
+  - export better styles
+  - update readme
 - modern colors
   - cerulean cobalt color name change
   - blueprint-modern.scss
@@ -50,11 +60,16 @@
 - Flat Monochrome - intent primary color is grayscale - or all blue tint? - FERC and Starfish
 - Flat Colorful - buttons have a colorful gradient?
 - [IBM Carbon](https://www.carbondesignsystem.com/components/overview)
-- [ant.design](https://ant.design/components/overview/)
+- [ant.design](https://ant.design/components/overview/) aka 'antd'
+  - [dark theme](https://ant.design/components/overview/?theme=dark)
+  - has wrong hover state
+     -  minimal intent none button-group
+     -  buttons in toast
   - button group with active could be slightly different - see original
   - disabled button in button group could have a border?
   - bugs with icon color in input? or something like that
 - [Microsoft Fluent](https://developer.microsoft.com/en-us/fluentui#/controls/web)
+  - single icon button should not be blue
   - [Theme Designer](https://fabricweb.z5.web.core.windows.net/pr-deploy-site/refs/heads/master/theming-designer/)
   - [Colors](https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/shared)
   - slider

@@ -1,6 +1,10 @@
-h1,h2,h3,h4,h5,h6,
-.#{$ns}-heading
-{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.#{$ns}-heading {
   font-family: var(--pt-font-family-decorative);
   font-weight: 500;
 }

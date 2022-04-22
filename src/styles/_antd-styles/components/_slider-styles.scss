@@ -1,12 +1,12 @@
 @import '../../global/common-slider-handles';
 
-#{$root-selector}{
+#{$root-selector} {
   /*! Components */
-  --slider-background-color:      var(--button-background-color); // custom
+  --slider-background-color: var(--button-background-color); // custom
   --dark-slider-background-color: var(--dark-gray5); // custom
 }
 
-.#{$ns}-slider-handle{
+.#{$ns}-slider-handle {
 
   // @include button-customizations();
   @include antd-button-active-effect();
@@ -14,7 +14,7 @@
 
   background-color: var(--slider-background-color);
 
-  transition: 200ms linear ;
+  transition: 200ms linear;
   transition-property: background-color, color, opacity, box-shadow;
 
   &:hover {

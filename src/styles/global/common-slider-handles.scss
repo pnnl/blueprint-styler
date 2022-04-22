@@ -1,4 +1,4 @@
-@mixin slider-handles($radius:99px){
+@mixin slider-handles($radius:99px, $handle-size: 12px){
   border-radius: $radius;
 
   &.#{$ns}-end.#{$ns}-end {

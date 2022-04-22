@@ -1,0 +1,12 @@
+@import '../global/functions';
+@import '../_default-var-styles/components/button.identity';
+
+$ns: "bp4";
+$root-selector: ":root" !default;
+
+@import './common/index';
+@import './components/index';
+
+#{$root-selector} {
+  @import '../global/common-standard-search';
+}

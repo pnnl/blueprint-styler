@@ -1,5 +1,8 @@
 // https://ant.design/components/button/
 
+// $button-padding: 16px;
+// $pt-icon-size-standard: 16px;
+
 @mixin antd-button-active-effect() {
   // creates the active animation of an expanding border
 
@@ -64,6 +67,9 @@
     color: inherit;
   }
 
+  // padding-left: $button-padding;
+  // padding-right: $button-padding;
+
   // &:not([class*="#{$ns}-intent-"]) {
   &:not([class*="#{$ns}-intent-"]):not(.#{$ns}-minimal):not(.#{$ns}-outlined):not(:disabled):not(.#{$ns}-disabled) {
   // &.#{$ns}-button { // extra specificity?
@@ -123,11 +129,14 @@ a.#{$ns}-button{ @include button-base-overrides }
   }
 }
 
+.#{$ns}-button-group .#{$ns}-button[class*="bp4-intent-"]{
+  --button-group-spacing: 1px;
+}
+
 
 .#{$ns}-html-select,
 .#{$ns}-select {
   // this one's a bit of a mess // TODO: more testing
-  $select-padding: $pt-grid-size * 1.6;
 
   transition: 200ms linear ;
   transition-property: background-color, color, opacity, box-shadow ;
@@ -136,8 +145,8 @@ a.#{$ns}-button{ @include button-base-overrides }
     @include button-base-overrides();
     @include button-customizations();
 
-    padding-left: $select-padding;
-    padding-right: $select-padding + $pt-icon-size-standard;
+    // padding-left: $button-padding;
+    // padding-right: $button-padding + $pt-icon-size-standard;
 
     &:hover~.#{$ns}-icon {
       color: var(--pt-intent-primary-hover);
@@ -146,7 +155,7 @@ a.#{$ns}-button{ @include button-base-overrides }
   }
 
   .#{$ns}-icon {
-    right: $select-padding;
+    // right: $button-padding;
     transition: inherit;
   }
 
