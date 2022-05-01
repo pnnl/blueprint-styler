@@ -4,7 +4,7 @@ import '../styles/_default-var-styles/styler-styles.scss';
 import '../styles/_flat-styles/styler-styles.scss';
 import '../styles/_ibm-carbon-styles/styler-styles.scss';
 import '../styles/_antd-styles/styler-styles.scss';
-// import '../styles/_fluent-styles/styler-styles.scss';
+import '../styles/_fluent-styles/styler-styles.scss';
 // import '../styles/_pnnl-v3-styles/styler-styles.scss';
 import { addDarkMirrorToStyleSheet, getAllStyleSheets } from './createDarkMirrorStyles';
 
@@ -13,7 +13,7 @@ export const styleManifest: Record<string, string> = {
     'Flat': 'bpx-flat',
     'IBM Carbon': 'bpx-carbon',
     'Ant Design': 'bpx-antd',
-    // 'Microsoft Fluent (beta)': 'bpx-fluent',
+    'Microsoft Fluent (beta)': 'bpx-fluent',
     // 'PNNL v3 (beta)': 'bpx-pnnl',
     'Static (original css)': 'bpx-static',
 }

@@ -1,31 +1,36 @@
-a,
-a.#{$ns}-button,
-.#{$ns}-button,
-.#{$ns}-html-select select,
-.#{$ns}-select select
-{
-  font-weight: var(--font-weight-bold);
+#{$root-selector} {
 
-  transition: background-color 100ms linear;
-  &:active{
-    transition-duration: 50ms;
+  a,
+  a.#{$ns}-button,
+  .#{$ns}-button,
+  .#{$ns}-html-select select,
+  .#{$ns}-select select {
+    font-weight: var(--font-weight-bold);
+
+    transition: background-color 100ms linear;
+
+    &:active {
+      transition-duration: 50ms;
+    }
   }
+
+  .#{$ns}-button.#{$ns}-minimal {
+    .#{$ns}-icon {
+      //:not(:only-child) {
+      color: var(--pt-intent-primary-hover);
+    }
+
+    &:hover {
+      color: var(--pt-intent-primary-hover);
+    }
+  }
+
+  // .#{$ns}-input, .#{$ns}-file-upload-input{
+  //   box-shadow:
+  //     0 0 0 0 transparent,
+  //     0 0 0 0 transparent,
+  //     inset 0 0 0 $button-border-width hslax($black, 0.15);
+  //     // inset 0 1px 1px hslax(16,22,26,.2);
+  // }
+
 }
-
-.#{$ns}-button.#{$ns}-minimal{
-  .#{$ns}-icon{
-    color: var(--pt-intent-primary-hover);
-  }
-  &:hover{
-    color: var(--pt-intent-primary-hover);
-  }
-}
-
-
-// .#{$ns}-input, .#{$ns}-file-upload-input{
-//   box-shadow:
-//     0 0 0 0 transparent,
-//     0 0 0 0 transparent,
-//     inset 0 0 0 $button-border-width hslax($black, 0.15);
-//     // inset 0 1px 1px hslax(16,22,26,.2);
-// }
