@@ -1,13 +1,3 @@
-@import "../global/functions";
-
-$ns: "bp4";
+// The .bpx-name must match the one in style-manifest.ts
 $root-selector: ":root.bpx-flat" !default;
-
-@import "./common/index";
-@import "./components/index";
-
-#{$root-selector} {
-  @import "../global/common-standard-search";
-  @import "../global/common-borderless-button-group";
-  // @import '../global/common-control-group'; // not needed in v4
-}
+@import './index';
