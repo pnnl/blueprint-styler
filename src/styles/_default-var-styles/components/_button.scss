@@ -5,7 +5,7 @@
 --button-border-width: 1px;
 --button-border-width-negative: calc(var(--button-border-width) * -1);
 --control-group-spacing: 2px; // custom
---button-group-spacing: 0px; // custom
+--button-group-spacing: -1px; // custom
 
 // --button-padding:            calc(var(--pt-grid-size) / 2) var(var(--pt-grid-size));
 // --button-padding-small:      0 calc(var(--pt-grid-size) * 0.7);
