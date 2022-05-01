@@ -224,6 +224,7 @@ $control-indicator-spacing: $pt-grid-size !default;
 
     .#{$ns}-control-indicator {
       border-radius: $pt-border-radius;
+      &::before{ background-position: center; } // PR?
     }
 
     input:checked ~ .#{$ns}-control-indicator {
