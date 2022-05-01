@@ -31,132 +31,136 @@
 
 // ruby + copper
 --vermilion-hue: 10;
---vermilion1-hsl: var(--vermilion-hue), 75%, 63%;
---vermilion2-hsl: var(--vermilion-hue), 66%, 53%;
+--vermilion5-hsl: var(--vermilion-hue), 75%, 63%;
+--vermilion4-hsl: var(--vermilion-hue), 66%, 53%;
 --vermilion3-hsl: var(--vermilion-hue), 82%, 42%;
---vermilion4-hsl: var(--vermilion-hue), 87%, 37%;
---vermilion5-hsl: var(--vermilion-hue), 90%, 31%;
+--vermilion2-hsl: var(--vermilion-hue), 87%, 37%;
+--vermilion1-hsl: var(--vermilion-hue), 90%, 31%;
 
 // ruby
 --red-hue: 347; // CORE //
---red1-hsl: var(--red-hue), 80%, 63%;
---red2-hsl: var(--red-hue), 75%, 52%;
+--red5-hsl: var(--red-hue), 80%, 63%;
+--red4-hsl: var(--red-hue), 75%, 52%;
 --red3-hsl: var(--red-hue), 99%, 41%;
---red4-hsl: var(--red-hue), 99%, 35%;
---red5-hsl: var(--red-hue), 99%, 29%;
+--red2-hsl: var(--red-hue), 99%, 35%;
+--red1-hsl: var(--red-hue), 99%, 29%;
 
 // garnet
 --rose-hue: 325;
---rose1-hsl: var(--rose-hue), 48%, 55%;
---rose2-hsl: var(--rose-hue), 61%, 41%;
+--rose5-hsl: var(--rose-hue), 48%, 55%;
+--rose4-hsl: var(--rose-hue), 61%, 41%;
 --rose3-hsl: var(--rose-hue), 100%, 28%;
---rose4-hsl: var(--rose-hue), 100%, 24%;
---rose5-hsl: var(--rose-hue), 100%, 20%;
+--rose2-hsl: var(--rose-hue), 100%, 24%;
+--rose1-hsl: var(--rose-hue), 100%, 20%;
 
 // garnet + amethyst
 --violet-hue: 311;
---violet1-hsl: var(--violet-hue), 35%, 53%;
---violet2-hsl: var(--violet-hue), 47%, 40%;
+--violet5-hsl: var(--violet-hue), 35%, 53%;
+--violet4-hsl: var(--violet-hue), 47%, 40%;
 --violet3-hsl: var(--violet-hue), 78%, 27%;
---violet4-hsl: var(--violet-hue), 83%, 23%;
---violet5-hsl: var(--violet-hue), 88%, 19%;
+--violet2-hsl: var(--violet-hue), 83%, 23%;
+--violet1-hsl: var(--violet-hue), 88%, 19%;
 
 // amethyst
 --indigo-hue: 271;
---indigo1-hsl: var(--indigo-hue), 35%, 58%;
---indigo2-hsl: var(--indigo-hue), 36%, 46%;
+--indigo5-hsl: var(--indigo-hue), 35%, 58%;
+--indigo4-hsl: var(--indigo-hue), 36%, 46%;
 --indigo3-hsl: var(--indigo-hue), 55%, 34%;
---indigo4-hsl: var(--indigo-hue), 57%, 29%;
---indigo5-hsl: var(--indigo-hue), 62%, 25%;
+--indigo2-hsl: var(--indigo-hue), 57%, 29%;
+--indigo1-hsl: var(--indigo-hue), 62%, 25%;
 
 // sapphire
---cobalt-hue: 221;
---cobalt1-hsl: var(--cobalt-hue), 52%, 56%;
---cobalt2-hsl: var(--cobalt-hue), 60%, 43%;
---cobalt3-hsl: var(--cobalt-hue), 97%, 30%;
---cobalt4-hsl: var(--cobalt-hue), 98%, 25%;
---cobalt5-hsl: var(--cobalt-hue), 98%, 21%;
+--blue-hue: 221;
+--blue5-hsl: var(--blue-hue), 52%, 56%;
+--blue4-hsl: var(--blue-hue), 60%, 43%;
+--blue3-hsl: var(--blue-hue), 97%, 30%;
+--blue2-hsl: var(--blue-hue), 98%, 25%;
+--blue1-hsl: var(--blue-hue), 98%, 21%;
+// --blue6-hsl: var(--blue-hue), 98%, 21%;
 
 // topaz
---blue-hue: 197; // CORE //
---blue1-hsl: var(--blue-hue), 61%, 57%;
---blue2-hsl: var(--blue-hue), 67%, 45%;
---blue3-hsl: var(--blue-hue), 100%, 34%;
---blue4-hsl: var(--blue-hue), 100%, 29%;
---blue5-hsl: var(--blue-hue), 100%, 24%;
+--cerulean-hue: 197; // CORE //
+--cerulean5-hsl: var(--cerulean-hue), 61%, 57%;
+--cerulean4-hsl: var(--cerulean-hue), 67%, 45%;
+--cerulean3-hsl: var(--cerulean-hue), 100%, 34%;
+--cerulean2-hsl: var(--cerulean-hue), 100%, 29%;
+--cerulean1-hsl: var(--cerulean-hue), 100%, 24%;
 
 // topaz + emerald
 --turquoise-hue: 172;
---turquoise1-hsl: var(--turquoise-hue), 38%, 50%;
---turquoise2-hsl: var(--turquoise-hue), 59%, 37%;
+--turquoise5-hsl: var(--turquoise-hue), 38%, 50%;
+--turquoise4-hsl: var(--turquoise-hue), 59%, 37%;
 --turquoise3-hsl: var(--turquoise-hue), 100%, 24%;
---turquoise4-hsl: var(--turquoise-hue), 100%, 21%;
---turquoise5-hsl: var(--turquoise-hue), 100%, 17%;
+--turquoise2-hsl: var(--turquoise-hue), 100%, 21%;
+--turquoise1-hsl: var(--turquoise-hue), 100%, 17%;
 
 // emerald
 --green-hue: 142; // CORE //
---green1-hsl: var(--green-hue), 39%, 50%;
---green2-hsl: var(--green-hue), 59%, 37%;
+--green5-hsl: var(--green-hue), 39%, 50%;
+--green4-hsl: var(--green-hue), 59%, 37%;
 --green3-hsl: var(--green-hue), 100%, 25%;
---green4-hsl: var(--green-hue), 100%, 21%;
---green5-hsl: var(--green-hue), 100%, 17%;
+--green2-hsl: var(--green-hue), 100%, 21%;
+--green1-hsl: var(--green-hue), 100%, 17%;
 
 // emsl-green
 --forest-hue: 80;
---forest1-hsl: var(--forest-hue), 39%, 49%;
---forest2-hsl: var(--forest-hue), 59%, 37%;
+--forest5-hsl: var(--forest-hue), 39%, 49%;
+--forest4-hsl: var(--forest-hue), 59%, 37%;
 --forest3-hsl: var(--forest-hue), 98%, 25%;
---forest4-hsl: var(--forest-hue), 98%, 21%;
---forest5-hsl: var(--forest-hue), 98%, 17%;
+--forest2-hsl: var(--forest-hue), 98%, 21%;
+--forest1-hsl: var(--forest-hue), 98%, 17%;
 
 // emsl-green + gold
 --lime-hue: 64;
---lime1-hsl: var(--lime-hue), 56%, 53%;
---lime2-hsl: var(--lime-hue), 68%, 44%;
+--lime5-hsl: var(--lime-hue), 56%, 53%;
+--lime4-hsl: var(--lime-hue), 68%, 44%;
 --lime3-hsl: var(--lime-hue), 99%, 34%;
---lime4-hsl: var(--lime-hue), 99%, 29%;
---lime5-hsl: var(--lime-hue), 98%, 24%;
+--lime2-hsl: var(--lime-hue), 99%, 29%;
+--lime1-hsl: var(--lime-hue), 98%, 24%;
 
 // gold
 --gold-hue: 39;
---gold1-hsl: var(--gold-hue), 100%, 68%;
---gold2-hsl: var(--gold-hue), 100%, 59%;
+--gold5-hsl: var(--gold-hue), 100%, 68%;
+--gold4-hsl: var(--gold-hue), 100%, 59%;
 --gold3-hsl: var(--gold-hue), 100%, 50%;
---gold4-hsl: var(--gold-hue), 99%, 43%;
---gold5-hsl: var(--gold-hue), 99%, 36%;
+--gold2-hsl: var(--gold-hue), 99%, 43%;
+--gold1-hsl: var(--gold-hue), 99%, 36%;
+// --gold6-hsl: var(--gold-hue), 99%, 36%;
 
 // copper
 --orange-hue: 26; // CORE //
---orange1-hsl: var(--orange-hue), 72%, 59%;
---orange2-hsl: var(--orange-hue), 69%, 48%;
+--orange5-hsl: var(--orange-hue), 72%, 59%;
+--orange4-hsl: var(--orange-hue), 69%, 48%;
 --orange3-hsl: var(--orange-hue), 99%, 38%;
---orange4-hsl: var(--orange-hue), 99%, 33%;
---orange5-hsl: var(--orange-hue), 99%, 27%;
+--orange2-hsl: var(--orange-hue), 99%, 33%;
+--orange1-hsl: var(--orange-hue), 99%, 27%;
+// --orange6-hsl: var(--orange-hue), 99%, 27%;
 
 // bronze
 --sepia-hue: 21;
---sepia1-hsl: var(--sepia-hue), 47%, 53%;
---sepia2-hsl: var(--sepia-hue), 61%, 40%;
+--sepia5-hsl: var(--sepia-hue), 47%, 53%;
+--sepia4-hsl: var(--sepia-hue), 61%, 40%;
 --sepia3-hsl: var(--sepia-hue), 100%, 28%;
---sepia4-hsl: var(--sepia-hue), 100%, 24%;
---sepia5-hsl: var(--sepia-hue), 100%, 20%;
+--sepia2-hsl: var(--sepia-hue), 100%, 24%;
+--sepia1-hsl: var(--sepia-hue), 100%, 20%;
+
+
+// CUSTOM //
 
 // mercury // custom
 --mercury-hue: 202; // custom
---mercury1-hsl: var(--mercury-hue), 30%, 63%; // custom
---mercury2-hsl: var(--mercury-hue), 27%, 53%; // custom
+--mercury5-hsl: var(--mercury-hue), 30%, 63%; // custom
+--mercury4-hsl: var(--mercury-hue), 27%, 53%; // custom
 --mercury3-hsl: var(--mercury-hue), 34%, 43%; // custom
---mercury4-hsl: var(--mercury-hue), 35%, 36%; // custom
---mercury5-hsl: var(--mercury-hue), 39%, 30%; // custom
-
-
+--mercury2-hsl: var(--mercury-hue), 35%, 36%; // custom
+--mercury1-hsl: var(--mercury-hue), 39%, 30%; // custom
 
 /*! Colors */
 
---mercury1: hsl(var(--mercury1-hsl)); // custom
---mercury2: hsl(var(--mercury2-hsl)); // custom
+--mercury5: hsl(var(--mercury1-hsl)); // custom
+--mercury4: hsl(var(--mercury2-hsl)); // custom
 --mercury3: hsl(var(--mercury3-hsl)); // custom
---mercury4: hsl(var(--mercury4-hsl)); // custom
---mercury5: hsl(var(--mercury5-hsl)); // custom
+--mercury2: hsl(var(--mercury4-hsl)); // custom
+--mercury1: hsl(var(--mercury5-hsl)); // custom
 
 }

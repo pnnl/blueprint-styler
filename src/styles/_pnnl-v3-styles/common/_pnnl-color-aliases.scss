@@ -33,7 +33,7 @@
   --tertiary-app-background: hsl(0deg 0% 91%);
   --card-background: hsl(0deg 0% 100%);
   --overlay-background-color: hsl(0deg 0% 0% / 40%);
-  --header-background-color: hsl(225deg 2% 39%);
+  // --header-background-color: hsl(225deg 2% 39%); // conflict
   --toolbar-background-color: hsl(0deg 0% 91%);
   --toolbar-item-outline: hsl(216deg 3% 29%);
   --toolbar-item-fill: hsl(0deg 0% 97%);
@@ -66,7 +66,7 @@
   --secondary-app-background: hsl(216deg 5% 20%);
   --tertiary-app-background: hsl(216deg 3% 29%);
   --card-background: hsl(210deg 11% 11%);
-  --header-background-color: hsl(204deg 6% 15%);
+  // --header-background-color: hsl(204deg 6% 15%); // conflict
   --toolbar-background-color: hsl(216deg 3% 29%);
   --toolbar-item-outline: hsl(0deg 0% 97%);
   --toolbar-item-fill: hsl(216deg 3% 29%);

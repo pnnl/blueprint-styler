@@ -1,26 +1,26 @@
-#{$root-selector}{
+#{$root-selector} {
 
-/*! Components */
+  /*! Components */
 
-// --input-color: var(--pt-text-color);
-// --input-color-disabled: var(--button-color-disabled);
-// --input-placeholder-color: var(--pt-text-color-disabled);
-// --input-background-color: var(--pt-app-top-background-color);
-// --input-background-color-disabled: hsla(var(--light-gray1-hsl), 0.5);
-// --input-shadow-color-focus: var(--blue3);
-// --input-shadow-color-focus-hsl: var(--blue3-hsl);
+  // --input-color: var(--pt-text-color);
+  // --input-color-disabled: var(--button-color-disabled);
+  // --input-placeholder-color: var(--pt-text-color-disabled);
+  // --input-background-color: var(--pt-app-top-background-color);
+  // --input-background-color-disabled: hsla(var(--light-gray1-hsl), 0.5);
+  --input-shadow-color-focus: var(--cerulean3);
+  --input-shadow-color-focus-hsl: var(--cerulean3-hsl);
 
-// --dark-input-color: var(--pt-dark-text-color);
-// --dark-input-color-disabled: var(--dark-button-color-disabled);
-// --dark-input-placeholder-color: var(--pt-dark-text-color-disabled);
-// --dark-input-background-color: hsla(var(--black-hsl), 0.3);
-// --dark-input-background-color-disabled: hsla(var(--dark-gray5-hsl), 0.5);
-// --dark-input-shadow-color-focus: var(--blue2);
-// --dark-input-shadow-color-focus-hsl: var(--blue2-hsl);
+  // --dark-input-color: var(--pt-dark-text-color);
+  // --dark-input-color-disabled: var(--dark-button-color-disabled);
+  // --dark-input-placeholder-color: var(--pt-dark-text-color-disabled);
+  // --dark-input-background-color: hsla(var(--black-hsl), 0.3);
+  // --dark-input-background-color-disabled: hsla(var(--dark-gray5-hsl), 0.5);
+  --dark-input-shadow-color-focus: var(--primary4);
+  --dark-input-shadow-color-focus-hsl: var(--primary4-hsl);
 
 
-// avoids edge blurriness for light theme focused default input
-// second box-shadow of var(--pt-input-box-shadow)
-// --input-box-shadow-focus: inset 0 1px 1px hsla(var(--pt-shadow-color-hsl), var(--pt-drop-shadow-opacity));
+  // avoids edge blurriness for light theme focused default input
+  // second box-shadow of var(--pt-input-box-shadow)
+  // --input-box-shadow-focus: inset 0 1px 1px hsla(var(--pt-shadow-color-hsl), var(--pt-drop-shadow-opacity));
 
 }

@@ -1,5 +1,46 @@
-.#{$ns}-button{
+#{$root-selector} {
 
-  // black on warning button
+  a.#{$ns}-button,
+  .#{$ns}-button,
+  .#{$ns}-html-select select,
+  .#{$ns}-select select {
+    font-weight: var(--font-weight-bold);
+  }
+
+  a.#{$ns}-button,
+  .#{$ns}-button,
+  .#{$ns}-html-select,
+  .#{$ns}-select {
+    .#{$ns}-icon {
+      color: inherit;
+    }
+  }
+
+  .#{$ns}-button,
+  .#{$ns}-html-select,
+  .#{$ns}-select {
+    --pt-intent-primary-hsl: var(--orange3-hsl);
+    --pt-intent-primary-hover-hsl: var(--orange2-hsl);
+    --pt-intent-primary-active-hsl: var(--orange1-hsl);
+    --pt-intent-primary-text-color-hsl: var(--orange2-hsl);
+    // --pt-dark-intent-primary-text-color-hsl: var(--orange5-hsl);
+
+    --pt-intent-primary: var(--orange3);
+    --pt-intent-primary-hover: var(--orange2);
+    --pt-intent-primary-active: var(--orange1);
+    --pt-intent-primary-text-color: var(--orange2);
+    // --pt-dark-intent-primary-text-color: var(--orange5);
+  }
+
+  .#{$ns}-dark {
+
+    .#{$ns}-button,
+    .#{$ns}-html-select,
+    .#{$ns}-select {
+      --pt-intent-primary-text-color-hsl: var(--orange5-hsl);
+      --pt-intent-primary-text-color: var(--orange5);
+
+    }
+  }
 
 }

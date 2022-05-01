@@ -5,7 +5,7 @@ import '../styles/_flat-styles/styler-styles.scss';
 import '../styles/_ibm-carbon-styles/styler-styles.scss';
 import '../styles/_antd-styles/styler-styles.scss';
 import '../styles/_fluent-styles/styler-styles.scss';
-// import '../styles/_pnnl-v3-styles/styler-styles.scss';
+import '../styles/_pnnl-v3-styles/styler-styles.scss';
 import { addDarkMirrorToStyleSheet, getAllStyleSheets } from './createDarkMirrorStyles';
 
 export const styleManifest: Record<string, string> = {
@@ -14,7 +14,7 @@ export const styleManifest: Record<string, string> = {
     'IBM Carbon': 'bpx-carbon',
     'Ant Design': 'bpx-antd',
     'Microsoft Fluent (beta)': 'bpx-fluent',
-    // 'PNNL v3 (beta)': 'bpx-pnnl',
+    'PNNL v3 (beta)': 'bpx-pnnl',
     'Static (original css)': 'bpx-static',
 }
 export const defaultStyleName: keyof typeof styleManifest = 'Default';
@@ -28,8 +28,8 @@ export const changeStyle = (styleName: string = defaultStyleName) => {
 }
 
 export const createDarkMirrors = () => {
+    // Array.from(document.styleSheets)
     getAllStyleSheets()
-        // Array.from(document.styleSheets)
         .forEach((styleSheet, i) => {
             // console.log(styleSheet.ownerNode);
 

@@ -1,12 +1,7 @@
-// don't edit this file //
+// The .bpx-name must match the one in style-manifest.ts
+$root-selector: ":root.bpx-pnnl" !default;
+@import './index';
 
-// THE INDEX //
-@import './pnnl-v3-styles.index';
-
-// BLUEPRINT STYLER SPECIFIC //
-// for the (stolen) docs examples
-@import '../global/examples-index';
-// then our own styles
-@import '../global/styler';
-
-@import './font-face.scss';
+#{$root-selector} {
+  @import './font-face';
+}
