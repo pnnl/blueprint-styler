@@ -7,7 +7,8 @@
   // creates the active animation of an expanding border
 
   position: relative;
-  &:after{
+
+  &:after {
     content: '';
     position: absolute;
     top: 0;
@@ -26,44 +27,46 @@
       box-shadow .4s var(--button-active-effect-easing);
   }
 
-  &:active:after{
+  &:active:after {
     transition: none;
     box-shadow: 0 0 0 0px currentColor;
     opacity: .2;
   }
 
   &:disabled:after,
-  &.#{$ns}-disabled:after{
+  &.#{$ns}-disabled:after {
     content: unset;
   }
 
 }
 
 @mixin antd-active-border-color($antd-active-border-color) {
-  &:after{
+  &:after {
     color: $antd-active-border-color;
   }
 }
 
 @mixin button-base-overrides {
-  transition: 200ms linear ;
-  transition-property: background-color, color, opacity, box-shadow, border-color ;
-  &:active{
+  transition: 200ms linear;
+  transition-property: background-color, color, opacity, box-shadow, border-color;
+
+  &:active {
     transition-duration: 50ms;
   }
 
   @include antd-button-active-effect;
 
-  @each $intent, $colors in $button-intents {
+  @each $intent,
+  $colors in $button-intents {
     &.#{$ns}-intent-#{$intent} {
-      @include antd-active-border-color(nth(($colors),3))
+      @include antd-active-border-color(nth(($colors), 3))
     }
   }
 
 }
 
 @mixin button-customizations {
-  .#{$ns}-icon{
+  .#{$ns}-icon {
     color: inherit;
   }
 
@@ -72,7 +75,7 @@
 
   // &:not([class*="#{$ns}-intent-"]) {
   &:not([class*="#{$ns}-intent-"]):not(.#{$ns}-minimal):not(.#{$ns}-outlined):not(:disabled):not(.#{$ns}-disabled) {
-  // &.#{$ns}-button { // extra specificity?
+    // &.#{$ns}-button { // extra specificity?
 
     &:hover {
       box-shadow: var(--button-box-shadow-hover);
@@ -92,95 +95,105 @@
 
 @mixin button-outlined-customizations {
 
-    // Ghost Button
+  // Ghost Button
 
-    background-color: unset !important;
-    box-shadow:       unset !important;
+  background-color: unset !important;
+  box-shadow: unset !important;
 
-    &:hover {
-      border-color: var(--pt-intent-primary-hover);
-      color:        var(--pt-intent-primary-hover);
-    }
-
-    &:active,
-    &.#{$ns}-active {
-      border-color: var(--pt-intent-primary-active);
-      color:        var(--pt-intent-primary-active);
-    }
-
-    @each $intent, $colors in $button-intents {
-      &.#{$ns}-intent-#{$intent} {
-        border-color: currentColor;
-        // no hover changes, but good enough for now
-      }
-    }
-}
-
-
-
-.#{$ns}-button{  @include button-base-overrides }
-a.#{$ns}-button{ @include button-base-overrides }
-
-
-.#{$ns}-button{
-  @include button-customizations();
-  &.#{$ns}-outlined{
-    @include button-outlined-customizations();
-  }
-}
-
-.#{$ns}-button-group .#{$ns}-button[class*="bp4-intent-"]{
-  --button-group-spacing: 1px;
-}
-
-
-.#{$ns}-html-select,
-.#{$ns}-select {
-  // this one's a bit of a mess // TODO: more testing
-
-  transition: 200ms linear ;
-  transition-property: background-color, color, opacity, box-shadow ;
-
-  select{
-    @include button-base-overrides();
-    @include button-customizations();
-
-    // padding-left: $button-padding;
-    // padding-right: $button-padding + $pt-icon-size-standard;
-
-    &:hover~.#{$ns}-icon {
-      color: var(--pt-intent-primary-hover);
-    }
-
-  }
-
-  .#{$ns}-icon {
-    // right: $button-padding;
-    transition: inherit;
-  }
-
-}
-
-
-.#{$ns}-file-upload-input {
-
-  &:after {
-    transition: 200ms linear ;
-    transition-property: background-color, color, opacity, box-shadow ;
-    box-shadow: var(--button-box-shadow);
-  }
-
-  &:hover:after {
-    box-shadow: var(--button-box-shadow-hover);
-    background-color: var(--button-background-color-hover);
+  &:hover {
+    border-color: var(--pt-intent-primary-hover);
     color: var(--pt-intent-primary-hover);
-    transition-duration: 50ms;
   }
 
-  &:active:after,
-  &.#{$ns}-active:after {
-    box-shadow: var(--button-box-shadow-active);
-    background-color: var(--button-background-color-active);
+  &:active,
+  &.#{$ns}-active {
+    border-color: var(--pt-intent-primary-active);
     color: var(--pt-intent-primary-active);
   }
+
+  @each $intent,
+  $colors in $button-intents {
+    &.#{$ns}-intent-#{$intent} {
+      border-color: currentColor;
+      // no hover changes, but good enough for now
+    }
+  }
+}
+
+
+#{$root-selector} {
+
+  .#{$ns}-button {
+    @include button-base-overrides
+  }
+
+  a.#{$ns}-button {
+    @include button-base-overrides
+  }
+
+
+  .#{$ns}-button {
+    @include button-customizations();
+
+    &.#{$ns}-outlined {
+      @include button-outlined-customizations();
+    }
+  }
+
+  .#{$ns}-button-group .#{$ns}-button[class*="bp4-intent-"] {
+    --button-group-spacing: 1px;
+  }
+
+
+  .#{$ns}-html-select,
+  .#{$ns}-select {
+    // this one's a bit of a mess // TODO: more testing
+
+    transition: 200ms linear;
+    transition-property: background-color, color, opacity, box-shadow;
+
+    select {
+      @include button-base-overrides();
+      @include button-customizations();
+
+      // padding-left: $button-padding;
+      // padding-right: $button-padding + $pt-icon-size-standard;
+
+      &:hover~.#{$ns}-icon {
+        color: var(--pt-intent-primary-hover);
+      }
+
+    }
+
+    .#{$ns}-icon {
+      // right: $button-padding;
+      transition: inherit;
+    }
+
+  }
+
+
+  .#{$ns}-file-upload-input {
+
+    &:after {
+      transition: 200ms linear;
+      transition-property: background-color, color, opacity, box-shadow;
+      box-shadow: var(--button-box-shadow);
+    }
+
+    &:hover:after {
+      box-shadow: var(--button-box-shadow-hover);
+      background-color: var(--button-background-color-hover);
+      color: var(--pt-intent-primary-hover);
+      transition-duration: 50ms;
+    }
+
+    &:active:after,
+    &.#{$ns}-active:after {
+      box-shadow: var(--button-box-shadow-active);
+      background-color: var(--button-background-color-active);
+      color: var(--pt-intent-primary-active);
+    }
+  }
+
 }
