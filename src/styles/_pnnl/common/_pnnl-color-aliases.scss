@@ -51,7 +51,7 @@
 }
 
 
-.#{ns}-dark {
+.#{$ns}-dark {
   --text-color: hsl(0deg 0% 97%);
   --secondary-text-color: hsl(0deg 0% 76%);
   --disabled-text-color: hsl(225deg 2% 39%);

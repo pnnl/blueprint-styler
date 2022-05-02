@@ -48,7 +48,7 @@ This has the advantage of being able to test all blueprint components in the dem
   - a root scss file named `{theme-name}.index.scss` - this will compile into the libs file
   - a secondary root file named `styler-styles.scss` - this extends `{theme-name}.index.scss` to style the demo react app components. (copy-paste this from another style. It will not typically need to be modified)
   - an `index.tsx` file that is responsible for loading `styler-styles.scss` into the demo react app (copy-paste this from another style. You should not modify this file. See [Style Switching in the Demo React App](#) for details
-- Import the original blueprint styles () into `{theme-name}.index.scss` with `@import '../_default-var-styles/default-var-styles.index';`
+- Import the original blueprint styles () into `{theme-name}.index.scss` with `@import '../_default/default-var-styles.index';`
 - Add any additional scss files to override variables and component css. import those after `default-var-styles.index` (in most cases).
   - There are several utility scss files located in `./src/styles/global/`.
 - Add your theme to the [`src/styles/style-manifest.ts`](./src/styles/theme-manifest.ts) file. Follow the pattern of the other themes in the file.
@@ -56,7 +56,7 @@ This has the advantage of being able to test all blueprint components in the dem
 
 ### Tips
 - Take a look at [`src/styles/_flat-styles/flat-styles.index.scss`](./src/styles/_flat-styles/flat-styles.index.scss) for a relatively simple example
-- Take a look at the source: The original, non-customized version of blueprint is contained within `./src/styles/_default-var-styles/@blueprintjs/`. This is copied directly from blueprint and modified slightly. See [Updating Blueprint source files](#) for more details
+- Take a look at the source: The original, non-customized version of blueprint is contained within `./src/styles/_default/@blueprintjs/`. This is copied directly from blueprint and modified slightly. See [Updating Blueprint source files](#) for more details
 - `styler-styles.scss` and `index.tsx` typically do not need to be modified
 - Refresh the build app often. The hot-reloading css files will get out of sync sometimes. See [Style Switching in the Demo React App](#) for details
 
@@ -83,10 +83,10 @@ Modifications are intentionally kept as minimal as possible to make future merge
 Modification to the original @blueprint scss files:
 - commenting out all `.bpX-dark` theme declarations. Dark theme switching is handled by css custom properties now.
 - many colors and functions are edited to resolve scss color functions issues
-- several more updates documented in [`src/styles/_default-var-styles/@blueprintjs/readme.md`](./src/styles/_default-var-styles/@blueprintjs/readme.md)
+- several more updates documented in [`src/styles/_default/@blueprintjs/readme.md`](./src/styles/_default/@blueprintjs/readme.md)
 
 ## Updating Blueprint Source Files
-Updating `./src/styles/_default-var-styles/@blueprintjs/` and `./src/examples` to the latest Blueprint involves an intermediary `develop-copy-only` branch to merge.
+Updating `./src/styles/_default/@blueprintjs/` and `./src/examples` to the latest Blueprint involves an intermediary `develop-copy-only` branch to merge.
 
 - The `develop-copy-only` branch manually copies blueprint css and the examples from docs into the `./src` locations via a `yarn run copy` command
 - Then `develop-copy-only` is merged into `develop` so that changes to the modified `@blueprintjs` can be tracked and any conflicts resolved

@@ -20,7 +20,7 @@ Search for
 - `pt-tag-interactive(`
 - `pt-tag-minimal-interactive(`
 
-Copy `!default` $vars to `src/styles/_default-var-styles/components`
+Copy `!default` $vars to `src/styles/_default/components`
 replace color vars with `// custom` color-aliases if they exist
 
 ## Regex

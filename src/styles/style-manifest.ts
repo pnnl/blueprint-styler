@@ -1,11 +1,11 @@
 import { OptionProps } from '@blueprintjs/core';
-import '../styles/_static-styles/styler-styles.scss';
-import '../styles/_default-var-styles/styler-styles.scss';
-import '../styles/_flat-styles/styler-styles.scss';
-import '../styles/_ibm-carbon-styles/styler-styles.scss';
-import '../styles/_antd-styles/styler-styles.scss';
-import '../styles/_fluent-styles/styler-styles.scss';
-import '../styles/_pnnl-v3-styles/styler-styles.scss';
+import '../styles/static/styler-styles.scss';
+import '../styles/_default/styler-styles.scss';
+import '../styles/_flat/styler-styles.scss';
+import '../styles/_carbon/styler-styles.scss';
+import '../styles/_antd/styler-styles.scss';
+import '../styles/_fluent/styler-styles.scss';
+import '../styles/_pnnl/styler-styles.scss';
 import { addDarkMirrorToStyleSheet, getAllStyleSheets } from './createDarkMirrorStyles';
 
 export const styleManifest: Record<string, string> = {

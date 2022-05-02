@@ -1,9 +1,9 @@
-// from // @import '../../_default-var-styles/@blueprintjs/core/src/common/_mixins';
+// from // @import '../../_default/@blueprintjs/core/src/common/_mixins';
 @function border-shadow($alpha, $color: $black, $size: 1px) {
   @return 0 0 0 $size hslax($color, $alpha);
 }
 
-// from // @import '../../_default-var-styles/@blueprintjs/core/src/components/forms/_common';
+// from // @import '../../_default/@blueprintjs/core/src/components/forms/_common';
 // animating shadows requires the same number of shadows in different states
 @function input-transition-shadow($color: $input-shadow-color-focus, $focus: false) {
   @if $focus {
