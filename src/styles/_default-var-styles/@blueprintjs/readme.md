@@ -40,7 +40,7 @@ hsla
 \$([^:]*):
 --$1:
 
-# $variable => var(--variable);
+# $variable => var(--variable) // add a ; at the end for help
 \$([\w-]*)
 var(--$1)
 
