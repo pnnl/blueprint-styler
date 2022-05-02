@@ -27,10 +27,14 @@ const createReactAppPostCssPlugins = createReactAppPostCssConfig.plugins()
 // console.log(createReactAppPostCssConfig.plugins());
 
 const scssOutput = () => (
-    // gulp.src('./src/styles/_default-var-styles/*.index.scss')
-    gulp.src('./src/styles/_*-styles/*.index.scss')
+    // gulp.src('./src/styles/_flat-styles/*.index.scss')
+    gulp.src('./src/styles/_*/index.scss')
         .pipe(sass(sassConfig).on('error', sass.logError))
-        // .pipe(postcss(createReactAppPostCssPlugins)) // make sure we are consistent with create-react-app?
+        .pipe(rename(path => {
+            path.dirname = '/' + path.dirname.split('/')[0].substring(1);
+            path.basename = 'blueprint'
+        }))
+    // .pipe(postcss(createReactAppPostCssPlugins)) // make sure we are consistent with create-react-app?
 )
 
 
@@ -49,16 +53,9 @@ const compileStylesheetTask = function (cb) {
                 }]
             }),
         ]))
-        .pipe(rename(path => {
-            path.basename = path.basename.split('.')[0]
-            path.dirname = '/' + path.basename
-            // path.extname = '.min' + path.extname // add .min
-            path.basename = 'blueprint'
-        }))
-        // .pipe(gulp.dest('./lib'))
         .pipe(cssBeautify())
-        // .pipe(rename(path => { path.basename = path.basename.split('.')[0] })) // remove .min
         .pipe(gulp.dest('./lib'))
+        .pipe(rename(path => { console.log(`saved ${path.dirname}/${path.basename}.${path.extname}`); }))
     cb();
 }
 
@@ -69,11 +66,10 @@ const compileVarsTask = function (cb) {
             require('postcss-combine-duplicated-selectors') // combine :root{}
         ]))
         .pipe(rename(path => {
-            path.dirname = '/' + path.basename
+            path.basename = path.dirname
         }))
         .pipe(cssBeautify())
         .pipe(extractCssVarsToAllFormats()) // build variable files
-        // .pipe(rename(path => { console.log(path) }))
         .pipe(gulp.dest('./lib')) // ???
     cb();
 }
