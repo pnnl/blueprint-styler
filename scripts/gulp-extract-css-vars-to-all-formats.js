@@ -45,7 +45,8 @@ module.exports = () => through2.obj(function (file, enc, next) {
     // cssVars = cssVars.replace(/\s{2,}/g, '')
 
     // extract all the vars and values as regex matches
-    const jsKeyValMatches = [...cssVars.matchAll(/(--([^:]*):\s?([^;]*);?|\/\*![\s]*(\w*))/ig)];
+    const cssVarOrTitleRegex = /(--([^:]*):\s?([^;]*);?|\/\*![\s]*(\w*))/ig
+    const jsKeyValMatches = [...cssVars.matchAll(cssVarOrTitleRegex)];
 
     //#endregion ////////////////////////////////////////////////////////////////////////////////
 
@@ -73,8 +74,14 @@ module.exports = () => through2.obj(function (file, enc, next) {
             const varName = match[2];
 
             // vars equal raw values // CSS_VAR: 24px;
-            const varValue = match[3] // value of the css
+            let varValue = match[3] // value of the css
                 .replace(/[\n\t\r]+/ig, '') // replace all newlines, tabs, and line feeds
+
+            // the uri encoded image data doesn't get matched by the original cssVarOrTitleRegex
+            if (varValue.includes('url("data:image')) {
+                const uriRegex = new RegExp(`${varName}:\\s?([^)]*\\))`)
+                varValue = cssVars.match(uriRegex)[1]
+            }
 
             if (varName.search(darkRegex) !== -1) {
                 const inverseVarName = varName.replace(darkRegex, '')
@@ -95,10 +102,12 @@ module.exports = () => through2.obj(function (file, enc, next) {
 
 
     //#region - Process cssObjValues into strings for different formats: css, less, scss, ts, js, json ///////////////////
-    let less = js = ts = ''
-    const jsObjIdentity = {}
-    const cssThemeStrings = { light: '', dark: '' }
-    const cssThemes = ['light', 'dark']
+    let less = '';
+    let js = '';
+    let ts = '';
+    const jsObjIdentity = {};
+    const cssThemeStrings = { light: '', dark: '' };
+    const cssThemes = ['light', 'dark'];
     cssThemes.forEach(theme => {
         for (const categoryName in cssObjValues[theme]) {
             if (Object.hasOwnProperty.call(cssObjValues[theme], categoryName)) {
@@ -174,7 +183,7 @@ module.exports = () => through2.obj(function (file, enc, next) {
         [ts, 'js'], // ts is really es6 js
         [ts, 'ts'],
     ].forEach(type => {
-        [fileContents, fileType, fileName] = type
+        const [fileContents, fileType, fileName] = type
         this.push(new File({
             // base: base,
             path: path.join(base, (fileName || 'tokens') + '.' + fileType),
