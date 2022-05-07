@@ -134,8 +134,8 @@ module.exports = () => through2.obj(function (file, enc, next) {
                             const varIdentityValue = cssKebabNameToVarIdentity(varName)
                             const jsVarName = convertKebabToCamelCase(varName)
                             let jsValue = `\t${jsVarName}: "${varIdentityValue}",\n`
-                            const jsDocsCommentValue = `\t/** \`${varValue}\` */\n` // TODO: calculate raw value?
-                            jsValue = jsDocsCommentValue + jsValue
+                            // const jsDocsCommentValue = `\t/** \`${varValue}\` */\n` // TODO: calculate raw value?
+                            // jsValue = jsDocsCommentValue + jsValue
                             less += `@${varName}: ${varIdentityValue};\n` // less an scss are identity
                             js += jsValue
                             ts += jsValue
