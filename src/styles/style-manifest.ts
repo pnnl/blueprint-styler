@@ -1,6 +1,6 @@
 import { OptionProps } from '@blueprintjs/core';
 import '../styles/static/styler-styles.scss';
-import '../styles/_default/styler-styles.scss';
+import '../styles/_blueprint/styler-styles.scss';
 import '../styles/_flat/styler-styles.scss';
 import '../styles/_carbon/styler-styles.scss';
 import '../styles/_antd/styler-styles.scss';
