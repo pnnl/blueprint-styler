@@ -14,7 +14,6 @@ const rename = require("gulp-rename")
 const postcss = require('gulp-postcss')
 const cssBeautify = require('gulp-cssbeautify')
 const extractCssVarsToAllFormats = require('./scripts/gulp-extract-css-vars-to-all-formats');
-const { basename } = require('path')
 const blueprintName = 'blueprint'
 
 /*
