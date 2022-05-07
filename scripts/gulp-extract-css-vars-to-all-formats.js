@@ -3,7 +3,7 @@ var through2 = require('through2');
 var File = require('vinyl');
 
 /** pt-dark-border-shadow-opacity => PT_DARK_BORDER_SHADOW_OPACITY */
-const convertKebabToScreamingSnakeCase = string => string.toUpperCase().replace(/-/g, '_')
+// const convertKebabToScreamingSnakeCase = string => string.toUpperCase().replace(/-/g, '_')
 
 /** pt-dark-border-shadow-opacity => PtDarkBorderShadowOpacity */
 const convertKebabToCamelCase = (string) => {
@@ -20,7 +20,7 @@ const convertKebabToCamelCase = (string) => {
 }
 
 /** "PtDarkBorderShadowOpacity": "value", => PtDarkBorderShadowOpacity: "value", */
-const convertJsonToJsObjString = jsonString => jsonString.replace(/"([^"]+)":/g, '$1:')
+// const convertJsonToJsObjString = jsonString => jsonString.replace(/"([^"]+)":/g, '$1:')
 
 /** css-var => var(--css-var) */
 const cssKebabNameToVarIdentity = string => `var(--${string})`
@@ -33,7 +33,7 @@ module.exports = () => through2.obj(function (file, enc, next) {
 
     //#region - Parse CSS key-values out of :root{...} declaration ///////////////////
     // find the block of css vars in the file
-    let cssVarsMatch = content.match(/:root[^{]*\{([^\}]*)\}/i); // selector needs to match src/styles/global/root-selector.scss
+    let cssVarsMatch = content.match(/:root[^{]*\{([^}]*)\}/i); // selector needs to match src/styles/global/root-selector.scss
 
     if (cssVarsMatch == null) {
         console.log(`>> No --css:vars; in :root{} in ${file.basename}!`);
