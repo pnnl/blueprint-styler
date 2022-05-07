@@ -1,5 +1,3 @@
-'use strict'
-
 const gulp = require('gulp')
 
 const sass = require('gulp-sass')(require('node-sass'))
@@ -16,7 +14,10 @@ const rename = require("gulp-rename")
 const postcss = require('gulp-postcss')
 const cssBeautify = require('gulp-cssbeautify')
 const extractCssVarsToAllFormats = require('./scripts/gulp-extract-css-vars-to-all-formats');
+const { basename } = require('path')
+const blueprintName = 'blueprint'
 
+/*
 // RETRIEVE POSTCSS CONFIG FROM CREATE REACT APP //
 // this seems like it takes a long time?
 process.env.NODE_ENV = 'production'
@@ -25,14 +26,16 @@ const createReactAppPostCssConfig = createReactAppWebpackConfigProduction.module
 const createReactAppPostCssPlugins = createReactAppPostCssConfig.plugins()
 // copy-paste from ./node_modules/react-scripts/config/webpack.config.js:130 might be more consistent?
 // console.log(createReactAppPostCssConfig.plugins());
+ */
 
 const scssOutput = () => (
     // gulp.src('./src/styles/_flat-styles/*.index.scss')
     gulp.src('./src/styles/_*/index.scss')
         .pipe(sass(sassConfig).on('error', sass.logError))
         .pipe(rename(path => {
-            path.dirname = '/' + path.dirname.split('/')[0].substring(1);
-            path.basename = 'blueprint'
+            const styleName = path.dirname.split('/')[0].substring(1);
+            path.dirname = '/' + styleName
+            path.basename = styleName
         }))
     // .pipe(postcss(createReactAppPostCssPlugins)) // make sure we are consistent with create-react-app?
 )
@@ -54,8 +57,11 @@ const compileStylesheetTask = function (cb) {
             }),
         ]))
         .pipe(cssBeautify())
+        .pipe(rename(path => {
+            path.basename = path.basename === blueprintName ? 'blueprint' : 'override';
+        }))
         .pipe(gulp.dest('./lib'))
-        .pipe(rename(path => { console.log(`saved ${path.dirname}/${path.basename}.${path.extname}`); }))
+        .pipe(rename(path => { console.log(`>> Saved ${path.dirname}/${path.basename}${path.extname}`); }))
     cb();
 }
 
@@ -65,12 +71,17 @@ const compileVarsTask = function (cb) {
             require('cssnano'), // not sure we need this
             require('postcss-combine-duplicated-selectors') // combine :root{}
         ]))
-        .pipe(rename(path => {
-            path.basename = path.dirname
-        }))
         .pipe(cssBeautify())
         .pipe(extractCssVarsToAllFormats()) // build variable files
-        .pipe(gulp.dest('./lib')) // ???
+        .pipe(rename(path => {
+            path.basename = path.dirname
+            if (path.extname === '.css') {
+                path.basename = path.dirname === blueprintName ? 'blueprint-tokens' : 'override-tokens';
+            } else {
+                path.basename = path.dirname === blueprintName ? 'tokens' : 'custom-tokens';
+            }
+        }))
+        .pipe(gulp.dest('./lib'))
     cb();
 }
 

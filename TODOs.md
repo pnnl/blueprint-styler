@@ -22,6 +22,9 @@
   - separate different packages on build - core, selection, table, etc...
   - export a font file for each theme?
   - look for undefined vars with: https://chrome.google.com/webstore/detail/css-undefined-variable-ch/endbpplgeglmgihkpiapmaimegpkhhcn
+  - only output custom tokens in overrides
+    - 'custom-tokens.ext'
+    - cross reference original 'tokens.ext' to eliminate duplicates
 - Themes are individually published packages - with font dependencies? - monorepo?
   - Add a dependency on the core repo,
   - Generate new style: `$ npm run new-style <style-name>`
@@ -32,28 +35,29 @@
 - v4
   - make build changes
   - repair all current styles - color changes, intent color mappings
-    - default
-      - making font size a var()
+    - default - making font size a var()
     - flat
     - ibm
-    - –––
     - antd
     - fluent
-    - styler
-  - export better styles
+    - pnnl
+  - export styles
+    - repair export
+    - –––
+    - rename default to just 'blueprint'
+    - don't export tokens from most styles?
+    - better names for exports
   - update readme
-- modern colors
-  - cerulean cobalt color name change
-  - blueprint-modern.scss
-  - colors/src/_colors.scss
-  - blueprint-datetime-modern.scss
-  - table-modern.scss
+- blueprint v3 colors
+- [Google Material](https://material.io/components)
+  - Catalyst
 - var(--style) / General
-  - grayscale transparency alt
   - input-transition-shadow could to be broken into input shadow vars...
   - better focus for buttons?
   - math with calc() ?
 - Common
+  - export common helpers
+  - use `:before` `content:"•••";` and `content:"/";` for `.bp4-breadcrumb` icons
   - ellipsize button text by default
   - Segmented Button Group like [this](https://dribbble.com/shots/14424288-Material-X-design-system-UI-kit-Figma-Segments)
 - Flat
@@ -75,10 +79,9 @@
   - slider
   - dark theme
 - [PNNL v2](https://forge.pnl.gov/standards/) & [PNNL v3](https://forgedev.pnnl.gov/prc3/)
+  - level 6 colors are missing
 - [Shopify Polaris](https://polaris.shopify.com/components/actions/button#navigation) v5 & v6
 - Serberus - Burgundy Theme
-- [Google Material](https://material.io/components)
-  - Catalyst
 - [Adobe Spectrum](https://spectrum.adobe.com/)
 - [Amazon AWS](https://abduzeedo.com/amazon-web-services-design-system)
 - [Apple HMI](https://developer.apple.com/design/human-interface-guidelines/)
