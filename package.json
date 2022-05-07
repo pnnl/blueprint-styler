@@ -11,8 +11,7 @@
   "homepage": "https://pnnl.github.io/blueprint-styler",
   "main": "./build/index.html",
   "files": [
-    "/lib",
-    "/src/styles/**/*.scss"
+    "/lib"
   ],
   "keywords": [
     "palantir",
