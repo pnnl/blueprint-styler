@@ -15,6 +15,7 @@ const postcss = require('gulp-postcss')
 const cssBeautify = require('gulp-cssbeautify')
 const extractCssVarsToAllFormats = require('./scripts/gulp-extract-css-vars-to-all-formats');
 const blueprintName = 'blueprint'
+const dirname = (styleName)=> styleName === blueprintName ? '/base' : `/overrides/${styleName.split('.')[0]}`
 
 /*
 // RETRIEVE POSTCSS CONFIG FROM CREATE REACT APP //
@@ -28,12 +29,11 @@ const createReactAppPostCssPlugins = createReactAppPostCssConfig.plugins()
  */
 
 const scssOutput = () => (
-    // gulp.src('./src/styles/_flat-styles/*.index.scss')
+    // gulp.src('./src/styles/_blueprin*/index.scss') // for testing
     gulp.src('./src/styles/_*/index.scss')
         .pipe(sass(sassConfig).on('error', sass.logError))
         .pipe(rename(path => {
             const styleName = path.dirname.split('/')[0].substring(1);
-            path.dirname = '/' + styleName
             path.basename = styleName
         }))
     // .pipe(postcss(createReactAppPostCssPlugins)) // make sure we are consistent with create-react-app?
@@ -57,9 +57,10 @@ const compileStylesheetTask = function (cb) {
         ]))
         .pipe(cssBeautify())
         .pipe(rename(path => {
+            path.dirname = dirname(path.basename)
             path.basename = path.basename === blueprintName ? 'blueprint' : 'override';
         }))
-        .pipe(gulp.dest('./lib'))
+        .pipe(gulp.dest('./'))
         .pipe(rename(path => { console.log(`>> Saved ${path.dirname}/${path.basename}${path.extname}`); }))
     cb();
 }
@@ -73,14 +74,18 @@ const compileVarsTask = function (cb) {
         .pipe(cssBeautify())
         .pipe(extractCssVarsToAllFormats()) // build variable files
         .pipe(rename(path => {
-            path.basename = path.dirname
+            if (path.basename.includes('.')) { // fix multiple extensions, ie .cjs.js
+                path.extname = path.basename.substring(path.basename.indexOf('.')) + path.extname
+                path.basename = path.basename.split('.')[0]
+            }
+            path.dirname = dirname(path.basename)
             if (path.extname === '.css') {
-                path.basename = path.dirname === blueprintName ? 'blueprint-tokens' : 'override-tokens';
+                path.basename = path.basename === blueprintName ? 'blueprint-tokens' : 'override-tokens';
             } else {
-                path.basename = path.dirname === blueprintName ? 'tokens' : 'custom-tokens';
+                path.basename = path.basename === blueprintName ? 'tokens' : 'custom-tokens';
             }
         }))
-        .pipe(gulp.dest('./lib'))
+        .pipe(gulp.dest('./'))
     cb();
 }
 

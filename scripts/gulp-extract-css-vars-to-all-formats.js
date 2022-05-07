@@ -172,7 +172,7 @@ module.exports = () => through2.obj(function (file, enc, next) {
 
     //#region - Export as files ///////////////////
 
-    const base = path.basename(file.path).split('.')[0]; // return file name as base
+    const filePath = file.path.substr(0, file.path.lastIndexOf("."));
 
     [
         [css, 'css'],
@@ -183,10 +183,10 @@ module.exports = () => through2.obj(function (file, enc, next) {
         [ts, 'js'], // ts is really es6 js
         [ts, 'ts'],
     ].forEach(type => {
-        const [fileContents, fileType, fileName = 'tokens'] = type
+        const [fileContents, fileType] = type
         this.push(new File({
-            // base: base,
-            path: path.join(base, fileName + '.' + fileType),
+            base: 'test',
+            path: filePath + '.' + fileType,
             contents: new Buffer.from(fileContents)
         }))
     })

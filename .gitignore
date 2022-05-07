@@ -12,6 +12,8 @@
 # production
 /build
 /lib
+/base
+/overrides
 
 # misc
 .DS_Store

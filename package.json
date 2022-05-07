@@ -11,7 +11,8 @@
   "homepage": "https://pnnl.github.io/blueprint-styler",
   "main": "./build/index.html",
   "files": [
-    "/lib"
+    "/base",
+    "/overrides"
   ],
   "keywords": [
     "palantir",
