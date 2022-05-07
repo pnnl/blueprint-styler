@@ -1,7 +1,7 @@
 # TODO:
 
 ## App tool
-- colors in 'default' css...
+- colors in 'static' css...
 - Sections:
   - for each style: add a customizable readme component that renders at the top
 - Navigation
@@ -43,11 +43,11 @@
     - pnnl
   - export styles
     - repair export
-    - –––
     - rename default to just 'blueprint'
     - don't export tokens from most styles?
     - better names for exports
   - update readme
+  - –––
 - blueprint v3 colors
 - [Google Material](https://material.io/components)
   - Catalyst
