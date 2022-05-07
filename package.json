@@ -10,7 +10,7 @@
   "scripts": {
     "start": "yarn copy",
     "copy:clean": "rm -r src",
-    "copy:scss": "copyfiles --all --verbose --up 1 -e './**/lib/**/*' -e './**/docs-theme/**/*' -e './**/monorepo/**/*' './node_modules/@blueprintjs/**/*.scss' './src/styles/_default-var-styles' && echo '> DONE copying scss'",
+    "copy:scss": "copyfiles --all --verbose --up 1 -e './**/lib/**/*' -e './**/docs-theme/**/*' -e './**/monorepo/**/*' './node_modules/@blueprintjs/**/*.scss' './src/styles/_blueprint' && echo '> DONE copying scss'",
     "copy:examples": "copyfiles --all --verbose --up 6 './node_modules/@blueprintjs/monorepo/packages/docs-app/src/examples/**/*' './node_modules/@blueprintjs/monorepo/packages/docs-app/src/common/**/*' './src' && echo '> DONE copying examples'",
     "copy": "yarn copy:clean && yarn copy:scss && yarn copy:examples && echo '> DONE copying all files'"
   },
