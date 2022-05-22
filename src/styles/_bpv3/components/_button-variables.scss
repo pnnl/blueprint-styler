@@ -1,0 +1,32 @@
+#{$root-selector} {
+
+  /*! IntentColors */
+
+  --primary1-hsl: var(--cerulean1-hsl);
+  --primary2-hsl: var(--cerulean2-hsl);
+  --primary3-hsl: var(--cerulean3-hsl);
+  --primary4-hsl: var(--cerulean4-hsl);
+  --primary5-hsl: var(--cerulean5-hsl);
+  --primary6-hsl: var(--cerulean6-hsl);
+
+  /*! Components */
+
+  --dark-button-box-shadow:
+    0 0 0 var(--button-border-width) hsl(var(--black-hsl), 0.4);
+  --dark-button-box-shadow-active:
+    0 0 0 var(--button-border-width) hsl(var(--black-hsl), 0.6),
+    inset 0 1px 2px hsl(var(--black-hsl), 0.2);
+  --dark-button-intent-box-shadow:
+    0 0 0 var(--button-border-width) hsl(var(--black-hsl), 0.4);
+  --dark-button-intent-box-shadow-active:
+    0 0 0 var(--button-border-width) hsl(var(--black-hsl), 0.4),
+    inset 0 1px 2px hsl(var(--black-hsl), 0.2);
+
+  --button-gradient: linear-gradient(to bottom, hsl(var(--white-hsl), 0.8), hsl(var(--white-hsl), 0));
+  --button-intent-gradient: linear-gradient(to bottom, hsl(var(--white-hsl), 0.1), hsl(var(--white-hsl), 0));
+  --dark-button-gradient: linear-gradient(to bottom, hsl(var(--white-hsl), 0.05), hsl(var(--white-hsl), 0));
+
+  --minimal-button-background-color-hover: hsl(var(--gray4-hsl), 0.3);
+  --minimal-button-background-color-active: hsl(var(--gray2-hsl), 0.3);
+
+}

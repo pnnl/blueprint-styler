@@ -1,6 +1,7 @@
 # TODO:
 
 ## App tool
+- general 'kitchen sink' example
 - colors in 'static' css...
 - Sections:
   - for each style: add a customizable readme component that renders at the top
@@ -33,22 +34,9 @@
 
 ## Styles
 - v4
-  - make build changes
-  - repair all current styles - color changes, intent color mappings
-    - default - making font size a var()
-    - flat
-    - ibm
-    - antd
-    - fluent
-    - pnnl
-  - export styles
-    - repair export
-    - rename default to just 'blueprint'
-    - don't export tokens from most styles?
-    - better names for exports
-  - update readme
-  - –––
-- blueprint v3 colors
+  - https://github.com/palantir/blueprint/wiki/4.x-Changelog#may-5-2022
+- v3
+  - join input sides
 - [Google Material](https://material.io/components)
   - Catalyst
 - var(--style) / General

@@ -1,20 +1,22 @@
 import { OptionProps } from '@blueprintjs/core';
-import '../styles/static/styler-styles.scss';
+import { addDarkMirrorToStyleSheet, getAllStyleSheets } from './createDarkMirrorStyles';
 import '../styles/_blueprint/styler-styles.scss';
 import '../styles/_flat/styler-styles.scss';
 import '../styles/_carbon/styler-styles.scss';
 import '../styles/_antd/styler-styles.scss';
 import '../styles/_fluent/styler-styles.scss';
 import '../styles/_pnnl/styler-styles.scss';
-import { addDarkMirrorToStyleSheet, getAllStyleSheets } from './createDarkMirrorStyles';
+import '../styles/_bpv3/styler-styles.scss';
+import '../styles/static/styler-styles.scss';
 
 export const styleManifest: Record<string, string> = {
-    'Default': 'bpx-default',
+    'Blueprint Default': 'bpx-default',
     'Flat': 'bpx-flat',
     'IBM Carbon': 'bpx-carbon',
     'Ant Design': 'bpx-antd',
     'Microsoft Fluent (beta)': 'bpx-fluent',
     'PNNL v3 (beta)': 'bpx-pnnl',
+    'Blueprint v3': 'bpx-bpv3',
     'Static (original css)': 'bpx-static',
 }
 export const defaultStyleName: keyof typeof styleManifest = 'Default';
