@@ -1,0 +1,17 @@
+
+.#{$ns}-breadcrumbs-collapsed::before {
+  background: unset;
+  content: "•••";
+  font-weight: bold;
+  font-size: 12px;
+  width: auto;
+}
+
+.#{$ns}-breadcrumbs>li::after {
+  color: var(--pt-icon-color);
+  background: unset;
+  content: "/";
+  font-weight: bold;
+  text-align: center;
+  align-self: baseline;
+}

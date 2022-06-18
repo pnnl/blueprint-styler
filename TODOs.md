@@ -35,8 +35,10 @@
 ## Styles
 - v4
   - https://github.com/palantir/blueprint/wiki/4.x-Changelog#may-5-2022
+  - update _forms-controls.scss with new $values and others by comparing merge
 - v3
-  - join input sides
+  - update _controls.scss after v4 update
+  - join input sides?
 - [Google Material](https://material.io/components)
   - Catalyst
 - var(--style) / General
