@@ -37,24 +37,24 @@
     "generate-svg-icon-files": "node ./scripts/generate-svg-icon-files.js"
   },
   "peerDependencies": {
-    "@blueprintjs/core": "^4.0.1",
-    "@blueprintjs/datetime": "^4.0.1",
-    "@blueprintjs/docs-theme": "^4.0.1",
-    "@blueprintjs/icons": "^4.1.0",
-    "@blueprintjs/popover2": "^1.0.1",
-    "@blueprintjs/select": "^4.0.1",
-    "@blueprintjs/table": "^4.0.1",
-    "@blueprintjs/timezone": "^4.0.1"
+    "@blueprintjs/core": "^4.5.1",
+    "@blueprintjs/datetime": "^4.3.1",
+    "@blueprintjs/docs-theme": "^4.3.1",
+    "@blueprintjs/icons": "^4.3.0",
+    "@blueprintjs/popover2": "^1.4.1",
+    "@blueprintjs/select": "^4.4.1",
+    "@blueprintjs/table": "^4.3.1",
+    "@blueprintjs/timezone": "^4.4.0"
   },
   "devDependencies": {
-    "@blueprintjs/core": "^4.0.1",
-    "@blueprintjs/datetime": "^4.0.1",
-    "@blueprintjs/docs-theme": "^4.0.1",
-    "@blueprintjs/icons": "^4.1.0",
-    "@blueprintjs/popover2": "^1.0.1",
-    "@blueprintjs/select": "^4.0.1",
-    "@blueprintjs/table": "^4.0.1",
-    "@blueprintjs/timezone": "^4.0.1",
+    "@blueprintjs/core": "^4.5.1",
+    "@blueprintjs/datetime": "^4.3.1",
+    "@blueprintjs/docs-theme": "^4.3.1",
+    "@blueprintjs/icons": "^4.3.0",
+    "@blueprintjs/popover2": "^1.4.1",
+    "@blueprintjs/select": "^4.4.1",
+    "@blueprintjs/table": "^4.3.1",
+    "@blueprintjs/timezone": "^4.4.0",
     "@carbon/colors": "^10.33.0",
     "@ibm/plex": "^6.0.0",
     "@types/node": "^16.10.2",
@@ -101,4 +101,3 @@
       "last 1 safari version"
     ]
   }
-}

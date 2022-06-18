@@ -1,6 +1,7 @@
 // Copyright 2015 Palantir Technologies, Inc. All rights reserved.
 // Licensed under the Apache License, Version 2.0.
 
+@use "sass:math";
 @import "../../common/mixins";
 @import "../../common/variables";
 @import "../button/common";
@@ -31,7 +32,6 @@ $control-indicator-spacing: $pt-grid-size !default;
 @mixin control-checked-colors($selector: ":checked") {
   input#{$selector} ~ .#{$ns}-control-indicator {
     background-color: $control-checked-background-color;
-    background-image: $button-intent-gradient;
     box-shadow: $control-checked-box-shadow;
     color: $white;
   }
@@ -124,7 +124,6 @@ $control-indicator-spacing: $pt-grid-size !default;
   .#{$ns}-control-indicator {
     // background-clip: padding-box;
     background-color: $control-background-color;
-    background-image: $button-gradient;
     border: none;
     box-shadow: $control-box-shadow;
     cursor: pointer;
@@ -165,7 +164,7 @@ $control-indicator-spacing: $pt-grid-size !default;
 
   input:focus ~ .#{$ns}-control-indicator {
     @include focus-outline();
-    outline: $blue3 auto 2px;
+    outline: $blue3 solid 2px;
   }
 
   // right-aligned indicator is glued to the right side of the container
@@ -327,10 +326,9 @@ $control-indicator-spacing: $pt-grid-size !default;
   $dark-switch-checked-background-color-active: $control-checked-background-color-active !default;
   $dark-switch-checked-background-color-disabled: hslax($blue3, 0.5) !default;
 
-  $switch-indicator-background-color: $white !default;
+  $switch-indicator-background-color: hslax($gray3, 0.3) !default;
   $switch-indicator-box-shadow: 0 0 0 $button-border-width hslax($black, 0.5) !default;
   $switch-indicator-background-color-disabled: hslax($white, 0.8) !default;
-  $switch-checked-indicator-background-color: $white !default; // PR
   $switch-checked-indicator-background-color-disabled: hslax($white, 0.5) !default;
   $dark-switch-indicator-background-color: $gray4 !default;
   $dark-switch-indicator-background-color-disabled: hslax($gray4, 0.5) !default;
@@ -393,7 +391,7 @@ $control-indicator-spacing: $pt-grid-size !default;
       $switch-checked-indicator-background-color-disabled
     );
     // convert em variable to px value
-    @include indicator-position($switch-width / 1em * $control-indicator-size);
+    @include indicator-position(math.div($switch-width, 1em) * $control-indicator-size);
 
     .#{$ns}-control-indicator {
       border: none;
@@ -425,7 +423,7 @@ $control-indicator-spacing: $pt-grid-size !default;
     }
 
     &.#{$ns}-large {
-      @include indicator-position($switch-width / 1em * $control-indicator-size-large);
+      @include indicator-position(math.div($switch-width, 1em) * $control-indicator-size-large);
     }
 
     /* .#{$ns}-dark & {
@@ -502,7 +500,6 @@ $control-indicator-spacing: $pt-grid-size !default;
 
     .#{$ns}-control-indicator {
       background-color: $dark-control-background-color;
-      background-image: $dark-button-gradient;
       box-shadow: $dark-control-box-shadow;
     }
 
@@ -511,7 +508,7 @@ $control-indicator-spacing: $pt-grid-size !default;
     }
 
     input:focus ~ .#{$ns}-control-indicator {
-      outline: $blue5 auto 2px;
+      outline: $blue5 solid 2px;
     }
 
     input:not(:disabled):active ~ .#{$ns}-control-indicator {
