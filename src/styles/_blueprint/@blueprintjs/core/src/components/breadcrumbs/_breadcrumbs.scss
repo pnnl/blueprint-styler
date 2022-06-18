@@ -132,14 +132,14 @@ Styleguide breadcrumbs
   }
 
   .#{$ns}-breadcrumbs-collapsed {
-    background: rgba($gray3, 0.2);
+    background: hslax($gray3, 0.2);
 
     &::before {
       background: svg-icon("16px/more.svg", (circle: (fill: $pt-dark-icon-color))) center no-repeat;
     }
 
     &:hover {
-      background: rgba($gray3, 0.3);
+      background: hslax($gray3, 0.3);
       color: $pt-dark-text-color;
     }
   }

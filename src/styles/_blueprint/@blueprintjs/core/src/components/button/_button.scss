@@ -180,7 +180,7 @@ Styleguide button
     color: $pt-text-color;
 
     &:not(.#{$ns}-disabled).#{$ns}-icon > svg {
-      fill: rgba($dark-gray1, 0.7);
+      fill: hslax($dark-gray1, 0.7);
     }
 
     &:not(.#{$ns}-disabled):not(.#{$ns}-minimal):not(.#{$ns}-outlined) {
@@ -198,11 +198,11 @@ Styleguide button
 
     &:disabled,
     &.#{$ns}-disabled {
-      background: rgba($orange3, 0.5);
-      color: rgba($dark-gray1, 0.35);
+      background: hslax($orange3, 0.5);
+      color: hslax($dark-gray1, 0.35);
 
       .#{$ns}-dark & {
-        color: rgba($dark-gray1, 0.6);
+        color: hslax($dark-gray1, 0.6);
       }
     }
 

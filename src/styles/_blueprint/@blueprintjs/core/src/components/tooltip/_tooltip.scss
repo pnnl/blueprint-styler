@@ -6,8 +6,8 @@
 @import "../popover/common";
 @import "./common";
 
-$tooltip-arrow-box-shadow: 1px 1px 6px rgba($black, $pt-drop-shadow-opacity) !default;
-$dark-tooltip-arrow-box-shadow: 1px 1px 6px rgba($black, $pt-dark-drop-shadow-opacity) !default;
+$tooltip-arrow-box-shadow: 1px 1px 6px hslax($black, $pt-drop-shadow-opacity) !default;
+$dark-tooltip-arrow-box-shadow: 1px 1px 6px hslax($black, $pt-dark-drop-shadow-opacity) !default;
 
 .#{$ns}-tooltip {
   @include popover-sizing(

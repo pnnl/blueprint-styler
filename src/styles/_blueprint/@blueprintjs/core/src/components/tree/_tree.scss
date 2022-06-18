@@ -91,11 +91,11 @@ $tree-intent-icon-colors: (
   width: 100%;
 
   &:hover {
-    background-color: rgba($gray3, 0.15);
+    background-color: hslax($gray3, 0.15);
   }
 
   &:active {
-    background-color: rgba($gray3, 0.3);
+    background-color: hslax($gray3, 0.3);
   }
 }
 
@@ -185,7 +185,7 @@ $tree-intent-icon-colors: (
 /*.#{$ns}-dark {
   .#{$ns}-tree-node-content {
     &:hover {
-      background-color: rgba($gray1, 0.3);
+      background-color: hslax($gray1, 0.3);
     }
   }
 
