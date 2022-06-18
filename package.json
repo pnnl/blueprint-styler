@@ -15,14 +15,14 @@
     "copy": "yarn copy:clean && yarn copy:scss && yarn copy:examples && echo '> DONE copying all files'"
   },
   "devDependencies": {
-    "@blueprintjs/core": "^4.3.0",
-    "@blueprintjs/datetime": "^4.2.0",
-    "@blueprintjs/docs-theme": "^4.2.0",
-    "@blueprintjs/icons": "^4.2.5",
-    "@blueprintjs/popover2": "^1.2.0",
-    "@blueprintjs/select": "^4.2.0",
-    "@blueprintjs/table": "^4.2.0",
-    "@blueprintjs/timezone": "^4.2.0",
+    "@blueprintjs/core": "^4.5.1",
+    "@blueprintjs/datetime": "^4.3.1",
+    "@blueprintjs/docs-theme": "^4.3.1",
+    "@blueprintjs/icons": "^4.3.0",
+    "@blueprintjs/popover2": "^1.4.1",
+    "@blueprintjs/select": "^4.4.1",
+    "@blueprintjs/table": "^4.3.1",
+    "@blueprintjs/timezone": "^4.4.0",
     "@blueprintjs/monorepo": "palantir/blueprint#develop",
     "copyfiles": "^2.4.1"
   }
