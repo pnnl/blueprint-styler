@@ -143,7 +143,8 @@ $pt-dark-dialog-box-shadow: $pt-dark-elevation-shadow-3 !default;
 // Dark popover borders are outset, so they can't use hslax($white, 0.3).
 // They also can't use $gray1 because its blue tint is noticeably different from other white borders in dark theme.
 // Instead, we create a new color tuned to match semi-transparent white borders on a dark theme background.
-$pt-dark-popover-border-color: hsl(215deg, 3%, 38%) !default;
+// $pt-dark-popover-border-color: hsl(215deg, 3%, 38%) !default; // ^^^ But fuck that though
+$pt-dark-popover-border-color: hslax($white, 0.3) !default;
 $pt-dark-popover-box-shadow: 0 0 0 1px $pt-dark-popover-border-color,
                              $pt-dark-elevation-shadow-3 !default;
 // Equivalent to $pt-dark-elevation-shadow-3 without the inset border

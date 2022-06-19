@@ -1,0 +1,101 @@
+// These were scattered everywhere in the original codebase //
+
+@function button-intent-stack($intent) {
+  @return (var(--pt-intent-#{$intent}),
+    var(--pt-intent-#{$intent}-hover),
+    var(--pt-intent-#{$intent}-active),
+  );
+}
+
+// "intent": (default, hover, active colors)
+$button-intents: (
+  "primary": button-intent-stack("primary"),
+  "success": button-intent-stack("success"),
+  "warning": button-intent-stack("warning"),
+  "danger": button-intent-stack("danger"),
+);
+
+$pt-intent-colors: (
+  "primary": var(--pt-intent-primary),
+  "success": var(--pt-intent-success),
+  "warning": var(--pt-intent-warning),
+  "danger" : var(--pt-intent-danger),
+);
+
+$pt-intent-text-colors: (
+  "primary": var(--pt-intent-primary-text-color),
+  "success": var(--pt-intent-success-text-color),
+  "warning": var(--pt-intent-warning-text-color),
+  "danger" : var(--pt-intent-danger-text-color),
+);
+
+$pt-dark-intent-text-colors: (
+  "primary": var(--pt-dark-intent-primary-text-color),
+  "success": var(--pt-dark-intent-success-text-color),
+  "warning": var(--pt-dark-intent-warning-text-color),
+  "danger" : var(--pt-dark-intent-danger-text-color),
+);
+
+$pt-dark-input-intent-box-shadow-colors: (
+  "primary": var(--primary4),
+  "success": var(--success4),
+  "warning": var(--warning4),
+  "danger" : var(--danger4),
+);
+
+// "intent": (bg, fg, fg-active)
+$menu-item-intent-colors: (
+  "primary": (var(--primary3), var(--primary2), var(--primary1)),
+  "success": (var(--success3), var(--success2), var(--success1)),
+  "warning": (var(--warning3), var(--warning2), var(--warning1)),
+  "danger": (var(--danger3), var(--danger2), var(--danger1)),
+);
+
+// "intent": (bg, fg, fg-active)
+$dark-menu-item-intent-colors: (
+  "primary": (var(--primary3), var(--primary5), var(--primary6)),
+  "success": (var(--success3), var(--success5), var(--success6)),
+  "warning": (var(--warning3), var(--warning5), var(--warning6)),
+  "danger": (var(--danger3), var(--danger5), var(--danger6)),
+);
+
+// "intent": (default, hover, active, fg)
+$tag-intent-colors: (
+  "primary": (var(--pt-intent-primary), var(--pt-intent-primary-hover), var(--pt-intent-primary-active), var(--white)),
+  "success": (var(--pt-intent-success), var(--pt-intent-success-hover), var(--pt-intent-success-active), var(--white)),
+  "warning": (var(--pt-intent-warning), var(--pt-intent-warning-hover), var(--pt-intent-warning-active), var(--pt-text-color-static)),
+  "danger": (var(--pt-intent-danger), var(--pt-intent-danger-hover), var(--pt-intent-danger-active), var(--white))
+);
+
+// "intent": (bg, fg, fg-active)
+$minimal-tag-intent-colors: $menu-item-intent-colors;
+/* (
+  "primary": ( var(--primary3),  var(--primary2),  var(--primary1)),
+  "success": ( var(--success3),  var(--success2),  var(--success1)),
+  "warning": ( var(--warning3),  var(--warning2),  var(--warning1)),
+  "danger":  ( var(--danger3),   var(--danger2),   var(--danger1)),
+); */
+
+// "intent": (bg, fg, fg-active)
+$minimal-dark-tag-intent-colors: $dark-menu-item-intent-colors;
+/* (
+  "primary": ( var(--primary3),  var(--primary5),  var(--primary6)),
+  "success": ( var(--success3),  var(--success5),  var(--success6)),
+  "warning": ( var(--warning3),  var(--warning5),  var(--warning6)),
+  "danger":  ( var(--danger3),   var(--danger5),   var(--danger6)),
+); */
+
+// "intent": (default, fg, hover, active)
+$toast-intent-colors: (
+  "primary": (var(--pt-intent-primary), var(--white), var(--pt-intent-primary-hover), var(--pt-intent-primary-active), ),
+  "success": (var(--pt-intent-success), var(--white), var(--pt-intent-success-hover), var(--pt-intent-success-active), ),
+  "warning": (var(--pt-intent-warning), var(--pt-text-color-static), var(--pt-intent-warning-hover), var(--pt-intent-warning-active), ),
+  "danger": (var(--pt-intent-danger), var(--white), var(--pt-intent-danger-hover), var(--pt-intent-danger-active), )
+);
+
+$tree-intent-icon-colors: (
+  "primary": var(--primary5),
+  "success": var(--success5),
+  "warning": var(--warning5),
+  "danger" : var(--danger5),
+);

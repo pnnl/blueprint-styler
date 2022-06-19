@@ -48,17 +48,3 @@ $dark-minimal-button-background-color-active: var(--dark-minimal-button-backgrou
 $button-outlined-width: var(--button-outlined-width);
 $button-outlined-border-intent-opacity: var(--button-outlined-border-intent-opacity);
 $button-outlined-border-disabled-intent-opacity: var(--button-outlined-border-disabled-intent-opacity);
-
-@function button-intent-stack($intent) {
-  @return (
-    var(--pt-intent-#{$intent}),
-    var(--pt-intent-#{$intent}-hover),
-    var(--pt-intent-#{$intent}-active),
-  )
-}
-$button-intents: (
-  "primary": button-intent-stack("primary"),
-  "success": button-intent-stack("success"),
-  "warning": button-intent-stack("warning"),
-  "danger":  button-intent-stack("danger"),
-);

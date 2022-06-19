@@ -9,7 +9,7 @@ $popover2-arrow-box-shadow: 1px 1px 6px hslax($black, $pt-drop-shadow-opacity) !
 // We can't use a transparent color here because it is outset and will overlay other lines/borders underneath.
 // Also, it needs to have slightly increased lightness because its apparent width makes it look darker otherwise.
 $dark-popover2-arrow-box-shadow:
-  0 0 0 1px adjust($pt-dark-popover-border-color, $lightness: 10%),
+  0 0 0 1px $pt-dark-popover-border-color,
   1px 1px 6px hslax($black, $pt-dark-drop-shadow-opacity) !default;
 
 .#{$ns}-popover2 {
