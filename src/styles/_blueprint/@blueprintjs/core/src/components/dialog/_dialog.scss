@@ -1,8 +1,6 @@
 // Copyright 2015 Palantir Technologies, Inc. All rights reserved.
 // Licensed under the Apache License, Version 2.0.
 
-// REVIEW //
-@use "sass:math";
 @import "../../../../../@blueprintjs/colors/src/colors";
 @import "../../common/mixins";
 @import "../../common/react-transition";
@@ -98,7 +96,7 @@ $dialog-border-radius: calc(#{$pt-border-radius} * 2);
   flex: 0 0 auto;
   min-height: $pt-icon-size-large + $dialog-padding;
   padding-left: $dialog-padding;
-  padding-right: math.div($pt-grid-size, 2);
+  padding-right: 5px;
   z-index: 0;
 
   .#{$ns}-icon-large,

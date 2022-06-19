@@ -1,7 +1,6 @@
 // Copyright 2021 Palantir Technologies, Inc. All rights reserved.
 // Licensed under the Apache License, Version 2.0.
 
-@use "sass:color";
 @import "./common";
 
 $popover2-width: $pt-grid-size * 35 !default;
@@ -10,7 +9,7 @@ $popover2-arrow-box-shadow: 1px 1px 6px hslax($black, $pt-drop-shadow-opacity) !
 // We can't use a transparent color here because it is outset and will overlay other lines/borders underneath.
 // Also, it needs to have slightly increased lightness because its apparent width makes it look darker otherwise.
 $dark-popover2-arrow-box-shadow:
-  0 0 0 1px color.adjust($pt-dark-popover-border-color, $lightness: 10%),
+  0 0 0 1px adjust($pt-dark-popover-border-color, $lightness: 10%),
   1px 1px 6px hslax($black, $pt-dark-drop-shadow-opacity) !default;
 
 .#{$ns}-popover2 {
