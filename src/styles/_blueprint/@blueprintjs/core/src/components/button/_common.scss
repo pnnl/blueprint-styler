@@ -185,28 +185,15 @@ $button-intents: (
 }
 
 @mixin pt-button-intent-disabled($default-color) {
-<<<<<<< HEAD:src/styles/_blueprint/@blueprintjs/core/src/components/button/_common.scss
   background-color: hslax($default-color, 0.5);
-  background-image: none;
-=======
-  background-color: hslax($default-color, 0.5);
->>>>>>> develop-copy-only:src/styles/_default-var-styles/@blueprintjs/core/src/components/button/_common.scss
   border-color: transparent;
   box-shadow: none;
   color: $button-intent-color-disabled;
 }
 
-<<<<<<< HEAD:src/styles/_blueprint/@blueprintjs/core/src/components/button/_common.scss
-/* @mixin pt-dark-button() {
-  background-color: $dark-button-background-color;
-  background-image: $dark-button-gradient;
-  box-shadow: $dark-button-box-shadow;
-  color: $pt-dark-text-color;
-=======
 // N.B. this mixin cannot be used on pseudo element selectors because it will produce invalid CSS
-@mixin pt-dark-button() {
+/* @mixin pt-dark-button() {
   @include pt-dark-button-default-colors();
->>>>>>> develop-copy-only:src/styles/_default-var-styles/@blueprintjs/core/src/components/button/_common.scss
 
   &:hover,
   &:active,
@@ -238,23 +225,16 @@ $button-intents: (
   }
 } */
 
-<<<<<<< HEAD:src/styles/_blueprint/@blueprintjs/core/src/components/button/_common.scss
-/* @mixin pt-dark-button-hover() {
-  background-color: $dark-button-background-color-hover;
-  box-shadow: $dark-button-box-shadow;
-} */
-=======
-@mixin pt-dark-button-default-colors() {
+/* @mixin pt-dark-button-default-colors() {
   background-color: $dark-button-background-color;
   box-shadow: $dark-button-box-shadow;
   color: $pt-dark-text-color;
-}
+} */
 
-@mixin pt-dark-button-hover() {
+/* @mixin pt-dark-button-hover() {
   background-color: $dark-button-background-color-hover;
   box-shadow: $dark-button-box-shadow-active;
-}
->>>>>>> develop-copy-only:src/styles/_default-var-styles/@blueprintjs/core/src/components/button/_common.scss
+} */
 
 /* @mixin pt-dark-button-active() {
   background-color: $dark-button-background-color-active;
@@ -265,21 +245,10 @@ $button-intents: (
   background-color: $dark-button-background-color-disabled;
   box-shadow: none;
   color: $dark-button-color-disabled;
-<<<<<<< HEAD:src/styles/_blueprint/@blueprintjs/core/src/components/button/_common.scss
-
-  &.#{$ns}-active {
-    background: $dark-button-background-color-active-disabled;
-  }
 } */
 
 /* @mixin pt-dark-button-intent() {
-  box-shadow: $dark-button-intent-box-shadow;
-=======
-}
-
-@mixin pt-dark-button-intent() {
   box-shadow: $dark-button-box-shadow;
->>>>>>> develop-copy-only:src/styles/_default-var-styles/@blueprintjs/core/src/components/button/_common.scss
 
   &:hover {
     box-shadow: $dark-button-box-shadow;
@@ -296,12 +265,7 @@ $button-intents: (
   }
 } */
 
-<<<<<<< HEAD:src/styles/_blueprint/@blueprintjs/core/src/components/button/_common.scss
 /* @mixin pt-dark-button-intent-disabled() {
-  background-image: none;
-=======
-@mixin pt-dark-button-intent-disabled() {
->>>>>>> develop-copy-only:src/styles/_default-var-styles/@blueprintjs/core/src/components/button/_common.scss
   box-shadow: none;
   color: $dark-button-intent-color-disabled;
 } */
@@ -343,18 +307,16 @@ $button-intents: (
 
   @each $intent, $colors in $button-intents {
     &.#{$ns}-intent-#{$intent} {
-<<<<<<< HEAD:src/styles/_blueprint/@blueprintjs/core/src/components/button/_common.scss
-      @include pt-button-minimal-intent(
-        map-get($pt-intent-colors, $intent),
-        map-get($pt-intent-text-colors, $intent),
-        map-get($pt-dark-intent-text-colors, $intent),
-        // map-get($pt-intent-colors, $intent),
-        // map-get($pt-intent-text-colors, $intent),
-        // map-get($pt-dark-intent-text-colors, $intent)
-      );
-=======
+      // REVIEW //
+      // @include pt-button-minimal-intent(
+      //   map-get($pt-intent-colors, $intent),
+      //   map-get($pt-intent-text-colors, $intent),
+      //   map-get($pt-dark-intent-text-colors, $intent),
+      //   // map-get($pt-intent-colors, $intent),
+      //   // map-get($pt-intent-text-colors, $intent),
+      //   // map-get($pt-dark-intent-text-colors, $intent)
+      // );
       @include pt-button-minimal-intent($intent);
->>>>>>> develop-copy-only:src/styles/_default-var-styles/@blueprintjs/core/src/components/button/_common.scss
     }
   }
 }
@@ -434,13 +396,8 @@ $dark-minimal-active-text-colors: (
 
   &:active,
   &.#{$ns}-active {
-<<<<<<< HEAD:src/styles/_blueprint/@blueprintjs/core/src/components/button/_common.scss
-    background: hslax($intent-color, 0.3);
-    color: $text-color;
-=======
     background: hslax($intent-color, 0.3);
     color: $active-text-color;
->>>>>>> develop-copy-only:src/styles/_default-var-styles/@blueprintjs/core/src/components/button/_common.scss
   }
 
   &:disabled,
@@ -461,24 +418,14 @@ $dark-minimal-active-text-colors: (
     color: $dark-text-color;
 
     &:hover {
-<<<<<<< HEAD:src/styles/_blueprint/@blueprintjs/core/src/components/button/_common.scss
-      background: hslax($intent-color, 0.2);
-      color: $dark-text-color;
-=======
       background: hslax($intent-color, 0.2);
       color: $dark-hover-text-color;
->>>>>>> develop-copy-only:src/styles/_default-var-styles/@blueprintjs/core/src/components/button/_common.scss
     }
 
     &:active,
     &.#{$ns}-active {
-<<<<<<< HEAD:src/styles/_blueprint/@blueprintjs/core/src/components/button/_common.scss
-      background: hslax($intent-color, 0.3);
-      color: $dark-text-color;
-=======
       background: hslax($intent-color, 0.3);
       color: $dark-active-text-color;
->>>>>>> develop-copy-only:src/styles/_default-var-styles/@blueprintjs/core/src/components/button/_common.scss
     }
 
     &:disabled,
