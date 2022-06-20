@@ -7,7 +7,7 @@ $pt-intent-warning: $orange3 !default;
 $pt-intent-danger: $red3 !default;
 
 $pt-app-background-color: $light-gray5 !default;
-$pt-dark-app-background-color: $dark-gray3 !default;
+$pt-dark-app-background-color: $dark-gray2 !default;
 
 $pt-outline-color: hslax($blue3, 0.6) !default;
 
@@ -35,7 +35,7 @@ $pt-dark-icon-color-selected: $pt-intent-primary !default;
 
 $pt-divider-black: hslax($black, 0.15) !default;
 $pt-dark-divider-black: hslax($black, 0.4) !default;
-$pt-dark-divider-white: hslax($white, 0.15) !default;
+$pt-dark-divider-white: hslax($white, 0.2) !default;
 
 $pt-code-text-color: $pt-text-color-muted !default;
 $pt-dark-code-text-color: $pt-dark-text-color-muted !default;

@@ -6,7 +6,7 @@
 
 $cell-size: $pt-grid-size * 3 !default;
 $header-height: $pt-grid-size * 4 !default;
-$header-margin: ($header-height - $pt-input-height) / 2 !default;
+$header-margin: ($header-height - $pt-input-height) * 0.5 !default;
 
 @mixin calendar-day() {
   display: table-cell;
@@ -129,6 +129,10 @@ $header-margin: ($header-height - $pt-input-height) / 2 !default;
       &:hover {
         background-color: var(--pt-intent-primary-hover);
       }
+
+      &:active {
+        background-color: $blue1;
+      }
     }
 
     // putting it last so it overrides equally specific selectors above.
@@ -193,6 +197,13 @@ $header-margin: ($header-height - $pt-input-height) / 2 !default;
   padding-left: $datepicker-padding;
 }
 
+.#{$ns}-datepicker-content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
 .#{$ns}-datepicker-footer {
   display: flex;
   justify-content: space-between;
@@ -230,7 +241,11 @@ $header-margin: ($header-height - $pt-input-height) / 2 !default;
       background-color: var(--pt-intent-primary);
 
       &:hover {
-        background-color: var(--pt-intent-primary-hover);
+        background-color: $blue2;
+      }
+
+      &:active {
+        background-color: $blue1;
       }
     }
 

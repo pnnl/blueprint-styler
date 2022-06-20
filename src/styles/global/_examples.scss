@@ -1,8 +1,7 @@
 // Copyright 2016 Palantir Technologies, Inc. All rights reserved.
 // Licensed under the Apache License, Version 2.0.
 
-// @import "~@blueprintjs/icons/lib/scss/variables";
-@import "~@blueprintjs/core/src/common/react-transition";
+@import "../_blueprint/@blueprintjs/core/src/common/react-transition";
 @import "../_blueprint/@blueprintjs/core/src/components/icon/icon-mixins";
 
 // Generate a selector for a page ID by reference

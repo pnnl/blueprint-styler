@@ -1,13 +1,8 @@
 // Copyright 2015 Palantir Technologies, Inc. All rights reserved.
 // Licensed under the Apache License, Version 2.0.
 
+@import "../../../../@blueprintjs/colors/src/colors";
 @import "flex";
-
-// Extended color pallete
-$blue6: #99c4ff;
-$green6: #7cd7a2;
-$orange6: #f5c186;
-$red6: #ffa1a4;
 
 $pt-intent-colors: (
   "primary": $pt-intent-primary,
@@ -21,6 +16,13 @@ $pt-intent-text-colors: (
   "success": $green2,
   "warning": $orange2,
   "danger" : $red2,
+) !default;
+
+$pt-intent-active-text-colors: (
+  "primary": $blue1,
+  "success": $green1,
+  "warning": $orange1,
+  "danger": $red1
 ) !default;
 
 $pt-dark-intent-text-colors: (
@@ -77,7 +79,7 @@ $pt-dark-intent-text-colors: (
 }
 
 @mixin focus-outline($offset: 2px) {
-  outline: $pt-outline-color auto 2px;
+  outline: $pt-outline-color solid 2px;
   outline-offset: $offset;
   -moz-outline-radius: 6px;
 }
@@ -90,7 +92,7 @@ $pt-dark-intent-text-colors: (
 // default line-height is that of base typography, 18px assuming 14px font-size.
 
 @function centered-text($height, $line-height: "(#{$pt-font-size} * #{$pt-line-height})") {
-  @return calc((#{$height} - #{$line-height}) / 2);
+  @return calc((#{$height} - #{$line-height}) * 0.5);
 }
 
 // Removes the unit from a Sass numeric value (if present): `strip-unit(12px) => 12`
@@ -98,7 +100,7 @@ $pt-dark-intent-text-colors: (
 
 @function strip-unit($number) {
   @if type-of($number) == "number" and not unitless($number) {
-    @return $number / ($number * 0 + 1);
+    @return ($number / ($number * 0 + 1));
   }
 
   @return $number;
