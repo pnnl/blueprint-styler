@@ -6,15 +6,10 @@
     inset 0 0 0 var(--button-border-width) hsla(var(--pt-shadow-color-hsl), 0.15);
   --button-box-shadow-active:
     inset 0 0 0 var(--button-border-width) hsla(var(--pt-shadow-color-hsl), 0.3);
-  --button-intent-box-shadow: initial;
-  --button-intent-box-shadow-active: initial;
 
-  --dark-button-intent-box-shadow: initial;
-  --dark-button-intent-box-shadow-active: initial;
-
-  --button-gradient: initial; // linear-gradient(to bottom, hslax($white, 0.8), hslax($white, 0)) ;
-  --button-intent-gradient: initial; // linear-gradient(to bottom, hslax($white, 0.1), hslax($white, 0)) ;
-  --dark-button-gradient: initial; // linear-gradient(to bottom, hslax($white, 0.05), hslax($white, 0)) ;
+  --button-gradient: none; // linear-gradient(to bottom, hslax($white, 0.8), hslax($white, 0)) ;
+  --button-intent-gradient: none; // linear-gradient(to bottom, hslax($white, 0.1), hslax($white, 0)) ;
+  --dark-button-gradient: none; // linear-gradient(to bottom, hslax($white, 0.05), hslax($white, 0)) ;
 
 
   /*! IntentColors */

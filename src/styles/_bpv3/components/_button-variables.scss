@@ -11,16 +11,18 @@
 
   /*! Components */
 
+  --button-box-shadow:
+    inset 0 0 0 var(--button-border-width) hsla(var(--pt-shadow-color-hsl), 0.2),
+    inset 0 var(--button-border-width-negative) 0 hsla(var(--pt-shadow-color-hsl), 0.1);
+  --button-box-shadow-active:
+    inset 0 0 0 var(--button-border-width) hsla(var(--pt-shadow-color-hsl), 0.2),
+    inset 0 1px 2px hsla(var(--pt-shadow-color-hsl), 0.2);
+
   --dark-button-box-shadow:
-    0 0 0 var(--button-border-width) hsl(var(--black-hsl), 0.4);
+    inset 0 0 0 var(--button-border-width) hsl(var(--black-hsl), 0.8);
   --dark-button-box-shadow-active:
-    0 0 0 var(--button-border-width) hsl(var(--black-hsl), 0.6),
-    inset 0 1px 2px hsl(var(--black-hsl), 0.2);
-  --dark-button-intent-box-shadow:
-    0 0 0 var(--button-border-width) hsl(var(--black-hsl), 0.4);
-  --dark-button-intent-box-shadow-active:
-    0 0 0 var(--button-border-width) hsl(var(--black-hsl), 0.4),
-    inset 0 1px 2px hsl(var(--black-hsl), 0.2);
+    inset 0 0 0 var(--button-border-width) hsl(var(--black-hsl), 0.8);
+
 
   --button-gradient: linear-gradient(to bottom, hsl(var(--white-hsl), 0.8), hsl(var(--white-hsl), 0));
   --button-intent-gradient: linear-gradient(to bottom, hsl(var(--white-hsl), 0.1), hsl(var(--white-hsl), 0));
