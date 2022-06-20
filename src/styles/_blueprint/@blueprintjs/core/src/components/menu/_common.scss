@@ -159,7 +159,7 @@ $dark-menu-item-intent-colors: (
 
   // pt-disable always overrides over styles
   /* stylelint-disable declaration-no-important */
-  &.#{$ns}-disabled {
+  /* &.#{$ns}-disabled {
     color: $pt-dark-text-color-disabled !important;
 
     &::before,
@@ -171,7 +171,7 @@ $dark-menu-item-intent-colors: (
     .#{$ns}-menu-item-label {
       color: $pt-dark-text-color-disabled !important;
     }
-  }
+  } */
   /* stylelint-enable declaration-no-important */
 }
 
@@ -192,7 +192,7 @@ $dark-menu-item-intent-colors: (
   // need to override typography styles here
   .#{$ns}-menu-item-icon,
   .#{$ns}-submenu-icon {
-    color: $pt-dark-icon-color;
+    // color: $pt-dark-icon-color;
   }
 
   &.#{ns}-selected {

@@ -104,11 +104,11 @@ Styleguide menu-header
 }
 
 // dark theme
-/* .#{$ns}-dark {
-  .#{$ns}-menu {
+.#{$ns}-dark {
+  /* .#{$ns}-menu {
     background: $dark-menu-background-color;
     color: $pt-dark-text-color;
-  }
+  } */
 
   .#{$ns}-menu-item {
     @include dark-menu-item();
@@ -118,15 +118,15 @@ Styleguide menu-header
     }
   }
 
-  .#{$ns}-menu-divider,
+  /* .#{$ns}-menu-divider,
   .#{$ns}-menu-header {
     border-color: $pt-dark-divider-white;
   }
 
   .#{$ns}-menu-header > h6 {
     color: $pt-dark-heading-color;
-  }
-} */
+  } */
+}
 
 // #402 support menu inside label
 .#{$ns}-label .#{$ns}-menu {

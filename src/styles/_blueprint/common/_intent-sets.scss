@@ -7,7 +7,7 @@
   );
 }
 
-// "intent": (default, hover, active colors)
+// "intent": (default, hover, active)
 $button-intents: (
   "primary": button-intent-stack("primary"),
   "success": button-intent-stack("success"),

@@ -328,7 +328,7 @@ $control-indicator-spacing: $pt-grid-size !default;
   $switch-indicator-background-color: hslax($gray3, 0.3) !default;
   $switch-indicator-box-shadow: 0 0 0 $button-border-width hslax($black, 0.5) !default;
   $switch-indicator-background-color-disabled: hslax($white) !default;
-  $switch-checked-indicator-background-color: hslax($white, 0.5) !default;
+  $switch-checked-indicator-background-color: $white !default; // PR
   $switch-checked-indicator-background-color-disabled: hslax($white, 0.5) !default;
   $dark-switch-indicator-background-color: $gray4 !default;
   $dark-switch-indicator-background-color-disabled: hslax($gray4, 0.5) !default;

@@ -110,27 +110,27 @@ $track-height: $track-size !default;
     pointer-events: none;
   }
 
-  /* .#{$ns}-dark & {
+  .#{$ns}-dark & {
     // don't use pt-dark-button() here, since we want to appear more like a light theme button
     background-color: $gray4;
-    box-shadow: $dark-button-box-shadow;
+    // box-shadow: $dark-button-box-shadow;
 
     &:hover {
       background-color: $gray3;
-      box-shadow: $dark-button-box-shadow-active;
+      // box-shadow: $dark-button-box-shadow-active;
     }
 
     &.#{$ns}-active {
       background-color: $gray2;
-      box-shadow: inset 0 1px 1px hslax($black, 0.1), $dark-button-box-shadow-active;
+      // box-shadow: inset 0 1px 1px hslax($black, 0.1), $dark-button-box-shadow-active;
     }
-  } */
+  }
 
-  /* .#{$ns}-dark .#{$ns}-disabled & {
+  .#{$ns}-dark .#{$ns}-disabled & {
     background: $gray1;
     border-color: $gray1;
     box-shadow: none;
-  } */
+  }
 
   .#{$ns}-slider-label {
     background: $tooltip-background-color;

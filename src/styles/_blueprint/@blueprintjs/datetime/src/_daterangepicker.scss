@@ -51,11 +51,11 @@
     &--selected-range {
       background-color: $daterangepicker-range-background-color-selected;
       border-radius: 0;
-      color: $blue2;
+      // color: $blue2;
 
       &:hover {
         background-color: $daterangepicker-range-background-color-selected-hover;
-        color: $blue2;
+        // color: $blue2;
       }
     }
 

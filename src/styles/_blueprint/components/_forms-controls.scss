@@ -58,13 +58,21 @@
 $control-background-color: var(--control-background-color);
 $control-background-color-hover: var(--control-background-color-hover);
 $control-background-color-active: var(--control-background-color-active);
+$control-background-color-disabled: var(--button-background-color-disabled);
 $dark-control-background-color: var(--dark-control-background-color);
 $dark-control-background-color-hover: var(--dark-control-background-color-hover);
 $dark-control-background-color-active: var(--dark-control-background-color-active);
+$dark-control-background-color-disabled: hslax(var(--pt-intent-primary-hsl), 0.5);
 
 $control-checked-background-color: var(--control-checked-background-color);
 $control-checked-background-color-hover: var(--control-checked-background-color-hover);
 $control-checked-background-color-active: var(--control-checked-background-color-active);
+$control-checked-background-color-disabled: hslax(var(--pt-intent-primary-hsl), 0.5);
+
+$control-box-shadow: var(--button-box-shadow);
+$control-checked-box-shadow: var(--button-box-shadow);
+$dark-control-box-shadow: var(--button-box-shadow);
+$dark-control-checked-box-shadow: var(--button-box-shadow);
 
 // $control-indicator-size: var(--control-indicator-size);
 // $control-indicator-size-large: var(--control-indicator-size-large);

@@ -176,33 +176,33 @@ Styleguide button
 
   // special case override: use dark text for warning intent
   &.#{$ns}-intent-warning {
-    background: $orange5;
-    color: $pt-text-color;
+    // background: $orange5;
+    color: $pt-text-color-static;
 
     &:not(.#{$ns}-disabled).#{$ns}-icon > svg {
-      fill: hslax($dark-gray1, 0.7);
+      fill: hslax($pt-text-color-static, 0.7);
     }
 
     &:not(.#{$ns}-disabled):not(.#{$ns}-minimal):not(.#{$ns}-outlined) {
       &:hover {
-        background: $orange4;
-        color: $pt-text-color;
+        // background: $orange4;
+        color: $pt-text-color-static;
       }
 
       &:active,
       &.#{$ns}-active {
-        background: $orange3;
-        color: $pt-text-color;
+        // background: $orange3;
+        color: $pt-text-color-static;
       }
     }
 
     &:disabled,
     &.#{$ns}-disabled {
-      background: hslax($orange3, 0.5);
-      color: hslax($dark-gray1, 0.35);
+      // background: hslax($orange3, 0.5);
+      color: hslax($pt-text-color-static, 0.35);
 
       .#{$ns}-dark & {
-        color: hslax($dark-gray1, 0.6);
+        color: hslax($pt-text-color-static, 0.6);
       }
     }
 
@@ -210,11 +210,11 @@ Styleguide button
     &.#{$ns}-outlined {
       background: none;
 
-      .#{$ns}-dark & {
+      /* .#{$ns}-dark & {
         &:not(.#{$ns}-disabled).#{$ns}-icon > svg {
           fill: $orange5;
         }
-      }
+      } */
     }
   }
 }
