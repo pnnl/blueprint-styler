@@ -25,6 +25,9 @@
 
   .color-set-name, .gray-set-name{
     margin: 0 1rem;
+    :root.bpx-static & {
+      color: hsla(0, 0%, 50%, 0.2) !important;
+    }
   }
 
   .color-chip{
@@ -69,6 +72,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    :root.bpx-static & {
+      color: hsla(0, 0%, 50%, 0.2) !important;
+    }
   }
   .chip-text-dark{
     color: hsla(0, 0%, 0%, 0.7);
