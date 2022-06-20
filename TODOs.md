@@ -1,5 +1,9 @@
 # TODO:
 
+## Docs
+- example theme as code
+- explain how tokens inherit - specifically hsl
+
 ## App tool
 - general 'kitchen sink' example
 - colors in 'static' css...
@@ -33,6 +37,8 @@
 
 
 ## Styles
+- General
+  - remove most component tokens, make it more simple
 - v4
   - https://github.com/palantir/blueprint/wiki/4.x-Changelog#may-5-2022
   - update _forms-controls.scss with new $values and others by comparing merge
