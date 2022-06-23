@@ -364,14 +364,14 @@ $dark-minimal-hover-text-colors: (
   "success": $green5,
   "warning": $orange5,
   "danger": $red5,
-);
+) !default; // PR
 
 $dark-minimal-active-text-colors: (
   "primary": $blue6,
   "success": $green6,
   "warning": $orange6,
   "danger": $red6,
-);
+) !default; // PR
 
 @mixin pt-button-minimal-intent($intent) {
   $intent-color: map-get($pt-intent-colors, $intent);
@@ -416,7 +416,7 @@ $dark-minimal-active-text-colors: (
     stroke: $text-color;
   }
 
-  /* .#{$ns}-dark & {
+  .#{$ns}-dark & {
     color: $dark-text-color;
 
     &:hover {
@@ -439,7 +439,7 @@ $dark-minimal-active-text-colors: (
         background: hslax($intent-color, 0.3);
       }
     }
-  } */
+  }
 }
 
 @mixin pt-button-minimal-divider() {

@@ -29,11 +29,32 @@ $pt-intent-text-colors: (
   "danger" : var(--pt-intent-danger-text-color),
 );
 
+$pt-intent-active-text-colors: (
+  "primary": var(--primary1),
+  "success": var(--success1),
+  "warning": var(--warning1),
+  "danger" : var(--danger1),
+);
+
 $pt-dark-intent-text-colors: (
   "primary": var(--pt-dark-intent-primary-text-color),
   "success": var(--pt-dark-intent-success-text-color),
   "warning": var(--pt-dark-intent-warning-text-color),
   "danger" : var(--pt-dark-intent-danger-text-color),
+);
+
+$dark-minimal-hover-text-colors: (
+  "primary": var(--primary5),
+  "success": var(--success5),
+  "warning": var(--warning5),
+  "danger" : var(--danger5),
+);
+
+$dark-minimal-active-text-colors: (
+  "primary": var(--primary6),
+  "success": var(--success6),
+  "warning": var(--warning6),
+  "danger" : var(--danger6),
 );
 
 $pt-dark-input-intent-box-shadow-colors: (

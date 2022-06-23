@@ -44,7 +44,6 @@
   - ellipsize button text by default
   - Segmented Button Group like [this](https://dribbble.com/shots/14424288-Material-X-design-system-UI-kit-Figma-Segments)
 - v4
-  - BUG: dark minimal/outline intent active fg
   - dark white outlines: https://github.com/palantir/blueprint/wiki/4.x-Changelog#may-5-2022
   - update _forms-controls.scss with new $values and others by comparing merge
 - v3
