@@ -122,7 +122,7 @@ const _TextSample = ({ className = '', ...props }) => {
             {randomLorem(1)}{' '}
             <em>Italic text {randomLorem(1)}</em>{' '}
             {randomLorem(1)}{' '}
-            <a href="#">Inline hyperlink text</a>.{' '}
+            <a href={'#example'}>Inline hyperlink text</a>.{' '}
             {randomLorem(1)}{' '}
             <code className={Classes.CODE}>./inline/code/text.txt</code>{' '}
             {randomLorem(1)}{' '}

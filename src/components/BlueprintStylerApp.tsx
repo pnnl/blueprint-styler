@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { FocusStyleManager, Classes, Button, AnchorButton, Collapse, HTMLSelect, Icon } from '@blueprintjs/core';
-import { Link, useSearchParams } from "react-router-dom";
+import { FocusStyleManager, Classes, Button, AnchorButton, Collapse, HTMLSelect, Icon, ControlGroup } from '@blueprintjs/core';
+import { useSearchParams } from "react-router-dom";
 import { IBlueprintExampleData } from '../tags/types';
 import { allExamples } from './allExamples';
 import logo from '../assets/logo.svg';
@@ -40,7 +40,6 @@ function BlueprintStylerApp() {
     useEffect(() => {
         let toTheme = DARK_THEME
         let fromTheme = LIGHT_THEME
-        const { classList } = document.documentElement
         if (!isDarkTheme)
             [toTheme, fromTheme] = [fromTheme, toTheme];
         [document.documentElement, document.body].forEach(element => {
@@ -51,7 +50,7 @@ function BlueprintStylerApp() {
 
     // style
     const [searchParams, setSearchParams] = useSearchParams();
-    const [currentStyle, setCurrentStyle] = useState<string>(styleManifest[defaultStyleName])
+    const [currentStyle, setCurrentStyle] = useState<string>(defaultStyleName)
     useEffect(() => {
         const currentStyleName = searchParams.get('style') || defaultStyleName
         changeStyle(currentStyleName)
@@ -73,8 +72,8 @@ function BlueprintStylerApp() {
                             style={{ marginBottom: 32 }}
                         >
                             <a
-                                href={'#'}
-                                onClick={e => setSearchParams({})}
+                                href={'/#'}
+                                onClick={() => setSearchParams({})}
                                 className="styler-menu__title-link"
                             >
                                 <img src={logo} style={{ width: 80 }} alt="Blueprint Styler Logo" />
@@ -84,13 +83,20 @@ function BlueprintStylerApp() {
                             </a>
                         </h4>
 
-                        <HTMLSelect
-                            options={styleOptions}
-                            onChange={e => setSearchParams({ style: e.target.value })}
-                            value={currentStyle}
-                            style={{ marginBottom: 8 }}
-                            fill
-                        />
+                        <ControlGroup style={{ marginBottom: 8 }}>
+                            <HTMLSelect
+                                options={styleOptions}
+                                onChange={e => setSearchParams({ style: e.target.value })}
+                                value={currentStyle}
+                                fill
+                            />
+                            <AnchorButton
+                                icon="arrow-top-right"
+                                disabled={styleManifest[currentStyle]?.link === undefined}
+                                href={styleManifest[currentStyle]?.link}
+                                {...externalLinkProps}
+                            />
+                        </ControlGroup>
 
                         <Button
                             rightIcon={isDarkTheme ? "flash" : "moon"}
@@ -143,21 +149,21 @@ function BlueprintStylerApp() {
                         <small>
                             <strong>
                                 <span>Produced by</span>{' '}
-                                <a href={'https://www.pnnl.gov/'} {...linkProps} >
+                                <a href={'https://www.pnnl.gov/'} {...externalLinkProps} >
                                     PNNL
                                 </a>
                                 <span>{' '}&amp;{' '}</span>
-                                <a href={'https://www.energy.gov/'} {...linkProps} >
+                                <a href={'https://www.energy.gov/'} {...externalLinkProps} >
                                     DOE
                                 </a>
                             </strong>
                             <br />
                             <span>
-                                <a href={'https://github.com/pnnl/blueprint-styler'} {...linkProps} >
+                                <a href={'https://github.com/pnnl/blueprint-styler'} {...externalLinkProps} >
                                     GitHub
                                 </a>
                                 {' | '}
-                                <a href={'https://blueprintjs.com/docs'} {...linkProps} >
+                                <a href={'https://blueprintjs.com/docs'} {...externalLinkProps} >
                                     Blueprint Docs
                                 </a>
                             </span>
@@ -173,20 +179,20 @@ function BlueprintStylerApp() {
                         </h1>
                         <p>
                             Create custom global styles for{' '}
-                            <a href="https://blueprintjs.com/docs/" {...linkProps} >
+                            <a href="https://blueprintjs.com/docs/" {...externalLinkProps} >
                                 Blueprint js Components
                             </a>{' '}
                             using css{' '}
-                            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/--*" {...linkProps} >
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/--*" {...externalLinkProps} >
                                 <code>--custom-properties</code>
                             </a>
                         </p>
                         <p>
-                            <a href={'https://github.com/pnnl/blueprint-styler'} {...linkProps} >
+                            <a href={'https://github.com/pnnl/blueprint-styler'} {...externalLinkProps} >
                                 GitHub Repo
                             </a>
                             {' | '}
-                            <a href={'https://www.npmjs.com/package/blueprint-styler'} {...linkProps} >
+                            <a href={'https://www.npmjs.com/package/blueprint-styler'} {...externalLinkProps} >
                                 npm
                             </a>
                         </p>
@@ -220,7 +226,7 @@ function BlueprintStylerApp() {
     );
 }
 
-const linkProps = {
+const externalLinkProps = {
     target: "_blank",
     rel: "noreferrer onopener",
 }

@@ -79,7 +79,7 @@ export class TypographyExample extends React.PureComponent<IExampleProps> {
                         {randomLorem(2)}{' '}
                         <em>Italic text {randomLorem(1)}</em>{' '}
                         {randomLorem(2)}{' '}
-                        <a href="#">Inline hyperlink text {randomLorem(1)}</a>{' '}
+                        <a href="#example">Inline hyperlink text {randomLorem(1)}</a>{' '}
                         {randomLorem(2)}{' '}
                         <code className={Classes.CODE}>./inline/code/text.txt</code>{' '}
                         {randomLorem(1)}{' '}

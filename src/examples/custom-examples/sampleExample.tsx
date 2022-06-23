@@ -112,7 +112,7 @@ const CardSample: DivFC = (props) => (
     <div className="tab-sample card-tab-sample" {...props}>
         <Card interactive>
             <H5>
-                <a href="#">Analytical applications</a>
+                <a href="#example">Analytical applications</a>
             </H5>
             <p>
                 User interfaces that enable people to interact smoothly with data, ask better questions, and

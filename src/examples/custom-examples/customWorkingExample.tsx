@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Button, Classes, ControlGroup, HTMLSelect, Icon, InputGroup, TagInput } from "@blueprintjs/core";
+import { Button, Classes, ControlGroup, InputGroup, TagInput } from "@blueprintjs/core";
 import { Example, IExampleProps } from "@blueprintjs/docs-theme";
 
 export class CustomWorkingExample extends React.PureComponent<IExampleProps> {

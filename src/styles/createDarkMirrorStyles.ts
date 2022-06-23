@@ -2,7 +2,7 @@
 
 const isStyleRule = (rule: CSSRule) => rule instanceof CSSStyleRule //rule.type === 1;
 
-const customPropertiesRegex = /--([\w\-]*):/ig
+const customPropertiesRegex = /--([\w-]*):/ig
 const darkRegex = /dark-(?!gray)/g
 
 export const getDarkMirrorVarNames = (styleSheet: CSSStyleSheet) => (
