@@ -11,7 +11,7 @@ export class TypographyExample extends React.PureComponent<IExampleProps> {
                 <section className="section--headings" >
 
                     <MetaTitle>
-                        Headings<br/>
+                        Headings<br />
                         <LabelTitle code={`<h0 class="${Classes.HEADING}"/>`} />
                     </MetaTitle>
 
@@ -39,7 +39,7 @@ export class TypographyExample extends React.PureComponent<IExampleProps> {
                     <MetaTitle>Text Sizes</MetaTitle>
                     <LabelTitle label='Large' code={Classes.TEXT_LARGE} />
                     <p className={Classes.TEXT_LARGE}>{randomLorem()}</p>
-                    <LabelTitle label='Normal'  />
+                    <LabelTitle label='Normal' />
                     <p className={''}>{randomLorem()}</p>
                     <LabelTitle label='Small' code={Classes.TEXT_SMALL} />
                     <p className={Classes.TEXT_SMALL}>{randomLorem()}</p>
@@ -186,10 +186,10 @@ export class TypographyExample extends React.PureComponent<IExampleProps> {
                         <tfoot>
                             <tr>
                                 <td colSpan={3}>Total</td>
-                            <td>1408</td>
-                        </tr>
-                    </tfoot>
-                </table>
+                                <td>1408</td>
+                            </tr>
+                        </tfoot>
+                    </table>
 
                 </section>
 
@@ -210,11 +210,11 @@ const LabelTitle: React.FC<{
     code,
     ...props
 }) => (
-    <div className={["label-title", Classes.TEXT_SMALL].join(' ')} >
-        {label && <span className={Classes.HEADING}>{label}</span>}
-        {code && <code className={[Classes.TEXT_MUTED, Classes.MONOSPACE_TEXT].join(' ')}>{code}</code>}
-    </div>
-)
+        <div className={["label-title", Classes.TEXT_SMALL].join(' ')} >
+            {label && <span className={Classes.HEADING}>{label}</span>}
+            {code && <code className={[Classes.TEXT_MUTED, Classes.MONOSPACE_TEXT].join(' ')}>{code}</code>}
+        </div>
+    )
 
 const tableClasses = [
     Classes.HTML_TABLE,
@@ -225,7 +225,7 @@ const tableClasses = [
 ]
 
 
-const randomLorem = (sentences: number = 5) => {
+export const randomLorem = (sentences: number = 5) => {
     let lorem = ''
     for (let i = 0; i < sentences; i++) {
         lorem += loremIpsum[randomIntFromInterval(0, loremIpsum.length - 1)] + ' ' // + i
@@ -239,7 +239,8 @@ function randomIntFromInterval(min: number = 0, max: number = 100) {
 }
 
 const loremIpsum = [
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     'Hac habitasse platea dictumst quisque.',
     'Auctor urna nunc id cursus metus aliquam eleifend mi.',
     'Vitae et leo duis ut.',
@@ -317,3 +318,21 @@ export function hasModifier(
     }
     return modifiers.some(m => modifierKinds.some(k => m.kind === k));
 }`
+
+const _TextSample = ({ className = '', ...props }) => {
+    return (
+        <p className={[Classes.RUNNING_TEXT, className].join(' ')} {...props}>
+            {randomLorem(1)}{' '}
+            <strong>Bold Text Callout {randomLorem(1)}</strong>{' '}
+            {randomLorem(1)}{' '}
+            <em>Italic text {randomLorem(1)}</em>{' '}
+            {randomLorem(1)}{' '}
+            <a href="#">Inline hyperlink text</a>.{' '}
+            {randomLorem(1)}{' '}
+            <code className={Classes.CODE}>./inline/code/text.txt</code>{' '}
+            {randomLorem(1)}{' '}
+        </p>
+    )
+};
+
+export const TextSample = React.memo(_TextSample);

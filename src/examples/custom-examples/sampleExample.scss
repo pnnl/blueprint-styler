@@ -1,0 +1,42 @@
+[data-example-id="SampleExample"],
+.SampleExample {
+  .docs-example {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    > *{
+      margin: 0;
+      padding: 20px;
+    }
+  }
+
+  .content-sample {
+    flex: 1 1 60%;
+  }
+  .form-sample {
+    flex: 1 0 300px;
+  }
+
+  .text-sample {
+    margin: 1.5rem 0;
+  }
+
+  .tabs-sample {
+    margin: 1.5rem 0;
+  }
+  .tab-sample {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .intent-sample{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, auto);
+  }
+
+
+}

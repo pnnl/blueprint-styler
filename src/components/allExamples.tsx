@@ -15,6 +15,7 @@ type GroupedComponentSets = [string, ComponentSet[]][];
 export const allExamples: GroupedComponentSets = [
     ['Core', [
         // ['Custom Working Example', [[CustomExamples.CustomWorkingExample, 'CustomWorkingExample'],]], // for working on specific use cases
+        ['Sample', [[CustomExamples.SampleExample, 'SampleExample'],]],
         ['Colors', [[CustomExamples.ColorsExample, 'ColorsExample'],]],
         ['Typography', [[CustomExamples.TypographyExample, 'TypographyExample'],]],
     ]],
