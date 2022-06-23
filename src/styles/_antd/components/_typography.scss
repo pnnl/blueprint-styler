@@ -7,6 +7,7 @@
   h6,
   .#{$ns}-heading {
     font-family: var(--pt-font-family-decorative);
-    font-weight: 500;
+    font-weight: 600;
+    letter-spacing: .1ch;
   }
 }
