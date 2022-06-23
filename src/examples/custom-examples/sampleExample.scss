@@ -11,7 +11,7 @@
   }
 
   .content-sample {
-    flex: 1 1 60%;
+    flex: 100 0 300px;
   }
   .form-sample {
     flex: 1 0 300px;
@@ -20,10 +20,10 @@
   .text-sample {
     margin: 1.5rem 0;
   }
-
   .tabs-sample {
     margin: 1.5rem 0;
   }
+
   .tab-sample {
     display: flex;
     flex-direction: column;

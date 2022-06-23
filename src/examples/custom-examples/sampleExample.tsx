@@ -7,9 +7,8 @@ import {
 } from "@blueprintjs/core";
 import { Example, IExampleProps, handleStringChange } from "@blueprintjs/docs-theme";
 import { DateRangeInput } from "@blueprintjs/datetime";
-import { randomLorem, TextSample } from "./typographyExample";
 import { Popover2, Popover2Props } from "@blueprintjs/popover2";
-import { IconNames } from "@blueprintjs/icons";
+import { capitalizeFirstLetter, DivFC, intents, noOp, randomIcon, randomLorem, TextSample, vibes } from "./utils";
 
 export class SampleExample extends React.PureComponent<IExampleProps> {
     public render() {
@@ -60,21 +59,7 @@ export class SampleExample extends React.PureComponent<IExampleProps> {
     }
 }
 
-type DivFC = React.FC<React.HTMLProps<HTMLDivElement>>
 
-/** https://stackoverflow.com/a/1026087/5648839 */
-function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-}
-/** https://stackoverflow.com/a/5915122/5648839 */
-function randomItemFromArray(array) {
-    return array[Math.floor(Math.random() * array.length)]
-}
-const intents = Object.values(Intent)
-const icons = Object.values(IconNames)
-const randomIcon = () => randomItemFromArray(icons)
-const noOp = () => undefined
-const vibes = ['Select', 'cool', 'chill', 'hot hot hot', 'fyre']
 
 
 
@@ -93,8 +78,8 @@ const ControlsLoadingSample: DivFC = (props) => {
     return (
         <div className="tab-sample group-tab-sample" {...props}>
             <ControlGroup fill>
-                <HTMLSelect options={vibes} />
-                <InputGroup placeholder="ControlGroup" />
+                <HTMLSelect options={vibes} fill />
+                <InputGroup placeholder="ControlGroup" fill />
                 <Button icon="arrow-right" />
             </ControlGroup>
 
