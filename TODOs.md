@@ -5,10 +5,7 @@
 - explain how tokens inherit - specifically hsl
 
 ## App tool
-- general 'kitchen sink' example
-- colors in 'static' css...
-- Sections:
-  - for each style: add a customizable readme component that renders at the top
+- add a source link for each theme
 - Navigation
   - search
   - shortcut keys
@@ -37,41 +34,46 @@
 
 
 ## Styles
-- General
-  - remove most component tokens, make it more simple
-- v4
-  - https://github.com/palantir/blueprint/wiki/4.x-Changelog#may-5-2022
-  - update _forms-controls.scss with new $values and others by comparing merge
-- v3
-  - update _controls.scss after v4 update
-  - join input sides?
-- [Google Material](https://material.io/components)
-  - Catalyst
 - var(--style) / General
   - input-transition-shadow could to be broken into input shadow vars...
   - better focus for buttons?
   - math with calc() ?
+  - remove most component tokens, make it more simple
 - Common
   - export common helpers
-  - use `:before` `content:"•••";` and `content:"/";` for `.bp4-breadcrumb` icons
   - ellipsize button text by default
   - Segmented Button Group like [this](https://dribbble.com/shots/14424288-Material-X-design-system-UI-kit-Figma-Segments)
+- v4
+  - BUG: dark minimal/outline intent active fg
+  - dark white outlines: https://github.com/palantir/blueprint/wiki/4.x-Changelog#may-5-2022
+  - update _forms-controls.scss with new $values and others by comparing merge
+- v3
+- [IBM Carbon](https://www.carbondesignsystem.com/components/overview)
+  - Dialog Footer Buttons
+  - BUG: disabled radio and checkbox
+  - Toast Colors
+- [Google Material](https://material.io/components)
+  - Catalyst
 - Flat
 - Flat Monochrome - intent primary color is grayscale - or all blue tint? - FERC and Starfish
 - Flat Colorful - buttons have a colorful gradient?
-- [IBM Carbon](https://www.carbondesignsystem.com/components/overview)
 - [ant.design](https://ant.design/components/overview/) aka 'antd'
   - [dark theme](https://ant.design/components/overview/?theme=dark)
-  - has wrong hover state
+  - BUG: has wrong hover states
      -  minimal intent none button-group
      -  buttons in toast
+  - BUG: icon color in input? or something like that
   - button group with active could be slightly different - see original
   - disabled button in button group could have a border?
-  - bugs with icon color in input? or something like that
 - [Microsoft Fluent](https://developer.microsoft.com/en-us/fluentui#/controls/web)
-  - single icon button should not be blue
   - [Theme Designer](https://fabricweb.z5.web.core.windows.net/pr-deploy-site/refs/heads/master/theming-designer/)
   - [Colors](https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/shared)
+  - BUG: checkbox:checked (and radio) should not have outline
+  - BUG: single icon button should not be blue?
+  - BUG: disabled inputs should not have outline
+  - BUG: intent buttons should not have outline
+  - BUG: disabled input should not have different appearance from button?
+  - BUG: default primary blue is wrong: https://developer.microsoft.com/en-us/fluentui#/controls/web/button
   - slider
   - dark theme
 - [PNNL v2](https://forge.pnl.gov/standards/) & [PNNL v3](https://forgedev.pnnl.gov/prc3/)
