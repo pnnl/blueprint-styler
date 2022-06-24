@@ -188,6 +188,10 @@ $control-indicator-spacing: $pt-grid-size !default;
     }
   }
 
+  input:disabled ~ .#{$ns}-control-indicator::before {
+    opacity: 0.5; // PR // these control-indicators should be the same
+  }
+
   /*
   Checkbox
 
@@ -261,9 +265,9 @@ $control-indicator-spacing: $pt-grid-size !default;
       background-image: radial-gradient($white, $white 28%, transparent 32%);
     }
 
-    input:checked:disabled ~ .#{$ns}-control-indicator::before {
-      opacity: 0.5;
-    }
+    // input:checked:disabled ~ .#{$ns}-control-indicator::before {
+    //   opacity: 0.5;
+    // }
 
     input:focus ~ .#{$ns}-control-indicator {
       -moz-outline-radius: $control-indicator-size;
@@ -364,7 +368,7 @@ $control-indicator-spacing: $pt-grid-size !default;
         color: $disabled-text-color;
 
         &::before {
-          background: $disabled-indicator-color;
+          // background: $disabled-indicator-color;
           box-shadow: none;
         }
       }
