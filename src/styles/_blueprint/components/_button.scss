@@ -57,14 +57,14 @@ CSS `border` property issues:
 --button-background-color-active:                 var(--light-gray2);
 --button-background-color-disabled:               hsla(var(--light-gray1-hsl), 0.5);
 --button-background-color-active-disabled:        hsla(var(--light-gray2-hsl), 0.7);
---button-intent-color-disabled:                   hsla(var(--white-hsl), 0.6);
+--button-intent-color-disabled:                   hsla(var(--white-hsl), 0.5);
 --dark-button-color-disabled:                     var(--pt-dark-text-color-disabled);
 --dark-button-background-color:                   var(--dark-gray5);
 --dark-button-background-color-hover:             var(--dark-gray4);
 --dark-button-background-color-active:            var(--dark-gray2);
 --dark-button-background-color-disabled:          hsla(var(--dark-gray5-hsl), 0.6);
 --dark-button-background-color-active-disabled:   hsla(var(--dark-gray2-hsl), 0.7);
---dark-button-intent-color-disabled:              hsla(var(--white-hsl), 0.3);
+--dark-button-intent-color-disabled:              hsla(var(--white-hsl), 0.5);
 
 --minimal-button-divider-width:                   1px;
 --minimal-button-background-color:                none;
