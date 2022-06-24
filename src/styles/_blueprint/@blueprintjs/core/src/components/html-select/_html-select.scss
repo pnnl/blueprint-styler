@@ -41,6 +41,9 @@ Styleguide select
     &:disabled {
       @extend %pt-select-disabled;
       opacity: 1; // override user-agent stylesheet // PR
+      ~ .#{$ns}-icon {
+        color: var(--pt-icon-color-disabled); // PR
+      }
     }
 
     &::-ms-expand {
