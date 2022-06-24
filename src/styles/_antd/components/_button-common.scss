@@ -42,6 +42,9 @@
   inset 0 0 0 var(--button-border-width) var(--pt-intent-primary),
   var(--button-bottom-box-shadow); // custom
 
+--button-intent-box-shadow:         var(--button-bottom-box-shadow);
+--button-intent-box-shadow-active:  var(--button-bottom-box-shadow);
+
 --button-gradient:        unset;
 --button-intent-gradient: unset;
 --dark-button-gradient:   unset;

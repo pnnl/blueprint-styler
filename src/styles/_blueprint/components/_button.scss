@@ -29,7 +29,6 @@ CSS `border` property issues:
   inset 0 0 0 var(--button-border-width) hsla(var(--black-hsl), 0.2),
   0 1px 2px hsla(var(--black-hsl), 0.2);
 
-
 --dark-button-box-shadow:
   inset 0 0 0 var(--button-border-width) hsl(var(--black-hsl), 0.8),
   0 1px 2px hsla(var(--black-hsl), 0.05);
@@ -45,6 +44,8 @@ CSS `border` property issues:
 //   inset 0 0 0 var(--button-border-width) hsl(var(--white-hsl), 0.1),
 //   0 1px 2px hsl(var(--black-hsl), 0.4);
 
+--button-intent-box-shadow: var(--button-box-shadow); // custom
+--button-intent-box-shadow-active: var(--button-box-shadow-active); // custom
 
 --button-gradient:        unset;
 --button-intent-gradient: unset;

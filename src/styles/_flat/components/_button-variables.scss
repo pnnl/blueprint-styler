@@ -7,6 +7,9 @@
   --button-box-shadow-active:
     inset 0 0 0 var(--button-border-width) hsla(var(--pt-shadow-color-hsl), 0.3);
 
+  --button-intent-box-shadow:         none;
+  --button-intent-box-shadow-active:  none;
+
   --button-gradient: none; // linear-gradient(to bottom, hslax($white, 0.8), hslax($white, 0)) ;
   --button-intent-gradient: none; // linear-gradient(to bottom, hslax($white, 0.1), hslax($white, 0)) ;
   --dark-button-gradient: none; // linear-gradient(to bottom, hslax($white, 0.05), hslax($white, 0)) ;

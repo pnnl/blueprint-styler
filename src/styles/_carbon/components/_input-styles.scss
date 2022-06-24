@@ -49,15 +49,21 @@ textarea.#{$ns}-input {
 
 
 .#{$ns}-control {
-  input:checked, input[type="checkbox"]:indeterminate{
-    ~ .#{$ns}-control-indicator{
+  input~.#{$ns}-control-indicator {
+    box-shadow: inset 0 0 0 1px var(--input-border);
+  }
+  &:hover .#{$ns}-control-indicator{
+    box-shadow: inset 0 0 0 1px var(--pt-intent-primary);
+  }
+  input:checked,
+  input[type="checkbox"]:indeterminate {
+    ~.#{$ns}-control-indicator {
       box-shadow: var(--button-box-shadow);
     }
   }
-  .#{$ns}-control-indicator{
-    box-shadow: inset 0 0 0 1px var(--input-border);
-    &:hover{
-      box-shadow: inset 0 0 0 1px var(--pt-intent-primary);
+  &:disabled, &.#{$ns}-disabled{
+    .#{$ns}-control-indicator{
+      box-shadow: none
     }
   }
 }
