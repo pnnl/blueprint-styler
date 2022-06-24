@@ -72,7 +72,7 @@ function BlueprintStylerApp() {
                             style={{ marginBottom: 32 }}
                         >
                             <a
-                                href={'/#'}
+                                href={'#root'}
                                 onClick={() => setSearchParams({})}
                                 className="styler-menu__title-link"
                             >

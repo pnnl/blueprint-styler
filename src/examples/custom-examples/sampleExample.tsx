@@ -324,7 +324,7 @@ const FormSample: DivFC = (props) => {
             <div style={{ display: 'flex' }}>
                 <FormGroup label="Checkbox" style={{ flex: '0 0 50%' }}>
                     <Checkbox label="Indeterminate" defaultIndeterminate {...d} />
-                    <Checkbox label="Checked" checked {...d} />
+                    <Checkbox label="Checked" defaultChecked {...d} />
                     <Checkbox label="UnChecked" {...d} />
                 </FormGroup>
                 <RadioGroup
@@ -334,7 +334,7 @@ const FormSample: DivFC = (props) => {
                     selectedValue={radioValue}
                     {...d}
                 >
-                    <Radio label="This" value="one" />
+                    <Radio label="This" value="one" defaultChecked />
                     <Radio label="That" value="two" />
                     <Radio label="The Other" value="three" />
                 </RadioGroup>
