@@ -266,7 +266,7 @@ const FormSample: DivFC = (props) => {
     const d = { disabled: isDisabled }
     return (
         <div {...props}>
-            <FormGroup label="Text" >
+            <FormGroup label="Text Input Group" >
                 <InputGroup
                     placeholder="Why"
                     type="text"
@@ -283,7 +283,7 @@ const FormSample: DivFC = (props) => {
                     {...d}
                 />
             </FormGroup>
-            <FormGroup label="Select">
+            <FormGroup label="Numeric Input">
                 <NumericInput
                     placeholder="How many?"
                     fill
@@ -299,7 +299,7 @@ const FormSample: DivFC = (props) => {
                     {...d}
                 />
             </FormGroup>
-            <FormGroup label="TextArea" >
+            <FormGroup label="Text Area" >
                 <TextArea
                     placeholder="Please explain"
                     style={{ resize: 'vertical' }}
@@ -323,9 +323,9 @@ const FormSample: DivFC = (props) => {
             </FormGroup>
             <div style={{ display: 'flex' }}>
                 <FormGroup label="Checkbox" style={{ flex: '0 0 50%' }}>
-                    <Checkbox label="Gilad Gray" defaultIndeterminate={true} {...d} />
-                    <Checkbox label="Jason Killian" {...d} />
-                    <Checkbox label="Antoine Llorca" {...d} />
+                    <Checkbox label="Indeterminate" defaultIndeterminate {...d} />
+                    <Checkbox label="Checked" checked {...d} />
+                    <Checkbox label="UnChecked" {...d} />
                 </FormGroup>
                 <RadioGroup
                     label="Radio"
@@ -334,9 +334,9 @@ const FormSample: DivFC = (props) => {
                     selectedValue={radioValue}
                     {...d}
                 >
-                    <Radio label="Soup" value="one" />
-                    <Radio label="Salad" value="two" />
-                    <Radio label="Sandwich" value="three" />
+                    <Radio label="This" value="one" />
+                    <Radio label="That" value="two" />
+                    <Radio label="The Other" value="three" />
                 </RadioGroup>
             </div>
             <div style={{ display: 'flex', gap: 8 }}>
