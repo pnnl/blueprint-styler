@@ -153,6 +153,7 @@ $button-intents: (
 }
 
 @mixin pt-button-disabled() {
+  background-image: none;
   background-color: $button-background-color-disabled;
   box-shadow: none;
   color: $button-color-disabled;
@@ -190,6 +191,7 @@ $button-intents: (
 }
 
 @mixin pt-button-intent-disabled($default-color) {
+  background-image: none;
   background-color: hslax($default-color, 0.5);
   border-color: transparent;
   box-shadow: none;
