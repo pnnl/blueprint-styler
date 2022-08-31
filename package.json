@@ -20,6 +20,9 @@
     "css",
     "styles"
   ],
+  "engines": {
+    "node": ">=12 <=14"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "yarn run build:react && yarn run build:libs",
