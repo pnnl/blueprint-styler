@@ -57,13 +57,13 @@ Styleguide non-ideal-state
     }
   }
 
-  .#{$ns}-dark & {
+  /* .#{$ns}-dark & {
     color: $pt-dark-text-color-muted;
 
     .#{$ns}-heading {
       color: $pt-dark-text-color-muted;
     }
-  }
+  } */
 }
 
 .#{$ns}-non-ideal-state-visual {

@@ -30,7 +30,7 @@ $dark-tooltip-arrow-box-shadow: 1px 1px 6px hslax($black, $pt-dark-drop-shadow-o
     $after: "> &"
   );
   // override typography & icon colors because we use a dark background
-  @include pt-dark-typography-colors();
+  // @include pt-dark-typography-colors(); 
 
   .#{$ns}-popover-content {
     padding: $tooltip-padding-vertical $tooltip-padding-horizontal;

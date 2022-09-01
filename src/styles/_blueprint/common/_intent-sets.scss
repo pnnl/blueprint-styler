@@ -37,10 +37,10 @@ $pt-intent-active-text-colors: (
 );
 
 $pt-dark-intent-text-colors: (
-  "primary": var(--pt-dark-intent-primary-text-color),
-  "success": var(--pt-dark-intent-success-text-color),
-  "warning": var(--pt-dark-intent-warning-text-color),
-  "danger" : var(--pt-dark-intent-danger-text-color),
+  "primary": var(--pt-intent-primary-text-color),
+  "success": var(--pt-intent-success-text-color),
+  "warning": var(--pt-intent-warning-text-color),
+  "danger" : var(--pt-intent-danger-text-color),
 );
 
 $dark-minimal-hover-text-colors: (

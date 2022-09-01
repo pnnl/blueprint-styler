@@ -37,7 +37,7 @@ $dark-tooltip2-arrow-box-shadow: 1px 1px 6px hslax($black, $pt-dark-drop-shadow-
     $after: "> &"
   );
   // override typography because we use a dark background
-  @include pt-dark-typography-colors();
+  // @include pt-dark-typography-colors();
 
   .#{$ns}-popover2-content {
     padding: $tooltip2-padding-vertical $tooltip2-padding-horizontal;
