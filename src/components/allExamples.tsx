@@ -89,7 +89,7 @@ export const allExamples: GroupedComponentSets = [
 
     ['Overlays', [
         ['Overlay', [[CoreExamples.OverlayExample, 'OverlayExample'],]],
-        ['Portal', [[CoreExamples.PopoverPortalExample, 'PopoverPortalExample'],]],
+        ['Portal', [[Popover2Examples.Popover2PortalExample, 'Popover2PortalExample'],]],
         ['Alert', [[CoreExamples.AlertExample, 'AlertExample'],]],
         // ['Context menu', [[CoreExamples.ContextMenuExample, 'ContextMenuExample'],]], // Decorator
         ['Dialog', [[CoreExamples.DialogExample, 'DialogExample'],]],
