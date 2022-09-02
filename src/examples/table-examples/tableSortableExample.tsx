@@ -19,11 +19,11 @@
 import * as React from "react";
 
 import { Menu, MenuItem } from "@blueprintjs/core";
-import { Example, IExampleProps } from "@blueprintjs/docs-theme";
+import { Example, ExampleProps } from "@blueprintjs/docs-theme";
 import {
     Cell,
     Column,
-    ColumnHeaderCell,
+    ColumnHeaderCell2,
     CopyCellsMenuItem,
     IMenuContext,
     SelectionModes,
@@ -49,7 +49,7 @@ abstract class AbstractSortableColumn implements ISortableColumn {
             <Cell>{getCellData(rowIndex, columnIndex)}</Cell>
         );
         const menuRenderer = this.renderMenu.bind(this, sortColumn);
-        const columnHeaderCellRenderer = () => <ColumnHeaderCell name={this.name} menuRenderer={menuRenderer} />;
+        const columnHeaderCellRenderer = () => <ColumnHeaderCell2 name={this.name} menuRenderer={menuRenderer} />;
         return (
             <Column
                 cellRenderer={cellRenderer}
@@ -121,7 +121,6 @@ class RecordSortableColumn extends AbstractSortableColumn {
     private static WIN_LOSS_PATTERN = /^([0-9]+)(-([0-9]+))?(-([0-9]+)) ?.*/;
 
     protected renderMenu(sortColumn: ISortCallback) {
-        // tslint:disable:jsx-no-lambda
         return (
             <Menu>
                 <MenuItem
@@ -183,7 +182,7 @@ class RecordSortableColumn extends AbstractSortableColumn {
     };
 }
 
-export class TableSortableExample extends React.PureComponent<IExampleProps> {
+export class TableSortableExample extends React.PureComponent<ExampleProps> {
     public state = {
         columns: [
             new TextSortableColumn("Rikishi", 0),
@@ -213,6 +212,9 @@ export class TableSortableExample extends React.PureComponent<IExampleProps> {
                     bodyContextMenuRenderer={this.renderBodyContextMenu}
                     numRows={numRows}
                     selectionModes={SelectionModes.COLUMNS_AND_CELLS}
+                    getCellClipboardData={this.getCellData}
+                    cellRendererDependencies={[this.state.sortedIndexMap]}
+                    enableFocusedCell={true}
                 >
                     {columns}
                 </Table2>

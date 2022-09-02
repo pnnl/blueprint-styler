@@ -14,14 +14,21 @@
  * limitations under the License.
  */
 
+/**
+ * @fileoverview This component is DEPRECATED, and the code is frozen.
+ * All changes & bugfixes should be made to Popover2 instead.
+ */
+
+/* eslint-disable deprecation/deprecation, @blueprintjs/no-deprecated-components */
+
 import * as React from "react";
 
 import { Button, Popover, Position } from "@blueprintjs/core";
-import { Example, IExampleProps } from "@blueprintjs/docs-theme";
+import { Example, ExampleProps } from "@blueprintjs/docs-theme";
 
 import { FileMenu } from "./common/fileMenu";
 
-export class PopoverSizingExample extends React.PureComponent<IExampleProps> {
+export class PopoverSizingExample extends React.PureComponent<ExampleProps> {
     public render() {
         return (
             <Example options={false} {...this.props}>

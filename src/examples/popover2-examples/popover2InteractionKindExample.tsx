@@ -17,12 +17,12 @@
 import * as React from "react";
 
 import { Button, Intent } from "@blueprintjs/core";
-import { Example, IExampleProps } from "@blueprintjs/docs-theme";
+import { Example, ExampleProps } from "@blueprintjs/docs-theme";
 import { Popover2, Popover2InteractionKind } from "@blueprintjs/popover2";
 
 import { FileMenu } from "../core-examples/common/fileMenu";
 
-export class Popover2InteractionKindExample extends React.PureComponent<IExampleProps> {
+export class Popover2InteractionKindExample extends React.PureComponent<ExampleProps> {
     public static displayName = "Popover2InteractionKindExample";
 
     public render() {
@@ -48,7 +48,6 @@ export class Popover2InteractionKindExample extends React.PureComponent<IExample
                 placement="bottom-end"
                 interactionKind={interactionKind}
                 content={<FileMenu shouldDismissPopover={false} />}
-                // tslint:disable-next-line jsx-no-lambda
                 renderTarget={({ isOpen, ref, ...p }) => (
                     <Button {...p} active={isOpen} elementRef={ref} intent={Intent.PRIMARY} text={interactionKind} />
                 )}

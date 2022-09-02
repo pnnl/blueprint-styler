@@ -14,6 +14,13 @@
  * limitations under the License.
  */
 
+/**
+ * @fileoverview This component is DEPRECATED, and the code is frozen.
+ * All changes & bugfixes should be made to OverflowList instead.
+ */
+
+/* eslint-disable deprecation/deprecation, @blueprintjs/no-deprecated-components */
+
 import classNames from "classnames";
 import * as React from "react";
 
@@ -22,13 +29,13 @@ import {
     Classes,
     CollapsibleList,
     H5,
-    MenuItemProps,
     Label,
     MenuItem,
+    MenuItemProps,
     RadioGroup,
     Slider,
 } from "@blueprintjs/core";
-import { Example, handleValueChange, IExampleProps } from "@blueprintjs/docs-theme";
+import { Example, ExampleProps, handleValueChange } from "@blueprintjs/docs-theme";
 
 export interface ICollapsibleListExampleState {
     collapseFrom?: Boundary;
@@ -40,7 +47,7 @@ const COLLAPSE_FROM_RADIOS = [
     { label: "End", value: Boundary.END.toString() },
 ];
 
-export class CollapsibleListExample extends React.PureComponent<IExampleProps, ICollapsibleListExampleState> {
+export class CollapsibleListExample extends React.PureComponent<ExampleProps, ICollapsibleListExampleState> {
     public state: ICollapsibleListExampleState = {
         collapseFrom: Boundary.START,
         visibleItemCount: 3,
@@ -48,16 +55,19 @@ export class CollapsibleListExample extends React.PureComponent<IExampleProps, I
 
     private handleChangeCollapse = handleValueChange((collapseFrom: Boundary) => this.setState({ collapseFrom }));
 
+    private numVisibleItemsLabelId = "num-visible-items-label";
+
     public render() {
         const options = (
             <>
                 <H5>Props</H5>
-                <Label>Visible items</Label>
+                <Label id={this.numVisibleItemsLabelId}>Visible items</Label>
                 <Slider
                     max={6}
                     onChange={this.handleChangeCount}
                     showTrackFill={false}
                     value={this.state.visibleItemCount}
+                    handleHtmlProps={{ "aria-labelledby": this.numVisibleItemsLabelId }}
                 />
                 <RadioGroup
                     name="collapseFrom"

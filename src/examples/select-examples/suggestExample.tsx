@@ -17,29 +17,32 @@
 import * as React from "react";
 
 import { H5, MenuItem, Switch } from "@blueprintjs/core";
-import { Example, IExampleProps } from "@blueprintjs/docs-theme";
-import { Suggest } from "@blueprintjs/select";
+import { Example, ExampleProps } from "@blueprintjs/docs-theme";
+import { Suggest2 } from "@blueprintjs/select";
 
 import {
     areFilmsEqual,
     createFilm,
-    filmSelectProps,
+    filterFilm,
     IFilm,
     maybeAddCreatedFilmToArrays,
     maybeDeleteCreatedFilmFromArrays,
     renderCreateFilmOption,
+    renderFilm,
     TOP_100_FILMS,
 } from "./../../common/films";
 
-const FilmSuggest = Suggest.ofType<IFilm>();
+const FilmSuggest = Suggest2.ofType<IFilm>();
 
 export interface ISuggestExampleState {
     allowCreate: boolean;
     closeOnSelect: boolean;
     createdItems: IFilm[];
+    disabled: boolean;
     fill: boolean;
     film: IFilm;
     items: IFilm[];
+    matchTargetWidth: boolean;
     minimal: boolean;
     openOnKeyDown: boolean;
     resetOnClose: boolean;
@@ -47,14 +50,16 @@ export interface ISuggestExampleState {
     resetOnSelect: boolean;
 }
 
-export class SuggestExample extends React.PureComponent<IExampleProps, ISuggestExampleState> {
+export class SuggestExample extends React.PureComponent<ExampleProps, ISuggestExampleState> {
     public state: ISuggestExampleState = {
         allowCreate: false,
         closeOnSelect: true,
         createdItems: [],
+        disabled: false,
         fill: false,
         film: TOP_100_FILMS[0],
-        items: filmSelectProps.items,
+        items: [...TOP_100_FILMS],
+        matchTargetWidth: false,
         minimal: true,
         openOnKeyDown: false,
         resetOnClose: false,
@@ -66,11 +71,15 @@ export class SuggestExample extends React.PureComponent<IExampleProps, ISuggestE
 
     private handleCloseOnSelectChange = this.handleSwitchChange("closeOnSelect");
 
-    private handleOpenOnKeyDownChange = this.handleSwitchChange("openOnKeyDown");
+    private handleDisabledChange = this.handleSwitchChange("disabled");
+
+    private handleFillChange = this.handleSwitchChange("fill");
+
+    private handleMatchTargetWidthChange = this.handleSwitchChange("matchTargetWidth");
 
     private handleMinimalChange = this.handleSwitchChange("minimal");
 
-    private handleFillChange = this.handleSwitchChange("fill");
+    private handleOpenOnKeyDownChange = this.handleSwitchChange("openOnKeyDown");
 
     private handleResetOnCloseChange = this.handleSwitchChange("resetOnClose");
 
@@ -79,7 +88,7 @@ export class SuggestExample extends React.PureComponent<IExampleProps, ISuggestE
     private handleResetOnSelectChange = this.handleSwitchChange("resetOnSelect");
 
     public render() {
-        const { allowCreate, film, minimal, ...flags } = this.state;
+        const { allowCreate, film, matchTargetWidth, minimal, ...flags } = this.state;
 
         const maybeCreateNewItemFromQuery = allowCreate ? createFilm : undefined;
         const maybeCreateNewItemRenderer = allowCreate ? renderCreateFilmOption : null;
@@ -87,18 +96,17 @@ export class SuggestExample extends React.PureComponent<IExampleProps, ISuggestE
         return (
             <Example options={this.renderOptions()} {...this.props}>
                 <FilmSuggest
-                    {...filmSelectProps}
                     {...flags}
                     createNewItemFromQuery={maybeCreateNewItemFromQuery}
                     createNewItemRenderer={maybeCreateNewItemRenderer}
                     inputValueRenderer={this.renderInputValue}
-                    itemsEqual={areFilmsEqual}
-                    // we may customize the default filmSelectProps.items by
-                    // adding newly created items to the list, so pass our own.
                     items={this.state.items}
-                    noResults={<MenuItem disabled={true} text="No results." />}
+                    itemsEqual={areFilmsEqual}
+                    itemPredicate={filterFilm}
+                    itemRenderer={renderFilm}
+                    noResults={<MenuItem disabled={true} text="No results." roleStructure="listoption" />}
                     onItemSelect={this.handleValueChange}
-                    popoverProps={{ minimal }}
+                    popoverProps={{ matchTargetWidth, minimal }}
                 />
             </Example>
         );
@@ -138,8 +146,15 @@ export class SuggestExample extends React.PureComponent<IExampleProps, ISuggestE
                     checked={this.state.allowCreate}
                     onChange={this.handleAllowCreateChange}
                 />
+                <H5>Appearance props</H5>
+                <Switch label="Disabled" checked={this.state.disabled} onChange={this.handleDisabledChange} />
                 <Switch label="Fill container width" checked={this.state.fill} onChange={this.handleFillChange} />
                 <H5>Popover props</H5>
+                <Switch
+                    label="Match target width"
+                    checked={this.state.matchTargetWidth}
+                    onChange={this.handleMatchTargetWidthChange}
+                />
                 <Switch
                     label="Minimal popover style"
                     checked={this.state.minimal}

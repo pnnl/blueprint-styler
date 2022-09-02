@@ -14,13 +14,18 @@
  * limitations under the License.
  */
 
-/* eslint-disable max-classes-per-file */
+/**
+ * @fileoverview This component is DEPRECATED, and the code is frozen.
+ * All changes & bugfixes should be made to ContextMenu2 instead.
+ */
+
+/* eslint-disable deprecation/deprecation, max-classes-per-file, @blueprintjs/no-deprecated-components */
 
 import classNames from "classnames";
 import * as React from "react";
 
 import { Classes, ContextMenu, ContextMenuTarget, Menu, MenuDivider, MenuItem } from "@blueprintjs/core";
-import { Example, IExampleProps } from "@blueprintjs/docs-theme";
+import { Example, ExampleProps } from "@blueprintjs/docs-theme";
 
 /**
  * This component uses the imperative ContextMenu API.
@@ -60,7 +65,7 @@ class GraphNode extends React.PureComponent<any, { isContextMenuOpen: boolean }>
  * This component uses the decorator API and implements the IContextMenuTarget interface.
  */
 @ContextMenuTarget
-export class ContextMenuExample extends React.PureComponent<IExampleProps> {
+export class ContextMenuExample extends React.PureComponent<ExampleProps> {
     public render() {
         return (
             <Example className="docs-context-menu-example" options={false} {...this.props}>
