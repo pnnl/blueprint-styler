@@ -5,8 +5,7 @@
 - explain how tokens inherit - specifically hsl
 
 ## App tool
-- update examples to use Popover2 and Datetime2
-- add a source link for each theme
+- add ToolTip to Sample
 - Navigation
   - search
   - shortcut keys

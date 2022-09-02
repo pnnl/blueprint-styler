@@ -260,7 +260,7 @@ const DrawerSample: React.FC<DrawerProps> = (props) => {
 }
 
 const FormSample: DivFC = (props) => {
-    const [radioValue, setRadioValue] = React.useState<string>()
+    const [radioValue, setRadioValue] = React.useState<string>(defaultCheckedValue)
     const [sliderValue, setSliderValue] = React.useState(4)
     const [isDisabled, setDisabled] = React.useState(false)
     const d = { disabled: isDisabled }
@@ -334,7 +334,7 @@ const FormSample: DivFC = (props) => {
                     selectedValue={radioValue}
                     {...d}
                 >
-                    <Radio label="This" value="one" defaultChecked />
+                    <Radio label="This" value={defaultCheckedValue} />
                     <Radio label="That" value="two" />
                     <Radio label="The Other" value="three" />
                 </RadioGroup>
@@ -349,3 +349,5 @@ const FormSample: DivFC = (props) => {
 
     )
 }
+
+const defaultCheckedValue = 'one'

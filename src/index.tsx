@@ -1,3 +1,4 @@
+import { HotkeysProvider } from '@blueprintjs/core';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
@@ -6,9 +7,11 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
     <React.StrictMode>
-        <BrowserRouter>
-            <BlueprintStylerApp />
-        </BrowserRouter>
+        <HotkeysProvider>
+            <BrowserRouter>
+                <BlueprintStylerApp />
+            </BrowserRouter>
+        </HotkeysProvider>
     </React.StrictMode>,
     document.getElementById('root')
 );

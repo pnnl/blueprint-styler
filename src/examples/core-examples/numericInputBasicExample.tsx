@@ -180,7 +180,7 @@ export class NumericInputBasicExample extends React.PureComponent<ExampleProps, 
                 {this.renderSelectMenu(
                     "Locale",
                     locale,
-                    [{ label: "Default", value: undefined }, ...LOCALES],
+                    [{ label: "Default", value: 'en-GB' }, ...LOCALES],
                     this.handleLocaleChange,
                 )}
             </>
