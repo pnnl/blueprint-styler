@@ -1,10 +1,10 @@
 import * as React from "react";
-import { Example, IExampleProps } from "@blueprintjs/docs-theme";
+import { Example, ExampleProps } from "@blueprintjs/docs-theme";
 // import "./typographyExample.scss"; // in src/styles/global/_styler.scss
 import { Blockquote, Classes, H1, H2, H3, H4, H5, H6, OL, UL } from "@blueprintjs/core";
 import { codeSample, randomLorem } from "./utils";
 
-export class TypographyExample extends React.PureComponent<IExampleProps> {
+export class TypographyExample extends React.PureComponent<ExampleProps> {
     public render() {
         return (
             <Example options={false} {...this.props}>

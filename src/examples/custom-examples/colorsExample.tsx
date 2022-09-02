@@ -1,9 +1,9 @@
 import * as React from "react";
-import { Example, IExampleProps } from "@blueprintjs/docs-theme";
+import { Example, ExampleProps } from "@blueprintjs/docs-theme";
 import { Classes } from "@blueprintjs/core";
 // import "./colorsExample.scss"; // in src/styles/global/_styler.scss
 
-export class ColorsExample extends React.PureComponent<IExampleProps> {
+export class ColorsExample extends React.PureComponent<ExampleProps> {
     public render() {
         return (
             <Example {...this.props}>

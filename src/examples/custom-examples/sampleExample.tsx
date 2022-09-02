@@ -1,23 +1,23 @@
 import * as React from "react";
 import {
-    Alert, AlertProps, Breadcrumbs, Button, ButtonGroup, Callout, Card, Checkbox, Classes,
+    Alert, AlertProps, Button, ButtonGroup, Callout, Card, Checkbox, Classes,
     ControlGroup, Dialog, DialogProps, Divider, Drawer, DrawerProps, FormGroup, H2, H3, H5,
     HTMLSelect, Icon, InputGroup, Intent, Menu, MenuDivider, MenuItem, NumericInput, ProgressBar,
     Radio, RadioGroup, Slider, Spinner, Switch, Tab, Tabs, TextArea, Toast, Toaster, ToastProps
 } from "@blueprintjs/core";
-import { Example, IExampleProps, handleStringChange } from "@blueprintjs/docs-theme";
-import { DateRangeInput } from "@blueprintjs/datetime";
-import { Popover2, Popover2Props } from "@blueprintjs/popover2";
+import { Example, ExampleProps, handleStringChange } from "@blueprintjs/docs-theme";
+import { DateRangeInput2 } from "@blueprintjs/datetime2";
+import { Popover2, Popover2Props, Breadcrumbs2 } from "@blueprintjs/popover2";
 import { capitalizeFirstLetter, DivFC, intents, noOp, randomIcon, randomLorem, TextSample, vibes } from "./utils";
 
-export class SampleExample extends React.PureComponent<IExampleProps> {
+export class SampleExample extends React.PureComponent<ExampleProps> {
     public render() {
         return (
             <Example options={false} {...this.props}>
 
                 <div className="content-sample">
 
-                    <Breadcrumbs items={[
+                    <Breadcrumbs2 items={[
                         { onClick: noOp, text: "Bread" },
                         { onClick: noOp, text: "Crumbs" },
                         { text: "Sample" },
@@ -291,7 +291,7 @@ const FormSample: DivFC = (props) => {
                 />
             </FormGroup>
             <FormGroup label="Date Range" >
-                <DateRangeInput
+                <DateRangeInput2
                     formatDate={noOp}
                     parseDate={noOp}
                     startInputProps={{ fill: true }}

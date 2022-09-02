@@ -30,7 +30,7 @@ export class Popover2PlacementExample extends React.PureComponent<ExampleProps> 
     public render() {
         return (
             <Example className={EXAMPLE_CLASS} options={false} {...this.props}>
-                {/* eslint-disable-next-line @blueprintjs/html-components */}
+
                 <table>
                     <tbody>
                         <tr>

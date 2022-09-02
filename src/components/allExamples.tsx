@@ -1,15 +1,18 @@
-import { IExampleProps } from '@blueprintjs/docs-theme';
+import { ExampleProps } from '@blueprintjs/docs-theme';
 import * as CustomExamples from '../examples/custom-examples';
 import * as CoreExamples from '../examples/core-examples';
 import * as DateTimeExamples from '../examples/datetime-examples';
+import * as DateTime2Examples from '../examples/datetime2-examples';
+import * as Popover2Examples from '../examples/popover2-examples';
 import * as SelectExamples from '../examples/select-examples';
 import * as TableExamples from '../examples/table-examples';
-import * as TimezoneExamples from '../examples/timezone-examples';
+// import * as TimezoneExamples from '../examples/timezone-examples';
 
-type ExampleComponentClassName = string // must be equal to the example component class name
-type ExampleComponent = React.ComponentClass<IExampleProps<{}> | Readonly<IExampleProps<{}>>>
+type ExampleComponentName = string // must be equal to the example component class name
+type ExampleComponentClass = React.ComponentClass<ExampleProps<{}> | Readonly<ExampleProps<{}>>>
+type ExampleFC = React.FC<ExampleProps>
 type ComponentSetName = string
-type ComponentSet = [ComponentSetName, [ExampleComponent, ExampleComponentClassName][] ]
+type ComponentSet = [ComponentSetName, [ExampleComponentClass | ExampleFC, ExampleComponentName][]]
 type GroupedComponentSets = [string, ComponentSet[]][];
 
 export const allExamples: GroupedComponentSets = [
@@ -20,7 +23,7 @@ export const allExamples: GroupedComponentSets = [
         ['Typography', [[CustomExamples.TypographyExample, 'TypographyExample'],]],
     ]],
     ['Components', [
-        ['Breadcrumbs', [[CoreExamples.BreadcrumbsExample, 'BreadcrumbsExample'],]],
+        ['Breadcrumbs', [[Popover2Examples.Breadcrumbs2Example, 'Breadcrumbs2Example'],]],
         ['Button', [
             [CoreExamples.ButtonsExample, 'ButtonsExample'],
             [CoreExamples.ButtonsIconsExample, 'ButtonsIconsExample'],
@@ -49,7 +52,7 @@ export const allExamples: GroupedComponentSets = [
         ['Navbar', [[CoreExamples.NavbarExample, 'NavbarExample'],]],
         ['Non-ideal state', [[CoreExamples.NonIdealStateExample, 'NonIdealStateExample'],]],
         ['Overflow list', [[CoreExamples.OverflowListExample, 'OverflowListExample'],]],
-        ['Panel stack', [[CoreExamples.PanelStackExample, 'PanelStackExample'],]],
+        ['Panel stack', [[CoreExamples.PanelStack2Example, 'PanelStack2Example'],]],
         ['Progress bar', [[CoreExamples.ProgressExample, 'ProgressExample'],]],
         // ['Skeleton', [[]]],
         ['Spinner', [[CoreExamples.SpinnerExample, 'SpinnerExample'],]],
@@ -92,15 +95,15 @@ export const allExamples: GroupedComponentSets = [
         ['Dialog', [[CoreExamples.DialogExample, 'DialogExample'],]],
         ['Drawer', [[CoreExamples.DrawerExample, 'DrawerExample'],]],
         ['Popover', [
-            // [CoreExamples.PopoverDismissExample, 'PopoverDismissExample'],
-            [CoreExamples.PopoverExample, 'PopoverExample'],
-            [CoreExamples.PopoverInteractionKindExample, 'PopoverInteractionKindExample'],
-            [CoreExamples.PopoverMinimalExample, 'PopoverMinimalExample'],
-            [CoreExamples.PopoverPositionExample, 'PopoverPositionExample'],
-            [CoreExamples.PopoverSizingExample, 'PopoverSizingExample'],
+            // [Popover2Examples.Popover2DismissExample, 'Popover2DismissExample'],
+            [Popover2Examples.Popover2Example, 'Popover2Example'],
+            [Popover2Examples.Popover2InteractionKindExample, 'Popover2InteractionKindExample'],
+            [Popover2Examples.Popover2MinimalExample, 'Popover2MinimalExample'],
+            [Popover2Examples.Popover2PlacementExample, 'Popover2PlacementExample'],
+            [Popover2Examples.Popover2SizingExample, 'Popover2SizingExample'],
         ]],
         ['Toast', [[CoreExamples.ToastExample, 'ToastExample'],]],
-        ['Tooltip', [[CoreExamples.TooltipExample, 'TooltipExample'],]],
+        ['Tooltip', [[Popover2Examples.Tooltip2Example, 'Tooltip2Example'],]],
     ]],
 
     ['Other', [
@@ -110,16 +113,14 @@ export const allExamples: GroupedComponentSets = [
     ]],
 
     ['DateTime', [
-        ['Date Input', [[DateTimeExamples.DateInputExample, 'DateInputExample'],]],
-        ['Date Range Input', [[DateTimeExamples.DateRangeInputExample, 'DateRangeInputExample'],]],
+        ['Date Input', [[DateTime2Examples.DateInput2Example, 'DateInput2Example'],]],
+        ['Date Range Input', [[DateTime2Examples.DateRangeInput2Example, 'DateRangeInput2Example'],]],
         ['Date Picker', [[DateTimeExamples.DatePickerExample, 'DatePickerExample'],]],
         ['Date Range Picker', [[DateTimeExamples.DateRangePickerExample, 'DateRangePickerExample'],]],
         ['DateTime Picker', [[DateTimeExamples.DateTimePickerExample, 'DateTimePickerExample'],]],
         ['Time Picker', [[DateTimeExamples.TimePickerExample, 'TimePickerExample'],]],
-        ['Timezone Picker', [[TimezoneExamples.TimezonePickerExample, 'TimezonePickerExample'],]],
+        ['Timezone Picker', [[DateTime2Examples.TimezoneSelectExample, 'TimezoneSelectExample'],]],
     ]],
-
-    // ['Timezone', [ ['Timezone Picker', [[TimezoneExamples.TimezonePickerExample, 'TimezonePickerExample'],]] ]],
 
     ['Select', [
         ['MultiSelect', [[SelectExamples.MultiSelectExample, 'MultiSelectExample'],]],
