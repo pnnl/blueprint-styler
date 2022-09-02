@@ -17,7 +17,7 @@
 import * as React from "react";
 
 import { Classes, EditableText, FormGroup, H1, H5, Intent, NumericInput, Switch } from "@blueprintjs/core";
-import { Example, handleBooleanChange, handleValueChange, IExampleProps } from "@blueprintjs/docs-theme";
+import { Example, ExampleProps, handleBooleanChange, handleValueChange } from "@blueprintjs/docs-theme";
 
 import { IntentSelect } from "./common/intentSelect";
 
@@ -26,19 +26,23 @@ const INPUT_ID = "EditableTextExample-max-length";
 export interface IEditableTextExampleState {
     alwaysRenderInput?: boolean;
     confirmOnEnterKey?: boolean;
+    disabled?: boolean;
     intent?: Intent;
     maxLength?: number;
     report?: string;
     selectAllOnFocus?: boolean;
 }
 
-export class EditableTextExample extends React.PureComponent<IExampleProps, IEditableTextExampleState> {
+export class EditableTextExample extends React.PureComponent<ExampleProps, IEditableTextExampleState> {
     public state: IEditableTextExampleState = {
-        alwaysRenderInput: true,
+        alwaysRenderInput: false,
         confirmOnEnterKey: false,
+        disabled: false,
         report: "",
         selectAllOnFocus: false,
     };
+
+    private toggleDisabled = handleBooleanChange((disabled: boolean) => this.setState({ disabled }));
 
     private handleIntentChange = handleValueChange((intent: Intent) => this.setState({ intent }));
 
@@ -54,6 +58,7 @@ export class EditableTextExample extends React.PureComponent<IExampleProps, IEdi
                 <H1>
                     <EditableText
                         alwaysRenderInput={this.state.alwaysRenderInput}
+                        disabled={this.state.disabled}
                         intent={this.state.intent}
                         maxLength={this.state.maxLength}
                         placeholder="Edit title..."
@@ -62,6 +67,7 @@ export class EditableTextExample extends React.PureComponent<IExampleProps, IEdi
                 </H1>
                 <EditableText
                     alwaysRenderInput={this.state.alwaysRenderInput}
+                    disabled={this.state.disabled}
                     intent={this.state.intent}
                     maxLength={this.state.maxLength}
                     maxLines={12}
@@ -94,6 +100,7 @@ export class EditableTextExample extends React.PureComponent<IExampleProps, IEdi
                         value={this.state.maxLength || ""}
                     />
                 </FormGroup>
+                <Switch checked={this.state.disabled} label="Disabled" onChange={this.toggleDisabled} />
                 <Switch
                     checked={this.state.selectAllOnFocus}
                     label="Select all on focus"

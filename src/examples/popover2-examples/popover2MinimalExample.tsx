@@ -17,12 +17,12 @@
 import * as React from "react";
 
 import { Button, Intent } from "@blueprintjs/core";
-import { Example, IExampleProps } from "@blueprintjs/docs-theme";
-import { Popover2Props, Popover2 } from "@blueprintjs/popover2";
+import { Example, ExampleProps } from "@blueprintjs/docs-theme";
+import { Popover2, Popover2Props } from "@blueprintjs/popover2";
 
 import { FileMenu } from "../core-examples/common/fileMenu";
 
-export class Popover2MinimalExample extends React.PureComponent<IExampleProps> {
+export class Popover2MinimalExample extends React.PureComponent<ExampleProps> {
     public static displayName = "Popover2MinimalExample";
 
     public render() {
@@ -33,14 +33,12 @@ export class Popover2MinimalExample extends React.PureComponent<IExampleProps> {
                 <Popover2
                     {...baseProps}
                     minimal={true}
-                    // tslint:disable-next-line jsx-no-lambda
                     renderTarget={({ isOpen, ref, ...p }) => (
                         <Button {...p} active={isOpen} elementRef={ref} intent={Intent.PRIMARY} text="Minimal" />
                     )}
                 />
                 <Popover2
                     {...baseProps}
-                    // tslint:disable-next-line jsx-no-lambda
                     renderTarget={({ isOpen, ref, ...p }) => (
                         <Button {...p} active={isOpen} elementRef={ref} text="Default" />
                     )}

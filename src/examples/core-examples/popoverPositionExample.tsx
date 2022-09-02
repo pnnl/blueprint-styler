@@ -14,17 +14,24 @@
  * limitations under the License.
  */
 
+/**
+ * @fileoverview This component is DEPRECATED, and the code is frozen.
+ * All changes & bugfixes should be made to Popover2 instead.
+ */
+
+/* eslint-disable deprecation/deprecation, @blueprintjs/no-deprecated-components */
+
 import * as React from "react";
 
 import { Button, Classes, Code, Popover, Position } from "@blueprintjs/core";
-import { Example, IExampleProps } from "@blueprintjs/docs-theme";
+import { Example, ExampleProps } from "@blueprintjs/docs-theme";
 
 const EXAMPLE_CLASS = "docs-popover-position-example";
 
 const SIDE_LABEL_CLASS = "docs-popover-position-label-side";
 const ALIGNMENT_LABEL_CLASS = "docs-popover-position-label-alignment";
 
-export class PopoverPositionExample extends React.PureComponent<IExampleProps> {
+export class PopoverPositionExample extends React.PureComponent<ExampleProps> {
     public render() {
         return (
             <Example className={EXAMPLE_CLASS} options={false} {...this.props}>
@@ -34,17 +41,17 @@ export class PopoverPositionExample extends React.PureComponent<IExampleProps> {
                         <tr>
                             <td />
                             <td>
-                                {this.renderPopover(Position.BOTTOM_LEFT, "BOTTOM", "LEFT")}
-                                {this.renderPopover(Position.BOTTOM, "BOTTOM")}
-                                {this.renderPopover(Position.BOTTOM_RIGHT, "BOTTOM", "RIGHT")}
+                                {this.renderPopover(Position.BOTTOM_LEFT, "bottom", "left")}
+                                {this.renderPopover(Position.BOTTOM, "bottom")}
+                                {this.renderPopover(Position.BOTTOM_RIGHT, "bottom", "right")}
                             </td>
                             <td />
                         </tr>
                         <tr>
                             <td>
-                                {this.renderPopover(Position.RIGHT_TOP, "RIGHT", "TOP")}
-                                {this.renderPopover(Position.RIGHT, "RIGHT")}
-                                {this.renderPopover(Position.RIGHT_BOTTOM, "RIGHT", "BOTTOM")}
+                                {this.renderPopover(Position.RIGHT_TOP, "right", "top")}
+                                {this.renderPopover(Position.RIGHT, "right")}
+                                {this.renderPopover(Position.RIGHT_BOTTOM, "right", "bottom")}
                             </td>
                             <td>
                                 <em className={Classes.TEXT_MUTED}>
@@ -52,17 +59,17 @@ export class PopoverPositionExample extends React.PureComponent<IExampleProps> {
                                 </em>
                             </td>
                             <td>
-                                {this.renderPopover(Position.LEFT_TOP, "LEFT", "TOP")}
-                                {this.renderPopover(Position.LEFT, "LEFT")}
-                                {this.renderPopover(Position.LEFT_BOTTOM, "LEFT", "BOTTOM")}
+                                {this.renderPopover(Position.LEFT_TOP, "left", "top")}
+                                {this.renderPopover(Position.LEFT, "left")}
+                                {this.renderPopover(Position.LEFT_BOTTOM, "left", "bottom")}
                             </td>
                         </tr>
                         <tr>
                             <td />
                             <td>
-                                {this.renderPopover(Position.TOP_LEFT, "TOP", "LEFT")}
-                                {this.renderPopover(Position.TOP, "TOP")}
-                                {this.renderPopover(Position.TOP_RIGHT, "TOP", "RIGHT")}
+                                {this.renderPopover(Position.TOP_LEFT, "top", "left")}
+                                {this.renderPopover(Position.TOP, "top")}
+                                {this.renderPopover(Position.TOP_RIGHT, "top", "right")}
                             </td>
                             <td />
                         </tr>
@@ -80,7 +87,7 @@ export class PopoverPositionExample extends React.PureComponent<IExampleProps> {
                 <>{sideSpan}</>
             ) : (
                 <>
-                    {sideSpan}_{<span className={ALIGNMENT_LABEL_CLASS}>{alignmentLabel}</span>}
+                    {sideSpan}-{<span className={ALIGNMENT_LABEL_CLASS}>{alignmentLabel}</span>}
                 </>
             );
 
@@ -103,12 +110,10 @@ export class PopoverPositionExample extends React.PureComponent<IExampleProps> {
             </div>
         );
 
-        /* eslint-disable deprecation/deprecation */
         return (
             <Popover content={content} position={position} usePortal={false}>
                 <Button className={Classes.MONOSPACE_TEXT}>{buttonLabel}</Button>
             </Popover>
         );
-        /* eslint-enable deprecation/deprecation */
     }
 }
