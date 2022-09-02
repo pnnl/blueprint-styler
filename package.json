@@ -40,6 +40,7 @@
   "peerDependencies": {
     "@blueprintjs/core": "^4.9.3",
     "@blueprintjs/datetime": "^4.3.9",
+    "@blueprintjs/datetime2": "^0.5.5",
     "@blueprintjs/docs-theme": "^4.4.3",
     "@blueprintjs/icons": "^4.4.1",
     "@blueprintjs/popover2": "^1.6.3",
@@ -50,6 +51,7 @@
   "devDependencies": {
     "@blueprintjs/core": "^4.9.3",
     "@blueprintjs/datetime": "^4.3.9",
+    "@blueprintjs/datetime2": "^0.5.5",
     "@blueprintjs/docs-theme": "^4.4.3",
     "@blueprintjs/icons": "^4.4.1",
     "@blueprintjs/popover2": "^1.6.3",
