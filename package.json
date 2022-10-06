@@ -41,12 +41,28 @@
     "@blueprintjs/core": "^4.9.3",
     "@blueprintjs/datetime": "^4.3.9",
     "@blueprintjs/datetime2": "^0.5.5",
-    "@blueprintjs/docs-theme": "^4.4.3",
     "@blueprintjs/icons": "^4.4.1",
     "@blueprintjs/popover2": "^1.6.3",
     "@blueprintjs/select": "^4.6.3",
     "@blueprintjs/table": "^4.6.4",
     "@blueprintjs/timezone": "^4.4.9"
+  },
+  "peerDependenciesMeta": {
+    "@blueprintjs/datetime": {
+      "optional": true
+    },
+    "@blueprintjs/datetime2": {
+      "optional": true
+    },
+    "@blueprintjs/select": {
+      "optional": true
+    },
+    "@blueprintjs/table": {
+      "optional": true
+    },
+    "@blueprintjs/timezone": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@blueprintjs/core": "^4.9.3",
