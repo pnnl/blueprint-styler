@@ -90,7 +90,7 @@ $dialog-border-radius: calc(#{$pt-border-radius} * 2);
   }
 }
 
-$dialog-header-padding: math.div($pt-grid-size, 2);
+$dialog-header-padding: calc(#{$pt-grid-size} / 2);
 
 .#{$ns}-dialog-header {
   align-items: center;
@@ -99,7 +99,7 @@ $dialog-header-padding: math.div($pt-grid-size, 2);
   box-shadow: 0 1px 0 $pt-divider-black;
   display: flex;
   flex: 0 0 auto;
-  min-height: $pt-button-height + $dialog-header-padding * 2;
+  min-height: calc(#{$pt-button-height} + #{$dialog-header-padding} * 2);
   padding: $dialog-header-padding;
   padding-left: $dialog-padding;
   padding-right: 5px;

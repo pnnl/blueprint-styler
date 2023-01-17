@@ -16,10 +16,10 @@
   justify-content: space-between;
   padding: $pt-grid-size $pt-grid-size $pt-grid-size $dialog-padding;
 
-  .#{$ns}-dark & {
+  /* .#{$ns}-dark & {
     background: $dark-gray4;
     border-top: 1px solid $pt-dark-divider-white;
-  }
+  } */
 }
 
 .#{$ns}-dialog-footer-left-section {
