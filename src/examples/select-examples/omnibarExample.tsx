@@ -17,18 +17,15 @@ import * as React from "react";
 import { Button, H5, HotkeysTarget2, KeyCombo, MenuItem, Position, Switch, Toaster } from "@blueprintjs/core";
 import { Example, ExampleProps, handleBooleanChange } from "@blueprintjs/docs-theme";
 import { Omnibar } from "@blueprintjs/select";
-
 import {
     areFilmsEqual,
     createFilm,
+    Film,
     filterFilm,
-    IFilm,
-    renderCreateFilmOption,
+    renderCreateFilmMenuItem,
     renderFilm,
     TOP_100_FILMS,
-} from "./../../common/films";
-
-const FilmOmnibar = Omnibar.ofType<IFilm>();
+} from "@blueprintjs/select/examples";
 
 export interface IOmnibarExampleState {
     allowCreate: boolean;
@@ -57,7 +54,7 @@ export class OmnibarExample extends React.PureComponent<ExampleProps, IOmnibarEx
         const { allowCreate } = this.state;
 
         const maybeCreateNewItemFromQuery = allowCreate ? createFilm : undefined;
-        const maybeCreateNewItemRenderer = allowCreate ? renderCreateFilmOption : null;
+        const maybeCreateNewItemRenderer = allowCreate ? renderCreateFilmMenuItem : null;
 
         return (
             <HotkeysTarget2
@@ -79,7 +76,7 @@ export class OmnibarExample extends React.PureComponent<ExampleProps, IOmnibarEx
                         <KeyCombo combo="shift + o" />
                     </span>
 
-                    <FilmOmnibar
+                    <Omnibar<Film>
                         {...this.state}
                         createNewItemFromQuery={maybeCreateNewItemFromQuery}
                         createNewItemRenderer={maybeCreateNewItemRenderer}
@@ -115,7 +112,7 @@ export class OmnibarExample extends React.PureComponent<ExampleProps, IOmnibarEx
         this.setState({ isOpen: true });
     };
 
-    private handleItemSelect = (film: IFilm) => {
+    private handleItemSelect = (film: Film) => {
         this.setState({ isOpen: false });
 
         this.toaster.show({
