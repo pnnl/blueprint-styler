@@ -45,7 +45,7 @@
     "@blueprintjs/popover2": "^1.11.1",
     "@blueprintjs/select": "^4.8.14",
     "@blueprintjs/table": "^4.7.12",
-    "@blueprintjs/timezone": "^4.5.14",
+    "@blueprintjs/timezone": "^4.5.14"
   },
   "peerDependenciesMeta": {
     "@blueprintjs/datetime": {
