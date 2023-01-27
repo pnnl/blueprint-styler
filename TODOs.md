@@ -4,6 +4,23 @@
 - example theme as code
 - explain how tokens inherit - specifically hsl
 
+## Next Iteration
+- Remove dark theme everything
+  - dark themes should be a theme like any other
+- Tokens
+  - use design tokens
+  - fix tokens so they are more conventional 
+    - colors: 10–90, black is 0, 100 is white 
+    - js generator of color vars - [hsluv](https://www.hsluv.org/)!
+    - better semantically named colors
+- Theme creator app tool
+  - color
+  - font
+  - border radius
+  - spacing
+  - custom css in a code editor
+  - download and use the css file!
+
 ## App tool
 - add ToolTip to Sample
 - Navigation
