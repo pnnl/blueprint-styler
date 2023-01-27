@@ -7,6 +7,7 @@
 ## Next Iteration
 - Remove dark theme everything
   - dark themes should be a theme like any other
+  - remove high-contrast theme - also a theme like any other
 - Tokens
   - use design tokens
   - fix tokens so they are more conventional 
