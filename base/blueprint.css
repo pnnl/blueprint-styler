@@ -1964,6 +1964,18 @@ a.bp4-button.bp4-disabled {
     color: var(--pt-intent-danger-text-color)
 }
 
+.bp4-callout.bp4-intent-primary a {
+    text-decoration: underline
+}
+
+.bp4-callout.bp4-intent-primary a:hover {
+    color: var(--primary1)
+}
+
+.bp4-dark .bp4-callout.bp4-intent-primary a:hover {
+    color: var(--primary6)
+}
+
 .bp4-running-text .bp4-callout {
     margin: 20px 0
 }
@@ -2168,17 +2180,19 @@ a.bp4-button.bp4-disabled {
 
 .bp4-dialog-body {
     flex: 1 1 auto;
-    padding: 15px
+    margin: 15px
 }
 
 .bp4-dialog-body-scroll-container {
+    margin: 0;
     max-height: 70vh;
-    overflow: auto
+    overflow: auto;
+    padding: 15px
 }
 
 .bp4-dialog-footer {
     flex: 0 0 auto;
-    padding: 15px
+    margin: 15px
 }
 
 .bp4-dialog-footer-fixed {
@@ -2189,10 +2203,11 @@ a.bp4-button.bp4-disabled {
     display: flex;
     gap: 15px;
     justify-content: space-between;
+    margin: 0;
     padding: 10px 10px 10px 15px
 }
 
-.bp4-dialog-footer-left-section {
+.bp4-dialog-footer-main-section {
     flex: 1 0 auto
 }
 
@@ -6520,6 +6535,10 @@ span.bp4-popover-target {
     stroke: var(--pt-intent-danger)
 }
 
+.bp4-tabs:not(.bp4-vertical).bp4-fill,.bp4-tabs:not(.bp4-vertical).bp4-fill .bp4-tab-list {
+    height: 100%
+}
+
 .bp4-tabs.bp4-vertical {
     display: flex
 }
@@ -6530,7 +6549,9 @@ span.bp4-popover-target {
 }
 
 .bp4-tabs.bp4-vertical>.bp4-tab-list .bp4-tab {
+    align-items: center;
     border-radius: var(--pt-border-radius);
+    display: flex;
     padding: 0 10px;
     width: 100%
 }
@@ -6579,8 +6600,11 @@ span.bp4-popover-target {
 
 .bp4-tab {
     word-wrap: normal;
+    align-items: center;
+    align-self: stretch;
     color: var(--pt-text-color);
     cursor: pointer;
+    display: flex;
     flex: 0 0 auto;
     font-size: var(--pt-font-size);
     line-height: 30px;
@@ -6646,6 +6670,14 @@ span.bp4-popover-target {
     display: none
 }
 
+.bp4-tab-icon {
+    margin-right: 7px
+}
+
+.bp4-tab-tag {
+    margin-left: 7px
+}
+
 .bp4-tab-indicator-wrapper {
     left: 0;
     pointer-events: none;
@@ -6674,6 +6706,10 @@ span.bp4-popover-target {
 
 .bp4-tab-indicator-wrapper.bp4-no-animation {
     transition: none
+}
+
+.bp4-tabs:not(.bp4-vertical) .bp4-tab-indicator-wrapper {
+    height: 100%
 }
 
 .bp4-flex-expander {
@@ -7167,7 +7203,8 @@ span.bp4-popover-target {
     flex-wrap: wrap;
     margin-right: 7px;
     margin-top: 5px;
-    min-width: 0
+    min-width: 0;
+    position: relative
 }
 
 .bp4-tag-input .bp4-tag-input-values>* {
@@ -7294,6 +7331,15 @@ span.bp4-popover-target {
 
 .bp4-input-ghost:focus {
     outline: none!important
+}
+
+.bp4-resizable-input-span {
+    max-height: 0;
+    max-width: 100%;
+    min-width: 80px;
+    position: absolute;
+    white-space: nowrap;
+    z-index: -1
 }
 
 .bp4-toast {
