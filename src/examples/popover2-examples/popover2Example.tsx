@@ -73,7 +73,7 @@ export interface IPopover2ExampleState {
     isOpen?: boolean;
     matchTargetWidth: boolean;
     minimal?: boolean;
-    modifiers?: Popover2SharedProps<HTMLElement>["modifiers"];
+    modifiers?: Popover2SharedProps<React.HTMLProps<HTMLElement>>["modifiers"];
     placement?: Placement;
     sliderValue?: number;
     usePortal?: boolean;
