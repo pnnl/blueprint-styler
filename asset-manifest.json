@@ -1,23 +1,16 @@
 {
   "files": {
-    "main.css": "/blueprint-styler/static/css/main.f0d65118.chunk.css",
-    "main.js": "/blueprint-styler/static/js/main.668f93e4.chunk.js",
-    "main.js.map": "/blueprint-styler/static/js/main.668f93e4.chunk.js.map",
-    "runtime-main.js": "/blueprint-styler/static/js/runtime-main.dc8f6c42.js",
-    "runtime-main.js.map": "/blueprint-styler/static/js/runtime-main.dc8f6c42.js.map",
-    "static/js/2.1553b4b2.chunk.js": "/blueprint-styler/static/js/2.1553b4b2.chunk.js",
-    "static/js/2.1553b4b2.chunk.js.map": "/blueprint-styler/static/js/2.1553b4b2.chunk.js.map",
-    "static/js/3.b2a81370.chunk.js": "/blueprint-styler/static/js/3.b2a81370.chunk.js",
-    "static/js/3.b2a81370.chunk.js.map": "/blueprint-styler/static/js/3.b2a81370.chunk.js.map",
+    "main.css": "/blueprint-styler/static/css/main.eac1861f.css",
+    "main.js": "/blueprint-styler/static/js/main.d25cdd51.js",
+    "static/js/496.e06da0a6.chunk.js": "/blueprint-styler/static/js/496.e06da0a6.chunk.js",
+    "static/media/logo.svg": "/blueprint-styler/static/media/logo.fbcd5a91af226da642a6f263c7df7913.svg",
     "index.html": "/blueprint-styler/index.html",
-    "static/css/main.f0d65118.chunk.css.map": "/blueprint-styler/static/css/main.f0d65118.chunk.css.map",
-    "static/js/2.1553b4b2.chunk.js.LICENSE.txt": "/blueprint-styler/static/js/2.1553b4b2.chunk.js.LICENSE.txt",
-    "static/media/logo.fbcd5a91.svg": "/blueprint-styler/static/media/logo.fbcd5a91.svg"
+    "main.eac1861f.css.map": "/blueprint-styler/static/css/main.eac1861f.css.map",
+    "main.d25cdd51.js.map": "/blueprint-styler/static/js/main.d25cdd51.js.map",
+    "496.e06da0a6.chunk.js.map": "/blueprint-styler/static/js/496.e06da0a6.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.dc8f6c42.js",
-    "static/js/2.1553b4b2.chunk.js",
-    "static/css/main.f0d65118.chunk.css",
-    "static/js/main.668f93e4.chunk.js"
+    "static/css/main.eac1861f.css",
+    "static/js/main.d25cdd51.js"
   ]
 }
