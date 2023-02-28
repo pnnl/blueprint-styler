@@ -19,12 +19,12 @@ import * as React from "react";
 import { Code, getKeyComboString, KeyCombo } from "@blueprintjs/core";
 import { Example, ExampleProps } from "@blueprintjs/docs-theme";
 
-export interface HotkeyTesterState {
+export interface IHotkeyTesterState {
     combo: string;
 }
 
-export class HotkeyTesterExample extends React.PureComponent<ExampleProps, HotkeyTesterState> {
-    public state: HotkeyTesterState = {
+export class HotkeyTester extends React.PureComponent<ExampleProps, IHotkeyTesterState> {
+    public state: IHotkeyTesterState = {
         combo: null,
     };
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import cloneDeep from "lodash/cloneDeep";
+import { cloneDeep } from "lodash-es";
 import * as React from "react";
 
 import { Classes, Icon, Intent, Tree, TreeNodeInfo } from "@blueprintjs/core";
