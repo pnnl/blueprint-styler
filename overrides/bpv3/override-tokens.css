@@ -1,0 +1,130 @@
+.bp4-vars, :root {
+
+	/*! ColorsHsl */
+	--black-hsl: 204,24%,8%;
+	--dark-gray1-hsl: 206,23%,12%;
+	--dark-gray2-hsl: 205,23%,16%;
+	--dark-gray3-hsl: 206,23%,21%;
+	--dark-gray4-hsl: 207,23%,25%;
+	--dark-gray5-hsl: 206,22%,29%;
+	--gray1-hsl: 207,16%,43%;
+	--gray2-hsl: 205,13%,52%;
+	--gray3-hsl: 206,15%,60%;
+	--gray4-hsl: 207,18%,71%;
+	--gray5-hsl: 206,22%,79%;
+	--light-gray1-hsl: 203,22%,84%;
+	--light-gray2-hsl: 206,26%,88%;
+	--light-gray3-hsl: 205,25%,91%;
+	--light-gray4-hsl: 204,33%,94%;
+	--light-gray5-hsl: 204,33%,97%;
+	--white-hsl: 0,0%,100%;
+	--cerulean1-hsl: 203,82%,30%;
+	--cerulean2-hsl: 203,82%,35%;
+	--cerulean3-hsl: 203,82%,41%;
+	--cerulean4-hsl: 203,68%,50%;
+	--cerulean5-hsl: 203,85%,61%;
+	--green1-hsl: 155,82%,22%;
+	--green2-hsl: 155,82%,28%;
+	--green3-hsl: 155,82%,33%;
+	--green4-hsl: 155,79%,39%;
+	--green5-hsl: 155,58%,52%;
+	--orange1-hsl: 30,67%,39%;
+	--orange2-hsl: 30,67%,45%;
+	--orange3-hsl: 30,70%,51%;
+	--orange4-hsl: 30,87%,62%;
+	--orange5-hsl: 30,100%,70%;
+	--red1-hsl: 0,60%,41%;
+	--red2-hsl: 0,60%,47%;
+	--red3-hsl: 0,69%,54%;
+	--red4-hsl: 0,89%,65%;
+	--red5-hsl: 0,100%,73%;
+	--cerulean6-hsl: 203,100%,80%;
+	--green6-hsl: 155,53%,66%;
+	--orange6-hsl: 30,85%,74%;
+	--red6-hsl: 0,100%,82%;
+	--vermilion1-hsl: 12,84%,34%;
+	--vermilion2-hsl: 12,83%,39%;
+	--vermilion3-hsl: 12,83%,45%;
+	--vermilion4-hsl: 12,83%,55%;
+	--vermilion5-hsl: 12,100%,65%;
+	--rose1-hsl: 337,66%,40%;
+	--rose2-hsl: 337,67%,46%;
+	--rose3-hsl: 337,71%,52%;
+	--rose4-hsl: 337,90%,62%;
+	--rose5-hsl: 337,100%,70%;
+	--violet1-hsl: 300,43%,25%;
+	--violet2-hsl: 300,43%,32%;
+	--violet3-hsl: 300,43%,39%;
+	--violet4-hsl: 300,33%,49%;
+	--violet5-hsl: 300,39%,61%;
+	--indigo1-hsl: 252,43%,45%;
+	--indigo2-hsl: 252,47%,53%;
+	--indigo3-hsl: 252,63%,60%;
+	--indigo4-hsl: 252,82%,71%;
+	--indigo5-hsl: 252,100%,80%;
+	--blue1-hsl: 218,66%,36%;
+	--blue2-hsl: 218,67%,42%;
+	--blue3-hsl: 218,67%,48%;
+	--blue4-hsl: 218,76%,59%;
+	--blue5-hsl: 218,100%,70%;
+	--turquoise1-hsl: 175,100%,25%;
+	--turquoise2-hsl: 175,100%,30%;
+	--turquoise3-hsl: 175,100%,35%;
+	--turquoise4-hsl: 175,82%,44%;
+	--turquoise5-hsl: 175,79%,54%;
+	--forest1-hsl: 125,60%,28%;
+	--forest2-hsl: 125,60%,34%;
+	--forest3-hsl: 125,60%,41%;
+	--forest4-hsl: 125,49%,51%;
+	--forest5-hsl: 125,61%,62%;
+	--lime1-hsl: 75,60%,34%;
+	--lime2-hsl: 75,60%,41%;
+	--lime3-hsl: 75,60%,47%;
+	--lime4-hsl: 75,65%,57%;
+	--lime5-hsl: 75,84%,69%;
+	--gold1-hsl: 43,91%,34%;
+	--gold2-hsl: 43,90%,39%;
+	--gold3-hsl: 43,90%,45%;
+	--gold4-hsl: 43,89%,55%;
+	--gold5-hsl: 43,100%,63%;
+	--sepia1-hsl: 30,53%,25%;
+	--sepia2-hsl: 30,54%,32%;
+	--sepia3-hsl: 30,54%,38%;
+	--sepia4-hsl: 30,43%,48%;
+	--sepia5-hsl: 30,48%,59%;
+
+	/*! Variables */
+	--pt-input-box-shadow: inset 0 0 0 1px hsla(var(--pt-shadow-color-hsl),0.15),inset 0 1px 1px hsla(var(--black-hsl),0.2);
+
+	/*! IntentColors */
+	--primary1-hsl: var(--cerulean1-hsl);
+	--primary2-hsl: var(--cerulean2-hsl);
+	--primary3-hsl: var(--cerulean3-hsl);
+	--primary4-hsl: var(--cerulean4-hsl);
+	--primary5-hsl: var(--cerulean5-hsl);
+	--primary6-hsl: var(--cerulean6-hsl);
+
+	/*! Components */
+	--button-box-shadow: inset 0 0 0 var(--button-border-width) hsla(var(--pt-shadow-color-hsl),0.2),inset 0 var(--button-border-width-negative) 0 hsla(var(--pt-shadow-color-hsl),0.1);
+	--button-box-shadow-active: inset 0 0 0 var(--button-border-width) hsla(var(--pt-shadow-color-hsl),0.2),inset 0 1px 2px hsla(var(--pt-shadow-color-hsl),0.2);
+	--button-gradient: linear-gradient(to bottom,hsl(var(--white-hsl),0.8),hsl(var(--white-hsl),0));
+	--button-intent-gradient: linear-gradient(to bottom,hsl(var(--white-hsl),0.1),hsl(var(--white-hsl),0));
+	--minimal-button-background-color-hover: hsl(var(--gray4-hsl),0.3);
+	--minimal-button-background-color-active: hsl(var(--gray2-hsl),0.3);
+}
+
+
+.bp4-dark {
+
+	/*! ColorsHsl */
+
+	/*! Variables */
+	--pt-input-box-shadow: inset 0 0 0 1px hsla(var(--pt-shadow-color-hsl),0.3),inset 0 1px 1px hsla(var(--pt-shadow-color-hsl),0.4);
+
+	/*! IntentColors */
+
+	/*! Components */
+	--button-box-shadow: inset 0 0 0 var(--button-border-width) hsl(var(--black-hsl),0.8);
+	--button-box-shadow-active: inset 0 0 0 var(--button-border-width) hsl(var(--black-hsl),0.8);
+	--button-gradient: linear-gradient(to bottom,hsl(var(--white-hsl),0.05),hsl(var(--white-hsl),0));
+}

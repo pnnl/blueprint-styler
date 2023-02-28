@@ -1,0 +1,244 @@
+.bp4-vars, :root {
+
+	/*! ColorsPnnl */
+	--platinum: hsl(0,0,70);
+	--sliver: hsl(225,2,39);
+	--onyx: hsl(210,11,11);
+	--bronze: hsl(21,78,29);
+	--copper: hsl(30,100,35);
+	--gold: hsl(42,100,48);
+	--emsl-green: hsl(77,77,27);
+	--emerald: hsl(147,100,24);
+	--topaz: hsl(197,94,34);
+	--mercury: hsl(205,27,44);
+	--sapphire: hsl(218,100,28);
+	--amethyst: hsl(266,48,34);
+	--garnet: hsl(323,98,26);
+	--ruby: hsl(347,85,40);
+	--primary: var(--copper);
+	--info: var(--mercury);
+	--danger: var(--ruby);
+	--warning: var(--gold);
+	--success: var(--emerald);
+	--text-color: #484a4c;
+	--secondary-text-color: #616265;
+	--disabled-text-color: #b3b3b3;
+	--primary-text-color: #b35900;
+	--info-text-color: #52758e;
+	--warning-text-color: #f5ab00;
+	--danger-text-color: #bd0f35;
+	--success-text-color: #007a37;
+	--header-color: #b35900;
+	--subheader-text-color: #843910;
+	--default-link-color: #057aa8;
+	--default-link-underline-color: #b3d7e5;
+	--visited-link-color: #512d80;
+	--visited-link-underline-color: #cac0d8;
+	--border-color: #d9d9d9;
+	--app-background: #f7f7f7;
+	--secondary-app-background: #f0f0f0;
+	--tertiary-app-background: #e8e8e8;
+	--card-background: #fff;
+	--overlay-background-color: rgba(0,0,0,.4);
+	--toolbar-background-color: #e8e8e8;
+	--toolbar-item-outline: #484a4c;
+	--toolbar-item-fill: #f7f7f7;
+	--toolbar-item-active-background: #d9d9d9;
+	--default-button-color: #e8e8e8;
+	--default-button-color-hover: #f0f0f0;
+	--hover-highlight-background: #fef7e6;
+	--active-highlight-color: #f5ab00;
+	--form-label-color: var(--secondary-text-color);
+	--form-placeholder-color: #7490a4;
+	--form-prefix-background: #ecf0f3;
+	--form-input-border-color: #c2c2c2;
+	--skeleton-base-color: rgba(0,0,0,.05);
+	--skeleton-highlight-color: hsla(0,0%,100%,.1);
+
+	/*! ColorsHsl */
+	--grayscale-hue: 209;
+	--grayscale-sat: 0%;
+	--black-hsl: 205,13%,11%;
+	--dark-gray1-hsl: 210,6%,21%;
+	--dark-gray2-hsl: 215,4%,26%;
+	--dark-gray3-hsl: 215,3%,33%;
+	--dark-gray4-hsl: 225,2%,39%;
+	--dark-gray5-hsl: 220,2%,46%;
+	--gray1-hsl: 240,1%,53%;
+	--gray2-hsl: 240,1%,59%;
+	--gray3-hsl: 240,1%,65%;
+	--gray4-hsl: 240,1%,70%;
+	--gray5-hsl: 240,1%,76%;
+	--light-gray1-hsl: 240,2%,81%;
+	--light-gray2-hsl: 240,3%,86%;
+	--light-gray3-hsl: 240,2%,90%;
+	--light-gray4-hsl: 240,3%,94%;
+	--light-gray5-hsl: 240,0%,97%;
+	--white-hsl: 240,0%,100%;
+	--vermilion-hue: 10;
+	--vermilion5-hsl: var(--vermilion-hue),75%,63%;
+	--vermilion4-hsl: var(--vermilion-hue),66%,53%;
+	--vermilion3-hsl: var(--vermilion-hue),82%,42%;
+	--vermilion2-hsl: var(--vermilion-hue),87%,37%;
+	--vermilion1-hsl: var(--vermilion-hue),90%,31%;
+	--red-hue: 347;
+	--red5-hsl: var(--red-hue),80%,63%;
+	--red4-hsl: var(--red-hue),75%,52%;
+	--red3-hsl: var(--red-hue),99%,41%;
+	--red2-hsl: var(--red-hue),99%,35%;
+	--red1-hsl: var(--red-hue),99%,29%;
+	--rose-hue: 325;
+	--rose5-hsl: var(--rose-hue),48%,55%;
+	--rose4-hsl: var(--rose-hue),61%,41%;
+	--rose3-hsl: var(--rose-hue),100%,28%;
+	--rose2-hsl: var(--rose-hue),100%,24%;
+	--rose1-hsl: var(--rose-hue),100%,20%;
+	--violet-hue: 311;
+	--violet5-hsl: var(--violet-hue),35%,53%;
+	--violet4-hsl: var(--violet-hue),47%,40%;
+	--violet3-hsl: var(--violet-hue),78%,27%;
+	--violet2-hsl: var(--violet-hue),83%,23%;
+	--violet1-hsl: var(--violet-hue),88%,19%;
+	--indigo-hue: 271;
+	--indigo5-hsl: var(--indigo-hue),35%,58%;
+	--indigo4-hsl: var(--indigo-hue),36%,46%;
+	--indigo3-hsl: var(--indigo-hue),55%,34%;
+	--indigo2-hsl: var(--indigo-hue),57%,29%;
+	--indigo1-hsl: var(--indigo-hue),62%,25%;
+	--blue-hue: 221;
+	--blue5-hsl: var(--blue-hue),52%,56%;
+	--blue4-hsl: var(--blue-hue),60%,43%;
+	--blue3-hsl: var(--blue-hue),97%,30%;
+	--blue2-hsl: var(--blue-hue),98%,25%;
+	--blue1-hsl: var(--blue-hue),98%,21%;
+	--cerulean-hue: 197;
+	--cerulean5-hsl: var(--cerulean-hue),61%,57%;
+	--cerulean4-hsl: var(--cerulean-hue),67%,45%;
+	--cerulean3-hsl: var(--cerulean-hue),100%,34%;
+	--cerulean2-hsl: var(--cerulean-hue),100%,29%;
+	--cerulean1-hsl: var(--cerulean-hue),100%,24%;
+	--turquoise-hue: 172;
+	--turquoise5-hsl: var(--turquoise-hue),38%,50%;
+	--turquoise4-hsl: var(--turquoise-hue),59%,37%;
+	--turquoise3-hsl: var(--turquoise-hue),100%,24%;
+	--turquoise2-hsl: var(--turquoise-hue),100%,21%;
+	--turquoise1-hsl: var(--turquoise-hue),100%,17%;
+	--green-hue: 142;
+	--green5-hsl: var(--green-hue),39%,50%;
+	--green4-hsl: var(--green-hue),59%,37%;
+	--green3-hsl: var(--green-hue),100%,25%;
+	--green2-hsl: var(--green-hue),100%,21%;
+	--green1-hsl: var(--green-hue),100%,17%;
+	--forest-hue: 80;
+	--forest5-hsl: var(--forest-hue),39%,49%;
+	--forest4-hsl: var(--forest-hue),59%,37%;
+	--forest3-hsl: var(--forest-hue),98%,25%;
+	--forest2-hsl: var(--forest-hue),98%,21%;
+	--forest1-hsl: var(--forest-hue),98%,17%;
+	--lime-hue: 64;
+	--lime5-hsl: var(--lime-hue),56%,53%;
+	--lime4-hsl: var(--lime-hue),68%,44%;
+	--lime3-hsl: var(--lime-hue),99%,34%;
+	--lime2-hsl: var(--lime-hue),99%,29%;
+	--lime1-hsl: var(--lime-hue),98%,24%;
+	--gold-hue: 39;
+	--gold5-hsl: var(--gold-hue),100%,68%;
+	--gold4-hsl: var(--gold-hue),100%,59%;
+	--gold3-hsl: var(--gold-hue),100%,50%;
+	--gold2-hsl: var(--gold-hue),99%,43%;
+	--gold1-hsl: var(--gold-hue),99%,36%;
+	--orange-hue: 26;
+	--orange5-hsl: var(--orange-hue),72%,59%;
+	--orange4-hsl: var(--orange-hue),69%,48%;
+	--orange3-hsl: var(--orange-hue),99%,38%;
+	--orange2-hsl: var(--orange-hue),99%,33%;
+	--orange1-hsl: var(--orange-hue),99%,27%;
+	--sepia-hue: 21;
+	--sepia5-hsl: var(--sepia-hue),47%,53%;
+	--sepia4-hsl: var(--sepia-hue),61%,40%;
+	--sepia3-hsl: var(--sepia-hue),100%,28%;
+	--sepia2-hsl: var(--sepia-hue),100%,24%;
+	--sepia1-hsl: var(--sepia-hue),100%,20%;
+	--mercury-hue: 202;
+	--mercury5-hsl: var(--mercury-hue),30%,63%;
+	--mercury4-hsl: var(--mercury-hue),27%,53%;
+	--mercury3-hsl: var(--mercury-hue),34%,43%;
+	--mercury2-hsl: var(--mercury-hue),35%,36%;
+	--mercury1-hsl: var(--mercury-hue),39%,30%;
+
+	/*! Colors */
+	--mercury5: hsl(var(--mercury1-hsl));
+	--mercury4: hsl(var(--mercury2-hsl));
+	--mercury3: hsl(var(--mercury3-hsl));
+	--mercury2: hsl(var(--mercury4-hsl));
+	--mercury1: hsl(var(--mercury5-hsl));
+
+	/*! IntentColors */
+	--primary1-hsl: var(--cerulean1-hsl);
+	--primary2-hsl: var(--cerulean2-hsl);
+	--primary3-hsl: var(--cerulean3-hsl);
+	--primary4-hsl: var(--cerulean4-hsl);
+	--primary5-hsl: var(--cerulean5-hsl);
+	--primary6-hsl: var(--cerulean6-hsl);
+	--warning1-hsl: var(--gold1-hsl);
+	--warning2-hsl: var(--gold2-hsl);
+	--warning3-hsl: var(--gold3-hsl);
+	--warning4-hsl: var(--gold4-hsl);
+	--warning5-hsl: var(--gold5-hsl);
+	--warning6-hsl: var(--gold6-hsl);
+
+	/*! TextColors */
+	--pt-text-color: var(--dark-gray2);
+	--pt-text-color-muted: var(--gray1);
+	--pt-text-color-disabled: hsla(var(--black-hsl),var(--pt-disabled-opacity));
+	--pt-heading-color: var(--black);
+	--pt-link-color: var(--cerulean3);
+	--pt-text-selection-color: hsla(var(--orange-hue),100%,75%,0.6);
+
+	/*! Variables */
+	--pt-font-family-sans: Metropolis,Montserrat,"Roboto",-apple-system,"BlinkMacSystemFont","Segoe UI","Oxygen","Ubuntu","Cantarell","Open Sans","Helvetica Neue","Icons16",sans-serif;
+	--pt-font-family-monospace: Inconsolata,Consolas,Menlo,monospace;
+	--pt-border-radius: 4px;
+	--font-weight-bold: 600;
+	--font-weight-normal: 300;
+	--pt-font-size-small: 12px;
+	--pt-font-size: 16px;
+	--pt-font-size-large: 20px;
+	--pt-input-box-shadow: inset 0 0 0 1px hsla(var(--pt-shadow-color-hsl),0.2);
+
+	/*! Components */
+	--button-box-shadow: inset 0 0 0 var(--button-border-width) hsla(var(--pt-shadow-color-hsl),0.15);
+	--button-box-shadow-active: inset 0 0 0 var(--button-border-width) hsla(var(--pt-shadow-color-hsl),0.3);
+	--abs-button-gradient: linear-gradient(0deg,hsla(var(--black-hsl),.05),transparent 20%,transparent),linear-gradient(180deg,hsla(var(--white-hsl),.1),transparent 50%,transparent);
+	--button-gradient: var(--abs-button-gradient);
+	--button-intent-gradient: var(--button-gradient);
+	--input-shadow-color-focus: var(--cerulean3);
+	--input-shadow-color-focus-hsl: var(--cerulean3-hsl);
+}
+
+
+.bp4-dark {
+
+	/*! ColorsPnnl */
+
+	/*! ColorsHsl */
+
+	/*! Colors */
+
+	/*! IntentColors */
+
+	/*! TextColors */
+	--pt-text-color: var(--light-gray5);
+	--pt-text-color-muted: var(--gray4);
+	--pt-text-color-disabled: hsla(var(--white-hsl),var(--pt-disabled-opacity));
+	--pt-heading-color: var(--white);
+	--pt-link-color: var(--cerulean5);
+
+	/*! Variables */
+	--pt-input-box-shadow: inset 0 0 0 1px hsla(var(--pt-shadow-color-hsl),0.6);
+
+	/*! Components */
+	--button-gradient: var(--abs-button-gradient);
+	--input-shadow-color-focus: var(--primary4);
+	--input-shadow-color-focus-hsl: var(--primary4-hsl);
+}
