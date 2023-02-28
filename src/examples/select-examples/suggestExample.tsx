@@ -19,26 +19,29 @@ import * as React from "react";
 import { H5, MenuItem, Switch } from "@blueprintjs/core";
 import { Example, ExampleProps } from "@blueprintjs/docs-theme";
 import { Suggest2 } from "@blueprintjs/select";
+
 import {
     areFilmsEqual,
     createFilm,
-    Film,
     filterFilm,
+    IFilm,
     maybeAddCreatedFilmToArrays,
     maybeDeleteCreatedFilmFromArrays,
-    renderCreateFilmMenuItem,
+    renderCreateFilmOption,
     renderFilm,
     TOP_100_FILMS,
-} from "@blueprintjs/select/examples";
+} from "./../../common/films";
 
-export interface SuggestExampleState {
+const FilmSuggest = Suggest2.ofType<IFilm>();
+
+export interface ISuggestExampleState {
     allowCreate: boolean;
     closeOnSelect: boolean;
-    createdItems: Film[];
+    createdItems: IFilm[];
     disabled: boolean;
     fill: boolean;
-    film: Film;
-    items: Film[];
+    film: IFilm;
+    items: IFilm[];
     matchTargetWidth: boolean;
     minimal: boolean;
     openOnKeyDown: boolean;
@@ -47,8 +50,8 @@ export interface SuggestExampleState {
     resetOnSelect: boolean;
 }
 
-export class SuggestExample extends React.PureComponent<ExampleProps, SuggestExampleState> {
-    public state: SuggestExampleState = {
+export class SuggestExample extends React.PureComponent<ExampleProps, ISuggestExampleState> {
+    public state: ISuggestExampleState = {
         allowCreate: false,
         closeOnSelect: true,
         createdItems: [],
@@ -88,11 +91,11 @@ export class SuggestExample extends React.PureComponent<ExampleProps, SuggestExa
         const { allowCreate, film, matchTargetWidth, minimal, ...flags } = this.state;
 
         const maybeCreateNewItemFromQuery = allowCreate ? createFilm : undefined;
-        const maybeCreateNewItemRenderer = allowCreate ? renderCreateFilmMenuItem : null;
+        const maybeCreateNewItemRenderer = allowCreate ? renderCreateFilmOption : null;
 
         return (
             <Example options={this.renderOptions()} {...this.props}>
-                <Suggest2<Film>
+                <FilmSuggest
                     {...flags}
                     createNewItemFromQuery={maybeCreateNewItemFromQuery}
                     createNewItemRenderer={maybeCreateNewItemRenderer}
@@ -161,9 +164,9 @@ export class SuggestExample extends React.PureComponent<ExampleProps, SuggestExa
         );
     }
 
-    private renderInputValue = (film: Film) => film.title;
+    private renderInputValue = (film: IFilm) => film.title;
 
-    private handleValueChange = (film: Film) => {
+    private handleValueChange = (film: IFilm) => {
         // delete the old film from the list if it was newly created
         const { createdItems, items } = maybeDeleteCreatedFilmFromArrays(
             this.state.items,
@@ -179,7 +182,7 @@ export class SuggestExample extends React.PureComponent<ExampleProps, SuggestExa
         this.setState({ createdItems: nextCreatedItems, film, items: nextItems });
     };
 
-    private handleSwitchChange(prop: keyof SuggestExampleState) {
+    private handleSwitchChange(prop: keyof ISuggestExampleState) {
         return (event: React.FormEvent<HTMLInputElement>) => {
             const checked = event.currentTarget.checked;
             this.setState(state => ({ ...state, [prop]: checked }));

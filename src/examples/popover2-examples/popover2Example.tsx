@@ -46,10 +46,11 @@ import {
     PlacementOptions,
     Popover2,
     Popover2InteractionKind,
-    PopperModifierOverrides,
+    Popover2SharedProps,
     StrictModifierNames,
 } from "@blueprintjs/popover2";
-import { FilmSelect } from "@blueprintjs/select/examples";
+
+import FilmSelect from "../../common/filmSelect";
 
 const POPPER_DOCS_URL = "https://popper.js.org/docs/v2/";
 
@@ -72,7 +73,7 @@ export interface IPopover2ExampleState {
     isOpen?: boolean;
     matchTargetWidth: boolean;
     minimal?: boolean;
-    modifiers?: PopperModifierOverrides;
+    modifiers?: Popover2SharedProps<HTMLElement>["modifiers"];
     placement?: Placement;
     sliderValue?: number;
     usePortal?: boolean;
@@ -227,6 +228,7 @@ export class Popover2Example extends React.PureComponent<ExampleProps, IPopover2
                     Use <Code>Portal</Code>
                 </Switch>
                 <Switch checked={this.state.minimal} label="Minimal appearance" onChange={this.toggleMinimal} />
+
                 <H5>Control</H5>
                 <Switch checked={this.state.isControlled} label="Is controlled" onChange={this.toggleIsControlled} />
                 <Switch

@@ -16,22 +16,13 @@
 
 import * as React from "react";
 
-import { Callout, Code, H5, Switch } from "@blueprintjs/core";
+import { H5, Switch } from "@blueprintjs/core";
 import { DateFormatProps, DateRange, TimePrecision } from "@blueprintjs/datetime";
 import { DateRangeInput2 } from "@blueprintjs/datetime2";
-import { Example, ExampleProps, handleBooleanChange, handleValueChange } from "@blueprintjs/docs-theme";
+import { Example, ExampleProps, handleBooleanChange } from "@blueprintjs/docs-theme";
 
-import { PropCodeTooltip } from "../../common/propCodeTooltip";
-import { PrecisionSelect } from "../datetime-examples/common/precisionSelect";
 import { DateFnsDateRange } from "./dateFnsDate";
 import { DATE_FNS_FORMATS, DateFnsFormatSelector } from "./dateFnsFormatSelector";
-
-const exampleFooterElement = (
-    <Callout style={{ maxWidth: 460 }}>
-        A custom footer element may be displayed below the date range picker calendars using the{" "}
-        <Code>footerElement</Code> prop.
-    </Callout>
-);
 
 export interface DateRangeInput2ExampleState {
     allowSingleDayRange: boolean;
@@ -39,16 +30,13 @@ export interface DateRangeInput2ExampleState {
     contiguousCalendarMonths: boolean;
     disabled: boolean;
     enableTimePicker: boolean;
-    fill: boolean;
     format: DateFormatProps;
     range: DateRange;
     reverseMonthAndYearMenus: boolean;
     selectAllOnFocus: boolean;
     shortcuts: boolean;
-    showFooterElement: boolean;
-    showTimeArrowButtons: boolean;
     singleMonthOnly: boolean;
-    timePrecision: TimePrecision | undefined;
+    showTimeArrowButtons: boolean;
 }
 
 export class DateRangeInput2Example extends React.PureComponent<ExampleProps, DateRangeInput2ExampleState> {
@@ -58,16 +46,13 @@ export class DateRangeInput2Example extends React.PureComponent<ExampleProps, Da
         contiguousCalendarMonths: true,
         disabled: false,
         enableTimePicker: false,
-        fill: false,
         format: DATE_FNS_FORMATS[0],
         range: [null, null],
         reverseMonthAndYearMenus: false,
         selectAllOnFocus: false,
         shortcuts: true,
-        showFooterElement: false,
         showTimeArrowButtons: false,
         singleMonthOnly: false,
-        timePrecision: TimePrecision.MINUTE,
     };
 
     private toggleContiguous = handleBooleanChange(contiguous => {
@@ -76,8 +61,6 @@ export class DateRangeInput2Example extends React.PureComponent<ExampleProps, Da
 
     private toggleDisabled = handleBooleanChange(disabled => this.setState({ disabled }));
 
-    private toggleFill = handleBooleanChange(fill => this.setState({ fill }));
-
     private toggleReverseMonthAndYearMenus = handleBooleanChange(reverseMonthAndYearMenus =>
         this.setState({ reverseMonthAndYearMenus }),
     );
@@ -85,8 +68,6 @@ export class DateRangeInput2Example extends React.PureComponent<ExampleProps, Da
     private toggleSelection = handleBooleanChange(closeOnSelection => this.setState({ closeOnSelection }));
 
     private toggleSelectAllOnFocus = handleBooleanChange(selectAllOnFocus => this.setState({ selectAllOnFocus }));
-
-    private toggleShowFooterElement = handleBooleanChange(showFooterElement => this.setState({ showFooterElement }));
 
     private toggleSingleDay = handleBooleanChange(allowSingleDayRange => this.setState({ allowSingleDayRange }));
 
@@ -100,31 +81,17 @@ export class DateRangeInput2Example extends React.PureComponent<ExampleProps, Da
         this.setState({ showTimeArrowButtons }),
     );
 
-    private handleTimePrecisionChange = handleValueChange((timePrecision: TimePrecision | "none") =>
-        this.setState({ timePrecision: timePrecision === "none" ? undefined : timePrecision }),
-    );
-
     public render() {
-        const {
-            enableTimePicker,
-            format,
-            range,
-            showFooterElement,
-            showTimeArrowButtons,
-            timePrecision,
-            ...spreadProps
-        } = this.state;
+        const { enableTimePicker, format, range, showTimeArrowButtons, ...spreadProps } = this.state;
         return (
             <Example options={this.renderOptions()} {...this.props}>
                 <DateRangeInput2
                     {...spreadProps}
                     {...format}
-                    value={range}
                     onChange={this.handleRangeChange}
-                    footerElement={showFooterElement ? exampleFooterElement : undefined}
                     timePickerProps={
                         enableTimePicker
-                            ? { precision: timePrecision, showArrowButtons: showTimeArrowButtons }
+                            ? { precision: TimePrecision.MINUTE, showArrowButtons: showTimeArrowButtons }
                             : undefined
                     }
                 />
@@ -134,96 +101,53 @@ export class DateRangeInput2Example extends React.PureComponent<ExampleProps, Da
     }
 
     protected renderOptions() {
-        const {
-            allowSingleDayRange,
-            closeOnSelection,
-            contiguousCalendarMonths,
-            enableTimePicker,
-            disabled,
-            fill,
-            reverseMonthAndYearMenus,
-            selectAllOnFocus,
-            shortcuts,
-            showFooterElement,
-            showTimeArrowButtons,
-            singleMonthOnly,
-            timePrecision,
-        } = this.state;
         return (
             <>
-                <H5>Behavior props</H5>
-                <PropCodeTooltip snippet={`closeOnSelection={${closeOnSelection.toString()}}`}>
-                    <Switch checked={closeOnSelection} label="Close on selection" onChange={this.toggleSelection} />
-                </PropCodeTooltip>
-                <PropCodeTooltip snippet={`selectAllOnFocus={${selectAllOnFocus.toString()}}`}>
-                    <Switch
-                        checked={selectAllOnFocus}
-                        label="Select all text on input focus"
-                        onChange={this.toggleSelectAllOnFocus}
-                    />
-                </PropCodeTooltip>
-
-                <H5>Date range picker props</H5>
-                <PropCodeTooltip snippet={`shortcuts={${shortcuts.toString()}}`}>
-                    <Switch checked={shortcuts} label="Show shortcuts" onChange={this.toggleShortcuts} />
-                </PropCodeTooltip>
-                <PropCodeTooltip snippet={`allowSingleDayRange={${allowSingleDayRange.toString()}}`}>
-                    <Switch
-                        checked={allowSingleDayRange}
-                        label="Allow single day range"
-                        onChange={this.toggleSingleDay}
-                    />
-                </PropCodeTooltip>
-                <PropCodeTooltip snippet={`singleMonthOnly={${singleMonthOnly.toString()}}`}>
-                    <Switch checked={singleMonthOnly} label="Single month only" onChange={this.toggleSingleMonth} />
-                </PropCodeTooltip>
-                <PropCodeTooltip snippet={`contiguousCalendarMonths={${contiguousCalendarMonths.toString()}}`}>
-                    <Switch
-                        checked={contiguousCalendarMonths}
-                        label="Constrain calendar to contiguous months"
-                        onChange={this.toggleContiguous}
-                    />
-                </PropCodeTooltip>
+                <H5>Props</H5>
                 <Switch
-                    checked={reverseMonthAndYearMenus}
+                    checked={this.state.allowSingleDayRange}
+                    label="Allow single day range"
+                    onChange={this.toggleSingleDay}
+                />
+                <Switch
+                    checked={this.state.singleMonthOnly}
+                    label="Single month only"
+                    onChange={this.toggleSingleMonth}
+                />
+                <Switch checked={this.state.shortcuts} label="Show shortcuts" onChange={this.toggleShortcuts} />
+                <Switch
+                    checked={this.state.closeOnSelection}
+                    label="Close on selection"
+                    onChange={this.toggleSelection}
+                />
+                <Switch
+                    checked={this.state.contiguousCalendarMonths}
+                    label="Constrain calendar to contiguous months"
+                    onChange={this.toggleContiguous}
+                />
+                <Switch checked={this.state.disabled} label="Disabled" onChange={this.toggleDisabled} />
+                <Switch
+                    checked={this.state.selectAllOnFocus}
+                    label="Select all on focus"
+                    onChange={this.toggleSelectAllOnFocus}
+                />
+                <Switch
+                    checked={this.state.reverseMonthAndYearMenus}
                     label="Reverse month and year menus"
                     onChange={this.toggleReverseMonthAndYearMenus}
                 />
                 <Switch
-                    checked={showFooterElement}
-                    label="Show custom footer element"
-                    onChange={this.toggleShowFooterElement}
+                    checked={this.state.enableTimePicker}
+                    label="Enable time picker"
+                    onChange={this.toggleTimePicker}
                 />
-
-                <H5>Input appearance props</H5>
-                <PropCodeTooltip snippet={`disabled={${disabled.toString()}}`}>
-                    <Switch checked={disabled} label="Disabled" onChange={this.toggleDisabled} />
-                </PropCodeTooltip>
-                <PropCodeTooltip snippet={`fill={${fill.toString()}}`}>
-                    <Switch label="Fill container width" checked={fill} onChange={this.toggleFill} />
-                </PropCodeTooltip>
-                <DateFnsFormatSelector format={this.state.format} onChange={this.handleFormatChange} />
-
-                <H5>Time picker props</H5>
-                <Switch checked={enableTimePicker} label="Enable time picker" onChange={this.toggleTimePicker} />
-                <PrecisionSelect
-                    allowNone={false}
-                    disabled={!enableTimePicker}
-                    label="Time precision"
-                    onChange={this.handleTimePrecisionChange}
-                    value={timePrecision}
+                <Switch
+                    disabled={!this.state.enableTimePicker}
+                    checked={this.state.showTimeArrowButtons}
+                    label="Show timepicker arrow buttons"
+                    onChange={this.toggleTimepickerArrowButtons}
                 />
-                <PropCodeTooltip
-                    snippet={`timePickerProps={{ showArrowButtons: ${showTimeArrowButtons.toString()} }}`}
-                    disabled={!enableTimePicker}
-                >
-                    <Switch
-                        disabled={!enableTimePicker}
-                        checked={showTimeArrowButtons}
-                        label="Show timepicker arrow buttons"
-                        onChange={this.toggleTimepickerArrowButtons}
-                    />
-                </PropCodeTooltip>
+                <DateFnsFormatSelector key="Format" format={this.state.format} onChange={this.handleFormatChange} />
             </>
         );
     }

@@ -18,12 +18,14 @@ import * as React from "react";
 
 import { H5, MenuItem, Switch } from "@blueprintjs/core";
 import { Example, ExampleProps } from "@blueprintjs/docs-theme";
-import { Film, FilmSelect, TOP_100_FILMS } from "@blueprintjs/select/examples";
+
+import { IFilm, TOP_100_FILMS } from "../../common/films";
+import FilmSelect from "../../common/filmSelect";
 
 export interface ISelectExampleState {
     allowCreate: boolean;
     createFirst: boolean;
-    createdItems: Film[];
+    createdItems: IFilm[];
     disableItems: boolean;
     disabled: boolean;
     fill: boolean;
@@ -166,5 +168,5 @@ export class SelectExample extends React.PureComponent<ExampleProps, ISelectExam
         };
     }
 
-    private isItemDisabled = (film: Film) => this.state.disableItems && film.year < 2000;
+    private isItemDisabled = (film: IFilm) => this.state.disableItems && film.year < 2000;
 }

@@ -31,13 +31,15 @@ export interface IIconSelectProps {
     onChange: (iconName?: IconName) => void;
 }
 
+const TypedSelect = Select2.ofType<IconNameOrNone>();
+
 export class IconSelect extends React.PureComponent<IIconSelectProps> {
     public render() {
         const { disabled, iconName } = this.props;
         return (
             <label className={classNames(Classes.LABEL, { [Classes.DISABLED]: disabled })}>
                 Icon
-                <Select2<IconNameOrNone>
+                <TypedSelect
                     disabled={disabled}
                     items={ICON_NAMES}
                     itemPredicate={this.filterIconName}
@@ -55,7 +57,7 @@ export class IconSelect extends React.PureComponent<IIconSelectProps> {
                         text={iconName || NONE}
                         rightIcon="caret-down"
                     />
-                </Select2>
+                </TypedSelect>
             </label>
         );
     }

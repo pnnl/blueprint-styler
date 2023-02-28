@@ -115,10 +115,7 @@ export class MultistepDialogExample extends React.PureComponent<
                     icon="info-sign"
                     navigationPosition={position}
                     onClose={this.handleClose}
-                    nextButtonProps={{
-                        disabled: this.state.value === undefined,
-                        tooltipContent: this.state.value === undefined ? "Select an option to continue" : undefined,
-                    }}
+                    nextButtonProps={{ disabled: this.state.value === undefined }}
                     finalButtonProps={finalButtonProps}
                     title={hasTitle ? "Multistep dialog" : undefined}
                     {...state}

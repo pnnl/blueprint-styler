@@ -16,13 +16,12 @@
 
 import * as React from "react";
 
-import { H5, Position, Radio, RadioGroup, Switch } from "@blueprintjs/core";
-import { TimezoneDisplayFormat, TimezoneSelect } from "@blueprintjs/datetime2";
-import { Example, ExampleProps, handleBooleanChange, handleValueChange } from "@blueprintjs/docs-theme";
+import { H5, Position, Switch } from "@blueprintjs/core";
+import { TimezoneSelect } from "@blueprintjs/datetime2";
+import { Example, ExampleProps, handleBooleanChange } from "@blueprintjs/docs-theme";
 
 export interface TimezoneSelectExampleState {
     disabled: boolean;
-    displayFormat: TimezoneDisplayFormat;
     fill: boolean;
     showCustomTarget: boolean;
     showLocalTimezone: boolean;
@@ -32,7 +31,6 @@ export interface TimezoneSelectExampleState {
 export class TimezoneSelectExample extends React.PureComponent<ExampleProps, TimezoneSelectExampleState> {
     public state: TimezoneSelectExampleState = {
         disabled: false,
-        displayFormat: TimezoneDisplayFormat.COMPOSITE,
         fill: false,
         showCustomTarget: false,
         showLocalTimezone: true,
@@ -41,16 +39,12 @@ export class TimezoneSelectExample extends React.PureComponent<ExampleProps, Tim
 
     private handleDisabledChange = handleBooleanChange(disabled => this.setState({ disabled }));
 
-    private handleDisplayFormatChange = handleValueChange((displayFormat: TimezoneDisplayFormat) =>
-        this.setState({ displayFormat }),
-    );
-
     private handleFillChange = handleBooleanChange(fill => this.setState({ fill }));
 
     private handleShowLocalChange = handleBooleanChange(showLocalTimezone => this.setState({ showLocalTimezone }));
 
     public render() {
-        const { timezone, disabled, displayFormat, fill, showLocalTimezone } = this.state;
+        const { timezone, disabled, fill, showLocalTimezone } = this.state;
 
         const options = (
             <>
@@ -58,17 +52,6 @@ export class TimezoneSelectExample extends React.PureComponent<ExampleProps, Tim
                 <Switch checked={showLocalTimezone} label="Show local timezone" onChange={this.handleShowLocalChange} />
                 <Switch checked={disabled} label="Disabled" onChange={this.handleDisabledChange} />
                 <Switch label="Fill container width" checked={this.state.fill} onChange={this.handleFillChange} />
-                <RadioGroup
-                    label="Display format"
-                    onChange={this.handleDisplayFormatChange}
-                    selectedValue={this.state.displayFormat}
-                >
-                    <Radio label="Composite" value={TimezoneDisplayFormat.COMPOSITE} />
-                    <Radio label="Abbreviation" value={TimezoneDisplayFormat.ABBREVIATION} />
-                    <Radio label="Long Name" value={TimezoneDisplayFormat.LONG_NAME} />
-                    <Radio label="IANA Code" value={TimezoneDisplayFormat.CODE} />
-                    <Radio label="Offset" value={TimezoneDisplayFormat.OFFSET} />
-                </RadioGroup>
             </>
         );
 
@@ -81,7 +64,6 @@ export class TimezoneSelectExample extends React.PureComponent<ExampleProps, Tim
                     popoverProps={{ position: Position.BOTTOM }}
                     showLocalTimezone={showLocalTimezone}
                     value={timezone}
-                    valueDisplayFormat={displayFormat}
                 />
             </Example>
         );

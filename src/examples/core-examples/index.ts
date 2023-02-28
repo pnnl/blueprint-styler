@@ -38,7 +38,7 @@ export * from "./fileInputExample";
 export * from "./focusExample";
 export * from "./formGroupExample";
 // export * from "./hotkeyPiano";
-// export * from "./hotkeyTesterExample";
+// export * from "./hotkeyTester";
 // export { HotkeysTarget2Example } from "./hotkeysTarget2Example";
 export * from "./iconExample";
 export * from "./menuExample";
