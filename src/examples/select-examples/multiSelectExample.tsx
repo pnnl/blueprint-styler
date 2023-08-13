@@ -16,38 +16,36 @@
 
 import * as React from "react";
 
-import { Code, H5, Intent, MenuItem, Switch, TagProps } from "@blueprintjs/core";
+import { Code, H5, Intent, Switch, TagProps } from "@blueprintjs/core";
 import { Example, ExampleProps } from "@blueprintjs/docs-theme";
-import { Popover2 } from "@blueprintjs/popover2";
+import { MenuItem2, Popover2 } from "@blueprintjs/popover2";
 import { ItemRenderer, MultiSelect2 } from "@blueprintjs/select";
-
 import {
     areFilmsEqual,
     arrayContainsFilm,
-    createFilm,
+    createFilms,
+    Film,
     filterFilm,
     getFilmItemProps,
-    IFilm,
     maybeAddCreatedFilmToArrays,
     maybeDeleteCreatedFilmFromArrays,
-    renderCreateFilmOption,
+    renderCreateFilmsMenuItem,
     TOP_100_FILMS,
-} from "../../common/films";
-import { PropCodeTooltip } from "../../common/propCodeTooltip";
+} from "@blueprintjs/select/lib/esm/__examples__";
 
-const FilmMultiSelect = MultiSelect2.ofType<IFilm>();
+import { PropCodeTooltip } from "../../common/propCodeTooltip";
 
 const INTENTS = [Intent.NONE, Intent.PRIMARY, Intent.SUCCESS, Intent.DANGER, Intent.WARNING];
 
 export interface IMultiSelectExampleState {
     allowCreate: boolean;
-    createdItems: IFilm[];
+    createdItems: Film[];
     disabled: boolean;
     fill: boolean;
-    films: IFilm[];
+    films: Film[];
     hasInitialContent: boolean;
     intent: boolean;
-    items: IFilm[];
+    items: Film[];
     matchTargetWidth: boolean;
     openOnKeyDown: boolean;
     popoverMinimal: boolean;
@@ -74,7 +72,7 @@ export class MultiSelectExample extends React.PureComponent<ExampleProps, IMulti
         tagMinimal: false,
     };
 
-    private popoverRef: React.RefObject<Popover2<any>> = React.createRef();
+    private popoverRef: React.RefObject<Popover2> = React.createRef();
 
     private handleAllowCreateChange = this.handleSwitchChange("allowCreate");
 
@@ -107,25 +105,23 @@ export class MultiSelectExample extends React.PureComponent<ExampleProps, IMulti
         });
 
         const initialContent = this.state.hasInitialContent ? (
-            <MenuItem disabled={true} text={`${TOP_100_FILMS.length} items loaded.`} roleStructure="listoption" />
+            <MenuItem2 disabled={true} text={`${TOP_100_FILMS.length} items loaded.`} roleStructure="listoption" />
         ) : // explicit undefined (not null) for default behavior (show full list)
         undefined;
-        const maybeCreateNewItemFromQuery = allowCreate ? createFilm : undefined;
-        const maybeCreateNewItemRenderer = allowCreate ? renderCreateFilmOption : null;
 
         return (
             <Example options={this.renderOptions()} {...this.props}>
-                <FilmMultiSelect
+                <MultiSelect2<Film>
                     {...flags}
-                    createNewItemFromQuery={maybeCreateNewItemFromQuery}
-                    createNewItemRenderer={maybeCreateNewItemRenderer}
+                    createNewItemFromQuery={allowCreate ? createFilms : undefined}
+                    createNewItemRenderer={allowCreate ? renderCreateFilmsMenuItem : null}
                     initialContent={initialContent}
                     itemPredicate={filterFilm}
                     itemRenderer={this.renderFilm}
                     items={this.state.items}
                     itemsEqual={areFilmsEqual}
                     menuProps={{ "aria-label": "films" }}
-                    noResults={<MenuItem disabled={true} text="No results." roleStructure="listoption" />}
+                    noResults={<MenuItem2 disabled={true} text="No results." roleStructure="listoption" />}
                     onClear={this.state.showClearButton ? this.handleClear : undefined}
                     onItemSelect={this.handleFilmSelect}
                     onItemsPaste={this.handleFilmsPaste}
@@ -227,15 +223,15 @@ export class MultiSelectExample extends React.PureComponent<ExampleProps, IMulti
         );
     }
 
-    private renderTag = (film: IFilm) => film.title;
+    private renderTag = (film: Film) => film.title;
 
-    private renderFilm: ItemRenderer<IFilm> = (film, props) => {
+    private renderFilm: ItemRenderer<Film> = (film, props) => {
         if (!props.modifiers.matchesPredicate) {
             return null;
         }
 
         return (
-            <MenuItem
+            <MenuItem2
                 {...getFilmItemProps(film, props)}
                 selected={this.isFilmSelected(film)}
                 shouldDismissPopover={false}
@@ -248,39 +244,38 @@ export class MultiSelectExample extends React.PureComponent<ExampleProps, IMulti
         this.deselectFilm(index);
     };
 
-    private getSelectedFilmIndex(film: IFilm) {
+    private getSelectedFilmIndex(film: Film) {
         return this.state.films.indexOf(film);
     }
 
-    private isFilmSelected(film: IFilm) {
+    private isFilmSelected(film: Film) {
         return this.getSelectedFilmIndex(film) !== -1;
     }
 
-    private selectFilm(film: IFilm) {
+    private selectFilm(film: Film) {
         this.selectFilms([film]);
     }
 
-    private selectFilms(filmsToSelect: IFilm[]) {
-        const { createdItems, films, items } = this.state;
+    private selectFilms(filmsToSelect: Film[]) {
+        this.setState(({ createdItems, films, items }) => {
+            let nextCreatedItems = createdItems.slice();
+            let nextFilms = films.slice();
+            let nextItems = items.slice();
 
-        let nextCreatedItems = createdItems.slice();
-        let nextFilms = films.slice();
-        let nextItems = items.slice();
-
-        filmsToSelect.forEach(film => {
-            const results = maybeAddCreatedFilmToArrays(nextItems, nextCreatedItems, film);
-            nextItems = results.items;
-            nextCreatedItems = results.createdItems;
-            // Avoid re-creating an item that is already selected (the "Create
-            // Item" option will be shown even if it matches an already selected
-            // item).
-            nextFilms = !arrayContainsFilm(nextFilms, film) ? [...nextFilms, film] : nextFilms;
-        });
-
-        this.setState({
-            createdItems: nextCreatedItems,
-            films: nextFilms,
-            items: nextItems,
+            filmsToSelect.forEach(film => {
+                const results = maybeAddCreatedFilmToArrays(nextItems, nextCreatedItems, film);
+                nextItems = results.items;
+                nextCreatedItems = results.createdItems;
+                // Avoid re-creating an item that is already selected (the "Create
+                // Item" option will be shown even if it matches an already selected
+                // item).
+                nextFilms = !arrayContainsFilm(nextFilms, film) ? [...nextFilms, film] : nextFilms;
+            });
+            return {
+                createdItems: nextCreatedItems,
+                films: nextFilms,
+                items: nextItems,
+            };
         });
     }
 
@@ -302,7 +297,7 @@ export class MultiSelectExample extends React.PureComponent<ExampleProps, IMulti
         });
     }
 
-    private handleFilmSelect = (film: IFilm) => {
+    private handleFilmSelect = (film: Film) => {
         if (!this.isFilmSelected(film)) {
             this.selectFilm(film);
         } else {
@@ -310,7 +305,7 @@ export class MultiSelectExample extends React.PureComponent<ExampleProps, IMulti
         }
     };
 
-    private handleFilmsPaste = (films: IFilm[]) => {
+    private handleFilmsPaste = (films: Film[]) => {
         // On paste, don't bother with deselecting already selected values, just
         // add the new ones.
         this.selectFilms(films);

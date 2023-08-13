@@ -38,14 +38,15 @@
     "generate-svg-icon-files": "node ./scripts/generate-svg-icon-files.js"
   },
   "peerDependencies": {
-    "@blueprintjs/core": "^4.17.0",
-    "@blueprintjs/datetime": "^4.4.19",
-    "@blueprintjs/datetime2": "^0.9.17",
-    "@blueprintjs/icons": "^4.14.0",
-    "@blueprintjs/popover2": "^1.13.4",
-    "@blueprintjs/select": "^4.9.4",
-    "@blueprintjs/table": "^4.8.0",
-    "@blueprintjs/timezone": "^4.5.23"
+    "@blueprintjs/core": "^4.20.2",
+    "@blueprintjs/datetime": "^4.4.37",
+    "@blueprintjs/datetime2": "^0.9.37",
+    "@blueprintjs/docs-theme": "^4.5.27",
+    "@blueprintjs/icons": "^4.16.0",
+    "@blueprintjs/popover2": "^1.14.11",
+    "@blueprintjs/select": "^4.9.24",
+    "@blueprintjs/table": "^4.10.12",
+    "@blueprintjs/timezone": "^4.5.43"
   },
   "peerDependenciesMeta": {
     "@blueprintjs/datetime": {
@@ -65,15 +66,15 @@
     }
   },
   "devDependencies": {
-    "@blueprintjs/core": "^4.17.0",
-    "@blueprintjs/datetime": "^4.4.19",
-    "@blueprintjs/datetime2": "^0.9.17",
-    "@blueprintjs/docs-theme": "^4.5.6",
-    "@blueprintjs/icons": "^4.14.0",
-    "@blueprintjs/popover2": "^1.13.4",
-    "@blueprintjs/select": "^4.9.4",
-    "@blueprintjs/table": "^4.8.0",
-    "@blueprintjs/timezone": "^4.5.23",
+    "@blueprintjs/core": "^4.20.2",
+    "@blueprintjs/datetime": "^4.4.37",
+    "@blueprintjs/datetime2": "^0.9.37",
+    "@blueprintjs/docs-theme": "^4.5.27",
+    "@blueprintjs/icons": "^4.16.0",
+    "@blueprintjs/popover2": "^1.14.11",
+    "@blueprintjs/select": "^4.9.24",
+    "@blueprintjs/table": "^4.10.12",
+    "@blueprintjs/timezone": "^4.5.43",
     "@carbon/colors": "^11.11.0",
     "@ibm/plex": "^6.1.1",
     "@types/node": "^18.11.18",
