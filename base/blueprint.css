@@ -3401,6 +3401,10 @@ a.bp4-button.bp4-disabled {
     height: 40px
 }
 
+.bp4-file-input.bp4-small,.bp4-small .bp4-file-input {
+    height: 24px
+}
+
 .bp4-file-input .bp4-file-upload-input-custom-text:after {
     content: attr(bp4-button-text)
 }
@@ -3522,6 +3526,26 @@ a.bp4-button.bp4-disabled {
     min-height: 30px;
     min-width: 30px;
     width: 85px
+}
+
+.bp4-small .bp4-file-upload-input {
+    font-size: var(--pt-font-size-small);
+    height: 24px;
+    line-height: 24px;
+    padding-left: 8px;
+    padding-right: 65px
+}
+
+.bp4-small .bp4-file-upload-input.bp4-round,.bp4-small .bp4-file-upload-input[type=search] {
+    padding: 0 12px
+}
+
+.bp4-small .bp4-file-upload-input:after {
+    line-height: 20px;
+    margin: 2px;
+    min-height: 20px;
+    min-width: 20px;
+    width: 55px
 }
 
 .bp4-file-upload-input:after {
@@ -4069,14 +4093,18 @@ label.bp4-label:not(.bp4-inline) .bp4-popover-target {
 }
 
 .bp4-numeric-input .bp4-button-group.bp4-vertical>.bp4-button {
-    flex: 1 1 14px;
+    flex: 1 1 11px;
     min-height: 0;
     padding: 0;
-    width: 30px
+    width: 24px
 }
 
 .bp4-numeric-input.bp4-large .bp4-button-group.bp4-vertical>.bp4-button {
     width: 40px
+}
+
+.bp4-numeric-input.bp4-small .bp4-button-group.bp4-vertical>.bp4-button {
+    width: 24px
 }
 
 form {
@@ -6816,7 +6844,7 @@ span.bp4-popover-target {
     background-color: var(--pt-intent-primary-hover)
 }
 
-.bp4-tag.bp4-intent-primary.bp4-interactive:active {
+.bp4-tag.bp4-intent-primary.bp4-interactive.bp4-active,.bp4-tag.bp4-intent-primary.bp4-interactive:active {
     background-color: var(--pt-intent-primary-active)
 }
 
@@ -6837,7 +6865,7 @@ span.bp4-popover-target {
     background-color: var(--pt-intent-success-hover)
 }
 
-.bp4-tag.bp4-intent-success.bp4-interactive:active {
+.bp4-tag.bp4-intent-success.bp4-interactive.bp4-active,.bp4-tag.bp4-intent-success.bp4-interactive:active {
     background-color: var(--pt-intent-success-active)
 }
 
@@ -6858,7 +6886,7 @@ span.bp4-popover-target {
     background-color: var(--pt-intent-warning-hover)
 }
 
-.bp4-tag.bp4-intent-warning.bp4-interactive:active {
+.bp4-tag.bp4-intent-warning.bp4-interactive.bp4-active,.bp4-tag.bp4-intent-warning.bp4-interactive:active {
     background-color: var(--pt-intent-warning-active)
 }
 
@@ -6879,7 +6907,7 @@ span.bp4-popover-target {
     background-color: var(--pt-intent-danger-hover)
 }
 
-.bp4-tag.bp4-intent-danger.bp4-interactive:active {
+.bp4-tag.bp4-intent-danger.bp4-interactive.bp4-active,.bp4-tag.bp4-intent-danger.bp4-interactive:active {
     background-color: var(--pt-intent-danger-active)
 }
 
@@ -6941,7 +6969,7 @@ span.bp4-popover-target {
     color: var(--primary1)
 }
 
-.bp4-tag.bp4-minimal.bp4-intent-primary.bp4-interactive:active {
+.bp4-tag.bp4-minimal.bp4-intent-primary.bp4-interactive.bp4-active,.bp4-tag.bp4-minimal.bp4-intent-primary.bp4-interactive:active {
     background-color: hsla(var(--primary3-hsl),.3);
     color: var(--primary1)
 }
@@ -6968,7 +6996,7 @@ span.bp4-popover-target {
     color: var(--success1)
 }
 
-.bp4-tag.bp4-minimal.bp4-intent-success.bp4-interactive:active {
+.bp4-tag.bp4-minimal.bp4-intent-success.bp4-interactive.bp4-active,.bp4-tag.bp4-minimal.bp4-intent-success.bp4-interactive:active {
     background-color: hsla(var(--success3-hsl),.3);
     color: var(--success1)
 }
@@ -6995,7 +7023,7 @@ span.bp4-popover-target {
     color: var(--warning1)
 }
 
-.bp4-tag.bp4-minimal.bp4-intent-warning.bp4-interactive:active {
+.bp4-tag.bp4-minimal.bp4-intent-warning.bp4-interactive.bp4-active,.bp4-tag.bp4-minimal.bp4-intent-warning.bp4-interactive:active {
     background-color: hsla(var(--warning3-hsl),.3);
     color: var(--warning1)
 }
@@ -7022,7 +7050,7 @@ span.bp4-popover-target {
     color: var(--danger1)
 }
 
-.bp4-tag.bp4-minimal.bp4-intent-danger.bp4-interactive:active {
+.bp4-tag.bp4-minimal.bp4-intent-danger.bp4-interactive.bp4-active,.bp4-tag.bp4-minimal.bp4-intent-danger.bp4-interactive:active {
     background-color: hsla(var(--danger3-hsl),.3);
     color: var(--danger1)
 }
@@ -7045,7 +7073,7 @@ span.bp4-popover-target {
     color: var(--primary6)
 }
 
-.bp4-dark .bp4-tag.bp4-minimal.bp4-intent-primary.bp4-interactive:active {
+.bp4-dark .bp4-tag.bp4-minimal.bp4-intent-primary.bp4-interactive.bp4-active,.bp4-dark .bp4-tag.bp4-minimal.bp4-intent-primary.bp4-interactive:active {
     background-color: hsla(var(--primary3-hsl),.35);
     color: var(--primary6)
 }
@@ -7068,7 +7096,7 @@ span.bp4-popover-target {
     color: var(--success6)
 }
 
-.bp4-dark .bp4-tag.bp4-minimal.bp4-intent-success.bp4-interactive:active {
+.bp4-dark .bp4-tag.bp4-minimal.bp4-intent-success.bp4-interactive.bp4-active,.bp4-dark .bp4-tag.bp4-minimal.bp4-intent-success.bp4-interactive:active {
     background-color: hsla(var(--success3-hsl),.35);
     color: var(--success6)
 }
@@ -7091,7 +7119,7 @@ span.bp4-popover-target {
     color: var(--warning6)
 }
 
-.bp4-dark .bp4-tag.bp4-minimal.bp4-intent-warning.bp4-interactive:active {
+.bp4-dark .bp4-tag.bp4-minimal.bp4-intent-warning.bp4-interactive.bp4-active,.bp4-dark .bp4-tag.bp4-minimal.bp4-intent-warning.bp4-interactive:active {
     background-color: hsla(var(--warning3-hsl),.35);
     color: var(--warning6)
 }
@@ -7114,7 +7142,7 @@ span.bp4-popover-target {
     color: var(--danger6)
 }
 
-.bp4-dark .bp4-tag.bp4-minimal.bp4-intent-danger.bp4-interactive:active {
+.bp4-dark .bp4-tag.bp4-minimal.bp4-intent-danger.bp4-interactive.bp4-active,.bp4-dark .bp4-tag.bp4-minimal.bp4-intent-danger.bp4-interactive:active {
     background-color: hsla(var(--danger3-hsl),.35);
     color: var(--danger6)
 }
@@ -7225,7 +7253,11 @@ span.bp4-popover-target {
     margin-right: 0
 }
 
-.bp4-tag-input .bp4-tag-input-values:first-child .bp4-input-ghost:first-child {
+.bp4-tag-input .bp4-tag-input-values:first-child .bp4-tag~.bp4-input-ghost {
+    padding-left: 0
+}
+
+.bp4-tag-input .bp4-tag-input-values:first-child .bp4-input-ghost {
     padding-left: 5px
 }
 
@@ -7337,6 +7369,8 @@ span.bp4-popover-target {
     max-height: 0;
     max-width: 100%;
     min-width: 80px;
+    opacity: 0;
+    overflow: hidden;
     position: absolute;
     white-space: nowrap;
     z-index: -1
@@ -9460,6 +9494,37 @@ span.bp4-popover-target {
     overflow-x: hidden
 }
 
+.bp4-table-body-scrolling-indicator-overlay {
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1
+}
+
+.bp4-table-body-is-scrolling-bottom,.bp4-table-body-is-scrolling-left,.bp4-table-body-is-scrolling-right,.bp4-table-body-is-scrolling-top {
+    opacity: 1;
+    transition: opacity .2s linear
+}
+
+.bp4-table-body-is-scrolling-top {
+    background: linear-gradient(180deg,black,transparent 10%)
+}
+
+.bp4-table-body-is-scrolling-right {
+    background: linear-gradient(270deg,black,transparent 10%)
+}
+
+.bp4-table-body-is-scrolling-bottom {
+    background: linear-gradient(0deg,black,transparent 10%)
+}
+
+.bp4-table-body-is-scrolling-left {
+    background: linear-gradient(90deg,black,transparent 10%)
+}
+
 .bp4-table-quadrant-body-container {
     position: relative
 }
@@ -9525,6 +9590,36 @@ span.bp4-popover-target {
 
 .bp4-table-quadrant-top-left .bp4-table-body-virtual-client {
     min-width: 1px
+}
+
+@media (-webkit-max-device-pixel-ratio:1.5) {
+    .bp4-table-quadrant-top .bp4-table-quadrant-scroll-container {
+        bottom: -50px
+    }
+
+    .bp4-table-quadrant-left .bp4-table-quadrant-scroll-container {
+        right: -50px
+    }
+
+    .bp4-table-quadrant-top-left .bp4-table-quadrant-scroll-container {
+        bottom: -50px;
+        right: -50px
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio:2.5) {
+    .bp4-table-quadrant-top .bp4-table-quadrant-scroll-container {
+        bottom: -10px
+    }
+
+    .bp4-table-quadrant-left .bp4-table-quadrant-scroll-container {
+        right: -10px
+    }
+
+    .bp4-table-quadrant-top-left .bp4-table-quadrant-scroll-container {
+        bottom: -10px;
+        right: -10px
+    }
 }
 
 .bp4-table-container {
@@ -9619,14 +9714,6 @@ span.bp4-popover-target {
 .bp4-table-no-layout {
     display: inline-block;
     position: absolute
-}
-
-.bp4-table-scrollbar-measure {
-    height: 100px;
-    overflow: scroll;
-    position: absolute;
-    top: -9999px;
-    width: 100px
 }
 
 .bp4-context-menu2-virtual-target {
