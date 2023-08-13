@@ -14,21 +14,28 @@
 
 import * as React from "react";
 
-import { Button, H5, HotkeysTarget2, KeyCombo, MenuItem, Position, Switch, Toaster } from "@blueprintjs/core";
+import {
+    Button,
+    H5,
+    HotkeysTarget2,
+    KeyComboTag,
+    MenuItem,
+    OverlayToaster,
+    Position,
+    Switch,
+    ToasterInstance,
+} from "@blueprintjs/core";
 import { Example, ExampleProps, handleBooleanChange } from "@blueprintjs/docs-theme";
 import { Omnibar } from "@blueprintjs/select";
-
 import {
     areFilmsEqual,
     createFilm,
+    Film,
     filterFilm,
-    IFilm,
-    renderCreateFilmOption,
+    renderCreateFilmMenuItem,
     renderFilm,
     TOP_100_FILMS,
-} from "./../../common/films";
-
-const FilmOmnibar = Omnibar.ofType<IFilm>();
+} from "@blueprintjs/select/examples";
 
 export interface IOmnibarExampleState {
     allowCreate: boolean;
@@ -47,17 +54,17 @@ export class OmnibarExample extends React.PureComponent<ExampleProps, IOmnibarEx
 
     private handleResetChange = handleBooleanChange(resetOnSelect => this.setState({ resetOnSelect }));
 
-    private toaster: Toaster;
+    private toaster: ToasterInstance;
 
     private refHandlers = {
-        toaster: (ref: Toaster) => (this.toaster = ref),
+        toaster: (ref: ToasterInstance) => (this.toaster = ref),
     };
 
     public render() {
         const { allowCreate } = this.state;
 
         const maybeCreateNewItemFromQuery = allowCreate ? createFilm : undefined;
-        const maybeCreateNewItemRenderer = allowCreate ? renderCreateFilmOption : null;
+        const maybeCreateNewItemRenderer = allowCreate ? renderCreateFilmMenuItem : null;
 
         return (
             <HotkeysTarget2
@@ -76,10 +83,10 @@ export class OmnibarExample extends React.PureComponent<ExampleProps, IOmnibarEx
                     <span>
                         <Button text="Click to show Omnibar" onClick={this.handleClick} />
                         {" or press "}
-                        <KeyCombo combo="shift + o" />
+                        <KeyComboTag combo="shift + o" />
                     </span>
 
-                    <FilmOmnibar
+                    <Omnibar<Film>
                         {...this.state}
                         createNewItemFromQuery={maybeCreateNewItemFromQuery}
                         createNewItemRenderer={maybeCreateNewItemRenderer}
@@ -91,7 +98,7 @@ export class OmnibarExample extends React.PureComponent<ExampleProps, IOmnibarEx
                         onClose={this.handleClose}
                         onItemSelect={this.handleItemSelect}
                     />
-                    <Toaster position={Position.TOP} ref={this.refHandlers.toaster} />
+                    <OverlayToaster position={Position.TOP} ref={this.refHandlers.toaster} />
                 </Example>
             </HotkeysTarget2>
         );
@@ -115,7 +122,7 @@ export class OmnibarExample extends React.PureComponent<ExampleProps, IOmnibarEx
         this.setState({ isOpen: true });
     };
 
-    private handleItemSelect = (film: IFilm) => {
+    private handleItemSelect = (film: Film) => {
         this.setState({ isOpen: false });
 
         this.toaster.show({
