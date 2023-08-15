@@ -40,9 +40,9 @@ import {
     handleValueChange,
 } from "@blueprintjs/docs-theme";
 
-import { BlueprintExampleData } from "../../tags/types";
+import { IBlueprintExampleData } from "../../tags/types";
 
-export interface MultistepDialogExampleState {
+export interface IMultistepDialogExampleState {
     autoFocus: boolean;
     canEscapeKeyClose: boolean;
     canOutsideClickClose: boolean;
@@ -60,10 +60,10 @@ export interface MultistepDialogExampleState {
 const NAV_POSITIONS = ["left", "top", "right"];
 
 export class MultistepDialogExample extends React.PureComponent<
-    ExampleProps<BlueprintExampleData>,
-    MultistepDialogExampleState
+    ExampleProps<IBlueprintExampleData>,
+    IMultistepDialogExampleState
 > {
-    public state: MultistepDialogExampleState = {
+    public state: IMultistepDialogExampleState = {
         autoFocus: true,
         canEscapeKeyClose: true,
         canOutsideClickClose: true,
@@ -199,12 +199,12 @@ export class MultistepDialogExample extends React.PureComponent<
     private handleInitialStepIndexChange = (newValue: number) => this.setState({ initialStepIndex: newValue });
 }
 
-export interface SelectPanelProps {
+export interface ISelectPanelProps {
     selectedValue: string;
     onChange: (event: React.FormEvent<HTMLInputElement>) => void;
 }
 
-const SelectPanel: React.FC<SelectPanelProps> = props => (
+const SelectPanel: React.FC<ISelectPanelProps> = props => (
     <DialogBody className="docs-multistep-dialog-example-step">
         <p>Use this dialog to divide content into multiple sequential steps.</p>
         <p>Select one of the options below in order to proceed to the next step:</p>
@@ -216,11 +216,11 @@ const SelectPanel: React.FC<SelectPanelProps> = props => (
     </DialogBody>
 );
 
-export interface ConfirmPanelProps {
+export interface IConfirmPanelProps {
     selectedValue: string;
 }
 
-const ConfirmPanel: React.FC<ConfirmPanelProps> = props => (
+const ConfirmPanel: React.FC<IConfirmPanelProps> = props => (
     <DialogBody className="docs-multistep-dialog-example-step">
         <p>
             You selected <strong>Option {props.selectedValue}</strong>.

@@ -19,7 +19,7 @@ import * as React from "react";
 import { Example, ExampleProps } from "@blueprintjs/docs-theme";
 import { Cell, Column, Table2, Utils } from "@blueprintjs/table";
 
-export interface TableFreezingExampleState {
+export interface ITableFreezingExampleState {
     numFrozenColumns?: number;
     numFrozenRows?: number;
 }
@@ -29,7 +29,7 @@ const NUM_COLUMNS = 20;
 const NUM_FROZEN_ROWS = 2;
 const NUM_FROZEN_COLUMNS = 1;
 
-export class TableFreezingExample extends React.PureComponent<ExampleProps, TableFreezingExampleState> {
+export class TableFreezingExample extends React.PureComponent<ExampleProps, ITableFreezingExampleState> {
     public render() {
         return (
             <Example options={false} showOptionsBelowExample={true} {...this.props}>

@@ -19,7 +19,7 @@ import * as React from "react";
 import { H5, HandleInteractionKind, Intent, MultiSlider, Radio, RadioGroup, Switch } from "@blueprintjs/core";
 import { Example, ExampleProps, handleBooleanChange, handleValueChange } from "@blueprintjs/docs-theme";
 
-interface SliderValues {
+interface ISliderValues {
     dangerStart: number;
     warningStart: number;
     warningEnd: number;
@@ -28,16 +28,16 @@ interface SliderValues {
 
 type ShownIntents = "danger" | "warning" | "both";
 
-interface MultiSliderExampleState {
+interface IMultiSliderExampleState {
     interactionKind: HandleInteractionKind;
     showTrackFill: boolean;
     shownIntents: ShownIntents;
-    values: SliderValues;
+    values: ISliderValues;
     vertical: boolean;
 }
 
-export class MultiSliderExample extends React.PureComponent<ExampleProps, MultiSliderExampleState> {
-    public state: MultiSliderExampleState = {
+export class MultiSliderExample extends React.PureComponent<ExampleProps, IMultiSliderExampleState> {
+    public state: IMultiSliderExampleState = {
         interactionKind: HandleInteractionKind.PUSH,
         showTrackFill: true,
         shownIntents: "both",
@@ -146,13 +146,13 @@ export class MultiSliderExample extends React.PureComponent<ExampleProps, MultiS
     private handleChange = (rawValues: number[]) => {
         // newValues is always in sorted order, and handled cannot be unsorted by dragging with lock/push interactions.
         const newValuesMap = { ...this.state.values, ...this.getUpdatedHandles(rawValues) };
-        const newValues = Object.keys(newValuesMap).map((key: string) => newValuesMap[key as keyof SliderValues]);
+        const newValues = Object.keys(newValuesMap).map((key: string) => newValuesMap[key as keyof ISliderValues]);
         newValues.sort((a, b) => a - b);
         const [dangerStart, warningStart, warningEnd, dangerEnd] = newValues;
         this.setState({ values: { dangerStart, warningStart, warningEnd, dangerEnd } });
     };
 
-    private getUpdatedHandles(newValues: number[]): Partial<SliderValues> {
+    private getUpdatedHandles(newValues: number[]): Partial<ISliderValues> {
         switch (this.state.shownIntents) {
             case "both": {
                 const [dangerStart, warningStart, warningEnd, dangerEnd] = newValues;

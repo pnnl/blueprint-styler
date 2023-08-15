@@ -61,7 +61,7 @@ export class HotkeyTesterExample extends React.PureComponent<ExampleProps, Hotke
         e.preventDefault();
         e.stopPropagation();
 
-        const combo = getKeyComboString(e.nativeEvent);
+        const combo = getKeyComboString(e.nativeEvent as KeyboardEvent);
         this.setState({ combo });
     };
 

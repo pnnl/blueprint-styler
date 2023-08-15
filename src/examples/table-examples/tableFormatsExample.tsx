@@ -17,9 +17,9 @@
 import * as React from "react";
 
 import { Example, ExampleProps } from "@blueprintjs/docs-theme";
-import { Cell, Column, JSONFormat, Table2, TruncatedFormat } from "@blueprintjs/table";
+import { Cell, Column, JSONFormat2, Table2, TruncatedFormat2 } from "@blueprintjs/table";
 
-interface Timezone {
+interface ITimezone {
     name: string;
     offsetMsec: number;
     offsetString: string;
@@ -27,8 +27,7 @@ interface Timezone {
 
 const LOCAL_TIMEZONE_OFFSET_MSEC = new Date().getTimezoneOffset() * 60 * 1000;
 
-// TODO(adahiya): import timezones from datetime package
-const TIME_ZONES: Timezone[] = (
+const TIME_ZONES: ITimezone[] = (
     [
         ["-12:00", -12.0, "Etc/GMT+12"],
         ["-11:00", -11.0, "Pacific/Midway"],
@@ -114,14 +113,14 @@ export class TableFormatsExample extends React.PureComponent<ExampleProps> {
         });
         return (
             <Cell>
-                <TruncatedFormat detectTruncation={true}>{formattedDateTime}</TruncatedFormat>
+                <TruncatedFormat2 detectTruncation={true}>{formattedDateTime}</TruncatedFormat2>
             </Cell>
         );
     };
 
     private renderJSON = (row: number) => (
         <Cell>
-            <JSONFormat detectTruncation={true}>{this.data[row]}</JSONFormat>
+            <JSONFormat2 detectTruncation={true}>{this.data[row]}</JSONFormat2>
         </Cell>
     );
 }

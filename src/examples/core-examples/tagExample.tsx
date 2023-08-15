@@ -21,7 +21,7 @@ import { Example, ExampleProps, handleBooleanChange } from "@blueprintjs/docs-th
 
 import { IntentSelect } from "./common/intentSelect";
 
-export interface TagExampleState {
+export interface ITagExampleState {
     active: boolean;
     fill: boolean;
     icon: boolean;
@@ -35,8 +35,8 @@ export interface TagExampleState {
     tags: string[];
 }
 
-export class TagExample extends React.PureComponent<ExampleProps, TagExampleState> {
-    public state: TagExampleState = {
+export class TagExample extends React.PureComponent<ExampleProps, ITagExampleState> {
+    public state: ITagExampleState = {
         active: false,
         fill: false,
         icon: false,

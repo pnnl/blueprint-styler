@@ -16,9 +16,10 @@
 
 import * as React from "react";
 
-import { Code, H5, Intent, MenuItem, Popover, Switch, TagProps } from "@blueprintjs/core";
+import { Code, H5, Intent, Switch, TagProps } from "@blueprintjs/core";
 import { Example, ExampleProps } from "@blueprintjs/docs-theme";
-import { ItemRenderer, MultiSelect } from "@blueprintjs/select";
+import { MenuItem2, Popover2 } from "@blueprintjs/popover2";
+import { ItemRenderer, MultiSelect2 } from "@blueprintjs/select";
 import {
     areFilmsEqual,
     arrayContainsFilm,
@@ -36,7 +37,7 @@ import { PropCodeTooltip } from "../../common/propCodeTooltip";
 
 const INTENTS = [Intent.NONE, Intent.PRIMARY, Intent.SUCCESS, Intent.DANGER, Intent.WARNING];
 
-export interface MultiSelectExampleState {
+export interface IMultiSelectExampleState {
     allowCreate: boolean;
     createdItems: Film[];
     disabled: boolean;
@@ -53,8 +54,8 @@ export interface MultiSelectExampleState {
     tagMinimal: boolean;
 }
 
-export class MultiSelectExample extends React.PureComponent<ExampleProps, MultiSelectExampleState> {
-    public state: MultiSelectExampleState = {
+export class MultiSelectExample extends React.PureComponent<ExampleProps, IMultiSelectExampleState> {
+    public state: IMultiSelectExampleState = {
         allowCreate: false,
         createdItems: [],
         disabled: false,
@@ -71,7 +72,7 @@ export class MultiSelectExample extends React.PureComponent<ExampleProps, MultiS
         tagMinimal: false,
     };
 
-    private popoverRef: React.RefObject<Popover> = React.createRef();
+    private popoverRef: React.RefObject<Popover2> = React.createRef();
 
     private handleAllowCreateChange = this.handleSwitchChange("allowCreate");
 
@@ -104,13 +105,13 @@ export class MultiSelectExample extends React.PureComponent<ExampleProps, MultiS
         });
 
         const initialContent = this.state.hasInitialContent ? (
-            <MenuItem disabled={true} text={`${TOP_100_FILMS.length} items loaded.`} roleStructure="listoption" />
+            <MenuItem2 disabled={true} text={`${TOP_100_FILMS.length} items loaded.`} roleStructure="listoption" />
         ) : // explicit undefined (not null) for default behavior (show full list)
         undefined;
 
         return (
             <Example options={this.renderOptions()} {...this.props}>
-                <MultiSelect<Film>
+                <MultiSelect2<Film>
                     {...flags}
                     createNewItemFromQuery={allowCreate ? createFilms : undefined}
                     createNewItemRenderer={allowCreate ? renderCreateFilmsMenuItem : null}
@@ -120,7 +121,7 @@ export class MultiSelectExample extends React.PureComponent<ExampleProps, MultiS
                     items={this.state.items}
                     itemsEqual={areFilmsEqual}
                     menuProps={{ "aria-label": "films" }}
-                    noResults={<MenuItem disabled={true} text="No results." roleStructure="listoption" />}
+                    noResults={<MenuItem2 disabled={true} text="No results." roleStructure="listoption" />}
                     onClear={this.state.showClearButton ? this.handleClear : undefined}
                     onItemSelect={this.handleFilmSelect}
                     onItemsPaste={this.handleFilmsPaste}
@@ -230,9 +231,8 @@ export class MultiSelectExample extends React.PureComponent<ExampleProps, MultiS
         }
 
         return (
-            <MenuItem
+            <MenuItem2
                 {...getFilmItemProps(film, props)}
-                roleStructure="listoption"
                 selected={this.isFilmSelected(film)}
                 shouldDismissPopover={false}
                 text={`${film.rank}. ${film.title}`}
@@ -311,7 +311,7 @@ export class MultiSelectExample extends React.PureComponent<ExampleProps, MultiS
         this.selectFilms(films);
     };
 
-    private handleSwitchChange(prop: keyof MultiSelectExampleState) {
+    private handleSwitchChange(prop: keyof IMultiSelectExampleState) {
         return (event: React.FormEvent<HTMLInputElement>) => {
             const checked = event.currentTarget.checked;
             this.setState(state => ({ ...state, [prop]: checked }));

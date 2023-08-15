@@ -16,16 +16,17 @@
 
 import * as React from "react";
 
-import { Button, Classes, Code, ControlGroup, Placement, Popover } from "@blueprintjs/core";
+import { Button, Classes, Code, ControlGroup } from "@blueprintjs/core";
 import { Example, ExampleProps } from "@blueprintjs/docs-theme";
+import { Placement, Popover2 } from "@blueprintjs/popover2";
 
-const EXAMPLE_CLASS = "docs-popover-placement-example";
-const SIDE_LABEL_CLASS = "docs-popover-placement-label-side";
-const ALIGNMENT_LABEL_CLASS = "docs-popover-placement-label-alignment";
+const EXAMPLE_CLASS = "docs-popover2-placement-example";
+const SIDE_LABEL_CLASS = "docs-popover2-placement-label-side";
+const ALIGNMENT_LABEL_CLASS = "docs-popover2-placement-label-alignment";
 const CONTENT_CLASS = `${EXAMPLE_CLASS}-content`;
 
-export class PopoverPlacementExample extends React.PureComponent<ExampleProps> {
-    public static displayName = "PopoverPlacementExample";
+export class Popover2PlacementExample extends React.PureComponent<ExampleProps> {
+    public static displayName = "Popover2PlacementExample";
 
     public render() {
         return (
@@ -106,12 +107,18 @@ export class PopoverPlacementExample extends React.PureComponent<ExampleProps> {
         );
 
         return (
-            <Popover
+            <Popover2
                 content={content}
                 placement={placement}
                 popoverClassName={CONTENT_CLASS}
-                renderTarget={({ isOpen, ...p }) => (
-                    <Button {...p} active={isOpen} className={Classes.MONOSPACE_TEXT} text={buttonLabel} />
+                renderTarget={({ isOpen, ref, ...p }) => (
+                    <Button
+                        {...p}
+                        active={isOpen}
+                        elementRef={ref}
+                        className={Classes.MONOSPACE_TEXT}
+                        text={buttonLabel}
+                    />
                 )}
             />
         );

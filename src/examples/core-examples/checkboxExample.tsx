@@ -21,7 +21,7 @@ import { Example, ExampleProps, handleBooleanChange } from "@blueprintjs/docs-th
 
 import { AlignmentSelect } from "./common/alignmentSelect";
 
-export interface CheckboxExampleState {
+export interface ICheckboxExampleState {
     alignIndicator: Alignment;
     disabled: boolean;
     inline: boolean;
@@ -29,8 +29,8 @@ export interface CheckboxExampleState {
     value?: string;
 }
 
-export class CheckboxExample extends React.PureComponent<ExampleProps, CheckboxExampleState> {
-    public state: CheckboxExampleState = {
+export class CheckboxExample extends React.PureComponent<ExampleProps, ICheckboxExampleState> {
+    public state: ICheckboxExampleState = {
         alignIndicator: Alignment.LEFT,
         disabled: false,
         inline: false,

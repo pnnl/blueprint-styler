@@ -34,7 +34,7 @@ const VALUES = [
     undefined,
 ];
 
-export interface TagInputExampleState {
+export interface ITagInputExampleState {
     addOnBlur: boolean;
     addOnPaste: boolean;
     autoResize: boolean;
@@ -48,8 +48,8 @@ export interface TagInputExampleState {
     values: React.ReactNode[];
 }
 
-export class TagInputExample extends React.PureComponent<ExampleProps, TagInputExampleState> {
-    public state: TagInputExampleState = {
+export class TagInputExample extends React.PureComponent<ExampleProps, ITagInputExampleState> {
+    public state: ITagInputExampleState = {
         addOnBlur: false,
         addOnPaste: true,
         autoResize: false,

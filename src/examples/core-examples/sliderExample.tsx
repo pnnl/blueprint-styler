@@ -19,15 +19,15 @@ import * as React from "react";
 import { H5, Slider, Switch } from "@blueprintjs/core";
 import { Example, ExampleProps, handleBooleanChange } from "@blueprintjs/docs-theme";
 
-export interface SliderExampleState {
+export interface ISliderExampleState {
     value1?: number;
     value2?: number;
     value3?: number;
     vertical?: boolean;
 }
 
-export class SliderExample extends React.PureComponent<ExampleProps, SliderExampleState> {
-    public state: SliderExampleState = {
+export class SliderExample extends React.PureComponent<ExampleProps, ISliderExampleState> {
+    public state: ISliderExampleState = {
         value1: 0,
         value2: 2.5,
         value3: 30,

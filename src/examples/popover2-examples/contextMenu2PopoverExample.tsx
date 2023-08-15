@@ -17,10 +17,11 @@
 import classNames from "classnames";
 import * as React from "react";
 
-import { Classes, hideContextMenu, Menu, MenuDivider, MenuItem, showContextMenu } from "@blueprintjs/core";
+import { Classes, Menu, MenuDivider, MenuItem } from "@blueprintjs/core";
 import { Example, ExampleProps } from "@blueprintjs/docs-theme";
+import { hideContextMenu, showContextMenu } from "@blueprintjs/popover2";
 
-export const ContextMenuPopoverExample: React.FC<ExampleProps> = props => {
+export const ContextMenu2PopoverExample: React.FC<ExampleProps> = props => {
     const [isOpen, setIsOpen] = React.useState(false);
 
     const handleClose = React.useCallback(() => {

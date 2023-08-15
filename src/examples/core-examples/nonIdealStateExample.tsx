@@ -45,7 +45,7 @@ const nonIdealStateIconSizeToSize: Record<NonIdealStateIconSize, Size> = Object.
 
 const defaultIcon: IconName = "search";
 
-export interface NonIdealStateExampleState {
+export interface INonIdealStateExampleState {
     icon: IconName;
     iconSize: NonIdealStateIconSize;
     layout: Layout;
@@ -55,8 +55,8 @@ export interface NonIdealStateExampleState {
     visual: VisualKind;
 }
 
-export class NonIdealStateExample extends React.PureComponent<ExampleProps, NonIdealStateExampleState> {
-    public state: NonIdealStateExampleState = {
+export class NonIdealStateExample extends React.PureComponent<ExampleProps, INonIdealStateExampleState> {
+    public state: INonIdealStateExampleState = {
         icon: defaultIcon,
         iconSize: NonIdealStateIconSize.STANDARD,
         layout: "vertical",

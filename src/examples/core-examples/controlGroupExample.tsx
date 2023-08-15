@@ -21,13 +21,13 @@ import { Example, ExampleProps, handleBooleanChange } from "@blueprintjs/docs-th
 
 const FILTER_OPTIONS = ["Filter", "Name - ascending", "Name - descending", "Price - ascending", "Price - descending"];
 
-export interface ControlGroupExampleState {
+export interface IControlGroupExampleState {
     fill: boolean;
     vertical: boolean;
 }
 
-export class ControlGroupExample extends React.PureComponent<ExampleProps, ControlGroupExampleState> {
-    public state: ControlGroupExampleState = {
+export class ControlGroupExample extends React.PureComponent<ExampleProps, IControlGroupExampleState> {
+    public state: IControlGroupExampleState = {
         fill: false,
         vertical: false,
     };

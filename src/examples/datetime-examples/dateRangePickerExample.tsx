@@ -30,7 +30,7 @@ import {
 import { MomentDateRange } from "./common/momentDate";
 import { PrecisionSelect } from "./common/precisionSelect";
 
-export interface DateRangePickerExampleState {
+export interface IDateRangePickerExampleState {
     allowSingleDayRange?: boolean;
     singleMonthOnly?: boolean;
     contiguousCalendarMonths?: boolean;
@@ -42,12 +42,12 @@ export interface DateRangePickerExampleState {
     timePrecision?: TimePrecision;
 }
 
-interface DateOption {
+interface IDateOption {
     label: string;
     value?: Date;
 }
 
-const MIN_DATE_OPTIONS: DateOption[] = [
+const MIN_DATE_OPTIONS: IDateOption[] = [
     { label: "None", value: undefined },
     {
         label: "4 months ago",
@@ -59,7 +59,7 @@ const MIN_DATE_OPTIONS: DateOption[] = [
     },
 ];
 
-const MAX_DATE_OPTIONS: DateOption[] = [
+const MAX_DATE_OPTIONS: IDateOption[] = [
     { label: "None", value: undefined },
     {
         label: "4 months from now",
@@ -71,8 +71,8 @@ const MAX_DATE_OPTIONS: DateOption[] = [
     },
 ];
 
-export class DateRangePickerExample extends React.PureComponent<ExampleProps, DateRangePickerExampleState> {
-    public state: DateRangePickerExampleState = {
+export class DateRangePickerExample extends React.PureComponent<ExampleProps, IDateRangePickerExampleState> {
+    public state: IDateRangePickerExampleState = {
         allowSingleDayRange: false,
         contiguousCalendarMonths: true,
         dateRange: [null, null],
@@ -181,7 +181,7 @@ export class DateRangePickerExample extends React.PureComponent<ExampleProps, Da
     private renderSelectMenu(
         label: string,
         selectedValue: number | string,
-        options: DateOption[],
+        options: IDateOption[],
         onChange: React.FormEventHandler<HTMLElement>,
     ) {
         return (

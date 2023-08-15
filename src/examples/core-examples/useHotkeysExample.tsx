@@ -16,7 +16,7 @@
 
 import * as React from "react";
 
-import { NonIdealState, useHotkeys } from "@blueprintjs/core";
+import { useHotkeys } from "@blueprintjs/core";
 import { Example, ExampleProps } from "@blueprintjs/docs-theme";
 
 import { PianoKey } from "./audio";
@@ -30,15 +30,15 @@ export const UseHotkeysExample: React.FC<ExampleProps> = props => {
         if (typeof window.AudioContext !== "undefined" && audioContext === undefined) {
             setAudioContext(new AudioContext());
         }
-    }, [audioContext, pianoRef]);
+    }, [pianoRef]);
 
-    const [keyPressed, setKeyPressed] = React.useState<readonly boolean[]>(new Array(25).fill(false));
-
-    const setKeyState = React.useCallback((targetIndex: number, newValue: boolean) => {
-        setKeyPressed(previouslySelected =>
-            previouslySelected.map((value, index) => (index === targetIndex ? newValue : value)),
-        );
-    }, []);
+    // create a dictionary of key states and updater functions
+    const keys = Array.apply(null, Array(24))
+        .map(() => React.useState(() => false), [])
+        .map(([pressed, setPressed]) => ({
+            pressed,
+            setPressed,
+        }));
 
     const hotkeys = React.useMemo(
         () => [
@@ -52,210 +52,174 @@ export const UseHotkeysExample: React.FC<ExampleProps> = props => {
                 combo: "Q",
                 group: "useHotkeys Example",
                 label: "Play a C5",
-                onKeyDown: () => setKeyState(0, true),
-                onKeyUp: () => setKeyState(0, false),
+                onKeyDown: () => keys[0].setPressed(true),
+                onKeyUp: () => keys[0].setPressed(false),
             },
             {
                 combo: "2",
                 group: "useHotkeys Example",
                 label: "Play a C#5",
-                onKeyDown: () => setKeyState(1, true),
-                onKeyUp: () => setKeyState(1, false),
+                onKeyDown: () => keys[1].setPressed(true),
+                onKeyUp: () => keys[1].setPressed(false),
             },
             {
                 combo: "W",
                 group: "useHotkeys Example",
                 label: "Play a D5",
-                onKeyDown: () => setKeyState(2, true),
-                onKeyUp: () => setKeyState(2, false),
+                onKeyDown: () => keys[2].setPressed(true),
+                onKeyUp: () => keys[2].setPressed(false),
             },
             {
                 combo: "3",
                 group: "useHotkeys Example",
                 label: "Play a D#5",
-                onKeyDown: () => setKeyState(3, true),
-                onKeyUp: () => setKeyState(3, false),
+                onKeyDown: () => keys[3].setPressed(true),
+                onKeyUp: () => keys[3].setPressed(false),
             },
             {
                 combo: "E",
                 group: "useHotkeys Example",
                 label: "Play a E5",
-                onKeyDown: () => setKeyState(4, true),
-                onKeyUp: () => setKeyState(4, false),
+                onKeyDown: () => keys[4].setPressed(true),
+                onKeyUp: () => keys[4].setPressed(false),
             },
             {
                 combo: "R",
                 group: "useHotkeys Example",
                 label: "Play a F5",
-                onKeyDown: () => setKeyState(5, true),
-                onKeyUp: () => setKeyState(5, false),
+                onKeyDown: () => keys[5].setPressed(true),
+                onKeyUp: () => keys[5].setPressed(false),
             },
             {
                 combo: "5",
                 group: "useHotkeys Example",
                 label: "Play a F#5",
-                onKeyDown: () => setKeyState(6, true),
-                onKeyUp: () => setKeyState(6, false),
+                onKeyDown: () => keys[6].setPressed(true),
+                onKeyUp: () => keys[6].setPressed(false),
             },
             {
                 combo: "T",
                 group: "useHotkeys Example",
                 label: "Play a G5",
-                onKeyDown: () => setKeyState(7, true),
-                onKeyUp: () => setKeyState(7, false),
+                onKeyDown: () => keys[7].setPressed(true),
+                onKeyUp: () => keys[7].setPressed(false),
             },
             {
                 combo: "6",
                 group: "useHotkeys Example",
                 label: "Play a G#5",
-                onKeyDown: () => setKeyState(8, true),
-                onKeyUp: () => setKeyState(8, false),
+                onKeyDown: () => keys[8].setPressed(true),
+                onKeyUp: () => keys[8].setPressed(false),
             },
             {
                 combo: "Y",
                 group: "useHotkeys Example",
                 label: "Play a A5",
-                onKeyDown: () => setKeyState(9, true),
-                onKeyUp: () => setKeyState(9, false),
+                onKeyDown: () => keys[9].setPressed(true),
+                onKeyUp: () => keys[9].setPressed(false),
             },
             {
                 combo: "7",
                 group: "useHotkeys Example",
                 label: "Play a A#5",
-                onKeyDown: () => setKeyState(10, true),
-                onKeyUp: () => setKeyState(10, false),
+                onKeyDown: () => keys[10].setPressed(true),
+                onKeyUp: () => keys[10].setPressed(false),
             },
             {
                 combo: "U",
                 group: "useHotkeys Example",
                 label: "Play a B5",
-                onKeyDown: () => setKeyState(11, true),
-                onKeyUp: () => setKeyState(11, false),
+                onKeyDown: () => keys[11].setPressed(true),
+                onKeyUp: () => keys[11].setPressed(false),
             },
             {
                 combo: "Z",
                 group: "useHotkeys Example",
                 label: "Play a C4",
-                onKeyDown: () => setKeyState(12, true),
-                onKeyUp: () => setKeyState(12, false),
+                onKeyDown: () => keys[12].setPressed(true),
+                onKeyUp: () => keys[12].setPressed(false),
             },
             {
                 combo: "S",
                 group: "useHotkeys Example",
                 label: "Play a C#4",
-                onKeyDown: () => setKeyState(13, true),
-                onKeyUp: () => setKeyState(13, false),
+                onKeyDown: () => keys[13].setPressed(true),
+                onKeyUp: () => keys[13].setPressed(false),
             },
             {
                 combo: "X",
                 group: "useHotkeys Example",
                 label: "Play a D4",
-                onKeyDown: () => setKeyState(14, true),
-                onKeyUp: () => setKeyState(14, false),
+                onKeyDown: () => keys[14].setPressed(true),
+                onKeyUp: () => keys[14].setPressed(false),
             },
             {
                 combo: "D",
                 group: "useHotkeys Example",
                 label: "Play a D#4",
-                onKeyDown: () => setKeyState(15, true),
-                onKeyUp: () => setKeyState(15, false),
+                onKeyDown: () => keys[15].setPressed(true),
+                onKeyUp: () => keys[15].setPressed(false),
             },
             {
                 combo: "C",
                 group: "useHotkeys Example",
                 label: "Play a E4",
-                onKeyDown: () => setKeyState(16, true),
-                onKeyUp: () => setKeyState(16, false),
+                onKeyDown: () => keys[16].setPressed(true),
+                onKeyUp: () => keys[16].setPressed(false),
             },
             {
                 combo: "V",
                 group: "useHotkeys Example",
                 label: "Play a F4",
-                onKeyDown: () => setKeyState(17, true),
-                onKeyUp: () => setKeyState(17, false),
+                onKeyDown: () => keys[17].setPressed(true),
+                onKeyUp: () => keys[17].setPressed(false),
             },
             {
                 combo: "G",
                 group: "useHotkeys Example",
                 label: "Play a F#4",
-                onKeyDown: () => setKeyState(18, true),
-                onKeyUp: () => setKeyState(18, false),
+                onKeyDown: () => keys[18].setPressed(true),
+                onKeyUp: () => keys[18].setPressed(false),
             },
             {
                 combo: "B",
                 group: "useHotkeys Example",
                 label: "Play a G4",
-                onKeyDown: () => setKeyState(19, true),
-                onKeyUp: () => setKeyState(19, false),
+                onKeyDown: () => keys[19].setPressed(true),
+                onKeyUp: () => keys[19].setPressed(false),
             },
             {
                 combo: "H",
                 group: "useHotkeys Example",
                 label: "Play a G#4",
-                onKeyDown: () => setKeyState(20, true),
-                onKeyUp: () => setKeyState(20, false),
+                onKeyDown: () => keys[20].setPressed(true),
+                onKeyUp: () => keys[20].setPressed(false),
             },
             {
                 combo: "N",
                 group: "useHotkeys Example",
                 label: "Play a A4",
-                onKeyDown: () => setKeyState(21, true),
-                onKeyUp: () => setKeyState(21, false),
+                onKeyDown: () => keys[21].setPressed(true),
+                onKeyUp: () => keys[21].setPressed(false),
             },
             {
                 combo: "J",
                 group: "useHotkeys Example",
                 label: "Play a A#4",
-                onKeyDown: () => setKeyState(22, true),
-                onKeyUp: () => setKeyState(22, false),
+                onKeyDown: () => keys[22].setPressed(true),
+                onKeyUp: () => keys[22].setPressed(false),
             },
             {
                 combo: "M",
                 group: "useHotkeys Example",
                 label: "Play a B4",
-                onKeyDown: () => setKeyState(23, true),
-                onKeyUp: () => setKeyState(23, false),
+                onKeyDown: () => keys[23].setPressed(true),
+                onKeyUp: () => keys[23].setPressed(false),
             },
         ],
-        [focusPiano, setKeyState],
+        [],
     );
     const { handleKeyDown, handleKeyUp } = useHotkeys(hotkeys);
-
-    const pianoWithAudioContext = React.useMemo(
-        () => (
-            <>
-                <div>
-                    <PianoKey note="C5" hotkey="Q" pressed={keyPressed[0]} context={audioContext} />
-                    <PianoKey note="C#5" hotkey="2" pressed={keyPressed[1]} context={audioContext} />
-                    <PianoKey note="D5" hotkey="W" pressed={keyPressed[2]} context={audioContext} />
-                    <PianoKey note="D#5" hotkey="3" pressed={keyPressed[3]} context={audioContext} />
-                    <PianoKey note="E5" hotkey="E" pressed={keyPressed[4]} context={audioContext} />
-                    <PianoKey note="F5" hotkey="R" pressed={keyPressed[5]} context={audioContext} />
-                    <PianoKey note="F#5" hotkey="5" pressed={keyPressed[6]} context={audioContext} />
-                    <PianoKey note="G5" hotkey="T" pressed={keyPressed[7]} context={audioContext} />
-                    <PianoKey note="G#5" hotkey="6" pressed={keyPressed[8]} context={audioContext} />
-                    <PianoKey note="A5" hotkey="Y" pressed={keyPressed[9]} context={audioContext} />
-                    <PianoKey note="A#5" hotkey="7" pressed={keyPressed[10]} context={audioContext} />
-                    <PianoKey note="B5" hotkey="U" pressed={keyPressed[11]} context={audioContext} />
-                </div>
-                <div>
-                    <PianoKey note="C4" hotkey="Z" pressed={keyPressed[12]} context={audioContext} />
-                    <PianoKey note="C#4" hotkey="S" pressed={keyPressed[13]} context={audioContext} />
-                    <PianoKey note="D4" hotkey="X" pressed={keyPressed[14]} context={audioContext} />
-                    <PianoKey note="D#4" hotkey="D" pressed={keyPressed[15]} context={audioContext} />
-                    <PianoKey note="E4" hotkey="C" pressed={keyPressed[16]} context={audioContext} />
-                    <PianoKey note="F4" hotkey="V" pressed={keyPressed[17]} context={audioContext} />
-                    <PianoKey note="F#4" hotkey="G" pressed={keyPressed[18]} context={audioContext} />
-                    <PianoKey note="G4" hotkey="B" pressed={keyPressed[19]} context={audioContext} />
-                    <PianoKey note="G#4" hotkey="H" pressed={keyPressed[20]} context={audioContext} />
-                    <PianoKey note="A4" hotkey="N" pressed={keyPressed[21]} context={audioContext} />
-                    <PianoKey note="A#4" hotkey="J" pressed={keyPressed[22]} context={audioContext} />
-                    <PianoKey note="B4" hotkey="M" pressed={keyPressed[23]} context={audioContext} />
-                </div>
-            </>
-        ),
-        [audioContext, keyPressed],
-    );
 
     return (
         <Example className="docs-use-hotkeys-example" options={false} {...props}>
@@ -267,11 +231,34 @@ export const UseHotkeysExample: React.FC<ExampleProps> = props => {
                 onKeyDown={handleKeyDown}
                 onKeyUp={handleKeyUp}
             >
-                {audioContext == null ? (
-                    <NonIdealState icon="select" title="Click here to start this WebAudio-based interactive example" />
-                ) : (
-                    pianoWithAudioContext
-                )}
+                <div>
+                    <PianoKey note="C5" hotkey="Q" pressed={keys[0].pressed} context={audioContext} />
+                    <PianoKey note="C#5" hotkey="2" pressed={keys[1].pressed} context={audioContext} />
+                    <PianoKey note="D5" hotkey="W" pressed={keys[2].pressed} context={audioContext} />
+                    <PianoKey note="D#5" hotkey="3" pressed={keys[3].pressed} context={audioContext} />
+                    <PianoKey note="E5" hotkey="E" pressed={keys[4].pressed} context={audioContext} />
+                    <PianoKey note="F5" hotkey="R" pressed={keys[5].pressed} context={audioContext} />
+                    <PianoKey note="F#5" hotkey="5" pressed={keys[6].pressed} context={audioContext} />
+                    <PianoKey note="G5" hotkey="T" pressed={keys[7].pressed} context={audioContext} />
+                    <PianoKey note="G#5" hotkey="6" pressed={keys[8].pressed} context={audioContext} />
+                    <PianoKey note="A5" hotkey="Y" pressed={keys[9].pressed} context={audioContext} />
+                    <PianoKey note="A#5" hotkey="7" pressed={keys[10].pressed} context={audioContext} />
+                    <PianoKey note="B5" hotkey="U" pressed={keys[11].pressed} context={audioContext} />
+                </div>
+                <div>
+                    <PianoKey note="C4" hotkey="Z" pressed={keys[12].pressed} context={audioContext} />
+                    <PianoKey note="C#4" hotkey="S" pressed={keys[13].pressed} context={audioContext} />
+                    <PianoKey note="D4" hotkey="X" pressed={keys[14].pressed} context={audioContext} />
+                    <PianoKey note="D#4" hotkey="D" pressed={keys[15].pressed} context={audioContext} />
+                    <PianoKey note="E4" hotkey="C" pressed={keys[16].pressed} context={audioContext} />
+                    <PianoKey note="F4" hotkey="V" pressed={keys[17].pressed} context={audioContext} />
+                    <PianoKey note="F#4" hotkey="G" pressed={keys[18].pressed} context={audioContext} />
+                    <PianoKey note="G4" hotkey="B" pressed={keys[19].pressed} context={audioContext} />
+                    <PianoKey note="G#4" hotkey="H" pressed={keys[20].pressed} context={audioContext} />
+                    <PianoKey note="A4" hotkey="N" pressed={keys[21].pressed} context={audioContext} />
+                    <PianoKey note="A#4" hotkey="J" pressed={keys[22].pressed} context={audioContext} />
+                    <PianoKey note="B4" hotkey="M" pressed={keys[23].pressed} context={audioContext} />
+                </div>
             </div>
         </Example>
     );

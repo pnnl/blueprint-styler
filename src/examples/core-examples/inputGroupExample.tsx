@@ -20,20 +20,19 @@ import {
     Button,
     H5,
     Icon,
+    IconSize,
     InputGroup,
     Intent,
     Menu,
     MenuItem,
-    Popover,
     Spinner,
     Switch,
     Tag,
-    Tooltip,
 } from "@blueprintjs/core";
 import { Example, ExampleProps, handleBooleanChange, handleStringChange } from "@blueprintjs/docs-theme";
-import { IconSize } from "@blueprintjs/icons";
+import { Popover2, Tooltip2 } from "@blueprintjs/popover2";
 
-export interface InputGroupExampleState {
+export interface IInputGroupExampleState {
     disabled: boolean;
     readOnly: boolean;
     filterValue: string;
@@ -43,8 +42,8 @@ export interface InputGroupExampleState {
     tagValue: string;
 }
 
-export class InputGroupExample extends React.PureComponent<ExampleProps, InputGroupExampleState> {
-    public state: InputGroupExampleState = {
+export class InputGroupExample extends React.PureComponent<ExampleProps, IInputGroupExampleState> {
+    public state: IInputGroupExampleState = {
         disabled: false,
         filterValue: "",
         large: false,
@@ -74,7 +73,7 @@ export class InputGroupExample extends React.PureComponent<ExampleProps, InputGr
         const maybeSpinner = filterValue ? <Spinner size={IconSize.STANDARD} /> : undefined;
 
         const lockButton = (
-            <Tooltip content={`${showPassword ? "Hide" : "Show"} Password`} disabled={disabled}>
+            <Tooltip2 content={`${showPassword ? "Hide" : "Show"} Password`} disabled={disabled}>
                 <Button
                     disabled={disabled}
                     icon={showPassword ? "unlock" : "lock"}
@@ -82,11 +81,11 @@ export class InputGroupExample extends React.PureComponent<ExampleProps, InputGr
                     minimal={true}
                     onClick={this.handleLockClick}
                 />
-            </Tooltip>
+            </Tooltip2>
         );
 
         const permissionsMenu = (
-            <Popover
+            <Popover2
                 content={
                     <Menu>
                         <MenuItem text="can edit" />
@@ -99,14 +98,14 @@ export class InputGroupExample extends React.PureComponent<ExampleProps, InputGr
                 <Button disabled={disabled} minimal={true} rightIcon="caret-down">
                     can edit
                 </Button>
-            </Popover>
+            </Popover2>
         );
 
         const resultsTag = <Tag minimal={true}>{Math.floor(10000 / Math.max(1, Math.pow(tagValue.length, 2)))}</Tag>;
 
         return (
             <Example options={this.renderOptions()} {...this.props}>
-                <Tooltip content="My input value state is updated asynchronously with a 10ms delay">
+                <Tooltip2 content="My input value state is updated asynchronously with a 10ms delay">
                     <InputGroup
                         asyncControl={true}
                         disabled={disabled}
@@ -119,7 +118,7 @@ export class InputGroupExample extends React.PureComponent<ExampleProps, InputGr
                         small={small}
                         value={filterValue}
                     />
-                </Tooltip>
+                </Tooltip2>
                 <InputGroup
                     disabled={disabled}
                     large={large}

@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 Palantir Technologies, Inc. All rights reserved.
+ * Copyright 2018 Palantir Technologies, Inc. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,6 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
+/**
+ * @fileoverview This component is DEPRECATED, and the code is frozen.
+ * All changes & bugfixes should be made to Breadcrumbs2 instead.
+ */
+
+/* eslint-disable deprecation/deprecation, max-classes-per-file, @blueprintjs/no-deprecated-components */
 
 import * as React from "react";
 
@@ -30,7 +37,7 @@ import {
 } from "@blueprintjs/core";
 import { Example, ExampleProps, handleStringChange } from "@blueprintjs/docs-theme";
 
-export interface BreadcrumbsExampleState {
+export interface IBreadcrumbsExampleState {
     collapseFrom: Boundary;
     renderCurrentAsInput: boolean;
     alwaysRenderOverflow: boolean;
@@ -56,8 +63,8 @@ const ITEMS_FOR_ALWAYS_RENDER: BreadcrumbProps[] = [
     { icon: "document", text: "image.jpg", current: true },
 ];
 
-export class BreadcrumbsExample extends React.PureComponent<ExampleProps, BreadcrumbsExampleState> {
-    public state: BreadcrumbsExampleState = {
+export class BreadcrumbsExample extends React.PureComponent<ExampleProps, IBreadcrumbsExampleState> {
+    public state: IBreadcrumbsExampleState = {
         alwaysRenderOverflow: false,
         collapseFrom: Boundary.START,
         renderCurrentAsInput: false,
@@ -140,7 +147,19 @@ export class BreadcrumbsExample extends React.PureComponent<ExampleProps, Breadc
     };
 }
 
-const BreadcrumbInput: React.FC<BreadcrumbProps & { defaultValue: string | undefined }> = props => {
-    const [text, setText] = React.useState(props.defaultValue ?? "");
-    return <InputGroup placeholder="rename me" value={text} onValueChange={setText} />;
-};
+class BreadcrumbInput extends React.PureComponent<BreadcrumbProps & { defaultValue: string | undefined }> {
+    public state = {
+        text: this.props.defaultValue ?? "",
+    };
+
+    public render() {
+        const { text } = this.state;
+        return <InputGroup placeholder="rename me" value={text} onChange={this.handleChange} />;
+    }
+
+    private handleChange = (event: React.FormEvent<HTMLInputElement>) => {
+        this.setState({
+            text: (event.target as HTMLInputElement).value,
+        });
+    };
+}

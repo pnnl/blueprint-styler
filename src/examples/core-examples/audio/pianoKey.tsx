@@ -23,49 +23,36 @@ import { Envelope } from "./envelope";
 import { Oscillator } from "./oscillator";
 import { Scale } from "./scale";
 
-interface PianoKeyProps {
+interface IPianoKeyProps {
     note: string;
     hotkey: string;
     pressed: boolean;
-    context: AudioContext;
+    context: AudioContext | undefined;
 }
 
-export const PianoKey: React.FC<PianoKeyProps> = ({ context, hotkey, note, pressed }) => {
-    const [envelope, setEnvelope] = React.useState<Envelope | undefined>();
-    // use this flag to defer connecting to main audio output until we actually press a note, which prevents
-    // a bug where all keys were being played on component mount
-    const [isOutputEnabled, setIsOutputEnabeld] = React.useState<boolean>(false);
+export const PianoKey: React.FC<IPianoKeyProps> = ({ context, hotkey, note, pressed }) => {
+    const [envelope, setEnvelope] = React.useState<Envelope>();
 
-    // only create oscillator and envelope once on mount
+    // only create oscillator and envelop once on mount
     React.useEffect(() => {
-        const oscillator = new Oscillator(context, Scale[note]);
-        const newEnvelope = new Envelope(context);
-        oscillator.oscillator.connect(newEnvelope.gain);
-        setEnvelope(newEnvelope);
-
-        return () => {
-            oscillator.oscillator.disconnect();
-            newEnvelope.gain.disconnect();
-            setEnvelope(undefined);
-        };
-    }, [context, note]);
+        if (context !== undefined) {
+            const oscillator = new Oscillator(context, Scale[note]);
+            const newEnvelope = new Envelope(context);
+            oscillator.oscillator.connect(newEnvelope.gain);
+            newEnvelope.gain.connect(context.destination);
+            setEnvelope(newEnvelope);
+        }
+    }, [context]);
 
     // start/stop envelope when this key is pressed down/up
     React.useEffect(() => {
         if (pressed) {
-            if (!isOutputEnabled) {
-                // connect to audio output if we haven't already
-                envelope.gain.connect(context.destination);
-                setIsOutputEnabeld(true);
-            }
-
             envelope?.on();
         } else {
             envelope?.off();
         }
-
         return () => envelope?.off();
-    }, [context.destination, envelope, isOutputEnabled, pressed]);
+    }, [envelope, pressed]);
 
     const classes = classNames("piano-key", {
         "piano-key-pressed": pressed,

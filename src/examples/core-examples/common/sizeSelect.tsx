@@ -47,15 +47,3 @@ SizeSelect.defaultProps = {
     label: "Size",
     optionLabels: ["Small", "Regular", "Large"],
 };
-
-export function getSizeProp(size: Size) {
-    switch (size) {
-        case "large":
-            return { large: true };
-        case "small":
-            return { small: true };
-        default:
-            // regular is the default
-            return {};
-    }
-}

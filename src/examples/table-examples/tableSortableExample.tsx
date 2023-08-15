@@ -23,7 +23,7 @@ import { Example, ExampleProps } from "@blueprintjs/docs-theme";
 import {
     Cell,
     Column,
-    ColumnHeaderCell,
+    ColumnHeaderCell2,
     CopyCellsMenuItem,
     MenuContext,
     SelectionModes,
@@ -34,22 +34,22 @@ import {
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const sumo: any[] = require("./sumo.json");
 
-export type CellLookup = (rowIndex: number, columnIndex: number) => any;
-export type SortCallback = (columnIndex: number, comparator: (a: any, b: any) => number) => void;
+export type ICellLookup = (rowIndex: number, columnIndex: number) => any;
+export type ISortCallback = (columnIndex: number, comparator: (a: any, b: any) => number) => void;
 
-export interface SortableColumn {
-    getColumn(getCellData: CellLookup, sortColumn: SortCallback): JSX.Element;
+export interface ISortableColumn {
+    getColumn(getCellData: ICellLookup, sortColumn: ISortCallback): JSX.Element;
 }
 
-abstract class AbstractSortableColumn implements SortableColumn {
+abstract class AbstractSortableColumn implements ISortableColumn {
     constructor(protected name: string, protected index: number) {}
 
-    public getColumn(getCellData: CellLookup, sortColumn: SortCallback) {
+    public getColumn(getCellData: ICellLookup, sortColumn: ISortCallback) {
         const cellRenderer = (rowIndex: number, columnIndex: number) => (
             <Cell>{getCellData(rowIndex, columnIndex)}</Cell>
         );
         const menuRenderer = this.renderMenu.bind(this, sortColumn);
-        const columnHeaderCellRenderer = () => <ColumnHeaderCell name={this.name} menuRenderer={menuRenderer} />;
+        const columnHeaderCellRenderer = () => <ColumnHeaderCell2 name={this.name} menuRenderer={menuRenderer} />;
         return (
             <Column
                 cellRenderer={cellRenderer}
@@ -60,11 +60,11 @@ abstract class AbstractSortableColumn implements SortableColumn {
         );
     }
 
-    protected abstract renderMenu(sortColumn: SortCallback): JSX.Element;
+    protected abstract renderMenu(sortColumn: ISortCallback): JSX.Element;
 }
 
 class TextSortableColumn extends AbstractSortableColumn {
-    protected renderMenu(sortColumn: SortCallback) {
+    protected renderMenu(sortColumn: ISortCallback) {
         const sortAsc = () => sortColumn(this.index, (a, b) => this.compare(a, b));
         const sortDesc = () => sortColumn(this.index, (a, b) => this.compare(b, a));
         return (
@@ -92,7 +92,7 @@ class RankSortableColumn extends AbstractSortableColumn {
         Y: 0, // Yokozuna
     };
 
-    protected renderMenu(sortColumn: SortCallback) {
+    protected renderMenu(sortColumn: ISortCallback) {
         const sortAsc = () => sortColumn(this.index, (a, b) => this.compare(a, b));
         const sortDesc = () => sortColumn(this.index, (a, b) => this.compare(b, a));
         return (
@@ -120,7 +120,7 @@ class RankSortableColumn extends AbstractSortableColumn {
 class RecordSortableColumn extends AbstractSortableColumn {
     private static WIN_LOSS_PATTERN = /^([0-9]+)(-([0-9]+))?(-([0-9]+)) ?.*/;
 
-    protected renderMenu(sortColumn: SortCallback) {
+    protected renderMenu(sortColumn: ISortCallback) {
         return (
             <Menu>
                 <MenuItem
@@ -198,7 +198,7 @@ export class TableSortableExample extends React.PureComponent<ExampleProps> {
             new RecordSortableColumn("Record - Aki Basho", 10),
             new RankSortableColumn("Rank - Kyūshū Basho", 11),
             new RecordSortableColumn("Record - Kyūshū Basho", 12),
-        ] as SortableColumn[],
+        ] as ISortableColumn[],
         data: sumo,
         sortedIndexMap: [] as number[],
     };

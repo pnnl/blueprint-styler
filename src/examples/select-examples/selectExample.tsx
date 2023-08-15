@@ -21,7 +21,7 @@ import { Example, ExampleProps } from "@blueprintjs/docs-theme";
 import { ItemListRendererProps } from "@blueprintjs/select";
 import { Film, FilmSelect, filterFilm, TOP_100_FILMS } from "@blueprintjs/select/examples";
 
-export interface SelectExampleState {
+export interface ISelectExampleState {
     allowCreate: boolean;
     createFirst: boolean;
     createdItems: Film[];
@@ -38,8 +38,9 @@ export interface SelectExampleState {
     resetOnSelect: boolean;
 }
 
-export class SelectExample extends React.PureComponent<ExampleProps, SelectExampleState> {
-    public state: SelectExampleState = {
+/** Technically a Select2 example, since FilmSelect uses Select2. */
+export class SelectExample extends React.PureComponent<ExampleProps, ISelectExampleState> {
+    public state: ISelectExampleState = {
         allowCreate: false,
         createFirst: false,
         createdItems: [],
@@ -199,7 +200,7 @@ export class SelectExample extends React.PureComponent<ExampleProps, SelectExamp
             .sort((a, b) => this.getGroup(a).localeCompare(this.getGroup(b)));
     };
 
-    private handleSwitchChange(prop: keyof SelectExampleState) {
+    private handleSwitchChange(prop: keyof ISelectExampleState) {
         return (event: React.FormEvent<HTMLInputElement>) => {
             const checked = event.currentTarget.checked;
             this.setState(state => ({ ...state, [prop]: checked }));

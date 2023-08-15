@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 Palantir Technologies, Inc. All rights reserved.
+ * Copyright 2017 Palantir Technologies, Inc. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,77 +14,89 @@
  * limitations under the License.
  */
 
+/**
+ * @fileoverview This component is DEPRECATED, and the code is frozen.
+ * All changes & bugfixes should be made to TimezoneSelect instead.
+ */
+
+/* eslint-disable deprecation/deprecation, @blueprintjs/no-deprecated-components */
+
 import * as React from "react";
 
 import { H5, Position, Radio, RadioGroup, Switch } from "@blueprintjs/core";
-import { TimezoneDisplayFormat, TimezoneSelect } from "@blueprintjs/datetime";
 import { Example, ExampleProps, handleBooleanChange, handleValueChange } from "@blueprintjs/docs-theme";
+import { TimezoneDisplayFormat, TimezonePicker } from "@blueprintjs/timezone";
 
-export interface TimezoneSelectExampleState {
+import { CustomTimezonePickerTarget } from "./components";
+
+export interface ITimezonePickerExampleState {
     disabled: boolean;
-    displayFormat: TimezoneDisplayFormat;
-    fill: boolean;
     showCustomTarget: boolean;
     showLocalTimezone: boolean;
+    targetDisplayFormat: TimezoneDisplayFormat;
     timezone: string;
 }
 
-export class TimezoneSelectExample extends React.PureComponent<ExampleProps, TimezoneSelectExampleState> {
-    public state: TimezoneSelectExampleState = {
+export class TimezonePickerExample extends React.PureComponent<ExampleProps, ITimezonePickerExampleState> {
+    public state: ITimezonePickerExampleState = {
         disabled: false,
-        displayFormat: TimezoneDisplayFormat.COMPOSITE,
-        fill: false,
         showCustomTarget: false,
         showLocalTimezone: true,
+        targetDisplayFormat: TimezoneDisplayFormat.COMPOSITE,
         timezone: "",
     };
 
     private handleDisabledChange = handleBooleanChange(disabled => this.setState({ disabled }));
 
-    private handleDisplayFormatChange = handleValueChange((displayFormat: TimezoneDisplayFormat) =>
-        this.setState({ displayFormat }),
-    );
-
-    private handleFillChange = handleBooleanChange(fill => this.setState({ fill }));
-
     private handleShowLocalChange = handleBooleanChange(showLocalTimezone => this.setState({ showLocalTimezone }));
 
+    private handleCustomChildChange = handleBooleanChange(showCustomTarget => this.setState({ showCustomTarget }));
+
+    private handleFormatChange = handleValueChange((targetDisplayFormat: TimezoneDisplayFormat) =>
+        this.setState({ targetDisplayFormat }),
+    );
+
     public render() {
-        const { timezone, disabled, displayFormat, fill, showLocalTimezone } = this.state;
+        const { timezone, targetDisplayFormat, disabled, showCustomTarget, showLocalTimezone } = this.state;
 
         const options = (
             <>
                 <H5>Props</H5>
                 <Switch checked={showLocalTimezone} label="Show local timezone" onChange={this.handleShowLocalChange} />
                 <Switch checked={disabled} label="Disabled" onChange={this.handleDisabledChange} />
-                <Switch label="Fill container width" checked={this.state.fill} onChange={this.handleFillChange} />
                 <RadioGroup
                     label="Display format"
-                    onChange={this.handleDisplayFormatChange}
-                    selectedValue={this.state.displayFormat}
+                    onChange={this.handleFormatChange}
+                    selectedValue={this.state.targetDisplayFormat}
                 >
-                    <Radio label="Composite" value={TimezoneDisplayFormat.COMPOSITE} />
                     <Radio label="Abbreviation" value={TimezoneDisplayFormat.ABBREVIATION} />
-                    <Radio label="Long Name" value={TimezoneDisplayFormat.LONG_NAME} />
-                    <Radio label="IANA Code" value={TimezoneDisplayFormat.CODE} />
+                    <Radio label="Composite" value={TimezoneDisplayFormat.COMPOSITE} />
+                    <Radio label="Name" value={TimezoneDisplayFormat.NAME} />
                     <Radio label="Offset" value={TimezoneDisplayFormat.OFFSET} />
                 </RadioGroup>
+                <H5>Example</H5>
+                <Switch checked={showCustomTarget} label="Custom target" onChange={this.handleCustomChildChange} />
             </>
         );
 
         return (
             <Example options={options} {...this.props}>
-                <TimezoneSelect
-                    disabled={disabled}
-                    fill={fill}
+                <TimezonePicker
+                    value={timezone}
                     onChange={this.handleTimezoneChange}
+                    valueDisplayFormat={targetDisplayFormat}
                     popoverProps={{ position: Position.BOTTOM }}
                     showLocalTimezone={showLocalTimezone}
-                    value={timezone}
-                    valueDisplayFormat={displayFormat}
-                />
+                    disabled={disabled}
+                >
+                    {showCustomTarget ? this.renderCustomTarget() : undefined}
+                </TimezonePicker>
             </Example>
         );
+    }
+
+    private renderCustomTarget() {
+        return <CustomTimezonePickerTarget timezone={this.state.timezone} />;
     }
 
     private handleTimezoneChange = (timezone: string) => this.setState({ timezone });

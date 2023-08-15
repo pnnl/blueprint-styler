@@ -27,7 +27,7 @@ const INTENTS = [
     { label: "Danger", value: Intent.DANGER },
 ];
 
-export interface IntentSelectProps {
+export interface IIntentSelectProps {
     intent: Intent;
     label?: React.ReactNode;
     onChange: (intent: Intent) => void;
@@ -35,7 +35,7 @@ export interface IntentSelectProps {
     showClearButton?: boolean;
 }
 
-export const IntentSelect: React.FC<IntentSelectProps> = props => {
+export const IntentSelect: React.FC<IIntentSelectProps> = props => {
     const handleChange = handleValueChange(props.onChange);
     const handleClear = React.useCallback(() => props.onChange("none"), []);
     return (

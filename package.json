@@ -24,7 +24,7 @@
     "@blueprintjs/select": "^4.9.24",
     "@blueprintjs/table": "^4.10.12",
     "@blueprintjs/timezone": "^4.5.43",
-    "@blueprintjs/monorepo": "palantir/blueprint#develop",
+    "@blueprintjs/monorepo": "palantir/blueprint#release/4.x",
     "copyfiles": "^2.4.1"
   }
 }

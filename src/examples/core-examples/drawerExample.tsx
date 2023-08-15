@@ -20,7 +20,6 @@ import {
     Button,
     Classes,
     Code,
-    ContextMenu,
     Divider,
     Drawer,
     DrawerSize,
@@ -40,10 +39,11 @@ import {
     handleStringChange,
     handleValueChange,
 } from "@blueprintjs/docs-theme";
+import { ContextMenu2 } from "@blueprintjs/popover2";
 
-import { BlueprintExampleData } from "../../tags/types";
+import { IBlueprintExampleData } from "../../tags/types";
 
-export interface DrawerExampleState {
+export interface IDrawerExampleState {
     autoFocus: boolean;
     canEscapeKeyClose: boolean;
     canOutsideClickClose: boolean;
@@ -54,8 +54,8 @@ export interface DrawerExampleState {
     size: string;
     usePortal: boolean;
 }
-export class DrawerExample extends React.PureComponent<ExampleProps<BlueprintExampleData>, DrawerExampleState> {
-    public state: DrawerExampleState = {
+export class DrawerExample extends React.PureComponent<ExampleProps<IBlueprintExampleData>, IDrawerExampleState> {
+    public state: IDrawerExampleState = {
         autoFocus: true,
         canEscapeKeyClose: true,
         canOutsideClickClose: true,
@@ -123,7 +123,7 @@ export class DrawerExample extends React.PureComponent<ExampleProps<BlueprintExa
                                 can build upon. And the enterprise data foundation goes where the business drives it.
                             </p>
                             <p>Start the revolution. Unleash the power of data integration with Palantir Foundry.</p>
-                            <ContextMenu
+                            <ContextMenu2
                                 content={
                                     <Menu>
                                         <MenuItem text="Menu Item 1" />
@@ -131,9 +131,9 @@ export class DrawerExample extends React.PureComponent<ExampleProps<BlueprintExa
                                 }
                             >
                                 <Button onClick={this.handleClose}>
-                                    Right Click for a <Code>&lt;ContextMenu /&gt;</Code>
+                                    Right Click for a <Code>&lt;ContextMenu2 /&gt;</Code>
                                 </Button>
-                            </ContextMenu>
+                            </ContextMenu2>
                         </div>
                     </div>
                     <div className={Classes.DRAWER_FOOTER}>Footer</div>

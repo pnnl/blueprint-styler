@@ -24,7 +24,7 @@ import { Example, ExampleProps, handleNumberChange, handleValueChange } from "@b
 
 import { PrecisionSelect } from "./common/precisionSelect";
 
-export interface TimePickerExampleState {
+export interface ITimePickerExampleState {
     autoFocus: boolean;
     precision?: TimePrecision;
     selectAllOnFocus?: boolean;
@@ -47,7 +47,7 @@ enum MaximumHours {
     TWO_AM = 2,
 }
 
-export class TimePickerExample extends React.PureComponent<ExampleProps, TimePickerExampleState> {
+export class TimePickerExample extends React.PureComponent<ExampleProps, ITimePickerExampleState> {
     public state = {
         autoFocus: true,
         disabled: false,

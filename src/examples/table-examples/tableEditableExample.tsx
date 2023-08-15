@@ -18,21 +18,21 @@ import * as React from "react";
 
 import { Intent } from "@blueprintjs/core";
 import { Example, ExampleProps } from "@blueprintjs/docs-theme";
-import { Column, ColumnHeaderCell, EditableCell2, EditableName, Table2 } from "@blueprintjs/table";
+import { Column, ColumnHeaderCell2, EditableCell2, EditableName, Table2 } from "@blueprintjs/table";
 
-export interface TableEditableExampleState {
+export interface ITableEditableExampleState {
     columnNames?: string[];
     sparseCellData?: { [key: string]: string };
     sparseCellIntent?: { [key: string]: Intent };
     sparseColumnIntents?: Intent[];
 }
 
-export class TableEditableExample extends React.PureComponent<ExampleProps, TableEditableExampleState> {
+export class TableEditableExample extends React.PureComponent<ExampleProps, ITableEditableExampleState> {
     public static dataKey = (rowIndex: number, columnIndex: number) => {
         return `${rowIndex}-${columnIndex}`;
     };
 
-    public state: TableEditableExampleState = {
+    public state: ITableEditableExampleState = {
         columnNames: ["Please", "Rename", "Me"],
         sparseCellData: {
             "1-1": "editable",
@@ -83,7 +83,7 @@ export class TableEditableExample extends React.PureComponent<ExampleProps, Tabl
                 />
             );
         };
-        return <ColumnHeaderCell name={this.state.columnNames[columnIndex]} nameRenderer={nameRenderer} />;
+        return <ColumnHeaderCell2 name={this.state.columnNames[columnIndex]} nameRenderer={nameRenderer} />;
     };
 
     private isValidValue(value: string) {

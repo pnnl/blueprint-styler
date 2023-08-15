@@ -29,12 +29,12 @@ import {
 } from "@blueprintjs/core";
 import { Example, ExampleProps, handleBooleanChange } from "@blueprintjs/docs-theme";
 
-export interface NavbarExampleState {
+export interface INavbarExampleState {
     alignRight: boolean;
 }
 
-export class NavbarExample extends React.PureComponent<ExampleProps, NavbarExampleState> {
-    public state: NavbarExampleState = {
+export class NavbarExample extends React.PureComponent<ExampleProps, INavbarExampleState> {
+    public state: INavbarExampleState = {
         alignRight: false,
     };
 

@@ -19,7 +19,7 @@ import * as React from "react";
 
 import { DateFormatProps } from "@blueprintjs/datetime";
 
-import { DateFormatSelector, DateFormatSelectorProps } from "../../../common/dateFormatSelector";
+import { DateFormatSelector, DateFormatSelectorProps } from "../../common/dateFormatSelector";
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const locales: { [localeCode: string]: Locale } = require("date-fns/locale");

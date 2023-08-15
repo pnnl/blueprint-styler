@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Palantir Technologies, Inc. All rights reserved.
+ * Copyright 2017 Palantir Technologies, Inc. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,30 +14,24 @@
  * limitations under the License.
  */
 
+/**
+ * @fileoverview This component is DEPRECATED, and the code is frozen.
+ * All changes & bugfixes should be made to Popover2 instead.
+ */
+
+/* eslint-disable deprecation/deprecation, @blueprintjs/no-deprecated-components */
+
 import * as React from "react";
 
-import { Button, Code, H5, Popover, PopoverProps, Switch } from "@blueprintjs/core";
+import { Button, Code, H5, IPopoverProps, Popover, Position, Switch } from "@blueprintjs/core";
 import { Example, ExampleProps } from "@blueprintjs/docs-theme";
 
-const POPOVER_PROPS: Partial<PopoverProps> = {
-    autoFocus: false,
-    enforceFocus: false,
-    modifiers: {
-        flip: { options: { rootBoundary: "document" } },
-        preventOverflow: { options: { rootBoundary: "document" } },
-    },
-    placement: "bottom",
-    popoverClassName: "docs-popover-portal-example-popover",
-};
-
-export interface PopoverPortalExampleState {
+export interface IPopoverPortalExampleState {
     isOpen: boolean;
 }
 
-export class PopoverPortalExample extends React.PureComponent<ExampleProps, PopoverPortalExampleState> {
-    public static displayName = "PopoverPortalExample";
-
-    public state: PopoverPortalExampleState = {
+export class PopoverPortalExample extends React.PureComponent<ExampleProps, IPopoverPortalExampleState> {
+    public state: IPopoverPortalExampleState = {
         isOpen: true,
     };
 
@@ -55,10 +49,12 @@ export class PopoverPortalExample extends React.PureComponent<ExampleProps, Popo
     }
 
     public render() {
+        const { isOpen } = this.state;
+
         const options = (
             <>
                 <H5>Props</H5>
-                <Switch label="Open" checked={this.state.isOpen} onChange={this.handleOpen} />
+                <Switch label="Open" checked={isOpen} onChange={this.handleOpen} />
                 <H5>Example</H5>
                 <Button text="Re-center" icon="alignment-vertical-center" onClick={this.recenter} />
             </>
@@ -75,12 +71,11 @@ export class PopoverPortalExample extends React.PureComponent<ExampleProps, Popo
                         <Popover
                             {...POPOVER_PROPS}
                             content="I am in a Portal (default)."
-                            isOpen={this.state.isOpen}
+                            isOpen={isOpen}
                             usePortal={true}
-                            // strip out `isOpen` so that it is not rendered to HTML element
-                            // tslint:disable-next-line jsx-no-lambda
-                            renderTarget={({ isOpen, ...p }) => <Code {...p}>{`usePortal={true}`}</Code>}
-                        />
+                        >
+                            <Code>{`usePortal={true}`}</Code>
+                        </Popover>
                     </div>
                 </div>
                 <div
@@ -89,18 +84,9 @@ export class PopoverPortalExample extends React.PureComponent<ExampleProps, Popo
                     onScroll={this.syncScrollRight}
                 >
                     <div className="docs-popover-portal-example-scroll-content">
-                        <Popover
-                            {...POPOVER_PROPS}
-                            content="I am an inline popover."
-                            isOpen={this.state.isOpen}
-                            usePortal={false}
-                            modifiers={{
-                                preventOverflow: { enabled: false },
-                            }}
-                            // strip out `isOpen` so that it is not rendered to HTML element
-                            // tslint:disable-next-line jsx-no-lambda
-                            renderTarget={({ isOpen, ...p }) => <Code {...p}>{`usePortal={false}`}</Code>}
-                        />
+                        <Popover {...POPOVER_PROPS} content="I am an inline popover." isOpen={isOpen} usePortal={false}>
+                            <Code>{`usePortal={false}`}</Code>
+                        </Popover>
                     </div>
                 </div>
                 <em style={{ textAlign: "center", width: "100%" }}>
@@ -139,3 +125,11 @@ export class PopoverPortalExample extends React.PureComponent<ExampleProps, Popo
         }
     }
 }
+
+const POPOVER_PROPS: IPopoverProps = {
+    autoFocus: false,
+    boundary: "window",
+    enforceFocus: false,
+    popoverClassName: "docs-popover-portal-example-popover",
+    position: Position.BOTTOM,
+};

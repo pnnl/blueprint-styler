@@ -20,21 +20,21 @@ import { Switch } from "@blueprintjs/core";
 import { Example, ExampleProps, handleBooleanChange } from "@blueprintjs/docs-theme";
 import { Cell, Column, Table2, TableLoadingOption } from "@blueprintjs/table";
 
-interface BigSpaceRock {
+interface IBigSpaceRock {
     [key: string]: number | string;
 }
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const bigSpaceRocks: BigSpaceRock[] = require("./potentiallyHazardousAsteroids.json");
+const bigSpaceRocks: IBigSpaceRock[] = require("./potentiallyHazardousAsteroids.json");
 
-export interface TableLoadingExampleState {
+export interface ITableLoadingExampleState {
     cellsLoading?: boolean;
     columnHeadersLoading?: boolean;
     rowHeadersLoading?: boolean;
 }
 
-export class TableLoadingExample extends React.PureComponent<ExampleProps, TableLoadingExampleState> {
-    public state: TableLoadingExampleState = {
+export class TableLoadingExample extends React.PureComponent<ExampleProps, ITableLoadingExampleState> {
+    public state: ITableLoadingExampleState = {
         cellsLoading: true,
         columnHeadersLoading: true,
         rowHeadersLoading: true,

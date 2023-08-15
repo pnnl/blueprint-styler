@@ -16,8 +16,9 @@
 
 import * as React from "react";
 
-import { Button, Card, Menu, MenuDivider, MenuItem, Popover } from "@blueprintjs/core";
+import { Button, Card, Menu, MenuDivider, MenuItem } from "@blueprintjs/core";
 import { Example, ExampleProps } from "@blueprintjs/docs-theme";
+import { Popover2 } from "@blueprintjs/popover2";
 
 export class DropdownMenuExample extends React.PureComponent<ExampleProps> {
     public render() {
@@ -37,7 +38,7 @@ export class DropdownMenuExample extends React.PureComponent<ExampleProps> {
         return (
             <Example options={false} {...this.props}>
                 <Card style={{ width: 250 }}>
-                    <Popover content={exampleMenu} fill={true} placement="bottom">
+                    <Popover2 content={exampleMenu} fill={true} placement="bottom">
                         <Button
                             alignText="left"
                             fill={true}
@@ -45,7 +46,7 @@ export class DropdownMenuExample extends React.PureComponent<ExampleProps> {
                             rightIcon="caret-down"
                             text="Open with..."
                         />
-                    </Popover>
+                    </Popover2>
                 </Card>
             </Example>
         );
