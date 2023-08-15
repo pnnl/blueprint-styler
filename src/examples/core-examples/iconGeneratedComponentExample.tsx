@@ -1,5 +1,5 @@
 /*
- * Copyright 2017 Palantir Technologies, Inc. All rights reserved.
+ * Copyright 2023 Palantir Technologies, Inc. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,42 +16,29 @@
 
 import * as React from "react";
 
-import { H5, Icon, Intent, Label, Slider } from "@blueprintjs/core";
+import { H5, Label, Slider } from "@blueprintjs/core";
 import { Example, ExampleProps } from "@blueprintjs/docs-theme";
-import { IconName, IconSize } from "@blueprintjs/icons";
+import { Calendar, IconSize } from "@blueprintjs/icons";
 
-import { IconSelect } from "./common/iconSelect";
-import { IntentSelect } from "./common/intentSelect";
-
-export interface IconExampleState {
-    icon: IconName;
+interface ExampleState {
     iconSize: number;
-    intent: Intent;
 }
 
-export class IconExample extends React.PureComponent<ExampleProps, IconExampleState> {
-    public state: IconExampleState = {
-        icon: "calendar",
+export class IconGeneratedComponentExample extends React.PureComponent<ExampleProps, ExampleState> {
+    public state: ExampleState = {
         iconSize: IconSize.STANDARD,
-        intent: Intent.NONE,
     };
 
-    private handleIntentChange = (intent: Intent) => this.setState({ intent });
-
     private handleIconSizeChange = (iconSize: number) => this.setState({ iconSize });
-
-    private handleIconNameChange = (icon: IconName) => this.setState({ icon });
 
     private iconSizeLabelId = "icon-size-label";
 
     public render() {
-        const { icon, iconSize, intent } = this.state;
+        const { iconSize } = this.state;
 
         const options = (
             <>
                 <H5>Props</H5>
-                <IconSelect iconName={icon} onChange={this.handleIconNameChange} />
-                <IntentSelect intent={this.state.intent} onChange={this.handleIntentChange} />
                 <Label id={this.iconSizeLabelId}>Icon size</Label>
                 <Slider
                     labelStepSize={MAX_ICON_SIZE / 5}
@@ -67,7 +54,7 @@ export class IconExample extends React.PureComponent<ExampleProps, IconExampleSt
 
         return (
             <Example options={options} {...this.props}>
-                <Icon icon={icon} size={iconSize} intent={intent} />
+                <Calendar size={iconSize} />
             </Example>
         );
     }
