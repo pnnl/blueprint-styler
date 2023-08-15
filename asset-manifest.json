@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/blueprint-styler/static/css/main.eac1861f.css",
-    "main.js": "/blueprint-styler/static/js/main.d25cdd51.js",
+    "main.css": "/blueprint-styler/static/css/main.5ccffff1.css",
+    "main.js": "/blueprint-styler/static/js/main.161db26b.js",
     "static/js/496.e06da0a6.chunk.js": "/blueprint-styler/static/js/496.e06da0a6.chunk.js",
     "static/media/logo.svg": "/blueprint-styler/static/media/logo.fbcd5a91af226da642a6f263c7df7913.svg",
     "index.html": "/blueprint-styler/index.html",
-    "main.eac1861f.css.map": "/blueprint-styler/static/css/main.eac1861f.css.map",
-    "main.d25cdd51.js.map": "/blueprint-styler/static/js/main.d25cdd51.js.map",
+    "main.5ccffff1.css.map": "/blueprint-styler/static/css/main.5ccffff1.css.map",
+    "main.161db26b.js.map": "/blueprint-styler/static/js/main.161db26b.js.map",
     "496.e06da0a6.chunk.js.map": "/blueprint-styler/static/js/496.e06da0a6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.eac1861f.css",
-    "static/js/main.d25cdd51.js"
+    "static/css/main.5ccffff1.css",
+    "static/js/main.161db26b.js"
   ]
 }
