@@ -17,14 +17,14 @@
   "devDependencies": {
     "@blueprintjs/core": "^4.20.2",
     "@blueprintjs/datetime": "^4.4.37",
-    "@blueprintjs/datetime2": "^0.9.37",
+    "@blueprintjs/datetime2": "^1.0.8",
     "@blueprintjs/docs-theme": "^4.5.27",
     "@blueprintjs/icons": "^4.16.0",
-    "@blueprintjs/popover2": "^1.14.11",
+    "@blueprintjs/popover2": "^2.0.8",
     "@blueprintjs/select": "^4.9.24",
     "@blueprintjs/table": "^4.10.12",
     "@blueprintjs/timezone": "^4.5.43",
-    "@blueprintjs/monorepo": "palantir/blueprint#release/4.x",
+    "@blueprintjs/monorepo": "palantir/blueprint#develop",
     "copyfiles": "^2.4.1"
   }
 }
