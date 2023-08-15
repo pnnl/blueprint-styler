@@ -26,6 +26,7 @@ import {
     NumericInput,
     NumericInputProps,
     OptionProps,
+    Popover,
     Position,
     Switch,
 } from "@blueprintjs/core";
@@ -38,7 +39,6 @@ import {
     handleValueChange,
 } from "@blueprintjs/docs-theme";
 import { IconNames } from "@blueprintjs/icons";
-import { Popover2 } from "@blueprintjs/popover2";
 
 import { IntentSelect } from "./common/intentSelect";
 import { LOCALES } from "./common/locales";
@@ -92,7 +92,9 @@ export class NumericInputBasicExample extends React.PureComponent<ExampleProps, 
         this.setState({ buttonPosition }),
     );
 
-    private handleLocaleChange = handleStringChange(locale => this.setState({ locale }));
+    private handleLocaleChange = handleStringChange(locale =>
+        this.setState({ locale: locale === "default" ? undefined : locale }),
+    );
 
     private toggleDisabled = handleBooleanChange(disabled => this.setState({ disabled }));
 
@@ -107,7 +109,7 @@ export class NumericInputBasicExample extends React.PureComponent<ExampleProps, 
     private toggleLeftElement = handleBooleanChange(leftElement =>
         this.setState({
             leftElement: leftElement ? (
-                <Popover2
+                <Popover
                     position="bottom"
                     content={
                         <Menu>
@@ -118,7 +120,7 @@ export class NumericInputBasicExample extends React.PureComponent<ExampleProps, 
                     }
                 >
                     <Button minimal={true} icon={IconNames.Filter} />
-                </Popover2>
+                </Popover>
             ) : undefined,
         }),
     );
@@ -185,7 +187,7 @@ export class NumericInputBasicExample extends React.PureComponent<ExampleProps, 
                 {this.renderSelectMenu(
                     "Locale",
                     locale,
-                    [{ label: "Default", value: undefined }, ...LOCALES],
+                    [{ label: "Default", value: "default" }, ...LOCALES],
                     this.handleLocaleChange,
                 )}
             </>
