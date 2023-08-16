@@ -62,9 +62,9 @@ $tag-round-adjustment: 2px !default;
     padding-right: $tag-padding + $tag-round-adjustment;
   }
 
-  /* .#{$ns}-dark & {
+  .#{$ns}-dark & { // intentionally left in
     background-color: $dark-tag-default-color;
-    color: $pt-text-color;
+    // color: $pt-text-color;
 
     > #{$icon-classes} {
       fill: currentcolor;
@@ -80,7 +80,7 @@ $tag-round-adjustment: 2px !default;
         background: $gray3;
       }
     }
-  } */
+  } 
 
   > #{$icon-classes} {
     fill: $white;
@@ -157,7 +157,7 @@ $tag-round-adjustment: 2px !default;
       }
     }
 
-    /* .#{$ns}-dark & {
+    .#{$ns}-dark & { // intentionally left in
       @include pt-tag-minimal-interactive($gray3, $white);
 
       background-color: hslax($gray3, 0.15);
@@ -171,7 +171,7 @@ $tag-round-adjustment: 2px !default;
           color: $light-gray1;
         }
       }
-    } */
+    }
   }
 }
 

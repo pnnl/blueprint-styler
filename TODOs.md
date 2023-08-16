@@ -7,7 +7,6 @@
 - Dark Theme
   - Section
   - Card List
-  - Tag interactive hover
   - Dialog Footer
 
 ## Docs
