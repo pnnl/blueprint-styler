@@ -7,7 +7,6 @@
 - Dark Theme
   - Section
   - Card List
-  - Dialog Footer
 
 ## Docs
 - example theme as code

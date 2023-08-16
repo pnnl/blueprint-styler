@@ -95,7 +95,7 @@ $dialog-header-padding: calc(#{$pt-grid-size} / 2);
 
 .#{$ns}-dialog-header {
   align-items: center;
-  // background: $pt-code-background-color;
+  background-color: var(--pt-app-top-background-color);
   border-radius: $dialog-border-radius $dialog-border-radius 0 0;
   box-shadow: 0 1px 0 $pt-divider-black;
   display: flex;
