@@ -25,7 +25,7 @@ $card-list-item-small-padding: 7px 15px !default;
 
     &.#{$ns}-interactive:hover,
     &.#{$ns}-interactive:active {
-      background-color: $light-gray5;
+      background-color: $minimal-button-background-color-hover;
       box-shadow: none;
 
       /* .#{$ns}-dark & {
