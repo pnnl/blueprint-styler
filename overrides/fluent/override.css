@@ -1,64 +1,64 @@
-:root .bp4-button,:root .bp4-html-select select,:root .bp4-select select,:root a,:root a.bp4-button {
+:root .bp5-button,:root .bp5-html-select select,:root .bp5-select select,:root a,:root a.bp5-button {
     font-weight: var(--font-weight-bold);
     transition: background-color .1s linear
 }
 
-:root .bp4-button:active,:root .bp4-html-select select:active,:root .bp4-select select:active,:root a.bp4-button:active,:root a:active {
+:root .bp5-button:active,:root .bp5-html-select select:active,:root .bp5-select select:active,:root a.bp5-button:active,:root a:active {
     transition-duration: 50ms
 }
 
-:root .bp4-button.bp4-minimal .bp4-icon,:root .bp4-button.bp4-minimal:hover {
+:root .bp5-button.bp5-minimal .bp5-icon,:root .bp5-button.bp5-minimal:hover {
     color: var(--pt-intent-primary-hover)
 }
 
-:root .bp4-input {
+:root .bp5-input {
     box-shadow: inset 0 0 0 1px var(--button-outlined-border-color)
 }
 
-:root .bp4-input.bp4-active,:root .bp4-input:focus {
+:root .bp5-input.bp5-active,:root .bp5-input:focus {
     box-shadow: inset 0 0 0 2px var(--input-shadow-color-focus)
 }
 
-:root .bp4-input.bp4-disabled,:root .bp4-input:disabled {
+:root .bp5-input.bp5-disabled,:root .bp5-input:disabled {
     box-shadow: none
 }
 
-:root .bp4-control.bp4-switch input~.bp4-control-indicator {
+:root .bp5-control.bp5-switch input~.bp5-control-indicator {
     background-color: var(--button-background-color);
     box-shadow: var(--pt-input-box-shadow)!important
 }
 
-:root .bp4-control.bp4-switch input~.bp4-control-indicator:before {
+:root .bp5-control.bp5-switch input~.bp5-control-indicator:before {
     background-color: var(--pt-text-color-muted);
     box-shadow: none
 }
 
-:root .bp4-control.bp4-switch input:checked~.bp4-control-indicator {
+:root .bp5-control.bp5-switch input:checked~.bp5-control-indicator {
     background: var(--switch-checked-background-color);
     box-shadow: none!important
 }
 
-:root .bp4-control.bp4-switch input:checked~.bp4-control-indicator:before {
+:root .bp5-control.bp5-switch input:checked~.bp5-control-indicator:before {
     background-color: var(--white);
     box-shadow: none
 }
 
-:root .bp4-control.bp4-switch input.bp4-disabled~.bp4-control-indicator,:root .bp4-control.bp4-switch input:disabled~.bp4-control-indicator {
+:root .bp5-control.bp5-switch input.bp5-disabled~.bp5-control-indicator,:root .bp5-control.bp5-switch input:disabled~.bp5-control-indicator {
     background-color: none;
     box-shadow: inset 0 0 0 1px var(--switch-checked-background-color-disabled)!important
 }
 
-:root .bp4-control.bp4-switch input.bp4-disabled~.bp4-control-indicator:before,:root .bp4-control.bp4-switch input:disabled~.bp4-control-indicator:before {
+:root .bp5-control.bp5-switch input.bp5-disabled~.bp5-control-indicator:before,:root .bp5-control.bp5-switch input:disabled~.bp5-control-indicator:before {
     background-color: var(--switch-checked-background-color-disabled);
     box-shadow: none
 }
 
-:root .bp4-control.bp4-switch input.bp4-disabled:checked~.bp4-control-indicator,:root .bp4-control.bp4-switch input:disabled:checked~.bp4-control-indicator {
+:root .bp5-control.bp5-switch input.bp5-disabled:checked~.bp5-control-indicator,:root .bp5-control.bp5-switch input:disabled:checked~.bp5-control-indicator {
     background: var(--switch-checked-background-color-disabled);
     box-shadow: none!important
 }
 
-:root .bp4-control.bp4-switch input.bp4-disabled:checked~.bp4-control-indicator:before,:root .bp4-control.bp4-switch input:disabled:checked~.bp4-control-indicator:before {
+:root .bp5-control.bp5-switch input.bp5-disabled:checked~.bp5-control-indicator:before,:root .bp5-control.bp5-switch input:disabled:checked~.bp5-control-indicator:before {
     background-color: var(--white);
     box-shadow: none
 }
@@ -68,15 +68,15 @@
     text-rendering: optimizeLegibility
 }
 
-:root .bp4-input[type=search] {
+:root .bp5-input[type=search] {
     border-radius: var(--pt-border-radius)
 }
 
-:root .bp4-input.bp4-round {
+:root .bp5-input.bp5-round {
     border-radius: 99px
 }
 
-:root .bp4-button-group .bp4-button[class*=bp4-intent-] {
+:root .bp5-button-group .bp5-button[class*=bp5-intent-] {
     border-width: 0;
     border-bottom: 0 solid hsla(var(--white-hsl),.25);
     border-left: 1px solid hsla(var(--white-hsl),.25);
@@ -84,22 +84,22 @@
     border-top: 0 solid hsla(var(--white-hsl),.25)
 }
 
-:root .bp4-button-group:not(.bp4-minimal)>.bp4-button[class*=bp4-intent-]:first-child,:root .bp4-button-group:not(.bp4-minimal)>.bp4-popover-wrapper:first-child .bp4-button[class*=bp4-intent-],:root .bp4-button-group:not(.bp4-minimal)>.bp4-popover2-target:first-child .bp4-button[class*=bp4-intent-] {
+:root .bp5-button-group:not(.bp5-minimal)>.bp5-button[class*=bp5-intent-]:first-child,:root .bp5-button-group:not(.bp5-minimal)>.bp5-popover-target:first-child .bp5-button[class*=bp5-intent-],:root .bp5-button-group:not(.bp5-minimal)>.bp5-popover-wrapper:first-child .bp5-button[class*=bp5-intent-] {
     border-width: 0 1px 0 0
 }
 
-:root .bp4-button-group:not(.bp4-minimal)>.bp4-button[class*=bp4-intent-]:last-child,:root .bp4-button-group:not(.bp4-minimal)>.bp4-popover-wrapper:last-child .bp4-button[class*=bp4-intent-],:root .bp4-button-group:not(.bp4-minimal)>.bp4-popover2-target:last-child .bp4-button[class*=bp4-intent-] {
+:root .bp5-button-group:not(.bp5-minimal)>.bp5-button[class*=bp5-intent-]:last-child,:root .bp5-button-group:not(.bp5-minimal)>.bp5-popover-target:last-child .bp5-button[class*=bp5-intent-],:root .bp5-button-group:not(.bp5-minimal)>.bp5-popover-wrapper:last-child .bp5-button[class*=bp5-intent-] {
     border-width: 0 0 0 1px
 }
 
-:root .bp4-button-group.bp4-vertical .bp4-button[class*=bp4-intent-] {
+:root .bp5-button-group.bp5-vertical .bp5-button[class*=bp5-intent-] {
     border-width: 1px 0
 }
 
-:root .bp4-button-group.bp4-vertical:not(.bp4-minimal)>.bp4-button[class*=bp4-intent-]:first-child,:root .bp4-button-group.bp4-vertical:not(.bp4-minimal)>.bp4-popover-wrapper:first-child .bp4-button[class*=bp4-intent-],:root .bp4-button-group.bp4-vertical:not(.bp4-minimal)>.bp4-popover2-target:first-child .bp4-button[class*=bp4-intent-] {
+:root .bp5-button-group.bp5-vertical:not(.bp5-minimal)>.bp5-button[class*=bp5-intent-]:first-child,:root .bp5-button-group.bp5-vertical:not(.bp5-minimal)>.bp5-popover-target:first-child .bp5-button[class*=bp5-intent-],:root .bp5-button-group.bp5-vertical:not(.bp5-minimal)>.bp5-popover-wrapper:first-child .bp5-button[class*=bp5-intent-] {
     border-width: 0 0 1px
 }
 
-:root .bp4-button-group.bp4-vertical:not(.bp4-minimal)>.bp4-button[class*=bp4-intent-]:last-child,:root .bp4-button-group.bp4-vertical:not(.bp4-minimal)>.bp4-popover-wrapper:last-child .bp4-button[class*=bp4-intent-],:root .bp4-button-group.bp4-vertical:not(.bp4-minimal)>.bp4-popover2-target:last-child .bp4-button[class*=bp4-intent-] {
+:root .bp5-button-group.bp5-vertical:not(.bp5-minimal)>.bp5-button[class*=bp5-intent-]:last-child,:root .bp5-button-group.bp5-vertical:not(.bp5-minimal)>.bp5-popover-target:last-child .bp5-button[class*=bp5-intent-],:root .bp5-button-group.bp5-vertical:not(.bp5-minimal)>.bp5-popover-wrapper:last-child .bp5-button[class*=bp5-intent-] {
     border-width: 1px 0 0
 }

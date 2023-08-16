@@ -1,4 +1,4 @@
-.bp4-vars, :root {
+.bp5-vars, :root {
 
 	/*! Icons */
 	--chevron-right-icon: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' height='16' width='16'%3E%3Cpath fill='%236e6e6e' d='m10.71 7.29-4-4a1.003 1.003 0 0 0-1.42 1.42L8.59 8 5.3 11.29c-.19.18-.3.43-.3.71a1.003 1.003 0 0 0 1.71.71l4-4c.18-.18.29-.43.29-.71 0-.28-.11-.53-.29-.71z'/%3E%3C/svg%3E");
@@ -340,8 +340,6 @@
 	--pt-transition-duration: 100ms;
 	--pt-input-box-shadow: inset 0 0 0 1px hsla(var(--pt-shadow-color-hsl),0.2);
 	--pt-dialog-box-shadow: var(--pt-elevation-shadow-4);
-	--pt-popover-box-shadow: var(--pt-elevation-shadow-3);
-	--pt-tooltip-box-shadow: var(--pt-popover-box-shadow);
 
 	/*! Components */
 	--button-border-width: 1px;
@@ -410,12 +408,9 @@
 	--navbar-background-color: var(--pt-app-top-background-color);
 	--overlay-background-opacity: 0.7;
 	--overlay-background-color: hsla(var(--black-hsl),var(--overlay-background-opacity));
-	--popover-background-color: var(--pt-app-top-background-color);
-	--pt-popover2-background-color: var(--pt-app-top-background-color);
-	--pt-popover2-box-shadow: var(--pt-elevation-shadow-3);
-	--pt-tooltip2-box-shadow: var(--pt-popover-box-shadow);
-	--tooltip2-background-color: var(--dark-gray5);
-	--tooltip2-text-color: var(--light-gray5);
+	--pt-popover-background-color: var(--pt-app-top-background-color);
+	--pt-popover-box-shadow: var(--pt-elevation-shadow-3);
+	--pt-tooltip-box-shadow: var(--pt-popover-box-shadow);
 	--progress-track-color: hsla(var(--gray1-hsl),0.2);
 	--progress-head-color: hsla(var(--gray1-hsl),0.8);
 	--progress-bar-stripes-color: hsla(var(--white-hsl),0.2);
@@ -466,7 +461,7 @@
 }
 
 
-.bp4-dark {
+.bp5-dark {
 
 	/*! Icons */
 
@@ -516,8 +511,6 @@
 	--pt-elevation-shadow-4: 0 0 0 1px hsla(var(--pt-shadow-color-hsl),var(--pt-border-shadow-opacity)),0 4px 8px hsla(var(--pt-shadow-color-hsl),var(--pt-drop-shadow-opacity)),0 18px 46px 6px hsla(var(--pt-shadow-color-hsl),var(--pt-drop-shadow-opacity));
 	--pt-input-box-shadow: inset 0 0 0 1px hsla(var(--pt-shadow-color-hsl),0.6);
 	--pt-dialog-box-shadow: var(--pt-elevation-shadow-4);
-	--pt-popover-box-shadow: var(--pt-elevation-shadow-3);
-	--pt-tooltip-box-shadow: var(--pt-popover-box-shadow);
 
 	/*! Components */
 	--button-box-shadow: inset 0 0 0 var(--button-border-width) hsl(var(--black-hsl),0.8),0 1px 2px hsla(var(--black-hsl),0.05);
@@ -563,12 +556,9 @@
 	--menu-item-color-hover: var(--minimal-button-background-color-hover);
 	--menu-item-color-active: var(--minimal-button-background-color-active);
 	--navbar-background-color: var(--dark-gray5);
-	--popover-background-color: var(--pt-app-top-background-color);
-	--pt-popover2-background-color: var(--pt-app-top-background-color);
-	--pt-popover2-box-shadow: var(--pt-elevation-shadow-3);
-	--pt-tooltip2-box-shadow: var(--pt-popover-box-shadow);
-	--tooltip2-background-color: var(--light-gray3);
-	--tooltip2-text-color: var(--dark-gray5);
+	--pt-popover-background-color: var(--pt-app-top-background-color);
+	--pt-popover-box-shadow: var(--pt-elevation-shadow-3);
+	--pt-tooltip-box-shadow: var(--pt-popover-box-shadow);
 	--progress-track-color: hsla(var(--black-hsl),0.5);
 	--progress-head-color: var(--gray3);
 	--slider-progress-color: hsla(var(--black-hsl),0.5);

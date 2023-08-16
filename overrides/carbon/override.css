@@ -1,69 +1,69 @@
-:root .bp4-button.bp4-large,:root .bp4-large .bp4-button {
+:root .bp5-button.bp5-large,:root .bp5-large .bp5-button {
     font-size: var(--pt-font-size)
 }
 
-:root .bp4-callout {
+:root .bp5-callout {
     border-left: 3px solid var(--pt-text-color-disabled)
 }
 
-:root .bp4-callout.bp4-intent-primary {
+:root .bp5-callout.bp5-intent-primary {
     border-color: hsla(var(--pt-intent-primary-hsl),1)
 }
 
-:root .bp4-callout.bp4-intent-success {
+:root .bp5-callout.bp5-intent-success {
     border-color: hsla(var(--pt-intent-success-hsl),1)
 }
 
-:root .bp4-callout.bp4-intent-warning {
+:root .bp5-callout.bp5-intent-warning {
     border-color: hsla(var(--pt-intent-warning-hsl),1)
 }
 
-:root .bp4-callout.bp4-intent-danger {
+:root .bp5-callout.bp5-intent-danger {
     border-color: hsla(var(--pt-intent-danger-hsl),1)
 }
 
-:root .bp4-editable-text:hover:before {
+:root .bp5-editable-text:hover:before {
     background-color: var(--input-background-color);
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-primary)
 }
 
-:root .bp4-editable-text.bp4-editable-text-editing:before {
+:root .bp5-editable-text.bp5-editable-text-editing:before {
     box-shadow: 0 0 0 2px var(--pt-intent-primary)
 }
 
-:root .bp4-editable-text.bp4-intent-primary:hover:before {
+:root .bp5-editable-text.bp5-intent-primary:hover:before {
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-primary)
 }
 
-:root .bp4-editable-text.bp4-intent-primary.bp4-editable-text-editing:before {
+:root .bp5-editable-text.bp5-intent-primary.bp5-editable-text-editing:before {
     box-shadow: 0 0 0 2px var(--pt-intent-primary)
 }
 
-:root .bp4-editable-text.bp4-intent-success:hover:before {
+:root .bp5-editable-text.bp5-intent-success:hover:before {
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-success)
 }
 
-:root .bp4-editable-text.bp4-intent-success.bp4-editable-text-editing:before {
+:root .bp5-editable-text.bp5-intent-success.bp5-editable-text-editing:before {
     box-shadow: 0 0 0 2px var(--pt-intent-success)
 }
 
-:root .bp4-editable-text.bp4-intent-warning:hover:before {
+:root .bp5-editable-text.bp5-intent-warning:hover:before {
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-warning)
 }
 
-:root .bp4-editable-text.bp4-intent-warning.bp4-editable-text-editing:before {
+:root .bp5-editable-text.bp5-intent-warning.bp5-editable-text-editing:before {
     box-shadow: 0 0 0 2px var(--pt-intent-warning)
 }
 
-:root .bp4-editable-text.bp4-intent-danger:hover:before {
+:root .bp5-editable-text.bp5-intent-danger:hover:before {
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-danger)
 }
 
-:root .bp4-editable-text.bp4-intent-danger.bp4-editable-text-editing:before {
+:root .bp5-editable-text.bp5-intent-danger.bp5-editable-text-editing:before {
     box-shadow: 0 0 0 2px var(--pt-intent-danger)
 }
 
-:root .bp4-editable-text-input::placeholder {
+:root .bp5-editable-text-input::placeholder {
     color: var(--pt-text-color-disabled)
 }
 
@@ -73,428 +73,428 @@
     outline-offset: 1px
 }
 
-:root .bp4-focus-disabled :focus,:root .bp4-focus-disabled :focus~.bp4-control-indicator,:root .bp4-input:focus {
+:root .bp5-focus-disabled :focus,:root .bp5-focus-disabled :focus~.bp5-control-indicator,:root .bp5-input:focus {
     outline: none!important
 }
 
-:root .bp4-control input:focus~.bp4-control-indicator {
+:root .bp5-control input:focus~.bp5-control-indicator {
     -moz-outline-radius: 0;
     outline: var(--pt-intent-primary) solid 2px;
     outline-offset: 2px
 }
 
-:root .bp4-tag-input .bp4-tag.bp4-active,:root .bp4-tag:focus {
+:root .bp5-tag-input .bp5-tag.bp5-active,:root .bp5-tag:focus {
     -moz-outline-radius: 0;
     outline: var(--pt-intent-primary) solid 2px;
     outline-offset: 1px
 }
 
-:root .bp4-input {
+:root .bp5-input {
     box-shadow: inset 0 -1px 0 0 var(--input-border)
 }
 
-:root .bp4-input:hover {
+:root .bp5-input:hover {
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-primary)
 }
 
-:root .bp4-input.bp4-active,:root .bp4-input:focus {
+:root .bp5-input.bp5-active,:root .bp5-input:focus {
     box-shadow: inset 0 0 0 2px var(--pt-intent-primary)
 }
 
-:root .bp4-input.bp4-disabled,:root .bp4-input:disabled {
+:root .bp5-input.bp5-disabled,:root .bp5-input:disabled {
     box-shadow: none
 }
 
-:root .bp4-input.bp4-intent-primary {
+:root .bp5-input.bp5-intent-primary {
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-primary)
 }
 
-:root .bp4-input.bp4-intent-primary:focus {
+:root .bp5-input.bp5-intent-primary:focus {
     box-shadow: inset 0 0 0 2px var(--pt-intent-primary)
 }
 
-.bp4-input-group.bp4-intent-primary :root .bp4-input {
+.bp5-input-group.bp5-intent-primary :root .bp5-input {
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-primary)
 }
 
-.bp4-input-group.bp4-intent-primary :root .bp4-input:focus {
+.bp5-input-group.bp5-intent-primary :root .bp5-input:focus {
     box-shadow: inset 0 0 0 2px var(--pt-intent-primary)
 }
 
-:root .bp4-input.bp4-intent-success {
+:root .bp5-input.bp5-intent-success {
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-success)
 }
 
-:root .bp4-input.bp4-intent-success:focus {
+:root .bp5-input.bp5-intent-success:focus {
     box-shadow: inset 0 0 0 2px var(--pt-intent-success)
 }
 
-.bp4-input-group.bp4-intent-success :root .bp4-input {
+.bp5-input-group.bp5-intent-success :root .bp5-input {
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-success)
 }
 
-.bp4-input-group.bp4-intent-success :root .bp4-input:focus {
+.bp5-input-group.bp5-intent-success :root .bp5-input:focus {
     box-shadow: inset 0 0 0 2px var(--pt-intent-success)
 }
 
-:root .bp4-input.bp4-intent-warning {
+:root .bp5-input.bp5-intent-warning {
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-warning)
 }
 
-:root .bp4-input.bp4-intent-warning:focus {
+:root .bp5-input.bp5-intent-warning:focus {
     box-shadow: inset 0 0 0 2px var(--pt-intent-warning)
 }
 
-.bp4-input-group.bp4-intent-warning :root .bp4-input {
+.bp5-input-group.bp5-intent-warning :root .bp5-input {
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-warning)
 }
 
-.bp4-input-group.bp4-intent-warning :root .bp4-input:focus {
+.bp5-input-group.bp5-intent-warning :root .bp5-input:focus {
     box-shadow: inset 0 0 0 2px var(--pt-intent-warning)
 }
 
-:root .bp4-input.bp4-intent-danger {
+:root .bp5-input.bp5-intent-danger {
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-danger)
 }
 
-:root .bp4-input.bp4-intent-danger:focus {
+:root .bp5-input.bp5-intent-danger:focus {
     box-shadow: inset 0 0 0 2px var(--pt-intent-danger)
 }
 
-.bp4-input-group.bp4-intent-danger :root .bp4-input {
+.bp5-input-group.bp5-intent-danger :root .bp5-input {
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-danger)
 }
 
-.bp4-input-group.bp4-intent-danger :root .bp4-input:focus {
+.bp5-input-group.bp5-intent-danger :root .bp5-input:focus {
     box-shadow: inset 0 0 0 2px var(--pt-intent-danger)
 }
 
-:root .bp4-timepicker .bp4-timepicker-input {
+:root .bp5-timepicker .bp5-timepicker-input {
     box-shadow: inset 0 -1px 0 0 var(--input-border)
 }
 
-:root .bp4-timepicker .bp4-timepicker-input:hover {
+:root .bp5-timepicker .bp5-timepicker-input:hover {
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-primary)
 }
 
-:root .bp4-timepicker .bp4-timepicker-input.bp4-active,:root .bp4-timepicker .bp4-timepicker-input:focus {
+:root .bp5-timepicker .bp5-timepicker-input.bp5-active,:root .bp5-timepicker .bp5-timepicker-input:focus {
     box-shadow: inset 0 0 0 2px var(--pt-intent-primary)
 }
 
-:root .bp4-timepicker .bp4-timepicker-input.bp4-disabled,:root .bp4-timepicker .bp4-timepicker-input:disabled {
+:root .bp5-timepicker .bp5-timepicker-input.bp5-disabled,:root .bp5-timepicker .bp5-timepicker-input:disabled {
     box-shadow: none
 }
 
-:root .bp4-timepicker .bp4-timepicker-input.bp4-intent-primary {
+:root .bp5-timepicker .bp5-timepicker-input.bp5-intent-primary {
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-primary)
 }
 
-:root .bp4-timepicker .bp4-timepicker-input.bp4-intent-primary:focus {
+:root .bp5-timepicker .bp5-timepicker-input.bp5-intent-primary:focus {
     box-shadow: inset 0 0 0 2px var(--pt-intent-primary)
 }
 
-.bp4-input-group.bp4-intent-primary :root .bp4-timepicker .bp4-timepicker-input {
+.bp5-input-group.bp5-intent-primary :root .bp5-timepicker .bp5-timepicker-input {
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-primary)
 }
 
-.bp4-input-group.bp4-intent-primary :root .bp4-timepicker .bp4-timepicker-input:focus {
+.bp5-input-group.bp5-intent-primary :root .bp5-timepicker .bp5-timepicker-input:focus {
     box-shadow: inset 0 0 0 2px var(--pt-intent-primary)
 }
 
-:root .bp4-timepicker .bp4-timepicker-input.bp4-intent-success {
+:root .bp5-timepicker .bp5-timepicker-input.bp5-intent-success {
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-success)
 }
 
-:root .bp4-timepicker .bp4-timepicker-input.bp4-intent-success:focus {
+:root .bp5-timepicker .bp5-timepicker-input.bp5-intent-success:focus {
     box-shadow: inset 0 0 0 2px var(--pt-intent-success)
 }
 
-.bp4-input-group.bp4-intent-success :root .bp4-timepicker .bp4-timepicker-input {
+.bp5-input-group.bp5-intent-success :root .bp5-timepicker .bp5-timepicker-input {
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-success)
 }
 
-.bp4-input-group.bp4-intent-success :root .bp4-timepicker .bp4-timepicker-input:focus {
+.bp5-input-group.bp5-intent-success :root .bp5-timepicker .bp5-timepicker-input:focus {
     box-shadow: inset 0 0 0 2px var(--pt-intent-success)
 }
 
-:root .bp4-timepicker .bp4-timepicker-input.bp4-intent-warning {
+:root .bp5-timepicker .bp5-timepicker-input.bp5-intent-warning {
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-warning)
 }
 
-:root .bp4-timepicker .bp4-timepicker-input.bp4-intent-warning:focus {
+:root .bp5-timepicker .bp5-timepicker-input.bp5-intent-warning:focus {
     box-shadow: inset 0 0 0 2px var(--pt-intent-warning)
 }
 
-.bp4-input-group.bp4-intent-warning :root .bp4-timepicker .bp4-timepicker-input {
+.bp5-input-group.bp5-intent-warning :root .bp5-timepicker .bp5-timepicker-input {
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-warning)
 }
 
-.bp4-input-group.bp4-intent-warning :root .bp4-timepicker .bp4-timepicker-input:focus {
+.bp5-input-group.bp5-intent-warning :root .bp5-timepicker .bp5-timepicker-input:focus {
     box-shadow: inset 0 0 0 2px var(--pt-intent-warning)
 }
 
-:root .bp4-timepicker .bp4-timepicker-input.bp4-intent-danger {
+:root .bp5-timepicker .bp5-timepicker-input.bp5-intent-danger {
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-danger)
 }
 
-:root .bp4-timepicker .bp4-timepicker-input.bp4-intent-danger:focus {
+:root .bp5-timepicker .bp5-timepicker-input.bp5-intent-danger:focus {
     box-shadow: inset 0 0 0 2px var(--pt-intent-danger)
 }
 
-.bp4-input-group.bp4-intent-danger :root .bp4-timepicker .bp4-timepicker-input {
+.bp5-input-group.bp5-intent-danger :root .bp5-timepicker .bp5-timepicker-input {
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-danger)
 }
 
-.bp4-input-group.bp4-intent-danger :root .bp4-timepicker .bp4-timepicker-input:focus {
+.bp5-input-group.bp5-intent-danger :root .bp5-timepicker .bp5-timepicker-input:focus {
     box-shadow: inset 0 0 0 2px var(--pt-intent-danger)
 }
 
-:root textarea.bp4-input {
+:root textarea.bp5-input {
     box-shadow: inset 0 -1px 0 0 var(--input-border)
 }
 
-:root textarea.bp4-input:hover {
+:root textarea.bp5-input:hover {
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-primary)
 }
 
-:root textarea.bp4-input.bp4-active,:root textarea.bp4-input:focus {
+:root textarea.bp5-input.bp5-active,:root textarea.bp5-input:focus {
     box-shadow: inset 0 0 0 2px var(--pt-intent-primary)
 }
 
-:root textarea.bp4-input.bp4-disabled,:root textarea.bp4-input:disabled {
+:root textarea.bp5-input.bp5-disabled,:root textarea.bp5-input:disabled {
     box-shadow: none
 }
 
-:root textarea.bp4-input.bp4-intent-primary {
+:root textarea.bp5-input.bp5-intent-primary {
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-primary)
 }
 
-:root textarea.bp4-input.bp4-intent-primary:focus {
+:root textarea.bp5-input.bp5-intent-primary:focus {
     box-shadow: inset 0 0 0 2px var(--pt-intent-primary)
 }
 
-.bp4-input-group.bp4-intent-primary :root textarea.bp4-input {
+.bp5-input-group.bp5-intent-primary :root textarea.bp5-input {
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-primary)
 }
 
-.bp4-input-group.bp4-intent-primary :root textarea.bp4-input:focus {
+.bp5-input-group.bp5-intent-primary :root textarea.bp5-input:focus {
     box-shadow: inset 0 0 0 2px var(--pt-intent-primary)
 }
 
-:root textarea.bp4-input.bp4-intent-success {
+:root textarea.bp5-input.bp5-intent-success {
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-success)
 }
 
-:root textarea.bp4-input.bp4-intent-success:focus {
+:root textarea.bp5-input.bp5-intent-success:focus {
     box-shadow: inset 0 0 0 2px var(--pt-intent-success)
 }
 
-.bp4-input-group.bp4-intent-success :root textarea.bp4-input {
+.bp5-input-group.bp5-intent-success :root textarea.bp5-input {
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-success)
 }
 
-.bp4-input-group.bp4-intent-success :root textarea.bp4-input:focus {
+.bp5-input-group.bp5-intent-success :root textarea.bp5-input:focus {
     box-shadow: inset 0 0 0 2px var(--pt-intent-success)
 }
 
-:root textarea.bp4-input.bp4-intent-warning {
+:root textarea.bp5-input.bp5-intent-warning {
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-warning)
 }
 
-:root textarea.bp4-input.bp4-intent-warning:focus {
+:root textarea.bp5-input.bp5-intent-warning:focus {
     box-shadow: inset 0 0 0 2px var(--pt-intent-warning)
 }
 
-.bp4-input-group.bp4-intent-warning :root textarea.bp4-input {
+.bp5-input-group.bp5-intent-warning :root textarea.bp5-input {
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-warning)
 }
 
-.bp4-input-group.bp4-intent-warning :root textarea.bp4-input:focus {
+.bp5-input-group.bp5-intent-warning :root textarea.bp5-input:focus {
     box-shadow: inset 0 0 0 2px var(--pt-intent-warning)
 }
 
-:root textarea.bp4-input.bp4-intent-danger {
+:root textarea.bp5-input.bp5-intent-danger {
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-danger)
 }
 
-:root textarea.bp4-input.bp4-intent-danger:focus {
+:root textarea.bp5-input.bp5-intent-danger:focus {
     box-shadow: inset 0 0 0 2px var(--pt-intent-danger)
 }
 
-.bp4-input-group.bp4-intent-danger :root textarea.bp4-input {
+.bp5-input-group.bp5-intent-danger :root textarea.bp5-input {
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-danger)
 }
 
-.bp4-input-group.bp4-intent-danger :root textarea.bp4-input:focus {
+.bp5-input-group.bp5-intent-danger :root textarea.bp5-input:focus {
     box-shadow: inset 0 0 0 2px var(--pt-intent-danger)
 }
 
-:root .bp4-button-group:not(.bp4-minimal)>.bp4-button:not(:last-child),:root .bp4-button-group:not(.bp4-minimal)>.bp4-popover-wrapper:not(:last-child) .bp4-button {
+:root .bp5-button-group:not(.bp5-minimal)>.bp5-button:not(:last-child),:root .bp5-button-group:not(.bp5-minimal)>.bp5-popover-wrapper:not(:last-child) .bp5-button {
     margin-right: 1px
 }
 
-:root .bp4-button-group.bp4-vertical:not(.bp4-minimal)>.bp4-button:not(:last-child),:root .bp4-button-group.bp4-vertical:not(.bp4-minimal)>.bp4-popover-wrapper:not(:last-child) .bp4-button {
+:root .bp5-button-group.bp5-vertical:not(.bp5-minimal)>.bp5-button:not(:last-child),:root .bp5-button-group.bp5-vertical:not(.bp5-minimal)>.bp5-popover-wrapper:not(:last-child) .bp5-button {
     margin-bottom: 1px
 }
 
-:root .bp4-control input~.bp4-control-indicator {
+:root .bp5-control input~.bp5-control-indicator {
     box-shadow: inset 0 0 0 1px var(--input-border)
 }
 
-:root .bp4-control:hover .bp4-control-indicator {
+:root .bp5-control:hover .bp5-control-indicator {
     box-shadow: inset 0 0 0 1px var(--pt-intent-primary)
 }
 
-:root .bp4-control input:checked~.bp4-control-indicator,:root .bp4-control input[type=checkbox]:indeterminate~.bp4-control-indicator {
+:root .bp5-control input:checked~.bp5-control-indicator,:root .bp5-control input[type=checkbox]:indeterminate~.bp5-control-indicator {
     box-shadow: var(--button-box-shadow)
 }
 
-:root .bp4-control.bp4-disabled .bp4-control-indicator,:root .bp4-control:disabled .bp4-control-indicator {
+:root .bp5-control.bp5-disabled .bp5-control-indicator,:root .bp5-control:disabled .bp5-control-indicator {
     box-shadow: none
 }
 
-:root .bp4-control.bp4-switch .bp4-control-indicator:before {
+:root .bp5-control.bp5-switch .bp5-control-indicator:before {
     background-color: var(--white);
     box-shadow: none
 }
 
-:root .bp4-control.bp4-large,:root .bp4-input-group.bp4-large .bp4-input,:root .bp4-input.bp4-large {
+:root .bp5-control.bp5-large,:root .bp5-input-group.bp5-large .bp5-input,:root .bp5-input.bp5-large {
     font-size: var(--pt-font-size)
 }
 
-:root .bp4-spinner .bp4-spinner-head {
+:root .bp5-spinner .bp5-spinner-head {
     stroke-linecap: square
 }
 
-:root .bp4-progress-bar {
+:root .bp5-progress-bar {
     border-radius: unset;
     height: 4px
 }
 
-:root .bp4-progress-bar .bp4-progress-meter {
+:root .bp5-progress-bar .bp5-progress-meter {
     background-image: linear-gradient(-90deg,rgba(255,255,255,.15),rgba(255,255,255,0) 50%,rgba(255,255,255,.15));
     border-radius: unset
 }
 
-:root .bp4-menu {
+:root .bp5-menu {
     padding: 5px 0
 }
 
-:root .bp4-menu-divider {
+:root .bp5-menu-divider {
     margin-left: 0;
     margin-right: 0
 }
 
-:root .bp4-datepicker,:root .bp4-select-popover .bp4-popover-content {
+:root .bp5-datepicker,:root .bp5-select-popover .bp5-popover-content {
     padding: 0
 }
 
-:root .bp4-datepicker .bp4-divider {
+:root .bp5-datepicker .bp5-divider {
     margin: 0
 }
 
-:root .bp4-datepicker .DayPicker-Month {
+:root .bp5-datepicker .DayPicker-Month {
     margin: 0 4px 4px
 }
 
-:root .bp4-datepicker .DayPicker-Caption .bp4-divider {
+:root .bp5-datepicker .DayPicker-Caption .bp5-divider {
     margin: 0 -4px
 }
 
-:root .bp4-datepicker.bp4-daterangepicker .DayPicker:last-child {
+:root .bp5-datepicker.bp5-daterangepicker .DayPicker:last-child {
     border-left: 1px solid var(--pt-divider-black)
 }
 
-:root .bp4-datepicker .bp4-datepicker-caption {
+:root .bp5-datepicker .bp5-datepicker-caption {
     margin-bottom: 0
 }
 
-:root .bp4-datepicker .DayPicker-Day.DayPicker-Day--selected {
+:root .bp5-datepicker .DayPicker-Day.DayPicker-Day--selected {
     background-color: var(--pt-intent-primary)
 }
 
-:root .bp4-datetimepicker,:root .bp4-datetimepicker .bp4-datepicker {
+:root .bp5-datetimepicker,:root .bp5-datetimepicker .bp5-datepicker {
     padding: 0
 }
 
-:root .bp4-datetimepicker .bp4-timepicker {
+:root .bp5-datetimepicker .bp5-timepicker {
     margin: 3px
 }
 
-:root .bp4-timepicker .bp4-timepicker-input-row {
+:root .bp5-timepicker .bp5-timepicker-input-row {
     box-shadow: inset 0 -1px 0 0 var(--input-border);
     height: 32px;
     padding: 0
 }
 
-:root .bp4-timepicker .bp4-timepicker-ampm-select {
+:root .bp5-timepicker .bp5-timepicker-ampm-select {
     margin-left: 1px
 }
 
-:root .bp4-timepicker .bp4-timepicker-input {
+:root .bp5-timepicker .bp5-timepicker-input {
     height: 100%
 }
 
-:root .bp4-timepicker .bp4-timepicker-input:hover:not(:focus) {
+:root .bp5-timepicker .bp5-timepicker-input:hover:not(:focus) {
     box-shadow: inset 0 -1px 0 0 var(--pt-intent-primary)
 }
 
-:root .bp4-timepicker .bp4-timepicker-input:focus {
+:root .bp5-timepicker .bp5-timepicker-input:focus {
     box-shadow: inset 0 0 0 2px var(--pt-intent-primary)
 }
 
-:root .bp4-slider-label {
+:root .bp5-slider-label {
     font-family: var(--pt-font-family-monospace)
 }
 
-:root .bp4-slider-handle {
+:root .bp5-slider-handle {
     background-color: var(--pt-intent-primary);
     border-radius: 99px;
     box-shadow: none
 }
 
-:root .bp4-slider-handle:hover {
+:root .bp5-slider-handle:hover {
     background-color: var(--pt-intent-primary-hover);
     box-shadow: none
 }
 
-:root .bp4-slider-handle.bp4-active,:root .bp4-slider-handle:active {
+:root .bp5-slider-handle.bp5-active,:root .bp5-slider-handle:active {
     background-color: var(--pt-intent-primary-active);
     box-shadow: none
 }
 
-:root .bp4-slider-handle.bp4-end.bp4-end,:root .bp4-slider-handle.bp4-start.bp4-start {
+:root .bp5-slider-handle.bp5-end.bp5-end,:root .bp5-slider-handle.bp5-start.bp5-start {
     border-radius: 99px;
     margin-left: 0
 }
 
-:root .bp4-slider-handle.bp4-end,:root .bp4-slider-handle.bp4-start {
+:root .bp5-slider-handle.bp5-end,:root .bp5-slider-handle.bp5-start {
     width: 12px
 }
 
-.bp4-slider.bp4-vertical :root .bp4-slider-handle.bp4-end.bp4-end,.bp4-slider.bp4-vertical :root .bp4-slider-handle.bp4-start.bp4-start {
+.bp5-slider.bp5-vertical :root .bp5-slider-handle.bp5-end.bp5-end,.bp5-slider.bp5-vertical :root .bp5-slider-handle.bp5-start.bp5-start {
     border-radius: 99px
 }
 
-.bp4-slider.bp4-vertical :root .bp4-slider-handle.bp4-end,.bp4-slider.bp4-vertical :root .bp4-slider-handle.bp4-start {
+.bp5-slider.bp5-vertical :root .bp5-slider-handle.bp5-end,.bp5-slider.bp5-vertical :root .bp5-slider-handle.bp5-start {
     height: 12px
 }
 
-:root .bp4-tab {
+:root .bp5-tab {
     color: var(--pt-text-color-muted);
     font-weight: var(--font-weight-bold)
 }
 
-:root .bp4-tab:not([aria-disabled=true]):hover,:root .bp4-tab[aria-selected=true] {
+:root .bp5-tab:not([aria-disabled=true]):hover,:root .bp5-tab[aria-selected=true] {
     color: var(--pt-text-color)
 }
 
-:root .bp4-tab-indicator {
+:root .bp5-tab-indicator {
     background-color: var(--pt-intent-primary);
     height: 1px
 }
 
-:root .bp4-tab[aria-selected=true] {
+:root .bp5-tab[aria-selected=true] {
     border-radius: 0;
     box-shadow: inset 0 -1px 0 var(--pt-intent-primary)
 }
@@ -509,19 +509,19 @@
     letter-spacing: .035em
 }
 
-:root .bp4-key,:root .bp4-running-text kbd {
+:root .bp5-key,:root .bp5-running-text kbd {
     border-radius: 3px;
     padding: 3px 6px
 }
 
-:root .bp4-input[type=search] {
+:root .bp5-input[type=search] {
     border-radius: var(--pt-border-radius)
 }
 
-:root .bp4-input.bp4-round {
+:root .bp5-input.bp5-round {
     border-radius: 99px
 }
 
-:root .bp4-tag-input .bp4-input-ghost:not(:focus)[value=""] {
+:root .bp5-tag-input .bp5-input-ghost:not(:focus)[value=""] {
     width: 1px
 }

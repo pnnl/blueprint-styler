@@ -1,14 +1,14 @@
-:root .bp4-button {
+:root .bp5-button {
     position: relative;
     transition: .2s linear;
     transition-property: background-color,color,opacity,box-shadow,border-color
 }
 
-:root .bp4-button:active {
+:root .bp5-button:active {
     transition-duration: 50ms
 }
 
-:root .bp4-button:after {
+:root .bp5-button:after {
     border-radius: inherit;
     bottom: 0;
     box-shadow: 0 0 0 6px currentColor;
@@ -24,43 +24,43 @@
     transition: opacity 2s var(--button-active-effect-easing),box-shadow .4s var(--button-active-effect-easing)
 }
 
-:root .bp4-button:active:after {
+:root .bp5-button:active:after {
     box-shadow: 0 0 0 0 currentColor;
     opacity: .2;
     transition: none
 }
 
-:root .bp4-button.bp4-disabled:after,:root .bp4-button:disabled:after {
+:root .bp5-button.bp5-disabled:after,:root .bp5-button:disabled:after {
     content: unset
 }
 
-:root .bp4-button.bp4-intent-primary:after {
+:root .bp5-button.bp5-intent-primary:after {
     color: var(--pt-intent-primary-active)
 }
 
-:root .bp4-button.bp4-intent-success:after {
+:root .bp5-button.bp5-intent-success:after {
     color: var(--pt-intent-success-active)
 }
 
-:root .bp4-button.bp4-intent-warning:after {
+:root .bp5-button.bp5-intent-warning:after {
     color: var(--pt-intent-warning-active)
 }
 
-:root .bp4-button.bp4-intent-danger:after {
+:root .bp5-button.bp5-intent-danger:after {
     color: var(--pt-intent-danger-active)
 }
 
-:root a.bp4-button {
+:root a.bp5-button {
     position: relative;
     transition: .2s linear;
     transition-property: background-color,color,opacity,box-shadow,border-color
 }
 
-:root a.bp4-button:active {
+:root a.bp5-button:active {
     transition-duration: 50ms
 }
 
-:root a.bp4-button:after {
+:root a.bp5-button:after {
     border-radius: inherit;
     bottom: 0;
     box-shadow: 0 0 0 6px currentColor;
@@ -76,87 +76,87 @@
     transition: opacity 2s var(--button-active-effect-easing),box-shadow .4s var(--button-active-effect-easing)
 }
 
-:root a.bp4-button:active:after {
+:root a.bp5-button:active:after {
     box-shadow: 0 0 0 0 currentColor;
     opacity: .2;
     transition: none
 }
 
-:root a.bp4-button.bp4-disabled:after,:root a.bp4-button:disabled:after {
+:root a.bp5-button.bp5-disabled:after,:root a.bp5-button:disabled:after {
     content: unset
 }
 
-:root a.bp4-button.bp4-intent-primary:after {
+:root a.bp5-button.bp5-intent-primary:after {
     color: var(--pt-intent-primary-active)
 }
 
-:root a.bp4-button.bp4-intent-success:after {
+:root a.bp5-button.bp5-intent-success:after {
     color: var(--pt-intent-success-active)
 }
 
-:root a.bp4-button.bp4-intent-warning:after {
+:root a.bp5-button.bp5-intent-warning:after {
     color: var(--pt-intent-warning-active)
 }
 
-:root a.bp4-button.bp4-intent-danger:after {
+:root a.bp5-button.bp5-intent-danger:after {
     color: var(--pt-intent-danger-active)
 }
 
-:root .bp4-button .bp4-icon {
+:root .bp5-button .bp5-icon {
     color: inherit
 }
 
-:root .bp4-button:not([class*=bp4-intent-]):not(.bp4-minimal):not(.bp4-outlined):not(:disabled):not(.bp4-disabled):hover {
+:root .bp5-button:not([class*=bp5-intent-]):not(.bp5-minimal):not(.bp5-outlined):not(:disabled):not(.bp5-disabled):hover {
     background-color: var(--button-background-color-hover);
     box-shadow: var(--button-box-shadow-hover);
     color: var(--pt-intent-primary-hover)
 }
 
-:root .bp4-button:not([class*=bp4-intent-]):not(.bp4-minimal):not(.bp4-outlined):not(:disabled):not(.bp4-disabled).bp4-active,:root .bp4-button:not([class*=bp4-intent-]):not(.bp4-minimal):not(.bp4-outlined):not(:disabled):not(.bp4-disabled):active {
+:root .bp5-button:not([class*=bp5-intent-]):not(.bp5-minimal):not(.bp5-outlined):not(:disabled):not(.bp5-disabled).bp5-active,:root .bp5-button:not([class*=bp5-intent-]):not(.bp5-minimal):not(.bp5-outlined):not(:disabled):not(.bp5-disabled):active {
     background-color: var(--button-background-color-active);
     box-shadow: var(--button-box-shadow-active);
     color: var(--pt-intent-primary-active)
 }
 
-:root .bp4-button.bp4-outlined {
+:root .bp5-button.bp5-outlined {
     background-color: unset!important;
     box-shadow: unset!important
 }
 
-:root .bp4-button.bp4-outlined:hover {
+:root .bp5-button.bp5-outlined:hover {
     border-color: var(--pt-intent-primary-hover);
     color: var(--pt-intent-primary-hover)
 }
 
-:root .bp4-button.bp4-outlined.bp4-active,:root .bp4-button.bp4-outlined:active {
+:root .bp5-button.bp5-outlined.bp5-active,:root .bp5-button.bp5-outlined:active {
     border-color: var(--pt-intent-primary-active);
     color: var(--pt-intent-primary-active)
 }
 
-:root .bp4-button.bp4-outlined.bp4-intent-danger,:root .bp4-button.bp4-outlined.bp4-intent-primary,:root .bp4-button.bp4-outlined.bp4-intent-success,:root .bp4-button.bp4-outlined.bp4-intent-warning {
+:root .bp5-button.bp5-outlined.bp5-intent-danger,:root .bp5-button.bp5-outlined.bp5-intent-primary,:root .bp5-button.bp5-outlined.bp5-intent-success,:root .bp5-button.bp5-outlined.bp5-intent-warning {
     border-color: currentColor
 }
 
-:root .bp4-button-group .bp4-button[class*=bp4-intent-] {
+:root .bp5-button-group .bp5-button[class*=bp5-intent-] {
     --button-group-spacing: 1px
 }
 
-:root .bp4-html-select,:root .bp4-select {
+:root .bp5-html-select,:root .bp5-select {
     transition: .2s linear;
     transition-property: background-color,color,opacity,box-shadow
 }
 
-:root .bp4-html-select select,:root .bp4-select select {
+:root .bp5-html-select select,:root .bp5-select select {
     position: relative;
     transition: .2s linear;
     transition-property: background-color,color,opacity,box-shadow,border-color
 }
 
-:root .bp4-html-select select:active,:root .bp4-select select:active {
+:root .bp5-html-select select:active,:root .bp5-select select:active {
     transition-duration: 50ms
 }
 
-:root .bp4-html-select select:after,:root .bp4-select select:after {
+:root .bp5-html-select select:after,:root .bp5-select select:after {
     border-radius: inherit;
     bottom: 0;
     box-shadow: 0 0 0 6px currentColor;
@@ -172,99 +172,99 @@
     transition: opacity 2s var(--button-active-effect-easing),box-shadow .4s var(--button-active-effect-easing)
 }
 
-:root .bp4-html-select select:active:after,:root .bp4-select select:active:after {
+:root .bp5-html-select select:active:after,:root .bp5-select select:active:after {
     box-shadow: 0 0 0 0 currentColor;
     opacity: .2;
     transition: none
 }
 
-:root .bp4-html-select select.bp4-disabled:after,:root .bp4-html-select select:disabled:after,:root .bp4-select select.bp4-disabled:after,:root .bp4-select select:disabled:after {
+:root .bp5-html-select select.bp5-disabled:after,:root .bp5-html-select select:disabled:after,:root .bp5-select select.bp5-disabled:after,:root .bp5-select select:disabled:after {
     content: unset
 }
 
-:root .bp4-html-select select.bp4-intent-primary:after,:root .bp4-select select.bp4-intent-primary:after {
+:root .bp5-html-select select.bp5-intent-primary:after,:root .bp5-select select.bp5-intent-primary:after {
     color: var(--pt-intent-primary-active)
 }
 
-:root .bp4-html-select select.bp4-intent-success:after,:root .bp4-select select.bp4-intent-success:after {
+:root .bp5-html-select select.bp5-intent-success:after,:root .bp5-select select.bp5-intent-success:after {
     color: var(--pt-intent-success-active)
 }
 
-:root .bp4-html-select select.bp4-intent-warning:after,:root .bp4-select select.bp4-intent-warning:after {
+:root .bp5-html-select select.bp5-intent-warning:after,:root .bp5-select select.bp5-intent-warning:after {
     color: var(--pt-intent-warning-active)
 }
 
-:root .bp4-html-select select.bp4-intent-danger:after,:root .bp4-select select.bp4-intent-danger:after {
+:root .bp5-html-select select.bp5-intent-danger:after,:root .bp5-select select.bp5-intent-danger:after {
     color: var(--pt-intent-danger-active)
 }
 
-:root .bp4-html-select select .bp4-icon,:root .bp4-select select .bp4-icon {
+:root .bp5-html-select select .bp5-icon,:root .bp5-select select .bp5-icon {
     color: inherit
 }
 
-:root .bp4-html-select select:not([class*=bp4-intent-]):not(.bp4-minimal):not(.bp4-outlined):not(:disabled):not(.bp4-disabled):hover,:root .bp4-select select:not([class*=bp4-intent-]):not(.bp4-minimal):not(.bp4-outlined):not(:disabled):not(.bp4-disabled):hover {
+:root .bp5-html-select select:not([class*=bp5-intent-]):not(.bp5-minimal):not(.bp5-outlined):not(:disabled):not(.bp5-disabled):hover,:root .bp5-select select:not([class*=bp5-intent-]):not(.bp5-minimal):not(.bp5-outlined):not(:disabled):not(.bp5-disabled):hover {
     background-color: var(--button-background-color-hover);
     box-shadow: var(--button-box-shadow-hover);
     color: var(--pt-intent-primary-hover)
 }
 
-:root .bp4-html-select select:not([class*=bp4-intent-]):not(.bp4-minimal):not(.bp4-outlined):not(:disabled):not(.bp4-disabled).bp4-active,:root .bp4-html-select select:not([class*=bp4-intent-]):not(.bp4-minimal):not(.bp4-outlined):not(:disabled):not(.bp4-disabled):active,:root .bp4-select select:not([class*=bp4-intent-]):not(.bp4-minimal):not(.bp4-outlined):not(:disabled):not(.bp4-disabled).bp4-active,:root .bp4-select select:not([class*=bp4-intent-]):not(.bp4-minimal):not(.bp4-outlined):not(:disabled):not(.bp4-disabled):active {
+:root .bp5-html-select select:not([class*=bp5-intent-]):not(.bp5-minimal):not(.bp5-outlined):not(:disabled):not(.bp5-disabled).bp5-active,:root .bp5-html-select select:not([class*=bp5-intent-]):not(.bp5-minimal):not(.bp5-outlined):not(:disabled):not(.bp5-disabled):active,:root .bp5-select select:not([class*=bp5-intent-]):not(.bp5-minimal):not(.bp5-outlined):not(:disabled):not(.bp5-disabled).bp5-active,:root .bp5-select select:not([class*=bp5-intent-]):not(.bp5-minimal):not(.bp5-outlined):not(:disabled):not(.bp5-disabled):active {
     background-color: var(--button-background-color-active);
     box-shadow: var(--button-box-shadow-active);
     color: var(--pt-intent-primary-active)
 }
 
-:root .bp4-html-select select:hover~.bp4-icon,:root .bp4-select select:hover~.bp4-icon {
+:root .bp5-html-select select:hover~.bp5-icon,:root .bp5-select select:hover~.bp5-icon {
     color: var(--pt-intent-primary-hover)
 }
 
-:root .bp4-html-select .bp4-icon,:root .bp4-select .bp4-icon {
+:root .bp5-html-select .bp5-icon,:root .bp5-select .bp5-icon {
     transition: inherit
 }
 
-:root .bp4-file-upload-input:after {
+:root .bp5-file-upload-input:after {
     box-shadow: var(--button-box-shadow);
     transition: .2s linear;
     transition-property: background-color,color,opacity,box-shadow
 }
 
-:root .bp4-file-upload-input:hover:after {
+:root .bp5-file-upload-input:hover:after {
     background-color: var(--button-background-color-hover);
     box-shadow: var(--button-box-shadow-hover);
     color: var(--pt-intent-primary-hover);
     transition-duration: 50ms
 }
 
-:root .bp4-file-upload-input.bp4-active:after,:root .bp4-file-upload-input:active:after {
+:root .bp5-file-upload-input.bp5-active:after,:root .bp5-file-upload-input:active:after {
     background-color: var(--button-background-color-active);
     box-shadow: var(--button-box-shadow-active);
     color: var(--pt-intent-primary-active)
 }
 
-:root .bp4-input {
+:root .bp5-input {
     box-shadow: var(--pt-input-box-shadow),inset 0 0 0 0 hsla(var(--input-shadow-color-focus-hsl),0),0 0 0 0 hsla(var(--input-shadow-color-focus-hsl),0);
     transition: .3s ease-out;
     transition-property: background-color,color,opacity,box-shadow
 }
 
-:root .bp4-input:hover:not(:disabled):not(:focus):not(.bp4-active) {
+:root .bp5-input:hover:not(:disabled):not(:focus):not(.bp5-active) {
     box-shadow: inset 0 0 0 1px var(--pt-intent-primary-hover),inset 0 0 0 0 hsla(var(--input-shadow-color-focus-hsl),0),0 0 0 0 hsla(var(--input-shadow-color-focus-hsl),0);
     transition-duration: .3s
 }
 
-:root .bp4-input.bp4-active,:root .bp4-input:focus {
+:root .bp5-input.bp5-active,:root .bp5-input:focus {
     box-shadow: inset 0 0 0 0 transparent,inset 0 0 0 1px hsla(var(--input-shadow-color-focus-hsl),1),0 0 0 2px hsla(var(--input-shadow-color-focus-hsl),.3);
     transition-duration: .3s;
     transition-timing-function: ease
 }
 
-:root .bp4-control-indicator {
+:root .bp5-control-indicator {
     position: relative;
     transition: .2s linear;
     transition-property: background-color,color,opacity,box-shadow
 }
 
-:root .bp4-control-indicator:after {
+:root .bp5-control-indicator:after {
     border-radius: inherit;
     bottom: 0;
     box-shadow: 0 0 0 6px currentColor;
@@ -280,25 +280,25 @@
     transition: opacity 2s var(--button-active-effect-easing),box-shadow .4s var(--button-active-effect-easing)
 }
 
-:root .bp4-control-indicator:active:after {
+:root .bp5-control-indicator:active:after {
     box-shadow: 0 0 0 0 currentColor;
     opacity: .2;
     transition: none
 }
 
-.bp4-disabled :root .bp4-control-indicator:after,:root .bp4-control-indicator.bp4-disabled:after,:root .bp4-control-indicator:disabled:after {
+.bp5-disabled :root .bp5-control-indicator:after,:root .bp5-control-indicator.bp5-disabled:after,:root .bp5-control-indicator:disabled:after {
     content: unset
 }
 
-.bp4-control input:not(:disabled):hover~:root .bp4-control-indicator {
+.bp5-control input:not(:disabled):hover~:root .bp5-control-indicator {
     box-shadow: var(--button-box-shadow-hover)
 }
 
-.bp4-control input:not(:disabled):active~:root .bp4-control-indicator {
+.bp5-control input:not(:disabled):active~:root .bp5-control-indicator {
     transition-duration: 50ms
 }
 
-:root .bp4-slider-handle {
+:root .bp5-slider-handle {
     background-color: var(--slider-background-color);
     border-radius: 99px;
     position: relative;
@@ -307,7 +307,7 @@
     transition-property: background-color,color,opacity,box-shadow
 }
 
-:root .bp4-slider-handle:after {
+:root .bp5-slider-handle:after {
     border-radius: inherit;
     bottom: 0;
     box-shadow: 0 0 0 6px currentColor;
@@ -323,51 +323,51 @@
     transition: opacity 2s var(--button-active-effect-easing),box-shadow .4s var(--button-active-effect-easing)
 }
 
-:root .bp4-slider-handle:active:after {
+:root .bp5-slider-handle:active:after {
     box-shadow: 0 0 0 0 currentColor;
     opacity: .2;
     transition: none
 }
 
-:root .bp4-slider-handle.bp4-disabled:after,:root .bp4-slider-handle:disabled:after {
+:root .bp5-slider-handle.bp5-disabled:after,:root .bp5-slider-handle:disabled:after {
     content: unset
 }
 
-:root .bp4-slider-handle:hover {
+:root .bp5-slider-handle:hover {
     background-color: var(--slider-background-color)
 }
 
-:root .bp4-slider-handle.bp4-active {
+:root .bp5-slider-handle.bp5-active {
     transition-duration: 50ms
 }
 
-:root .bp4-slider-handle.bp4-end.bp4-end,:root .bp4-slider-handle.bp4-start.bp4-start {
+:root .bp5-slider-handle.bp5-end.bp5-end,:root .bp5-slider-handle.bp5-start.bp5-start {
     border-radius: 99px;
     margin-left: 0
 }
 
-:root .bp4-slider-handle.bp4-end,:root .bp4-slider-handle.bp4-start {
+:root .bp5-slider-handle.bp5-end,:root .bp5-slider-handle.bp5-start {
     width: 12px
 }
 
-.bp4-slider.bp4-vertical :root .bp4-slider-handle.bp4-end.bp4-end,.bp4-slider.bp4-vertical :root .bp4-slider-handle.bp4-start.bp4-start {
+.bp5-slider.bp5-vertical :root .bp5-slider-handle.bp5-end.bp5-end,.bp5-slider.bp5-vertical :root .bp5-slider-handle.bp5-start.bp5-start {
     border-radius: 99px
 }
 
-.bp4-slider.bp4-vertical :root .bp4-slider-handle.bp4-end,.bp4-slider.bp4-vertical :root .bp4-slider-handle.bp4-start {
+.bp5-slider.bp5-vertical :root .bp5-slider-handle.bp5-end,.bp5-slider.bp5-vertical :root .bp5-slider-handle.bp5-start {
     height: 12px
 }
 
-:root .bp4-heading,:root h1,:root h2,:root h3,:root h4,:root h5,:root h6 {
+:root .bp5-heading,:root h1,:root h2,:root h3,:root h4,:root h5,:root h6 {
     font-family: var(--pt-font-family-decorative);
     font-weight: 600;
     letter-spacing: .1ch
 }
 
-:root .bp4-input[type=search] {
+:root .bp5-input[type=search] {
     border-radius: var(--pt-border-radius)
 }
 
-:root .bp4-input.bp4-round {
+:root .bp5-input.bp5-round {
     border-radius: 99px
 }

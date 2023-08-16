@@ -1,4 +1,4 @@
-.bp4-dark {
+.bp5-dark {
     --text-color: hsl(0deg 0% 97%);
     --secondary-text-color: hsl(0deg 0% 76%);
     --disabled-text-color: hsl(225deg 2% 39%);
@@ -29,15 +29,15 @@
     --skeleton-highlight-color: hsl(0deg 0% 100%/10%)
 }
 
-:root .bp4-button,:root .bp4-html-select select,:root .bp4-select select,:root a.bp4-button {
+:root .bp5-button,:root .bp5-html-select select,:root .bp5-select select,:root a.bp5-button {
     font-weight: var(--font-weight-bold)
 }
 
-:root .bp4-button .bp4-icon,:root .bp4-html-select .bp4-icon,:root .bp4-select .bp4-icon,:root a.bp4-button .bp4-icon {
+:root .bp5-button .bp5-icon,:root .bp5-html-select .bp5-icon,:root .bp5-select .bp5-icon,:root a.bp5-button .bp5-icon {
     color: inherit
 }
 
-:root .bp4-button,:root .bp4-html-select,:root .bp4-select {
+:root .bp5-button,:root .bp5-html-select,:root .bp5-select {
     --pt-intent-primary-hsl: var(--orange3-hsl);
     --pt-intent-primary-hover-hsl: var(--orange2-hsl);
     --pt-intent-primary-active-hsl: var(--orange1-hsl);
@@ -48,20 +48,20 @@
     --pt-intent-primary-text-color: var(--orange2)
 }
 
-:root .bp4-dark .bp4-button,:root .bp4-dark .bp4-html-select,:root .bp4-dark .bp4-select {
+:root .bp5-dark .bp5-button,:root .bp5-dark .bp5-html-select,:root .bp5-dark .bp5-select {
     --pt-intent-primary-text-color-hsl: var(--orange5-hsl);
     --pt-intent-primary-text-color: var(--orange5)
 }
 
-:root .bp4-input[type=search] {
+:root .bp5-input[type=search] {
     border-radius: var(--pt-border-radius)
 }
 
-:root .bp4-input.bp4-round {
+:root .bp5-input.bp5-round {
     border-radius: 99px
 }
 
-:root .bp4-button-group .bp4-button[class*=bp4-intent-] {
+:root .bp5-button-group .bp5-button[class*=bp5-intent-] {
     border-width: 0;
     border-bottom: 0 solid hsla(var(--white-hsl),.25);
     border-left: 1px solid hsla(var(--white-hsl),.25);
@@ -69,22 +69,22 @@
     border-top: 0 solid hsla(var(--white-hsl),.25)
 }
 
-:root .bp4-button-group:not(.bp4-minimal)>.bp4-button[class*=bp4-intent-]:first-child,:root .bp4-button-group:not(.bp4-minimal)>.bp4-popover-wrapper:first-child .bp4-button[class*=bp4-intent-],:root .bp4-button-group:not(.bp4-minimal)>.bp4-popover2-target:first-child .bp4-button[class*=bp4-intent-] {
+:root .bp5-button-group:not(.bp5-minimal)>.bp5-button[class*=bp5-intent-]:first-child,:root .bp5-button-group:not(.bp5-minimal)>.bp5-popover-target:first-child .bp5-button[class*=bp5-intent-],:root .bp5-button-group:not(.bp5-minimal)>.bp5-popover-wrapper:first-child .bp5-button[class*=bp5-intent-] {
     border-width: 0 1px 0 0
 }
 
-:root .bp4-button-group:not(.bp4-minimal)>.bp4-button[class*=bp4-intent-]:last-child,:root .bp4-button-group:not(.bp4-minimal)>.bp4-popover-wrapper:last-child .bp4-button[class*=bp4-intent-],:root .bp4-button-group:not(.bp4-minimal)>.bp4-popover2-target:last-child .bp4-button[class*=bp4-intent-] {
+:root .bp5-button-group:not(.bp5-minimal)>.bp5-button[class*=bp5-intent-]:last-child,:root .bp5-button-group:not(.bp5-minimal)>.bp5-popover-target:last-child .bp5-button[class*=bp5-intent-],:root .bp5-button-group:not(.bp5-minimal)>.bp5-popover-wrapper:last-child .bp5-button[class*=bp5-intent-] {
     border-width: 0 0 0 1px
 }
 
-:root .bp4-button-group.bp4-vertical .bp4-button[class*=bp4-intent-] {
+:root .bp5-button-group.bp5-vertical .bp5-button[class*=bp5-intent-] {
     border-width: 1px 0
 }
 
-:root .bp4-button-group.bp4-vertical:not(.bp4-minimal)>.bp4-button[class*=bp4-intent-]:first-child,:root .bp4-button-group.bp4-vertical:not(.bp4-minimal)>.bp4-popover-wrapper:first-child .bp4-button[class*=bp4-intent-],:root .bp4-button-group.bp4-vertical:not(.bp4-minimal)>.bp4-popover2-target:first-child .bp4-button[class*=bp4-intent-] {
+:root .bp5-button-group.bp5-vertical:not(.bp5-minimal)>.bp5-button[class*=bp5-intent-]:first-child,:root .bp5-button-group.bp5-vertical:not(.bp5-minimal)>.bp5-popover-target:first-child .bp5-button[class*=bp5-intent-],:root .bp5-button-group.bp5-vertical:not(.bp5-minimal)>.bp5-popover-wrapper:first-child .bp5-button[class*=bp5-intent-] {
     border-width: 0 0 1px
 }
 
-:root .bp4-button-group.bp4-vertical:not(.bp4-minimal)>.bp4-button[class*=bp4-intent-]:last-child,:root .bp4-button-group.bp4-vertical:not(.bp4-minimal)>.bp4-popover-wrapper:last-child .bp4-button[class*=bp4-intent-],:root .bp4-button-group.bp4-vertical:not(.bp4-minimal)>.bp4-popover2-target:last-child .bp4-button[class*=bp4-intent-] {
+:root .bp5-button-group.bp5-vertical:not(.bp5-minimal)>.bp5-button[class*=bp5-intent-]:last-child,:root .bp5-button-group.bp5-vertical:not(.bp5-minimal)>.bp5-popover-target:last-child .bp5-button[class*=bp5-intent-],:root .bp5-button-group.bp5-vertical:not(.bp5-minimal)>.bp5-popover-wrapper:last-child .bp5-button[class*=bp5-intent-] {
     border-width: 1px 0 0
 }
