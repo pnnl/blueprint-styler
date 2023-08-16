@@ -2,11 +2,11 @@
 
 /*! Components */
 
---tooltip-background-color: var(--dark-gray5);
---tooltip-text-color: var(--light-gray5);
+--tooltip-background-color: var(--pt-app-background-color);
+--tooltip-text-color: var(--pt-text-color);
 
---dark-tooltip-background-color: var(--light-gray3);
---dark-tooltip-text-color: var(--dark-gray5);
+--dark-tooltip-background-color: var(--pt-dark-app-background-color);
+--dark-tooltip-text-color: var(--pt-dark-text-color);
 
 // --tooltip-padding-vertical: var(--pt-grid-size);
 // --tooltip-padding-horizontal: calc(1.2 * var(--pt-grid-size));

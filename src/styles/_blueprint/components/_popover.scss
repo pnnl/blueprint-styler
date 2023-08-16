@@ -3,42 +3,15 @@
 /*! Components */
 
 --pt-popover-background-color: var(--pt-app-top-background-color);
---pt-popover-box-shadow: var(--pt-elevation-shadow-3);
---pt-tooltip-box-shadow: var(--pt-popover-box-shadow); // ???
 --pt-dark-popover-background-color: var(--pt-dark-app-top-background-color);
---pt-dark-popover-box-shadow: var(--pt-dark-elevation-shadow-3);
---pt-dark-tooltip-box-shadow: var(--pt-dark-popover-box-shadow); //
 
 // --popover-width: calc(var(--pt-grid-size) * 35);
-
---tooltip-background-color: var(--dark-gray5);
---tooltip-text-color: var(--light-gray5);
-
---dark-tooltip-background-color: var(--light-gray3);
---dark-tooltip-text-color: var(--dark-gray5);
-
-// --tooltip-padding-vertical: var(--pt-grid-size);
-// --tooltip-padding-horizontal: calc(1.2 * var(--pt-grid-size))
 
 }
 
 // common.scss
 $pt-popover-background-color: var(--pt-popover-background-color);
-$pt-popover-box-shadow: var(--pt-popover-box-shadow);
-$pt-tooltip-box-shadow: var(--pt-tooltip-box-shadow);
 $pt-dark-popover-background-color: var(--pt-dark-popover-background-color);
-$pt-dark-popover-box-shadow: var(--pt-dark-popover-box-shadow);
-$pt-dark-tooltip-box-shadow: var(--pt-dark-tooltip-box-shadow);
 
 // popover.scss
 // $popover-width: var(--popover-width);
-
-// tooltip.scss
-$tooltip-background-color: var(--tooltip-background-color);
-$tooltip-text-color: var(--tooltip-text-color);
-
-$dark-tooltip-background-color: var(--dark-tooltip-background-color);
-$dark-tooltip-text-color: var(--dark-tooltip-text-color);
-
-// $tooltip-padding-vertical: var(--tooltip-padding-vertical);
-// $tooltip-padding-horizontal: var(--tooltip-padding-horizontal);
