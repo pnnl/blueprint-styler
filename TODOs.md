@@ -1,5 +1,16 @@
 # TODO:
 
+## v5 bugs
+- Toaster example
+- PopoverPlacementExample css is missing
+- remove tooltip darktheme
+- DateRangePicker range colors
+- Dark Theme
+  - Section
+  - Card List
+  - Tag interactive hover
+  - Dialog Footer
+
 ## Docs
 - example theme as code
 - explain how tokens inherit - specifically hsl
