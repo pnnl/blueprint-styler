@@ -346,6 +346,8 @@ exports.Variables = {
 	PtTransitionDuration: "var(--pt-transition-duration)",
 	PtInputBoxShadow: "var(--pt-input-box-shadow)",
 	PtDialogBoxShadow: "var(--pt-dialog-box-shadow)",
+	PtPopoverBoxShadow: "var(--pt-popover-box-shadow)",
+	PtTooltipBoxShadow: "var(--pt-tooltip-box-shadow)",
 };
 
 exports.Components = {
@@ -416,8 +418,6 @@ exports.Components = {
 	OverlayBackgroundOpacity: "var(--overlay-background-opacity)",
 	OverlayBackgroundColor: "var(--overlay-background-color)",
 	PtPopoverBackgroundColor: "var(--pt-popover-background-color)",
-	PtPopoverBoxShadow: "var(--pt-popover-box-shadow)",
-	PtTooltipBoxShadow: "var(--pt-tooltip-box-shadow)",
 	ProgressTrackColor: "var(--progress-track-color)",
 	ProgressHeadColor: "var(--progress-head-color)",
 	ProgressBarStripesColor: "var(--progress-bar-stripes-color)",

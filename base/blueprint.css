@@ -1011,6 +1011,29 @@ a:hover {
     stroke: var(--pt-intent-primary-text-color)
 }
 
+.bp5-dark .bp5-button.bp5-minimal.bp5-intent-primary {
+    color: var(--pt-intent-primary-text-color)
+}
+
+.bp5-dark .bp5-button.bp5-minimal.bp5-intent-primary:hover {
+    background: hsla(var(--pt-intent-primary-hsl),.2);
+    color: var(--primary5)
+}
+
+.bp5-dark .bp5-button.bp5-minimal.bp5-intent-primary.bp5-active,.bp5-dark .bp5-button.bp5-minimal.bp5-intent-primary:active {
+    background: hsla(var(--pt-intent-primary-hsl),.3);
+    color: var(--primary6)
+}
+
+.bp5-dark .bp5-button.bp5-minimal.bp5-intent-primary.bp5-disabled,.bp5-dark .bp5-button.bp5-minimal.bp5-intent-primary:disabled {
+    background: none;
+    color: hsla(var(--pt-intent-primary-text-color-hsl),.5)
+}
+
+.bp5-dark .bp5-button.bp5-minimal.bp5-intent-primary.bp5-disabled.bp5-active,.bp5-dark .bp5-button.bp5-minimal.bp5-intent-primary:disabled.bp5-active {
+    background: hsla(var(--pt-intent-primary-hsl),.3)
+}
+
 .bp5-button.bp5-minimal.bp5-intent-success {
     color: var(--pt-intent-success-text-color)
 }
@@ -1042,6 +1065,29 @@ a:hover {
 
 .bp5-button.bp5-minimal.bp5-intent-success .bp5-button-spinner .bp5-spinner-head {
     stroke: var(--pt-intent-success-text-color)
+}
+
+.bp5-dark .bp5-button.bp5-minimal.bp5-intent-success {
+    color: var(--pt-intent-success-text-color)
+}
+
+.bp5-dark .bp5-button.bp5-minimal.bp5-intent-success:hover {
+    background: hsla(var(--pt-intent-success-hsl),.2);
+    color: var(--success5)
+}
+
+.bp5-dark .bp5-button.bp5-minimal.bp5-intent-success.bp5-active,.bp5-dark .bp5-button.bp5-minimal.bp5-intent-success:active {
+    background: hsla(var(--pt-intent-success-hsl),.3);
+    color: var(--success6)
+}
+
+.bp5-dark .bp5-button.bp5-minimal.bp5-intent-success.bp5-disabled,.bp5-dark .bp5-button.bp5-minimal.bp5-intent-success:disabled {
+    background: none;
+    color: hsla(var(--pt-intent-success-text-color-hsl),.5)
+}
+
+.bp5-dark .bp5-button.bp5-minimal.bp5-intent-success.bp5-disabled.bp5-active,.bp5-dark .bp5-button.bp5-minimal.bp5-intent-success:disabled.bp5-active {
+    background: hsla(var(--pt-intent-success-hsl),.3)
 }
 
 .bp5-button.bp5-minimal.bp5-intent-warning {
@@ -1077,6 +1123,29 @@ a:hover {
     stroke: var(--pt-intent-warning-text-color)
 }
 
+.bp5-dark .bp5-button.bp5-minimal.bp5-intent-warning {
+    color: var(--pt-intent-warning-text-color)
+}
+
+.bp5-dark .bp5-button.bp5-minimal.bp5-intent-warning:hover {
+    background: hsla(var(--pt-intent-warning-hsl),.2);
+    color: var(--warning5)
+}
+
+.bp5-dark .bp5-button.bp5-minimal.bp5-intent-warning.bp5-active,.bp5-dark .bp5-button.bp5-minimal.bp5-intent-warning:active {
+    background: hsla(var(--pt-intent-warning-hsl),.3);
+    color: var(--warning6)
+}
+
+.bp5-dark .bp5-button.bp5-minimal.bp5-intent-warning.bp5-disabled,.bp5-dark .bp5-button.bp5-minimal.bp5-intent-warning:disabled {
+    background: none;
+    color: hsla(var(--pt-intent-warning-text-color-hsl),.5)
+}
+
+.bp5-dark .bp5-button.bp5-minimal.bp5-intent-warning.bp5-disabled.bp5-active,.bp5-dark .bp5-button.bp5-minimal.bp5-intent-warning:disabled.bp5-active {
+    background: hsla(var(--pt-intent-warning-hsl),.3)
+}
+
 .bp5-button.bp5-minimal.bp5-intent-danger {
     color: var(--pt-intent-danger-text-color)
 }
@@ -1108,6 +1177,29 @@ a:hover {
 
 .bp5-button.bp5-minimal.bp5-intent-danger .bp5-button-spinner .bp5-spinner-head {
     stroke: var(--pt-intent-danger-text-color)
+}
+
+.bp5-dark .bp5-button.bp5-minimal.bp5-intent-danger {
+    color: var(--pt-intent-danger-text-color)
+}
+
+.bp5-dark .bp5-button.bp5-minimal.bp5-intent-danger:hover {
+    background: hsla(var(--pt-intent-danger-hsl),.2);
+    color: var(--danger5)
+}
+
+.bp5-dark .bp5-button.bp5-minimal.bp5-intent-danger.bp5-active,.bp5-dark .bp5-button.bp5-minimal.bp5-intent-danger:active {
+    background: hsla(var(--pt-intent-danger-hsl),.3);
+    color: var(--danger6)
+}
+
+.bp5-dark .bp5-button.bp5-minimal.bp5-intent-danger.bp5-disabled,.bp5-dark .bp5-button.bp5-minimal.bp5-intent-danger:disabled {
+    background: none;
+    color: hsla(var(--pt-intent-danger-text-color-hsl),.5)
+}
+
+.bp5-dark .bp5-button.bp5-minimal.bp5-intent-danger.bp5-disabled.bp5-active,.bp5-dark .bp5-button.bp5-minimal.bp5-intent-danger:disabled.bp5-active {
+    background: hsla(var(--pt-intent-danger-hsl),.3)
 }
 
 .bp5-button.bp5-outlined {
@@ -1173,6 +1265,29 @@ a:hover {
     stroke: var(--pt-intent-primary-text-color)
 }
 
+.bp5-dark .bp5-button.bp5-outlined.bp5-intent-primary {
+    color: var(--pt-intent-primary-text-color)
+}
+
+.bp5-dark .bp5-button.bp5-outlined.bp5-intent-primary:hover {
+    background: hsla(var(--pt-intent-primary-hsl),.2);
+    color: var(--primary5)
+}
+
+.bp5-dark .bp5-button.bp5-outlined.bp5-intent-primary.bp5-active,.bp5-dark .bp5-button.bp5-outlined.bp5-intent-primary:active {
+    background: hsla(var(--pt-intent-primary-hsl),.3);
+    color: var(--primary6)
+}
+
+.bp5-dark .bp5-button.bp5-outlined.bp5-intent-primary.bp5-disabled,.bp5-dark .bp5-button.bp5-outlined.bp5-intent-primary:disabled {
+    background: none;
+    color: hsla(var(--pt-intent-primary-text-color-hsl),.5)
+}
+
+.bp5-dark .bp5-button.bp5-outlined.bp5-intent-primary.bp5-disabled.bp5-active,.bp5-dark .bp5-button.bp5-outlined.bp5-intent-primary:disabled.bp5-active {
+    background: hsla(var(--pt-intent-primary-hsl),.3)
+}
+
 .bp5-button.bp5-outlined.bp5-intent-success {
     color: var(--pt-intent-success-text-color)
 }
@@ -1204,6 +1319,29 @@ a:hover {
 
 .bp5-button.bp5-outlined.bp5-intent-success .bp5-button-spinner .bp5-spinner-head {
     stroke: var(--pt-intent-success-text-color)
+}
+
+.bp5-dark .bp5-button.bp5-outlined.bp5-intent-success {
+    color: var(--pt-intent-success-text-color)
+}
+
+.bp5-dark .bp5-button.bp5-outlined.bp5-intent-success:hover {
+    background: hsla(var(--pt-intent-success-hsl),.2);
+    color: var(--success5)
+}
+
+.bp5-dark .bp5-button.bp5-outlined.bp5-intent-success.bp5-active,.bp5-dark .bp5-button.bp5-outlined.bp5-intent-success:active {
+    background: hsla(var(--pt-intent-success-hsl),.3);
+    color: var(--success6)
+}
+
+.bp5-dark .bp5-button.bp5-outlined.bp5-intent-success.bp5-disabled,.bp5-dark .bp5-button.bp5-outlined.bp5-intent-success:disabled {
+    background: none;
+    color: hsla(var(--pt-intent-success-text-color-hsl),.5)
+}
+
+.bp5-dark .bp5-button.bp5-outlined.bp5-intent-success.bp5-disabled.bp5-active,.bp5-dark .bp5-button.bp5-outlined.bp5-intent-success:disabled.bp5-active {
+    background: hsla(var(--pt-intent-success-hsl),.3)
 }
 
 .bp5-button.bp5-outlined.bp5-intent-warning {
@@ -1239,6 +1377,29 @@ a:hover {
     stroke: var(--pt-intent-warning-text-color)
 }
 
+.bp5-dark .bp5-button.bp5-outlined.bp5-intent-warning {
+    color: var(--pt-intent-warning-text-color)
+}
+
+.bp5-dark .bp5-button.bp5-outlined.bp5-intent-warning:hover {
+    background: hsla(var(--pt-intent-warning-hsl),.2);
+    color: var(--warning5)
+}
+
+.bp5-dark .bp5-button.bp5-outlined.bp5-intent-warning.bp5-active,.bp5-dark .bp5-button.bp5-outlined.bp5-intent-warning:active {
+    background: hsla(var(--pt-intent-warning-hsl),.3);
+    color: var(--warning6)
+}
+
+.bp5-dark .bp5-button.bp5-outlined.bp5-intent-warning.bp5-disabled,.bp5-dark .bp5-button.bp5-outlined.bp5-intent-warning:disabled {
+    background: none;
+    color: hsla(var(--pt-intent-warning-text-color-hsl),.5)
+}
+
+.bp5-dark .bp5-button.bp5-outlined.bp5-intent-warning.bp5-disabled.bp5-active,.bp5-dark .bp5-button.bp5-outlined.bp5-intent-warning:disabled.bp5-active {
+    background: hsla(var(--pt-intent-warning-hsl),.3)
+}
+
 .bp5-button.bp5-outlined.bp5-intent-danger {
     color: var(--pt-intent-danger-text-color)
 }
@@ -1270,6 +1431,29 @@ a:hover {
 
 .bp5-button.bp5-outlined.bp5-intent-danger .bp5-button-spinner .bp5-spinner-head {
     stroke: var(--pt-intent-danger-text-color)
+}
+
+.bp5-dark .bp5-button.bp5-outlined.bp5-intent-danger {
+    color: var(--pt-intent-danger-text-color)
+}
+
+.bp5-dark .bp5-button.bp5-outlined.bp5-intent-danger:hover {
+    background: hsla(var(--pt-intent-danger-hsl),.2);
+    color: var(--danger5)
+}
+
+.bp5-dark .bp5-button.bp5-outlined.bp5-intent-danger.bp5-active,.bp5-dark .bp5-button.bp5-outlined.bp5-intent-danger:active {
+    background: hsla(var(--pt-intent-danger-hsl),.3);
+    color: var(--danger6)
+}
+
+.bp5-dark .bp5-button.bp5-outlined.bp5-intent-danger.bp5-disabled,.bp5-dark .bp5-button.bp5-outlined.bp5-intent-danger:disabled {
+    background: none;
+    color: hsla(var(--pt-intent-danger-text-color-hsl),.5)
+}
+
+.bp5-dark .bp5-button.bp5-outlined.bp5-intent-danger.bp5-disabled.bp5-active,.bp5-dark .bp5-button.bp5-outlined.bp5-intent-danger:disabled.bp5-active {
+    background: hsla(var(--pt-intent-danger-hsl),.3)
 }
 
 .bp5-button.bp5-outlined.bp5-disabled,.bp5-button.bp5-outlined.bp5-disabled:hover,.bp5-button.bp5-outlined:disabled,.bp5-button.bp5-outlined:disabled:hover {
@@ -1478,6 +1662,29 @@ a.bp5-button.bp5-disabled {
     stroke: var(--pt-intent-primary-text-color)
 }
 
+.bp5-dark .bp5-button-group.bp5-minimal .bp5-button.bp5-intent-primary {
+    color: var(--pt-intent-primary-text-color)
+}
+
+.bp5-dark .bp5-button-group.bp5-minimal .bp5-button.bp5-intent-primary:hover {
+    background: hsla(var(--pt-intent-primary-hsl),.2);
+    color: var(--primary5)
+}
+
+.bp5-dark .bp5-button-group.bp5-minimal .bp5-button.bp5-intent-primary.bp5-active,.bp5-dark .bp5-button-group.bp5-minimal .bp5-button.bp5-intent-primary:active {
+    background: hsla(var(--pt-intent-primary-hsl),.3);
+    color: var(--primary6)
+}
+
+.bp5-dark .bp5-button-group.bp5-minimal .bp5-button.bp5-intent-primary.bp5-disabled,.bp5-dark .bp5-button-group.bp5-minimal .bp5-button.bp5-intent-primary:disabled {
+    background: none;
+    color: hsla(var(--pt-intent-primary-text-color-hsl),.5)
+}
+
+.bp5-dark .bp5-button-group.bp5-minimal .bp5-button.bp5-intent-primary.bp5-disabled.bp5-active,.bp5-dark .bp5-button-group.bp5-minimal .bp5-button.bp5-intent-primary:disabled.bp5-active {
+    background: hsla(var(--pt-intent-primary-hsl),.3)
+}
+
 .bp5-button-group.bp5-minimal .bp5-button.bp5-intent-success {
     color: var(--pt-intent-success-text-color)
 }
@@ -1509,6 +1716,29 @@ a.bp5-button.bp5-disabled {
 
 .bp5-button-group.bp5-minimal .bp5-button.bp5-intent-success .bp5-button-spinner .bp5-spinner-head {
     stroke: var(--pt-intent-success-text-color)
+}
+
+.bp5-dark .bp5-button-group.bp5-minimal .bp5-button.bp5-intent-success {
+    color: var(--pt-intent-success-text-color)
+}
+
+.bp5-dark .bp5-button-group.bp5-minimal .bp5-button.bp5-intent-success:hover {
+    background: hsla(var(--pt-intent-success-hsl),.2);
+    color: var(--success5)
+}
+
+.bp5-dark .bp5-button-group.bp5-minimal .bp5-button.bp5-intent-success.bp5-active,.bp5-dark .bp5-button-group.bp5-minimal .bp5-button.bp5-intent-success:active {
+    background: hsla(var(--pt-intent-success-hsl),.3);
+    color: var(--success6)
+}
+
+.bp5-dark .bp5-button-group.bp5-minimal .bp5-button.bp5-intent-success.bp5-disabled,.bp5-dark .bp5-button-group.bp5-minimal .bp5-button.bp5-intent-success:disabled {
+    background: none;
+    color: hsla(var(--pt-intent-success-text-color-hsl),.5)
+}
+
+.bp5-dark .bp5-button-group.bp5-minimal .bp5-button.bp5-intent-success.bp5-disabled.bp5-active,.bp5-dark .bp5-button-group.bp5-minimal .bp5-button.bp5-intent-success:disabled.bp5-active {
+    background: hsla(var(--pt-intent-success-hsl),.3)
 }
 
 .bp5-button-group.bp5-minimal .bp5-button.bp5-intent-warning {
@@ -1544,6 +1774,29 @@ a.bp5-button.bp5-disabled {
     stroke: var(--pt-intent-warning-text-color)
 }
 
+.bp5-dark .bp5-button-group.bp5-minimal .bp5-button.bp5-intent-warning {
+    color: var(--pt-intent-warning-text-color)
+}
+
+.bp5-dark .bp5-button-group.bp5-minimal .bp5-button.bp5-intent-warning:hover {
+    background: hsla(var(--pt-intent-warning-hsl),.2);
+    color: var(--warning5)
+}
+
+.bp5-dark .bp5-button-group.bp5-minimal .bp5-button.bp5-intent-warning.bp5-active,.bp5-dark .bp5-button-group.bp5-minimal .bp5-button.bp5-intent-warning:active {
+    background: hsla(var(--pt-intent-warning-hsl),.3);
+    color: var(--warning6)
+}
+
+.bp5-dark .bp5-button-group.bp5-minimal .bp5-button.bp5-intent-warning.bp5-disabled,.bp5-dark .bp5-button-group.bp5-minimal .bp5-button.bp5-intent-warning:disabled {
+    background: none;
+    color: hsla(var(--pt-intent-warning-text-color-hsl),.5)
+}
+
+.bp5-dark .bp5-button-group.bp5-minimal .bp5-button.bp5-intent-warning.bp5-disabled.bp5-active,.bp5-dark .bp5-button-group.bp5-minimal .bp5-button.bp5-intent-warning:disabled.bp5-active {
+    background: hsla(var(--pt-intent-warning-hsl),.3)
+}
+
 .bp5-button-group.bp5-minimal .bp5-button.bp5-intent-danger {
     color: var(--pt-intent-danger-text-color)
 }
@@ -1575,6 +1828,29 @@ a.bp5-button.bp5-disabled {
 
 .bp5-button-group.bp5-minimal .bp5-button.bp5-intent-danger .bp5-button-spinner .bp5-spinner-head {
     stroke: var(--pt-intent-danger-text-color)
+}
+
+.bp5-dark .bp5-button-group.bp5-minimal .bp5-button.bp5-intent-danger {
+    color: var(--pt-intent-danger-text-color)
+}
+
+.bp5-dark .bp5-button-group.bp5-minimal .bp5-button.bp5-intent-danger:hover {
+    background: hsla(var(--pt-intent-danger-hsl),.2);
+    color: var(--danger5)
+}
+
+.bp5-dark .bp5-button-group.bp5-minimal .bp5-button.bp5-intent-danger.bp5-active,.bp5-dark .bp5-button-group.bp5-minimal .bp5-button.bp5-intent-danger:active {
+    background: hsla(var(--pt-intent-danger-hsl),.3);
+    color: var(--danger6)
+}
+
+.bp5-dark .bp5-button-group.bp5-minimal .bp5-button.bp5-intent-danger.bp5-disabled,.bp5-dark .bp5-button-group.bp5-minimal .bp5-button.bp5-intent-danger:disabled {
+    background: none;
+    color: hsla(var(--pt-intent-danger-text-color-hsl),.5)
+}
+
+.bp5-dark .bp5-button-group.bp5-minimal .bp5-button.bp5-intent-danger.bp5-disabled.bp5-active,.bp5-dark .bp5-button-group.bp5-minimal .bp5-button.bp5-intent-danger:disabled.bp5-active {
+    background: hsla(var(--pt-intent-danger-hsl),.3)
 }
 
 @media (forced-colors:active) and (prefers-color-scheme:dark) {
@@ -1843,7 +2119,6 @@ a.bp5-button.bp5-disabled {
 
 .bp5-card.bp5-interactive:active {
     box-shadow: var(--pt-elevation-shadow-1);
-    opacity: .9;
     transition-duration: 0
 }
 
@@ -1863,7 +2138,7 @@ a.bp5-button.bp5-disabled {
 }
 
 .bp5-card-list>.bp5-card.bp5-interactive:active,.bp5-card-list>.bp5-card.bp5-interactive:hover {
-    background-color: var(--light-gray5);
+    background-color: var(--minimal-button-background-color-hover);
     box-shadow: none
 }
 
@@ -1963,6 +2238,7 @@ a.bp5-button.bp5-disabled {
 
 .bp5-dialog-header {
     align-items: center;
+    background-color: var(--pt-app-top-background-color);
     border-radius: calc(var(--pt-border-radius)*2) calc(var(--pt-border-radius)*2) 0 0;
     box-shadow: 0 1px 0 var(--pt-divider-black);
     display: flex;
@@ -2018,7 +2294,7 @@ a.bp5-button.bp5-disabled {
 
 .bp5-dialog-footer-fixed {
     align-items: center;
-    background-color: var(--white);
+    background-color: var(--pt-app-top-background-color);
     border-radius: 0 0 calc(var(--pt-border-radius)*2) calc(var(--pt-border-radius)*2);
     border-top: 1px solid var(--pt-divider-black);
     display: flex;
@@ -4069,6 +4345,29 @@ form {
     stroke: var(--pt-intent-primary-text-color)
 }
 
+.bp5-dark .bp5-html-select.bp5-minimal select.bp5-intent-primary,.bp5-dark .bp5-select.bp5-minimal select.bp5-intent-primary,.bp5-html-select.bp5-minimal .bp5-dark select.bp5-intent-primary,.bp5-select.bp5-minimal .bp5-dark select.bp5-intent-primary {
+    color: var(--pt-intent-primary-text-color)
+}
+
+.bp5-dark .bp5-html-select.bp5-minimal select.bp5-intent-primary:hover,.bp5-dark .bp5-select.bp5-minimal select.bp5-intent-primary:hover,.bp5-html-select.bp5-minimal .bp5-dark select.bp5-intent-primary:hover,.bp5-select.bp5-minimal .bp5-dark select.bp5-intent-primary:hover {
+    background: hsla(var(--pt-intent-primary-hsl),.2);
+    color: var(--primary5)
+}
+
+.bp5-dark .bp5-html-select.bp5-minimal select.bp5-intent-primary.bp5-active,.bp5-dark .bp5-html-select.bp5-minimal select.bp5-intent-primary:active,.bp5-dark .bp5-select.bp5-minimal select.bp5-intent-primary.bp5-active,.bp5-dark .bp5-select.bp5-minimal select.bp5-intent-primary:active,.bp5-html-select.bp5-minimal .bp5-dark select.bp5-intent-primary.bp5-active,.bp5-html-select.bp5-minimal .bp5-dark select.bp5-intent-primary:active,.bp5-select.bp5-minimal .bp5-dark select.bp5-intent-primary.bp5-active,.bp5-select.bp5-minimal .bp5-dark select.bp5-intent-primary:active {
+    background: hsla(var(--pt-intent-primary-hsl),.3);
+    color: var(--primary6)
+}
+
+.bp5-dark .bp5-html-select.bp5-minimal select.bp5-intent-primary.bp5-disabled,.bp5-dark .bp5-html-select.bp5-minimal select.bp5-intent-primary:disabled,.bp5-dark .bp5-select.bp5-minimal select.bp5-intent-primary.bp5-disabled,.bp5-dark .bp5-select.bp5-minimal select.bp5-intent-primary:disabled,.bp5-html-select.bp5-minimal .bp5-dark select.bp5-intent-primary.bp5-disabled,.bp5-html-select.bp5-minimal .bp5-dark select.bp5-intent-primary:disabled,.bp5-select.bp5-minimal .bp5-dark select.bp5-intent-primary.bp5-disabled,.bp5-select.bp5-minimal .bp5-dark select.bp5-intent-primary:disabled {
+    background: none;
+    color: hsla(var(--pt-intent-primary-text-color-hsl),.5)
+}
+
+.bp5-dark .bp5-html-select.bp5-minimal select.bp5-intent-primary.bp5-disabled.bp5-active,.bp5-dark .bp5-html-select.bp5-minimal select.bp5-intent-primary:disabled.bp5-active,.bp5-dark .bp5-select.bp5-minimal select.bp5-intent-primary.bp5-disabled.bp5-active,.bp5-dark .bp5-select.bp5-minimal select.bp5-intent-primary:disabled.bp5-active,.bp5-html-select.bp5-minimal .bp5-dark select.bp5-intent-primary.bp5-disabled.bp5-active,.bp5-html-select.bp5-minimal .bp5-dark select.bp5-intent-primary:disabled.bp5-active,.bp5-select.bp5-minimal .bp5-dark select.bp5-intent-primary.bp5-disabled.bp5-active,.bp5-select.bp5-minimal .bp5-dark select.bp5-intent-primary:disabled.bp5-active {
+    background: hsla(var(--pt-intent-primary-hsl),.3)
+}
+
 .bp5-html-select.bp5-minimal select.bp5-intent-success,.bp5-select.bp5-minimal select.bp5-intent-success {
     color: var(--pt-intent-success-text-color)
 }
@@ -4100,6 +4399,29 @@ form {
 
 .bp5-html-select.bp5-minimal select.bp5-intent-success .bp5-button-spinner .bp5-spinner-head,.bp5-select.bp5-minimal select.bp5-intent-success .bp5-button-spinner .bp5-spinner-head {
     stroke: var(--pt-intent-success-text-color)
+}
+
+.bp5-dark .bp5-html-select.bp5-minimal select.bp5-intent-success,.bp5-dark .bp5-select.bp5-minimal select.bp5-intent-success,.bp5-html-select.bp5-minimal .bp5-dark select.bp5-intent-success,.bp5-select.bp5-minimal .bp5-dark select.bp5-intent-success {
+    color: var(--pt-intent-success-text-color)
+}
+
+.bp5-dark .bp5-html-select.bp5-minimal select.bp5-intent-success:hover,.bp5-dark .bp5-select.bp5-minimal select.bp5-intent-success:hover,.bp5-html-select.bp5-minimal .bp5-dark select.bp5-intent-success:hover,.bp5-select.bp5-minimal .bp5-dark select.bp5-intent-success:hover {
+    background: hsla(var(--pt-intent-success-hsl),.2);
+    color: var(--success5)
+}
+
+.bp5-dark .bp5-html-select.bp5-minimal select.bp5-intent-success.bp5-active,.bp5-dark .bp5-html-select.bp5-minimal select.bp5-intent-success:active,.bp5-dark .bp5-select.bp5-minimal select.bp5-intent-success.bp5-active,.bp5-dark .bp5-select.bp5-minimal select.bp5-intent-success:active,.bp5-html-select.bp5-minimal .bp5-dark select.bp5-intent-success.bp5-active,.bp5-html-select.bp5-minimal .bp5-dark select.bp5-intent-success:active,.bp5-select.bp5-minimal .bp5-dark select.bp5-intent-success.bp5-active,.bp5-select.bp5-minimal .bp5-dark select.bp5-intent-success:active {
+    background: hsla(var(--pt-intent-success-hsl),.3);
+    color: var(--success6)
+}
+
+.bp5-dark .bp5-html-select.bp5-minimal select.bp5-intent-success.bp5-disabled,.bp5-dark .bp5-html-select.bp5-minimal select.bp5-intent-success:disabled,.bp5-dark .bp5-select.bp5-minimal select.bp5-intent-success.bp5-disabled,.bp5-dark .bp5-select.bp5-minimal select.bp5-intent-success:disabled,.bp5-html-select.bp5-minimal .bp5-dark select.bp5-intent-success.bp5-disabled,.bp5-html-select.bp5-minimal .bp5-dark select.bp5-intent-success:disabled,.bp5-select.bp5-minimal .bp5-dark select.bp5-intent-success.bp5-disabled,.bp5-select.bp5-minimal .bp5-dark select.bp5-intent-success:disabled {
+    background: none;
+    color: hsla(var(--pt-intent-success-text-color-hsl),.5)
+}
+
+.bp5-dark .bp5-html-select.bp5-minimal select.bp5-intent-success.bp5-disabled.bp5-active,.bp5-dark .bp5-html-select.bp5-minimal select.bp5-intent-success:disabled.bp5-active,.bp5-dark .bp5-select.bp5-minimal select.bp5-intent-success.bp5-disabled.bp5-active,.bp5-dark .bp5-select.bp5-minimal select.bp5-intent-success:disabled.bp5-active,.bp5-html-select.bp5-minimal .bp5-dark select.bp5-intent-success.bp5-disabled.bp5-active,.bp5-html-select.bp5-minimal .bp5-dark select.bp5-intent-success:disabled.bp5-active,.bp5-select.bp5-minimal .bp5-dark select.bp5-intent-success.bp5-disabled.bp5-active,.bp5-select.bp5-minimal .bp5-dark select.bp5-intent-success:disabled.bp5-active {
+    background: hsla(var(--pt-intent-success-hsl),.3)
 }
 
 .bp5-html-select.bp5-minimal select.bp5-intent-warning,.bp5-select.bp5-minimal select.bp5-intent-warning {
@@ -4135,6 +4457,29 @@ form {
     stroke: var(--pt-intent-warning-text-color)
 }
 
+.bp5-dark .bp5-html-select.bp5-minimal select.bp5-intent-warning,.bp5-dark .bp5-select.bp5-minimal select.bp5-intent-warning,.bp5-html-select.bp5-minimal .bp5-dark select.bp5-intent-warning,.bp5-select.bp5-minimal .bp5-dark select.bp5-intent-warning {
+    color: var(--pt-intent-warning-text-color)
+}
+
+.bp5-dark .bp5-html-select.bp5-minimal select.bp5-intent-warning:hover,.bp5-dark .bp5-select.bp5-minimal select.bp5-intent-warning:hover,.bp5-html-select.bp5-minimal .bp5-dark select.bp5-intent-warning:hover,.bp5-select.bp5-minimal .bp5-dark select.bp5-intent-warning:hover {
+    background: hsla(var(--pt-intent-warning-hsl),.2);
+    color: var(--warning5)
+}
+
+.bp5-dark .bp5-html-select.bp5-minimal select.bp5-intent-warning.bp5-active,.bp5-dark .bp5-html-select.bp5-minimal select.bp5-intent-warning:active,.bp5-dark .bp5-select.bp5-minimal select.bp5-intent-warning.bp5-active,.bp5-dark .bp5-select.bp5-minimal select.bp5-intent-warning:active,.bp5-html-select.bp5-minimal .bp5-dark select.bp5-intent-warning.bp5-active,.bp5-html-select.bp5-minimal .bp5-dark select.bp5-intent-warning:active,.bp5-select.bp5-minimal .bp5-dark select.bp5-intent-warning.bp5-active,.bp5-select.bp5-minimal .bp5-dark select.bp5-intent-warning:active {
+    background: hsla(var(--pt-intent-warning-hsl),.3);
+    color: var(--warning6)
+}
+
+.bp5-dark .bp5-html-select.bp5-minimal select.bp5-intent-warning.bp5-disabled,.bp5-dark .bp5-html-select.bp5-minimal select.bp5-intent-warning:disabled,.bp5-dark .bp5-select.bp5-minimal select.bp5-intent-warning.bp5-disabled,.bp5-dark .bp5-select.bp5-minimal select.bp5-intent-warning:disabled,.bp5-html-select.bp5-minimal .bp5-dark select.bp5-intent-warning.bp5-disabled,.bp5-html-select.bp5-minimal .bp5-dark select.bp5-intent-warning:disabled,.bp5-select.bp5-minimal .bp5-dark select.bp5-intent-warning.bp5-disabled,.bp5-select.bp5-minimal .bp5-dark select.bp5-intent-warning:disabled {
+    background: none;
+    color: hsla(var(--pt-intent-warning-text-color-hsl),.5)
+}
+
+.bp5-dark .bp5-html-select.bp5-minimal select.bp5-intent-warning.bp5-disabled.bp5-active,.bp5-dark .bp5-html-select.bp5-minimal select.bp5-intent-warning:disabled.bp5-active,.bp5-dark .bp5-select.bp5-minimal select.bp5-intent-warning.bp5-disabled.bp5-active,.bp5-dark .bp5-select.bp5-minimal select.bp5-intent-warning:disabled.bp5-active,.bp5-html-select.bp5-minimal .bp5-dark select.bp5-intent-warning.bp5-disabled.bp5-active,.bp5-html-select.bp5-minimal .bp5-dark select.bp5-intent-warning:disabled.bp5-active,.bp5-select.bp5-minimal .bp5-dark select.bp5-intent-warning.bp5-disabled.bp5-active,.bp5-select.bp5-minimal .bp5-dark select.bp5-intent-warning:disabled.bp5-active {
+    background: hsla(var(--pt-intent-warning-hsl),.3)
+}
+
 .bp5-html-select.bp5-minimal select.bp5-intent-danger,.bp5-select.bp5-minimal select.bp5-intent-danger {
     color: var(--pt-intent-danger-text-color)
 }
@@ -4166,6 +4511,29 @@ form {
 
 .bp5-html-select.bp5-minimal select.bp5-intent-danger .bp5-button-spinner .bp5-spinner-head,.bp5-select.bp5-minimal select.bp5-intent-danger .bp5-button-spinner .bp5-spinner-head {
     stroke: var(--pt-intent-danger-text-color)
+}
+
+.bp5-dark .bp5-html-select.bp5-minimal select.bp5-intent-danger,.bp5-dark .bp5-select.bp5-minimal select.bp5-intent-danger,.bp5-html-select.bp5-minimal .bp5-dark select.bp5-intent-danger,.bp5-select.bp5-minimal .bp5-dark select.bp5-intent-danger {
+    color: var(--pt-intent-danger-text-color)
+}
+
+.bp5-dark .bp5-html-select.bp5-minimal select.bp5-intent-danger:hover,.bp5-dark .bp5-select.bp5-minimal select.bp5-intent-danger:hover,.bp5-html-select.bp5-minimal .bp5-dark select.bp5-intent-danger:hover,.bp5-select.bp5-minimal .bp5-dark select.bp5-intent-danger:hover {
+    background: hsla(var(--pt-intent-danger-hsl),.2);
+    color: var(--danger5)
+}
+
+.bp5-dark .bp5-html-select.bp5-minimal select.bp5-intent-danger.bp5-active,.bp5-dark .bp5-html-select.bp5-minimal select.bp5-intent-danger:active,.bp5-dark .bp5-select.bp5-minimal select.bp5-intent-danger.bp5-active,.bp5-dark .bp5-select.bp5-minimal select.bp5-intent-danger:active,.bp5-html-select.bp5-minimal .bp5-dark select.bp5-intent-danger.bp5-active,.bp5-html-select.bp5-minimal .bp5-dark select.bp5-intent-danger:active,.bp5-select.bp5-minimal .bp5-dark select.bp5-intent-danger.bp5-active,.bp5-select.bp5-minimal .bp5-dark select.bp5-intent-danger:active {
+    background: hsla(var(--pt-intent-danger-hsl),.3);
+    color: var(--danger6)
+}
+
+.bp5-dark .bp5-html-select.bp5-minimal select.bp5-intent-danger.bp5-disabled,.bp5-dark .bp5-html-select.bp5-minimal select.bp5-intent-danger:disabled,.bp5-dark .bp5-select.bp5-minimal select.bp5-intent-danger.bp5-disabled,.bp5-dark .bp5-select.bp5-minimal select.bp5-intent-danger:disabled,.bp5-html-select.bp5-minimal .bp5-dark select.bp5-intent-danger.bp5-disabled,.bp5-html-select.bp5-minimal .bp5-dark select.bp5-intent-danger:disabled,.bp5-select.bp5-minimal .bp5-dark select.bp5-intent-danger.bp5-disabled,.bp5-select.bp5-minimal .bp5-dark select.bp5-intent-danger:disabled {
+    background: none;
+    color: hsla(var(--pt-intent-danger-text-color-hsl),.5)
+}
+
+.bp5-dark .bp5-html-select.bp5-minimal select.bp5-intent-danger.bp5-disabled.bp5-active,.bp5-dark .bp5-html-select.bp5-minimal select.bp5-intent-danger:disabled.bp5-active,.bp5-dark .bp5-select.bp5-minimal select.bp5-intent-danger.bp5-disabled.bp5-active,.bp5-dark .bp5-select.bp5-minimal select.bp5-intent-danger:disabled.bp5-active,.bp5-html-select.bp5-minimal .bp5-dark select.bp5-intent-danger.bp5-disabled.bp5-active,.bp5-html-select.bp5-minimal .bp5-dark select.bp5-intent-danger:disabled.bp5-active,.bp5-select.bp5-minimal .bp5-dark select.bp5-intent-danger.bp5-disabled.bp5-active,.bp5-select.bp5-minimal .bp5-dark select.bp5-intent-danger:disabled.bp5-active {
+    background: hsla(var(--pt-intent-danger-hsl),.3)
 }
 
 .bp5-html-select.bp5-large select,.bp5-select.bp5-large select {
@@ -6405,6 +6773,22 @@ span.bp5-popover-target {
     padding-right: 8px
 }
 
+.bp5-dark .bp5-tag {
+    background-color: var(--dark-tag-default-color)
+}
+
+.bp5-dark .bp5-tag .bp5-icon-large,.bp5-dark .bp5-tag .bp5-icon-standard,.bp5-dark .bp5-tag>.bp5-icon {
+    fill: currentcolor
+}
+
+.bp5-dark .bp5-tag.bp5-interactive:hover {
+    background: var(--gray4)
+}
+
+.bp5-dark .bp5-tag.bp5-interactive.bp5-active,.bp5-dark .bp5-tag.bp5-interactive:active {
+    background: var(--gray3)
+}
+
 .bp5-tag .bp5-icon-large,.bp5-tag .bp5-icon-standard,.bp5-tag>.bp5-icon {
     fill: var(--white)
 }
@@ -6554,6 +6938,33 @@ span.bp5-popover-target {
 
 .bp5-tag.bp5-minimal:not([class*=bp5-intent-]) .bp5-tag-remove:active,.bp5-tag.bp5-minimal:not([class*=bp5-intent-]) .bp5-tag-remove:hover {
     color: var(--dark-gray5)
+}
+
+.bp5-dark .bp5-tag.bp5-minimal:not([class*=bp5-intent-]) {
+    background-color: hsla(var(--gray3-hsl),.15);
+    color: var(--pt-dark-text-color)
+}
+
+.bp5-dark .bp5-tag.bp5-minimal:not([class*=bp5-intent-]).bp5-interactive {
+    cursor: pointer
+}
+
+.bp5-dark .bp5-tag.bp5-minimal:not([class*=bp5-intent-]).bp5-interactive:hover {
+    background-color: hsla(var(--gray3-hsl),.3);
+    color: var(--white)
+}
+
+.bp5-dark .bp5-tag.bp5-minimal:not([class*=bp5-intent-]).bp5-interactive.bp5-active,.bp5-dark .bp5-tag.bp5-minimal:not([class*=bp5-intent-]).bp5-interactive:active {
+    background-color: hsla(var(--gray3-hsl),.35);
+    color: var(--white)
+}
+
+.bp5-dark .bp5-tag.bp5-minimal:not([class*=bp5-intent-]) .bp5-tag-remove {
+    color: var(--pt-dark-icon-color)
+}
+
+.bp5-dark .bp5-tag.bp5-minimal:not([class*=bp5-intent-]) .bp5-tag-remove:active,.bp5-dark .bp5-tag.bp5-minimal:not([class*=bp5-intent-]) .bp5-tag-remove:hover {
+    color: var(--light-gray1)
 }
 
 .bp5-tag.bp5-minimal.bp5-intent-primary {
@@ -7862,11 +8273,13 @@ span.bp5-popover-target {
 
 .bp5-daterangepicker .DayPicker-Day--selected-range {
     background-color: var(--daterangepicker-range-background-color-selected);
-    border-radius: 0
+    border-radius: 0;
+    color: var(--primary2)
 }
 
 .bp5-daterangepicker .DayPicker-Day--selected-range:hover {
-    background-color: var(--daterangepicker-range-background-color-selected-hover)
+    background-color: var(--daterangepicker-range-background-color-selected-hover);
+    color: var(--primary2)
 }
 
 .bp5-daterangepicker .DayPicker-Day--selected-range-start:not(.DayPicker-Day--selected-range-end):not(.DayPicker-Day--hovered-range-end) {
@@ -7887,6 +8300,10 @@ span.bp5-popover-target {
 .bp5-daterangepicker .DayPicker-Day--hovered-range-end:not(.DayPicker-Day--hovered-range-start) {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0
+}
+
+.bp5-dark .bp5-daterangepicker .DayPicker-Day--hovered-range,.bp5-dark .bp5-daterangepicker .DayPicker-Day--selected-range {
+    color: var(--light-gray5)
 }
 
 .bp5-daterangepicker-calendars,.bp5-daterangepicker-timepickers {
