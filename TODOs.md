@@ -1,8 +1,9 @@
 # TODO:
 
 ## v5 bugs
-- Toaster example
-- PopoverPlacementExample css is missing
+- sampleExample
+  - Fix Toaster
+  - Add Tooltip
 - DateRangePicker range colors
 - Dark Theme
   - Section
