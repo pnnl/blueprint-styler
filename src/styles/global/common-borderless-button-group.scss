@@ -8,18 +8,18 @@ $button-intent: '#{$ns}-button[class*=#{$ns}-intent-]';
       border-width: 0 1px;
   }
 
-  // from _button-group.scss && _popover2-in-button-group.scss
+  // from _button-group.scss && _popover-in-button-group.scss
   // support wrapping buttons in a tooltip, which adds a wrapper element
 
   &:not(.#{$ns}-minimal) {
     > .#{$ns}-popover-wrapper:first-child .#{$button-intent},
-    > .#{$ns}-popover2-target:first-child .#{$button-intent},
+    > .#{$ns}-popover-target:first-child .#{$button-intent},
     > .#{$button-intent}:first-child {
       border-width: 0 1px 0 0;
     }
 
     > .#{$ns}-popover-wrapper:last-child .#{$button-intent},
-    > .#{$ns}-popover2-target:last-child .#{$button-intent},
+    > .#{$ns}-popover-target:last-child .#{$button-intent},
     > .#{$button-intent}:last-child {
       border-width: 0 0 0 1px;
     }
@@ -34,13 +34,13 @@ $button-intent: '#{$ns}-button[class*=#{$ns}-intent-]';
 
     &:not(.#{$ns}-minimal) {
       > .#{$ns}-popover-wrapper:first-child .#{$button-intent},
-      > .#{$ns}-popover2-target:first-child .#{$button-intent},
+      > .#{$ns}-popover-target:first-child .#{$button-intent},
       > .#{$button-intent}:first-child {
         border-width: 0 0 1px 0;
       }
 
       > .#{$ns}-popover-wrapper:last-child .#{$button-intent},
-      > .#{$ns}-popover2-target:last-child .#{$button-intent},
+      > .#{$ns}-popover-target:last-child .#{$button-intent},
       > .#{$button-intent}:last-child {
         border-width: 1px 0 0 0;
       }
