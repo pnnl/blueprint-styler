@@ -1,11 +1,5 @@
 # TODO:
 
-## v5 bugs
-- sampleExample
-  - Add Tooltip
-- Dark Theme
-  - DateRangePicker selected range text colors
-
 ## Docs
 - example theme as code
 - explain how tokens inherit - specifically hsl

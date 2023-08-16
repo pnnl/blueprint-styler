@@ -78,28 +78,28 @@
     }
   }
 
-  /* .#{$ns}-dark & {
+  .#{$ns}-dark & {
     .DayPicker-Day {
       &--hovered-range {
         color: $light-gray5;
 
         // stylelint-disable max-line-length
-        &:not(.DayPicker-Day--selected):not(.DayPicker-Day--selected-range):not(.DayPicker-Day--selected-range-start):not(.DayPicker-Day--selected-range-end) {
-          background-color: $dark-daterangepicker-range-background-color;
-        }
+        // &:not(.DayPicker-Day--selected):not(.DayPicker-Day--selected-range):not(.DayPicker-Day--selected-range-start):not(.DayPicker-Day--selected-range-end) {
+        //   background-color: $dark-daterangepicker-range-background-color;
+        // }
         // stylelint-enable max-line-length
       }
 
       &--selected-range {
-        background-color: $dark-daterangepicker-range-background-color-selected;
+        // background-color: $dark-daterangepicker-range-background-color-selected;
         color: $light-gray5;
 
-        &:hover {
-          background-color: $dark-daterangepicker-range-background-color-selected-hover;
-        }
+        // &:hover {
+        //   background-color: $dark-daterangepicker-range-background-color-selected-hover;
+        // }
       }
     }
-  } */
+  }
 }
 
 .#{$ns}-daterangepicker-calendars {
