@@ -5,6 +5,7 @@
   - Add Tooltip
 - Dark Theme
   - button intent :active text colors
+  - DateRangePicker selected range text colors
 
 ## Docs
 - example theme as code

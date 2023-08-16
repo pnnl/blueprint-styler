@@ -3,11 +3,12 @@ import {
     Alert, AlertProps, Breadcrumbs, Button, ButtonGroup, Callout, Card, Checkbox, Classes,
     ControlGroup, Dialog, DialogProps, Divider, Drawer, DrawerProps, FormGroup, H2, H3, H5,
     HTMLSelect, Icon, InputGroup, Intent, Menu, MenuDivider, MenuItem, NumericInput, OverlayToaster, Popover, PopoverProps, Position, ProgressBar,
-    Radio, RadioGroup, Slider, Spinner, Switch, Tab, Tabs, TextArea, Toaster
+    Radio, RadioGroup, Slider, Spinner, Switch, Tab, Tabs, TextArea, Toaster, Tooltip
 } from "@blueprintjs/core";
 import { Example, ExampleProps, handleStringChange } from "@blueprintjs/docs-theme";
 import { capitalizeFirstLetter, DivFC, intents, noOp, randomIcon, randomLorem, TextSample, vibes } from "./utils";
 import { DateRangeInput } from "@blueprintjs/datetime";
+import { SmallInfoSign } from "@blueprintjs/icons";
 
 export class SampleExample extends React.PureComponent<ExampleProps> {
     public render() {
@@ -44,6 +45,15 @@ export class SampleExample extends React.PureComponent<ExampleProps> {
                             <Tab id="d" title="Callout" panel={<CalloutSample />} />
                             <Tab id="c" title="Card" panel={<CardSample />} />
                             <Tab id="a" title="Intents" panel={<IntentsSample />} />
+                            <div style={{ flex: '1 1 auto' }} />
+                            <Tooltip
+                                content="Tooltips match the theme in blueprint-styler"
+                                placement={Position.TOP}
+                                compact
+                                renderTarget={({isOpen, ...tooltipProps}) => (
+                                    <SmallInfoSign style={{alignSelf: "center"}} {...tooltipProps} />
+                                )}
+                            />
                         </Tabs>
                     </div>
 
