@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkblueprint_styler=self.webpackChunkblueprint_styler||[]).push([[104],{2530:function(n,t,r){r.r(t),r.d(t,{IconSvgPaths16:function(){return u},IconSvgPaths20:function(){return c},getIconPaths:function(){return i},iconNameToPathsRecordKey:function(){return s}});var e=r(5530),u=r(9382),c=r(8554),o=r(6523);function i(n,t){var r=(0,e.Ho)(n);return t===o.J.STANDARD?u[r]:c[r]}function s(n){return(0,e.Ho)(n)}}}]);
+//# sourceMappingURL=blueprint-icons-all-paths.81cf72e1.chunk.js.map
