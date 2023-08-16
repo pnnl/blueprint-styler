@@ -2,11 +2,9 @@
 
 ## v5 bugs
 - sampleExample
-  - Fix Toaster
   - Add Tooltip
 - Dark Theme
-  - Section
-  - Card List
+  - button intent :active text colors
 
 ## Docs
 - example theme as code

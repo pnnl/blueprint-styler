@@ -2,8 +2,8 @@ import * as React from "react";
 import {
     Alert, AlertProps, Breadcrumbs, Button, ButtonGroup, Callout, Card, Checkbox, Classes,
     ControlGroup, Dialog, DialogProps, Divider, Drawer, DrawerProps, FormGroup, H2, H3, H5,
-    HTMLSelect, Icon, InputGroup, Intent, Menu, MenuDivider, MenuItem, NumericInput, OverlayToaster, Popover, PopoverProps, ProgressBar,
-    Radio, RadioGroup, Slider, Spinner, Switch, Tab, Tabs, TextArea, Toast, Toaster, ToastProps
+    HTMLSelect, Icon, InputGroup, Intent, Menu, MenuDivider, MenuItem, NumericInput, OverlayToaster, Popover, PopoverProps, Position, ProgressBar,
+    Radio, RadioGroup, Slider, Spinner, Switch, Tab, Tabs, TextArea, Toaster
 } from "@blueprintjs/core";
 import { Example, ExampleProps, handleStringChange } from "@blueprintjs/docs-theme";
 import { capitalizeFirstLetter, DivFC, intents, noOp, randomIcon, randomLorem, TextSample, vibes } from "./utils";
@@ -150,14 +150,10 @@ const OverlaySample: React.FC<PopoverProps> = (props) => {
     const [isDialogOpen, setDialogOpen] = React.useState(false)
     const [isDrawerOpen, setDrawerOpen] = React.useState(false)
 
-    const [toasts, setToasts] = React.useState<(ToastProps & { key: string })[]>([])
-    const dismissToast = React.useCallback((index: number) => {
-        const _toasts = [...toasts]
-        _toasts.splice(index, 1)
-        setToasts(_toasts)
-    }, [toasts, setToasts])
+    const toaster = React.useRef<Toaster>()
+
     const createToast = React.useCallback((intent: Intent) => {
-        setToasts(toasts.concat({
+        toaster.current.show({
             message: (<div style={{ display: 'flex', gap: 8, alignItems: 'flex-start' }}>
                 <Icon icon={randomIcon()} />
                 <div>
@@ -170,12 +166,9 @@ const OverlaySample: React.FC<PopoverProps> = (props) => {
                 </div>
             </div>),
             intent,
-            key: Math.random().toString()
-        }))
-    }, [toasts, setToasts])
-    const Toasts = toasts.map((toastProps, index) => (
-        <Toast {...toastProps} onDismiss={() => dismissToast(index)} timeout={0} />
-    ))
+            timeout: 0
+        })
+    }, [])    
 
     const MenuSample = (
         <Menu>
@@ -201,7 +194,7 @@ const OverlaySample: React.FC<PopoverProps> = (props) => {
         <DialogSample isOpen={isDialogOpen} onClose={() => setDialogOpen(false)} />
         <AlertSample isOpen={isAlertOpen} onClose={() => setAlertOpen(false)} />
         <DrawerSample isOpen={isDrawerOpen} onClose={() => setDrawerOpen(false)} />
-        {/* <Toaster position="top-right" children={Toasts} /> */}
+        <OverlayToaster position={Position.TOP_RIGHT} ref={ref=>toaster.current = ref} />
     </>);
 }
 
