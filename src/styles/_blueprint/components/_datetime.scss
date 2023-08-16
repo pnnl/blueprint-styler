@@ -17,12 +17,12 @@
 --dark-datepicker-day-background-color-hover: var(--gray1);
 --dark-datepicker-day-background-color-active: var(--gray2);
 
---daterangepicker-range-background-color: var(--light-gray4);
---daterangepicker-range-background-color-selected: var(--light-gray4);
---daterangepicker-range-background-color-selected-hover: var(--light-gray1);
---dark-daterangepicker-range-background-color: var(--dark-gray5);
---dark-daterangepicker-range-background-color-selected: var(--dark-gray5);
---dark-daterangepicker-range-background-color-selected-hover: var(--gray1);
+--daterangepicker-range-background-color: hsla(var(--primary3-hsl), 0.1);
+--daterangepicker-range-background-color-selected: hsla(var(--primary3-hsl), 0.1);
+--daterangepicker-range-background-color-selected-hover: hsla(var(--primary3-hsl), 0.2);
+--dark-daterangepicker-range-background-color: hsla(var(--primary3-hsl), 0.2);
+--dark-daterangepicker-range-background-color-selected: hsla(var(--primary3-hsl), 0.2);
+--dark-daterangepicker-range-background-color-selected-hover: hsla(var(--primary3-hsl), 0.4);
 
 // // datepicker.scss
 // --cell-size: calc(var(--pt-grid-size) * 3);

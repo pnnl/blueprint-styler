@@ -31,7 +31,7 @@
 
     &--hovered-range {
       border-radius: 0;
-      color: $blue2;
+      color: var(--primary2);
 
       // need to disable hover styles for all variants of selected dates
 
@@ -45,11 +45,11 @@
     &--selected-range {
       background-color: $daterangepicker-range-background-color-selected;
       border-radius: 0;
-      // color: $blue2;
+      color: var(--primary2);
 
       &:hover {
         background-color: $daterangepicker-range-background-color-selected-hover;
-        // color: $blue2;
+        color: var(--primary2);
       }
     }
 

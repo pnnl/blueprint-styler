@@ -4,7 +4,6 @@
 - sampleExample
   - Fix Toaster
   - Add Tooltip
-- DateRangePicker range colors
 - Dark Theme
   - Section
   - Card List
