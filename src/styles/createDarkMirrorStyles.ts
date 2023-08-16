@@ -24,7 +24,7 @@ export const getDarkMirrorVarNames = (styleSheet: CSSStyleSheet) => (
 export const createDarkMirrorRootRule = (darkMirrorVarNames: string[]) => {
 
     // very similar to scripts/gulp-extract-css-vars-to-all-formats.js:105
-    let cssDarkMirror = `.bp4-dark.bp4-dark {\n` // multiple .bp4-dark to add specificity
+    let cssDarkMirror = `.bp5-dark.bp5-dark {\n` // multiple .bp5-dark to add specificity
     darkMirrorVarNames.forEach(varName => {
         const inverseVarName = varName.replace('dark-', '')
         cssDarkMirror += `\t--${inverseVarName}: var(--${varName});\n`

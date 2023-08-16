@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { FocusStyleManager, Classes, Button, AnchorButton, Collapse, HTMLSelect, Icon, ControlGroup } from '@blueprintjs/core';
 import { useSearchParams } from "react-router-dom";
-import { IBlueprintExampleData } from '../tags/types';
+import { BlueprintExampleData } from '../tags/types';
 import { allExamples } from './allExamples';
 import logo from '../assets/logo.svg';
 import { changeStyle, defaultStyleName, styleManifest, styleOptions } from '../styles';
@@ -11,7 +11,7 @@ import { changeStyle, defaultStyleName, styleManifest, styleOptions } from '../s
 FocusStyleManager.onlyShowFocusOnTabs();
 
 const DARK_THEME = Classes.DARK;
-const LIGHT_THEME = "bp4-light"; // not a cannon blueprint class
+const LIGHT_THEME = "bp5-light"; // not a cannon blueprint class
 const THEME_LOCAL_STORAGE_KEY = "blueprint-docs-theme";
 
 /** Return the current theme className. */
@@ -36,7 +36,7 @@ function BlueprintStylerApp() {
 
     // theme
     const [isDarkTheme, setIsDarkTheme] = useState(getTheme() === DARK_THEME); // isDarkTheme
-    const data: IBlueprintExampleData = useMemo(() => ({ themeName: isDarkTheme ? DARK_THEME : LIGHT_THEME }), [isDarkTheme]); // { themeName: getTheme() }
+    const data: BlueprintExampleData = useMemo(() => ({ themeName: isDarkTheme ? DARK_THEME : LIGHT_THEME }), [isDarkTheme]); // { themeName: getTheme() }
     useEffect(() => {
         let toTheme = DARK_THEME
         let fromTheme = LIGHT_THEME
@@ -106,9 +106,9 @@ function BlueprintStylerApp() {
                             fill
                         />
 
-                        {/* <div className="bp4-input-group" style={{ marginBottom: 16 }} >
+                        {/* <div className="bp5-input-group" style={{ marginBottom: 16 }} >
                             <Icon icon="search" />
-                            <input type="text" className="bp4-input" placeholder="Search" />
+                            <input type="text" className="bp5-input" placeholder="Search" />
                         </div> */}
 
                     </header>

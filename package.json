@@ -38,21 +38,14 @@
     "generate-svg-icon-files": "node ./scripts/generate-svg-icon-files.js"
   },
   "peerDependencies": {
-    "@blueprintjs/core": "^4.20.2",
-    "@blueprintjs/datetime": "^4.4.37",
-    "@blueprintjs/datetime2": "^0.9.37",
-    "@blueprintjs/docs-theme": "^4.5.27",
-    "@blueprintjs/icons": "^4.16.0",
-    "@blueprintjs/popover2": "^1.14.11",
-    "@blueprintjs/select": "^4.9.24",
-    "@blueprintjs/table": "^4.10.12",
-    "@blueprintjs/timezone": "^4.5.43"
+    "@blueprintjs/core": "^5.2.0",
+    "@blueprintjs/datetime": "^5.0.8",
+    "@blueprintjs/icons": "^5.1.5",
+    "@blueprintjs/select": "^5.0.8",
+    "@blueprintjs/table": "^5.0.8"
   },
   "peerDependenciesMeta": {
     "@blueprintjs/datetime": {
-      "optional": true
-    },
-    "@blueprintjs/datetime2": {
       "optional": true
     },
     "@blueprintjs/select": {
@@ -60,21 +53,15 @@
     },
     "@blueprintjs/table": {
       "optional": true
-    },
-    "@blueprintjs/timezone": {
-      "optional": true
     }
   },
   "devDependencies": {
-    "@blueprintjs/core": "^4.20.2",
-    "@blueprintjs/datetime": "^4.4.37",
-    "@blueprintjs/datetime2": "^0.9.37",
-    "@blueprintjs/docs-theme": "^4.5.27",
-    "@blueprintjs/icons": "^4.16.0",
-    "@blueprintjs/popover2": "^1.14.11",
-    "@blueprintjs/select": "^4.9.24",
-    "@blueprintjs/table": "^4.10.12",
-    "@blueprintjs/timezone": "^4.5.43",
+    "@blueprintjs/core": "^5.2.0",
+    "@blueprintjs/datetime": "^5.0.8",
+    "@blueprintjs/docs-theme": "5.0.8",
+    "@blueprintjs/icons": "^5.1.5",
+    "@blueprintjs/select": "^5.0.8",
+    "@blueprintjs/table": "^5.0.8",
     "@carbon/colors": "^11.11.0",
     "@ibm/plex": "^6.1.1",
     "@types/node": "^18.11.18",
@@ -89,6 +76,7 @@
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.1.0",
     "lodash-es": "^4.17.21",
+    "moment": "^2.29.4",
     "node-sass": "^8.0.0",
     "node-sass-tilde-importer": "^1.0.2",
     "postcss": "^8.4.21",

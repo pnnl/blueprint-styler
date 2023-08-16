@@ -220,7 +220,6 @@ const LabelTitle: React.FC<{
 const tableClasses = [
     Classes.HTML_TABLE,
     Classes.HTML_TABLE_BORDERED,
-    Classes.HTML_TABLE_CONDENSED,
     Classes.HTML_TABLE_STRIPED,
     Classes.INTERACTIVE
 ]

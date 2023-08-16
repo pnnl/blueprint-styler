@@ -81,9 +81,9 @@ Styleguide non-ideal-state
     }
   }
 
-  .#{$ns}-dark & {
+  /* .#{$ns}-dark & {
     .#{$ns}-icon svg {
       fill-opacity: 20%;
     }
-  }
+  } */
 }

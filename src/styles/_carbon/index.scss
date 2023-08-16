@@ -2,7 +2,7 @@
 @import '../_blueprint/common/intent-sets';
 $pt-input-height: 32px;
 
-$ns: "bp4";
+$ns: "bp5";
 $root-selector: ":root" !default;
 
 @import './common/index';
@@ -11,6 +11,5 @@ $root-selector: ":root" !default;
 
 #{$root-selector} {
   @import '../global/common-standard-search';
-  // @import '../global/common-control-group'; // not needed in bp4
   @import '../global/common-tag-input-shrink';
 }

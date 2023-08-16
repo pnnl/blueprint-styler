@@ -2,11 +2,8 @@ import { ExampleProps } from '@blueprintjs/docs-theme';
 import * as CustomExamples from '../examples/custom-examples';
 import * as CoreExamples from '../examples/core-examples';
 import * as DateTimeExamples from '../examples/datetime-examples';
-import * as DateTime2Examples from '../examples/datetime2-examples';
-import * as Popover2Examples from '../examples/popover2-examples';
 import * as SelectExamples from '../examples/select-examples';
 import * as TableExamples from '../examples/table-examples';
-// import * as TimezoneExamples from '../examples/timezone-examples';
 
 type ExampleComponentName = string // must be equal to the example component class name
 type ExampleComponentClass = React.ComponentClass<ExampleProps<{}> | Readonly<ExampleProps<{}>>>
@@ -23,7 +20,7 @@ export const allExamples: GroupedComponentSets = [
         ['Typography', [[CustomExamples.TypographyExample, 'TypographyExample'],]],
     ]],
     ['Components', [
-        ['Breadcrumbs', [[Popover2Examples.Breadcrumbs2Example, 'Breadcrumbs2Example'],]],
+        ['Breadcrumbs', [[CoreExamples.BreadcrumbsExample, 'BreadcrumbsExample'],]],
         ['Button', [
             [CoreExamples.ButtonsExample, 'ButtonsExample'],
             [CoreExamples.ButtonsIconsExample, 'ButtonsIconsExample'],
@@ -35,14 +32,13 @@ export const allExamples: GroupedComponentSets = [
         ['Callout', [[CoreExamples.CalloutExample, 'CalloutExample'],]],
         ['Card', [[CoreExamples.CardExample, 'CardExample'],]],
         ['Collapse', [[CoreExamples.CollapseExample, 'CollapseExample'],]],
-        ['Collapsible list', [[CoreExamples.CollapsibleListExample, 'CollapsibleListExample'],]],
         ['Divider', [[CoreExamples.DividerExample, 'DividerExample'],]],
         ['Editable text', [[CoreExamples.EditableTextExample, 'EditableTextExample'],]],
         // ['HTML elements', [[]]],
         // ['HTML table', [[]]],
         // ['Hotkeys', [
         //     [CoreExamples.HotkeyPiano, 'HotkeyPiano'],
-        //     [CoreExamples.HotkeyTester, 'HotkeyTester'],
+        //     [CoreExamples.HotkeyTesterExample, 'HotkeyTesterExample'],
         // ]],
         ['Icon', [[CoreExamples.IconExample, 'IconExample'],]],
         ['Menu', [
@@ -54,6 +50,8 @@ export const allExamples: GroupedComponentSets = [
         ['Overflow list', [[CoreExamples.OverflowListExample, 'OverflowListExample'],]],
         ['Panel stack', [[CoreExamples.PanelStack2Example, 'PanelStack2Example'],]],
         ['Progress bar', [[CoreExamples.ProgressExample, 'ProgressExample'],]],
+        ['Section', [[CoreExamples.SectionExample, 'SectionExample'],]],
+        ['Card list', [[CoreExamples.CardListExample, 'CardListExample'],]],
         // ['Skeleton', [[]]],
         ['Spinner', [[CoreExamples.SpinnerExample, 'SpinnerExample'],]],
         ['Tabs', [[CoreExamples.TabsExample, 'TabsExample'],]],
@@ -75,6 +73,7 @@ export const allExamples: GroupedComponentSets = [
             [CoreExamples.MultiSliderExample, 'MultiSliderExample'],
         ]],
         ['Switch', [[CoreExamples.SwitchExample, 'SwitchExample'],]],
+        // ['Search Field', [[CoreExamples.SearchInputExample, 'SearchInputExample'],]],
     ]],
 
     ['Form Inputs', [
@@ -89,21 +88,22 @@ export const allExamples: GroupedComponentSets = [
 
     ['Overlays', [
         ['Overlay', [[CoreExamples.OverlayExample, 'OverlayExample'],]],
-        ['Portal', [[Popover2Examples.Popover2PortalExample, 'Popover2PortalExample'],]],
+        ['Portal', [[CoreExamples.PopoverPortalExample, 'PopoverPortalExample'],]],
         ['Alert', [[CoreExamples.AlertExample, 'AlertExample'],]],
         // ['Context menu', [[CoreExamples.ContextMenuExample, 'ContextMenuExample'],]], // Decorator
+        // ['Context menu', [[CoreExamples.ContextMenuPopoverExample, 'ContextMenuPopoverExample'],]],
         ['Dialog', [[CoreExamples.DialogExample, 'DialogExample'],]],
         ['Drawer', [[CoreExamples.DrawerExample, 'DrawerExample'],]],
         ['Popover', [
-            // [Popover2Examples.Popover2DismissExample, 'Popover2DismissExample'],
-            [Popover2Examples.Popover2Example, 'Popover2Example'],
-            [Popover2Examples.Popover2InteractionKindExample, 'Popover2InteractionKindExample'],
-            [Popover2Examples.Popover2MinimalExample, 'Popover2MinimalExample'],
-            [Popover2Examples.Popover2PlacementExample, 'Popover2PlacementExample'],
-            [Popover2Examples.Popover2SizingExample, 'Popover2SizingExample'],
+            // [CoreExamples.PopoverDismissExample, 'PopoverDismissExample'],
+            [CoreExamples.PopoverExample, 'PopoverExample'],
+            [CoreExamples.PopoverInteractionKindExample, 'PopoverInteractionKindExample'],
+            [CoreExamples.PopoverMinimalExample, 'PopoverMinimalExample'],
+            [CoreExamples.PopoverPlacementExample, 'PopoverPlacementExample'],
+            [CoreExamples.PopoverSizingExample, 'PopoverSizingExample'],
         ]],
         ['Toast', [[CoreExamples.ToastExample, 'ToastExample'],]],
-        ['Tooltip', [[Popover2Examples.Tooltip2Example, 'Tooltip2Example'],]],
+        ['Tooltip', [[CoreExamples.TooltipExample, 'TooltipExample'],]],
     ]],
 
     ['Other', [
@@ -113,13 +113,12 @@ export const allExamples: GroupedComponentSets = [
     ]],
 
     ['DateTime', [
-        ['Date Input', [[DateTime2Examples.DateInput2Example, 'DateInput2Example'],]],
-        ['Date Range Input', [[DateTime2Examples.DateRangeInput2Example, 'DateRangeInput2Example'],]],
+        ['Date Input', [[DateTimeExamples.DateInputExample, 'DateInputExample'],]],
+        ['Date Range Input', [[DateTimeExamples.DateRangeInputExample, 'DateRangeInputExample'],]],
         ['Date Picker', [[DateTimeExamples.DatePickerExample, 'DatePickerExample'],]],
         ['Date Range Picker', [[DateTimeExamples.DateRangePickerExample, 'DateRangePickerExample'],]],
-        ['DateTime Picker', [[DateTimeExamples.DateTimePickerExample, 'DateTimePickerExample'],]],
         ['Time Picker', [[DateTimeExamples.TimePickerExample, 'TimePickerExample'],]],
-        ['Timezone Picker', [[DateTime2Examples.TimezoneSelectExample, 'TimezoneSelectExample'],]],
+        ['Timezone Picker', [[DateTimeExamples.TimezoneSelectExample, 'TimezoneSelectExample'],]],
     ]],
 
     ['Select', [

@@ -1,14 +1,13 @@
 import * as React from "react";
 import {
-    Alert, AlertProps, Button, ButtonGroup, Callout, Card, Checkbox, Classes,
+    Alert, AlertProps, Breadcrumbs, Button, ButtonGroup, Callout, Card, Checkbox, Classes,
     ControlGroup, Dialog, DialogProps, Divider, Drawer, DrawerProps, FormGroup, H2, H3, H5,
-    HTMLSelect, Icon, InputGroup, Intent, Menu, MenuDivider, MenuItem, NumericInput, ProgressBar,
+    HTMLSelect, Icon, InputGroup, Intent, Menu, MenuDivider, MenuItem, NumericInput, OverlayToaster, Popover, PopoverProps, ProgressBar,
     Radio, RadioGroup, Slider, Spinner, Switch, Tab, Tabs, TextArea, Toast, Toaster, ToastProps
 } from "@blueprintjs/core";
 import { Example, ExampleProps, handleStringChange } from "@blueprintjs/docs-theme";
-import { DateRangeInput2 } from "@blueprintjs/datetime2";
-import { Popover2, Popover2Props, Breadcrumbs2 } from "@blueprintjs/popover2";
 import { capitalizeFirstLetter, DivFC, intents, noOp, randomIcon, randomLorem, TextSample, vibes } from "./utils";
+import { DateRangeInput } from "@blueprintjs/datetime";
 
 export class SampleExample extends React.PureComponent<ExampleProps> {
     public render() {
@@ -17,7 +16,7 @@ export class SampleExample extends React.PureComponent<ExampleProps> {
 
                 <div className="content-sample">
 
-                    <Breadcrumbs2 items={[
+                    <Breadcrumbs items={[
                         { onClick: noOp, text: "Bread" },
                         { onClick: noOp, text: "Crumbs" },
                         { text: "Sample" },
@@ -145,7 +144,7 @@ const CalloutSample: DivFC = (props) => {
 }
 
 
-const OverlaySample: React.FC<Popover2Props> = (props) => {
+const OverlaySample: React.FC<PopoverProps> = (props) => {
 
     const [isAlertOpen, setAlertOpen] = React.useState(false)
     const [isDialogOpen, setDialogOpen] = React.useState(false)
@@ -196,12 +195,13 @@ const OverlaySample: React.FC<Popover2Props> = (props) => {
             <MenuItem icon="tick" text="selected" selected />
         </Menu>
     );
+
     return (<>
-        <Popover2 content={MenuSample} placement="right" {...props} />
+        <Popover content={MenuSample} placement="right" {...props} />
         <DialogSample isOpen={isDialogOpen} onClose={() => setDialogOpen(false)} />
         <AlertSample isOpen={isAlertOpen} onClose={() => setAlertOpen(false)} />
         <DrawerSample isOpen={isDrawerOpen} onClose={() => setDrawerOpen(false)} />
-        <Toaster position="top-right" children={Toasts} />
+        {/* <Toaster position="top-right" children={Toasts} /> */}
     </>);
 }
 
@@ -291,7 +291,7 @@ const FormSample: DivFC = (props) => {
                 />
             </FormGroup>
             <FormGroup label="Date Range" >
-                <DateRangeInput2
+                <DateRangeInput
                     formatDate={noOp}
                     parseDate={noOp}
                     startInputProps={{ fill: true }}

@@ -152,7 +152,7 @@ module.exports = () => through2.obj(function (file, enc, next) {
         }
     })
 
-    const css = `.bp4-vars, :root {\n${cssThemeStrings.light}}\n\n\n.bp4-dark {\n${cssThemeStrings.dark}}\n`
+    const css = `.bp5-vars, :root {\n${cssThemeStrings.light}}\n\n\n.bp5-dark {\n${cssThemeStrings.dark}}\n`
     const scss = less.replace(/@/g, '$')
     const json = JSON.stringify(jsObjIdentity, null, 2)
 

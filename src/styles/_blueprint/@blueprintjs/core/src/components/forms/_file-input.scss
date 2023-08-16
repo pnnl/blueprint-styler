@@ -121,7 +121,7 @@ $file-input-button-padding-small: ($pt-input-height-small - $pt-button-height-sm
     width: $file-input-button-width;
   }
 
-  &:hover::after, .💩💩💩 { // poop emoji so this selector is not INCORRECTLY merged with .bp4-file-upload-input:after:hover
+  &:hover::after, .💩💩💩 { // poop emoji so this selector is not INCORRECTLY merged with .bp5-file-upload-input:after:hover
     @include pt-button-hover();
   }
 
@@ -163,7 +163,7 @@ $file-input-button-padding-small: ($pt-input-height-small - $pt-button-height-sm
       @include pt-dark-button-default-colors();
     }
 
-    &:hover::after, .💩💩💩 { // poop emoji so this selector is not INCORRECTLY merged with .bp4-file-upload-input:after:hover
+    &:hover::after, .💩💩💩 { // poop emoji so this selector is not INCORRECTLY merged with .bp5-file-upload-input:after:hover
       @include pt-dark-button-hover();
     }
 

@@ -443,7 +443,7 @@ $dark-minimal-active-text-colors: (
     stroke: $text-color;
   }
 
-  .#{$ns}-dark & {
+  /* .#{$ns}-dark & {
     color: $dark-text-color;
 
     &:hover {
@@ -466,7 +466,7 @@ $dark-minimal-active-text-colors: (
         background: hslax($intent-color, 0.3);
       }
     }
-  }
+  } */
 }
 
 @mixin pt-button-minimal-divider() {

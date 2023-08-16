@@ -23,7 +23,7 @@ While more difficult, this has the advantage of being able to test all blueprint
 - Create a new `_example` folder in `./src/styles`. This must contain a few things:
   - a root scss file named `index.scss` - this will compile into the `overrides/example/override.css` file and `overrides/example/override-tokens.css` files. This file must also set the `$ns` (namespace) and `!default` `$root-selector` variables as follows:
     ```scss
-    $ns: "bp4";
+    $ns: "bp5";
     $root-selector: ":root" !default;
     ```
   - a secondary root file named `styler-styles.scss` - this extends `index.scss` to style the demo react app components. This file needs to reset the `$root-selector` to scope the style to a app's theme switching method.
