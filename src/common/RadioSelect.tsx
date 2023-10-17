@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 Palantir Technologies, Inc. All rights reserved.
+ * Copyright 2023 Palantir Technologies, Inc. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,37 +17,25 @@
 import * as React from "react";
 
 import { Radio, RadioGroup } from "@blueprintjs/core";
-import type { DateFormatProps } from "@blueprintjs/datetime";
 import { handleNumberChange } from "@blueprintjs/docs-theme";
 
-export interface DateFormatSelectorProps {
-    /** Format options */
-    formatOptions: DateFormatProps[];
-
-    /** Selected formatter. */
-    format: DateFormatProps;
-
-    /**
-     * Optional label for the RadioGroup
-     *
-     * @default "Date format"
-     */
+export interface RadioSelectProps {
     label?: React.ReactNode;
-
-    /** The callback to fire when a new formatter is chosen. */
-    onChange: (format: DateFormatProps) => void;
+    onChange: (newValue: string) => void;
+    options: string[];
+    value: string;
 }
 
-export const DateFormatSelector: React.FC<DateFormatSelectorProps> = props => {
+export const RadioSelect: React.FC<RadioSelectProps> = props => {
     const handleChange = handleNumberChange(index => {
-        props.onChange(props.formatOptions[index]);
+        props.onChange(props.options[index]);
     });
-    const value = props.formatOptions.indexOf(props.format);
+    const value = props.options.indexOf(props.value);
 
     return (
         <RadioGroup label={props.label ?? "Date format"} onChange={handleChange} selectedValue={value}>
-            {props.formatOptions.map((format, index) => (
-                <Radio key={index} label={format.placeholder} value={index} />
+            {props.options.map((option, index) => (
+                <Radio key={index} label={option} value={index} />
             ))}
         </RadioGroup>
     );
