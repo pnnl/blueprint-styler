@@ -72,8 +72,8 @@ span.#{$ns}-icon-large {
 } */
 
 // no icon Fonts
-/* @each $name, $codepoint in $blueprint-icon-codepoints {
-  .#{$ns}-icon-#{$name}::before {
-    content: $codepoint;
-  }
-} */
+// /* @each $name, $codepoint in $blueprint-icon-codepoints {
+//   .#{$ns}-icon-#{$name}::before {
+//     content: $codepoint;
+//   }
+// } */

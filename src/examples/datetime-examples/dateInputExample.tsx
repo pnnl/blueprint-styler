@@ -19,7 +19,6 @@
  * All changes & bugfixes should be made to DateInput3 instead.
  */
 
-/* eslint-disable deprecation/deprecation, @blueprintjs/no-deprecated-components */
 
 import classNames from "classnames";
 import * as React from "react";

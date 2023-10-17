@@ -19,7 +19,6 @@
  * All changes & bugfixes should be made to DatePicker3 instead.
  */
 
-/* eslint-disable deprecation/deprecation, @blueprintjs/no-deprecated-components */
 
 import * as React from "react";
 
