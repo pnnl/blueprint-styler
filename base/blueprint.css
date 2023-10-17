@@ -2112,9 +2112,17 @@ a.bp5-button.bp5-disabled {
     }
 }
 
+.bp5-card.bp5-compact {
+    padding: 15px
+}
+
 .bp5-card.bp5-interactive:hover {
     box-shadow: var(--pt-elevation-shadow-3);
     cursor: pointer
+}
+
+.bp5-card.bp5-interactive.bp5-selected {
+    box-shadow: 0 0 0 3px hsla(var(--primary4-hsl),.2),0 0 0 1px var(--primary4)
 }
 
 .bp5-card.bp5-interactive:active {
@@ -2142,12 +2150,26 @@ a.bp5-button.bp5-disabled {
     box-shadow: none
 }
 
+.bp5-card-list>.bp5-card.bp5-selected {
+    background-color: var(--light-gray4);
+    box-shadow: none
+}
+
+.bp5-dark .bp5-card-list>.bp5-card.bp5-selected {
+    background-color: var(--dark-gray5);
+    box-shadow: none
+}
+
 .bp5-card-list>.bp5-card:not(:last-child) {
     border-bottom: 1px solid hsla(var(--black-hsl),.1)
 }
 
+.bp5-card-list.bp5-compact {
+    padding: 0
+}
+
 .bp5-card-list.bp5-compact>.bp5-card {
-    min-height: 41px;
+    min-height: 45px;
     padding: 7px 15px
 }
 
@@ -2172,6 +2194,46 @@ a.bp5-button.bp5-disabled {
 
 .bp5-context-menu-virtual-target {
     position: fixed
+}
+
+.bp5-card-list>.bp5-card.bp5-control-card,.bp5-card.bp5-control-card {
+    min-height: auto;
+    padding: 0
+}
+
+.bp5-control-card .bp5-control.bp5-control.bp5-control {
+    align-items: flex-start;
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 20px;
+    width: 100%
+}
+
+.bp5-control-card .bp5-control.bp5-control.bp5-control.bp5-align-left {
+    flex-direction: row;
+    justify-content: flex-start
+}
+
+.bp5-control-card .bp5-control.bp5-control.bp5-control.bp5-align-right {
+    flex-direction: row-reverse;
+    justify-content: space-between
+}
+
+.bp5-card-list .bp5-control-card .bp5-control.bp5-control.bp5-control {
+    padding: 20px
+}
+
+.bp5-card-list.bp5-compact .bp5-control-card .bp5-control.bp5-control.bp5-control {
+    padding: 15px
+}
+
+.bp5-control-card .bp5-control.bp5-control.bp5-control .bp5-control-indicator {
+    margin: 0
+}
+
+.bp5-control-card.bp5-compact .bp5-control.bp5-control.bp5-control {
+    padding: 15px
 }
 
 .bp5-dialog-container {
@@ -6113,8 +6175,11 @@ span.bp5-popover-target {
 
 .bp5-section {
     overflow: hidden;
-    padding: 0;
     width: 100%
+}
+
+.bp5-section,.bp5-section.bp5-compact {
+    padding: 0
 }
 
 .bp5-section-header {
@@ -8019,8 +8084,9 @@ span.bp5-popover-target {
     color: var(--white)
 }
 
-.bp5-dateinput-popover {
-    padding: 0
+.bp5-date-input .bp5-input-action {
+    display: flex;
+    flex-direction: row
 }
 
 .bp5-datepicker {
