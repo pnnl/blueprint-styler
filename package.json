@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@blueprintjs/core": "5.5.1",
-    "@blueprintjs/datetime": "5.2.4",
+    "@blueprintjs/datetime2": "^2.2.1",
     "@blueprintjs/docs-theme": "5.1.1",
     "@blueprintjs/icons": "5.2.1",
     "@blueprintjs/select": "5.0.16",
