@@ -1070,20 +1070,20 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@blueprintjs/colors@^5.0.1":
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/@blueprintjs/colors/-/colors-5.0.1.tgz#d8dae32b6335a7b3c0521e1f28422f4c8c380da1"
-  integrity sha512-Lz3TSHJBL7+Ar/pQS15ewbNMMZc9p0CyBTPvICx4sWVH2STIJrvh05f+rdOBsKyx+FdTGTBoISyw67ZOSXvWVA==
+"@blueprintjs/colors@^5.0.4":
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/@blueprintjs/colors/-/colors-5.0.4.tgz#c3e7d87c576eac624d6321432750ee74632327f5"
+  integrity sha512-dtAN7gOkuPPZRKIoafLXKVGj6MkpIrphMdoxT+bkaIPTVUWLtYPtpQSh08EH7IBI3zzTqfdqXee+U5lmyEfY5g==
   dependencies:
     tslib "~2.5.0"
 
-"@blueprintjs/core@^5.2.0":
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/@blueprintjs/core/-/core-5.2.0.tgz#7f8cef2ac02379dc32d7b0a40f30aaf89b81230f"
-  integrity sha512-GsYm/O12GxszkFBuwFUckc0O8RjN2LlZ+3Tp0rHvAtgLLH813nS+shCDGaVmd9ns4YKNfDMymEHgaoambaS75g==
+"@blueprintjs/core@5.5.1", "@blueprintjs/core@^5.5.1":
+  version "5.5.1"
+  resolved "https://registry.yarnpkg.com/@blueprintjs/core/-/core-5.5.1.tgz#1fa09868318f46758edb6efd8130b13034333adf"
+  integrity sha512-+8Af166xlLzzaoDDyzX1Adgd/hCVuIhp4/6RDDzcDnVHxQG4jnHK+D70LIV0FYNMZCzPW0Z6gH9ZTP52QDSqeg==
   dependencies:
-    "@blueprintjs/colors" "^5.0.1"
-    "@blueprintjs/icons" "^5.1.5"
+    "@blueprintjs/colors" "^5.0.4"
+    "@blueprintjs/icons" "^5.2.1"
     "@popperjs/core" "^2.11.7"
     classnames "^2.3.1"
     normalize.css "^8.0.1"
@@ -1091,59 +1091,59 @@
     react-transition-group "^4.4.5"
     tslib "~2.5.0"
 
-"@blueprintjs/datetime@^5.0.8":
-  version "5.0.8"
-  resolved "https://registry.yarnpkg.com/@blueprintjs/datetime/-/datetime-5.0.8.tgz#0410656c44cb9d7c6d38e9efa110443537f91190"
-  integrity sha512-327tsitQnAbiCENCkp2ZEJx0tGan0/GvuZmfZt+i94t0tBPNAJAgeuB45RsA7yfJ4rNiXE01kCskJz9hjBs2fA==
+"@blueprintjs/datetime@5.2.4":
+  version "5.2.4"
+  resolved "https://registry.yarnpkg.com/@blueprintjs/datetime/-/datetime-5.2.4.tgz#35c81d42bf9a4e6d4efc381455314c250eafbc53"
+  integrity sha512-marrws/g5Ga4fzsAbVInLBPIxxuGl5hZyFmvWpbmk4crQdHNwaev66dq9/goUxSqhXIX5fAAThmyxN/De19r+Q==
   dependencies:
-    "@blueprintjs/core" "^5.2.0"
-    "@blueprintjs/icons" "^5.1.5"
-    "@blueprintjs/select" "^5.0.8"
+    "@blueprintjs/core" "^5.5.1"
+    "@blueprintjs/icons" "^5.2.1"
+    "@blueprintjs/select" "^5.0.16"
     classnames "^2.3.1"
     date-fns "^2.28.0"
-    date-fns-tz "^1.3.7"
+    date-fns-tz "^2.0.0"
     lodash "^4.17.21"
     react-day-picker "7.4.9"
     tslib "~2.5.0"
 
-"@blueprintjs/docs-theme@5.0.8":
-  version "5.0.8"
-  resolved "https://registry.yarnpkg.com/@blueprintjs/docs-theme/-/docs-theme-5.0.8.tgz#5b3067dc8713182e140d310299261ae7df1a3c4f"
-  integrity sha512-ajFVXlfUFrQdhTpcDELg+iivQhlvspEIxLjygNeEvDS7R2awf/mw55YHabxsomxb3lyZGHGC14prRb1SAY8NVw==
+"@blueprintjs/docs-theme@5.1.1":
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/@blueprintjs/docs-theme/-/docs-theme-5.1.1.tgz#65f0e738385f0072504099eb06b50684873a90cc"
+  integrity sha512-OPhSXA4BmgSfdIF11Iqi8yCvOLD1kydesK5q+RSou2z2nPkdj5dmWr3V2ahcL7/HLM/gJC/uJhMlnYkdoDRmZA==
   dependencies:
-    "@blueprintjs/colors" "^5.0.1"
-    "@blueprintjs/core" "^5.2.0"
-    "@blueprintjs/select" "^5.0.8"
+    "@blueprintjs/colors" "^5.0.4"
+    "@blueprintjs/core" "^5.5.1"
+    "@blueprintjs/select" "^5.0.16"
     "@documentalist/client" "^4.0.0"
     classnames "^2.3.1"
     fuzzaldrin-plus "^0.6.0"
     tslib "~2.5.0"
 
-"@blueprintjs/icons@^5.1.5":
-  version "5.1.5"
-  resolved "https://registry.yarnpkg.com/@blueprintjs/icons/-/icons-5.1.5.tgz#d584231296869ab90fede85b1b28ef7b37a83414"
-  integrity sha512-Fvtmehxgff59OvPmtnws18wk1HJENQZj31HuxvAlZWIU/0XGEGqumUyCCCFQ8zHsM9G9D6Glg+BCjiX2qCcFIg==
+"@blueprintjs/icons@5.2.1", "@blueprintjs/icons@^5.2.1":
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/@blueprintjs/icons/-/icons-5.2.1.tgz#3b2409fc01ca4c140b9e4cb10c6da3a22b24eed7"
+  integrity sha512-JAkcDQks4wZoZAcfKeId4/S4I0cEiuNhFZ88Kc+RQkHNUGD78wuANNQvPKeN5j0QXjAxYZ3qMsxKOdJ9YwmZ/A==
   dependencies:
     change-case "^4.1.2"
     classnames "^2.3.1"
     tslib "~2.5.0"
 
-"@blueprintjs/select@^5.0.8":
-  version "5.0.8"
-  resolved "https://registry.yarnpkg.com/@blueprintjs/select/-/select-5.0.8.tgz#8e13b35ce477fba1457bcf32332df1fd6b8674b7"
-  integrity sha512-ng5LjBAMJXLFx3p+wHvWH40pBsjf6TDXJu1rs1uzrwNv4CLQoM61OiBk8NvFIAPO5YV0EwZjzNKFjC6NKVtKfQ==
+"@blueprintjs/select@5.0.16", "@blueprintjs/select@^5.0.16":
+  version "5.0.16"
+  resolved "https://registry.yarnpkg.com/@blueprintjs/select/-/select-5.0.16.tgz#d28af1082da5ee561d3769f7883cdebb30181598"
+  integrity sha512-4KGSl+yA+xwAdnpIgAueVpgjF/ATw/lWHrVnBhRUrc8Fw2ZJJbGM928i9W84AbxBVcjRqVg/pviUUqQ3S1c4jw==
   dependencies:
-    "@blueprintjs/core" "^5.2.0"
-    "@blueprintjs/icons" "^5.1.5"
+    "@blueprintjs/core" "^5.5.1"
+    "@blueprintjs/icons" "^5.2.1"
     classnames "^2.3.1"
     tslib "~2.5.0"
 
-"@blueprintjs/table@^5.0.8":
-  version "5.0.8"
-  resolved "https://registry.yarnpkg.com/@blueprintjs/table/-/table-5.0.8.tgz#8cd9c573a9b76bab58b3b8ed51e7a34d7d2f60fa"
-  integrity sha512-ygXZuDpm4d72q53ZlLCoQJRcN8fqdBGQm5gtHnbKTGrOByxjV0UkiaECvpFGfU/UzAz4NNiiDMFff4YLEtqVZA==
+"@blueprintjs/table@5.0.16":
+  version "5.0.16"
+  resolved "https://registry.yarnpkg.com/@blueprintjs/table/-/table-5.0.16.tgz#2a2e68799abf2acd434f3856497e7fca6d6bcbc1"
+  integrity sha512-NPaD9Ja3Tdd8E5zblFVr8mc1LP8ltJdkk2V0t1fH/6oSEjPIkjwJCUcRu6x0byWL5iUFtXNiCvHFNnBXLmGFCQ==
   dependencies:
-    "@blueprintjs/core" "^5.2.0"
+    "@blueprintjs/core" "^5.5.1"
     classnames "^2.3.1"
     react-innertext "^1.1.5"
     tslib "~2.5.0"
@@ -4089,10 +4089,10 @@ data-urls@^2.0.0:
     whatwg-mimetype "^2.3.0"
     whatwg-url "^8.0.0"
 
-date-fns-tz@^1.3.7:
-  version "1.3.7"
-  resolved "https://registry.yarnpkg.com/date-fns-tz/-/date-fns-tz-1.3.7.tgz#e8e9d2aaceba5f1cc0e677631563081fdcb0e69a"
-  integrity sha512-1t1b8zyJo+UI8aR+g3iqr5fkUHWpd58VBx8J/ZSQ+w7YrGlw80Ag4sA86qkfCXRBLmMc4I2US+aPMd4uKvwj5g==
+date-fns-tz@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/date-fns-tz/-/date-fns-tz-2.0.0.tgz#1b14c386cb8bc16fc56fe333d4fc34ae1d1099d5"
+  integrity sha512-OAtcLdB9vxSXTWHdT8b398ARImVwQMyjfYGkKD2zaGpHseG2UPHbHjXELReErZFxWdSLph3c2zOaaTyHfOhERQ==
 
 date-fns@^2.28.0:
   version "2.29.3"

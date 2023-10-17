@@ -23,7 +23,7 @@
     /* stylelint-enable */
   }
 
-  > svg {
+  >svg {
     // prevent extra vertical whitespace
     display: block;
 
@@ -51,21 +51,29 @@ span.#{$ns}-icon-large {
 }
 
 // only apply icon font styles when <svg> image is not present
-// span.#{$ns}-icon:empty {
-//   font-family: $blueprint-icons-20-font;
-//   font-size: inherit;
-//   font-style: normal;
-//   font-weight: 400;
-//   line-height: 1;
+/* span.#{$ns}-icon:empty {
+  font-family: $blueprint-icons-20-font;
+  font-size: inherit;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
 
-//   &::before {
-//     @include pt-icon-font-smoothing();
-//   }
-// }
+  &::before {
+    @include pt-icon-font-smoothing();
+  }
+
+  &.#{$ns}-icon-standard {
+    font-size: $pt-icon-size-standard;
+  }
+
+  &.#{$ns}-icon-large {
+    font-size: $pt-icon-size-large;
+  }
+} */
 
 // no icon Fonts
-// @each $name, $codepoint in $blueprint-icon-codepoints {
-//   .#{$ns}-icon-#{$name}::before {
-//     content: $codepoint;
-//   }
-// }
+/* @each $name, $codepoint in $blueprint-icon-codepoints {
+  .#{$ns}-icon-#{$name}::before {
+    content: $codepoint;
+  }
+} */

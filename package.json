@@ -38,11 +38,11 @@
     "generate-svg-icon-files": "node ./scripts/generate-svg-icon-files.js"
   },
   "peerDependencies": {
-    "@blueprintjs/core": "^5.2.0",
-    "@blueprintjs/datetime": "^5.0.8",
-    "@blueprintjs/icons": "^5.1.5",
-    "@blueprintjs/select": "^5.0.8",
-    "@blueprintjs/table": "^5.0.8"
+    "@blueprintjs/core": "^5.5.1",
+    "@blueprintjs/datetime": "^5.2.4",
+    "@blueprintjs/icons": "^5.2.1",
+    "@blueprintjs/select": "^5.0.16",
+    "@blueprintjs/table": "^5.0.16"
   },
   "peerDependenciesMeta": {
     "@blueprintjs/datetime": {
@@ -56,12 +56,12 @@
     }
   },
   "devDependencies": {
-    "@blueprintjs/core": "^5.2.0",
-    "@blueprintjs/datetime": "^5.0.8",
-    "@blueprintjs/docs-theme": "5.0.8",
-    "@blueprintjs/icons": "^5.1.5",
-    "@blueprintjs/select": "^5.0.8",
-    "@blueprintjs/table": "^5.0.8",
+    "@blueprintjs/core": "5.5.1",
+    "@blueprintjs/datetime": "5.2.4",
+    "@blueprintjs/docs-theme": "5.1.1",
+    "@blueprintjs/icons": "5.2.1",
+    "@blueprintjs/select": "5.0.16",
+    "@blueprintjs/table": "5.0.16",
     "@carbon/colors": "^11.11.0",
     "@ibm/plex": "^6.1.1",
     "@types/node": "^18.11.18",
