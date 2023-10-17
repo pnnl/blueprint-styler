@@ -1091,7 +1091,20 @@
     react-transition-group "^4.4.5"
     tslib "~2.5.0"
 
-"@blueprintjs/datetime@5.2.4":
+"@blueprintjs/datetime2@^2.2.1":
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/@blueprintjs/datetime2/-/datetime2-2.2.1.tgz#275b35ab9e90da8eff980fabdae48ff045c23f12"
+  integrity sha512-XNprENchvPIxRAAKPzigrIIS9FqBwUHDVxCPUQFQgzxW4guOS2whHSADsEAvC++tov29BodvXE+TcqASo7Fh/g==
+  dependencies:
+    "@blueprintjs/core" "^5.5.1"
+    "@blueprintjs/datetime" "^5.2.4"
+    "@blueprintjs/icons" "^5.2.1"
+    classnames "^2.3.1"
+    date-fns "^2.28.0"
+    react-day-picker "^8.5.1"
+    tslib "~2.5.0"
+
+"@blueprintjs/datetime@^5.2.4":
   version "5.2.4"
   resolved "https://registry.yarnpkg.com/@blueprintjs/datetime/-/datetime-5.2.4.tgz#35c81d42bf9a4e6d4efc381455314c250eafbc53"
   integrity sha512-marrws/g5Ga4fzsAbVInLBPIxxuGl5hZyFmvWpbmk4crQdHNwaev66dq9/goUxSqhXIX5fAAThmyxN/De19r+Q==
@@ -9584,6 +9597,11 @@ react-day-picker@7.4.9:
   integrity sha512-CcXf0p7p6gTYnG0+n/4wNGljZuQDXl4HhgcxsXB0nX+8D4LnRho9EclPA/aLz4WlvvVpfY+AEgj2ylgPj4nm/g==
   dependencies:
     prop-types "^15.6.2"
+
+react-day-picker@^8.5.1:
+  version "8.9.0"
+  resolved "https://registry.yarnpkg.com/react-day-picker/-/react-day-picker-8.9.0.tgz#b7537c610c2acad25d54b531bcf7824dc8f7ca81"
+  integrity sha512-XgoUgexp5KUy03lGsBDRkV+YQy73qJOLNPojeKe0dDNamrCM75PSBhMBkYVjgMSDy12LGWlbThSRK8p0kozAOA==
 
 react-dev-utils@^12.0.1:
   version "12.0.1"
