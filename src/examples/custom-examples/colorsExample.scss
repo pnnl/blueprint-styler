@@ -68,7 +68,7 @@
 
   .gray-chip, .color-chip{
     // color: hsla(0, 0%, 50%, 0.5);
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold, bold);
     display: flex;
     align-items: center;
     justify-content: center;
